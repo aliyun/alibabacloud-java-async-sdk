@@ -89,6 +89,7 @@ public class GetCalculationJobRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the calculation job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetCalculationJobRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -101,7 +101,10 @@ public class QueryTrafficControlTaskDeployResultRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -119,7 +122,15 @@ public class QueryTrafficControlTaskDeployResultRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment.</li>
+         * <li>Pre: staging environment.</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -128,7 +139,10 @@ public class QueryTrafficControlTaskDeployResultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

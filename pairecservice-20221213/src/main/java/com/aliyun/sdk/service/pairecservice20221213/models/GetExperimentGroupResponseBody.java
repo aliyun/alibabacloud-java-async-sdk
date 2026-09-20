@@ -301,7 +301,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Config.
+         * <p>The configuration of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -309,7 +312,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CrowdId.
+         * <p>The ID of the crowd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder crowdId(String crowdId) {
             this.crowdId = crowdId;
@@ -317,7 +323,20 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * CrowdTargetType.
+         * <p>The method for targeting traffic to the experiment group. Valid values:</p>
+         * <ul>
+         * <li><p><code>All</code>: all traffic</p>
+         * </li>
+         * <li><p><code>Filter</code>: traffic that matches the filter</p>
+         * </li>
+         * <li><p><code>CrowdId</code>: traffic from the specified crowd</p>
+         * </li>
+         * <li><p><code>Random</code>: a random percentage of traffic</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder crowdTargetType(String crowdTargetType) {
             this.crowdTargetType = crowdTargetType;
@@ -325,7 +344,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The ID of the debug crowd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.debugCrowdId = debugCrowdId;
@@ -333,7 +355,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DebugUsers.
+         * <p>The user IDs for debugging, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1124512470******,1124512471******,1124512472******</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.debugUsers = debugUsers;
@@ -341,7 +366,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -349,7 +377,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DistributionTimeDuration.
+         * <p>The distribution duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder distributionTimeDuration(Integer distributionTimeDuration) {
             this.distributionTimeDuration = distributionTimeDuration;
@@ -357,7 +388,12 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * DistributionType.
+         * <p>The traffic distribution method.
+         * ● <code>UserId</code>: Distributes traffic by user ID.
+         * ● <code>TimeDuration</code>: Distributes traffic by time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserId</p>
          */
         public Builder distributionType(String distributionType) {
             this.distributionType = distributionType;
@@ -365,7 +401,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Filter.
+         * <p>The filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gender=female</p>
          */
         public Builder filter(String filter) {
             this.filter = filter;
@@ -373,7 +412,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HoldingBuckets.
+         * <p>The bucket IDs that correspond to the <code>RandomFlow</code> percentage. This parameter is returned only when <code>CrowdTargetType</code> is set to <code>Random</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder holdingBuckets(String holdingBuckets) {
             this.holdingBuckets = holdingBuckets;
@@ -381,7 +423,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * LaboratoryId.
+         * <p>The ID of the laboratory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.laboratoryId = laboratoryId;
@@ -389,7 +434,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * LayerId.
+         * <p>The ID of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.layerId = layerId;
@@ -397,7 +445,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experiment_group1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -405,7 +456,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * NeedAA.
+         * <p>Indicates whether an A/B test is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needAA(Boolean needAA) {
             this.needAA = needAA;
@@ -413,7 +467,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1124512470******</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -421,7 +478,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RandomFlow.
+         * <p>The percentage of traffic from 0 to 100 that is randomly allocated to this experiment group. This parameter is returned only when <code>CrowdTargetType</code> is set to <code>Random</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder randomFlow(Long randomFlow) {
             this.randomFlow = randomFlow;
@@ -429,7 +489,7 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
@@ -440,7 +500,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ReservedBuckets.
+         * <p>The reserved bucket IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,4</p>
          */
         public Builder reservedBuckets(String reservedBuckets) {
             this.reservedBuckets = reservedBuckets;
@@ -448,7 +511,10 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -456,7 +522,13 @@ public class GetExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the experiment group. Valid values:
+         * ● <code>Offline</code>: The experiment group is not launched.
+         * ● <code>Online</code>: The experiment group is launched.
+         * ● <code>Pushed</code>: The experiment group is fully launched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline</p>
          */
         public Builder status(String status) {
             this.status = status;

@@ -101,7 +101,10 @@ public class StopTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -110,7 +113,10 @@ public class StopTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +125,10 @@ public class StopTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-production environment), and <code>Prod</code> (production environment).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -128,7 +137,10 @@ public class StopTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

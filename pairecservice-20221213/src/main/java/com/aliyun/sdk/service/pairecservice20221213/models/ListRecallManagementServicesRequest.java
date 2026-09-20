@@ -180,7 +180,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +192,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is not currently in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -198,7 +204,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>Filters results by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -207,7 +216,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is not currently in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +228,14 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:  </p>
+         * <ul>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -225,7 +244,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +256,10 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +268,14 @@ public class ListRecallManagementServicesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting field. Valid values:  </p>
+         * <ul>
+         * <li>GmtCreateTime: creation time.</li>
+         * <li>GmtModifiedTime: update time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

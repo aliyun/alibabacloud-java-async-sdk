@@ -82,7 +82,10 @@ public class GetRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

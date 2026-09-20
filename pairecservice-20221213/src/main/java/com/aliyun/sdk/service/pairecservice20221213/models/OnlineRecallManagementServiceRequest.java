@@ -87,7 +87,10 @@ public class OnlineRecallManagementServiceRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The Recall Management Service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -105,7 +108,10 @@ public class OnlineRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

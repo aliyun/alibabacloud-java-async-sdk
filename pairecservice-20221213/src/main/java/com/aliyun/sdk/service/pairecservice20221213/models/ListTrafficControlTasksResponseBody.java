@@ -80,7 +80,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of traffic control tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTasks.
+         * <p>The list of traffic control tasks.</p>
          */
         public Builder trafficControlTasks(java.util.List<TrafficControlTasks> trafficControlTasks) {
             this.trafficControlTasks = trafficControlTasks;
@@ -162,7 +168,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * SetValues.
+             * <p>The list of value-based split points for the target.</p>
              */
             public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
@@ -170,7 +176,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoints.
+             * <p>The list of time-based split points.</p>
              */
             public Builder timePoints(java.util.List<Long> timePoints) {
                 this.timePoints = timePoints;
@@ -445,7 +451,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-25</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -453,7 +462,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Event.
+             * <p>The event for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>click</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -461,7 +473,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time of the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-03T15:08:10.58+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -469,7 +484,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The last update time of the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-11-21T16:26:58.57+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -477,7 +495,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The item condition, in an array format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -485,7 +506,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionExpress.
+             * <p>The item condition, in an expression format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status=1</p>
              */
             public Builder itemConditionExpress(String itemConditionExpress) {
                 this.itemConditionExpress = itemConditionExpress;
@@ -493,7 +517,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionType.
+             * <p>The item condition type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Array</p>
              */
             public Builder itemConditionType(String itemConditionType) {
                 this.itemConditionType = itemConditionType;
@@ -501,7 +528,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>target-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -509,7 +539,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NewProductRegulation.
+             * <p>Indicates whether the traffic control target is for a new product recall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder newProductRegulation(Boolean newProductRegulation) {
                 this.newProductRegulation = newProductRegulation;
@@ -517,7 +550,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RecallName.
+             * <p>The name of the recall strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>recall-1</p>
              */
             public Builder recallName(String recallName) {
                 this.recallName = recallName;
@@ -525,7 +561,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SplitParts.
+             * <p>The details of the split points.</p>
              */
             public Builder splitParts(SplitParts splitParts) {
                 this.splitParts = splitParts;
@@ -533,7 +569,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-25</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -541,7 +580,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatisPeriod.
+             * <p>The statistics period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder statisPeriod(String statisPeriod) {
                 this.statisPeriod = statisPeriod;
@@ -549,7 +591,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Opened</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -557,7 +602,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ToleranceValue.
+             * <p>The tolerance value for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder toleranceValue(Long toleranceValue) {
                 this.toleranceValue = toleranceValue;
@@ -565,7 +613,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTargetId.
+             * <p>The traffic control target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trafficControlTargetId(String trafficControlTargetId) {
                 this.trafficControlTargetId = trafficControlTargetId;
@@ -573,7 +624,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTaskId.
+             * <p>The traffic control task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trafficControlTaskId(String trafficControlTaskId) {
                 this.trafficControlTaskId = trafficControlTaskId;
@@ -581,7 +635,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1142,7 +1199,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * BehaviorTableMetaId.
+             * <p>The behavior table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder behaviorTableMetaId(String behaviorTableMetaId) {
                 this.behaviorTableMetaId = behaviorTableMetaId;
@@ -1150,7 +1210,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ControlGranularity.
+             * <p>The control granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Global</p>
              */
             public Builder controlGranularity(String controlGranularity) {
                 this.controlGranularity = controlGranularity;
@@ -1158,7 +1221,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ControlLogic.
+             * <p>The control logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Guaranteed</p>
              */
             public Builder controlLogic(String controlLogic) {
                 this.controlLogic = controlLogic;
@@ -1166,7 +1232,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ControlType.
+             * <p>The control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Percent</p>
              */
             public Builder controlType(String controlType) {
                 this.controlType = controlType;
@@ -1174,7 +1243,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the traffic control task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test task</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1182,7 +1254,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveSceneIds.
+             * <p>The list of effective scene IDs.</p>
              */
             public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
                 this.effectiveSceneIds = effectiveSceneIds;
@@ -1190,7 +1262,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveSceneNameList.
+             * <p>The list of effective scene names.</p>
              */
             public Builder effectiveSceneNameList(java.util.List<String> effectiveSceneNameList) {
                 this.effectiveSceneNameList = effectiveSceneNameList;
@@ -1198,7 +1270,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveSceneNames.
+             * <p>The list of effective scene names.</p>
              */
             public Builder effectiveSceneNames(java.util.List<Integer> effectiveSceneNames) {
                 this.effectiveSceneNames = effectiveSceneNames;
@@ -1206,7 +1278,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-25</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1214,7 +1289,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EverPublished.
+             * <p>Indicates whether the task has ever been published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder everPublished(Boolean everPublished) {
                 this.everPublished = everPublished;
@@ -1222,7 +1300,16 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionTime.
+             * <p>The execution schedule for the task. Valid values:</p>
+             * <ul>
+             * <li><p><code>Permanent</code>: The task runs indefinitely.</p>
+             * </li>
+             * <li><p><code>TimeRange</code>: The task runs within a specified time range. If you set this parameter to this value, you must also specify the <code>StartTime</code> and <code>EndTime</code> parameters.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Permanent</p>
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -1230,7 +1317,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkResourceId.
+             * <p>The Flink resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resource-xxx</p>
              */
             public Builder flinkResourceId(String flinkResourceId) {
                 this.flinkResourceId = flinkResourceId;
@@ -1238,7 +1328,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkResourceName.
+             * <p>The name of the Flink resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flink_test</p>
              */
             public Builder flinkResourceName(String flinkResourceName) {
                 this.flinkResourceName = flinkResourceName;
@@ -1246,7 +1339,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-25T06:04:28.441Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -1254,7 +1350,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The last update time of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-25T06:04:28.441Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -1262,7 +1361,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The item condition, in an array format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -1270,7 +1372,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionExpress.
+             * <p>The item condition, in an expression format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>status=1</p>
              */
             public Builder itemConditionExpress(String itemConditionExpress) {
                 this.itemConditionExpress = itemConditionExpress;
@@ -1278,7 +1383,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemConditionType.
+             * <p>The item condition type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Array</p>
              */
             public Builder itemConditionType(String itemConditionType) {
                 this.itemConditionType = itemConditionType;
@@ -1286,7 +1394,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTableMetaId.
+             * <p>The item table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder itemTableMetaId(String itemTableMetaId) {
                 this.itemTableMetaId = itemTableMetaId;
@@ -1294,7 +1405,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the traffic control task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1302,7 +1416,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PreExperimentIds.
+             * <p>A comma-separated list of staging experiment IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2</p>
              */
             public Builder preExperimentIds(String preExperimentIds) {
                 this.preExperimentIds = preExperimentIds;
@@ -1310,7 +1427,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrepubStatus.
+             * <p>The staging environment status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Runnning</p>
              */
             public Builder prepubStatus(String prepubStatus) {
                 this.prepubStatus = prepubStatus;
@@ -1318,7 +1438,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProdExperimentIds.
+             * <p>A comma-separated list of production experiment IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6,7</p>
              */
             public Builder prodExperimentIds(String prodExperimentIds) {
                 this.prodExperimentIds = prodExperimentIds;
@@ -1326,7 +1449,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ProductStatus.
+             * <p>The production environment status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Runnning</p>
              */
             public Builder productStatus(String productStatus) {
                 this.productStatus = productStatus;
@@ -1334,7 +1460,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scene ID. You can obtain this ID by calling the <code>ListScenes</code> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -1342,7 +1471,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>home_feed</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -1350,7 +1482,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * <p>The service ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1358,7 +1493,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIdList.
+             * <p>The list of service IDs.</p>
              */
             public Builder serviceIdList(java.util.List<Integer> serviceIdList) {
                 this.serviceIdList = serviceIdList;
@@ -1366,7 +1501,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceIds.
+             * <p>The list of bound engine service IDs.</p>
              */
             public Builder serviceIds(java.util.List<String> serviceIds) {
                 this.serviceIds = serviceIds;
@@ -1374,7 +1509,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-25</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1382,7 +1520,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatisBahaviorConditionExpress.
+             * <p>The behavior statistics expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event=click</p>
              */
             public Builder statisBahaviorConditionExpress(String statisBahaviorConditionExpress) {
                 this.statisBahaviorConditionExpress = statisBahaviorConditionExpress;
@@ -1390,7 +1531,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatisBehaviorConditionArray.
+             * <p>The behavior statistics condition, in an array format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;field&quot;:&quot;click&quot;,&quot;option&quot;:&quot;&lt;=&quot;,&quot;value&quot;:&quot;30&quot;}]</p>
              */
             public Builder statisBehaviorConditionArray(String statisBehaviorConditionArray) {
                 this.statisBehaviorConditionArray = statisBehaviorConditionArray;
@@ -1398,7 +1542,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatisBehaviorConditionExpress.
+             * <p>The behavior statistics expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>event=exposure</p>
              */
             public Builder statisBehaviorConditionExpress(String statisBehaviorConditionExpress) {
                 this.statisBehaviorConditionExpress = statisBehaviorConditionExpress;
@@ -1406,7 +1553,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StatisBehaviorConditionType.
+             * <p>The condition type for behavior statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Array</p>
              */
             public Builder statisBehaviorConditionType(String statisBehaviorConditionType) {
                 this.statisBehaviorConditionType = statisBehaviorConditionType;
@@ -1414,7 +1564,7 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTargets.
+             * <p>The list of traffic control targets.</p>
              */
             public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
                 this.trafficControlTargets = trafficControlTargets;
@@ -1422,7 +1572,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTaskId.
+             * <p>The traffic control task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trafficControlTaskId(String trafficControlTaskId) {
                 this.trafficControlTaskId = trafficControlTaskId;
@@ -1430,7 +1583,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserConditionArray.
+             * <p>The condition for the target user group, in an array format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
              */
             public Builder userConditionArray(String userConditionArray) {
                 this.userConditionArray = userConditionArray;
@@ -1438,7 +1594,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserConditionExpress.
+             * <p>The condition for the target user group, in an expression format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
              */
             public Builder userConditionExpress(String userConditionExpress) {
                 this.userConditionExpress = userConditionExpress;
@@ -1446,7 +1605,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserConditionType.
+             * <p>The condition type for the target user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Array</p>
              */
             public Builder userConditionType(String userConditionType) {
                 this.userConditionType = userConditionType;
@@ -1454,7 +1616,10 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserTableMetaId.
+             * <p>The user table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userTableMetaId(String userTableMetaId) {
                 this.userTableMetaId = userTableMetaId;

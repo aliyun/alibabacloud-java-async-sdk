@@ -80,7 +80,7 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * ABMetricGroups.
+         * <p>The A/B metric groups.</p>
          */
         public Builder ABMetricGroups(java.util.List<ABMetricGroups> ABMetricGroups) {
             this.ABMetricGroups = ABMetricGroups;
@@ -88,7 +88,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of A/B metric groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -240,7 +246,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * ABMetricGroupId.
+             * <p>The A/B metric group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ABMetricGroupId(String ABMetricGroupId) {
                 this.ABMetricGroupId = ABMetricGroupId;
@@ -248,7 +257,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ABMetricIds.
+             * <p>The comma-separated IDs of the A/B metrics in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2</p>
              */
             public Builder ABMetricIds(String ABMetricIds) {
                 this.ABMetricIds = ABMetricIds;
@@ -256,7 +268,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ABMetricNames.
+             * <p>The comma-separated names of the A/B metrics in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv,uv</p>
              */
             public Builder ABMetricNames(String ABMetricNames) {
                 this.ABMetricNames = ABMetricNames;
@@ -264,7 +279,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the A/B metric group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>访问量相关指标</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -272,7 +290,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The A/B metric group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>visits</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +301,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2799614***</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -288,7 +312,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Realtime.
+             * <p>Indicates whether the A/B metric group is a real-time group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder realtime(Boolean realtime) {
                 this.realtime = realtime;
@@ -296,7 +323,10 @@ public class ListABMetricGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;

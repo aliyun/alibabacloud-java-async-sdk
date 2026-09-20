@@ -89,6 +89,7 @@ public class OnlineExperimentGroupRequest extends Request {
         } 
 
         /**
+         * <p>The experiment group ID. Call the ListExperimentGroups API to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class OnlineExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. Call the ListInstances API to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

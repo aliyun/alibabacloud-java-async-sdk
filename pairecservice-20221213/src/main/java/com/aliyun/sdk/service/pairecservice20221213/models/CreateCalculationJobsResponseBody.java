@@ -67,7 +67,7 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * CalculationJobIds.
+         * <p>A list of calculation job IDs.</p>
          */
         public Builder calculationJobIds(java.util.List<String> calculationJobIds) {
             this.calculationJobIds = calculationJobIds;
@@ -75,7 +75,10 @@ public class CreateCalculationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C27790E-CCA5-56BB-BA17-646295DEC0A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

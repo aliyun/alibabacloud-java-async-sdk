@@ -106,7 +106,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>This parameter is not currently in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is not currently in effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementServices.
+         * <p>The list of recall management services.</p>
          */
         public Builder recallManagementServices(java.util.List<RecallManagementServices> recallManagementServices) {
             this.recallManagementServices = recallManagementServices;
@@ -130,7 +136,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentRecallManagementServiceVersionId.
+             * <p>The ID of the currently active recall management service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentRecallManagementServiceVersionId(String currentRecallManagementServiceVersionId) {
                 this.currentRecallManagementServiceVersionId = currentRecallManagementServiceVersionId;
@@ -290,7 +305,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentRecallManagementServiceVersionName.
+             * <p>The name of the currently active recall management service version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version-1</p>
              */
             public Builder currentRecallManagementServiceVersionName(String currentRecallManagementServiceVersionName) {
                 this.currentRecallManagementServiceVersionName = currentRecallManagementServiceVersionName;
@@ -298,7 +316,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the recall management service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test recall</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +327,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -314,7 +338,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -322,7 +349,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The service name of the recall management service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hot_group_recall</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +360,10 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementServiceId.
+             * <p>The ID of the recall management service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recallManagementServiceId(String recallManagementServiceId) {
                 this.recallManagementServiceId = recallManagementServiceId;
@@ -338,7 +371,14 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>Online: online.</li>
+             * <li>Offline: offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;

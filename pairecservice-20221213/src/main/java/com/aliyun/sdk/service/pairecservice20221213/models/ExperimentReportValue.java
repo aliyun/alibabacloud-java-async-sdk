@@ -67,7 +67,10 @@ public class ExperimentReportValue extends TeaModel {
         } 
 
         /**
-         * Baseline.
+         * <p>Indicates whether the data is from the baseline experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder baseline(Boolean baseline) {
             this.baseline = baseline;
@@ -75,7 +78,7 @@ public class ExperimentReportValue extends TeaModel {
         }
 
         /**
-         * MetricResults.
+         * <p>The metric results.</p>
          */
         public Builder metricResults(java.util.Map<String, java.util.Map<String, ?>> metricResults) {
             this.metricResults = metricResults;

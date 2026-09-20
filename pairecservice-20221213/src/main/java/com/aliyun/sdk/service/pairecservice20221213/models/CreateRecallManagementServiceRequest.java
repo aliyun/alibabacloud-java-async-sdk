@@ -110,7 +110,10 @@ public class CreateRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p><strong>The description for the recall management service.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test recall</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -119,7 +122,10 @@ public class CreateRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p><strong>The instance ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -128,7 +134,10 @@ public class CreateRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p><strong>The name of the recall management service.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>hot_global_recall</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

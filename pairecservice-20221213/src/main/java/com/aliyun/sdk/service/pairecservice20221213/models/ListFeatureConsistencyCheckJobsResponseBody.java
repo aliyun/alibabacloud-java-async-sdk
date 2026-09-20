@@ -80,7 +80,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * FeatureConsistencyCheckJobs.
+         * <p>The list of feature consistency check jobs.</p>
          */
         public Builder featureConsistencyCheckJobs(java.util.List<FeatureConsistencyCheckJobs> featureConsistencyCheckJobs) {
             this.featureConsistencyCheckJobs = featureConsistencyCheckJobs;
@@ -88,7 +88,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -240,7 +246,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The configuration of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -248,7 +257,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureConsistencyCheckJobConfigId.
+             * <p>The ID of the feature consistency check configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder featureConsistencyCheckJobConfigId(String featureConsistencyCheckJobConfigId) {
                 this.featureConsistencyCheckJobConfigId = featureConsistencyCheckJobConfigId;
@@ -256,7 +268,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureConsistencyCheckJobConfigName.
+             * <p>The name of the feature consistency check job configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature_consistency_check_1</p>
              */
             public Builder featureConsistencyCheckJobConfigName(String featureConsistencyCheckJobConfigName) {
                 this.featureConsistencyCheckJobConfigName = featureConsistencyCheckJobConfigName;
@@ -264,7 +279,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureConsistencyCheckJobId.
+             * <p>The ID of the feature consistency check job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder featureConsistencyCheckJobId(String featureConsistencyCheckJobId) {
                 this.featureConsistencyCheckJobId = featureConsistencyCheckJobId;
@@ -272,7 +290,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtEndTime.
+             * <p>The end time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtEndTime(String gmtEndTime) {
                 this.gmtEndTime = gmtEndTime;
@@ -280,7 +301,10 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStartTime.
+             * <p>The start time of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -288,7 +312,7 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * <p>A list of log entries.</p>
              */
             public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
@@ -296,7 +320,22 @@ public class ListFeatureConsistencyCheckJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><p><code>ToRun</code>: Waiting to run.</p>
+             * </li>
+             * <li><p><code>Running</code>: In progress.</p>
+             * </li>
+             * <li><p><code>Success</code>: Successful.</p>
+             * </li>
+             * <li><p><code>Failure</code>: Failed.</p>
+             * </li>
+             * <li><p><code>Stopped</code>: Stopped or canceled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

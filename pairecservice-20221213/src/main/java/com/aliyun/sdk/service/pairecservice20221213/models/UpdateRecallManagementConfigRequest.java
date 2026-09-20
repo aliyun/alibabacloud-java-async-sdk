@@ -110,7 +110,10 @@ public class UpdateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -119,7 +122,7 @@ public class UpdateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * NetworkConfigs.
+         * <p>The network configuration.</p>
          */
         public Builder networkConfigs(java.util.List<NetworkConfigs> networkConfigs) {
             this.putBodyParameter("NetworkConfigs", networkConfigs);
@@ -128,7 +131,10 @@ public class UpdateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p>The password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -196,7 +202,10 @@ public class UpdateRecallManagementConfigRequest extends Request {
             } 
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -204,7 +213,10 @@ public class UpdateRecallManagementConfigRequest extends Request {
             }
 
             /**
-             * VswitchIds.
+             * <p>A map of availability zones to VSwitch IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder vswitchIds(java.util.Map<String, String> vswitchIds) {
                 this.vswitchIds = vswitchIds;

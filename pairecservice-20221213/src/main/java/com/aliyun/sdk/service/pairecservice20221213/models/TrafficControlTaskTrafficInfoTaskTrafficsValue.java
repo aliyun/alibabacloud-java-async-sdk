@@ -54,7 +54,10 @@ public class TrafficControlTaskTrafficInfoTaskTrafficsValue extends TeaModel {
         } 
 
         /**
-         * Traffic.
+         * <p>The reported traffic for this experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder traffic(Double traffic) {
             this.traffic = traffic;

@@ -126,7 +126,18 @@ public class ListLaboratoriesRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The laboratory environment.</p>
+         * <ul>
+         * <li><p><code>Daily</code>: the daily environment</p>
+         * </li>
+         * <li><p><code>Pre</code>: the pre-production environment</p>
+         * </li>
+         * <li><p><code>Prod</code>: the production environment</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -135,6 +146,7 @@ public class ListLaboratoriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. You can obtain this ID by calling the <code>ListInstances</code> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +159,7 @@ public class ListLaboratoriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scene. You can obtain this ID by calling the <code>ListScenes</code> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +172,16 @@ public class ListLaboratoriesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The laboratory status.</p>
+         * <ul>
+         * <li><p><code>Offline</code>: The laboratory is offline.</p>
+         * </li>
+         * <li><p><code>Online</code>: The laboratory is online.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

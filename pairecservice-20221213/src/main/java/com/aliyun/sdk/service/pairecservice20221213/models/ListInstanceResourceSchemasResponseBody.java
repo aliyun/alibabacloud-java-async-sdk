@@ -80,7 +80,10 @@ public class ListInstanceResourceSchemasResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListInstanceResourceSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * Schemas.
+         * <p>The list of schemas.</p>
          */
         public Builder schemas(java.util.List<Schemas> schemas) {
             this.schemas = schemas;
@@ -96,7 +99,10 @@ public class ListInstanceResourceSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of schemas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -149,7 +155,10 @@ public class ListInstanceResourceSchemasResponseBody extends TeaModel {
             } 
 
             /**
-             * SchemaName.
+             * <p>The schema name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;

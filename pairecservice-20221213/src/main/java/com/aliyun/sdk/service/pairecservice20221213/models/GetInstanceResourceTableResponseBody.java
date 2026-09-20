@@ -80,7 +80,7 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Fields.
+         * <p>The list of fields in the table.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -88,7 +88,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -201,7 +207,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDimensionField.
+             * <p>Indicates whether the field is a dimension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
@@ -209,7 +218,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionField.
+             * <p>Indicates whether the field is a partition field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionField(Boolean isPartitionField) {
                 this.isPartitionField = isPartitionField;
@@ -217,7 +229,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             }
 
             /**
-             * Meaning.
+             * <p>The field meaning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -225,7 +240,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +251,10 @@ public class GetInstanceResourceTableResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder type(String type) {
                 this.type = type;

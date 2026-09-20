@@ -164,6 +164,7 @@ public class UpdateABMetricGroupRequest extends Request {
         } 
 
         /**
+         * <p>The A/B test metric group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +186,7 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of A/B test metric IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +199,11 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The metric group description.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>访问量相关指标</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -206,6 +212,7 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +225,7 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The metric group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +238,7 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>Whether the metric group is a real-time metric group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +251,7 @@ public class UpdateABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The scene ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

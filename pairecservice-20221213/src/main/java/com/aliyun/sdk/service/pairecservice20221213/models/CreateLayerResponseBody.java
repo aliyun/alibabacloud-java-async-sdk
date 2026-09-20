@@ -67,7 +67,10 @@ public class CreateLayerResponseBody extends TeaModel {
         } 
 
         /**
-         * LayerId.
+         * <p>The ID of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.layerId = layerId;
@@ -75,7 +78,7 @@ public class CreateLayerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>

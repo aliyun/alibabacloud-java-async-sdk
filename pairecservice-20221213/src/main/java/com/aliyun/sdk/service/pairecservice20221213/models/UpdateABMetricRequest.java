@@ -334,6 +334,7 @@ public class UpdateABMetricRequest extends Request {
         } 
 
         /**
+         * <p>The ABTest metric ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,7 +356,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * AggregationByUser.
+         * <p>Specifies whether to aggregate by user dimension when calculating significance. Two aggregation methods are supported: by user and by sample.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder aggregationByUser(Boolean aggregationByUser) {
             this.putBodyParameter("AggregationByUser", aggregationByUser);
@@ -364,6 +368,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -376,7 +381,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Denominator.
+         * <p>The denominator used in significance calculation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder denominator(String denominator) {
             this.putBodyParameter("Denominator", denominator);
@@ -385,7 +393,11 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric description.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv 指标</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -394,6 +406,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -406,7 +419,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * IsBinomialDistribution.
+         * <p>Specifies whether the current metric follows a binomial distribution when the metric type is a derived metric. If set to true, the mean and variance of the metric are calculated based on the binomial distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
             this.putBodyParameter("IsBinomialDistribution", isBinomialDistribution);
@@ -415,7 +431,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * LeftMetricId.
+         * <p>The left metric ID of the derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder leftMetricId(String leftMetricId) {
             this.putBodyParameter("LeftMetricId", leftMetricId);
@@ -424,6 +443,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -436,7 +456,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * NeedSignificance.
+         * <p>Specifies whether to calculate significance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder needSignificance(Boolean needSignificance) {
             this.putBodyParameter("NeedSignificance", needSignificance);
@@ -445,7 +468,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Numerator.
+         * <p>The numerator used in significance calculation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click</p>
          */
         public Builder numerator(String numerator) {
             this.putBodyParameter("Numerator", numerator);
@@ -454,7 +480,20 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * Operator.
+         * <p>The operator for derived metric calculation. Valid values:</p>
+         * <ul>
+         * <li><p>Plus: addition</p>
+         * </li>
+         * <li><p>Minus: subtraction</p>
+         * </li>
+         * <li><p>Multiplication: multiplication</p>
+         * </li>
+         * <li><p>Division: division</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Division</p>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -463,6 +502,13 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -475,7 +521,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * ResultResourceId.
+         * <p>The ID of the data source for the write-back data table. You can obtain it by calling the ListInstanceResources operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder resultResourceId(String resultResourceId) {
             this.putBodyParameter("ResultResourceId", resultResourceId);
@@ -484,7 +533,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * RightMetricId.
+         * <p>The right metric ID of the derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder rightMetricId(String rightMetricId) {
             this.putBodyParameter("RightMetricId", rightMetricId);
@@ -493,6 +545,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The scene ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -505,7 +558,10 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
-         * StatisticsCycle.
+         * <p>The statistical period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder statisticsCycle(Integer statisticsCycle) {
             this.putBodyParameter("StatisticsCycle", statisticsCycle);
@@ -514,6 +570,7 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The data table ID. You can obtain it by calling the ListTableMetas operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -526,6 +583,13 @@ public class UpdateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li><p>Single: single metric.</p>
+         * </li>
+         * <li><p>Derived: derived metric.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -154,6 +154,7 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +167,15 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
+         * <p>The module of the data table. Valid values:</p>
+         * <ul>
+         * <li><p>ABTest: A/B testing data tables</p>
+         * </li>
+         * <li><p>ExperimentTool: experiment tool tables</p>
+         * </li>
+         * <li><p>DataDiagnosis: data diagnosis tables</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +188,10 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The table name to filter on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -187,7 +200,10 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -196,7 +212,10 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +224,16 @@ public class ListTableMetasRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the data table. Valid values:</p>
+         * <ul>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>Hologres</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

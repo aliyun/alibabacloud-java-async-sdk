@@ -158,7 +158,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         } 
 
         /**
-         * Citation.
+         * <p>The citation information.</p>
          */
         public Builder citation(Citation citation) {
             this.citation = citation;
@@ -166,7 +166,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The returned content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Here are some light-colored long-sleeve shirts I picked for you:\n.</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -174,7 +177,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -182,7 +188,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -190,7 +199,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * Event.
+         * <p>The event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>analyze_requirement</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -198,7 +210,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result details.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -214,7 +229,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -222,7 +240,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * StopReason.
+         * <p>The stop reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stop</p>
          */
         public Builder stopReason(String stopReason) {
             this.stopReason = stopReason;
@@ -288,7 +309,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             } 
 
             /**
-             * ItemId.
+             * <p>The ID of the <code>item</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0005</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -296,7 +320,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The reference data type. Fixed value: <code>item</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -363,7 +390,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             } 
 
             /**
-             * ItemId.
+             * <p>The ID of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>48</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -371,7 +401,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The reference data type. Fixed value: item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -425,7 +458,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             } 
 
             /**
-             * Step.
+             * <p>The step.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analyze_requirement</p>
              */
             public Builder step(String step) {
                 this.step = step;
@@ -531,7 +567,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             } 
 
             /**
-             * Citation.
+             * <p>The citation information.</p>
              */
             public Builder citation(ResultCitation citation) {
                 this.citation = citation;
@@ -539,7 +575,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The returned content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Here are some light-colored long-sleeve shirts I picked for you:\\n.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -547,7 +586,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -555,7 +597,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * StepInfo.
+             * <p>The step information.</p>
              */
             public Builder stepInfo(StepInfo stepInfo) {
                 this.stepInfo = stepInfo;
@@ -563,7 +605,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * StopReason.
+             * <p>The stop reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stop</p>
              */
             public Builder stopReason(String stopReason) {
                 this.stopReason = stopReason;

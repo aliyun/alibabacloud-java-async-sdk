@@ -89,6 +89,7 @@ public class GetLayerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the layer. You can call the ListLayers operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetLayerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. You can call the ListInstances operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -157,7 +157,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the Recall Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -166,7 +169,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The ID of the Recall Management Service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.putPathParameter("RecallManagementServiceVersionId", recallManagementServiceVersionId);
@@ -175,7 +181,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionConfigId.
+         * <p>The ID of the Recall Management Service version configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
             this.putPathParameter("RecallManagementServiceVersionConfigId", recallManagementServiceVersionConfigId);
@@ -193,7 +202,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The type of the recall management version configuration. Valid values are <code>Recall</code> for the recall configuration and <code>Merge</code> for the merge configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recall</p>
          */
         public Builder configType(String configType) {
             this.putBodyParameter("ConfigType", configType);
@@ -202,7 +214,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -211,7 +226,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * MergeConfig.
+         * <p>The merge configuration.</p>
          */
         public Builder mergeConfig(MergeConfig mergeConfig) {
             this.putBodyParameter("MergeConfig", mergeConfig);
@@ -220,7 +235,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * RecallConfig.
+         * <p>The recall configuration.</p>
          */
         public Builder recallConfig(RecallConfig recallConfig) {
             this.putBodyParameter("RecallConfig", recallConfig);
@@ -353,7 +368,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * ExtendedConfig.
+             * <p>Additional configurations for the merge. Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -361,7 +379,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * FilterExpression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -369,7 +390,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * FilterRecallManagementTableIds.
+             * <p>A list of recall management table IDs to use for filtering.</p>
              */
             public Builder filterRecallManagementTableIds(java.util.List<String> filterRecallManagementTableIds) {
                 this.filterRecallManagementTableIds = filterRecallManagementTableIds;
@@ -377,7 +398,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemRecallManagementTableId.
+             * <p>The ID of the item recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder itemRecallManagementTableId(String itemRecallManagementTableId) {
                 this.itemRecallManagementTableId = itemRecallManagementTableId;
@@ -385,7 +409,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemTableFields.
+             * <p>The output fields from the item table.</p>
              */
             public Builder itemTableFields(java.util.List<String> itemTableFields) {
                 this.itemTableFields = itemTableFields;
@@ -393,7 +417,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * MergeType.
+             * <p>The merge type. Valid values: <code>Weight</code> and <code>Alternate</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weight</p>
              */
             public Builder mergeType(String mergeType) {
                 this.mergeType = mergeType;
@@ -401,7 +428,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * RecallManagementServiceVersionConfigId.
+             * <p>The ID of the recall management service version configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
                 this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -481,7 +511,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * Expression.
+             * <p>The feature expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category=3</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -489,7 +522,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -497,7 +533,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The feature type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -551,7 +590,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * Experession.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder experession(String experession) {
                 this.experession = experession;
@@ -631,7 +673,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * Field.
+             * <p>The join field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -639,7 +684,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * OutputFields.
+             * <p>The fields to return from the join.</p>
              */
             public Builder outputFields(java.util.List<String> outputFields) {
                 this.outputFields = outputFields;
@@ -647,7 +692,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The ID of the table to join.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -740,7 +788,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * Field.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -748,7 +799,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * FieldQuantityLimit.
+             * <p>The maximum number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fieldQuantityLimit(Integer fieldQuantityLimit) {
                 this.fieldQuantityLimit = fieldQuantityLimit;
@@ -756,7 +810,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * IsRandSort.
+             * <p>Specifies whether to perform a random sort.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRandSort(Boolean isRandSort) {
                 this.isRandSort = isRandSort;
@@ -764,7 +821,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * SortField.
+             * <p>The sort field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_time</p>
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;
@@ -870,7 +930,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * FeatureConfig.
+             * <p>The configuration for the <code>Feature</code> operator.</p>
              */
             public Builder featureConfig(FeatureConfig featureConfig) {
                 this.featureConfig = featureConfig;
@@ -878,7 +938,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * FilterConfig.
+             * <p>The configuration for the <code>Filter</code> operator.</p>
              */
             public Builder filterConfig(FilterConfig filterConfig) {
                 this.filterConfig = filterConfig;
@@ -886,7 +946,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * JoinConfig.
+             * <p>The configuration for the <code>Join</code> operator.</p>
              */
             public Builder joinConfig(JoinConfig joinConfig) {
                 this.joinConfig = joinConfig;
@@ -894,7 +954,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * OperatorType.
+             * <p>The operator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Filter</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -902,7 +965,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * TriggerConfig.
+             * <p>The configuration for the <code>Trigger</code> operator.</p>
              */
             public Builder triggerConfig(TriggerConfig triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -1125,7 +1188,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The recall description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is etrec recall</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1133,7 +1199,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ExtendedConfig.
+             * <p>The extended configuration. Reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -1141,7 +1210,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The data format of the item condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;type&quot;:&quot;equal&quot;]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -1149,7 +1221,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemConditionExpression.
+             * <p>The item condition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder itemConditionExpression(String itemConditionExpression) {
                 this.itemConditionExpression = itemConditionExpression;
@@ -1157,7 +1232,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemVectorField.
+             * <p>The item vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_embedding</p>
              */
             public Builder itemVectorField(String itemVectorField) {
                 this.itemVectorField = itemVectorField;
@@ -1165,7 +1243,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * ItemVectorRecallManagementTableId.
+             * <p>The ID of the item vector recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder itemVectorRecallManagementTableId(String itemVectorRecallManagementTableId) {
                 this.itemVectorRecallManagementTableId = itemVectorRecallManagementTableId;
@@ -1173,7 +1254,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The recall name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etrec</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1181,7 +1265,7 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * Operators.
+             * <p>A list of operators.</p>
              */
             public Builder operators(java.util.List<Operators> operators) {
                 this.operators = operators;
@@ -1189,7 +1273,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority. A smaller value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -1197,7 +1284,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The ID of the recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -1205,7 +1295,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * RecallType.
+             * <p>The recall type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X2I</p>
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
@@ -1213,7 +1306,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * SortFields.
+             * <p>The sort fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder sortFields(String sortFields) {
                 this.sortFields = sortFields;
@@ -1221,7 +1317,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * UserVectorField.
+             * <p>The user vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_embedding</p>
              */
             public Builder userVectorField(String userVectorField) {
                 this.userVectorField = userVectorField;
@@ -1229,7 +1328,10 @@ public class UpdateRecallManagementServiceVersionConfigRequest extends Request {
             }
 
             /**
-             * UserVectorRecallManagementTableId.
+             * <p>The ID of the user vector recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder userVectorRecallManagementTableId(String userVectorRecallManagementTableId) {
                 this.userVectorRecallManagementTableId = userVectorRecallManagementTableId;

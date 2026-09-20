@@ -139,6 +139,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,16 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * <ul>
+         * <li><p><code>ASC</code>: Ascending order.</p>
+         * </li>
+         * <li><p><code>DESC</code>: Descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -160,7 +170,10 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value starts at 1. The default value is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +182,10 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +194,16 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort by.</p>
+         * <ul>
+         * <li><p><code>GmtCreateTime</code>: Creation time.</p>
+         * </li>
+         * <li><p><code>GmtModifiedTime</code>: Modified time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

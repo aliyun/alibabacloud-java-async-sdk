@@ -104,6 +104,7 @@ public class GetInstanceResourceTableRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,6 +117,7 @@ public class GetInstanceResourceTableRequest extends Request {
         }
 
         /**
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,6 +130,7 @@ public class GetInstanceResourceTableRequest extends Request {
         }
 
         /**
+         * <p>The table name filter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

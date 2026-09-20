@@ -87,7 +87,10 @@ public class CloneTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>Traffic control task ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -105,7 +108,10 @@ public class CloneTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

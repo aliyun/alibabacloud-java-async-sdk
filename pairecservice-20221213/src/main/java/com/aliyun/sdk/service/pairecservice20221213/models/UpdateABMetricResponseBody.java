@@ -54,7 +54,10 @@ public class UpdateABMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -106,7 +106,10 @@ public class GetSubCrowdResponseBody extends TeaModel {
         } 
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the sub-crowd was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -114,7 +117,10 @@ public class GetSubCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * Quantity.
+         * <p>The number of users in the sub-crowd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder quantity(String quantity) {
             this.quantity = quantity;
@@ -122,7 +128,7 @@ public class GetSubCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
@@ -133,7 +139,10 @@ public class GetSubCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * <p>The source of the sub-crowd. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualInput</p>
          */
         public Builder source(String source) {
             this.source = source;
@@ -141,7 +150,10 @@ public class GetSubCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The users in the sub-crowd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2</p>
          */
         public Builder users(String users) {
             this.users = users;

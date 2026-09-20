@@ -89,6 +89,7 @@ public class GetTrafficControlTargetRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the traffic control target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetTrafficControlTargetRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

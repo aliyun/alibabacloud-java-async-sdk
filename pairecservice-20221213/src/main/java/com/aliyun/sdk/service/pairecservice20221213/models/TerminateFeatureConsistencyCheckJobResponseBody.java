@@ -54,7 +54,10 @@ public class TerminateFeatureConsistencyCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID generated for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A6C01890-54CA-5C49-BC91-AD85A98E4A98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

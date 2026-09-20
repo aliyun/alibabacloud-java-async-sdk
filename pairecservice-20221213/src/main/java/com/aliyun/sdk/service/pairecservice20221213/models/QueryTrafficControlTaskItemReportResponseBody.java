@@ -67,7 +67,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskItemReports.
+         * <p>An array of item control reports.</p>
          */
         public Builder trafficControlTaskItemReports(java.util.List<TrafficControlTaskItemReports> trafficControlTaskItemReports) {
             this.trafficControlTaskItemReports = trafficControlTaskItemReports;
@@ -245,7 +248,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualItemControlNum.
+             * <p>The actual number of controlled items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder actualItemControlNum(Long actualItemControlNum) {
                 this.actualItemControlNum = actualItemControlNum;
@@ -253,7 +259,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * ActualItemControlTraffic.
+             * <p>The actual traffic of controlled items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder actualItemControlTraffic(Long actualItemControlTraffic) {
                 this.actualItemControlTraffic = actualItemControlTraffic;
@@ -261,7 +270,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * DoneItemControlNum.
+             * <p>The number of items that reached the control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder doneItemControlNum(Long doneItemControlNum) {
                 this.doneItemControlNum = doneItemControlNum;
@@ -269,7 +281,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * DoneItemControlPercentage.
+             * <p>The number of items that reached the control target, as a percentage of the expected number of controlled items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20%</p>
              */
             public Builder doneItemControlPercentage(String doneItemControlPercentage) {
                 this.doneItemControlPercentage = doneItemControlPercentage;
@@ -277,7 +292,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * ItemControlNumPercentage.
+             * <p>The actual number of controlled items as a percentage of the expected number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10%</p>
              */
             public Builder itemControlNumPercentage(String itemControlNumPercentage) {
                 this.itemControlNumPercentage = itemControlNumPercentage;
@@ -285,7 +303,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * ItemControlTrafficPercentage.
+             * <p>The actual traffic from controlled items as a percentage of the expected traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20%</p>
              */
             public Builder itemControlTrafficPercentage(String itemControlTrafficPercentage) {
                 this.itemControlTrafficPercentage = itemControlTrafficPercentage;
@@ -293,7 +314,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * OughtItemControlNum.
+             * <p>The expected number of controlled items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder oughtItemControlNum(Long oughtItemControlNum) {
                 this.oughtItemControlNum = oughtItemControlNum;
@@ -301,7 +325,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * OughtItemControlTraffic.
+             * <p>The expected traffic of controlled items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder oughtItemControlTraffic(Long oughtItemControlTraffic) {
                 this.oughtItemControlTraffic = oughtItemControlTraffic;
@@ -309,7 +336,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTargetId.
+             * <p>The ID of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder trafficControlTargetId(String trafficControlTargetId) {
                 this.trafficControlTargetId = trafficControlTargetId;
@@ -317,7 +347,10 @@ public class QueryTrafficControlTaskItemReportResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficControlTargetName.
+             * <p>The name of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item-1</p>
              */
             public Builder trafficControlTargetName(String trafficControlTargetName) {
                 this.trafficControlTargetName = trafficControlTargetName;

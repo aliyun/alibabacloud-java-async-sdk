@@ -80,7 +80,10 @@ public class CreateRecallManagementServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The recall management service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.recallManagementServiceId = recallManagementServiceId;
@@ -88,7 +91,10 @@ public class CreateRecallManagementServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The recall management service version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.recallManagementServiceVersionId = recallManagementServiceVersionId;
@@ -96,7 +102,10 @@ public class CreateRecallManagementServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>The request ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

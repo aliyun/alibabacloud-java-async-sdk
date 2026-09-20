@@ -80,7 +80,7 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ExperimentReport.
+         * <p>The experiment report.</p>
          */
         public Builder experimentReport(java.util.Map<String, ExperimentReportValue> experimentReport) {
             this.experimentReport = experimentReport;
@@ -88,7 +88,7 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GroupDimension.
+         * <p>The dimensions used for grouping the report data.</p>
          */
         public Builder groupDimension(java.util.List<String> groupDimension) {
             this.groupDimension = groupDimension;
@@ -96,7 +96,10 @@ public class ReportABMetricGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -98,6 +98,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain this ID by calling the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class ListLayersRequest extends Request {
         }
 
         /**
+         * <p>The laboratory ID. You can obtain this ID by calling the ListLaboratories API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

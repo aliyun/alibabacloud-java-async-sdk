@@ -54,7 +54,10 @@ public class SyncFeatureConsistencyCheckJobReplayLogResponseBody extends TeaMode
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7D0B48F-0105-52B9-B60A-FA7606E2234D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

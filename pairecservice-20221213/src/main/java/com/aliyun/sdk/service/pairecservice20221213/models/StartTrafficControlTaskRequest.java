@@ -102,6 +102,7 @@ public class StartTrafficControlTaskRequest extends Request {
         } 
 
         /**
+         * <p>The traffic control task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +124,10 @@ public class StartTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The target environment. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -132,7 +136,10 @@ public class StartTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-123***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -124,7 +124,10 @@ public class DeployTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -133,7 +136,10 @@ public class DeployTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The deployment environment. Valid values: Daily (daily environment), Pre (pre-production environment), and Prod (production environment).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -142,7 +148,10 @@ public class DeployTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -151,7 +160,7 @@ public class DeployTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * RetryDeploy.
+         * <p>Specifies whether to automatically retry a failed deployment.</p>
          */
         public Builder retryDeploy(Boolean retryDeploy) {
             this.putBodyParameter("RetryDeploy", retryDeploy);

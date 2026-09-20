@@ -288,6 +288,7 @@ public class UpdateExperimentGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the experiment group. You can obtain this ID by calling the ListExperimentGroups API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,7 +310,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The configuration of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -318,7 +322,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * CrowdId.
+         * <p>The ID of the crowd for crowd targeting. You can obtain this ID by calling the ListCrowds API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder crowdId(String crowdId) {
             this.putBodyParameter("CrowdId", crowdId);
@@ -327,7 +334,20 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * CrowdTargetType.
+         * <p>The type of crowd targeting for the experiment group. Valid values:</p>
+         * <ul>
+         * <li><p>All: all traffic</p>
+         * </li>
+         * <li><p>Filter: traffic that matches the filter condition</p>
+         * </li>
+         * <li><p>CrowdId: traffic from the specified crowd ID</p>
+         * </li>
+         * <li><p>Random: a random percentage of traffic</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder crowdTargetType(String crowdTargetType) {
             this.putBodyParameter("CrowdTargetType", crowdTargetType);
@@ -336,7 +356,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The ID of the debug crowd. You can obtain this ID by calling the ListCrowds API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.putBodyParameter("DebugCrowdId", debugCrowdId);
@@ -345,7 +368,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * DebugUsers.
+         * <p>A comma-separated list of UIDs for debug users. The UIDs can belong to Alibaba Cloud main accounts or sub-accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2,user3</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.putBodyParameter("DebugUsers", debugUsers);
@@ -354,6 +380,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The description of the experiment group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +393,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * DistributionTimeDuration.
+         * <p>The time duration for traffic distribution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder distributionTimeDuration(Integer distributionTimeDuration) {
             this.putBodyParameter("DistributionTimeDuration", distributionTimeDuration);
@@ -375,7 +405,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * DistributionType.
+         * <p>The distribution type. ● UserId: Distributes traffic by user ID. ● TimeDuration: Distributes traffic by time duration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserId</p>
          */
         public Builder distributionType(String distributionType) {
             this.putBodyParameter("DistributionType", distributionType);
@@ -384,7 +417,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter condition for crowd targeting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gender=male</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -393,6 +429,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. You can obtain this ID by calling the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -405,6 +442,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the layer. You can obtain this ID by calling the ListLayers API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -417,6 +455,7 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the experiment group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -429,7 +468,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * NeedAA.
+         * <p>Specifies whether an AA experiment group is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needAA(Boolean needAA) {
             this.putBodyParameter("NeedAA", needAA);
@@ -438,7 +480,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * RandomFlow.
+         * <p>If CrowdTargetType is set to Random, this parameter specifies the percentage of traffic (from 0 to 100) to route to the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder randomFlow(Long randomFlow) {
             this.putBodyParameter("RandomFlow", randomFlow);
@@ -447,7 +492,10 @@ public class UpdateExperimentGroupRequest extends Request {
         }
 
         /**
-         * ReservcedBuckets.
+         * <p>The reserved buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder reservcedBuckets(String reservcedBuckets) {
             this.putBodyParameter("ReservcedBuckets", reservcedBuckets);

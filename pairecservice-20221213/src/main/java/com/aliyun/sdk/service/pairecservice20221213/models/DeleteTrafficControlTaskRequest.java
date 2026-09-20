@@ -87,7 +87,10 @@ public class DeleteTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -105,7 +108,10 @@ public class DeleteTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

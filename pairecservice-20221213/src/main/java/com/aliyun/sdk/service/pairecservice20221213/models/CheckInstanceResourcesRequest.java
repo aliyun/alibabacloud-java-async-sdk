@@ -117,6 +117,7 @@ public class CheckInstanceResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +148,41 @@ public class CheckInstanceResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>EAS</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>Rec</p>
+         * </li>
+         * <li><p>Platform</p>
+         * </li>
+         * <li><p>SLS</p>
+         * </li>
+         * <li><p>DataHub</p>
+         * </li>
+         * <li><p>Kafka</p>
+         * </li>
+         * <li><p>Flinkvvp</p>
+         * </li>
+         * <li><p>ACR</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
+         * <li><p>DataWorks</p>
+         * </li>
+         * <li><p>PAI</p>
+         * </li>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>GraphCompute</p>
+         * </li>
+         * <li><p>Redis</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +195,10 @@ public class CheckInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Uri.
+         * <p>The resource URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-test-123</p>
          */
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);

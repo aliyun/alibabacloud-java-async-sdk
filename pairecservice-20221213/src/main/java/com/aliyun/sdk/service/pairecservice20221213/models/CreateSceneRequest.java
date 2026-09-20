@@ -124,7 +124,10 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The scene description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -133,7 +136,7 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * Flows.
+         * <p>The flows.</p>
          */
         public Builder flows(java.util.List<Flows> flows) {
             this.putBodyParameter("Flows", flows);
@@ -142,7 +145,10 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -151,7 +157,10 @@ public class CreateSceneRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -219,7 +228,10 @@ public class CreateSceneRequest extends Request {
             } 
 
             /**
-             * FlowCode.
+             * <p>The flow code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liuliang1</p>
              */
             public Builder flowCode(String flowCode) {
                 this.flowCode = flowCode;
@@ -227,7 +239,10 @@ public class CreateSceneRequest extends Request {
             }
 
             /**
-             * FlowName.
+             * <p>The flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>流量1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

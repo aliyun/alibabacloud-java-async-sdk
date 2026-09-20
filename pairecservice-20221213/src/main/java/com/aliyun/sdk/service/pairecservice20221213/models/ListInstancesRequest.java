@@ -152,7 +152,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. You can use this parameter to perform a fuzzy search for instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -161,7 +164,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: <code>Asc</code> (ascending) and <code>Desc</code> (descending).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Desc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -170,7 +176,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -179,7 +188,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -188,7 +200,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Type</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -197,7 +212,20 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li><p><code>basic</code>: Basic edition</p>
+         * </li>
+         * <li><p><code>high-level</code>: High-level edition</p>
+         * </li>
+         * <li><p><code>advanced</code>: Advanced edition</p>
+         * </li>
+         * <li><p><code>standard</code>: Standard edition</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -67,7 +67,7 @@ public class QueryRecallManagementTableRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Records.
+         * <p>A list of the retrieved records.</p>
          */
         public Builder records(java.util.List<java.util.Map<String, ?>> records) {
             this.records = records;
@@ -75,7 +75,10 @@ public class QueryRecallManagementTableRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

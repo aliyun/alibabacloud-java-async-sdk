@@ -67,7 +67,10 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
         } 
 
         /**
-         * Traffic.
+         * <p>The reported traffic for this target within the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder traffic(Double traffic) {
             this.traffic = traffic;
@@ -75,7 +78,10 @@ public class TrafficControlTaskTrafficInfoTargetTrafficsDataValue extends TeaMod
         }
 
         /**
-         * RecordTime.
+         * <p>The timestamp indicating when the data was reported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1760319273</p>
          */
         public Builder recordTime(Long recordTime) {
             this.recordTime = recordTime;

@@ -143,7 +143,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the Recall Management Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -161,7 +164,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -170,7 +176,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -179,7 +188,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -188,7 +200,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +212,10 @@ public class ListRecallManagementServiceVersionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the results by. Valid values: <code>GmtCreateTime</code> for creation time and <code>GmtModifiedTime</code> for modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

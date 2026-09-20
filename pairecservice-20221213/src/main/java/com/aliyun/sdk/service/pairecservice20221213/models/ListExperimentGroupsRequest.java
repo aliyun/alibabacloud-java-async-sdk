@@ -139,6 +139,7 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * LayerId.
+         * <p>The layer ID. You can get this ID by calling the ListLayers operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.putQueryParameter("LayerId", layerId);
@@ -160,7 +164,10 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the experiment group. Valid values: Offline, Online, and Pushed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -169,7 +176,10 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * TimeRangeEnd.
+         * <p>The end time for filtering experiment groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-31 12:00:00</p>
          */
         public Builder timeRangeEnd(String timeRangeEnd) {
             this.putQueryParameter("TimeRangeEnd", timeRangeEnd);
@@ -178,7 +188,10 @@ public class ListExperimentGroupsRequest extends Request {
         }
 
         /**
-         * TimeRangeStart.
+         * <p>The start time for filtering experiment groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-30 12:00:00</p>
          */
         public Builder timeRangeStart(String timeRangeStart) {
             this.putQueryParameter("TimeRangeStart", timeRangeStart);

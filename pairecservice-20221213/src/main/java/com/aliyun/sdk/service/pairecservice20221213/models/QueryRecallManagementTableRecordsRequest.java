@@ -115,7 +115,10 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         } 
 
         /**
-         * RecallManagementTableId.
+         * <p>The recall management table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -133,7 +136,10 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -142,7 +148,10 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         }
 
         /**
-         * PrimaryKeys.
+         * <p>The primary keys of the records to retrieve.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;1001&quot;,&quot;1002&quot;]</p>
          */
         public Builder primaryKeys(byte[] primaryKeys) {
             this.putQueryParameter("PrimaryKeys", primaryKeys);
@@ -151,7 +160,10 @@ public class QueryRecallManagementTableRecordsRequest extends Request {
         }
 
         /**
-         * RecallManagementTableVersionId.
+         * <p>The recall management table version ID. If you omit this parameter, the API uses the currently published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
             this.putQueryParameter("RecallManagementTableVersionId", recallManagementTableVersionId);

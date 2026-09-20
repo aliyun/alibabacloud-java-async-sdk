@@ -54,7 +54,7 @@ public class OfflineExperimentGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>

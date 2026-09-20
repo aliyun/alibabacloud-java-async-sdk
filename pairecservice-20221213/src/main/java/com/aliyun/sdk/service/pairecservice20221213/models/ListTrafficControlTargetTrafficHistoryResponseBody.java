@@ -80,7 +80,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of historical records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -96,7 +102,7 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
         }
 
         /**
-         * TrafficControlTaskTrafficHistories.
+         * <p>A list of the traffic control history records.</p>
          */
         public Builder trafficControlTaskTrafficHistories(java.util.List<TrafficControlTaskTrafficHistories> trafficControlTaskTrafficHistories) {
             this.trafficControlTaskTrafficHistories = trafficControlTaskTrafficHistories;
@@ -214,7 +220,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             } 
 
             /**
-             * ExperimentId.
+             * <p>The ID of the experiment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>E1</p>
              */
             public Builder experimentId(String experimentId) {
                 this.experimentId = experimentId;
@@ -222,7 +231,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * ItemId.
+             * <p>The ID of the item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -230,7 +242,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * RecordTime.
+             * <p>The timestamp of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-10 10:10:58</p>
              */
             public Builder recordTime(String recordTime) {
                 this.recordTime = recordTime;
@@ -238,7 +253,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * TrafficControlTargetAimTraffic.
+             * <p>The intended traffic for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder trafficControlTargetAimTraffic(Double trafficControlTargetAimTraffic) {
                 this.trafficControlTargetAimTraffic = trafficControlTargetAimTraffic;
@@ -246,7 +264,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * TrafficControlTargetTraffic.
+             * <p>The actual traffic of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder trafficControlTargetTraffic(Double trafficControlTargetTraffic) {
                 this.trafficControlTargetTraffic = trafficControlTargetTraffic;
@@ -254,7 +275,10 @@ public class ListTrafficControlTargetTrafficHistoryResponseBody extends TeaModel
             }
 
             /**
-             * TrafficControlTaskTraffic.
+             * <p>The overall traffic of the traffic control task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder trafficControlTaskTraffic(Double trafficControlTaskTraffic) {
                 this.trafficControlTaskTraffic = trafficControlTaskTraffic;

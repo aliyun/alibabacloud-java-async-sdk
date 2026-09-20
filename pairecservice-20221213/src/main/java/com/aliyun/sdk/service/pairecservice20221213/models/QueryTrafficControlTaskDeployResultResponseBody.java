@@ -197,7 +197,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         } 
 
         /**
-         * DeployMessage.
+         * <p>The message returned for the Flink platform deployment operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deploy job draft success</p>
          */
         public Builder deployMessage(String deployMessage) {
             this.deployMessage = deployMessage;
@@ -205,7 +208,15 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * DeployStatus.
+         * <p>The status of deploying the draft. Valid values:</p>
+         * <ul>
+         * <li>Failed: failed.</li>
+         * <li>Running: running.</li>
+         * <li>Success: succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder deployStatus(String deployStatus) {
             this.deployStatus = deployStatus;
@@ -213,7 +224,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * DraftMessage.
+         * <p>The message returned for pushing the draft to Flink.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>push draft success</p>
          */
         public Builder draftMessage(String draftMessage) {
             this.draftMessage = draftMessage;
@@ -221,7 +235,15 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * DraftStatus.
+         * <p>The status of pushing the draft to Flink. Valid values:</p>
+         * <ul>
+         * <li>Failed: failed.</li>
+         * <li>Running: running.</li>
+         * <li>Success: succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder draftStatus(String draftStatus) {
             this.draftStatus = draftStatus;
@@ -229,7 +251,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * PrepareMessage.
+         * <p>The message returned for the preparation phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder prepareMessage(String prepareMessage) {
             this.prepareMessage = prepareMessage;
@@ -237,7 +262,15 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * PrepareStatus.
+         * <p>The status of the preparation phase. Valid values:</p>
+         * <ul>
+         * <li>Failed: failed.</li>
+         * <li>Running: running.</li>
+         * <li>Success: succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder prepareStatus(String prepareStatus) {
             this.prepareStatus = prepareStatus;
@@ -245,7 +278,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -253,7 +289,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * StartMessage.
+         * <p>The message returned for starting the Flink task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start job success</p>
          */
         public Builder startMessage(String startMessage) {
             this.startMessage = startMessage;
@@ -261,7 +300,15 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * StartStatus.
+         * <p>The status of starting the Flink task. Valid values:</p>
+         * <ul>
+         * <li>Failed: failed.</li>
+         * <li>Running: running.</li>
+         * <li>Success: succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder startStatus(String startStatus) {
             this.startStatus = startStatus;
@@ -269,7 +316,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * StopMessage.
+         * <p>The stop details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder stopMessage(String stopMessage) {
             this.stopMessage = stopMessage;
@@ -277,7 +327,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * StopStatus.
+         * <p>The stop status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder stopStatus(String stopStatus) {
             this.stopStatus = stopStatus;
@@ -285,7 +338,10 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.trafficControlTaskId = trafficControlTaskId;

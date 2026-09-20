@@ -67,7 +67,10 @@ public class CreateFeatureConsistencyCheckJobResponseBody extends TeaModel {
         } 
 
         /**
-         * FeatureConsistencyCheckJobId.
+         * <p>The feature consistency check job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder featureConsistencyCheckJobId(String featureConsistencyCheckJobId) {
             this.featureConsistencyCheckJobId = featureConsistencyCheckJobId;
@@ -75,7 +78,10 @@ public class CreateFeatureConsistencyCheckJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -88,6 +88,7 @@ public class PushAllExperimentRequest extends Request {
         } 
 
         /**
+         * <p>The experiment ID. Call the ListExperiments API to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class PushAllExperimentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. Call the ListInstances API to obtain this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

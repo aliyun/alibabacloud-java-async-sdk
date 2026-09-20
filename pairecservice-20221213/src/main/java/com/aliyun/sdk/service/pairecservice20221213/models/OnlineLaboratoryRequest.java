@@ -89,6 +89,7 @@ public class OnlineLaboratoryRequest extends Request {
         } 
 
         /**
+         * <p>The laboratory ID. This ID is returned by the ListLaboratories API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class OnlineLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. This ID is returned by the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

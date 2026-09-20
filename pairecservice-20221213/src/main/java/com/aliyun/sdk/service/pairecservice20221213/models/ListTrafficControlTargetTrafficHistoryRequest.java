@@ -185,7 +185,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         } 
 
         /**
-         * TrafficControlTargetId.
+         * <p>The ID of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
@@ -203,7 +206,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-10 13:13:20</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -212,7 +218,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The target environment. Valid values: Daily, Pre, and Prod.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -221,7 +230,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * ExperimentGroupId.
+         * <p>The ID of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.putQueryParameter("ExperimentGroupId", experimentGroupId);
@@ -230,7 +242,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * ExperimentId.
+         * <p>The ID of the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ER_All</p>
          */
         public Builder experimentId(String experimentId) {
             this.putQueryParameter("ExperimentId", experimentId);
@@ -239,7 +254,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -248,7 +266,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * ItemId.
+         * <p>The ID of the item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
          */
         public Builder itemId(String itemId) {
             this.putQueryParameter("ItemId", itemId);
@@ -257,7 +278,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01 13:13:20</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -266,7 +290,10 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * <p>The threshold value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder threshold(String threshold) {
             this.putQueryParameter("Threshold", threshold);

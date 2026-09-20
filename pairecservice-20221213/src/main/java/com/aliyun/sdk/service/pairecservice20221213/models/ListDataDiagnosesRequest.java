@@ -125,6 +125,7 @@ public class ListDataDiagnosesRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,10 @@ public class ListDataDiagnosesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +150,10 @@ public class ListDataDiagnosesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -155,7 +162,7 @@ public class ListDataDiagnosesRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>A list of diagnosis types.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");

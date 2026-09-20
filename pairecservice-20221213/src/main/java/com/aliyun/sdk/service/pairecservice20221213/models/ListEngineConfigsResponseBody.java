@@ -80,7 +80,7 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         } 
 
         /**
-         * EngineConfigs.
+         * <p>The list of engine configurations.</p>
          */
         public Builder engineConfigs(java.util.List<EngineConfigs> engineConfigs) {
             this.engineConfigs = engineConfigs;
@@ -88,7 +88,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of elements in the list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -279,7 +285,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigValue.
+             * <p>The content of the engine configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
@@ -287,7 +296,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>what</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -295,7 +307,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineConfigId.
+             * <p>The engine configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder engineConfigId(String engineConfigId) {
                 this.engineConfigId = engineConfigId;
@@ -303,7 +318,18 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment.
+             * <p>The runtime environment.</p>
+             * <ul>
+             * <li><p>Daily: daily environment.</p>
+             * </li>
+             * <li><p>Pre: staging environment.</p>
+             * </li>
+             * <li><p>Prod: production environment.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Pre</p>
              */
             public Builder environment(String environment) {
                 this.environment = environment;
@@ -311,7 +337,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-07T01:43:42Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -319,7 +348,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-27T12:00:00Z</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -327,7 +359,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtReleasedTime.
+             * <p>The release time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-29 12:00:00</p>
              */
             public Builder gmtReleasedTime(String gmtReleasedTime) {
                 this.gmtReleasedTime = gmtReleasedTime;
@@ -335,7 +370,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The engine configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>engine_config_v1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +381,16 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * <ul>
+             * <li><p>Released: released.</p>
+             * </li>
+             * <li><p>UnReleased: not released.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Released</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -351,7 +398,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The engine configuration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -359,7 +409,10 @@ public class ListEngineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number of the currently released or most recently updated version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230509161300</p>
              */
             public Builder version(String version) {
                 this.version = version;

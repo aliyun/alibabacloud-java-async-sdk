@@ -80,7 +80,7 @@ public class ListABMetricsResponseBody extends TeaModel {
         } 
 
         /**
-         * ABMetrics.
+         * <p>The list of AB metrics.</p>
          */
         public Builder ABMetrics(java.util.List<ABMetrics> ABMetrics) {
             this.ABMetrics = ABMetrics;
@@ -88,7 +88,10 @@ public class ListABMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListABMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of AB metrics returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -396,7 +402,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * ABMetricId.
+             * <p>The AB metric ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder ABMetricId(String ABMetricId) {
                 this.ABMetricId = ABMetricId;
@@ -404,7 +413,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * AggregationByUser.
+             * <p>Indicates whether to aggregate data by user.</p>
              */
             public Builder aggregationByUser(Boolean aggregationByUser) {
                 this.aggregationByUser = aggregationByUser;
@@ -412,7 +421,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Definition.
+             * <p>The metric definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sum(click_cnt)</p>
              */
             public Builder definition(String definition) {
                 this.definition = definition;
@@ -420,7 +432,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Denominator.
+             * <p>The denominator of the derived metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv</p>
              */
             public Builder denominator(String denominator) {
                 this.denominator = denominator;
@@ -428,7 +443,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The metric description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv指标</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -436,7 +454,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * IsBinomialDistribution.
+             * <p>Indicates whether the metric follows a binomial distribution.</p>
              */
             public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
                 this.isBinomialDistribution = isBinomialDistribution;
@@ -444,7 +462,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * LeftMetricId.
+             * <p>The ID of the left-hand metric in the formula for the derived metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder leftMetricId(String leftMetricId) {
                 this.leftMetricId = leftMetricId;
@@ -452,7 +473,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -460,7 +484,7 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * NeedSignificance.
+             * <p>Indicates whether significance calculation is required.</p>
              */
             public Builder needSignificance(Boolean needSignificance) {
                 this.needSignificance = needSignificance;
@@ -468,7 +492,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Numerator.
+             * <p>The numerator of the derived metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>click</p>
              */
             public Builder numerator(String numerator) {
                 this.numerator = numerator;
@@ -476,7 +503,20 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator used to calculate the derived metric. Valid values:</p>
+             * <ul>
+             * <li><p><code>Plus</code>: addition</p>
+             * </li>
+             * <li><p><code>Minus</code>: subtraction</p>
+             * </li>
+             * <li><p><code>Multiplication</code>: multiplication</p>
+             * </li>
+             * <li><p><code>Division</code>: division</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Division</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -484,7 +524,16 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Realtime.
+             * <p>Indicates whether the metric is a real-time metric.</p>
+             * <ul>
+             * <li><p><code>true</code>: The metric is calculated in real time.</p>
+             * </li>
+             * <li><p><code>false</code>: The metric is not calculated in real time.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder realtime(String realtime) {
                 this.realtime = realtime;
@@ -492,7 +541,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultResourceId.
+             * <p>The ID of the data source for the data table to which the results are written.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder resultResourceId(String resultResourceId) {
                 this.resultResourceId = resultResourceId;
@@ -500,7 +552,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultTableMetaId.
+             * <p>The ID of the data table to which the results are written.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder resultTableMetaId(String resultTableMetaId) {
                 this.resultTableMetaId = resultTableMetaId;
@@ -508,7 +563,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * RightMetricId.
+             * <p>The ID of the right-hand metric in the formula for the derived metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder rightMetricId(String rightMetricId) {
                 this.rightMetricId = rightMetricId;
@@ -516,7 +574,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -524,7 +585,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The scene name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>home_feed</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -532,7 +596,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * StatisticsCycle.
+             * <p>The statistical period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statisticsCycle(Integer statisticsCycle) {
                 this.statisticsCycle = statisticsCycle;
@@ -540,7 +607,10 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * TableMetaId.
+             * <p>The data table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableMetaId(String tableMetaId) {
                 this.tableMetaId = tableMetaId;
@@ -548,7 +618,16 @@ public class ListABMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li><p><code>Single</code>: a single metric.</p>
+             * </li>
+             * <li><p><code>Derived</code>: a derived metric.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Single</p>
              */
             public Builder type(String type) {
                 this.type = type;

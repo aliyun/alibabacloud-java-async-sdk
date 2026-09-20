@@ -158,7 +158,18 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Category.
+         * <p>The resource category. Valid values:</p>
+         * <ul>
+         * <li><p>DataManagement</p>
+         * </li>
+         * <li><p>Engine</p>
+         * </li>
+         * <li><p>Monitor</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DataManagement</p>
          */
         public Builder category(String category) {
             this.category = category;
@@ -166,7 +177,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The resource configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -174,7 +188,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13 17:34:52</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -182,7 +199,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The last modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13 17:34:52</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -190,7 +210,43 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Group.
+         * <p>The resource group.</p>
+         * <p>If <code>Category</code> is <code>DataManagement</code>, the valid values are:</p>
+         * <ul>
+         * <li><p>storage</p>
+         * </li>
+         * <li><p>modelpipeline</p>
+         * </li>
+         * <li><p>datastorage</p>
+         * </li>
+         * <li><p>modeltrain</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Engine</code>, the valid values are:</p>
+         * <ul>
+         * <li><p>feature</p>
+         * </li>
+         * <li><p>predict</p>
+         * </li>
+         * <li><p>recall</p>
+         * </li>
+         * <li><p>recengine</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Monitor</code>, the valid values are:</p>
+         * <ul>
+         * <li><p>logs</p>
+         * </li>
+         * <li><p>logsback</p>
+         * </li>
+         * <li><p>coldstart</p>
+         * </li>
+         * <li><p>deploy</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>storage</p>
          */
         public Builder group(String group) {
             this.group = group;
@@ -198,7 +254,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +265,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-2s416t***</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -214,7 +276,44 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>EAS</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>Rec</p>
+         * </li>
+         * <li><p>Platform</p>
+         * </li>
+         * <li><p>SLS</p>
+         * </li>
+         * <li><p>DataHub</p>
+         * </li>
+         * <li><p>ApsaraMQ for Kafka</p>
+         * </li>
+         * <li><p>Realtime Compute for Apache Flink</p>
+         * </li>
+         * <li><p>ACR</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
+         * <li><p>DataWorks</p>
+         * </li>
+         * <li><p>PAI</p>
+         * </li>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>Graph Compute Service</p>
+         * </li>
+         * <li><p>ApsaraDB for Redis</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -222,7 +321,10 @@ public class GetInstanceResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Uri.
+         * <p>The resource URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-test-123</p>
          */
         public Builder uri(String uri) {
             this.uri = uri;

@@ -96,7 +96,10 @@ public class ListScenesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. You can obtain this ID by calling the <code>ListInstances</code> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +108,10 @@ public class ListScenesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the scene to use as a filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

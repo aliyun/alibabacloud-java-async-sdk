@@ -152,7 +152,15 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment to which the parameter belongs. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment.</li>
+         * <li>Pre: staging environment.</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -161,7 +169,10 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -170,7 +181,10 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -179,7 +193,10 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID. You can call the ListScenes operation to obtain the scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -188,7 +205,16 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The parameter type. Valid values:</p>
+         * <ul>
+         * <li><p>Normal: common parameter.</p>
+         * </li>
+         * <li><p>Encryption: encrypted parameter.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -197,7 +223,10 @@ public class CreateParamRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>house</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

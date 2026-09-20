@@ -101,7 +101,10 @@ public class DeleteEngineConfigRequest extends Request {
         } 
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.putPathParameter("EngineConfigId", engineConfigId);
@@ -119,7 +122,10 @@ public class DeleteEngineConfigRequest extends Request {
         }
 
         /**
-         * DeleteAll.
+         * <p>Specifies whether to delete all engine configurations with the same name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder deleteAll(Boolean deleteAll) {
             this.putQueryParameter("DeleteAll", deleteAll);
@@ -128,7 +134,10 @@ public class DeleteEngineConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-***test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

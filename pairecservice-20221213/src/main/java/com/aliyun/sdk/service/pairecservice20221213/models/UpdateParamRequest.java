@@ -101,7 +101,10 @@ public class UpdateParamRequest extends Request {
         } 
 
         /**
-         * ParamId.
+         * <p>The ID of the parameter. You can retrieve this ID by calling the ListParams API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder paramId(String paramId) {
             this.putPathParameter("ParamId", paramId);
@@ -119,7 +122,10 @@ public class UpdateParamRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can retrieve this ID by calling the ListInstances API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -128,7 +134,10 @@ public class UpdateParamRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The parameter\&quot;s value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>house</p>
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

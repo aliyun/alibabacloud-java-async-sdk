@@ -67,7 +67,7 @@ public class CreateDataDiagnosisJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataDiagnosisJobIds.
+         * <p>A list of data diagnosis job IDs.</p>
          */
         public Builder dataDiagnosisJobIds(java.util.List<String> dataDiagnosisJobIds) {
             this.dataDiagnosisJobIds = dataDiagnosisJobIds;
@@ -75,7 +75,10 @@ public class CreateDataDiagnosisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

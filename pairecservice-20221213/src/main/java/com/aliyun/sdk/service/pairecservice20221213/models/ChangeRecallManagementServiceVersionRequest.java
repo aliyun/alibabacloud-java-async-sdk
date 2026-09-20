@@ -101,7 +101,10 @@ public class ChangeRecallManagementServiceVersionRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The recall management service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -119,7 +122,10 @@ public class ChangeRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -128,7 +134,10 @@ public class ChangeRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The recall management service version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.putBodyParameter("RecallManagementServiceVersionId", recallManagementServiceVersionId);

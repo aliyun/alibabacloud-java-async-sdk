@@ -128,6 +128,7 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
+         * <p>The description of the layer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. Call the <code>ListInstances</code> operation to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
+         * <p>The ID of the laboratory. Call the <code>ListLaboratories</code> operation to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CreateLayerRequest extends Request {
         }
 
         /**
+         * <p>The name of the layer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

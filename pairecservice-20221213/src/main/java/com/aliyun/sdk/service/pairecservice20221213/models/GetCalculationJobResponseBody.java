@@ -158,7 +158,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         } 
 
         /**
-         * ABMetricId.
+         * <p>The ID of the AB metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ABMetricId(String ABMetricId) {
             this.ABMetricId = ABMetricId;
@@ -166,7 +169,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * ABMetricName.
+         * <p>The name of the AB metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder ABMetricName(String ABMetricName) {
             this.ABMetricName = ABMetricName;
@@ -174,7 +180,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * BizDate.
+         * <p>The business date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15</p>
          */
         public Builder bizDate(String bizDate) {
             this.bizDate = bizDate;
@@ -182,7 +191,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The job configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -190,7 +202,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * GmtRanTime.
+         * <p>The runtime of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtRanTime(String gmtRanTime) {
             this.gmtRanTime = gmtRanTime;
@@ -198,7 +213,7 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobMessage.
+         * <p>The job messages.</p>
          */
         public Builder jobMessage(java.util.List<String> jobMessage) {
             this.jobMessage = jobMessage;
@@ -206,7 +221,16 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobSource.
+         * <p>The job source. Valid values:</p>
+         * <ul>
+         * <li><p>CronOffline: An offline cron job.</p>
+         * </li>
+         * <li><p>DataRerun: A data rerun task.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CronOffline</p>
          */
         public Builder jobSource(String jobSource) {
             this.jobSource = jobSource;
@@ -214,7 +238,10 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7D59453C-48AA-5FC5-8848-2D373BD1A17F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +249,20 @@ public class GetCalculationJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the calculation job. Valid values:</p>
+         * <ul>
+         * <li><p>Success: The job completed successfully.</p>
+         * </li>
+         * <li><p>Failure: The job failed.</p>
+         * </li>
+         * <li><p>Initializing: The job is initializing.</p>
+         * </li>
+         * <li><p>Running: The job is running.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.status = status;

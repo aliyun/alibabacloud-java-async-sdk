@@ -158,7 +158,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         } 
 
         /**
-         * ConfigType.
+         * <p>The configuration type. Valid values: Recall (recall configuration) and Merge (merge configuration).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recall</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -166,7 +169,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -174,7 +180,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The last modification time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -182,7 +191,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * MergeConfig.
+         * <p>The merge configuration.</p>
          */
         public Builder mergeConfig(MergeConfig mergeConfig) {
             this.mergeConfig = mergeConfig;
@@ -190,7 +199,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * RecallConfig.
+         * <p>The recall configuration.</p>
          */
         public Builder recallConfig(RecallConfig recallConfig) {
             this.recallConfig = recallConfig;
@@ -198,7 +207,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * RecallManagementServiceId.
+         * <p>The recall management service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.recallManagementServiceId = recallManagementServiceId;
@@ -206,7 +218,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * RecallManagementServiceVersionConfigId.
+         * <p>The recall management service version configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
             this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -214,7 +229,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The recall management service version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.recallManagementServiceVersionId = recallManagementServiceVersionId;
@@ -222,7 +240,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -356,7 +374,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * ExtendedConfig.
+             * <p>Additional configuration for the merge operation, reserved for future enhancements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -364,7 +385,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * FilterExpression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -372,7 +396,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * FilterRecallManagementTableIds.
+             * <p>A list of filter table IDs.</p>
              */
             public Builder filterRecallManagementTableIds(java.util.List<String> filterRecallManagementTableIds) {
                 this.filterRecallManagementTableIds = filterRecallManagementTableIds;
@@ -380,7 +404,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemRecallManagementTableId.
+             * <p>The item table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder itemRecallManagementTableId(String itemRecallManagementTableId) {
                 this.itemRecallManagementTableId = itemRecallManagementTableId;
@@ -388,7 +415,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemTableFields.
+             * <p>A list of output fields from the item table.</p>
              */
             public Builder itemTableFields(java.util.List<String> itemTableFields) {
                 this.itemTableFields = itemTableFields;
@@ -396,7 +423,16 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * MergeType.
+             * <p>The merge type. Valid values:</p>
+             * <ul>
+             * <li><p>Weight: Merges items based on assigned weights.</p>
+             * </li>
+             * <li><p>Alternate: Merges items in an alternating sequence.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Weight</p>
              */
             public Builder mergeType(String mergeType) {
                 this.mergeType = mergeType;
@@ -404,7 +440,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * RecallManagementServiceVersionConfigId.
+             * <p>The recall management service version configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
                 this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -484,7 +523,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * Expression.
+             * <p>The feature expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category=3</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -492,7 +534,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * Name.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -500,7 +545,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * Type.
+             * <p>The feature type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -554,7 +602,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * Expression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -634,7 +685,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * Field.
+             * <p>The join field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -642,7 +696,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * OutputFields.
+             * <p>The output fields.</p>
              */
             public Builder outputFields(java.util.List<String> outputFields) {
                 this.outputFields = outputFields;
@@ -650,7 +704,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The join table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -743,7 +800,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * Field.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -751,7 +811,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * FieldQuantityLimit.
+             * <p>The limit on the number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fieldQuantityLimit(Integer fieldQuantityLimit) {
                 this.fieldQuantityLimit = fieldQuantityLimit;
@@ -759,7 +822,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * IsRandSort.
+             * <p>Indicates whether to randomly sort the items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRandSort(Boolean isRandSort) {
                 this.isRandSort = isRandSort;
@@ -767,7 +833,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * SortField.
+             * <p>The sort field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_time</p>
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;
@@ -873,7 +942,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * FeatureConfig.
+             * <p>The configuration for the feature operator.</p>
              */
             public Builder featureConfig(FeatureConfig featureConfig) {
                 this.featureConfig = featureConfig;
@@ -881,7 +950,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * FilterConfig.
+             * <p>The configuration for the filter operator.</p>
              */
             public Builder filterConfig(FilterConfig filterConfig) {
                 this.filterConfig = filterConfig;
@@ -889,7 +958,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * JoinConfig.
+             * <p>The configuration for the Join operator.</p>
              */
             public Builder joinConfig(JoinConfig joinConfig) {
                 this.joinConfig = joinConfig;
@@ -897,7 +966,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * OperatorType.
+             * <p>The operator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Filter</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -905,7 +977,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * TriggerConfig.
+             * <p>The configuration for the Trigger operator.</p>
              */
             public Builder triggerConfig(TriggerConfig triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -1141,7 +1213,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             } 
 
             /**
-             * Description.
+             * <p>The recall description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is etrec recall</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1149,7 +1224,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ExtendedConfig.
+             * <p>Extended configuration, reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -1157,7 +1235,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The item conditions, as a JSON array string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -1165,7 +1246,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemConditionExpression.
+             * <p>The item condition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder itemConditionExpression(String itemConditionExpression) {
                 this.itemConditionExpression = itemConditionExpression;
@@ -1173,7 +1257,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemVectorField.
+             * <p>The item vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_embedding</p>
              */
             public Builder itemVectorField(String itemVectorField) {
                 this.itemVectorField = itemVectorField;
@@ -1181,7 +1268,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * ItemVectorRecallManagementTableId.
+             * <p>The item vector recall table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder itemVectorRecallManagementTableId(String itemVectorRecallManagementTableId) {
                 this.itemVectorRecallManagementTableId = itemVectorRecallManagementTableId;
@@ -1189,7 +1279,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * Name.
+             * <p>The recall name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etrec</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1197,7 +1290,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * Operators.
+             * <p>A list of operators.</p>
              */
             public Builder operators(java.util.List<Operators> operators) {
                 this.operators = operators;
@@ -1205,7 +1298,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * Priority.
+             * <p>The priority. A lower value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -1213,7 +1309,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * RecallManagementServiceVersionConfigId.
+             * <p>The recall management service version configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
                 this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -1221,7 +1320,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The recall management table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -1229,7 +1331,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * RecallType.
+             * <p>The recall type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X2I</p>
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
@@ -1237,7 +1342,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * SortFields.
+             * <p>The sort fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder sortFields(String sortFields) {
                 this.sortFields = sortFields;
@@ -1245,7 +1353,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * UserVectorField.
+             * <p>The user vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_embedding</p>
              */
             public Builder userVectorField(String userVectorField) {
                 this.userVectorField = userVectorField;
@@ -1253,7 +1364,10 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
             }
 
             /**
-             * UserVectorRecallManagementTableId.
+             * <p>The user vector recall table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userVectorRecallManagementTableId(String userVectorRecallManagementTableId) {
                 this.userVectorRecallManagementTableId = userVectorRecallManagementTableId;

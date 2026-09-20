@@ -87,7 +87,10 @@ public class DeleteParamRequest extends Request {
         } 
 
         /**
-         * ParamId.
+         * <p>Parameter ID, which can be obtained by calling the ListParams API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder paramId(String paramId) {
             this.putPathParameter("ParamId", paramId);
@@ -105,7 +108,10 @@ public class DeleteParamRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

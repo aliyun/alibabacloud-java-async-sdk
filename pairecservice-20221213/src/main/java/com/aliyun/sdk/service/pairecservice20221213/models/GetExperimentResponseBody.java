@@ -262,7 +262,10 @@ public class GetExperimentResponseBody extends TeaModel {
         } 
 
         /**
-         * AliasExperimentId.
+         * <p>The alias of the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>L1#EG1#E1</p>
          */
         public Builder aliasExperimentId(String aliasExperimentId) {
             this.aliasExperimentId = aliasExperimentId;
@@ -270,7 +273,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Buckets.
+         * <p>A comma-separated list of bucket numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3</p>
          */
         public Builder buckets(String buckets) {
             this.buckets = buckets;
@@ -278,7 +284,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The experiment configuration, in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -286,7 +295,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The debug crowd ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.debugCrowdId = debugCrowdId;
@@ -294,7 +306,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * DebugUsers.
+         * <p>The UIDs of debug users, which can be the UIDs of an Alibaba Cloud main account or a RAM user. Separate multiple UIDs with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1124512470******,1124512471******,1124512472******</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.debugUsers = debugUsers;
@@ -302,7 +317,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The experiment description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -310,7 +328,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ExperimentGroupId.
+         * <p>The experiment group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.experimentGroupId = experimentGroupId;
@@ -318,7 +339,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * FlowPercent.
+         * <p>The traffic percentage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder flowPercent(Integer flowPercent) {
             this.flowPercent = flowPercent;
@@ -326,7 +350,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -334,7 +361,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The modification time, in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -342,7 +372,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * LaboratoryId.
+         * <p>The laboratory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.laboratoryId = laboratoryId;
@@ -350,7 +383,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * LayerId.
+         * <p>The layer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.layerId = layerId;
@@ -358,7 +394,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The experiment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experiment_test1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -366,7 +405,7 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74D958EF-3598-56FA-8296-FF1575CE43DF</p>
@@ -377,7 +416,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -385,7 +427,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the experiment. Valid values:<br>● Offline<br>● Online<br><br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -393,7 +438,10 @@ public class GetExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the experiment. Valid values:<br>● Baseline: a baseline experiment.<br>● Normal: a normal experiment.<br><br></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Baseline</p>
          */
         public Builder type(String type) {
             this.type = type;

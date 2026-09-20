@@ -210,7 +210,10 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
         /**
-         * CrInstanceId.
+         * <p>The Container Registry Enterprise instance ID selected by the user when a non-official image is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xxx</p>
          */
         public Builder crInstanceId(String crInstanceId) {
             this.crInstanceId = crInstanceId;
@@ -218,7 +221,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The service description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test rec engine</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -226,7 +232,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.engineConfigId = engineConfigId;
@@ -234,7 +243,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtReleasedTime.
+         * <p>The time of the most recent production release.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtReleasedTime(String gmtReleasedTime) {
             this.gmtReleasedTime = gmtReleasedTime;
@@ -242,7 +254,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageAuth.
+         * <p>The image secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder imageAuth(String imageAuth) {
             this.imageAuth = imageAuth;
@@ -250,7 +265,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ImageName.
+         * <p>The image name.</p>
          */
         public Builder imageName(String imageName) {
             this.imageName = imageName;
@@ -258,7 +273,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * LatestProdReleaseOrder.
+         * <p>The most recent production release record.</p>
          */
         public Builder latestProdReleaseOrder(LatestProdReleaseOrder latestProdReleaseOrder) {
             this.latestProdReleaseOrder = latestProdReleaseOrder;
@@ -266,7 +281,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_rec</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -274,7 +292,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * <p>The region where the service is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder region(String region) {
             this.region = region;
@@ -282,7 +303,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RepositoryId.
+         * <p>The Container Registry Enterprise Edition repository ID selected by the user when a non-official image is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-xxx</p>
          */
         public Builder repositoryId(String repositoryId) {
             this.repositoryId = repositoryId;
@@ -290,7 +314,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -298,7 +325,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceConfig.
+         * <p>The configuration used to publish the service, such as the service configuration in EAS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Port&quot;:8080}</p>
          */
         public Builder serviceConfig(String serviceConfig) {
             this.serviceConfig = serviceConfig;
@@ -306,7 +336,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceResourceUri.
+         * <p>The resource address used to publish the service, such as the resource group name in Elastic Algorithm Service (EAS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas-resource-xxx</p>
          */
         public Builder serviceResourceUri(String serviceResourceUri) {
             this.serviceResourceUri = serviceResourceUri;
@@ -424,7 +457,10 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The release content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update golang version to 1.22</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -432,7 +468,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -440,7 +479,19 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseInfo.
+             * <p>The release information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;Pre&quot;: {
+             *     &quot;Status&quot;: &quot;Released&quot;,
+             *     &quot;GmtReleasedTime&quot; : &quot;2021-12-15T23:24:33.132+08:00&quot;,
+             *   },
+             *   &quot;Prod&quot;: {
+             *     &quot;Status&quot;: &quot;Released&quot;,
+             *     &quot;GmtReleasedTime&quot; : &quot;2021-12-15T23:24:33.132+08:00&quot;,
+             *   }
+             * }</p>
              */
             public Builder releaseInfo(String releaseInfo) {
                 this.releaseInfo = releaseInfo;
@@ -448,7 +499,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseOrderId.
+             * <p>The release order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder releaseOrderId(String releaseOrderId) {
                 this.releaseOrderId = releaseOrderId;
@@ -456,7 +510,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Releaser.
+             * <p>The publisher, including the name and UID of the Resource Access Management (RAM) users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:E-xxx.xxx-@xxx.onaliyun.com">E-xxx.xxx-@xxx.onaliyun.com</a></p>
              */
             public Builder releaser(String releaser) {
                 this.releaser = releaser;
@@ -464,7 +521,10 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The release title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>update version</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;

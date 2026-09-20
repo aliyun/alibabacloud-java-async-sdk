@@ -190,6 +190,7 @@ public class UpdateExperimentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the experiment. To obtain this ID, call the ListExperiments operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +212,10 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The experiment configuration, specified as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RankBy&quot;: &quot;Score&quot;}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -220,7 +224,10 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The ID of the debug crowd. To obtain this ID, call the ListCrowds operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.putBodyParameter("DebugCrowdId", debugCrowdId);
@@ -229,7 +236,10 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * DebugUsers.
+         * <p>The UIDs for debug users, specified as a comma-separated string. Each UID must belong to an Alibaba Cloud account or RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1124512470******,1124512471******,1124512472******</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.putBodyParameter("DebugUsers", debugUsers);
@@ -238,6 +248,7 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
+         * <p>The description of the experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +261,10 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
-         * FlowPercent.
+         * <p>The percentage of traffic to allocate to the experiment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder flowPercent(Integer flowPercent) {
             this.putBodyParameter("FlowPercent", flowPercent);
@@ -259,6 +273,7 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. To obtain this ID, call the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +286,7 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
+         * <p>The name of the experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +299,7 @@ public class UpdateExperimentRequest extends Request {
         }
 
         /**
+         * <p>The type of the experiment. Valid values: ● Baseline: A baseline experiment. ● Normal: A normal experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

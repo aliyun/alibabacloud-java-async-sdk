@@ -155,6 +155,7 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The description of the crowd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +168,7 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To get this ID, call the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +181,10 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
-         * Label.
+         * <p>The crowd label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>os=android</p>
          */
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
@@ -188,6 +193,7 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The crowd name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +206,10 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the user data. Valid values: ● ManualInput: Users are provided in the Users parameter. ● UploadFile: Users are provided from an uploaded file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManualInput</p>
          */
         public Builder source(String source) {
             this.putBodyParameter("Source", source);
@@ -209,7 +218,10 @@ public class CreateCrowdRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>The users to include in the crowd. Separate multiple users with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2,user3</p>
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

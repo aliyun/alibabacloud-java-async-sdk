@@ -73,7 +73,10 @@ public class GetInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

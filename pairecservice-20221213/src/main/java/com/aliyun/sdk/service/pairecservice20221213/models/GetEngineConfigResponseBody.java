@@ -171,7 +171,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigValue.
+         * <p>The content of the engine configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
@@ -179,7 +182,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test config</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -187,7 +193,18 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Environment.
+         * <p>The runtime environment. Valid values:</p>
+         * <ul>
+         * <li><p>Daily: daily environment.</p>
+         * </li>
+         * <li><p>Pre: staging environment.</p>
+         * </li>
+         * <li><p>Prod: production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.environment = environment;
@@ -195,7 +212,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-03T02:28:00.000Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -203,7 +223,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-08-27T12:00:00Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -211,7 +234,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtReleasedTime.
+         * <p>The publish time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-03 02:28:00</p>
          */
         public Builder gmtReleasedTime(String gmtReleasedTime) {
             this.gmtReleasedTime = gmtReleasedTime;
@@ -219,7 +245,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The engine configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>engine_config_v1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -227,7 +256,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +267,16 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li><p>Released: published.</p>
+         * </li>
+         * <li><p>UnReleased: not published.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Released</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -243,7 +284,10 @@ public class GetEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The engine configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder type(String type) {
             this.type = type;

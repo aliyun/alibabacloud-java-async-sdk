@@ -184,7 +184,10 @@ public class ChatConversationResponseBody extends TeaModel {
         } 
 
         /**
-         * Answer.
+         * <p>The reply content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FeatureDB近7天读写量为xxx</p>
          */
         public Builder answer(String answer) {
             this.answer = answer;
@@ -192,7 +195,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * CallId.
+         * <p>The call ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder callId(String callId) {
             this.callId = callId;
@@ -200,7 +206,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * ConversationId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
@@ -208,7 +217,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SERVER_ERROR</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -216,7 +228,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>connection failed</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -224,7 +239,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Event.
+         * <p>The event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>message</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -232,7 +250,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * Func.
+         * <p>The function name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder func(String func) {
             this.func = func;
@@ -240,7 +261,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -248,7 +272,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chat-abcdefg</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -256,7 +283,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -264,7 +294,10 @@ public class ChatConversationResponseBody extends TeaModel {
         }
 
         /**
-         * SkillName.
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder skillName(String skillName) {
             this.skillName = skillName;

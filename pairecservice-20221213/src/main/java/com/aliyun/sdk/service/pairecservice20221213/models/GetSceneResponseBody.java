@@ -93,7 +93,10 @@ public class GetSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The scene description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +104,7 @@ public class GetSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Flows.
+         * <p>A list of flows.</p>
          */
         public Builder flows(java.util.List<Flows> flows) {
             this.flows = flows;
@@ -109,7 +112,10 @@ public class GetSceneResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -117,7 +123,7 @@ public class GetSceneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
@@ -186,7 +192,10 @@ public class GetSceneResponseBody extends TeaModel {
             } 
 
             /**
-             * FlowCode.
+             * <p>The flow code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liuliang1</p>
              */
             public Builder flowCode(String flowCode) {
                 this.flowCode = flowCode;
@@ -194,7 +203,10 @@ public class GetSceneResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>The flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>流量1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

@@ -177,7 +177,18 @@ public class ListParamsRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment to which the parameter belongs. Valid values:</p>
+         * <ul>
+         * <li><p>Daily: A test environment for daily use.</p>
+         * </li>
+         * <li><p>Prepub: A staging environment that mirrors the production environment.</p>
+         * </li>
+         * <li><p>Product: The production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -186,6 +197,7 @@ public class ListParamsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call the ListInstances operation to obtain it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +210,10 @@ public class ListParamsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -207,7 +222,10 @@ public class ListParamsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +234,10 @@ public class ListParamsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,6 +246,7 @@ public class ListParamsRequest extends Request {
         }
 
         /**
+         * <p>The scene ID. You can call the ListScenes operation to obtain it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

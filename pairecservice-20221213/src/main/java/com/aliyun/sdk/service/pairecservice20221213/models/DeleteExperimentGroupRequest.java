@@ -89,6 +89,7 @@ public class DeleteExperimentGroupRequest extends Request {
         } 
 
         /**
+         * <p>Experiment group ID, which can be obtained by calling the ListExperimentGroups API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

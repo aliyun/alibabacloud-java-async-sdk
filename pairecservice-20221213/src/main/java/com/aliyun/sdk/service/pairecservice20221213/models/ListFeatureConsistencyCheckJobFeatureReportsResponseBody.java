@@ -93,7 +93,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         } 
 
         /**
-         * DataPath.
+         * <p>The data path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://********</p>
          */
         public Builder dataPath(String dataPath) {
             this.dataPath = dataPath;
@@ -101,7 +104,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         }
 
         /**
-         * OssPath.
+         * <p>The OSS path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://********</p>
          */
         public Builder ossPath(String ossPath) {
             this.ossPath = ossPath;
@@ -109,7 +115,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         }
 
         /**
-         * ReportsOfFeatureDiff.
+         * <p>The feature comparison reports.</p>
          */
         public Builder reportsOfFeatureDiff(java.util.List<ReportsOfFeatureDiff> reportsOfFeatureDiff) {
             this.reportsOfFeatureDiff = reportsOfFeatureDiff;
@@ -117,7 +123,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBD41FBF-E75C-551A-92FA-CAD654AA006F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +244,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             } 
 
             /**
-             * FeatureName.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -243,7 +255,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             }
 
             /**
-             * LogItemId.
+             * <p>The item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9010</p>
              */
             public Builder logItemId(String logItemId) {
                 this.logItemId = logItemId;
@@ -251,7 +266,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             }
 
             /**
-             * LogRequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
              */
             public Builder logRequestId(String logRequestId) {
                 this.logRequestId = logRequestId;
@@ -259,7 +277,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             }
 
             /**
-             * LogUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1010</p>
              */
             public Builder logUserId(String logUserId) {
                 this.logUserId = logUserId;
@@ -267,7 +288,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             }
 
             /**
-             * OfflineValue.
+             * <p>The offline value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>male</p>
              */
             public Builder offlineValue(String offlineValue) {
                 this.offlineValue = offlineValue;
@@ -275,7 +299,10 @@ public class ListFeatureConsistencyCheckJobFeatureReportsResponseBody extends Te
             }
 
             /**
-             * OnlineValue.
+             * <p>The online value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>male</p>
              */
             public Builder onlineValue(String onlineValue) {
                 this.onlineValue = onlineValue;

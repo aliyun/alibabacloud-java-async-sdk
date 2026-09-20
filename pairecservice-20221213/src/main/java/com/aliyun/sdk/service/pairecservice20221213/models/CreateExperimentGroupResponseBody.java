@@ -67,7 +67,10 @@ public class CreateExperimentGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * ExperimentGroupId.
+         * <p>The ID of the experiment group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.experimentGroupId = experimentGroupId;
@@ -75,7 +78,7 @@ public class CreateExperimentGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A04CB8C0-E74A-5E83-BC61-64D153574EC7</p>

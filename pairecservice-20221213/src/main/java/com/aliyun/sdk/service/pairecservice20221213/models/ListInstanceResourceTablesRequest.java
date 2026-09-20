@@ -101,7 +101,10 @@ public class ListInstanceResourceTablesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -110,7 +113,10 @@ public class ListInstanceResourceTablesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-*********</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -128,7 +134,10 @@ public class ListInstanceResourceTablesRequest extends Request {
         }
 
         /**
-         * MaxcomputeSchema.
+         * <p>The MaxCompute schema.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jackal</p>
          */
         public Builder maxcomputeSchema(String maxcomputeSchema) {
             this.putQueryParameter("MaxcomputeSchema", maxcomputeSchema);

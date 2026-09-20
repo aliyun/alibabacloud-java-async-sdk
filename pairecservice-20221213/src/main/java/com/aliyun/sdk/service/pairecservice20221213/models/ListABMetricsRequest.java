@@ -181,6 +181,7 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +194,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name to use for filtering metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +206,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +218,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +230,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * Realtime.
+         * <p>Specifies whether to filter for real-time metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(Boolean realtime) {
             this.putQueryParameter("Realtime", realtime);
@@ -229,7 +242,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -238,7 +254,10 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * TableMetaId.
+         * <p>The data table ID. Call the ListTableMetas operation to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putQueryParameter("TableMetaId", tableMetaId);
@@ -247,7 +266,16 @@ public class ListABMetricsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The metric type. You can use this parameter to filter the results. Valid values:</p>
+         * <ul>
+         * <li><p><code>Single</code>: A single metric.</p>
+         * </li>
+         * <li><p><code>Derived</code>: A derived metric.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

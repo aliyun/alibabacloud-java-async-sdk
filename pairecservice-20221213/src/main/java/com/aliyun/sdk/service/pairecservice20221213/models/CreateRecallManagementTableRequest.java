@@ -307,7 +307,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>Additional settings for the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;&quot;:&quot;&quot;}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -316,7 +319,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * DataSource.
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxcomputeAndApiApi</p>
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("DataSource", dataSource);
@@ -325,7 +331,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p><strong>The description of the table.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test table</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -334,7 +343,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * EnableDataSizeFluctuationThreshold.
+         * <p>Whether to enable the data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDataSizeFluctuationThreshold(Boolean enableDataSizeFluctuationThreshold) {
             this.putBodyParameter("EnableDataSizeFluctuationThreshold", enableDataSizeFluctuationThreshold);
@@ -343,7 +355,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * EnableRowCountFluctuationThreshold.
+         * <p>Whether to enable the row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRowCountFluctuationThreshold(Boolean enableRowCountFluctuationThreshold) {
             this.putBodyParameter("EnableRowCountFluctuationThreshold", enableRowCountFluctuationThreshold);
@@ -352,7 +367,7 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>The list of fields.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.putBodyParameter("Fields", fields);
@@ -361,6 +376,7 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
+         * <p><strong>The instance ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,7 +389,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxDataSizeFluctuationThreshold.
+         * <p>The maximum data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxDataSizeFluctuationThreshold(Long maxDataSizeFluctuationThreshold) {
             this.putBodyParameter("MaxDataSizeFluctuationThreshold", maxDataSizeFluctuationThreshold);
@@ -382,7 +401,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxRowCountFluctuationThreshold.
+         * <p>The maximum row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxRowCountFluctuationThreshold(Long maxRowCountFluctuationThreshold) {
             this.putBodyParameter("MaxRowCountFluctuationThreshold", maxRowCountFluctuationThreshold);
@@ -391,7 +413,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxcomputeProjectName.
+         * <p>The MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder maxcomputeProjectName(String maxcomputeProjectName) {
             this.putBodyParameter("MaxcomputeProjectName", maxcomputeProjectName);
@@ -400,7 +425,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxcomputeSchema.
+         * <p><strong>The schema in MaxCompute.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder maxcomputeSchema(String maxcomputeSchema) {
             this.putBodyParameter("MaxcomputeSchema", maxcomputeSchema);
@@ -409,7 +437,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxcomputeTableName.
+         * <p>The name of the table in MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-1</p>
          */
         public Builder maxcomputeTableName(String maxcomputeTableName) {
             this.putBodyParameter("MaxcomputeTableName", maxcomputeTableName);
@@ -418,7 +449,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MinDataSizeFluctuationThreshold.
+         * <p>The minimum data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minDataSizeFluctuationThreshold(Long minDataSizeFluctuationThreshold) {
             this.putBodyParameter("MinDataSizeFluctuationThreshold", minDataSizeFluctuationThreshold);
@@ -427,7 +461,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MinRowCountFluctuationThreshold.
+         * <p>The minimum row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minRowCountFluctuationThreshold(Long minRowCountFluctuationThreshold) {
             this.putBodyParameter("MinRowCountFluctuationThreshold", minRowCountFluctuationThreshold);
@@ -436,7 +473,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p><strong>The name of the table.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-123</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -445,7 +485,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * RecallType.
+         * <p>The recall type of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X2I</p>
          */
         public Builder recallType(String recallType) {
             this.putBodyParameter("RecallType", recallType);
@@ -454,7 +497,10 @@ public class CreateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p><strong>The table type.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recall</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -561,7 +607,19 @@ public class CreateRecallManagementTableRequest extends Request {
             } 
 
             /**
-             * Attributes.
+             * <p>The attributes of the field. Valid values:</p>
+             * <ul>
+             * <li><p><code>Primary</code>: The primary key field.</p>
+             * </li>
+             * <li><p><code>Item</code>: The item field.</p>
+             * </li>
+             * <li><p><code>Score</code>: The recall score field.</p>
+             * </li>
+             * <li><p><code>Vector</code>: The vector field.</p>
+             * </li>
+             * <li><p><code>Index</code>: The index field.</p>
+             * </li>
+             * </ul>
              */
             public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
@@ -569,7 +627,10 @@ public class CreateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -577,7 +638,10 @@ public class CreateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING(全大写)</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -585,7 +649,10 @@ public class CreateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * VectorDimension.
+             * <p>The vector dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder vectorDimension(Integer vectorDimension) {
                 this.vectorDimension = vectorDimension;
@@ -593,7 +660,10 @@ public class CreateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * VectorMetricType.
+             * <p>The vector metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L2</p>
              */
             public Builder vectorMetricType(String vectorMetricType) {
                 this.vectorMetricType = vectorMetricType;

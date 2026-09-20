@@ -157,7 +157,10 @@ public class ExportRecallManagementTableRequest extends Request {
         } 
 
         /**
-         * RecallManagementTableId.
+         * <p>The ID of the table to export.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -175,7 +178,10 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -184,7 +190,10 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxcomputeProjectName.
+         * <p>The MaxCompute project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder maxcomputeProjectName(String maxcomputeProjectName) {
             this.putBodyParameter("MaxcomputeProjectName", maxcomputeProjectName);
@@ -193,7 +202,7 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * <p>maxcompute schema。</p>
+         * <p>The MaxCompute project schema.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -205,7 +214,10 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxcomputeTableName.
+         * <p>The name of the destination table in MaxCompute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-1</p>
          */
         public Builder maxcomputeTableName(String maxcomputeTableName) {
             this.putBodyParameter("MaxcomputeTableName", maxcomputeTableName);
@@ -214,7 +226,7 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Partitions.
+         * <p>The table partitions to export. The value must be a JSON object where each key is a partition field and its value is the corresponding partition value.</p>
          */
         public Builder partitions(java.util.Map<String, String> partitions) {
             this.putBodyParameter("Partitions", partitions);
@@ -223,7 +235,10 @@ public class ExportRecallManagementTableRequest extends Request {
         }
 
         /**
-         * RecallManagementTableVersionId.
+         * <p>The version ID of the recall management table. This parameter defaults to the current published version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250213000000</p>
          */
         public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
             this.putBodyParameter("RecallManagementTableVersionId", recallManagementTableVersionId);

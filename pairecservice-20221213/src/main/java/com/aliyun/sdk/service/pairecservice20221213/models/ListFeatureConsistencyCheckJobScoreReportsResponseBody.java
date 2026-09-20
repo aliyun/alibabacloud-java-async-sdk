@@ -93,7 +93,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         } 
 
         /**
-         * DataPath.
+         * <p>The data path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http://*******</p>
          */
         public Builder dataPath(String dataPath) {
             this.dataPath = dataPath;
@@ -101,7 +104,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         }
 
         /**
-         * OssPath.
+         * <p>The OSS path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://********</p>
          */
         public Builder ossPath(String ossPath) {
             this.ossPath = ossPath;
@@ -109,7 +115,7 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         }
 
         /**
-         * ReportsOfScoreDiff.
+         * <p>A list of score difference reports.</p>
          */
         public Builder reportsOfScoreDiff(java.util.List<ReportsOfScoreDiff> reportsOfScoreDiff) {
             this.reportsOfScoreDiff = reportsOfScoreDiff;
@@ -117,7 +123,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +231,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             } 
 
             /**
-             * LogItemId.
+             * <p>The item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder logItemId(String logItemId) {
                 this.logItemId = logItemId;
@@ -230,7 +242,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * LogRequestId.
+             * <p>The request ID recorded in the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>323</p>
              */
             public Builder logRequestId(String logRequestId) {
                 this.logRequestId = logRequestId;
@@ -238,7 +253,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * LogUserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder logUserId(String logUserId) {
                 this.logUserId = logUserId;
@@ -246,7 +264,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * ScoreDiff.
+             * <p>The score difference.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.00000234</p>
              */
             public Builder scoreDiff(String scoreDiff) {
                 this.scoreDiff = scoreDiff;
@@ -254,7 +275,10 @@ public class ListFeatureConsistencyCheckJobScoreReportsResponseBody extends TeaM
             }
 
             /**
-             * ScoreDiffDetail.
+             * <p>The score difference details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder scoreDiffDetail(String scoreDiffDetail) {
                 this.scoreDiffDetail = scoreDiffDetail;

@@ -67,7 +67,10 @@ public class CreateParamResponseBody extends TeaModel {
         } 
 
         /**
-         * ParamId.
+         * <p>The parameter ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder paramId(Long paramId) {
             this.paramId = paramId;

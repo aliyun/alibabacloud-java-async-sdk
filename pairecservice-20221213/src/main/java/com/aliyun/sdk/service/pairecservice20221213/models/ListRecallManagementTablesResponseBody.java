@@ -106,7 +106,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>This parameter is reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementTables.
+         * <p>A list of recall management tables.</p>
          */
         public Builder recallManagementTables(java.util.List<RecallManagementTables> recallManagementTables) {
             this.recallManagementTables = recallManagementTables;
@@ -130,7 +136,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of recall management tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -373,7 +385,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * CanDelete.
+             * <p>Indicates whether the table can be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder canDelete(Boolean canDelete) {
                 this.canDelete = canDelete;
@@ -381,7 +396,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSource.
+             * <p>The data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Api</p>
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -389,7 +407,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -397,7 +418,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the table was created. The time is in the ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -405,7 +429,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the table was last modified. The time is in the ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -413,7 +440,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexEffectiveTime.
+             * <p>The time when the index takes effect. The time is in the ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder indexEffectiveTime(String indexEffectiveTime) {
                 this.indexEffectiveTime = indexEffectiveTime;
@@ -421,7 +451,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IndexVersionId.
+             * <p>The ID of the index version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250701</p>
              */
             public Builder indexVersionId(String indexVersionId) {
                 this.indexVersionId = indexVersionId;
@@ -429,7 +462,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxcomputeProjectName.
+             * <p>The name of the MaxCompute project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder maxcomputeProjectName(String maxcomputeProjectName) {
                 this.maxcomputeProjectName = maxcomputeProjectName;
@@ -437,7 +473,7 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>maxcompute schema。</p>
+             * <p>The schema of the MaxCompute table.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -448,7 +484,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxcomputeTableName.
+             * <p>The name of the table in MaxCompute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table-1</p>
              */
             public Builder maxcomputeTableName(String maxcomputeTableName) {
                 this.maxcomputeTableName = maxcomputeTableName;
@@ -456,7 +495,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table-123</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,7 +506,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionFields.
+             * <p>The partition fields of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt</p>
              */
             public Builder partitionFields(String partitionFields) {
                 this.partitionFields = partitionFields;
@@ -472,7 +517,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The ID of the recall management table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -480,7 +528,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * RecallType.
+             * <p>The recall type of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X2I</p>
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
@@ -488,7 +539,10 @@ public class ListRecallManagementTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Recall</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -80,7 +80,7 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RecallManagementTableVersions.
+         * <p>The list of RecallManagementTable versions.</p>
          */
         public Builder recallManagementTableVersions(java.util.List<RecallManagementTableVersions> recallManagementTableVersions) {
             this.recallManagementTableVersions = recallManagementTableVersions;
@@ -88,7 +88,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -240,7 +246,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataVersion.
+             * <p>The data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20250701</p>
              */
             public Builder dataVersion(String dataVersion) {
                 this.dataVersion = dataVersion;
@@ -248,7 +257,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * <p>The effective time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -256,7 +268,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishEndTime.
+             * <p>The sync end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132</p>
              */
             public Builder publishEndTime(String publishEndTime) {
                 this.publishEndTime = publishEndTime;
@@ -264,7 +279,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStartTime.
+             * <p>The sync start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T22:24:33.132</p>
              */
             public Builder publishStartTime(String publishStartTime) {
                 this.publishStartTime = publishStartTime;
@@ -272,7 +290,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableVersionId.
+             * <p>The ID of the RecallManagementTable version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202507010000</p>
              */
             public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
                 this.recallManagementTableVersionId = recallManagementTableVersionId;
@@ -280,7 +301,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableDataSize.
+             * <p>The source table data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sourceTableDataSize(Long sourceTableDataSize) {
                 this.sourceTableDataSize = sourceTableDataSize;
@@ -288,7 +312,10 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableRowCount.
+             * <p>The source table row count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableRowCount(Long sourceTableRowCount) {
                 this.sourceTableRowCount = sourceTableRowCount;
@@ -296,7 +323,16 @@ public class ListRecallManagementTableVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the version. Valid values:</p>
+             * <ul>
+             * <li><p>Online: The version is online.</p>
+             * </li>
+             * <li><p>Offline: The version is offline.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder status(String status) {
                 this.status = status;

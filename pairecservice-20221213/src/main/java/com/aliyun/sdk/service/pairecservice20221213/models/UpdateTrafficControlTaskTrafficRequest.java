@@ -129,7 +129,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -147,7 +150,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-release environment), and <code>Prod</code> (production environment).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -156,7 +162,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-cn-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -165,7 +174,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * Traffics.
+         * <p>A list of traffic objects to report.</p>
          */
         public Builder traffics(java.util.List<Traffics> traffics) {
             this.putBodyParameter("Traffics", traffics);
@@ -174,7 +183,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * new-param-3.
+         * <p>This parameter is invalid and should be ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder newParam3(String newParam3) {
             this.putQueryParameter("new-param-3", newParam3);
@@ -294,7 +306,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             } 
 
             /**
-             * ItemOrExperimentId.
+             * <p>The identifier for the traffic object. This can be an item ID, such as <code>item1</code>, an experiment ID, a global identifier (<code>ER_ALL</code>), or a value in <code>L1_EG1_E1</code> format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item1</p>
              */
             public Builder itemOrExperimentId(String itemOrExperimentId) {
                 this.itemOrExperimentId = itemOrExperimentId;
@@ -302,7 +317,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             }
 
             /**
-             * RecordTime.
+             * <p>The timestamp from the behavior log. This indicates that the log data is current as of this timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01T02:05:06.111Z</p>
              */
             public Builder recordTime(String recordTime) {
                 this.recordTime = recordTime;
@@ -310,7 +328,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             }
 
             /**
-             * TrafficControlTargetAimTraffic.
+             * <p>The configured target traffic for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder trafficControlTargetAimTraffic(Double trafficControlTargetAimTraffic) {
                 this.trafficControlTargetAimTraffic = trafficControlTargetAimTraffic;
@@ -318,7 +339,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             }
 
             /**
-             * TrafficControlTargetId.
+             * <p>The traffic control target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder trafficControlTargetId(String trafficControlTargetId) {
                 this.trafficControlTargetId = trafficControlTargetId;
@@ -326,7 +350,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             }
 
             /**
-             * TrafficControlTargetTraffic.
+             * <p>The actual traffic volume observed for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100000</p>
              */
             public Builder trafficControlTargetTraffic(Long trafficControlTargetTraffic) {
                 this.trafficControlTargetTraffic = trafficControlTargetTraffic;
@@ -334,7 +361,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
             }
 
             /**
-             * TrafficControlTaskTraffic.
+             * <p>The total traffic for the traffic control task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder trafficControlTaskTraffic(Long trafficControlTaskTraffic) {
                 this.trafficControlTaskTraffic = trafficControlTaskTraffic;

@@ -144,7 +144,10 @@ public class PublishRecallManagementTableRequest extends Request {
         } 
 
         /**
-         * RecallManagementTableId.
+         * <p>The table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.putPathParameter("RecallManagementTableId", recallManagementTableId);
@@ -162,6 +165,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
+         * <p><strong>The instance ID.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +178,13 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p><strong>The synchronization mode.</strong> Valid values:</p>
+         * <ul>
+         * <li><code>Merge</code>: Adds new data and updates existing data.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Merge</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("Mode", mode);
@@ -183,7 +193,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Partition.
+         * <p>The table partitions to publish.</p>
          */
         public Builder partition(java.util.Map<String, String> partition) {
             this.putBodyParameter("Partition", partition);
@@ -192,7 +202,7 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Partitions.
+         * <p>The table partitions to publish.</p>
          */
         public Builder partitions(java.util.Map<String, String> partitions) {
             this.putBodyParameter("Partitions", partitions);
@@ -201,7 +211,10 @@ public class PublishRecallManagementTableRequest extends Request {
         }
 
         /**
-         * SkipThresholdCheck.
+         * <p><strong>Specifies whether to skip the threshold check during table synchronization.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder skipThresholdCheck(Boolean skipThresholdCheck) {
             this.putBodyParameter("SkipThresholdCheck", skipThresholdCheck);

@@ -67,7 +67,10 @@ public class CreateExperimentResponseBody extends TeaModel {
         } 
 
         /**
-         * ExperimentId.
+         * <p>The experiment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -75,7 +78,7 @@ public class CreateExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>

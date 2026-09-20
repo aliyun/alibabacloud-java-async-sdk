@@ -67,7 +67,10 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CF1E160-3F36-5E73-A170-C75504F05BBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskTrafficInfo.
+         * <p>Details of the reported traffic data.</p>
          */
         public Builder trafficControlTaskTrafficInfo(TrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo) {
             this.trafficControlTaskTrafficInfo = trafficControlTaskTrafficInfo;
@@ -141,7 +144,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The detailed data reported for this traffic control target.</p>
              */
             public Builder data(java.util.Map<String, TrafficControlTaskTrafficInfoTargetTrafficsDataValue> data) {
                 this.data = data;
@@ -149,7 +152,10 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficContorlTargetId.
+             * <p>The traffic control target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder trafficContorlTargetId(String trafficContorlTargetId) {
                 this.trafficContorlTargetId = trafficContorlTargetId;
@@ -216,7 +222,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             } 
 
             /**
-             * TargetTraffics.
+             * <p>The traffic data for each traffic control target.</p>
              */
             public Builder targetTraffics(java.util.List<TargetTraffics> targetTraffics) {
                 this.targetTraffics = targetTraffics;
@@ -224,7 +230,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTraffics.
+             * <p>The reported traffic data for the traffic control task.</p>
              */
             public Builder taskTraffics(java.util.Map<String, TrafficControlTaskTrafficInfoTaskTrafficsValue> taskTraffics) {
                 this.taskTraffics = taskTraffics;

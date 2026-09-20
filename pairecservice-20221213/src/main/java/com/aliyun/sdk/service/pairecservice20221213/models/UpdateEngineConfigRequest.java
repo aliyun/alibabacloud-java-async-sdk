@@ -157,7 +157,10 @@ public class UpdateEngineConfigRequest extends Request {
         } 
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.putPathParameter("EngineConfigId", engineConfigId);
@@ -175,7 +178,15 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * <p>The content of the engine configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ListenConf&quot;: {
+         *         &quot;HttpAddr&quot;: &quot;&quot;,
+         *         &quot;HttpPort&quot;: 8000
+         *     }
+         * }</p>
          */
         public Builder configValue(String configValue) {
             this.putBodyParameter("ConfigValue", configValue);
@@ -184,7 +195,10 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>update config</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -193,7 +207,19 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The runtime environment.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><p>Daily: daily environment.</p>
+         * </li>
+         * <li><p>Pre: staging environment.</p>
+         * </li>
+         * <li><p>Prod: production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -202,7 +228,10 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-***test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -211,7 +240,10 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The engine configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>engine_config_v1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -220,7 +252,10 @@ public class UpdateEngineConfigRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The engine configuration type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

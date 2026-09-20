@@ -80,7 +80,7 @@ public class ListScenesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B8987BF7-6028-5B17-80E0-251B7BD67BBA</p>
@@ -91,7 +91,7 @@ public class ListScenesResponseBody extends TeaModel {
         }
 
         /**
-         * Scenes.
+         * <p>The list of scenes.</p>
          */
         public Builder scenes(java.util.List<Scenes> scenes) {
             this.scenes = scenes;
@@ -99,7 +99,10 @@ public class ListScenesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of scenes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -165,7 +168,10 @@ public class ListScenesResponseBody extends TeaModel {
             } 
 
             /**
-             * FlowCode.
+             * <p>The code of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liuliang1</p>
              */
             public Builder flowCode(String flowCode) {
                 this.flowCode = flowCode;
@@ -173,7 +179,10 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * FlowName.
+             * <p>The name of the flow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>流量1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -266,7 +275,10 @@ public class ListScenesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +286,7 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * Flows.
+             * <p>The list of flows associated with the scene.</p>
              */
             public Builder flows(java.util.List<Flows> flows) {
                 this.flows = flows;
@@ -282,7 +294,10 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scene1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +305,10 @@ public class ListScenesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The unique ID of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;

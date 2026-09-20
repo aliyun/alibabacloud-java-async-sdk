@@ -87,7 +87,10 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder serviceId(String serviceId) {
             this.putPathParameter("ServiceId", serviceId);
@@ -105,7 +108,10 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

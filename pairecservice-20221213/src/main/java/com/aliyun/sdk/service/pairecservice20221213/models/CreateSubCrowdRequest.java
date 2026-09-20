@@ -119,6 +119,7 @@ public class CreateSubCrowdRequest extends Request {
         } 
 
         /**
+         * <p>The crowd ID. You can obtain the crowd ID by calling the ListCrowds API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateSubCrowdRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain the instance ID by calling the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CreateSubCrowdRequest extends Request {
         }
 
         /**
+         * <p>The source of users for the sub-crowd. Valid values: ● ManualInput: manual input ● UploadFile: file upload</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CreateSubCrowdRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of users in the sub-crowd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

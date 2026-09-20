@@ -103,6 +103,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         } 
 
         /**
+         * <p>The traffic control task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment type. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-release environment), and <code>Prod</code> (production environment).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -133,6 +137,7 @@ public class GenerateTrafficControlTaskCodeRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

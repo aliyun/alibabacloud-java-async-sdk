@@ -87,7 +87,10 @@ public class GetEngineConfigRequest extends Request {
         } 
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.putPathParameter("EngineConfigId", engineConfigId);
@@ -105,7 +108,10 @@ public class GetEngineConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can obtain the instance ID by calling <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-***test</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

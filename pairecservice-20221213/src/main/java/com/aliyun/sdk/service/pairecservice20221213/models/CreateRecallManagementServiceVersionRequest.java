@@ -115,7 +115,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the recall management service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -133,7 +136,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * Configs.
+         * <p>The configuration details.</p>
          */
         public Builder configs(Configs configs) {
             this.putBodyParameter("Configs", configs);
@@ -142,7 +145,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -151,7 +157,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * SourceRecallManagementServiceVersionId.
+         * <p>The source recall management service version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder sourceRecallManagementServiceVersionId(String sourceRecallManagementServiceVersionId) {
             this.putBodyParameter("SourceRecallManagementServiceVersionId", sourceRecallManagementServiceVersionId);
@@ -284,7 +293,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * ExtendedConfig.
+             * <p>This parameter is reserved for future use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;&quot;:&quot;&quot;}</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -292,7 +304,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * FilterExpression.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;10</p>
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -300,7 +315,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * FilterRecallManagementTableIds.
+             * <p>The IDs of tables to use for filtering results.</p>
              */
             public Builder filterRecallManagementTableIds(java.util.List<String> filterRecallManagementTableIds) {
                 this.filterRecallManagementTableIds = filterRecallManagementTableIds;
@@ -308,7 +323,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemRecallManagementTableId.
+             * <p>The item recall management table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder itemRecallManagementTableId(String itemRecallManagementTableId) {
                 this.itemRecallManagementTableId = itemRecallManagementTableId;
@@ -316,7 +334,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemTableFields.
+             * <p>The fields to return from the item table.</p>
              */
             public Builder itemTableFields(java.util.List<String> itemTableFields) {
                 this.itemTableFields = itemTableFields;
@@ -324,7 +342,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * MergeType.
+             * <p>The merge type. Valid values: <code>Weight</code> and <code>Alternate</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Weight</p>
              */
             public Builder mergeType(String mergeType) {
                 this.mergeType = mergeType;
@@ -332,7 +353,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * RecallManagementServiceVersionConfigId.
+             * <p>The recall management service version configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
                 this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -412,7 +436,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * Expression.
+             * <p>The feature expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category=3</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -420,7 +447,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>city</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -428,7 +458,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The feature type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -482,7 +515,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * Experession.
+             * <p>The filter expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder experession(String experession) {
                 this.experession = experession;
@@ -562,7 +598,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * Field.
+             * <p><strong>The field to join on.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -570,7 +609,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * OutputFields.
+             * <p><strong>The fields to include from the joined table.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_id</p>
              */
             public Builder outputFields(java.util.List<String> outputFields) {
                 this.outputFields = outputFields;
@@ -578,7 +620,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * RecallManagementTableId.
+             * <p><strong>The ID of the table to join with.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -671,7 +716,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * Field.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder field(String field) {
                 this.field = field;
@@ -679,7 +727,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * FieldQuantityLimit.
+             * <p>The limit on the number of fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fieldQuantityLimit(Integer fieldQuantityLimit) {
                 this.fieldQuantityLimit = fieldQuantityLimit;
@@ -687,7 +738,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * IsRandSort.
+             * <p>Specifies whether to sort randomly.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isRandSort(Boolean isRandSort) {
                 this.isRandSort = isRandSort;
@@ -695,7 +749,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * SortField.
+             * <p>The sort field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_time</p>
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;
@@ -801,7 +858,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * FeatureConfig.
+             * <p>The configuration for the feature operator.</p>
              */
             public Builder featureConfig(FeatureConfig featureConfig) {
                 this.featureConfig = featureConfig;
@@ -809,7 +866,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * FilterConfig.
+             * <p>The configuration for the filter operator.</p>
              */
             public Builder filterConfig(FilterConfig filterConfig) {
                 this.filterConfig = filterConfig;
@@ -817,7 +874,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * JoinConfig.
+             * <p>The configuration for the Join operator.</p>
              */
             public Builder joinConfig(JoinConfig joinConfig) {
                 this.joinConfig = joinConfig;
@@ -825,7 +882,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * OperatorType.
+             * <p>The operator type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Filter</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -833,7 +893,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * TriggerConfig.
+             * <p>The configuration for the Trigger operator.</p>
              */
             public Builder triggerConfig(TriggerConfig triggerConfig) {
                 this.triggerConfig = triggerConfig;
@@ -1056,7 +1116,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The recall description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is etrec recall</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1064,7 +1127,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ExtendedConfig.
+             * <p><strong>This parameter is reserved for future use.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder extendedConfig(String extendedConfig) {
                 this.extendedConfig = extendedConfig;
@@ -1072,7 +1138,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The conditions for an item, formatted as an array.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -1080,7 +1149,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemConditionExpression.
+             * <p>The item condition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder itemConditionExpression(String itemConditionExpression) {
                 this.itemConditionExpression = itemConditionExpression;
@@ -1088,7 +1160,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemVectorField.
+             * <p>The item vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item_embedding</p>
              */
             public Builder itemVectorField(String itemVectorField) {
                 this.itemVectorField = itemVectorField;
@@ -1096,7 +1171,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * ItemVectorRecallManagementTableId.
+             * <p>The item vector recall management table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder itemVectorRecallManagementTableId(String itemVectorRecallManagementTableId) {
                 this.itemVectorRecallManagementTableId = itemVectorRecallManagementTableId;
@@ -1104,7 +1182,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The recall name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>etrec</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1112,7 +1193,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * Operators.
+             * <p>A list of operators.</p>
              */
             public Builder operators(java.util.List<Operators> operators) {
                 this.operators = operators;
@@ -1120,7 +1201,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The priority. A lower value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -1128,7 +1212,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * RecallManagementTableId.
+             * <p>The recall management table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementTableId(String recallManagementTableId) {
                 this.recallManagementTableId = recallManagementTableId;
@@ -1136,7 +1223,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * RecallType.
+             * <p>The recall type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>X2I</p>
              */
             public Builder recallType(String recallType) {
                 this.recallType = recallType;
@@ -1144,7 +1234,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * SortFields.
+             * <p>The sort fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder sortFields(String sortFields) {
                 this.sortFields = sortFields;
@@ -1152,7 +1245,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * UserVectorField.
+             * <p>The user vector field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_embedding</p>
              */
             public Builder userVectorField(String userVectorField) {
                 this.userVectorField = userVectorField;
@@ -1160,7 +1256,10 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * UserVectorRecallManagementTableId.
+             * <p>The user vector recall management table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder userVectorRecallManagementTableId(String userVectorRecallManagementTableId) {
                 this.userVectorRecallManagementTableId = userVectorRecallManagementTableId;
@@ -1227,7 +1326,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             } 
 
             /**
-             * MergeConfig.
+             * <p><strong>Specifies how to merge recall results.</strong></p>
              */
             public Builder mergeConfig(MergeConfig mergeConfig) {
                 this.mergeConfig = mergeConfig;
@@ -1235,7 +1334,7 @@ public class CreateRecallManagementServiceVersionRequest extends Request {
             }
 
             /**
-             * RecallConfigs.
+             * <p>A list of recall configurations.</p>
              */
             public Builder recallConfigs(java.util.List<RecallConfigs> recallConfigs) {
                 this.recallConfigs = recallConfigs;

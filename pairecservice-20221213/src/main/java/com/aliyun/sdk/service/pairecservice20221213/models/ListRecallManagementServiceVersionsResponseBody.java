@@ -80,7 +80,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RecallManagementServiceVersions.
+         * <p>A list of Recall Management Service versions.</p>
          */
         public Builder recallManagementServiceVersions(java.util.List<RecallManagementServiceVersions> recallManagementServiceVersions) {
             this.recallManagementServiceVersions = recallManagementServiceVersions;
@@ -88,7 +88,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -209,7 +218,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -217,7 +229,7 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsEffective.
+             * <p>Indicates whether the version is effective.</p>
              */
             public Builder isEffective(Boolean isEffective) {
                 this.isEffective = isEffective;
@@ -225,7 +237,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +248,10 @@ public class ListRecallManagementServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementServiceVersionId.
+             * <p>The version ID of the Recall Management Service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
                 this.recallManagementServiceVersionId = recallManagementServiceVersionId;

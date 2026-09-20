@@ -337,6 +337,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -358,7 +359,11 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric description.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv指标</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -367,6 +372,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -388,7 +394,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * LeftMetricId.
+         * <p>The ID of the left metric used to calculate the derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder leftMetricId(String leftMetricId) {
             this.putBodyParameter("LeftMetricId", leftMetricId);
@@ -397,6 +406,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -427,7 +437,20 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * Operator.
+         * <p>The operator used to calculate the derived metric. Valid values:</p>
+         * <ul>
+         * <li><p><code>Plus</code>: Addition</p>
+         * </li>
+         * <li><p><code>Minus</code>: Subtraction</p>
+         * </li>
+         * <li><p><code>Multiplication</code>: Multiplication</p>
+         * </li>
+         * <li><p><code>Division</code>: Division</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Division</p>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -436,6 +459,13 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The metric is real-time.</p>
+         * </li>
+         * <li><p><code>false</code>: The metric is not real-time.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -448,7 +478,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * ResultResourceId.
+         * <p>The data source ID to which the results are written back. Call the ListInstanceResources operation to obtain this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder resultResourceId(String resultResourceId) {
             this.putBodyParameter("ResultResourceId", resultResourceId);
@@ -457,7 +490,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * RightMetricId.
+         * <p>The ID of the right metric used to calculate the derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder rightMetricId(String rightMetricId) {
             this.putBodyParameter("RightMetricId", rightMetricId);
@@ -466,6 +502,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -478,7 +515,10 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
-         * StatisticsCycle.
+         * <p>The statistics cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder statisticsCycle(Integer statisticsCycle) {
             this.putBodyParameter("StatisticsCycle", statisticsCycle);
@@ -487,6 +527,7 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The data table ID. Call the ListTableMetas operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -499,6 +540,13 @@ public class CreateABMetricRequest extends Request {
         }
 
         /**
+         * <p>The metric type. Valid values:</p>
+         * <ul>
+         * <li><p><code>Single</code>: A single metric.</p>
+         * </li>
+         * <li><p><code>Derived</code>: A derived metric.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

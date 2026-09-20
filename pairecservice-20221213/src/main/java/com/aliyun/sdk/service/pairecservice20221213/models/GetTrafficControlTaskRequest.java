@@ -130,6 +130,7 @@ public class GetTrafficControlTaskRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the traffic control task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class GetTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ControlTargetFilter.
+         * <p>The filter for traffic control targets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder controlTargetFilter(String controlTargetFilter) {
             this.putQueryParameter("ControlTargetFilter", controlTargetFilter);
@@ -151,7 +155,15 @@ public class GetTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment to which the parameter belongs. Valid values:</p>
+         * <ul>
+         * <li>Daily: daily environment</li>
+         * <li>Pre: staging environment</li>
+         * <li>Prod: production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -160,7 +172,10 @@ public class GetTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -169,7 +184,10 @@ public class GetTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -178,7 +196,10 @@ public class GetTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Latest</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

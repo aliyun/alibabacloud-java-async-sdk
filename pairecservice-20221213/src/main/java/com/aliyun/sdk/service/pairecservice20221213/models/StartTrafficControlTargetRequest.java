@@ -87,7 +87,10 @@ public class StartTrafficControlTargetRequest extends Request {
         } 
 
         /**
-         * TrafficControlTargetId.
+         * <p>The ID of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
@@ -105,7 +108,10 @@ public class StartTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

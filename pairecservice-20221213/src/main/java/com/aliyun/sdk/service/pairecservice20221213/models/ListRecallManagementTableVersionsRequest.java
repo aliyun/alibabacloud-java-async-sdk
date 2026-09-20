@@ -145,6 +145,7 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the RecallManagementTable.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +167,7 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +180,10 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: <code>ASC</code> (ascending order) and <code>DESC</code> (descending order).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -187,7 +192,10 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -196,7 +204,10 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +216,10 @@ public class ListRecallManagementTableVersionsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort by. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

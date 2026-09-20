@@ -80,7 +80,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * CalculationJobs.
+         * <p>A list of calculation jobs.</p>
          */
         public Builder calculationJobs(java.util.List<CalculationJobs> calculationJobs) {
             this.calculationJobs = calculationJobs;
@@ -88,7 +88,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -240,7 +246,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * ABMetricName.
+             * <p>The name of the A/B metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pv</p>
              */
             public Builder ABMetricName(String ABMetricName) {
                 this.ABMetricName = ABMetricName;
@@ -248,7 +257,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -256,7 +268,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * CalculationJobId.
+             * <p>The calculation job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder calculationJobId(String calculationJobId) {
                 this.calculationJobId = calculationJobId;
@@ -264,7 +279,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The job configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -272,7 +290,10 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtRanTime.
+             * <p>The time when the job was run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtRanTime(String gmtRanTime) {
                 this.gmtRanTime = gmtRanTime;
@@ -280,7 +301,7 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobMessage.
+             * <p>The job messages.</p>
              */
             public Builder jobMessage(java.util.List<String> jobMessage) {
                 this.jobMessage = jobMessage;
@@ -288,7 +309,16 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobSource.
+             * <p>The source of the job. Valid values:</p>
+             * <ul>
+             * <li><p>CronOffline: The job is an offline scheduled task.</p>
+             * </li>
+             * <li><p>DataRerun: The job is a data rerun task.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CronOffline</p>
              */
             public Builder jobSource(String jobSource) {
                 this.jobSource = jobSource;
@@ -296,7 +326,20 @@ public class ListCalculationJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the job. Valid values:</p>
+             * <ul>
+             * <li><p>Success</p>
+             * </li>
+             * <li><p>Failure</p>
+             * </li>
+             * <li><p>Initializing</p>
+             * </li>
+             * <li><p>Running</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

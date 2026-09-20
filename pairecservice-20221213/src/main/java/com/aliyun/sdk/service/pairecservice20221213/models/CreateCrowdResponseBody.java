@@ -67,7 +67,10 @@ public class CreateCrowdResponseBody extends TeaModel {
         } 
 
         /**
-         * CrowdId.
+         * <p>The crowd ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder crowdId(String crowdId) {
             this.crowdId = crowdId;
@@ -75,7 +78,7 @@ public class CreateCrowdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>

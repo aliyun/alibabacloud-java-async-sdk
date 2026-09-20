@@ -143,7 +143,10 @@ public class SplitTrafficControlTargetRequest extends Request {
         } 
 
         /**
-         * TrafficControlTargetId.
+         * <p>The ID of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
@@ -161,7 +164,16 @@ public class SplitTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Pre</code>: pre-production environment.</p>
+         * </li>
+         * <li><p><code>Prod</code>: production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -170,7 +182,10 @@ public class SplitTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,7 +194,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * SetPoints.
+         * <p>This parameter is deprecated.</p>
          */
         public Builder setPoints(java.util.List<Long> setPoints) {
             this.putBodyParameter("SetPoints", setPoints);
@@ -188,7 +203,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * SetValues.
+         * <p>The target values that correspond to the time intervals defined by the <code>TimePoints</code> parameter.</p>
          */
         public Builder setValues(java.util.List<Long> setValues) {
             this.putBodyParameter("SetValues", setValues);
@@ -197,7 +212,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * TimePoints.
+         * <p>The time points that define the traffic-splitting intervals.</p>
          */
         public Builder timePoints(java.util.List<Long> timePoints) {
             this.putBodyParameter("TimePoints", timePoints);

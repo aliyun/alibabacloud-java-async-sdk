@@ -80,7 +80,10 @@ public class ListTableMetasResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         }
 
         /**
-         * TableMetas.
+         * <p>The list of data tables.</p>
          */
         public Builder tableMetas(java.util.List<TableMetas> tableMetas) {
             this.tableMetas = tableMetas;
@@ -96,7 +99,10 @@ public class ListTableMetasResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of data tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDimensionField.
+             * <p>Indicates whether the field is a dimension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
@@ -196,7 +205,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Meaning.
+             * <p>The business meaning of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the gender of people</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -204,7 +216,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -212,7 +227,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -461,7 +479,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             } 
 
             /**
-             * CanDelete.
+             * <p>Indicates whether the data table can be deleted. A value of <code>false</code> indicates that the table is in use by other resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canDelete(Boolean canDelete) {
                 this.canDelete = canDelete;
@@ -469,7 +490,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The additional configurations for the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;table_type&quot;:&quot;item&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -477,7 +501,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test table</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -485,7 +512,7 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Fields.
+             * <p>The fields in the data table.</p>
              */
             public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
@@ -493,7 +520,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the data table was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-12 12:24:33</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -501,7 +531,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtImportedTime.
+             * <p>The time when the fields were imported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imprecation</p>
              */
             public Builder gmtImportedTime(String gmtImportedTime) {
                 this.gmtImportedTime = gmtImportedTime;
@@ -509,7 +542,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the data table was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-12 12:24:33</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -517,7 +553,18 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Module.
+             * <p>The module of the data table. Valid values:</p>
+             * <ul>
+             * <li><p>ABTest: A/B testing</p>
+             * </li>
+             * <li><p>ExperimentTool: Experiment tool</p>
+             * </li>
+             * <li><p>DataDiagnosis: data diagnosis</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ABTest</p>
              */
             public Builder module(String module) {
                 this.module = module;
@@ -525,7 +572,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_table</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -533,7 +583,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>reso-2s416t***</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -557,7 +610,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * TableMetaId.
+             * <p>The ID of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder tableMetaId(String tableMetaId) {
                 this.tableMetaId = tableMetaId;
@@ -565,7 +621,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table in the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_mysql</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -573,7 +632,16 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the data table. Valid values:</p>
+             * <ul>
+             * <li><p>MaxCompute</p>
+             * </li>
+             * <li><p>Hologres</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -581,7 +649,10 @@ public class ListTableMetasResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the table in Data Map. This parameter is returned only for MaxCompute data tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

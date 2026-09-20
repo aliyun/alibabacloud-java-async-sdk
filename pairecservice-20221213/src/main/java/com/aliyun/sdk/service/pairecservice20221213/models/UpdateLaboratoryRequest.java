@@ -232,6 +232,7 @@ public class UpdateLaboratoryRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the laboratory to update. Call the ListLaboratories operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +254,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * BucketCount.
+         * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder bucketCount(Integer bucketCount) {
             this.putBodyParameter("BucketCount", bucketCount);
@@ -262,6 +266,7 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The bucketing method. Valid values: ● Uid: Bucketing by UID (default). ● UidHash: Bucketing by UID hash. ● Filter: Bucketing by a filter condition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +279,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Buckets.
+         * <p>The assigned bucket numbers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,10-20</p>
          */
         public Builder buckets(String buckets) {
             this.putBodyParameter("Buckets", buckets);
@@ -283,7 +291,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The debug crowd ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.putBodyParameter("DebugCrowdId", debugCrowdId);
@@ -292,7 +303,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * DebugUsers.
+         * <p>The UIDs of debugging users. These UIDs must belong to an Alibaba Cloud main account or a sub-account. Separate multiple UIDs with a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1124512470******,1124512471******,1124512472******</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.putBodyParameter("DebugUsers", debugUsers);
@@ -301,7 +315,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The laboratory description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -310,7 +327,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values: ● Daily: The daily environment. ● Pre: The staging environment. ● Prod: The production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -319,7 +339,10 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The filter condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filter=xxx</p>
          */
         public Builder filter(String filter) {
             this.putBodyParameter("Filter", filter);
@@ -328,6 +351,7 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. Call the ListInstances operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,6 +364,7 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The laboratory name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,6 +377,7 @@ public class UpdateLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The laboratory type. Valid values: ● Base ● NonBase</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

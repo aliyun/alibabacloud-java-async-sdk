@@ -89,6 +89,7 @@ public class DeleteExperimentRequest extends Request {
         } 
 
         /**
+         * <p>Experiment ID, which can be obtained by calling the ListExperiments API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteExperimentRequest extends Request {
         }
 
         /**
+         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

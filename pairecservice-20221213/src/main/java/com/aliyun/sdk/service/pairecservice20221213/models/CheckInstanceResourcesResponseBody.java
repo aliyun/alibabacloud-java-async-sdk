@@ -67,7 +67,10 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * <p>A list of resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -154,7 +157,16 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The access status. Valid values:</p>
+             * <ul>
+             * <li><p>Success</p>
+             * </li>
+             * <li><p>Failure</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -162,7 +174,44 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><p>Hologres</p>
+             * </li>
+             * <li><p>EAS</p>
+             * </li>
+             * <li><p>BE</p>
+             * </li>
+             * <li><p>Rec</p>
+             * </li>
+             * <li><p>Platform</p>
+             * </li>
+             * <li><p>SLS</p>
+             * </li>
+             * <li><p>DataHub</p>
+             * </li>
+             * <li><p>Kafka</p>
+             * </li>
+             * <li><p>Flinkvvp</p>
+             * </li>
+             * <li><p>ACR</p>
+             * </li>
+             * <li><p>OSS</p>
+             * </li>
+             * <li><p>DataWorks</p>
+             * </li>
+             * <li><p>PAI</p>
+             * </li>
+             * <li><p>MaxCompute</p>
+             * </li>
+             * <li><p>GraphCompute</p>
+             * </li>
+             * <li><p>Redis</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -170,7 +219,10 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * <p>The resource URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bucket-test-123</p>
              */
             public Builder uri(String uri) {
                 this.uri = uri;

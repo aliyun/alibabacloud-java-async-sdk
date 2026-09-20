@@ -178,6 +178,7 @@ public class UpdateTableMetaRequest extends Request {
         } 
 
         /**
+         * <p>The table meta ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +200,10 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test table</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -208,6 +212,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The fields of the data table.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -217,6 +222,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +235,15 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The module to which the data table belongs.</p>
+         * <ul>
+         * <li><p>ABTest: a data table for A/B testing.</p>
+         * </li>
+         * <li><p>ExperimentTool: a data table for experiment tools.</p>
+         * </li>
+         * <li><p>DataDiagnosis: a data table for data diagnosis.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,6 +256,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the data table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,6 +269,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The resource ID. You can call the <a href="https://help.aliyun.com/document_detail/2672886.html">ListInstanceResource</a> operation to obtain the resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -265,6 +282,7 @@ public class UpdateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the table in the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -393,7 +411,10 @@ public class UpdateTableMetaRequest extends Request {
             } 
 
             /**
-             * DataType.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary_key</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -401,6 +422,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>Indicates whether the field is a dimension field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -412,7 +434,11 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>Indicates whether the field is a partition field.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionField(String isPartitionField) {
                 this.isPartitionField = isPartitionField;
@@ -420,7 +446,11 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The business meaning of the field.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>名称字段</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -428,6 +458,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The field name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -439,6 +470,7 @@ public class UpdateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The data type of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

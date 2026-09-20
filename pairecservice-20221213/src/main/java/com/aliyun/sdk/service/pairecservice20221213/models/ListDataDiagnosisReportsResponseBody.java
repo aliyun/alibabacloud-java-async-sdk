@@ -145,7 +145,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * ExceptionRate.
+         * <p>The exception report list.</p>
          */
         public Builder exceptionRate(java.util.List<ExceptionRate> exceptionRate) {
             this.exceptionRate = exceptionRate;
@@ -153,7 +153,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportsOfAbnormalBehavior.
+         * <p>Reports for the abnormal behavior analysis task.</p>
          */
         public Builder reportsOfAbnormalBehavior(java.util.List<java.util.List<ReportsOfAbnormalBehavior>> reportsOfAbnormalBehavior) {
             this.reportsOfAbnormalBehavior = reportsOfAbnormalBehavior;
@@ -161,7 +161,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportsOfBaseStatistics.
+         * <p>Reports for the basic statistical analysis task.</p>
          */
         public Builder reportsOfBaseStatistics(java.util.List<java.util.List<ReportsOfBaseStatistics>> reportsOfBaseStatistics) {
             this.reportsOfBaseStatistics = reportsOfBaseStatistics;
@@ -169,7 +169,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportsOfChangeRateData.
+         * <p>Reports for the item/user change rate analysis task.</p>
          */
         public Builder reportsOfChangeRateData(java.util.List<java.util.List<ReportsOfChangeRateData>> reportsOfChangeRateData) {
             this.reportsOfChangeRateData = reportsOfChangeRateData;
@@ -177,7 +177,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportsOfJoinTables.
+         * <p>Reports for the table join analysis task.</p>
          */
         public Builder reportsOfJoinTables(java.util.List<java.util.List<ReportsOfJoinTables>> reportsOfJoinTables) {
             this.reportsOfJoinTables = reportsOfJoinTables;
@@ -185,7 +185,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * ReportsOfPreferenceStatisticsCycle.
+         * <p>Reports for the user preference statistics cycle analysis task.</p>
          */
         public Builder reportsOfPreferenceStatisticsCycle(java.util.List<java.util.List<ReportsOfPreferenceStatisticsCycle>> reportsOfPreferenceStatisticsCycle) {
             this.reportsOfPreferenceStatisticsCycle = reportsOfPreferenceStatisticsCycle;
@@ -193,7 +193,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +204,22 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The data diagnosis task type. Valid values:</p>
+         * <ul>
+         * <li><p><code>ChangeRate</code>: item/user change rate analysis.</p>
+         * </li>
+         * <li><p><code>PreferenceStatisticsCycle</code>: user preference statistics cycle analysis.</p>
+         * </li>
+         * <li><p><code>JoinTables</code>: table join analysis.</p>
+         * </li>
+         * <li><p><code>BaseStatistics</code>: basic statistical analysis.</p>
+         * </li>
+         * <li><p><code>AbnormalBehavior</code>: abnormal behavior analysis.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ChangeRate</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -280,7 +298,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Group.
+             * <p>The exception group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder group(String group) {
                 this.group = group;
@@ -288,7 +309,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The exception message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>change_rate 大于 0.2，请确认是否正常</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -296,7 +320,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type or level of the exception.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WARN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -493,7 +520,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ds.
+             * <p>The date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250114</p>
              */
             public Builder ds(String ds) {
                 this.ds = ds;
@@ -501,7 +531,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * RankId.
+             * <p>The rank.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rankId(String rankId) {
                 this.rankId = rankId;
@@ -509,7 +542,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversionRate.
+             * <p>The conversion rate from upstream behavior to downstream behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder conversionRate(String conversionRate) {
                 this.conversionRate = conversionRate;
@@ -517,7 +553,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ConversionRateIds.
+             * <p>The ID corresponding to the statistical granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100010050+259203779</p>
              */
             public Builder conversionRateIds(String conversionRateIds) {
                 this.conversionRateIds = conversionRateIds;
@@ -525,7 +564,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * DownStreamCount.
+             * <p>The count of downstream behaviors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder downStreamCount(String downStreamCount) {
                 this.downStreamCount = downStreamCount;
@@ -533,7 +575,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * DownStreamCountIds.
+             * <p>The ID corresponding to the granularity of the downstream behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>189814043+272292277</p>
              */
             public Builder downStreamCountIds(String downStreamCountIds) {
                 this.downStreamCountIds = downStreamCountIds;
@@ -541,7 +586,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Granularity.
+             * <p>The statistical granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pair</p>
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -549,7 +597,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * UpStreamCount.
+             * <p>The count of upstream behaviors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder upStreamCount(String upStreamCount) {
                 this.upStreamCount = upStreamCount;
@@ -557,7 +608,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * UpStreamCountIds.
+             * <p>The ID corresponding to the granularity of the upstream behavior.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>104684044+249445882</p>
              */
             public Builder upStreamCountIds(String upStreamCountIds) {
                 this.upStreamCountIds = upStreamCountIds;
@@ -565,7 +619,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Distribution.
+             * <p>The feature distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{678.8225: 91, 5270.4675: 95}</p>
              */
             public Builder distribution(String distribution) {
                 this.distribution = distribution;
@@ -573,7 +630,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * IndicatorName.
+             * <p>The indicator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>conversion_rate</p>
              */
             public Builder indicatorName(String indicatorName) {
                 this.indicatorName = indicatorName;
@@ -581,7 +641,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ExceptionRate.
+             * <p>The exception rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder exceptionRate(String exceptionRate) {
                 this.exceptionRate = exceptionRate;
@@ -1116,7 +1179,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultNullCount.
+             * <p>The equivalent null count. This refers to the count of specific characters, such as <code>\\N</code>, that are treated as null values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\\N</p>
              */
             public Builder defaultNullCount(String defaultNullCount) {
                 this.defaultNullCount = defaultNullCount;
@@ -1124,7 +1190,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultNullRate.
+             * <p>The equivalent null rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>\\N</p>
              */
             public Builder defaultNullRate(String defaultNullRate) {
                 this.defaultNullRate = defaultNullRate;
@@ -1132,7 +1201,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Ds.
+             * <p>The date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230509</p>
              */
             public Builder ds(String ds) {
                 this.ds = ds;
@@ -1140,7 +1212,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureName.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>register_time</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -1148,7 +1223,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureType.
+             * <p>The feature type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder featureType(String featureType) {
                 this.featureType = featureType;
@@ -1156,7 +1234,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * NullCount.
+             * <p>The null count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>55095</p>
              */
             public Builder nullCount(String nullCount) {
                 this.nullCount = nullCount;
@@ -1164,7 +1245,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * NullRate.
+             * <p>The null rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5580879448141732</p>
              */
             public Builder nullRate(String nullRate) {
                 this.nullRate = nullRate;
@@ -1172,7 +1256,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>98721</p>
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;
@@ -1180,7 +1267,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueCount.
+             * <p>The number of unique values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29</p>
              */
             public Builder uniqueCount(String uniqueCount) {
                 this.uniqueCount = uniqueCount;
@@ -1188,7 +1278,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueMax.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52.0</p>
              */
             public Builder valueMax(String valueMax) {
                 this.valueMax = valueMax;
@@ -1196,7 +1289,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueMedian.
+             * <p>The median value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35.0</p>
              */
             public Builder valueMedian(String valueMedian) {
                 this.valueMedian = valueMedian;
@@ -1204,7 +1300,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueMin.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueMin(String valueMin) {
                 this.valueMin = valueMin;
@@ -1212,7 +1311,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile1.
+             * <p>The 1st percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile1(String valueQuantile1) {
                 this.valueQuantile1 = valueQuantile1;
@@ -1220,7 +1322,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile5.
+             * <p>The 5th percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile5(String valueQuantile5) {
                 this.valueQuantile5 = valueQuantile5;
@@ -1228,7 +1333,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile25.
+             * <p>The 25th percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile25(String valueQuantile25) {
                 this.valueQuantile25 = valueQuantile25;
@@ -1236,7 +1344,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile75.
+             * <p>The 75th percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile75(String valueQuantile75) {
                 this.valueQuantile75 = valueQuantile75;
@@ -1244,7 +1355,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile95.
+             * <p>The 95th percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile95(String valueQuantile95) {
                 this.valueQuantile95 = valueQuantile95;
@@ -1252,7 +1366,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile99.
+             * <p>The 99th percentile value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.0</p>
              */
             public Builder valueQuantile99(String valueQuantile99) {
                 this.valueQuantile99 = valueQuantile99;
@@ -1260,7 +1377,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Rn.
+             * <p>The rank.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder rn(String rn) {
                 this.rn = rn;
@@ -1268,7 +1388,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyMax.
+             * <p>The maximum frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>91149.0</p>
              */
             public Builder frequencyMax(String frequencyMax) {
                 this.frequencyMax = frequencyMax;
@@ -1276,7 +1399,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyMedian.
+             * <p>The median frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1349.0</p>
              */
             public Builder frequencyMedian(String frequencyMedian) {
                 this.frequencyMedian = frequencyMedian;
@@ -1284,7 +1410,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyMin.
+             * <p>The minimum frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyMin(String frequencyMin) {
                 this.frequencyMin = frequencyMin;
@@ -1292,7 +1421,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile1.
+             * <p>The 1st frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile1(String frequencyQuantile1) {
                 this.frequencyQuantile1 = frequencyQuantile1;
@@ -1300,7 +1432,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile5.
+             * <p>The 5th frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile5(String frequencyQuantile5) {
                 this.frequencyQuantile5 = frequencyQuantile5;
@@ -1308,7 +1443,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile25.
+             * <p>The 25th frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile25(String frequencyQuantile25) {
                 this.frequencyQuantile25 = frequencyQuantile25;
@@ -1316,7 +1454,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile75.
+             * <p>The 75th frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile75(String frequencyQuantile75) {
                 this.frequencyQuantile75 = frequencyQuantile75;
@@ -1324,7 +1465,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile95.
+             * <p>The 95th frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile95(String frequencyQuantile95) {
                 this.frequencyQuantile95 = frequencyQuantile95;
@@ -1332,7 +1476,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile99.
+             * <p>The 99th frequency percentile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>289.0</p>
              */
             public Builder frequencyQuantile99(String frequencyQuantile99) {
                 this.frequencyQuantile99 = frequencyQuantile99;
@@ -1340,7 +1487,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Distribution.
+             * <p>The feature distribution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{678.8225: 91, 5270.4675: 95}</p>
              */
             public Builder distribution(String distribution) {
                 this.distribution = distribution;
@@ -1348,7 +1498,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * RankId.
+             * <p>The rank of the statistical indicator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rankId(String rankId) {
                 this.rankId = rankId;
@@ -1356,7 +1509,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureValue.
+             * <p>The feature value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683562246</p>
              */
             public Builder featureValue(String featureValue) {
                 this.featureValue = featureValue;
@@ -1364,7 +1520,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueCount.
+             * <p>The value count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder valueCount(String valueCount) {
                 this.valueCount = valueCount;
@@ -1372,7 +1531,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValuePercent.
+             * <p>The value percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.000019996000799840032</p>
              */
             public Builder valuePercent(String valuePercent) {
                 this.valuePercent = valuePercent;
@@ -1380,7 +1542,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile.
+             * <p>The value quantile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7261657444926671</p>
              */
             public Builder valueQuantile(String valueQuantile) {
                 this.valueQuantile = valueQuantile;
@@ -1388,7 +1553,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureFrequency.
+             * <p>The frequency of the feature value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>427</p>
              */
             public Builder featureFrequency(String featureFrequency) {
                 this.featureFrequency = featureFrequency;
@@ -1396,7 +1564,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyCount.
+             * <p>The number of feature values with this frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder frequencyCount(String frequencyCount) {
                 this.frequencyCount = frequencyCount;
@@ -1404,7 +1575,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyPercent.
+             * <p>The percentage of feature values with this frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder frequencyPercent(String frequencyPercent) {
                 this.frequencyPercent = frequencyPercent;
@@ -1412,7 +1586,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FrequencyQuantile.
+             * <p>The percentile of the frequency of field values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder frequencyQuantile(String frequencyQuantile) {
                 this.frequencyQuantile = frequencyQuantile;
@@ -1505,7 +1682,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ds.
+             * <p>The date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230509</p>
              */
             public Builder ds(String ds) {
                 this.ds = ds;
@@ -1513,7 +1693,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * <p>A flag that indicates the type of change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -1521,7 +1704,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeCount.
+             * <p>The item/user change count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231</p>
              */
             public Builder changeCount(String changeCount) {
                 this.changeCount = changeCount;
@@ -1529,7 +1715,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeRate.
+             * <p>The item/user change rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1231</p>
              */
             public Builder changeRate(String changeRate) {
                 this.changeRate = changeRate;
@@ -1726,7 +1915,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Ds.
+             * <p>The date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230509</p>
              */
             public Builder ds(String ds) {
                 this.ds = ds;
@@ -1734,7 +1926,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * JoinField.
+             * <p>The join field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_id</p>
              */
             public Builder joinField(String joinField) {
                 this.joinField = joinField;
@@ -1742,7 +1937,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * LeftExceptRate.
+             * <p>The left table join exception rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.53</p>
              */
             public Builder leftExceptRate(String leftExceptRate) {
                 this.leftExceptRate = leftExceptRate;
@@ -1750,7 +1948,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * RightExceptRate.
+             * <p>The right table join exception rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder rightExceptRate(String rightExceptRate) {
                 this.rightExceptRate = rightExceptRate;
@@ -1758,7 +1959,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Flag.
+             * <p>A flag that indicates the type of change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>add</p>
              */
             public Builder flag(String flag) {
                 this.flag = flag;
@@ -1766,7 +1970,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureName.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>register_time</p>
              */
             public Builder featureName(String featureName) {
                 this.featureName = featureName;
@@ -1774,7 +1981,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FeatureValue.
+             * <p>The feature value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1683562246</p>
              */
             public Builder featureValue(String featureValue) {
                 this.featureValue = featureValue;
@@ -1782,7 +1992,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * <p>The feature percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1790,7 +2003,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Quantile.
+             * <p>The quantile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quantile(String quantile) {
                 this.quantile = quantile;
@@ -1798,7 +2014,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueCount.
+             * <p>The value count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder valueCount(String valueCount) {
                 this.valueCount = valueCount;
@@ -1806,7 +2025,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValuePercent.
+             * <p>The value percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.019996000799</p>
              */
             public Builder valuePercent(String valuePercent) {
                 this.valuePercent = valuePercent;
@@ -1814,7 +2036,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueQuantile.
+             * <p>The value quantile.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.72616</p>
              */
             public Builder valueQuantile(String valueQuantile) {
                 this.valueQuantile = valueQuantile;
@@ -1972,7 +2197,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * CycleRemainRate.
+             * <p>The periodic user retention rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.73</p>
              */
             public Builder cycleRemainRate(String cycleRemainRate) {
                 this.cycleRemainRate = cycleRemainRate;
@@ -1980,7 +2208,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * SingleRemainRate.
+             * <p>The daily user retention rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.52</p>
              */
             public Builder singleRemainRate(String singleRemainRate) {
                 this.singleRemainRate = singleRemainRate;
@@ -1988,7 +2219,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Ds.
+             * <p>The date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20230509</p>
              */
             public Builder ds(String ds) {
                 this.ds = ds;
@@ -1996,7 +2230,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Days.
+             * <p>The value of k for the k-day retention rate or k-day ever-appeared rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder days(String days) {
                 this.days = days;
@@ -2004,7 +2241,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * EverAppearedRate.
+             * <p>The k-day ever-appeared rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.67</p>
              */
             public Builder everAppearedRate(String everAppearedRate) {
                 this.everAppearedRate = everAppearedRate;
@@ -2012,7 +2252,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The statistical period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder period(String period) {
                 this.period = period;
@@ -2020,7 +2263,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodRemainRate.
+             * <p>The periodic retention rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.33</p>
              */
             public Builder periodRemainRate(String periodRemainRate) {
                 this.periodRemainRate = periodRemainRate;
@@ -2028,7 +2274,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodRemainCount.
+             * <p>The periodic retention count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodRemainCount(Long periodRemainCount) {
                 this.periodRemainCount = periodRemainCount;
@@ -2036,7 +2285,10 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodInternal.
+             * <p>The number of period intervals.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodInternal(Long periodInternal) {
                 this.periodInternal = periodInternal;

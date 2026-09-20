@@ -134,6 +134,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the traffic control task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
+         * <p>The execution environment for the task. Valid values: Daily (development environment), Pre (staging environment), Prod (production environment).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +195,7 @@ public class QueryTrafficControlTaskItemReportRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

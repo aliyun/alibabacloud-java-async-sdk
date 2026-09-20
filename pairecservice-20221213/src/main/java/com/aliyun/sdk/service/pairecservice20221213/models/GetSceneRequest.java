@@ -87,7 +87,10 @@ public class GetSceneRequest extends Request {
         } 
 
         /**
-         * SceneId.
+         * <p>The scene ID. You can get this ID by calling the ListScenes operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.putPathParameter("SceneId", sceneId);
@@ -105,7 +108,10 @@ public class GetSceneRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

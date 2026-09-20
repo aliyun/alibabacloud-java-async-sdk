@@ -67,7 +67,10 @@ public class CreateRecallManagementTableResponseBody extends TeaModel {
         } 
 
         /**
-         * RecallManagementTableId.
+         * <p><strong>The ID of the recall management table.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.recallManagementTableId = recallManagementTableId;
@@ -75,7 +78,10 @@ public class CreateRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p><strong>The ID of the request.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

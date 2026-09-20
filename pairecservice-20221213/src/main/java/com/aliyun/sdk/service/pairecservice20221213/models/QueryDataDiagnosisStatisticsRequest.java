@@ -130,6 +130,7 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data diagnosis task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-08</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -160,7 +164,10 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -169,7 +176,13 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * RemainRateType.
+         * <p>The retention rate report type.</p>
+         * <ul>
+         * <li>Period: A periodic report.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Period</p>
          */
         public Builder remainRateType(String remainRateType) {
             this.putQueryParameter("RemainRateType", remainRateType);
@@ -178,7 +191,10 @@ public class QueryDataDiagnosisStatisticsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-01</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);

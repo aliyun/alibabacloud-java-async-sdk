@@ -195,6 +195,7 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +208,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -216,7 +220,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -225,7 +232,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -234,7 +244,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order for the results. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -243,7 +256,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -252,7 +268,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,7 +280,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the results by. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -270,7 +292,10 @@ public class ListRecallManagementTablesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The table type. Valid values: <code>X2I</code> (U2I recall or I2I recall), <code>Vector</code> (vector recall), and <code>Random</code> (random recall).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X2I</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

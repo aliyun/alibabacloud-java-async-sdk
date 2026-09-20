@@ -145,7 +145,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The time when the job ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -153,7 +156,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * Log.
+         * <p>The log of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;success&quot;</p>
          */
         public Builder log(String log) {
             this.log = log;
@@ -161,7 +167,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementJobId.
+         * <p>The recall management job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementJobId(String recallManagementJobId) {
             this.recallManagementJobId = recallManagementJobId;
@@ -169,7 +178,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementTableInfo.
+         * <p>Details of the recall management table.</p>
          */
         public Builder recallManagementTableInfo(RecallManagementTableInfo recallManagementTableInfo) {
             this.recallManagementTableInfo = recallManagementTableInfo;
@@ -177,7 +186,7 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagerTableInfo.
+         * <p>Details of the recall management table.</p>
          */
         public Builder recallManagerTableInfo(RecallManagerTableInfo recallManagerTableInfo) {
             this.recallManagerTableInfo = recallManagerTableInfo;
@@ -185,7 +194,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +205,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the job started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T22:24:33.132</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -201,7 +216,20 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the job. Valid values are:</p>
+         * <ul>
+         * <li><p><code>Init</code>: Initializing.</p>
+         * </li>
+         * <li><p><code>Running</code>: Running.</p>
+         * </li>
+         * <li><p><code>Success</code>: Successful.</p>
+         * </li>
+         * <li><p><code>Failed</code>: Failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -293,7 +321,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             } 
 
             /**
-             * DataVersion.
+             * <p>The data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20250701</p>
              */
             public Builder dataVersion(String dataVersion) {
                 this.dataVersion = dataVersion;
@@ -301,7 +332,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableVersionId.
+             * <p>The recall management table version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250101000</p>
              */
             public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
                 this.recallManagementTableVersionId = recallManagementTableVersionId;
@@ -309,7 +343,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableDataSize.
+             * <p>The data size of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder sourceTableDataSize(String sourceTableDataSize) {
                 this.sourceTableDataSize = sourceTableDataSize;
@@ -317,7 +354,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableRowCount.
+             * <p>The number of rows in the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableRowCount(String sourceTableRowCount) {
                 this.sourceTableRowCount = sourceTableRowCount;
@@ -410,7 +450,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             } 
 
             /**
-             * DataVersion.
+             * <p>The data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20250701</p>
              */
             public Builder dataVersion(String dataVersion) {
                 this.dataVersion = dataVersion;
@@ -418,7 +461,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagerTableVersionId.
+             * <p>The recall management table version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20250101000</p>
              */
             public Builder recallManagerTableVersionId(String recallManagerTableVersionId) {
                 this.recallManagerTableVersionId = recallManagerTableVersionId;
@@ -426,7 +472,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableDataSize.
+             * <p>The data size of the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder sourceTableDataSize(String sourceTableDataSize) {
                 this.sourceTableDataSize = sourceTableDataSize;
@@ -434,7 +483,10 @@ public class GetRecallManagementJobResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableRowCount.
+             * <p>The number of rows in the source table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableRowCount(String sourceTableRowCount) {
                 this.sourceTableRowCount = sourceTableRowCount;

@@ -246,6 +246,7 @@ public class UpdateDataDiagnosisRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the data diagnosis task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +268,7 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
+         * <p>The configuration of the data diagnosis task, provided as a JSON string. The required fields vary based on the <code>Type</code> parameter. For <code>ChangeRate</code>, specify <code>AnalysisField</code> and <code>PartitionFieldFormat</code>. For <code>PreferenceStatisticsCycle</code>, specify <code>UserIdField</code>, <code>RemainDays</code>, <code>EverAppearedDays</code>, <code>RemainRatePeriods</code>, and <code>PartitionFieldFormat</code>. For <code>JoinTables</code>, specify <code>LeftTableAnalysisField</code>, <code>RightTableAnalysisField</code>, <code>LeftJoinField</code>, <code>RightJoinField</code>, <code>SampleQuantity</code>, <code>LeftTablePartitionFieldFormat</code>, and <code>RightTablePartitionFieldFormat</code>. For <code>BaseStatistics</code>, specify <code>TagField</code>, <code>TagFieldSeparator</code>, <code>KVField</code>, <code>KVFieldSeparator</code>, <code>KVPairSeparator</code>, <code>TextField</code>, <code>Quantiles</code>, <code>DefaultValueOfString</code>, <code>NullStringField</code>, and <code>PartitionFieldFormat</code>. For <code>AbnormalBehavior</code>, specify <code>UserId</code>, <code>ItemId</code>, <code>EventField</code>, <code>UpStreamBehavior</code>, <code>DownstreamBehavior</code>, <code>NumericHistogramBins</code>, and <code>PartitionFieldFormat</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +281,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * CycleTime.
+         * <p>The execution time for periodic runs. If this field is omitted, the task does not run periodically.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08:00</p>
          */
         public Builder cycleTime(String cycleTime) {
             this.putBodyParameter("CycleTime", cycleTime);
@@ -288,6 +293,7 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +306,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * LeftTableMetaId.
+         * <p>The ID of the left data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder leftTableMetaId(String leftTableMetaId) {
             this.putBodyParameter("LeftTableMetaId", leftTableMetaId);
@@ -309,7 +318,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * LeftTablePartitionField.
+         * <p>The partition field of the left table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt</p>
          */
         public Builder leftTablePartitionField(String leftTablePartitionField) {
             this.putBodyParameter("LeftTablePartitionField", leftTablePartitionField);
@@ -318,6 +330,7 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
+         * <p>The name of the data diagnosis task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +343,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * PartitionField.
+         * <p>The partition field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt</p>
          */
         public Builder partitionField(String partitionField) {
             this.putBodyParameter("PartitionField", partitionField);
@@ -339,7 +355,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * RightTableMetaId.
+         * <p>The ID of the right data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder rightTableMetaId(String rightTableMetaId) {
             this.putBodyParameter("RightTableMetaId", rightTableMetaId);
@@ -348,7 +367,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * RightTablePartitionField.
+         * <p>The partition field of the right table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt</p>
          */
         public Builder rightTablePartitionField(String rightTablePartitionField) {
             this.putBodyParameter("RightTablePartitionField", rightTablePartitionField);
@@ -357,7 +379,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * TableMetaId.
+         * <p>The ID of the data table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.putBodyParameter("TableMetaId", tableMetaId);
@@ -366,7 +391,10 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
-         * TopNQuantity.
+         * <p>The number of top-ranked results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder topNQuantity(Long topNQuantity) {
             this.putBodyParameter("TopNQuantity", topNQuantity);
@@ -375,6 +403,19 @@ public class UpdateDataDiagnosisRequest extends Request {
         }
 
         /**
+         * <p>The type of the data diagnosis task. Valid values:</p>
+         * <ul>
+         * <li><p><code>ChangeRate</code>: item/user change rate analysis.</p>
+         * </li>
+         * <li><p><code>PreferenceStatisticsCycle</code>: user preference statistics cycle analysis.</p>
+         * </li>
+         * <li><p><code>JoinTables</code>: two-table join analysis.</p>
+         * </li>
+         * <li><p><code>BaseStatistics</code>: basic statistical analysis.</p>
+         * </li>
+         * <li><p><code>AbnormalBehavior</code>: abnormal behavior analysis.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

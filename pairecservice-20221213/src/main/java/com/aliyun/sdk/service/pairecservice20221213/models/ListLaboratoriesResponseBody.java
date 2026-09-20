@@ -80,7 +80,7 @@ public class ListLaboratoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Laboratories.
+         * <p>A list of laboratories.</p>
          */
         public Builder laboratories(java.util.List<Laboratories> laboratories) {
             this.laboratories = laboratories;
@@ -88,7 +88,7 @@ public class ListLaboratoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1C0898E5-9220-5443-B2D9-445FF0688215</p>
@@ -99,7 +99,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of laboratories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -321,7 +324,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * BucketCount.
+             * <p>The bucket count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder bucketCount(Integer bucketCount) {
                 this.bucketCount = bucketCount;
@@ -329,7 +335,18 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * BucketType.
+             * <p>The bucketing method.</p>
+             * <ul>
+             * <li><p><code>Uid-UID</code>: Bucketing by UID (default)</p>
+             * </li>
+             * <li><p><code>UidHash</code>: Bucketing by UID hash</p>
+             * </li>
+             * <li><p><code>Filter</code>: Bucketing by a filter condition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Filter</p>
              */
             public Builder bucketType(String bucketType) {
                 this.bucketType = bucketType;
@@ -337,7 +354,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Buckets.
+             * <p>The assigned buckets, specified as numbers or ranges separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1,2,3,10-20</p>
              */
             public Builder buckets(String buckets) {
                 this.buckets = buckets;
@@ -345,7 +365,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * CrowdId.
+             * <p>The crowd ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder crowdId(String crowdId) {
                 this.crowdId = crowdId;
@@ -353,7 +376,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DebugCrowdId.
+             * <p>The debug crowd ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder debugCrowdId(String debugCrowdId) {
                 this.debugCrowdId = debugCrowdId;
@@ -361,7 +387,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DebugUsers.
+             * <p>The debug users, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1,user2,user3</p>
              */
             public Builder debugUsers(String debugUsers) {
                 this.debugUsers = debugUsers;
@@ -369,7 +398,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The laboratory description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -377,7 +409,18 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Environment.
+             * <p>The laboratory environment.</p>
+             * <ul>
+             * <li><p><code>Daily</code>: the daily environment</p>
+             * </li>
+             * <li><p><code>Pre</code>: the pre-production environment</p>
+             * </li>
+             * <li><p><code>Prod</code>: the production environment</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder environment(String environment) {
                 this.environment = environment;
@@ -385,7 +428,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Filter.
+             * <p>The filter condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filter=xxx</p>
              */
             public Builder filter(String filter) {
                 this.filter = filter;
@@ -393,7 +439,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * LaboratoryId.
+             * <p>The laboratory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder laboratoryId(String laboratoryId) {
                 this.laboratoryId = laboratoryId;
@@ -401,7 +450,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The laboratory name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>laboratory1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -409,7 +461,10 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -417,7 +472,16 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The laboratory status.</p>
+             * <ul>
+             * <li><p><code>Offline</code>: The laboratory is offline.</p>
+             * </li>
+             * <li><p><code>Online</code>: The laboratory is online.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Offline</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -425,7 +489,16 @@ public class ListLaboratoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The laboratory type.</p>
+             * <ul>
+             * <li><p><code>Base</code>: A base laboratory.</p>
+             * </li>
+             * <li><p><code>NonBase</code>: A non-base laboratory.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Base</p>
              */
             public Builder type(String type) {
                 this.type = type;

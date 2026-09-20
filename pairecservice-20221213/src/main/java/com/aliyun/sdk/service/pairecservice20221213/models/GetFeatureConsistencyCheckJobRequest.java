@@ -87,7 +87,10 @@ public class GetFeatureConsistencyCheckJobRequest extends Request {
         } 
 
         /**
-         * FeatureConsistencyCheckJobId.
+         * <p>The feature consistency check job ID. To obtain the job ID, see <a href="https://help.aliyun.com/document_detail/2557571.html">ListFeatureConsistencyCheckJobs</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder featureConsistencyCheckJobId(String featureConsistencyCheckJobId) {
             this.putPathParameter("FeatureConsistencyCheckJobId", featureConsistencyCheckJobId);
@@ -105,7 +108,10 @@ public class GetFeatureConsistencyCheckJobRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

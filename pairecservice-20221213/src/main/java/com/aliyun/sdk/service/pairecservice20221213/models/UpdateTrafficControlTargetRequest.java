@@ -269,7 +269,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         } 
 
         /**
-         * TrafficControlTargetId.
+         * <p>The traffic control target ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.putPathParameter("TrafficControlTargetId", trafficControlTargetId);
@@ -287,7 +290,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -296,7 +302,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * Event.
+         * <p>The event for the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click</p>
          */
         public Builder event(String event) {
             this.putBodyParameter("Event", event);
@@ -305,7 +314,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * ItemConditionArray.
+         * <p>The item condition in array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         public Builder itemConditionArray(String itemConditionArray) {
             this.putBodyParameter("ItemConditionArray", itemConditionArray);
@@ -314,7 +326,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * ItemConditionExpress.
+         * <p>The item condition in expression format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status=1</p>
          */
         public Builder itemConditionExpress(String itemConditionExpress) {
             this.putBodyParameter("ItemConditionExpress", itemConditionExpress);
@@ -323,7 +338,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * ItemConditionType.
+         * <p>The item condition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Array</p>
          */
         public Builder itemConditionType(String itemConditionType) {
             this.putBodyParameter("ItemConditionType", itemConditionType);
@@ -332,7 +350,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The traffic control target name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>target-1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -341,7 +362,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * NewProductRegulation.
+         * <p>Specifies whether the control rule applies to a new product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder newProductRegulation(Boolean newProductRegulation) {
             this.putBodyParameter("NewProductRegulation", newProductRegulation);
@@ -350,7 +374,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * RecallName.
+         * <p>The recall strategy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recall-1</p>
          */
         public Builder recallName(String recallName) {
             this.putBodyParameter("RecallName", recallName);
@@ -359,7 +386,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -368,7 +398,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * StatisPeriod.
+         * <p>The statistics period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder statisPeriod(String statisPeriod) {
             this.putBodyParameter("StatisPeriod", statisPeriod);
@@ -377,7 +410,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The traffic control target status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Opened</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -386,7 +422,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * ToleranceValue.
+         * <p>The tolerance range for the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder toleranceValue(Long toleranceValue) {
             this.putBodyParameter("ToleranceValue", toleranceValue);
@@ -395,7 +434,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * Value.
+         * <p>The traffic control target value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder value(Float value) {
             this.putBodyParameter("Value", value);
@@ -404,7 +446,10 @@ public class UpdateTrafficControlTargetRequest extends Request {
         }
 
         /**
-         * new-param-3.
+         * <p>This parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>null</p>
          */
         public Builder newParam3(String newParam3) {
             this.putQueryParameter("new-param-3", newParam3);

@@ -129,7 +129,10 @@ public class UpdateSceneRequest extends Request {
         } 
 
         /**
-         * SceneId.
+         * <p>The scene ID. To obtain the ID, call the <code>ListScenes</code> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.putPathParameter("SceneId", sceneId);
@@ -147,7 +150,10 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The scene description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -156,7 +162,7 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * Flows.
+         * <p>The flows.</p>
          */
         public Builder flows(java.util.List<Flows> flows) {
             this.putBodyParameter("Flows", flows);
@@ -165,7 +171,10 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. To obtain the ID, call the <code>ListInstances</code> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -174,7 +183,10 @@ public class UpdateSceneRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -242,7 +254,10 @@ public class UpdateSceneRequest extends Request {
             } 
 
             /**
-             * FlowCode.
+             * <p>The flow code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liuliang1</p>
              */
             public Builder flowCode(String flowCode) {
                 this.flowCode = flowCode;
@@ -250,7 +265,10 @@ public class UpdateSceneRequest extends Request {
             }
 
             /**
-             * FlowName.
+             * <p>The flow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>流量1</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

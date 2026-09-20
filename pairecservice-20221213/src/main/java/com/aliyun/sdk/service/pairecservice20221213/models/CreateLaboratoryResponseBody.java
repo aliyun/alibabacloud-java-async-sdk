@@ -67,7 +67,10 @@ public class CreateLaboratoryResponseBody extends TeaModel {
         } 
 
         /**
-         * LaboratoryId.
+         * <p>The laboratory ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.laboratoryId = laboratoryId;
@@ -75,7 +78,7 @@ public class CreateLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>42391E6D-822C-58F8-9F7E-D991BB86D6AD</p>

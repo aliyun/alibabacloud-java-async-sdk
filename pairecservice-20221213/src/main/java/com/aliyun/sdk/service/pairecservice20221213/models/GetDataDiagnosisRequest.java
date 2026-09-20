@@ -89,6 +89,7 @@ public class GetDataDiagnosisRequest extends Request {
         } 
 
         /**
+         * <p>The configuration ID of the data diagnosis task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetDataDiagnosisRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

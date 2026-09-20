@@ -139,6 +139,7 @@ public class ListDataDiagnosisJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +152,10 @@ public class ListDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +164,10 @@ public class ListDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +176,20 @@ public class ListDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p>Initializing: The job is being initialized.</p>
+         * </li>
+         * <li><p>Running: The job is in progress.</p>
+         * </li>
+         * <li><p>Success: The job succeeded.</p>
+         * </li>
+         * <li><p>Failure: The job failed to complete.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initializing</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -178,7 +198,7 @@ public class ListDataDiagnosisJobsRequest extends Request {
         }
 
         /**
-         * Types.
+         * <p>A list of data diagnosis types.</p>
          */
         public Builder types(java.util.List<String> types) {
             String typesShrink = shrink(types, "Types", "simple");

@@ -101,7 +101,10 @@ public class GetTrafficControlTaskTrafficRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -119,7 +122,18 @@ public class GetTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Daily</code>: The daily environment.</p>
+         * </li>
+         * <li><p><code>Pre</code>: The staging environment.</p>
+         * </li>
+         * <li><p><code>Prod</code>: The production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -128,7 +142,10 @@ public class GetTrafficControlTaskTrafficRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. For more information, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

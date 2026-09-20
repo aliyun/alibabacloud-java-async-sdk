@@ -353,7 +353,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         } 
 
         /**
-         * CanDelete.
+         * <p>Specifies whether the table can be deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canDelete(Boolean canDelete) {
             this.canDelete = canDelete;
@@ -361,7 +364,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>Additional configurations for the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;item_id&quot;:&quot;&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -369,7 +375,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * DataSource.
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Api</p>
          */
         public Builder dataSource(String dataSource) {
             this.dataSource = dataSource;
@@ -377,7 +386,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The data table description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -385,7 +397,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * EnableDataSizeFluctuationThreshold.
+         * <p>Specifies whether to enable the fluctuation threshold for the data size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDataSizeFluctuationThreshold(Boolean enableDataSizeFluctuationThreshold) {
             this.enableDataSizeFluctuationThreshold = enableDataSizeFluctuationThreshold;
@@ -393,7 +408,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * EnableRowCountFluctuationThreshold.
+         * <p>Specifies whether to enable the fluctuation threshold for the row count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRowCountFluctuationThreshold(Boolean enableRowCountFluctuationThreshold) {
             this.enableRowCountFluctuationThreshold = enableRowCountFluctuationThreshold;
@@ -401,7 +419,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * Fields.
+         * <p>A list of fields.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -409,7 +427,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -417,7 +438,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -425,7 +449,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * IndexEffectiveTime.
+         * <p>The index effective time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder indexEffectiveTime(String indexEffectiveTime) {
             this.indexEffectiveTime = indexEffectiveTime;
@@ -433,7 +460,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * IndexVersionId.
+         * <p>The index version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250701</p>
          */
         public Builder indexVersionId(String indexVersionId) {
             this.indexVersionId = indexVersionId;
@@ -441,7 +471,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MaxDataSizeFluctuationThreshold.
+         * <p>The maximum data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxDataSizeFluctuationThreshold(Integer maxDataSizeFluctuationThreshold) {
             this.maxDataSizeFluctuationThreshold = maxDataSizeFluctuationThreshold;
@@ -449,7 +482,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MaxRowCountFluctuationThreshold.
+         * <p>The maximum row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxRowCountFluctuationThreshold(Integer maxRowCountFluctuationThreshold) {
             this.maxRowCountFluctuationThreshold = maxRowCountFluctuationThreshold;
@@ -457,7 +493,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MaxcomputeProjectName.
+         * <p>The MaxCompute project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder maxcomputeProjectName(String maxcomputeProjectName) {
             this.maxcomputeProjectName = maxcomputeProjectName;
@@ -465,7 +504,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * <p>maxcompute schema。</p>
+         * <p>The MaxCompute schema.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -476,7 +515,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MaxcomputeTableName.
+         * <p>The MaxCompute table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-1</p>
          */
         public Builder maxcomputeTableName(String maxcomputeTableName) {
             this.maxcomputeTableName = maxcomputeTableName;
@@ -484,7 +526,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MinDataSizeFluctuationThreshold.
+         * <p>The minimum data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minDataSizeFluctuationThreshold(Integer minDataSizeFluctuationThreshold) {
             this.minDataSizeFluctuationThreshold = minDataSizeFluctuationThreshold;
@@ -492,7 +537,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * MinRowCountFluctuationThreshold.
+         * <p>The minimum row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minRowCountFluctuationThreshold(Integer minRowCountFluctuationThreshold) {
             this.minRowCountFluctuationThreshold = minRowCountFluctuationThreshold;
@@ -500,7 +548,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The data table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table-123</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -508,7 +559,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * PartitionFields.
+         * <p>The partition fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dt</p>
          */
         public Builder partitionFields(String partitionFields) {
             this.partitionFields = partitionFields;
@@ -516,7 +570,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementTableId.
+         * <p>The data table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementTableId(String recallManagementTableId) {
             this.recallManagementTableId = recallManagementTableId;
@@ -524,7 +581,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * RecallType.
+         * <p>The recall type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>X2I</p>
          */
         public Builder recallType(String recallType) {
             this.recallType = recallType;
@@ -532,7 +592,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -540,7 +603,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The table type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Recall</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -645,7 +711,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>A list of field attributes.</p>
              */
             public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
@@ -653,7 +719,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -661,7 +730,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -669,7 +741,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
             }
 
             /**
-             * VectorDimension.
+             * <p>The vector dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder vectorDimension(Integer vectorDimension) {
                 this.vectorDimension = vectorDimension;
@@ -677,7 +752,10 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
             }
 
             /**
-             * VectorMetricType.
+             * <p>The vector metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L2</p>
              */
             public Builder vectorMetricType(String vectorMetricType) {
                 this.vectorMetricType = vectorMetricType;

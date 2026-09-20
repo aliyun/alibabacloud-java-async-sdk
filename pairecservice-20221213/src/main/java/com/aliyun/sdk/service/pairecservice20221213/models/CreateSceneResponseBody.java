@@ -67,7 +67,7 @@ public class CreateSceneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FCF741D8-9C30-578E-807F-B935487DB34A</p>
@@ -78,7 +78,10 @@ public class CreateSceneResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;

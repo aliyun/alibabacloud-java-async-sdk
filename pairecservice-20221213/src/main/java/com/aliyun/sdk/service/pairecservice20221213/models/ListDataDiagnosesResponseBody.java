@@ -80,7 +80,7 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
         } 
 
         /**
-         * DataDiagnoses.
+         * <p>The list of data diagnoses.</p>
          */
         public Builder dataDiagnoses(java.util.List<DataDiagnoses> dataDiagnoses) {
             this.dataDiagnoses = dataDiagnoses;
@@ -88,7 +88,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -331,7 +337,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The configuration for the data diagnosis task, in JSON format. The required fields depend on the <code>Type</code> value:<br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;AnalysisField&quot;: &quot;userid&quot;,&quot;PartitionFieldFormat&quot;: &quot;yyyymmdd&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -339,7 +348,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * CycleTime.
+             * <p>The time at which the task is scheduled to run periodically. If this parameter is empty, the task runs only once.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder cycleTime(String cycleTime) {
                 this.cycleTime = cycleTime;
@@ -347,7 +359,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiagnosisId.
+             * <p>The data diagnosis ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dataDiagnosisId(String dataDiagnosisId) {
                 this.dataDiagnosisId = dataDiagnosisId;
@@ -355,7 +370,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -363,7 +381,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the task was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -371,7 +392,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * LeftTableMetaId.
+             * <p>The ID of the left data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder leftTableMetaId(String leftTableMetaId) {
                 this.leftTableMetaId = leftTableMetaId;
@@ -379,7 +403,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * LeftTablePartitionField.
+             * <p>The partition field of the left table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt</p>
              */
             public Builder leftTablePartitionField(String leftTablePartitionField) {
                 this.leftTablePartitionField = leftTablePartitionField;
@@ -387,7 +414,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data diagnosis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_diagnosis_job1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -395,7 +425,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionField.
+             * <p>The partition field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt</p>
              */
             public Builder partitionField(String partitionField) {
                 this.partitionField = partitionField;
@@ -403,7 +436,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * RightTableMetaId.
+             * <p>The ID of the right data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder rightTableMetaId(String rightTableMetaId) {
                 this.rightTableMetaId = rightTableMetaId;
@@ -411,7 +447,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * RightTablePartitionField.
+             * <p>The partition field of the right table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dt</p>
              */
             public Builder rightTablePartitionField(String rightTablePartitionField) {
                 this.rightTablePartitionField = rightTablePartitionField;
@@ -419,7 +458,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * TableMetaId.
+             * <p>The data table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder tableMetaId(String tableMetaId) {
                 this.tableMetaId = tableMetaId;
@@ -427,7 +469,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * TableMetaName.
+             * <p>The name of the data table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_meta_1</p>
              */
             public Builder tableMetaName(String tableMetaName) {
                 this.tableMetaName = tableMetaName;
@@ -435,7 +480,10 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * TopNQuantity.
+             * <p>The number of top results to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topNQuantity(Long topNQuantity) {
                 this.topNQuantity = topNQuantity;
@@ -443,7 +491,22 @@ public class ListDataDiagnosesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of data diagnosis. Valid values:</p>
+             * <ul>
+             * <li><p><code>ChangeRate</code>: Change Rate Analysis.</p>
+             * </li>
+             * <li><p><code>PreferenceStatisticsCycle</code>: Preference Statistics Cycle Analysis.</p>
+             * </li>
+             * <li><p><code>JoinTables</code>: Join Tables Analysis.</p>
+             * </li>
+             * <li><p><code>BaseStatistics</code>: Base Statistics Analysis.</p>
+             * </li>
+             * <li><p><code>AbnormalBehavior</code>: Abnormal Behavior Analysis.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ChangeRate</p>
              */
             public Builder type(String type) {
                 this.type = type;

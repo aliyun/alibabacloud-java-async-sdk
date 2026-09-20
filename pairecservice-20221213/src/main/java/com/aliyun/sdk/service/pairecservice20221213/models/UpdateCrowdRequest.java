@@ -119,6 +119,7 @@ public class UpdateCrowdRequest extends Request {
         } 
 
         /**
+         * <p>The crowd ID. To obtain this ID, call the ListCrowds operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class UpdateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The crowd description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class UpdateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To obtain this ID, call the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class UpdateCrowdRequest extends Request {
         }
 
         /**
+         * <p>The crowd name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

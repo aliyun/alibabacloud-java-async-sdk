@@ -134,6 +134,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         } 
 
         /**
+         * <p>The ID of the feature consistency check job. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/2557571.html">ListFeatureConsistencyCheckJobs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
+         * <p>The ID of the instance. To obtain the ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
+         * <p>The item ID used for feature comparison.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
+         * <p>The request ID used for feature comparison.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +195,7 @@ public class ListFeatureConsistencyCheckJobFeatureReportsRequest extends Request
         }
 
         /**
+         * <p>The user ID used for feature comparison.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

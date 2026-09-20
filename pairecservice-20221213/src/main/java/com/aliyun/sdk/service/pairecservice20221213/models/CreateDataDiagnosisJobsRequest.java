@@ -128,6 +128,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
+         * <p>The data diagnosis ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
+         * <p>The end date for the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CreateDataDiagnosisJobsRequest extends Request {
         }
 
         /**
+         * <p>The start date for the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

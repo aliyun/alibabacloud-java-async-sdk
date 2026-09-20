@@ -493,7 +493,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task to update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -511,7 +514,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * BehaviorTableMetaId.
+         * <p>The behavior table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder behaviorTableMetaId(String behaviorTableMetaId) {
             this.putBodyParameter("BehaviorTableMetaId", behaviorTableMetaId);
@@ -520,7 +526,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ControlGranularity.
+         * <p>The control granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Global</p>
          */
         public Builder controlGranularity(String controlGranularity) {
             this.putBodyParameter("ControlGranularity", controlGranularity);
@@ -529,7 +538,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ControlLogic.
+         * <p>The control logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Guaranteed</p>
          */
         public Builder controlLogic(String controlLogic) {
             this.putBodyParameter("ControlLogic", controlLogic);
@@ -538,7 +550,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ControlType.
+         * <p>The control type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Percent</p>
          */
         public Builder controlType(String controlType) {
             this.putBodyParameter("ControlType", controlType);
@@ -547,7 +562,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the traffic control plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -556,7 +574,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * EffectiveSceneIds.
+         * <p>A list of effective scene IDs.</p>
          */
         public Builder effectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
             this.putBodyParameter("EffectiveSceneIds", effectiveSceneIds);
@@ -565,7 +583,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -574,7 +595,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ExecutionTime.
+         * <p>The execution time. Valid values: <code>Permanent</code> (runs indefinitely) and <code>TimeRange</code> (runs within a specified period). If you select <code>TimeRange</code>, you must also specify <code>StartTime</code> and <code>EndTime</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Permanent</p>
          */
         public Builder executionTime(String executionTime) {
             this.putBodyParameter("ExecutionTime", executionTime);
@@ -583,7 +607,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * FlinkResourceId.
+         * <p>The Flink resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>resource-xxx</p>
          */
         public Builder flinkResourceId(String flinkResourceId) {
             this.putBodyParameter("FlinkResourceId", flinkResourceId);
@@ -592,7 +619,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-1324***</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -601,7 +631,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ItemConditionArray.
+         * <p>The item conditions, specified in an array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         public Builder itemConditionArray(String itemConditionArray) {
             this.putBodyParameter("ItemConditionArray", itemConditionArray);
@@ -610,7 +643,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ItemConditionExpress.
+         * <p>The item conditions, specified as an expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status=1</p>
          */
         public Builder itemConditionExpress(String itemConditionExpress) {
             this.putBodyParameter("ItemConditionExpress", itemConditionExpress);
@@ -619,7 +655,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ItemConditionType.
+         * <p>The item condition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Array</p>
          */
         public Builder itemConditionType(String itemConditionType) {
             this.putBodyParameter("ItemConditionType", itemConditionType);
@@ -628,7 +667,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ItemTableMetaId.
+         * <p>The item table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder itemTableMetaId(String itemTableMetaId) {
             this.putBodyParameter("ItemTableMetaId", itemTableMetaId);
@@ -637,7 +679,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the traffic control plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>plan-1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -646,7 +691,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * PreExperimentIds.
+         * <p>A comma-separated list of pre-release experiment IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3,4</p>
          */
         public Builder preExperimentIds(String preExperimentIds) {
             this.putBodyParameter("PreExperimentIds", preExperimentIds);
@@ -655,7 +703,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ProdExperimentIds.
+         * <p>A comma-separated list of production experiment IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2</p>
          */
         public Builder prodExperimentIds(String prodExperimentIds) {
             this.putBodyParameter("ProdExperimentIds", prodExperimentIds);
@@ -664,7 +715,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -673,7 +727,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>The engine service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -682,7 +739,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * ServiceIds.
+         * <p>A list of associated engine service IDs.</p>
          */
         public Builder serviceIds(java.util.List<Integer> serviceIds) {
             this.putBodyParameter("ServiceIds", serviceIds);
@@ -691,7 +748,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -700,7 +760,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * StatisBaeaviorConditionArray.
+         * <p>The conditions for behavior statistics, specified in an array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click=exposure</p>
          */
         public Builder statisBaeaviorConditionArray(String statisBaeaviorConditionArray) {
             this.putBodyParameter("StatisBaeaviorConditionArray", statisBaeaviorConditionArray);
@@ -709,7 +772,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * StatisBehaviorConditionArray.
+         * <p>The conditions for behavior statistics, specified in an array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click=exposure</p>
          */
         public Builder statisBehaviorConditionArray(String statisBehaviorConditionArray) {
             this.putBodyParameter("StatisBehaviorConditionArray", statisBehaviorConditionArray);
@@ -718,7 +784,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * StatisBehaviorConditionExpress.
+         * <p>The conditions for behavior statistics, specified as an expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click=30</p>
          */
         public Builder statisBehaviorConditionExpress(String statisBehaviorConditionExpress) {
             this.putBodyParameter("StatisBehaviorConditionExpress", statisBehaviorConditionExpress);
@@ -727,7 +796,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * StatisBehaviorConditionType.
+         * <p>The condition type for behavior statistics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Array</p>
          */
         public Builder statisBehaviorConditionType(String statisBehaviorConditionType) {
             this.putBodyParameter("StatisBehaviorConditionType", statisBehaviorConditionType);
@@ -736,7 +808,7 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * TrafficControlTargets.
+         * <p>A list of traffic control targets.</p>
          */
         public Builder trafficControlTargets(java.util.List<TrafficControlTargets> trafficControlTargets) {
             this.putBodyParameter("TrafficControlTargets", trafficControlTargets);
@@ -745,7 +817,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * UserConditionArray.
+         * <p>The conditions for the target user group, specified in an array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;gender&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;male&quot;}]</p>
          */
         public Builder userConditionArray(String userConditionArray) {
             this.putBodyParameter("UserConditionArray", userConditionArray);
@@ -754,7 +829,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * UserConditionExpress.
+         * <p>The conditions for the target user group, specified as an expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age&lt;=30&amp;&amp;(3&lt;=level&lt;=6)&amp;&amp;gender=male</p>
          */
         public Builder userConditionExpress(String userConditionExpress) {
             this.putBodyParameter("UserConditionExpress", userConditionExpress);
@@ -763,7 +841,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * UserConditionType.
+         * <p>The condition type for the target user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Array</p>
          */
         public Builder userConditionType(String userConditionType) {
             this.putBodyParameter("UserConditionType", userConditionType);
@@ -772,7 +853,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * UserTableMetaId.
+         * <p>The user table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder userTableMetaId(String userTableMetaId) {
             this.putBodyParameter("UserTableMetaId", userTableMetaId);
@@ -983,7 +1067,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-06T18:02:57.487556956+08:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -991,7 +1078,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * Event.
+             * <p>The event for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exposure</p>
              */
             public Builder event(String event) {
                 this.event = event;
@@ -999,7 +1089,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * ItemConditionArray.
+             * <p>The item conditions, specified in an array format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
              */
             public Builder itemConditionArray(String itemConditionArray) {
                 this.itemConditionArray = itemConditionArray;
@@ -1007,7 +1100,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * ItemConditionExpress.
+             * <p>The item conditions, specified as an expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age&gt;20</p>
              */
             public Builder itemConditionExpress(String itemConditionExpress) {
                 this.itemConditionExpress = itemConditionExpress;
@@ -1015,7 +1111,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * ItemConditionType.
+             * <p>The item condition type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Array</p>
              */
             public Builder itemConditionType(String itemConditionType) {
                 this.itemConditionType = itemConditionType;
@@ -1023,7 +1122,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>target-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1031,7 +1133,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * NewProductRegulation.
+             * <p>Indicates whether this is a new item recall.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder newProductRegulation(Boolean newProductRegulation) {
                 this.newProductRegulation = newProductRegulation;
@@ -1039,7 +1144,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * RecallName.
+             * <p>The recall policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hot_recall</p>
              */
             public Builder recallName(String recallName) {
                 this.recallName = recallName;
@@ -1047,7 +1155,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-10T09:16:03.893+08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1055,7 +1166,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * StatisPeriod.
+             * <p>The statistical period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder statisPeriod(String statisPeriod) {
                 this.statisPeriod = statisPeriod;
@@ -1063,7 +1177,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enable</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1071,7 +1188,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * ToleranceValue.
+             * <p>The tolerance range for the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder toleranceValue(Long toleranceValue) {
                 this.toleranceValue = toleranceValue;
@@ -1079,7 +1199,10 @@ public class UpdateTrafficControlTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the traffic control target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder value(Float value) {
                 this.value = value;

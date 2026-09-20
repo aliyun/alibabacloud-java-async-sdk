@@ -80,7 +80,7 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkConfigs.
+         * <p>The network configuration information.</p>
          */
         public Builder networkConfigs(java.util.List<NetworkConfigs> networkConfigs) {
             this.networkConfigs = networkConfigs;
@@ -99,7 +99,10 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene_test</p>
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -217,7 +220,10 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * PrivateLinkAddress.
+             * <p>The private endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx">http://xxx</a></p>
              */
             public Builder privateLinkAddress(String privateLinkAddress) {
                 this.privateLinkAddress = privateLinkAddress;
@@ -225,7 +231,10 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PublicEndpoint.
+             * <p>The public endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -233,7 +242,22 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The network connectivity status. Valid values:</p>
+             * <ul>
+             * <li><p>Connecting: connecting.</p>
+             * </li>
+             * <li><p>Connected: connected.</p>
+             * </li>
+             * <li><p>ConnectionFailed: connection failed.</p>
+             * </li>
+             * <li><p>Updating: updating.</p>
+             * </li>
+             * <li><p>UpdateFailed: update failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Connecting</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -241,7 +265,10 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Token.
+             * <p>The public network connection token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;&quot;</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -249,7 +276,10 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The virtual private cloud (VPC) ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -257,7 +287,7 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * VswitchIds.
+             * <p>The zones.</p>
              */
             public Builder vswitchIds(java.util.Map<String, String> vswitchIds) {
                 this.vswitchIds = vswitchIds;

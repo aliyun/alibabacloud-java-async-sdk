@@ -67,7 +67,10 @@ public class CreateRecallManagementServiceVersionConfigResponseBody extends TeaM
         } 
 
         /**
-         * RecallManagementServiceVersionConfigId.
+         * <p>The ID of the recall management service version configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
             this.recallManagementServiceVersionConfigId = recallManagementServiceVersionConfigId;
@@ -75,7 +78,10 @@ public class CreateRecallManagementServiceVersionConfigResponseBody extends TeaM
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8F613A9-DF1C-551A-88E1-397A3981A785</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

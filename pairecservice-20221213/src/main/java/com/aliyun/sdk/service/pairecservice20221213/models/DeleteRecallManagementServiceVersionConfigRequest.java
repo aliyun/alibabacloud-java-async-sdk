@@ -115,7 +115,10 @@ public class DeleteRecallManagementServiceVersionConfigRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The recall management service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -124,7 +127,10 @@ public class DeleteRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The recall management version ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.putPathParameter("RecallManagementServiceVersionId", recallManagementServiceVersionId);
@@ -133,7 +139,10 @@ public class DeleteRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionConfigId.
+         * <p>The recall management configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionConfigId(String recallManagementServiceVersionConfigId) {
             this.putPathParameter("RecallManagementServiceVersionConfigId", recallManagementServiceVersionConfigId);
@@ -151,7 +160,10 @@ public class DeleteRecallManagementServiceVersionConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

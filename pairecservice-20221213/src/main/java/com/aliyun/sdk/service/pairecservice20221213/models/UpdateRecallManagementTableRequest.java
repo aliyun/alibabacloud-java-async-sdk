@@ -201,6 +201,7 @@ public class UpdateRecallManagementTableRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the recall management table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +223,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * EnableDataSizeFluctuationThreshold.
+         * <p>Specifies whether to enable the data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableDataSizeFluctuationThreshold(Boolean enableDataSizeFluctuationThreshold) {
             this.putBodyParameter("EnableDataSizeFluctuationThreshold", enableDataSizeFluctuationThreshold);
@@ -231,7 +235,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * EnableRowCountFluctuationThreshold.
+         * <p>Specifies whether to enable the row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableRowCountFluctuationThreshold(Boolean enableRowCountFluctuationThreshold) {
             this.putBodyParameter("EnableRowCountFluctuationThreshold", enableRowCountFluctuationThreshold);
@@ -240,7 +247,7 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * Fields.
+         * <p>A list of fields.</p>
          */
         public Builder fields(Fields fields) {
             this.putBodyParameter("Fields", fields);
@@ -249,7 +256,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * IndexVersionId.
+         * <p>The version ID of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20250701</p>
          */
         public Builder indexVersionId(String indexVersionId) {
             this.putBodyParameter("IndexVersionId", indexVersionId);
@@ -258,6 +268,7 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +281,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxDataSizeFluctuationThreshold.
+         * <p>The maximum value for the data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxDataSizeFluctuationThreshold(Integer maxDataSizeFluctuationThreshold) {
             this.putBodyParameter("MaxDataSizeFluctuationThreshold", maxDataSizeFluctuationThreshold);
@@ -279,7 +293,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MaxRowCountFluctuationThreshold.
+         * <p>The maximum value for the row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxRowCountFluctuationThreshold(Integer maxRowCountFluctuationThreshold) {
             this.putBodyParameter("MaxRowCountFluctuationThreshold", maxRowCountFluctuationThreshold);
@@ -288,7 +305,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MinDataSizeFluctuationThreshold.
+         * <p>The minimum value for the data size fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minDataSizeFluctuationThreshold(Integer minDataSizeFluctuationThreshold) {
             this.putBodyParameter("MinDataSizeFluctuationThreshold", minDataSizeFluctuationThreshold);
@@ -297,7 +317,10 @@ public class UpdateRecallManagementTableRequest extends Request {
         }
 
         /**
-         * MinRowCountFluctuationThreshold.
+         * <p>The minimum value for the row count fluctuation threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder minRowCountFluctuationThreshold(Integer minRowCountFluctuationThreshold) {
             this.putBodyParameter("MinRowCountFluctuationThreshold", minRowCountFluctuationThreshold);
@@ -404,7 +427,19 @@ public class UpdateRecallManagementTableRequest extends Request {
             } 
 
             /**
-             * Attributes.
+             * <p>Specifies the role of the field. Valid values:</p>
+             * <ul>
+             * <li><p><code>Primary</code>: The primary key field.</p>
+             * </li>
+             * <li><p><code>Item</code>: The item field.</p>
+             * </li>
+             * <li><p><code>Score</code>: The recall score field.</p>
+             * </li>
+             * <li><p><code>Vector</code>: The vector field.</p>
+             * </li>
+             * <li><p><code>Index</code>: The index field.</p>
+             * </li>
+             * </ul>
              */
             public Builder attributes(java.util.List<String> attributes) {
                 this.attributes = attributes;
@@ -412,7 +447,10 @@ public class UpdateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -420,7 +458,10 @@ public class UpdateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING(全大写)</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -428,7 +469,10 @@ public class UpdateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * VectorDimension.
+             * <p>The vector dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder vectorDimension(Integer vectorDimension) {
                 this.vectorDimension = vectorDimension;
@@ -436,7 +480,10 @@ public class UpdateRecallManagementTableRequest extends Request {
             }
 
             /**
-             * VectorMetricType.
+             * <p>The vector metric type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L2</p>
              */
             public Builder vectorMetricType(String vectorMetricType) {
                 this.vectorMetricType = vectorMetricType;

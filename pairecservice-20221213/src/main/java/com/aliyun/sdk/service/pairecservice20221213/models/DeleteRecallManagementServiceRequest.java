@@ -87,7 +87,10 @@ public class DeleteRecallManagementServiceRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the recall management service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -105,7 +108,10 @@ public class DeleteRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

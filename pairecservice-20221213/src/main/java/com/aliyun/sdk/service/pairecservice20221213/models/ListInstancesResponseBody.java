@@ -80,7 +80,7 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Instances.
+         * <p>A list of instances.</p>
          */
         public Builder instances(java.util.List<Instances> instances) {
             this.instances = instances;
@@ -88,7 +88,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of returned instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -175,7 +181,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -183,7 +192,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata of the component.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -191,7 +200,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -271,7 +283,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -279,7 +294,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata of the component.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -287,7 +302,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -367,7 +385,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>featuresets</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -375,7 +396,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata of the component.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -383,7 +404,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Platform</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -463,7 +487,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataManagements.
+             * <p>A list of data management configurations.</p>
              */
             public Builder dataManagements(java.util.List<DataManagements> dataManagements) {
                 this.dataManagements = dataManagements;
@@ -471,7 +495,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Engines.
+             * <p>A list of service engines.</p>
              */
             public Builder engines(java.util.List<Engines> engines) {
                 this.engines = engines;
@@ -479,7 +503,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Monitors.
+             * <p>A list of monitoring components.</p>
              */
             public Builder monitors(java.util.List<Monitors> monitors) {
                 this.monitors = monitors;
@@ -533,7 +557,16 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * IsEnable.
+             * <p>Specifies whether the operating tool is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><p><code>true</code>: The tool is enabled.</p>
+             * </li>
+             * <li><p><code>false</code>: The tool is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isEnable(Boolean isEnable) {
                 this.isEnable = isEnable;
@@ -717,7 +750,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The billing method of the instance. Only <code>Subscription</code> (prepaid) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Subscription</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -725,7 +761,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * <p>The commodity code of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>airec_developers_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -733,7 +772,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The instance configuration.</p>
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -741,7 +780,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the instance expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-14 00:00:00.0</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -749,7 +791,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-13 17:34:52.0</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -757,7 +802,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the instance was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-11-05 09:02:30.0</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -765,7 +813,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pairec-test1</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -773,7 +824,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingTool.
+             * <p>The configuration of the operating tool.</p>
              */
             public Builder operatingTool(OperatingTool operatingTool) {
                 this.operatingTool = operatingTool;
@@ -781,7 +832,20 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID. Valid values:</p>
+             * <ul>
+             * <li><p><code>cn-shenzhen</code>: China (Shenzhen)</p>
+             * </li>
+             * <li><p><code>cn-hangzhou</code>: China (Hangzhou)</p>
+             * </li>
+             * <li><p><code>cn-beijing</code>: China (Beijing)</p>
+             * </li>
+             * <li><p><code>cn-shanghai</code>: China (Shanghai)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -789,7 +853,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li><p><code>Initializing</code>: The instance is initializing.</p>
+             * </li>
+             * <li><p><code>Stopped</code>: The instance is stopped.</p>
+             * </li>
+             * <li><p><code>Running</code>: The instance is running.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Initializing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -797,7 +872,20 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li><p><code>basic</code>: Basic Edition</p>
+             * </li>
+             * <li><p><code>high-level</code>: High-level Edition</p>
+             * </li>
+             * <li><p><code>advanced</code>: Advanced Edition</p>
+             * </li>
+             * <li><p><code>standard</code>: Standard Edition</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder type(String type) {
                 this.type = type;

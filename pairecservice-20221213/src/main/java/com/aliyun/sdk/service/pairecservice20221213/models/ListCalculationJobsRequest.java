@@ -140,6 +140,7 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +153,10 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +165,10 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,6 +177,7 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>The scene ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +190,20 @@ public class ListCalculationJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the calculation job. Valid values:</p>
+         * <ul>
+         * <li><p>Success</p>
+         * </li>
+         * <li><p>Failure</p>
+         * </li>
+         * <li><p>Initializing</p>
+         * </li>
+         * <li><p>Running</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

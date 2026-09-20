@@ -301,7 +301,7 @@ public class GetABMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * AggregationByUser.
+         * <p>Specifies whether to aggregate metrics by user.</p>
          */
         public Builder aggregationByUser(Boolean aggregationByUser) {
             this.aggregationByUser = aggregationByUser;
@@ -309,7 +309,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Definition.
+         * <p>The metric definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sum(click_cnt)</p>
          */
         public Builder definition(String definition) {
             this.definition = definition;
@@ -317,7 +320,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Denominator.
+         * <p>The denominator of the derived metric formula.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder denominator(String denominator) {
             this.denominator = denominator;
@@ -325,7 +331,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The metric description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>页面访问次数</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -333,7 +342,7 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * IsBinomialDistribution.
+         * <p>Specifies whether the metric follows a binomial distribution. This affects how significance is calculated.</p>
          */
         public Builder isBinomialDistribution(Boolean isBinomialDistribution) {
             this.isBinomialDistribution = isBinomialDistribution;
@@ -341,7 +350,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * LeftMetricId.
+         * <p>The ID of the left operand metric for a derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder leftMetricId(String leftMetricId) {
             this.leftMetricId = leftMetricId;
@@ -349,7 +361,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The metric name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pv</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -357,7 +372,7 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * NeedSignificance.
+         * <p>Specifies whether significance testing is required for this metric.</p>
          */
         public Builder needSignificance(Boolean needSignificance) {
             this.needSignificance = needSignificance;
@@ -365,7 +380,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Numerator.
+         * <p>The numerator of the derived metric formula.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click</p>
          */
         public Builder numerator(String numerator) {
             this.numerator = numerator;
@@ -373,7 +391,20 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Operator.
+         * <p>The operator for the derived metric. Valid values:</p>
+         * <ul>
+         * <li><p><code>Plus</code>: addition</p>
+         * </li>
+         * <li><p><code>Minus</code>: subtraction</p>
+         * </li>
+         * <li><p><code>Multiplication</code>: multiplication</p>
+         * </li>
+         * <li><p><code>Division</code>: division</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Division</p>
          */
         public Builder operator(String operator) {
             this.operator = operator;
@@ -381,7 +412,16 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Realtime.
+         * <p>Specifies whether the metric is real-time. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: The metric is real-time.</p>
+         * </li>
+         * <li><p><code>false</code>: The metric is not real-time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(String realtime) {
             this.realtime = realtime;
@@ -389,7 +429,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -397,7 +440,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * ResultResourceId.
+         * <p>The ID of the data source for the results table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder resultResourceId(String resultResourceId) {
             this.resultResourceId = resultResourceId;
@@ -405,7 +451,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * ResultTableMetaId.
+         * <p>The ID of the results table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder resultTableMetaId(String resultTableMetaId) {
             this.resultTableMetaId = resultTableMetaId;
@@ -413,7 +462,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RightMetricId.
+         * <p>The ID of the right operand metric for a derived metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder rightMetricId(String rightMetricId) {
             this.rightMetricId = rightMetricId;
@@ -421,7 +473,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -429,7 +484,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * SceneName.
+         * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>home_feed</p>
          */
         public Builder sceneName(String sceneName) {
             this.sceneName = sceneName;
@@ -437,7 +495,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * StatisticsCycle.
+         * <p>The statistics cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder statisticsCycle(Integer statisticsCycle) {
             this.statisticsCycle = statisticsCycle;
@@ -445,7 +506,10 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * TableMetaId.
+         * <p>The ID of the source table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.tableMetaId = tableMetaId;
@@ -453,7 +517,16 @@ public class GetABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the metric. Valid values:</p>
+         * <ul>
+         * <li><p><code>Single</code>: a single metric.</p>
+         * </li>
+         * <li><p><code>Derived</code>: a derived metric.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Single</p>
          */
         public Builder type(String type) {
             this.type = type;

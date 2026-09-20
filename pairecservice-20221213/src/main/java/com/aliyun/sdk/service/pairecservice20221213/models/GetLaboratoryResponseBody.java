@@ -223,7 +223,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         } 
 
         /**
-         * BucketCount.
+         * <p>The number of buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder bucketCount(Integer bucketCount) {
             this.bucketCount = bucketCount;
@@ -231,7 +234,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * BucketType.
+         * <p>The bucketing method. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Filter</p>
          */
         public Builder bucketType(String bucketType) {
             this.bucketType = bucketType;
@@ -239,7 +245,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Buckets.
+         * <p>The assigned buckets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1,2,3,10-20</p>
          */
         public Builder buckets(String buckets) {
             this.buckets = buckets;
@@ -247,7 +256,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * CrowdId.
+         * <p>The crowd ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder crowdId(String crowdId) {
             this.crowdId = crowdId;
@@ -255,7 +267,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * DebugCrowdId.
+         * <p>The debug crowd ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder debugCrowdId(String debugCrowdId) {
             this.debugCrowdId = debugCrowdId;
@@ -263,7 +278,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * DebugUsers.
+         * <p>The debug users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1,user2,user3</p>
          */
         public Builder debugUsers(String debugUsers) {
             this.debugUsers = debugUsers;
@@ -271,7 +289,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The laboratory description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -279,7 +300,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.environment = environment;
@@ -287,7 +311,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Filter.
+         * <p>The filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>filter=xxx</p>
          */
         public Builder filter(String filter) {
             this.filter = filter;
@@ -295,7 +322,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The laboratory name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>laboratory1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -303,7 +333,7 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1C0898E5-9220-5443-B2D9-445FF0688215</p>
@@ -314,7 +344,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -322,7 +355,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the laboratory. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Offline</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -330,7 +366,10 @@ public class GetLaboratoryResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The laboratory type. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Base</p>
          */
         public Builder type(String type) {
             this.type = type;

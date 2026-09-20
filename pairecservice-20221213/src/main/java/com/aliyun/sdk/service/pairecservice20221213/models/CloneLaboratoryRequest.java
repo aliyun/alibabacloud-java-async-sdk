@@ -119,6 +119,7 @@ public class CloneLaboratoryRequest extends Request {
         } 
 
         /**
+         * <p>The laboratory ID. To obtain this ID, call the <code>ListLaboratories</code> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CloneLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to clone the experiment groups.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CloneLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The destination environment. Valid values: Daily, Pre (pre-release), and Prod (production).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CloneLaboratoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To obtain this ID, call the <code>ListInstances</code> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

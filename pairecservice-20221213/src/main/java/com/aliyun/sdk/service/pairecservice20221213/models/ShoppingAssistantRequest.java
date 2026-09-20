@@ -222,7 +222,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * Config.
+         * <p>The additional configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder config(String config) {
             this.putBodyParameter("Config", config);
@@ -231,7 +234,7 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * Contents.
+         * <p>The contents.</p>
          */
         public Builder contents(Contents contents) {
             this.putBodyParameter("Contents", contents);
@@ -240,7 +243,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * ConversationId.
+         * <p>The conversation ID. This parameter is not yet effective.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
          */
         public Builder conversationId(String conversationId) {
             this.putBodyParameter("ConversationId", conversationId);
@@ -249,7 +255,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p><strong>The environment.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod: productionPre: pre-release.</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -258,7 +267,7 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * InputMessage.
+         * <p>The input message.</p>
          */
         public Builder inputMessage(InputMessage inputMessage) {
             this.putBodyParameter("InputMessage", inputMessage);
@@ -267,7 +276,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p><strong>The instance ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -276,7 +288,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh/en</p>
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -285,7 +300,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p><strong>The scene ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai_shopping</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -294,7 +312,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p><strong>The service ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>ServiceId.</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -303,7 +324,10 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e47cfae9-c0cc-42e1-91e2-e67cdb0e7b96</p>
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -383,7 +407,10 @@ public class ShoppingAssistantRequest extends Request {
             } 
 
             /**
-             * Text.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -391,7 +418,10 @@ public class ShoppingAssistantRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -458,7 +488,10 @@ public class ShoppingAssistantRequest extends Request {
             } 
 
             /**
-             * Text.
+             * <p>The message content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -466,7 +499,10 @@ public class ShoppingAssistantRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The message type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -520,7 +556,7 @@ public class ShoppingAssistantRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The message content.</p>
              */
             public Builder content(java.util.List<Content> content) {
                 this.content = content;

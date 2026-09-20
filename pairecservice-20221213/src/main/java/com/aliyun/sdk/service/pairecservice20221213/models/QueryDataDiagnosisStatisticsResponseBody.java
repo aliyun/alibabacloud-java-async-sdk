@@ -67,7 +67,10 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Statistics.
+         * <p>The statistics for the data diagnosis task.</p>
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -141,7 +144,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedDates.
+             * <p>The dates of task failures.</p>
              */
             public Builder failedDates(java.util.List<String> failedDates) {
                 this.failedDates = failedDates;
@@ -149,7 +152,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NoDataDates.
+             * <p>The dates with missing task data.</p>
              */
             public Builder noDataDates(java.util.List<String> noDataDates) {
                 this.noDataDates = noDataDates;

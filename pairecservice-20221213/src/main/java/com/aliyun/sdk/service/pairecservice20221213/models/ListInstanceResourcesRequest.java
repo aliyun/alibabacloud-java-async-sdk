@@ -116,6 +116,7 @@ public class ListInstanceResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +138,18 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The category of the resource. Valid values:</p>
+         * <ul>
+         * <li><p>DataManagement</p>
+         * </li>
+         * <li><p>Engine</p>
+         * </li>
+         * <li><p>Monitor</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DataManagement</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -146,7 +158,43 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Group.
+         * <p>The group of the resource.</p>
+         * <p>If <code>Category</code> is <code>DataManagement</code>, valid values are:</p>
+         * <ul>
+         * <li><p>storage</p>
+         * </li>
+         * <li><p>modelpipeline</p>
+         * </li>
+         * <li><p>datastorage</p>
+         * </li>
+         * <li><p>modeltrain</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Engine</code>, valid values are:</p>
+         * <ul>
+         * <li><p>feature</p>
+         * </li>
+         * <li><p>predict</p>
+         * </li>
+         * <li><p>recall</p>
+         * </li>
+         * <li><p>recengine</p>
+         * </li>
+         * </ul>
+         * <p>If <code>Category</code> is <code>Monitor</code>, valid values are:</p>
+         * <ul>
+         * <li><p>logs</p>
+         * </li>
+         * <li><p>logsback</p>
+         * </li>
+         * <li><p>coldstart</p>
+         * </li>
+         * <li><p>deploy</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>storage</p>
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -155,7 +203,44 @@ public class ListInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the resource. If specified, only resources of this type are returned.</p>
+         * <ul>
+         * <li><p>Hologres</p>
+         * </li>
+         * <li><p>EAS</p>
+         * </li>
+         * <li><p>BE</p>
+         * </li>
+         * <li><p>Rec</p>
+         * </li>
+         * <li><p>Platform</p>
+         * </li>
+         * <li><p>SLS</p>
+         * </li>
+         * <li><p>DataHub</p>
+         * </li>
+         * <li><p>ApsaraMQ for Kafka</p>
+         * </li>
+         * <li><p>Realtime Compute for Apache Flink</p>
+         * </li>
+         * <li><p>ACR</p>
+         * </li>
+         * <li><p>OSS</p>
+         * </li>
+         * <li><p>DataWorks</p>
+         * </li>
+         * <li><p>PAI</p>
+         * </li>
+         * <li><p>MaxCompute</p>
+         * </li>
+         * <li><p>Graph Compute Service</p>
+         * </li>
+         * <li><p>ApsaraDB for Redis</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

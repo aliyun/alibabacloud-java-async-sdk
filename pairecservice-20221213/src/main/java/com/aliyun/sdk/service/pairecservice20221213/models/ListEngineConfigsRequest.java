@@ -167,7 +167,18 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The runtime environment.</p>
+         * <ul>
+         * <li><p>Daily: daily environment.</p>
+         * </li>
+         * <li><p>Pre: staging environment.</p>
+         * </li>
+         * <li><p>Prod: production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -176,6 +187,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +200,10 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The engine configuration name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>engine_config_v1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -197,7 +212,10 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -206,7 +224,10 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +236,16 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status filter.</p>
+         * <ul>
+         * <li><p>Released: released.</p>
+         * </li>
+         * <li><p>Unreleased: not released.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Released</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -224,7 +254,11 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>The version filter.</p>
+         * <p>latest: the most recently updated version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>latest</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

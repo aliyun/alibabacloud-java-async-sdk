@@ -101,7 +101,10 @@ public class GetRecallManagementServiceVersionRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the recall management service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -110,7 +113,10 @@ public class GetRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * RecallManagementServiceVersionId.
+         * <p>The ID of the recall management service version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder recallManagementServiceVersionId(String recallManagementServiceVersionId) {
             this.putPathParameter("RecallManagementServiceVersionId", recallManagementServiceVersionId);
@@ -128,7 +134,10 @@ public class GetRecallManagementServiceVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

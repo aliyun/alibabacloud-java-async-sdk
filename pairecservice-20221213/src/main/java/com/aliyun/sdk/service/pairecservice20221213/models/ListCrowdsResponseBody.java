@@ -80,7 +80,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         } 
 
         /**
-         * Crowds.
+         * <p>The list of Crowds.</p>
          */
         public Builder crowds(java.util.List<Crowds> crowds) {
             this.crowds = crowds;
@@ -88,7 +88,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
@@ -99,7 +99,10 @@ public class ListCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of Crowds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -243,7 +246,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             } 
 
             /**
-             * CrowdId.
+             * <p>The Crowd ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder crowdId(String crowdId) {
                 this.crowdId = crowdId;
@@ -251,7 +257,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The Crowd description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -259,7 +268,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the Crowd was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -267,7 +279,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>The label of the Crowd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>os=android</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -275,7 +290,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Crowd name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crowd1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -283,7 +301,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * <p>The number of users in the Crowd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quantity(String quantity) {
                 this.quantity = quantity;
@@ -291,7 +312,16 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the Crowd. Valid values:</p>
+             * <ul>
+             * <li><p><code>ManualInput</code>: The Crowd is created from a manual entry of users.</p>
+             * </li>
+             * <li><p><code>UploadFile</code>: The Crowd is created from an uploaded file.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ManualInput</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -299,7 +329,10 @@ public class ListCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>The user IDs in the Crowd, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1,user2</p>
              */
             public Builder users(String users) {
                 this.users = users;

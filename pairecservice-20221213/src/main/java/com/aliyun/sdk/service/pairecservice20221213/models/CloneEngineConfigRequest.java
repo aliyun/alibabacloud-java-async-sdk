@@ -129,7 +129,10 @@ public class CloneEngineConfigRequest extends Request {
         } 
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.putPathParameter("EngineConfigId", engineConfigId);
@@ -147,7 +150,10 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * <p>The content of the engine configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder configValue(String configValue) {
             this.putBodyParameter("ConfigValue", configValue);
@@ -165,7 +171,18 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><p>Daily: The daily environment.</p>
+         * </li>
+         * <li><p>Pre: The pre-release environment.</p>
+         * </li>
+         * <li><p>Prod: The production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -174,7 +191,10 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

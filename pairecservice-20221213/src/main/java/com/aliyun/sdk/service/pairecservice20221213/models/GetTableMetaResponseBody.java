@@ -262,7 +262,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * CanDelete.
+         * <p>Indicates whether the table can be deleted. The value is <code>false</code> if other resources reference the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder canDelete(Boolean canDelete) {
             this.canDelete = canDelete;
@@ -270,7 +273,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>Additional configurations for the table, provided as a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;table_type&quot;:&quot;item&quot;}</p>
          */
         public Builder config(String config) {
             this.config = config;
@@ -278,7 +284,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The table description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a test table</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -286,7 +295,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Fields.
+         * <p>The fields in the table.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -294,7 +303,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15:24:33</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -302,7 +314,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * GmtImportedTime.
+         * <p>The import time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtImportedTime(String gmtImportedTime) {
             this.gmtImportedTime = gmtImportedTime;
@@ -310,7 +325,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15:24:33</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -318,7 +336,18 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * <p>The table module. Valid values:</p>
+         * <ul>
+         * <li><p><code>ABTest</code>: An A/B testing data table.</p>
+         * </li>
+         * <li><p><code>ExperimentTool</code>: An experiment tool table.</p>
+         * </li>
+         * <li><p><code>DataDiagnosis</code>: A table for data diagnosis.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ABTest</p>
          */
         public Builder module(String module) {
             this.module = module;
@@ -326,7 +355,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_table</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -334,7 +366,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -342,7 +377,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-wkgo***</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -366,7 +404,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TableMetaId.
+         * <p>The table ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder tableMetaId(String tableMetaId) {
             this.tableMetaId = tableMetaId;
@@ -374,7 +415,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table in the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>table_mysql</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -382,7 +426,16 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The table type. Valid values:</p>
+         * <ul>
+         * <li><p><code>MaxCompute</code></p>
+         * </li>
+         * <li><p><code>Hologres</code></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxCompute</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -390,7 +443,10 @@ public class GetTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Url.
+         * <p>The URL of the table in Data Map. This parameter is returned only for MaxCompute tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>
          */
         public Builder url(String url) {
             this.url = url;
@@ -482,7 +538,10 @@ public class GetTableMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDimensionField.
+             * <p>Whether the field is a dimension field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDimensionField(Boolean isDimensionField) {
                 this.isDimensionField = isDimensionField;
@@ -490,7 +549,10 @@ public class GetTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Meaning.
+             * <p>The field meaning.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>the gender of people</p>
              */
             public Builder meaning(String meaning) {
                 this.meaning = meaning;
@@ -498,7 +560,10 @@ public class GetTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gender</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -506,7 +571,10 @@ public class GetTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The field type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIGINT</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -67,7 +67,10 @@ public class CreateEngineConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * EngineConfigId.
+         * <p>The engine configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder engineConfigId(String engineConfigId) {
             this.engineConfigId = engineConfigId;
@@ -75,7 +78,10 @@ public class CreateEngineConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

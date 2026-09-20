@@ -80,7 +80,10 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The generated Flink code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Create Table xxx.......</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +91,10 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
         }
 
         /**
-         * PreNeedConfig.
+         * <p>Indicates whether the engine configuration for the pre-release environment is incomplete.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
          */
         public Builder preNeedConfig(Boolean preNeedConfig) {
             this.preNeedConfig = preNeedConfig;
@@ -96,7 +102,10 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

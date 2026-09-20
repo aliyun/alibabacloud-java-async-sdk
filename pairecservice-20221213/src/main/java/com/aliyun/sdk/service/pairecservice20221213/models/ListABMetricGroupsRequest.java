@@ -167,6 +167,7 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,16 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>ASC: ascending.</p>
+         * </li>
+         * <li><p>DESC: descending.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -188,7 +198,10 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -197,7 +210,10 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +222,10 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * Realtime.
+         * <p>Specifies whether to return only real-time A/B metric groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder realtime(Boolean realtime) {
             this.putQueryParameter("Realtime", realtime);
@@ -215,7 +234,10 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID. You can call the <a href="%5C(~~2402581~~%5C)">ListScenes</a> operation to obtain this ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -224,7 +246,16 @@ public class ListABMetricGroupsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the results by. Valid values:</p>
+         * <ul>
+         * <li><p>GmtCreateTime: creation time.</p>
+         * </li>
+         * <li><p>GmtModifiedTime: modification time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

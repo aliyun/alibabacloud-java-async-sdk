@@ -275,7 +275,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-04-25</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -283,7 +286,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Event.
+         * <p>The event of the control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>click</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -291,7 +297,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the traffic control target was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-03T02:28:00.000Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -299,7 +308,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * ItemConditionArray.
+         * <p>The item condition, specified in an array format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;field&quot;:&quot;status&quot;,&quot;option&quot;:&quot;=&quot;,&quot;value&quot;:&quot;1&quot;}]</p>
          */
         public Builder itemConditionArray(String itemConditionArray) {
             this.itemConditionArray = itemConditionArray;
@@ -307,7 +319,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * ItemConditionExpress.
+         * <p>The item condition, specified in an expression format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status=1</p>
          */
         public Builder itemConditionExpress(String itemConditionExpress) {
             this.itemConditionExpress = itemConditionExpress;
@@ -315,7 +330,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * ItemConditionType.
+         * <p>The item condition type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Array</p>
          */
         public Builder itemConditionType(String itemConditionType) {
             this.itemConditionType = itemConditionType;
@@ -323,7 +341,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>target-1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -331,7 +352,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * NewProductRegulation.
+         * <p>Indicates whether new product regulation is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder newProductRegulation(Boolean newProductRegulation) {
             this.newProductRegulation = newProductRegulation;
@@ -339,7 +363,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RecallName.
+         * <p>The name of the recall strategy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>recall-1</p>
          */
         public Builder recallName(String recallName) {
             this.recallName = recallName;
@@ -347,7 +374,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +385,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * SplitParts.
+         * <p>The piecewise control settings.</p>
          */
         public Builder splitParts(SplitParts splitParts) {
             this.splitParts = splitParts;
@@ -363,7 +393,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-25</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -371,7 +404,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * StatisPeriod.
+         * <p>The statistics period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder statisPeriod(String statisPeriod) {
             this.statisPeriod = statisPeriod;
@@ -379,7 +415,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>枚举值：开启：Opened关闭：Closed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -387,7 +426,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * ToleranceValue.
+         * <p>The tolerance value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder toleranceValue(Long toleranceValue) {
             this.toleranceValue = toleranceValue;
@@ -395,7 +437,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTargetId.
+         * <p>The ID of the traffic control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTargetId(String trafficControlTargetId) {
             this.trafficControlTargetId = trafficControlTargetId;
@@ -403,7 +448,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.trafficControlTaskId = trafficControlTaskId;
@@ -411,7 +459,10 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value of the control target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder value(Float value) {
             this.value = value;
@@ -490,7 +541,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             } 
 
             /**
-             * SetPoints.
+             * <p>The set points.</p>
              */
             public Builder setPoints(java.util.List<Long> setPoints) {
                 this.setPoints = setPoints;
@@ -498,7 +549,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             }
 
             /**
-             * SetValues.
+             * <p>The set values.</p>
              */
             public Builder setValues(java.util.List<Long> setValues) {
                 this.setValues = setValues;
@@ -506,7 +557,7 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoints.
+             * <p>The time points.</p>
              */
             public Builder timePoints(java.util.List<Long> timePoints) {
                 this.timePoints = timePoints;

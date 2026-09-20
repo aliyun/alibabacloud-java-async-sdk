@@ -119,6 +119,7 @@ public class UpdateLayerRequest extends Request {
         } 
 
         /**
+         * <p>The layer ID. You can call the ListLayers operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class UpdateLayerRequest extends Request {
         }
 
         /**
+         * <p>The layer description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class UpdateLayerRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class UpdateLayerRequest extends Request {
         }
 
         /**
+         * <p>The layer name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

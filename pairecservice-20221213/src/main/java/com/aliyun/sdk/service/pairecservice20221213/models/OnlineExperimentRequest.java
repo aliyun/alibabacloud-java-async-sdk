@@ -88,6 +88,7 @@ public class OnlineExperimentRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the experiment, which you can obtain by calling the ListExperiments API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +110,10 @@ public class OnlineExperimentRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance, which you can obtain by calling the ListInstances API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

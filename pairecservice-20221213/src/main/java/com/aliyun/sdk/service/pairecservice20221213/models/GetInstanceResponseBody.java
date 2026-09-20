@@ -29,6 +29,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
 
+    @com.aliyun.core.annotation.NameInMap("FeatureStoreInfo")
+    private FeatureStoreInfo featureStoreInfo;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -40,6 +43,9 @@ public class GetInstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("OperatingTool")
     private OperatingTool operatingTool;
+
+    @com.aliyun.core.annotation.NameInMap("RecommendCustomization")
+    private RecommendCustomization recommendCustomization;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -58,10 +64,12 @@ public class GetInstanceResponseBody extends TeaModel {
         this.commodityCode = builder.commodityCode;
         this.config = builder.config;
         this.expiredTime = builder.expiredTime;
+        this.featureStoreInfo = builder.featureStoreInfo;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.instanceId = builder.instanceId;
         this.operatingTool = builder.operatingTool;
+        this.recommendCustomization = builder.recommendCustomization;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.status = builder.status;
@@ -109,6 +117,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return featureStoreInfo
+     */
+    public FeatureStoreInfo getFeatureStoreInfo() {
+        return this.featureStoreInfo;
+    }
+
+    /**
      * @return gmtCreateTime
      */
     public String getGmtCreateTime() {
@@ -134,6 +149,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public OperatingTool getOperatingTool() {
         return this.operatingTool;
+    }
+
+    /**
+     * @return recommendCustomization
+     */
+    public RecommendCustomization getRecommendCustomization() {
+        return this.recommendCustomization;
     }
 
     /**
@@ -169,10 +191,12 @@ public class GetInstanceResponseBody extends TeaModel {
         private String commodityCode; 
         private Config config; 
         private String expiredTime; 
+        private FeatureStoreInfo featureStoreInfo; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String instanceId; 
         private OperatingTool operatingTool; 
+        private RecommendCustomization recommendCustomization; 
         private String regionId; 
         private String requestId; 
         private String status; 
@@ -186,10 +210,12 @@ public class GetInstanceResponseBody extends TeaModel {
             this.commodityCode = model.commodityCode;
             this.config = model.config;
             this.expiredTime = model.expiredTime;
+            this.featureStoreInfo = model.featureStoreInfo;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.instanceId = model.instanceId;
             this.operatingTool = model.operatingTool;
+            this.recommendCustomization = model.recommendCustomization;
             this.regionId = model.regionId;
             this.requestId = model.requestId;
             this.status = model.status;
@@ -197,7 +223,10 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * ChargeType.
+         * <p>The billing type of the instance. Currently, only Subscription (prepayment) is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Subscription</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -205,7 +234,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CommodityCode.
+         * <p>The commodity code of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>airec_developers_public_cn</p>
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -213,7 +245,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * <p>The instance configuration.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -221,7 +253,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * <p>The time when the instance expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-12-14 00:00:00.0</p>
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -229,7 +264,18 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * FeatureStoreInfo.
+         */
+        public Builder featureStoreInfo(FeatureStoreInfo featureStoreInfo) {
+            this.featureStoreInfo = featureStoreInfo;
+            return this;
+        }
+
+        /**
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-13 17:34:52.0</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -237,7 +283,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-05 09:02:30.0</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -245,7 +294,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -253,7 +305,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperatingTool.
+         * <p>The configuration of the operations tool.</p>
          */
         public Builder operatingTool(OperatingTool operatingTool) {
             this.operatingTool = operatingTool;
@@ -261,7 +313,24 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * RecommendCustomization.
+         */
+        public Builder recommendCustomization(RecommendCustomization recommendCustomization) {
+            this.recommendCustomization = recommendCustomization;
+            return this;
+        }
+
+        /**
+         * <p>The region ID. Valid values:</p>
+         * <ul>
+         * <li>cn-shenzhen: China (Shenzhen).</li>
+         * <li>cn-hangzhou: China (Hangzhou).</li>
+         * <li>cn-beijing: China (Beijing).</li>
+         * <li>cn-shanghai: China (Shanghai).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -269,7 +338,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +349,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li>Initializing: The instance is being initialized.</li>
+         * <li>Stopped: The instance is stopped.</li>
+         * <li>Running: The instance is running.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Initializing</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -285,7 +365,16 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>basic: Basic Edition.</li>
+         * <li>highleve: Upgraded Edition.</li>
+         * <li>advance: Advanced Edition.</li>
+         * <li>standard: Standard Edition.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -364,7 +453,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>storage</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -372,7 +464,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -380,7 +472,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -460,7 +555,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>feature</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -468,7 +566,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -476,7 +574,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hologres</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -556,7 +657,10 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentCode.
+             * <p>The component code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>featuresets</p>
              */
             public Builder componentCode(String componentCode) {
                 this.componentCode = componentCode;
@@ -564,7 +668,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Meta.
+             * <p>The metadata.</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -572,7 +676,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The component type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Platform</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -652,7 +759,7 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DataManagements.
+             * <p>The list of modeling environments.</p>
              */
             public Builder dataManagements(java.util.List<DataManagements> dataManagements) {
                 this.dataManagements = dataManagements;
@@ -660,7 +767,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Engines.
+             * <p>The list of service engines.</p>
              */
             public Builder engines(java.util.List<Engines> engines) {
                 this.engines = engines;
@@ -668,7 +775,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Monitors.
+             * <p>The list of supporting features.</p>
              */
             public Builder monitors(java.util.List<Monitors> monitors) {
                 this.monitors = monitors;
@@ -677,6 +784,84 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Config build() {
                 return new Config(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class FeatureStoreInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FeatureDBStatus")
+        private String featureDBStatus;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        private FeatureStoreInfo(Builder builder) {
+            this.featureDBStatus = builder.featureDBStatus;
+            this.instanceId = builder.instanceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureStoreInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return featureDBStatus
+         */
+        public String getFeatureDBStatus() {
+            return this.featureDBStatus;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public static final class Builder {
+            private String featureDBStatus; 
+            private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureStoreInfo model) {
+                this.featureDBStatus = model.featureDBStatus;
+                this.instanceId = model.instanceId;
+            } 
+
+            /**
+             * FeatureDBStatus.
+             */
+            public Builder featureDBStatus(String featureDBStatus) {
+                this.featureDBStatus = featureDBStatus;
+                return this;
+            }
+
+            /**
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pairec-test1</p>
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            public FeatureStoreInfo build() {
+                return new FeatureStoreInfo(this);
             } 
 
         } 
@@ -722,7 +907,14 @@ public class GetInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * IsEnable.
+             * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li>True: Enabled.</li>
+             * <li>False: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder isEnable(Boolean isEnable) {
                 this.isEnable = isEnable;
@@ -731,6 +923,67 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public OperatingTool build() {
                 return new OperatingTool(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
+    public static class RecommendCustomization extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
+        private Boolean isEnable;
+
+        private RecommendCustomization(Builder builder) {
+            this.isEnable = builder.isEnable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecommendCustomization create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isEnable
+         */
+        public Boolean getIsEnable() {
+            return this.isEnable;
+        }
+
+        public static final class Builder {
+            private Boolean isEnable; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecommendCustomization model) {
+                this.isEnable = model.isEnable;
+            } 
+
+            /**
+             * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li>True: Enabled.</li>
+             * <li>False: Not enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
+             */
+            public Builder isEnable(Boolean isEnable) {
+                this.isEnable = isEnable;
+                return this;
+            }
+
+            public RecommendCustomization build() {
+                return new RecommendCustomization(this);
             } 
 
         } 

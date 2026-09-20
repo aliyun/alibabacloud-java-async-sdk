@@ -87,7 +87,10 @@ public class DeleteLayerRequest extends Request {
         } 
 
         /**
-         * LayerId.
+         * <p>Layer ID, which can be obtained by calling the ListLayers API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder layerId(String layerId) {
             this.putPathParameter("LayerId", layerId);
@@ -105,7 +108,10 @@ public class DeleteLayerRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

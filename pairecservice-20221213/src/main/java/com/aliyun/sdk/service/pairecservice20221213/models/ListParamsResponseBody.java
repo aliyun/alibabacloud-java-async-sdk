@@ -80,7 +80,7 @@ public class ListParamsResponseBody extends TeaModel {
         } 
 
         /**
-         * Params.
+         * <p>A list of parameters.</p>
          */
         public Builder params(java.util.List<Params> params) {
             this.params = params;
@@ -88,7 +88,7 @@ public class ListParamsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>A2D07551-38DA-531E-9B22-877D1D86A579</p>
@@ -99,7 +99,10 @@ public class ListParamsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +207,18 @@ public class ListParamsResponseBody extends TeaModel {
             } 
 
             /**
-             * Environment.
+             * <p>The environment to which the parameter belongs. Valid values:</p>
+             * <ul>
+             * <li><p>Daily: A test environment for daily use.</p>
+             * </li>
+             * <li><p>Prepub: A staging environment that mirrors the production environment.</p>
+             * </li>
+             * <li><p>Product: The production environment.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Daily</p>
              */
             public Builder environment(String environment) {
                 this.environment = environment;
@@ -212,7 +226,10 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModifiedTime.
+             * <p>The time when the parameter was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -220,7 +237,10 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>home</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -228,7 +248,10 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * ParamId.
+             * <p>The parameter ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder paramId(String paramId) {
                 this.paramId = paramId;
@@ -236,7 +259,10 @@ public class ListParamsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>house</p>
              */
             public Builder value(String value) {
                 this.value = value;

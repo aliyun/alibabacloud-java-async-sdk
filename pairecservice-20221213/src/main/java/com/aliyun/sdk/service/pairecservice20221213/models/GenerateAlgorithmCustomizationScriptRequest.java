@@ -115,7 +115,10 @@ public class GenerateAlgorithmCustomizationScriptRequest extends Request {
         } 
 
         /**
-         * AlgorithmCustomizationId.
+         * <p>The algorithm customization ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder algorithmCustomizationId(String algorithmCustomizationId) {
             this.putPathParameter("AlgorithmCustomizationId", algorithmCustomizationId);
@@ -133,7 +136,16 @@ public class GenerateAlgorithmCustomizationScriptRequest extends Request {
         }
 
         /**
-         * DeployMode.
+         * <p>The deployment mode. Valid values:</p>
+         * <ul>
+         * <li><p><strong>EasyDeploy</strong>: Performs a one-click deployment.</p>
+         * </li>
+         * <li><p><strong>GenerateScript</strong>: Generates a deployment script.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EasyDeploy</p>
          */
         public Builder deployMode(String deployMode) {
             this.putBodyParameter("DeployMode", deployMode);
@@ -142,7 +154,10 @@ public class GenerateAlgorithmCustomizationScriptRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -151,7 +166,10 @@ public class GenerateAlgorithmCustomizationScriptRequest extends Request {
         }
 
         /**
-         * ModuleFieldTypes.
+         * <p>The data types of fields in the JSON configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;item_table&quot;:&quot;array&quot;}</p>
          */
         public Builder moduleFieldTypes(java.util.Map<String, ?> moduleFieldTypes) {
             this.putBodyParameter("ModuleFieldTypes", moduleFieldTypes);

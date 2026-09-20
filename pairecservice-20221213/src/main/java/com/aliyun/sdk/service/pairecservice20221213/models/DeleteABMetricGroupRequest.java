@@ -89,6 +89,7 @@ public class DeleteABMetricGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the A/B test metric group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class DeleteABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

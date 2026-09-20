@@ -54,7 +54,10 @@ public class DeleteEngineConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

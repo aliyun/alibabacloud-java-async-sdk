@@ -153,6 +153,7 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,16 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><code>ASC</code>: Ascending order.</p>
+         * </li>
+         * <li><p><code>DESC</code>: Descending order.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -174,7 +184,10 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -183,7 +196,10 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +208,16 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field to sort the results by. Valid values:</p>
+         * <ul>
+         * <li><p><code>GmtCreateTime</code>: Sorts by creation time.</p>
+         * </li>
+         * <li><p><code>GmtModifiedTime</code>: Sorts by modification time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -201,7 +226,22 @@ public class ListFeatureConsistencyCheckJobsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the job. Valid values:</p>
+         * <ul>
+         * <li><p><code>ToRun</code>: Waiting to run.</p>
+         * </li>
+         * <li><p><code>Running</code>: In progress.</p>
+         * </li>
+         * <li><p><code>Success</code>: Successful.</p>
+         * </li>
+         * <li><p><code>Failure</code>: Failed.</p>
+         * </li>
+         * <li><p><code>Stopped</code>: Stopped or canceled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

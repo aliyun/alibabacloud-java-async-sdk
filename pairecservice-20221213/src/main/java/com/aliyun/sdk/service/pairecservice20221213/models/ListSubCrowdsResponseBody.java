@@ -80,7 +80,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>C5AEB79E-FAA4-5DCE-8CD7-1CAF549ECC3E</p>
@@ -91,7 +91,7 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * SubCrowds.
+         * <p>The list of subcrowds.</p>
          */
         public Builder subCrowds(java.util.List<SubCrowds> subCrowds) {
             this.subCrowds = subCrowds;
@@ -99,7 +99,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of subcrowds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +207,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the subcrowd was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -212,7 +218,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * <p>The number of users in the subcrowd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder quantity(Integer quantity) {
                 this.quantity = quantity;
@@ -220,7 +229,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the subcrowd.<br>● ManualInput: Users were added manually.<br>● UploadFile: Users were added by uploading a file.<br><br></p>
+             * 
+             * <strong>example:</strong>
+             * <p>ManualInput</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -228,7 +240,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * SubCrowdId.
+             * <p>The subcrowd ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder subCrowdId(String subCrowdId) {
                 this.subCrowdId = subCrowdId;
@@ -236,7 +251,10 @@ public class ListSubCrowdsResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>The users in the subcrowd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1,user2</p>
              */
             public Builder users(String users) {
                 this.users = users;

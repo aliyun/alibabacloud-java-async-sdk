@@ -132,7 +132,10 @@ public class GetLayerResponseBody extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The description of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a test.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -140,7 +143,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the experiment layer was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-13 17:34:52.0</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -148,7 +154,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * LaboratoryId.
+         * <p>The ID of the laboratory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder laboratoryId(String laboratoryId) {
             this.laboratoryId = laboratoryId;
@@ -156,7 +165,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>layer1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -164,7 +176,7 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>
@@ -175,7 +187,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * ResidualFlow.
+         * <p>The residual traffic in the experiment layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder residualFlow(Long residualFlow) {
             this.residualFlow = residualFlow;
@@ -183,7 +198,10 @@ public class GetLayerResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;

@@ -101,7 +101,10 @@ public class StopTrafficControlFlinkTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -119,7 +122,18 @@ public class StopTrafficControlFlinkTaskRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment to which the instance belongs. Valid values: </p>
+         * <ul>
+         * <li><p>Daily: daily environment.</p>
+         * </li>
+         * <li><p>Pre: staging environment.</p>
+         * </li>
+         * <li><p>Prod: production environment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -128,7 +142,10 @@ public class StopTrafficControlFlinkTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

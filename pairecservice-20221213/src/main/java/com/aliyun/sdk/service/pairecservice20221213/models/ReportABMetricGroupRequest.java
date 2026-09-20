@@ -218,6 +218,7 @@ public class ReportABMetricGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AB metric group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +240,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the base experiment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +253,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * DimensionFields.
+         * <p>The dimension fields.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;gender&quot;:&quot;man&quot;}</p>
          */
         public Builder dimensionFields(String dimensionFields) {
             this.putBodyParameter("DimensionFields", dimensionFields);
@@ -260,7 +265,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-01</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -269,7 +277,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * ExperimentGroupId.
+         * <p>The ID of the experiment group. You can call the <a href="https://help.aliyun.com/document_detail/2402573.html">ListExperimentGroups</a> operation to obtain the ID of the experiment group. This parameter is required for offline and real-time reports.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder experimentGroupId(String experimentGroupId) {
             this.putBodyParameter("ExperimentGroupId", experimentGroupId);
@@ -278,6 +289,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the experiments. You can call the <a href="https://help.aliyun.com/document_detail/2402582.html">ListExperiments</a> operation to obtain the IDs of the experiments.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,6 +302,7 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,6 +315,15 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
+         * <p>The type of the report.</p>
+         * <ul>
+         * <li><p>Realtime: real-time report.</p>
+         * </li>
+         * <li><p>Offline: offline report.</p>
+         * </li>
+         * <li><p>Market: dashboard report.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,7 +336,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
@@ -323,7 +348,10 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-01</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -332,7 +360,16 @@ public class ReportABMetricGroupRequest extends Request {
         }
 
         /**
-         * TimeStatisticsMethod.
+         * <p>The time statistics method. This parameter is required for real-time reports.</p>
+         * <ul>
+         * <li><p>Hour: The statistics are collected by hour.</p>
+         * </li>
+         * <li><p>Day: The statistics are accumulated from 00:00 on the current day.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Hour</p>
          */
         public Builder timeStatisticsMethod(String timeStatisticsMethod) {
             this.putBodyParameter("TimeStatisticsMethod", timeStatisticsMethod);

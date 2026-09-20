@@ -67,7 +67,10 @@ public class CreateABMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * ABMetricId.
+         * <p>The AB metric ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ABMetricId(String ABMetricId) {
             this.ABMetricId = ABMetricId;
@@ -75,7 +78,10 @@ public class CreateABMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

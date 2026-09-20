@@ -89,6 +89,7 @@ public class GetExperimentRequest extends Request {
         } 
 
         /**
+         * <p>The experiment ID. You can obtain this ID by calling the ListExperiments operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,10 +111,11 @@ public class GetExperimentRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pairec-test1</p>
+         * <p>pairec-cn-abcdefg1234</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

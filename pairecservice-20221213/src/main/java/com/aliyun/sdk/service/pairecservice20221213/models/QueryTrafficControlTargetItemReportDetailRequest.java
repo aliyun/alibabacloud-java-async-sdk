@@ -118,6 +118,7 @@ public class QueryTrafficControlTargetItemReportDetailRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the traffic control target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +140,10 @@ public class QueryTrafficControlTargetItemReportDetailRequest extends Request {
         }
 
         /**
-         * Date.
+         * <p>The report date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-01-01</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -148,6 +152,7 @@ public class QueryTrafficControlTargetItemReportDetailRequest extends Request {
         }
 
         /**
+         * <p>The deployment environment. Valid values are Daily (daily environment), Pre (staging environment), and Prod (production environment).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +165,7 @@ public class QueryTrafficControlTargetItemReportDetailRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

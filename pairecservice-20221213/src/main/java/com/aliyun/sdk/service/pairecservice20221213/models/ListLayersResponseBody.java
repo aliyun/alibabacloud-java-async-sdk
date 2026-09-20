@@ -80,7 +80,7 @@ public class ListLayersResponseBody extends TeaModel {
         } 
 
         /**
-         * Layers.
+         * <p>An array of layers.</p>
          */
         public Builder layers(java.util.List<Layers> layers) {
             this.layers = layers;
@@ -88,7 +88,7 @@ public class ListLayersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>
@@ -99,7 +99,10 @@ public class ListLayersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of layers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +233,10 @@ public class ListLayersResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The layer description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>This is a test.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +244,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the layer was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30T02:02:28.000Z</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -246,7 +255,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * LaboratoryId.
+             * <p>The laboratory ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder laboratoryId(String laboratoryId) {
                 this.laboratoryId = laboratoryId;
@@ -254,7 +266,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * LayerId.
+             * <p>The layer ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder layerId(String layerId) {
                 this.layerId = layerId;
@@ -262,7 +277,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The layer name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>layer1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +288,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * ResidualFlow.
+             * <p>The remaining traffic for the layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder residualFlow(Long residualFlow) {
                 this.residualFlow = residualFlow;
@@ -278,7 +299,10 @@ public class ListLayersResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The scene ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;

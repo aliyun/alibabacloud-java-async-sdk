@@ -124,7 +124,10 @@ public class CreateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p><strong>The instance ID.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>learn-pairec-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -133,7 +136,7 @@ public class CreateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * NetworkConfigs.
+         * <p><strong>The network configurations.</strong></p>
          */
         public Builder networkConfigs(java.util.List<NetworkConfigs> networkConfigs) {
             this.putBodyParameter("NetworkConfigs", networkConfigs);
@@ -142,7 +145,10 @@ public class CreateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * Password.
+         * <p><strong>The password.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
@@ -151,7 +157,10 @@ public class CreateRecallManagementConfigRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p><strong>The user name.</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhhangsan</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -219,7 +228,7 @@ public class CreateRecallManagementConfigRequest extends Request {
             } 
 
             /**
-             * VSwitchIds.
+             * <p>A map of availability zones to VSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.Map<String, String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -227,7 +236,7 @@ public class CreateRecallManagementConfigRequest extends Request {
             }
 
             /**
-             * <p>Vpc id</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxx</p>

@@ -101,7 +101,10 @@ public class ReleaseTrafficControlTaskRequest extends Request {
         } 
 
         /**
-         * TrafficControlTaskId.
+         * <p>The traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -119,7 +122,10 @@ public class ReleaseTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Daily</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -128,7 +134,10 @@ public class ReleaseTrafficControlTaskRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec_123****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

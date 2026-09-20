@@ -67,7 +67,10 @@ public class CloneTrafficControlTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CloneTrafficControlTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskId.
+         * <p>Traffic control task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.trafficControlTaskId = trafficControlTaskId;

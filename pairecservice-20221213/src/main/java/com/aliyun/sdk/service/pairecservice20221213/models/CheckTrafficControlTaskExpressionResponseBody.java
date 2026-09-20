@@ -80,7 +80,10 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
         } 
 
         /**
-         * IsValie.
+         * <p>Indicates whether the expression is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isValie(Boolean isValie) {
             this.isValie = isValie;
@@ -88,7 +91,10 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>If <code>IsValid</code> is <code>false</code>, this field provides the reason for the failure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -96,7 +102,10 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

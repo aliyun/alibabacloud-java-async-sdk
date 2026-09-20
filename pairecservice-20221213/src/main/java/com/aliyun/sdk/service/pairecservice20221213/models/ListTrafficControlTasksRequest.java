@@ -250,7 +250,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * All.
+         * <p>Specifies whether to return all results without pagination.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -259,7 +262,18 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * ControlTargetFilter.
+         * <p>The filter for traffic control targets. Valid values:</p>
+         * <ul>
+         * <li><p><code>All</code>: Returns all traffic control targets.</p>
+         * </li>
+         * <li><p><code>Valid</code>: Returns only active traffic control targets. A traffic control target is active if the current time is within the specified start and end time.</p>
+         * </li>
+         * <li><p><code>None</code>: Does not return any traffic control targets.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder controlTargetFilter(String controlTargetFilter) {
             this.putQueryParameter("ControlTargetFilter", controlTargetFilter);
@@ -268,7 +282,18 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * Environment.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li><p><code>Daily</code>: the daily environment</p>
+         * </li>
+         * <li><p><code>Pre</code>: the pre-production environment</p>
+         * </li>
+         * <li><p><code>Prod</code>: the production environment</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Pre</p>
          */
         public Builder environment(String environment) {
             this.putQueryParameter("Environment", environment);
@@ -277,7 +302,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. You can obtain this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4300782">ListInstances</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -286,7 +314,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -295,7 +326,16 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p><code>ASC</code>: ascending order</p>
+         * </li>
+         * <li><p><code>DESC</code>: descending order</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -304,7 +344,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -313,7 +356,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,7 +368,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -331,7 +380,16 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort the results. Valid values:</p>
+         * <ul>
+         * <li><p><code>GmtCreateTime</code>: Sorts the results by creation time.</p>
+         * </li>
+         * <li><p><code>GmtModifiedTime</code>: Sorts the results by modification time.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -340,7 +398,20 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li><p><code>NotRunning</code>: The task is not running.</p>
+         * </li>
+         * <li><p><code>Ready</code>: The task is ready to run.</p>
+         * </li>
+         * <li><p><code>Running</code>: The task is running.</p>
+         * </li>
+         * <li><p><code>Finished</code>: The task is finished.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -349,7 +420,10 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * TrafficControlTaskId.
+         * <p>The ID of the traffic control task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putQueryParameter("TrafficControlTaskId", trafficControlTaskId);
@@ -358,7 +432,16 @@ public class ListTrafficControlTasksRequest extends Request {
         }
 
         /**
-         * Version.
+         * <p>The version. Valid values:</p>
+         * <ul>
+         * <li><p><code>Latest</code>: The latest version. This is the default value.</p>
+         * </li>
+         * <li><p><code>Released</code>: the released version</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Latest</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

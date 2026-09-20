@@ -67,7 +67,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         } 
 
         /**
-         * RequestId.
+         * <p>The unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         }
 
         /**
-         * TrafficControlTargetItemReportDetail.
+         * <p>Traffic control details for an item.</p>
          */
         public Builder trafficControlTargetItemReportDetail(TrafficControlTargetItemReportDetail trafficControlTargetItemReportDetail) {
             this.trafficControlTargetItemReportDetail = trafficControlTargetItemReportDetail;
@@ -167,7 +170,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * Features.
+             * <p>Key-value pairs for the traffic control target.</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -175,7 +178,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * ItemId.
+             * <p>The item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>794872809896</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -183,7 +189,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * TargetProgress.
+             * <p>The progress toward the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49%</p>
              */
             public Builder targetProgress(String targetProgress) {
                 this.targetProgress = targetProgress;
@@ -191,7 +200,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * TargetTraffic.
+             * <p>The target traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder targetTraffic(Long targetTraffic) {
                 this.targetTraffic = targetTraffic;
@@ -284,7 +296,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * Features.
+             * <p>Key-value pairs for the traffic control target.</p>
              */
             public Builder features(java.util.Map<String, ?> features) {
                 this.features = features;
@@ -292,7 +304,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * ItemId.
+             * <p>The item ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>398734</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -300,7 +315,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * TargetProgress.
+             * <p>The progress toward the target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49%</p>
              */
             public Builder targetProgress(String targetProgress) {
                 this.targetProgress = targetProgress;
@@ -308,7 +326,10 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * TargetTraffic.
+             * <p>The target traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder targetTraffic(Long targetTraffic) {
                 this.targetTraffic = targetTraffic;
@@ -375,7 +396,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             } 
 
             /**
-             * ItemControlTailReportDetails.
+             * <p>Report details for the tail 100 controlled items.</p>
              */
             public Builder itemControlTailReportDetails(java.util.List<ItemControlTailReportDetails> itemControlTailReportDetails) {
                 this.itemControlTailReportDetails = itemControlTailReportDetails;
@@ -383,7 +404,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
             }
 
             /**
-             * ItemControlTopReportDetails.
+             * <p>Report details for the top 100 controlled items.</p>
              */
             public Builder itemControlTopReportDetails(java.util.List<ItemControlTopReportDetails> itemControlTopReportDetails) {
                 this.itemControlTopReportDetails = itemControlTopReportDetails;

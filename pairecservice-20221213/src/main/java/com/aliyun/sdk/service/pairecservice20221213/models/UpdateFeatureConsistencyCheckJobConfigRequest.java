@@ -749,6 +749,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         } 
 
         /**
+         * <p>The feature consistency check configuration ID. For information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -770,6 +771,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether feature comparison is required.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -782,7 +784,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-xxx</p>
          */
         public Builder datasetId(String datasetId) {
             this.putBodyParameter("DatasetId", datasetId);
@@ -791,7 +796,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetMountPath.
+         * <p>The mount path of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/mnt/data/</p>
          */
         public Builder datasetMountPath(String datasetMountPath) {
             this.putBodyParameter("DatasetMountPath", datasetMountPath);
@@ -800,7 +808,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dateset-test</p>
          */
         public Builder datasetName(String datasetName) {
             this.putBodyParameter("DatasetName", datasetName);
@@ -809,7 +820,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetType.
+         * <p>The dataset type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         public Builder datasetType(String datasetType) {
             this.putBodyParameter("DatasetType", datasetType);
@@ -818,7 +832,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DatasetUri.
+         * <p>The URI of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxxx</p>
          */
         public Builder datasetUri(String datasetUri) {
             this.putBodyParameter("DatasetUri", datasetUri);
@@ -827,7 +844,14 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * DefaultRoute.
+         * <p>The default gateway. Valid values:</p>
+         * <ul>
+         * <li>Eth0: public gateway.</li>
+         * <li>Eth1: dedicated gateway.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Eth0</p>
          */
         public Builder defaultRoute(String defaultRoute) {
             this.putBodyParameter("DefaultRoute", defaultRoute);
@@ -836,6 +860,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The PAI-EAS service name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -848,7 +873,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * EasyRecPackagePath.
+         * <p>The EasyRec package path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://********</p>
          */
         public Builder easyRecPackagePath(String easyRecPackagePath) {
             this.putBodyParameter("EasyRecPackagePath", easyRecPackagePath);
@@ -857,7 +885,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * EasyRecVersion.
+         * <p>The EasyRec version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.60</p>
          */
         public Builder easyRecVersion(String easyRecVersion) {
             this.putBodyParameter("EasyRecVersion", easyRecVersion);
@@ -866,7 +897,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureDisplayExclude.
+         * <p>The features to exclude from display. Separate multiple features with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1,feature2</p>
          */
         public Builder featureDisplayExclude(String featureDisplayExclude) {
             this.putBodyParameter("FeatureDisplayExclude", featureDisplayExclude);
@@ -875,6 +909,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The data fallback data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -887,7 +922,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeaturePriority.
+         * <p>The feature priority. Separate multiple features with commas (,). This parameter specifies which features are preferentially read from the user table. If the user table is empty, the features are queried from the behavior table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1,feature2,feature3</p>
          */
         public Builder featurePriority(String featurePriority) {
             this.putBodyParameter("FeaturePriority", featurePriority);
@@ -896,7 +934,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreItemId.
+         * <p>The Feature Store item-side primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
          */
         public Builder featureStoreItemId(String featureStoreItemId) {
             this.putBodyParameter("FeatureStoreItemId", featureStoreItemId);
@@ -905,7 +946,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreModelId.
+         * <p>feature store model id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureStoreModelId(String featureStoreModelId) {
             this.putBodyParameter("FeatureStoreModelId", featureStoreModelId);
@@ -914,7 +958,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreProjectId.
+         * <p>The Feature Store project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder featureStoreProjectId(String featureStoreProjectId) {
             this.putBodyParameter("FeatureStoreProjectId", featureStoreProjectId);
@@ -923,7 +970,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreProjectName.
+         * <p>The Feature Store project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-1</p>
          */
         public Builder featureStoreProjectName(String featureStoreProjectName) {
             this.putBodyParameter("FeatureStoreProjectName", featureStoreProjectName);
@@ -932,7 +982,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreSeqFeatureView.
+         * <p>The name of the feature view that contains the item features in the sequence feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>seq_item_view</p>
          */
         public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
             this.putBodyParameter("FeatureStoreSeqFeatureView", featureStoreSeqFeatureView);
@@ -941,7 +994,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FeatureStoreUserId.
+         * <p>The Feature Store user-side primary key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder featureStoreUserId(String featureStoreUserId) {
             this.putBodyParameter("FeatureStoreUserId", featureStoreUserId);
@@ -950,7 +1006,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * FgJarVersion.
+         * <p>The fg_jar version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder fgJarVersion(String fgJarVersion) {
             this.putBodyParameter("FgJarVersion", fgJarVersion);
@@ -959,6 +1018,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The fg_json file name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -971,6 +1031,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to generate a ZIP package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -983,6 +1044,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -995,7 +1057,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * IsUseFeatureStore.
+         * <p>Specifies whether to use Feature Store.</p>
          */
         public Builder isUseFeatureStore(Boolean isUseFeatureStore) {
             this.putBodyParameter("IsUseFeatureStore", isUseFeatureStore);
@@ -1004,6 +1066,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The item_id field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1016,6 +1079,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The item table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1028,6 +1092,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The item table partition field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1040,6 +1105,11 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The item table partition field format. Valid values:</p>
+         * <ul>
+         * <li>yyyymmdd</li>
+         * <li>yyyy-mm-dd</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1052,7 +1122,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * MaxcomputeSchema.
+         * <p>maxcompute schema</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder maxcomputeSchema(String maxcomputeSchema) {
             this.putBodyParameter("MaxcomputeSchema", maxcomputeSchema);
@@ -1061,6 +1134,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The feature consistency check name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1073,7 +1147,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * OssResourceId.
+         * <p>The OSS data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-********</p>
          */
         public Builder ossResourceId(String ossResourceId) {
             this.putBodyParameter("OssResourceId", ossResourceId);
@@ -1082,7 +1159,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * PredictWorkerCount.
+         * <p>The number of workers for running the prediction script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder predictWorkerCount(Integer predictWorkerCount) {
             this.putBodyParameter("PredictWorkerCount", predictWorkerCount);
@@ -1091,7 +1171,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * PredictWorkerCpu.
+         * <p>The CPU specification of workers for running the prediction script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder predictWorkerCpu(Integer predictWorkerCpu) {
             this.putBodyParameter("PredictWorkerCpu", predictWorkerCpu);
@@ -1100,7 +1183,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * PredictWorkerMemory.
+         * <p>The memory specification of workers for running the prediction script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32000(32G)</p>
          */
         public Builder predictWorkerMemory(Integer predictWorkerMemory) {
             this.putBodyParameter("PredictWorkerMemory", predictWorkerMemory);
@@ -1109,7 +1195,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * ResourceConfig.
+         * <p>The resource configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder resourceConfig(String resourceConfig) {
             this.putBodyParameter("ResourceConfig", resourceConfig);
@@ -1118,6 +1207,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The sampling ratio (0-1).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1130,6 +1220,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The scene ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1142,7 +1233,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The security group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-xxx</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("SecurityGroupId", securityGroupId);
@@ -1151,7 +1245,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -1160,7 +1257,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * SwitchId.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-xxx</p>
          */
         public Builder switchId(String switchId) {
             this.putBodyParameter("SwitchId", switchId);
@@ -1169,6 +1269,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The user_id field name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1181,6 +1282,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The user table name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1193,6 +1295,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The user table partition field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1205,6 +1308,11 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
+         * <p>The user table partition field format. Valid values:</p>
+         * <ul>
+         * <li>yyyymmdd</li>
+         * <li>yyyy-mm-dd</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1217,7 +1325,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>VpcID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-xxx</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
@@ -1226,7 +1337,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * WorkflowName.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work_flow_1</p>
          */
         public Builder workflowName(String workflowName) {
             this.putBodyParameter("WorkflowName", workflowName);
@@ -1235,7 +1349,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The PAI workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34597***</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

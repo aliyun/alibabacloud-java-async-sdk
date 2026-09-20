@@ -54,7 +54,10 @@ public class DeleteABMetricGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BDB621CB-A81E-5D39-8793-39A365CBCC74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

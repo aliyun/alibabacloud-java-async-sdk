@@ -80,7 +80,7 @@ public class ListCrowdUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F0AB6527-093F-5C44-B3BD-42C8C210C619</p>
@@ -91,7 +91,10 @@ public class ListCrowdUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -99,7 +102,7 @@ public class ListCrowdUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * <p>The list of users.</p>
          */
         public Builder users(java.util.List<String> users) {
             this.users = users;

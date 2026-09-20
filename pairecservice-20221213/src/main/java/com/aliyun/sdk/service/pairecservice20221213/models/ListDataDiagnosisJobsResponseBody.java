@@ -80,7 +80,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * DataDiagnosisJobs.
+         * <p>The returned data diagnosis jobs.</p>
          */
         public Builder dataDiagnosisJobs(java.util.List<DataDiagnosisJobs> dataDiagnosisJobs) {
             this.dataDiagnosisJobs = dataDiagnosisJobs;
@@ -88,7 +88,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -279,7 +285,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-28</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -287,7 +296,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The job configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -295,7 +307,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiagnosisConfigId.
+             * <p>The data diagnosis configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dataDiagnosisConfigId(String dataDiagnosisConfigId) {
                 this.dataDiagnosisConfigId = dataDiagnosisConfigId;
@@ -303,7 +318,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiagnosisConfigName.
+             * <p>The data diagnosis configuration name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>异常行为分析-xxx</p>
              */
             public Builder dataDiagnosisConfigName(String dataDiagnosisConfigName) {
                 this.dataDiagnosisConfigName = dataDiagnosisConfigName;
@@ -311,7 +329,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiagnosisJobId.
+             * <p>The data diagnosis job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder dataDiagnosisJobId(String dataDiagnosisJobId) {
                 this.dataDiagnosisJobId = dataDiagnosisJobId;
@@ -319,7 +340,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreateTime.
+             * <p>The time when the job was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -327,7 +351,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtStartTime.
+             * <p>The time when the job started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-15T23:24:33.132+08:00</p>
              */
             public Builder gmtStartTime(String gmtStartTime) {
                 this.gmtStartTime = gmtStartTime;
@@ -335,7 +362,18 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobSource.
+             * <p>The job source. Valid values:</p>
+             * <ul>
+             * <li><p>Rerun: A manual rerun.</p>
+             * </li>
+             * <li><p>Cycle: A periodic run.</p>
+             * </li>
+             * <li><p>ByInitializing: Generated during initialization.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cycle</p>
              */
             public Builder jobSource(String jobSource) {
                 this.jobSource = jobSource;
@@ -343,7 +381,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * <p>The log messages.</p>
              */
             public Builder logs(java.util.List<String> logs) {
                 this.logs = logs;
@@ -351,7 +389,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Initializing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -359,7 +400,10 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The data diagnosis type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChangeRate</p>
              */
             public Builder type(String type) {
                 this.type = type;

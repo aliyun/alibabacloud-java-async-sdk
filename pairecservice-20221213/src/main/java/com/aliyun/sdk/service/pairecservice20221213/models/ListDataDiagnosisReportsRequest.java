@@ -161,6 +161,7 @@ public class ListDataDiagnosisReportsRequest extends Request {
         } 
 
         /**
+         * <p>The data diagnosis ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,6 +183,7 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
+         * <p>The end date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,10 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
-         * FeatureName.
+         * <p>The feature name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1</p>
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -203,6 +208,7 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +221,13 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
-         * RemainRateType.
+         * <p>The retention rate report type.</p>
+         * <ul>
+         * <li>Period: A report for the specified time period.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Period</p>
          */
         public Builder remainRateType(String remainRateType) {
             this.putQueryParameter("RemainRateType", remainRateType);
@@ -224,6 +236,7 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
+         * <p>The start date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +249,10 @@ public class ListDataDiagnosisReportsRequest extends Request {
         }
 
         /**
-         * TopN.
+         * <p>The number of top results to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder topN(Long topN) {
             this.putQueryParameter("TopN", topN);

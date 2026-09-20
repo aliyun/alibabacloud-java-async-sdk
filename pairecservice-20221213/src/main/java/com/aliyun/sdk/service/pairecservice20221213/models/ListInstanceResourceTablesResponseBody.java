@@ -80,7 +80,7 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
@@ -91,7 +91,7 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Tables.
+         * <p>A list of data tables.</p>
          */
         public Builder tables(java.util.List<Tables> tables) {
             this.tables = tables;
@@ -99,7 +99,10 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of data tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -152,7 +155,10 @@ public class ListInstanceResourceTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table-1</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

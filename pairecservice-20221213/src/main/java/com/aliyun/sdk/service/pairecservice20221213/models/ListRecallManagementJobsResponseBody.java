@@ -106,7 +106,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>Reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Reserved.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RecallManagementJobs.
+         * <p>A list of synchronization jobs.</p>
          */
         public Builder recallManagementJobs(java.util.List<RecallManagementJobs> recallManagementJobs) {
             this.recallManagementJobs = recallManagementJobs;
@@ -130,7 +136,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total count of synchronization jobs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +242,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataVersion.
+             * <p>The data version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20250701</p>
              */
             public Builder dataVersion(String dataVersion) {
                 this.dataVersion = dataVersion;
@@ -238,7 +253,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableVersionId.
+             * <p>The table version ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
                 this.recallManagementTableVersionId = recallManagementTableVersionId;
@@ -246,7 +264,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableDataSize.
+             * <p>The source table data size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableDataSize(String sourceTableDataSize) {
                 this.sourceTableDataSize = sourceTableDataSize;
@@ -254,7 +275,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableRowCount.
+             * <p>The source table row count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableRowCount(String sourceTableRowCount) {
                 this.sourceTableRowCount = sourceTableRowCount;
@@ -347,7 +371,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataVersion.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=20250701</p>
              */
             public Builder dataVersion(String dataVersion) {
                 this.dataVersion = dataVersion;
@@ -355,7 +382,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableVersionId.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder recallManagementTableVersionId(String recallManagementTableVersionId) {
                 this.recallManagementTableVersionId = recallManagementTableVersionId;
@@ -363,7 +393,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableDataSize.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder sourceTableDataSize(String sourceTableDataSize) {
                 this.sourceTableDataSize = sourceTableDataSize;
@@ -371,7 +404,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableRowCount.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder sourceTableRowCount(String sourceTableRowCount) {
                 this.sourceTableRowCount = sourceTableRowCount;
@@ -490,7 +526,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-28T10:24Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -498,7 +537,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementJobId.
+             * <p>The synchronization job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder recallManagementJobId(String recallManagementJobId) {
                 this.recallManagementJobId = recallManagementJobId;
@@ -506,7 +548,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagementTableInfo.
+             * <p>Information about the recall management table.</p>
              */
             public Builder recallManagementTableInfo(RecallManagementTableInfo recallManagementTableInfo) {
                 this.recallManagementTableInfo = recallManagementTableInfo;
@@ -514,7 +556,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * RecallManagerTableInfo.
+             * <p>This parameter is deprecated.</p>
              */
             public Builder recallManagerTableInfo(RecallManagerTableInfo recallManagerTableInfo) {
                 this.recallManagerTableInfo = recallManagerTableInfo;
@@ -522,7 +564,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the synchronization job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-28T10:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -530,7 +575,10 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the synchronization job. Valid values: <code>Init</code> (initializing), <code>Running</code> (running), <code>Success</code> (succeeded), and <code>Failed</code> (failed).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

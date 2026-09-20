@@ -101,7 +101,10 @@ public class ListInstanceResourceSchemasRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>featureStore-cn-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -110,7 +113,10 @@ public class ListInstanceResourceSchemasRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -128,7 +134,10 @@ public class ListInstanceResourceSchemasRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>Filters schemas by a name prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);

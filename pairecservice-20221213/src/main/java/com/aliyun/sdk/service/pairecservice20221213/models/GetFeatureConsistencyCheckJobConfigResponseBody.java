@@ -769,7 +769,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * CompareFeature.
+         * <p>Whether to enable feature comparison.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder compareFeature(Boolean compareFeature) {
             this.compareFeature = compareFeature;
@@ -825,7 +828,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EasServiceName.
+         * <p>The EAS service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eas_service_1</p>
          */
         public Builder easServiceName(String easServiceName) {
             this.easServiceName = easServiceName;
@@ -833,7 +839,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EasyRecPackagePath.
+         * <p>The path of the EasyRec package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://*******</p>
          */
         public Builder easyRecPackagePath(String easyRecPackagePath) {
             this.easyRecPackagePath = easyRecPackagePath;
@@ -841,7 +850,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EasyRecVersion.
+         * <p>The EasyRec version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.3.60</p>
          */
         public Builder easyRecVersion(String easyRecVersion) {
             this.easyRecVersion = easyRecVersion;
@@ -849,7 +861,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureDisplayExclude.
+         * <p>A comma-separated list of features to exclude from the display.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1,feature2</p>
          */
         public Builder featureDisplayExclude(String featureDisplayExclude) {
             this.featureDisplayExclude = featureDisplayExclude;
@@ -857,7 +872,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureLandingResourceId.
+         * <p>The ID of the data source for feature fallback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-********</p>
          */
         public Builder featureLandingResourceId(String featureLandingResourceId) {
             this.featureLandingResourceId = featureLandingResourceId;
@@ -865,7 +883,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureLandingResourceUri.
+         * <p>The URI of the data source for feature fallback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mc_project_1</p>
          */
         public Builder featureLandingResourceUri(String featureLandingResourceUri) {
             this.featureLandingResourceUri = featureLandingResourceUri;
@@ -873,7 +894,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeaturePriority.
+         * <p>A comma-separated list of features, ordered by priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature1,feature2,feature3</p>
          */
         public Builder featurePriority(String featurePriority) {
             this.featurePriority = featurePriority;
@@ -881,7 +905,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreItemId.
+         * <p>The primary key for items in the Feature Store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item</p>
          */
         public Builder featureStoreItemId(String featureStoreItemId) {
             this.featureStoreItemId = featureStoreItemId;
@@ -889,7 +916,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreModelId.
+         * <p>The Feature Store model ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder featureStoreModelId(String featureStoreModelId) {
             this.featureStoreModelId = featureStoreModelId;
@@ -897,7 +927,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreProjectId.
+         * <p>The Feature Store project ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prj-01</p>
          */
         public Builder featureStoreProjectId(String featureStoreProjectId) {
             this.featureStoreProjectId = featureStoreProjectId;
@@ -905,7 +938,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreProjectName.
+         * <p>The Feature Store project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project-1</p>
          */
         public Builder featureStoreProjectName(String featureStoreProjectName) {
             this.featureStoreProjectName = featureStoreProjectName;
@@ -913,7 +949,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreSeqFeatureView.
+         * <p>The name of the feature view that contains item features within sequence features.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item-1</p>
          */
         public Builder featureStoreSeqFeatureView(String featureStoreSeqFeatureView) {
             this.featureStoreSeqFeatureView = featureStoreSeqFeatureView;
@@ -921,7 +960,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FeatureStoreUserId.
+         * <p>The primary key for users in the Feature Store.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder featureStoreUserId(String featureStoreUserId) {
             this.featureStoreUserId = featureStoreUserId;
@@ -929,7 +971,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FgJarVersion.
+         * <p>The version of the <code>fg_jar</code> file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
          */
         public Builder fgJarVersion(String fgJarVersion) {
             this.fgJarVersion = fgJarVersion;
@@ -937,7 +982,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * FgJsonFileName.
+         * <p>The name of the <code>fg_json</code> file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file.json</p>
          */
         public Builder fgJsonFileName(String fgJsonFileName) {
             this.fgJsonFileName = fgJsonFileName;
@@ -945,7 +993,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GenerateZip.
+         * <p>Whether to generate a ZIP package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder generateZip(Boolean generateZip) {
             this.generateZip = generateZip;
@@ -953,7 +1004,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time the configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -961,7 +1015,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time the configuration was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -969,7 +1026,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ItemIdField.
+         * <p>The name of the <code>item_id</code> field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_id</p>
          */
         public Builder itemIdField(String itemIdField) {
             this.itemIdField = itemIdField;
@@ -977,7 +1037,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ItemTable.
+         * <p>The item table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item_table</p>
          */
         public Builder itemTable(String itemTable) {
             this.itemTable = itemTable;
@@ -985,7 +1048,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ItemTablePartitionField.
+         * <p>The partition field of the item table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds</p>
          */
         public Builder itemTablePartitionField(String itemTablePartitionField) {
             this.itemTablePartitionField = itemTablePartitionField;
@@ -993,7 +1059,16 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ItemTablePartitionFieldFormat.
+         * <p>The format of the partition field in the item table. Valid values:</p>
+         * <ul>
+         * <li><p><code>yyyymmdd</code></p>
+         * </li>
+         * <li><p><code>yyyy-mm-dd</code></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyymmdd</p>
          */
         public Builder itemTablePartitionFieldFormat(String itemTablePartitionFieldFormat) {
             this.itemTablePartitionFieldFormat = itemTablePartitionFieldFormat;
@@ -1001,7 +1076,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LatestJobGmtSamplingEndTime.
+         * <p>The end time of the most recent job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder latestJobGmtSamplingEndTime(String latestJobGmtSamplingEndTime) {
             this.latestJobGmtSamplingEndTime = latestJobGmtSamplingEndTime;
@@ -1009,7 +1087,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LatestJobGmtSamplingStartTime.
+         * <p>The start time of the most recent job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-15T23:24:33.132+08:00</p>
          */
         public Builder latestJobGmtSamplingStartTime(String latestJobGmtSamplingStartTime) {
             this.latestJobGmtSamplingStartTime = latestJobGmtSamplingStartTime;
@@ -1017,7 +1098,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LatestJobId.
+         * <p>The ID of the most recent job created from this configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder latestJobId(String latestJobId) {
             this.latestJobId = latestJobId;
@@ -1025,7 +1109,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the feature consistency check configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature_consistency_check1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -1033,7 +1120,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * OssBucket.
+         * <p>The OSS bucket name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss_bucket_1</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.ossBucket = ossBucket;
@@ -1041,7 +1131,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * OssResourceId.
+         * <p>The ID of the OSS data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-********</p>
          */
         public Builder ossResourceId(String ossResourceId) {
             this.ossResourceId = ossResourceId;
@@ -1073,7 +1166,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -1089,7 +1185,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SampleRate.
+         * <p>The sample rate. The value must be between 0 and 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.89</p>
          */
         public Builder sampleRate(String sampleRate) {
             this.sampleRate = sampleRate;
@@ -1097,7 +1196,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SceneId.
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sceneId(String sceneId) {
             this.sceneId = sceneId;
@@ -1105,7 +1207,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SceneName.
+         * <p>The scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scene1</p>
          */
         public Builder sceneName(String sceneName) {
             this.sceneName = sceneName;
@@ -1121,7 +1226,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * <p>The service ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -1129,7 +1237,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>service1</p>
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -1137,7 +1248,16 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the configuration. Valid values:</p>
+         * <ul>
+         * <li><p><code>Editable</code>: The configuration can be edited.</p>
+         * </li>
+         * <li><p><code>Uneditable</code>: The configuration cannot be edited.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Editable</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -1153,7 +1273,16 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UseFeatureStore.
+         * <p>Whether to use a Feature Store. Valid values:</p>
+         * <ul>
+         * <li><p><code>true</code>: A Feature Store is used. In this case, the response also returns <code>FeatureStoreProjectId</code>, <code>FeatureStoreProjectName</code>, <code>FeatureStoreModelId</code>, <code>FeatureStoreUserId</code>, and <code>FeatureStoreItemId</code>.</p>
+         * </li>
+         * <li><p><code>false</code>: A Feature Store is not used. In this case, the <code>UserTable</code>, <code>UserIdField</code>, <code>UserTablePartitionField</code>, <code>UserTablePartitionFieldFormat</code>, <code>ItemTable</code>, <code>ItemIdField</code>, <code>ItemTablePartitionField</code>, and <code>ItemTablePartitionFieldFormat</code> parameters are returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder useFeatureStore(Boolean useFeatureStore) {
             this.useFeatureStore = useFeatureStore;
@@ -1161,7 +1290,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UserIdField.
+         * <p>The name of the <code>user_id</code> field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_id</p>
          */
         public Builder userIdField(String userIdField) {
             this.userIdField = userIdField;
@@ -1169,7 +1301,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UserTable.
+         * <p>The user table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user_table</p>
          */
         public Builder userTable(String userTable) {
             this.userTable = userTable;
@@ -1177,7 +1312,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UserTablePartitionField.
+         * <p>The partition field of the user table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds</p>
          */
         public Builder userTablePartitionField(String userTablePartitionField) {
             this.userTablePartitionField = userTablePartitionField;
@@ -1185,7 +1323,16 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UserTablePartitionFieldFormat.
+         * <p>The format of the partition field in the user table. Valid values:</p>
+         * <ul>
+         * <li><p><code>yyyymmdd</code></p>
+         * </li>
+         * <li><p><code>yyyy-mm-dd</code></p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yyyymmdd</p>
          */
         public Builder userTablePartitionFieldFormat(String userTablePartitionFieldFormat) {
             this.userTablePartitionFieldFormat = userTablePartitionFieldFormat;
@@ -1201,7 +1348,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         }
 
         /**
-         * WorkflowName.
+         * <p>The workflow name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>work_flow_1</p>
          */
         public Builder workflowName(String workflowName) {
             this.workflowName = workflowName;

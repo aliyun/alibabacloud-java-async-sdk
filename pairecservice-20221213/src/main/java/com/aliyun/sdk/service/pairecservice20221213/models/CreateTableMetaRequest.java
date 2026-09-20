@@ -173,6 +173,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The description of the data table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +186,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The list of fields.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -194,6 +196,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +209,15 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The module to which the data table belongs.</p>
+         * <ul>
+         * <li><p>ABTest: The data table for A/B testing.</p>
+         * </li>
+         * <li><p>ExperimentTool: The data table for the experiment tool.</p>
+         * </li>
+         * <li><p>DataDiagnosis: The data table for data diagnosis.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +230,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the data table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +243,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The resource ID. To get this ID, call the ListInstanceResources operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,6 +256,7 @@ public class CreateTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the table in the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -370,7 +385,10 @@ public class CreateTableMetaRequest extends Request {
             } 
 
             /**
-             * DataType.
+             * <p>The logical data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary_key</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -378,6 +396,7 @@ public class CreateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>Indicates whether the field is a dimension field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -389,7 +408,11 @@ public class CreateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>Indicates whether the field is a partition field.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isPartitionField(String isPartitionField) {
                 this.isPartitionField = isPartitionField;
@@ -397,6 +420,7 @@ public class CreateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The business definition of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -408,6 +432,7 @@ public class CreateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The name of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -419,6 +444,7 @@ public class CreateTableMetaRequest extends Request {
             }
 
             /**
+             * <p>The data type of the field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

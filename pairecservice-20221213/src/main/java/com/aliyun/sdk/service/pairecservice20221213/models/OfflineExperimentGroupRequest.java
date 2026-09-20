@@ -89,6 +89,7 @@ public class OfflineExperimentGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the experiment group. You can obtain this ID by calling the ListExperimentGroups operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class OfflineExperimentGroupRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

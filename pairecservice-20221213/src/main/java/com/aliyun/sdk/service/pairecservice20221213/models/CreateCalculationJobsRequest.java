@@ -128,6 +128,7 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>A comma-separated list of A/B metric IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>The end date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +167,7 @@ public class CreateCalculationJobsRequest extends Request {
         }
 
         /**
+         * <p>The start date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

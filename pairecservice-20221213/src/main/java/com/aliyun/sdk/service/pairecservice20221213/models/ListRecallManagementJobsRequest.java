@@ -194,7 +194,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * Condition.
+         * <p>The filter condition. Filtering is supported only for the <code>Table</code> type. For example: <code>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</code></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;RecallManagementTableId&quot;:&quot;1&quot;}</p>
          */
         public Builder condition(java.util.Map<String, ?> condition) {
             this.putQueryParameter("Condition", condition);
@@ -203,7 +206,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-test1</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +218,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>This parameter is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -221,7 +230,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>This parameter is not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,7 +242,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The sort order. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -239,7 +254,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -248,7 +266,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -257,7 +278,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sorting basis. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GmtCreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -266,7 +290,10 @@ public class ListRecallManagementJobsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

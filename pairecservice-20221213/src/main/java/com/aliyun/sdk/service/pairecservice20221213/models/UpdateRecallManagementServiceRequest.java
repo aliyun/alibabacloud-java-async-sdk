@@ -101,7 +101,10 @@ public class UpdateRecallManagementServiceRequest extends Request {
         } 
 
         /**
-         * RecallManagementServiceId.
+         * <p>The ID of the recall management service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder recallManagementServiceId(String recallManagementServiceId) {
             this.putPathParameter("RecallManagementServiceId", recallManagementServiceId);
@@ -119,7 +122,10 @@ public class UpdateRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the recall management service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>reso-2s416t146ffjc3yefx</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -128,7 +134,10 @@ public class UpdateRecallManagementServiceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pairec-cn-test123</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
