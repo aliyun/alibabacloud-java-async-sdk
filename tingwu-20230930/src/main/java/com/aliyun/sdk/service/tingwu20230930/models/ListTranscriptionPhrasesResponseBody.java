@@ -93,7 +93,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>status description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -199,7 +205,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Phrase list description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom fruit phrases list</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -207,7 +216,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Phrase list name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fruit_phrase</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -215,7 +227,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * PhraseId.
+             * <p>Phrase list ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a93b91141c0f422fa114af203f8b****</p>
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
@@ -308,7 +323,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHS.Exceed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -316,7 +334,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The num of the phrase exceeds the upper limit.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -324,7 +345,7 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Phrases.
+             * <p>Phrase objects.</p>
              */
             public Builder phrases(java.util.List<Phrases> phrases) {
                 this.phrases = phrases;
@@ -332,7 +353,10 @@ public class ListTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

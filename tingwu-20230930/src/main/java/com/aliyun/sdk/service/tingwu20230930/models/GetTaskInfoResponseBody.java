@@ -93,7 +93,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID, used only for joint debugging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -300,7 +309,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoChapters.
+             * <p>Link to the result of the Auto Chapters feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_AutoChapters_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_AutoChapters_20231222101215.json?Expires=1706064016</a></p>
              */
             public Builder autoChapters(String autoChapters) {
                 this.autoChapters = autoChapters;
@@ -308,7 +320,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ContentExtraction.
+             * <p>URL link to the result of conversation content extraction</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ ContentExtraction_20231222101215.json?Expires=1706064016</p>
              */
             public Builder contentExtraction(String contentExtraction) {
                 this.contentExtraction = contentExtraction;
@@ -316,7 +331,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrompt.
+             * <p>Link to the result of the Custom prompt</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ CustomPrompt_20231222101215.json?Expires=1706064016</p>
              */
             public Builder customPrompt(String customPrompt) {
                 this.customPrompt = customPrompt;
@@ -324,7 +342,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityRecognition.
+             * <p>The URL link to the identity recognition result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ IdentityRecognition_20231222101215.json?Expires=1706064016</p>
              */
             public Builder identityRecognition(String identityRecognition) {
                 this.identityRecognition = identityRecognition;
@@ -332,7 +353,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MeetingAssistance.
+             * <p>URL link to the result of Intelligent Meeting Summary</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_MeetingAssistance_20231222101112.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_MeetingAssistance_20231222101112.json?Expires=1706064016</a></p>
              */
             public Builder meetingAssistance(String meetingAssistance) {
                 this.meetingAssistance = meetingAssistance;
@@ -340,7 +364,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PptExtraction.
+             * <p>URL link to the result of video PPT extraction and summarization</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_PptExtraction_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_PptExtraction_20231222101215.json?Expires=1706064016</a></p>
              */
             public Builder pptExtraction(String pptExtraction) {
                 this.pptExtraction = pptExtraction;
@@ -348,7 +375,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInspection.
+             * <p>Link to the result of service inspection</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39</a>_ ServiceInspection_20231222101215.json?Expires=1706064016</p>
              */
             public Builder serviceInspection(String serviceInspection) {
                 this.serviceInspection = serviceInspection;
@@ -356,7 +386,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Summarization.
+             * <p>Link to the result of LLM-based summarization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Summarization_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Summarization_20231222101215.json?Expires=1706064016</a></p>
              */
             public Builder summarization(String summarization) {
                 this.summarization = summarization;
@@ -364,7 +397,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TextPolish.
+             * <p>Link to the result of spoken-to-written text conversion</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_TextPolish_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_TextPolish_20231222101215.json?Expires=1706064016</a></p>
              */
             public Builder textPolish(String textPolish) {
                 this.textPolish = textPolish;
@@ -372,7 +408,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Transcription.
+             * <p>Link to the result of speech transcription.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Transcription_20231222101008.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Transcription_20231222101008.json?Expires=1706064016</a></p>
              */
             public Builder transcription(String transcription) {
                 this.transcription = transcription;
@@ -380,7 +419,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Translation.
+             * <p>URL link to the result of text translation</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Translation_20231222101215.json?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_Translation_20231222101215.json?Expires=1706064016</a></p>
              */
             public Builder translation(String translation) {
                 this.translation = translation;
@@ -551,7 +593,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Error code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TSC.AudioFormat</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -559,7 +604,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>Error message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Audio format invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -567,7 +615,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputMp3Path.
+             * <p>URL link to the MP3 conversion result</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp3?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp3?Expires=1706064016</a></p>
              */
             public Builder outputMp3Path(String outputMp3Path) {
                 this.outputMp3Path = outputMp3Path;
@@ -575,7 +626,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputMp4Path.
+             * <p>URL link to the MP4 conversion result</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp4?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.mp4?Expires=1706064016</a></p>
              */
             public Builder outputMp4Path(String outputMp4Path) {
                 this.outputMp4Path = outputMp4Path;
@@ -583,7 +637,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputSpectrumPath.
+             * <p>URL link to the audio waveform graph</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.spectrum?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.spectrum?Expires=1706064016</a></p>
              */
             public Builder outputSpectrumPath(String outputSpectrumPath) {
                 this.outputSpectrumPath = outputSpectrumPath;
@@ -591,7 +648,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OutputThumbnailPath.
+             * <p>URL link to the video thumbnail</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.png?Expires=1706064016">http://xxxx.com/tingwu/output/1738248324/094e964bf0e04e39/094e964bf0e04e39_20231222101008.png?Expires=1706064016</a></p>
              */
             public Builder outputThumbnailPath(String outputThumbnailPath) {
                 this.outputThumbnailPath = outputThumbnailPath;
@@ -599,7 +659,7 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>A collection of results from various algorithm processing tasks. The result is returned as an HTTP link, which the user can use to parse the native result.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -607,7 +667,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5394c6ee0fb474899d42215a3925c7e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -615,7 +678,10 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskKey.
+             * <p>The custom ID set by the user when creating the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_tingwu_123</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -623,7 +689,16 @@ public class GetTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>Task Status.</p>
+             * <ul>
+             * <li>ONGOING: The job is in progress.</li>
+             * <li>COMPLETED: The job is completed.</li>
+             * <li>FAILED: The job has failed.</li>
+             * <li>INVALID: The job is invalid.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

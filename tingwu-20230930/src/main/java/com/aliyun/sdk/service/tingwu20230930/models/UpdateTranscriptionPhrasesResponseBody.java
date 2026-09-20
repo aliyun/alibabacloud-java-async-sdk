@@ -93,7 +93,10 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
@@ -199,7 +205,10 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -207,7 +216,10 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -215,7 +227,10 @@ public class UpdateTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the operation succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

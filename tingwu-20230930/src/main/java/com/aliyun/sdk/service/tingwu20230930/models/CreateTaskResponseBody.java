@@ -93,7 +93,10 @@ public class CreateTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The status description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class CreateTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, used only for troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +218,10 @@ public class CreateTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * MeetingJoinUrl.
+             * <p>The audio stream push URL generated in the real-time recording scenario. You can use this URL for subsequent real-time audio stream recognition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wss://tingwu-realtime-cn-beijing.aliyuncs.com/api/ws/v1?mc=****</p>
              */
             public Builder meetingJoinUrl(String meetingJoinUrl) {
                 this.meetingJoinUrl = meetingJoinUrl;
@@ -217,7 +229,10 @@ public class CreateTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c5394c6ee0fb474899d42215a3925c7e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -225,7 +240,10 @@ public class CreateTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskKey.
+             * <p>The custom identifier set by the user when creating the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_tingwu_123</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -233,7 +251,10 @@ public class CreateTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONGOING</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

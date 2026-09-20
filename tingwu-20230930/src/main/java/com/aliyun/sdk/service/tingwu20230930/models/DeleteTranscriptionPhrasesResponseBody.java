@@ -101,7 +101,10 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -109,7 +112,10 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -117,7 +123,10 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Is the operation successful?</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCEEDED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -196,7 +205,7 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Error code.</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -204,7 +213,7 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>Error message.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -212,7 +221,7 @@ public class DeleteTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Is the operation successful?</p>
              */
             public Builder status(String status) {
                 this.status = status;

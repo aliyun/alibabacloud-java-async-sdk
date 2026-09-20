@@ -60,6 +60,7 @@ public class DeleteTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
+         * <p>Phrase table ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

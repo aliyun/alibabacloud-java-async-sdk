@@ -93,7 +93,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>A description of the status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -212,7 +218,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -220,7 +229,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -228,7 +240,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * PhraseId.
+             * <p>The ID of the phrases list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a93b91141c0f422fa114af203f8b****</p>
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
@@ -236,7 +251,10 @@ public class CreateTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

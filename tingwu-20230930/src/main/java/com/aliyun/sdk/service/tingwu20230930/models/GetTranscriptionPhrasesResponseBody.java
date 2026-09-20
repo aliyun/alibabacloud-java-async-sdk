@@ -93,7 +93,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Status message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35124E1C-AE99-5D6C-A52E-BD689D8D****</p>
@@ -212,7 +218,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>Hotword list description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom fruit phrases list</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -220,7 +229,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Hotword list name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fruit_phrase</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -228,7 +240,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * PhraseId.
+             * <p>ID of the phrase list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a93b91141c0f422fa114af203f8b****</p>
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
@@ -236,7 +251,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * WordWeights.
+             * <p>Words and their weights in the hotword list, formatted as a JSON map string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;苹果&quot;:3,&quot;西瓜&quot;:3}</p>
              */
             public Builder wordWeights(String wordWeights) {
                 this.wordWeights = wordWeights;
@@ -329,7 +347,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -337,7 +358,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>Error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -345,7 +369,7 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Phrases.
+             * <p>Hotword objects.</p>
              */
             public Builder phrases(java.util.List<Phrases> phrases) {
                 this.phrases = phrases;
@@ -353,7 +377,10 @@ public class GetTranscriptionPhrasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Indicates whether the operation succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEEDED</p>
              */
             public Builder status(String status) {
                 this.status = status;

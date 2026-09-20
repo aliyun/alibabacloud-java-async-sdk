@@ -90,7 +90,10 @@ public class CreateTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the phrases list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom fruit phrases list</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -99,6 +102,7 @@ public class CreateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
+         * <p>The name of the phrases list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +115,7 @@ public class CreateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
+         * <p>A JSON-formatted string that represents a map of words and their corresponding weights.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

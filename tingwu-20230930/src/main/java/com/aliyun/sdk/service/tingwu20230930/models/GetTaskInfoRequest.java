@@ -60,6 +60,7 @@ public class GetTaskInfoRequest extends Request {
         } 
 
         /**
+         * <p>The TaskId returned when the job was created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

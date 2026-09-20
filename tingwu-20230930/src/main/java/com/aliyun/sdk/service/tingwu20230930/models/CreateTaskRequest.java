@@ -116,7 +116,10 @@ public class CreateTaskRequest extends Request {
         } 
 
         /**
-         * AppKey.
+         * <p>The AppKey of the project created in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JV1sRTisRMi****</p>
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -125,7 +128,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * Input.
+         * <p>The basic parameters set when creating a task. The required parameters vary depending on the task type.</p>
+         * <ul>
+         * <li><p>When type=offline (offline task), you must set the SourceLanguage and FileUrl parameters.</p>
+         * </li>
+         * <li><p>When type=realtime (real-time meeting task), you must additionally set the SourceLanguage, Format, and SampleRate parameters.</p>
+         * </li>
+         * </ul>
          */
         public Builder input(Input input) {
             this.putBodyParameter("Input", input);
@@ -134,7 +143,7 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The algorithm-related parameters set when creating a task. You can set these as needed.</p>
          */
         public Builder parameters(Parameters parameters) {
             this.putBodyParameter("Parameters", parameters);
@@ -143,7 +152,17 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
-         * operation.
+         * <p>The operation. Valid values:</p>
+         * <ul>
+         * <li>start: creates a task. This is the default value. In most cases, you do not need to explicitly set this parameter.</li>
+         * <li>stop: stops a real-time meeting task. This value is used in real-time meeting scenarios. After a meeting ends, set this parameter to stop and trigger the call.</li>
+         * </ul>
+         * <blockquote>
+         * <p>Note: When ending a real-time recording, you must set this parameter to stop.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>stop</p>
          */
         public Builder operation(String operation) {
             this.putQueryParameter("operation", operation);
@@ -152,6 +171,11 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li><strong>offline</strong>: offline task, such as offline transcription.</li>
+         * <li><strong>realtime</strong>: real-time task, such as creating a real-time recording.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -341,7 +365,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * AudioChannelMode.
+             * <p>The multi-channel audio and video processing mode.</p>
              */
             public Builder audioChannelMode(String audioChannelMode) {
                 this.audioChannelMode = audioChannelMode;
@@ -349,7 +373,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * FileUrl.
+             * <p>The HTTP or HTTPS URL of the original audio or video file. This parameter is required when you create an offline transcription task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xxx.com/zzz/1.wav">http://xxx.com/zzz/1.wav</a></p>
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -357,7 +384,17 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The encoding format of the audio stream data when you create a real-time meeting, such as pcm. Valid values:</p>
+             * <ul>
+             * <li><strong>pcm</strong></li>
+             * <li><strong>opus</strong></li>
+             * <li><strong>aac</strong></li>
+             * <li><strong>speex</strong></li>
+             * <li><strong>mp3</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pcm</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -365,7 +402,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * LanguageHints.
+             * <p>The preferred languages. This parameter takes effect only when SourceLanguage is set to &quot;multilingual&quot;. It restricts the output languages of the model.</p>
              */
             public Builder languageHints(java.util.List<String> languageHints) {
                 this.languageHints = languageHints;
@@ -373,7 +410,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * MultipleStreamsEnabled.
+             * <p>Specifies whether to enable multi-channel audio stream recognition. This parameter needs to be set only in real-time recording scenarios. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder multipleStreamsEnabled(Boolean multipleStreamsEnabled) {
                 this.multipleStreamsEnabled = multipleStreamsEnabled;
@@ -381,7 +421,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * OutputPath.
+             * <p>After configuring OSS information in the console, you can specify an OSS write path to save results directly to your custom OSS bucket.</p>
              */
             public Builder outputPath(String outputPath) {
                 this.outputPath = outputPath;
@@ -389,7 +429,11 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ProgressiveCallbacksEnabled.
+             * <p>Specifies whether to enable the callback feature.
+             * To enable the callback feature, configure the callback type and address in the console, and set this parameter to true when creating a task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder progressiveCallbacksEnabled(Boolean progressiveCallbacksEnabled) {
                 this.progressiveCallbacksEnabled = progressiveCallbacksEnabled;
@@ -397,7 +441,14 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SampleRate.
+             * <p>The sample rate of the audio stream data when you create a real-time meeting. Valid values: 8000 and 16000.</p>
+             * <ul>
+             * <li><strong>8000</strong>: telephone customer service scenarios.</li>
+             * <li><strong>16000</strong>: real-time meeting audio capture scenarios.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>16000</p>
              */
             public Builder sampleRate(Integer sampleRate) {
                 this.sampleRate = sampleRate;
@@ -405,6 +456,14 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
+             * <p>The language model used for audio transcription. Valid values:</p>
+             * <ul>
+             * <li><strong>cn</strong>: Chinese</li>
+             * <li><strong>en</strong>: English</li>
+             * <li><strong>fspk</strong>: Chinese-English free speaking</li>
+             * <li><strong>ja</strong>: Japanese</li>
+             * <li><strong>yue</strong>: Cantonese</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -416,7 +475,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TaskId.
+             * <p>The TaskId returned when you create a real-time recording. You can use this ID to end the real-time recording. Set this parameter only when ending a real-time recording. Do not set it at other times.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9922c84c087044eda18659c128b56c84</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -424,7 +486,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TaskKey.
+             * <p>The custom identifier set by the user to associate with this task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_tingwu_123</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -558,7 +623,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The extraction dimension definition for conversation content extraction.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -574,7 +639,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The extraction dimension name for conversation content extraction.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -654,7 +719,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * ExtractionContents.
+             * <p>The list of extraction dimensions for conversation content extraction, including the name and definition of each extraction item.</p>
              */
             public Builder extractionContents(java.util.List<ExtractionContents> extractionContents) {
                 this.extractionContents = extractionContents;
@@ -662,7 +727,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SceneIntroduction.
+             * <p>The scene description for conversation content extraction.</p>
              */
             public Builder sceneIntroduction(String sceneIntroduction) {
                 this.sceneIntroduction = sceneIntroduction;
@@ -765,7 +830,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Model.
+             * <p>The model specified for the prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tingwu-turbo</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -773,7 +841,11 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
+             * <p>The custom name of the prompt, used to match output results.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>summary-demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -781,7 +853,11 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
+             * <p>The custom content of the prompt.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Summarize the following conversation:{Transcription}</p>
              */
             public Builder prompt(String prompt) {
                 this.prompt = prompt;
@@ -789,7 +865,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TransType.
+             * <p>The format of the {Transcription} tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder transType(String transType) {
                 this.transType = transType;
@@ -843,7 +922,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Contents.
+             * <p>The list of custom prompt parameters.</p>
              */
             public Builder contents(java.util.List<Contents> contents) {
                 this.contents = contents;
@@ -910,7 +989,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * bizType.
+             * <p>The business scenario type.</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -1058,7 +1137,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * FullTextSummaryFormat.
+             * <p>The return format of the full-text summary.</p>
              */
             public Builder fullTextSummaryFormat(String fullTextSummaryFormat) {
                 this.fullTextSummaryFormat = fullTextSummaryFormat;
@@ -1066,7 +1145,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * MaxKeywords.
+             * <p>The number of keywords to extract.</p>
              */
             public Builder maxKeywords(Integer maxKeywords) {
                 this.maxKeywords = maxKeywords;
@@ -1074,7 +1153,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * NfixEnabled.
+             * <p>Specifies whether to enable Nfix. In most cases, you do not need to set this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder nfixEnabled(Boolean nfixEnabled) {
                 this.nfixEnabled = nfixEnabled;
@@ -1098,7 +1180,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TranslationHotwordMap.
+             * <p>The translation hotword configuration.</p>
              */
             public Builder translationHotwordMap(TranslationHotwordMap translationHotwordMap) {
                 this.translationHotwordMap = translationHotwordMap;
@@ -1165,7 +1247,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The identity description.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1173,7 +1255,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The identity name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1240,7 +1322,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * IdentityContents.
+             * <p>The list of identity contents for identity recognition, including the identity name and description.</p>
              */
             public Builder identityContents(java.util.List<IdentityContents> identityContents) {
                 this.identityContents = identityContents;
@@ -1248,7 +1330,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SceneIntroduction.
+             * <p>The scene description for identity recognition.</p>
              */
             public Builder sceneIntroduction(String sceneIntroduction) {
                 this.sceneIntroduction = sceneIntroduction;
@@ -1302,7 +1384,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Types.
+             * <p>When the intelligent meeting notes feature is enabled, pass in the expected feature parameter types. Supported types: action items (Actions) and key information (KeyInformation). Key information includes keywords and key content (key sentences).</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1369,7 +1451,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The inspection dimension definition for service inspection.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1377,7 +1459,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Title.
+             * <p>The inspection dimension name for service inspection.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1470,7 +1552,7 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * InspectionContents.
+             * <p>The list of inspection dimensions for service inspection, including the dimension name and definition. The definition specifies the criteria that the large language model uses to determine whether a dimension is matched.</p>
              */
             public Builder inspectionContents(java.util.List<InspectionContents> inspectionContents) {
                 this.inspectionContents = inspectionContents;
@@ -1478,7 +1560,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * InspectionIntroduction.
+             * <p>The description of the inspection target and focus for service inspection.</p>
              */
             public Builder inspectionIntroduction(String inspectionIntroduction) {
                 this.inspectionIntroduction = inspectionIntroduction;
@@ -1486,7 +1568,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SceneIntroduction.
+             * <p>The conversation scene description for service inspection.</p>
              */
             public Builder sceneIntroduction(String sceneIntroduction) {
                 this.sceneIntroduction = sceneIntroduction;
@@ -1548,7 +1630,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * Types.
+             * <p>When the summarization feature is enabled, pass in the expected summarization types. Supported types: full-text summary (Paragraph), speaker summary (Conversational), and Q&amp;A review summary (QuestionsAnswering).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Paragraph</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -1641,7 +1726,10 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * SpectrumEnabled.
+             * <p>Specifies whether to generate an audio waveform from the original audio/video file or audio stream and save it. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder spectrumEnabled(Boolean spectrumEnabled) {
                 this.spectrumEnabled = spectrumEnabled;
@@ -1649,7 +1737,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TargetAudioFormat.
+             * <p>Specifies whether to convert the original audio/video file or audio stream to MP3 format for storage. Currently, only MP3 format is supported. This parameter is optional when creating offline file transcription or real-time meetings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp3</p>
              */
             public Builder targetAudioFormat(String targetAudioFormat) {
                 this.targetAudioFormat = targetAudioFormat;
@@ -1657,7 +1748,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TargetVideoFormat.
+             * <p>Specifies whether to convert the original video file to MP4 format for storage. Currently, only MP4 format is supported. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder targetVideoFormat(String targetVideoFormat) {
                 this.targetVideoFormat = targetVideoFormat;
@@ -1665,7 +1759,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * VideoThumbnailEnabled.
+             * <p>Specifies whether to extract video thumbnails from the original video file and save them. This parameter is meaningful only when creating offline file transcription and the original file is in video format. Typically, you do not need to set this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder videoThumbnailEnabled(Boolean videoThumbnailEnabled) {
                 this.videoThumbnailEnabled = videoThumbnailEnabled;
@@ -1719,7 +1816,13 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * SpeakerCount.
+             * <p>Sets the speaker diarization parameter.</p>
+             * <p>If not set: speaker role differentiation is not used. </p>
+             * <p>0: the number of speakers is undetermined.</p>
+             * <p>2: the number of speakers is 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder speakerCount(Integer speakerCount) {
                 this.speakerCount = speakerCount;
@@ -1761,6 +1864,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OutputLevel")
         private Integer outputLevel;
 
+        @com.aliyun.core.annotation.NameInMap("Phrase")
+        private java.util.Map<String, ?> phrase;
+
         @com.aliyun.core.annotation.NameInMap("PhraseId")
         private String phraseId;
 
@@ -1778,6 +1884,7 @@ public class CreateTaskRequest extends Request {
             this.disfluencyEnabled = builder.disfluencyEnabled;
             this.model = builder.model;
             this.outputLevel = builder.outputLevel;
+            this.phrase = builder.phrase;
             this.phraseId = builder.phraseId;
             this.profanityFilterEnabled = builder.profanityFilterEnabled;
             this.realtimeDiarizationEnabled = builder.realtimeDiarizationEnabled;
@@ -1841,6 +1948,13 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return phrase
+         */
+        public java.util.Map<String, ?> getPhrase() {
+            return this.phrase;
+        }
+
+        /**
          * @return phraseId
          */
         public String getPhraseId() {
@@ -1869,6 +1983,7 @@ public class CreateTaskRequest extends Request {
             private Boolean disfluencyEnabled; 
             private String model; 
             private Integer outputLevel; 
+            private java.util.Map<String, ?> phrase; 
             private String phraseId; 
             private Boolean profanityFilterEnabled; 
             private Boolean realtimeDiarizationEnabled; 
@@ -1884,13 +1999,24 @@ public class CreateTaskRequest extends Request {
                 this.disfluencyEnabled = model.disfluencyEnabled;
                 this.model = model.model;
                 this.outputLevel = model.outputLevel;
+                this.phrase = model.phrase;
                 this.phraseId = model.phraseId;
                 this.profanityFilterEnabled = model.profanityFilterEnabled;
                 this.realtimeDiarizationEnabled = model.realtimeDiarizationEnabled;
             } 
 
             /**
-             * AdditionalStreamOutputLevel.
+             * <p>Sets the output level for speech recognition results of the active speaker in real-time recording scenarios.</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Returns results when a complete sentence is recognized.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Returns results for both intermediate results and complete sentences.</p>
+             * </li>
+             * </ul>
+             * <p>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder additionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
                 this.additionalStreamOutputLevel = additionalStreamOutputLevel;
@@ -1898,7 +2024,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * AudioEventDetectionEnabled.
+             * <p>Specifies whether to enable audio event detection during speech transcription to determine whether events such as music exist in the audio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder audioEventDetectionEnabled(Boolean audioEventDetectionEnabled) {
                 this.audioEventDetectionEnabled = audioEventDetectionEnabled;
@@ -1906,7 +2035,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Diarization.
+             * <p>The speaker diarization parameters.</p>
              */
             public Builder diarization(Diarization diarization) {
                 this.diarization = diarization;
@@ -1914,7 +2043,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * DiarizationEnabled.
+             * <p>Specifies whether to enable speaker diarization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder diarizationEnabled(Boolean diarizationEnabled) {
                 this.diarizationEnabled = diarizationEnabled;
@@ -1922,7 +2054,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * DisfluencyEnabled.
+             * <p>Specifies whether to enable disfluency removal during speech transcription. Enabled by default.</p>
              */
             public Builder disfluencyEnabled(Boolean disfluencyEnabled) {
                 this.disfluencyEnabled = disfluencyEnabled;
@@ -1930,7 +2062,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>Sets the speech transcription model to improve transcription accuracy in specific domains.</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -1938,7 +2070,16 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * OutputLevel.
+             * <p>Sets the output level for speech recognition results. Default value: 1.</p>
+             * <ul>
+             * <li><p><strong>1</strong>: Returns results when a complete sentence is recognized.</p>
+             * </li>
+             * <li><p><strong>2</strong>: Returns results for both intermediate results and complete sentences.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outputLevel(Integer outputLevel) {
                 this.outputLevel = outputLevel;
@@ -1946,7 +2087,18 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * PhraseId.
+             * Phrase.
+             */
+            public Builder phrase(java.util.Map<String, ?> phrase) {
+                this.phrase = phrase;
+                return this;
+            }
+
+            /**
+             * <p>The vocabulary ID of the hot words.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ce9c2a34b6d847bf92a77d0a196f****</p>
              */
             public Builder phraseId(String phraseId) {
                 this.phraseId = phraseId;
@@ -1954,7 +2106,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ProfanityFilterEnabled.
+             * <p>Specifies whether to enable profanity filtering during speech transcription. Enabled by default.</p>
              */
             public Builder profanityFilterEnabled(Boolean profanityFilterEnabled) {
                 this.profanityFilterEnabled = profanityFilterEnabled;
@@ -2055,7 +2207,15 @@ public class CreateTaskRequest extends Request {
             } 
 
             /**
-             * AdditionalStreamOutputLevel.
+             * <p>Sets the output level for translation results of the active speaker in real-time recording scenarios.</p>
+             * <ul>
+             * <li><strong>1</strong>: Returns results when a complete sentence is recognized.</li>
+             * <li><strong>2</strong>: Returns results for both intermediate results and complete sentences.</li>
+             * </ul>
+             * <p>Set this parameter as needed only in real-time recording scenarios when MultipleStreamsEnabled is set to true. This parameter does not need to be set for offline transcription scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder additionalStreamOutputLevel(Integer additionalStreamOutputLevel) {
                 this.additionalStreamOutputLevel = additionalStreamOutputLevel;
@@ -2063,7 +2223,15 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * OutputLevel.
+             * <p>Sets the output level for real-time translation results. Default value: 1.</p>
+             * <ul>
+             * <li><strong>1</strong>: Returns results when a complete sentence is recognized.</li>
+             * <li><strong>2</strong>: Returns results for both intermediate results and complete sentences.</li>
+             * </ul>
+             * <p>Set this parameter as needed only in real-time recording scenarios. This parameter does not need to be set for offline transcription scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder outputLevel(Integer outputLevel) {
                 this.outputLevel = outputLevel;
@@ -2071,7 +2239,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TargetLanguages.
+             * <p>The target languages to set when the translation feature is enabled. Chinese, English, and Japanese are supported.</p>
              */
             public Builder targetLanguages(java.util.List<String> targetLanguages) {
                 this.targetLanguages = targetLanguages;
@@ -2079,7 +2247,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TranslateLlmSceneEnabled.
+             * <p>Specifies whether to use large language model-based translation. Default value: false.</p>
              */
             public Builder translateLlmSceneEnabled(Boolean translateLlmSceneEnabled) {
                 this.translateLlmSceneEnabled = translateLlmSceneEnabled;
@@ -2427,7 +2595,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * AutoChaptersEnabled.
+             * <p>Specifies whether to enable the chapter overview feature. When enabled, chapter titles and chapter summaries are generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoChaptersEnabled(Boolean autoChaptersEnabled) {
                 this.autoChaptersEnabled = autoChaptersEnabled;
@@ -2435,7 +2606,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ContentExtraction.
+             * <p>The conversation content extraction parameter object.</p>
              */
             public Builder contentExtraction(ContentExtraction contentExtraction) {
                 this.contentExtraction = contentExtraction;
@@ -2443,7 +2614,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ContentExtractionEnabled.
+             * <p>The business user ID.</p>
              */
             public Builder contentExtractionEnabled(Boolean contentExtractionEnabled) {
                 this.contentExtractionEnabled = contentExtractionEnabled;
@@ -2451,7 +2622,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * CustomPrompt.
+             * <p>The custom prompt control parameter object.</p>
              */
             public Builder customPrompt(CustomPrompt customPrompt) {
                 this.customPrompt = customPrompt;
@@ -2459,7 +2630,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * CustomPromptEnabled.
+             * <p>Specifies whether to enable the custom prompt feature. When enabled, you can enter a personalized custom prompt.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder customPromptEnabled(Boolean customPromptEnabled) {
                 this.customPromptEnabled = customPromptEnabled;
@@ -2467,7 +2641,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ExtraParams.
+             * <p>The extra parameters. In most cases, you do not need to set this parameter.</p>
              */
             public Builder extraParams(ExtraParams extraParams) {
                 this.extraParams = extraParams;
@@ -2475,7 +2649,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * IdentityRecognition.
+             * <p>The identity recognition parameter object.</p>
              */
             public Builder identityRecognition(IdentityRecognition identityRecognition) {
                 this.identityRecognition = identityRecognition;
@@ -2483,7 +2657,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * IdentityRecognitionEnabled.
+             * <p>Specifies whether to enable the identity recognition feature.</p>
              */
             public Builder identityRecognitionEnabled(Boolean identityRecognitionEnabled) {
                 this.identityRecognitionEnabled = identityRecognitionEnabled;
@@ -2499,7 +2673,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * MeetingAssistance.
+             * <p>The control parameters for the intelligent meeting notes feature, which supports algorithm processing for action items, keywords, and key content. If you enable MeetingAssistanceEnabled but do not specify algorithm types through MeetingAssistance, all types are called and returned by default.</p>
              */
             public Builder meetingAssistance(MeetingAssistance meetingAssistance) {
                 this.meetingAssistance = meetingAssistance;
@@ -2507,7 +2681,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * MeetingAssistanceEnabled.
+             * <p>Specifies whether to enable the intelligent meeting notes feature. When enabled, results such as keywords, key content, and action items are generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder meetingAssistanceEnabled(Boolean meetingAssistanceEnabled) {
                 this.meetingAssistanceEnabled = meetingAssistanceEnabled;
@@ -2515,7 +2692,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>Sets the speech transcription model to improve transcription accuracy in specific domains.</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -2523,7 +2700,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * PptExtractionEnabled.
+             * <p>Specifies whether to enable PPT extraction and PPT summarization. When enabled, PPT frames are extracted from the video file and corresponding summaries are generated. Enable this parameter only for offline transcription when the source file is a video file. Results cannot be generated in real-time recording scenarios or offline transcription scenarios where the source file is audio only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pptExtractionEnabled(Boolean pptExtractionEnabled) {
                 this.pptExtractionEnabled = pptExtractionEnabled;
@@ -2531,7 +2711,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ServiceInspection.
+             * <p>The service inspection parameter object.</p>
              */
             public Builder serviceInspection(ServiceInspection serviceInspection) {
                 this.serviceInspection = serviceInspection;
@@ -2539,7 +2719,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * ServiceInspectionEnabled.
+             * <p>Specifies whether to enable the service inspection feature. Default value: false.</p>
              */
             public Builder serviceInspectionEnabled(Boolean serviceInspectionEnabled) {
                 this.serviceInspectionEnabled = serviceInspectionEnabled;
@@ -2547,7 +2727,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Summarization.
+             * <p>The summarization control parameters.</p>
              */
             public Builder summarization(Summarization summarization) {
                 this.summarization = summarization;
@@ -2555,7 +2735,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * SummarizationEnabled.
+             * <p>Specifies whether to enable the summarization feature. When enabled, results such as full-text summaries and speaker summaries can be generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder summarizationEnabled(Boolean summarizationEnabled) {
                 this.summarizationEnabled = summarizationEnabled;
@@ -2563,7 +2746,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TextPolishEnabled.
+             * <p>Specifies whether to enable the spoken-to-written text conversion feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder textPolishEnabled(Boolean textPolishEnabled) {
                 this.textPolishEnabled = textPolishEnabled;
@@ -2571,7 +2757,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Transcoding.
+             * <p>The audio/video or audio stream transcoding module.</p>
              */
             public Builder transcoding(Transcoding transcoding) {
                 this.transcoding = transcoding;
@@ -2579,7 +2765,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Transcription.
+             * <p>The speech transcription control parameters.</p>
              */
             public Builder transcription(Transcription transcription) {
                 this.transcription = transcription;
@@ -2587,7 +2773,7 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * Translation.
+             * <p>The translation control parameters.</p>
              */
             public Builder translation(Translation translation) {
                 this.translation = translation;
@@ -2595,7 +2781,10 @@ public class CreateTaskRequest extends Request {
             }
 
             /**
-             * TranslationEnabled.
+             * <p>Specifies whether to enable the translation feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder translationEnabled(Boolean translationEnabled) {
                 this.translationEnabled = translationEnabled;

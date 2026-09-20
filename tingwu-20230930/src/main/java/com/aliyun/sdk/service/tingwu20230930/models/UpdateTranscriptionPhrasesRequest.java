@@ -105,6 +105,7 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the hotword list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +118,10 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>A description of the hotword list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom fruit phrases list</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -126,6 +130,7 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
+         * <p>The name of the hotword list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +143,7 @@ public class UpdateTranscriptionPhrasesRequest extends Request {
         }
 
         /**
+         * <p>A JSON map string that defines hotwords and their weights.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
