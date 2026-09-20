@@ -119,7 +119,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The response structure.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>E25887B7-579C-54A5-9C4F-83A0DE367DD</p>
@@ -171,9 +171,9 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true: The request was successful.</p>
-         * <p>false: The request failed.</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>true: The call was successful.</p>
+         * <p>false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -242,7 +242,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entities.</p>
+             * <p>The entity array.</p>
              */
             public Builder entityList(java.util.List<Entity> entityList) {
                 this.entityList = entityList;
@@ -250,7 +250,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * <p>The token for the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>123344</p>

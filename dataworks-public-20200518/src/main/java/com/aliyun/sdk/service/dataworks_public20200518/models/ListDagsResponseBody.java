@@ -119,7 +119,7 @@ public class ListDagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of DAGs.</p>
+         * <p>The details of the DAGs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>7782a299-b291-4fee-8424-cf8058efa8e8</p>
@@ -171,7 +171,7 @@ public class ListDagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -383,7 +383,8 @@ public class ListDagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data timestamp.</p>
+             * <p>The business date.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -395,6 +396,7 @@ public class ListDagsResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -416,7 +418,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DAG ID.</p>
+             * <p>DagId。</p>
              * 
              * <strong>example:</strong>
              * <p>351249682</p>
@@ -428,6 +430,7 @@ public class ListDagsResponseBody extends TeaModel {
 
             /**
              * <p>The end time.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -438,7 +441,8 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual running time.</p>
+             * <p>The GMT date.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -450,6 +454,7 @@ public class ListDagsResponseBody extends TeaModel {
 
             /**
              * <p>The modification time.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -471,7 +476,7 @@ public class ListDagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the operation.</p>
+             * <p>The operation sequence code.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -494,6 +499,7 @@ public class ListDagsResponseBody extends TeaModel {
 
             /**
              * <p>The start time.</p>
+             * <p>The value is a 13-digit number, for example, <code>1605052800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1605052800000</p>
@@ -506,10 +512,10 @@ public class ListDagsResponseBody extends TeaModel {
             /**
              * <p>The status of the DAG. Valid values:</p>
              * <ul>
-             * <li>CREATED</li>
-             * <li>RUNNING</li>
-             * <li>FAILURE</li>
-             * <li>SUCCESS</li>
+             * <li>CREATED: created</li>
+             * <li>RUNNING: running</li>
+             * <li>FAILURE: failed</li>
+             * <li>SUCCESS: succeeded</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -523,10 +529,10 @@ public class ListDagsResponseBody extends TeaModel {
             /**
              * <p>The type of the DAG. Valid values:</p>
              * <ul>
-             * <li>MANUAL: DAG for a manually triggered workflow</li>
-             * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
-             * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
-             * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow</li>
+             * <li>MANUAL: manual task workflow</li>
+             * <li>SMOKE_TEST: smoke test workflow</li>
+             * <li>SUPPLY_DATA: data backfill</li>
+             * <li>BUSINESS_PROCESS_DAG: one-time business process workflow</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -584,7 +590,7 @@ public class ListDagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entities returned.</p>
+             * <p>The returned entities.</p>
              */
             public Builder dags(java.util.List<Dags> dags) {
                 this.dags = dags;

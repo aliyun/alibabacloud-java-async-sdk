@@ -128,6 +128,12 @@ public class DsgQueryRowDetailRequest extends Request {
         }
 
         /**
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li>ODPS.ODPS</li>
+         * <li>EMR</li>
+         * <li>HOLO.POSTGRES</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +146,7 @@ public class DsgQueryRowDetailRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +159,7 @@ public class DsgQueryRowDetailRequest extends Request {
         }
 
         /**
+         * <p>The page number. Minimum value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +172,7 @@ public class DsgQueryRowDetailRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

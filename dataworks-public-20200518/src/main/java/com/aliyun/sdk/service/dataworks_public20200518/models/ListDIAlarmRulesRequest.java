@@ -111,7 +111,8 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task with which the alert rules are associated.</p>
+         * <p>The task ID. This is the task ID associated with the alert rule.</p>
+         * <p>You can obtain this value from DIJobPaging.DIJobs[].DIJobId in the ListDIJobs response.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +137,7 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -119,7 +119,7 @@ public class DeleteDataServiceApiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the API was deleted.</p>
+         * <p>Indicates whether the deletion was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class DeleteDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. It is a unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -174,7 +174,7 @@ public class DeleteDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

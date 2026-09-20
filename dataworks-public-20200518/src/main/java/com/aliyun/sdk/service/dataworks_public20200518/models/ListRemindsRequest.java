@@ -245,7 +245,7 @@ public class ListRemindsRequest extends Request {
          * <p>The keyword in a rule name that is used to search for the rule. Fuzzy search is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Keyword</p>
+         * <p>Fuzzy search rule name</p>
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

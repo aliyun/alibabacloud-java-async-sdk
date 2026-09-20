@@ -141,7 +141,10 @@ public class DsgQueryDesensStatusListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>Query keyword</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -150,6 +153,7 @@ public class DsgQueryDesensStatusListRequest extends Request {
         }
 
         /**
+         * <p>Page number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,6 +166,7 @@ public class DsgQueryDesensStatusListRequest extends Request {
         }
 
         /**
+         * <p>Page size</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,6 +179,7 @@ public class DsgQueryDesensStatusListRequest extends Request {
         }
 
         /**
+         * <p>Primary scene code</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +192,10 @@ public class DsgQueryDesensStatusListRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * <p>Scene ID. Only required when querying project workspace switch data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>124</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("sceneId", sceneId);

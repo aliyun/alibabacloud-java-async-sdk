@@ -119,7 +119,7 @@ public class DeleteQualityEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>Indicates whether the partition expression was successfully deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -130,7 +130,7 @@ public class DeleteQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>401</p>
@@ -141,7 +141,7 @@ public class DeleteQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned if the request fails.</p>
          * 
          * <strong>example:</strong>
          * <p>You have no permission.</p>
@@ -163,7 +163,7 @@ public class DeleteQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>ecb967ec-c137-48****</p>

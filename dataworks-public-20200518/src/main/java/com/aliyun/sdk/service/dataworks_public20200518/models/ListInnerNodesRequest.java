@@ -186,7 +186,7 @@ public class ListInnerNodesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         public Builder outerNodeId(Long outerNodeId) {
             this.putBodyParameter("OuterNodeId", outerNodeId);

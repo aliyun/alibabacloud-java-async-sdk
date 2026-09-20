@@ -1134,7 +1134,7 @@ public class GetFileResponseBody extends TeaModel {
              * <p>The description of the output parameter of the node.</p>
              * 
              * <strong>example:</strong>
-             * <p>It&quot;s a context output parameter.</p>
+             * <p>It\&quot;s a context output parameter.</p>
              */
             public Builder description(String description) {
                 this.description = description;

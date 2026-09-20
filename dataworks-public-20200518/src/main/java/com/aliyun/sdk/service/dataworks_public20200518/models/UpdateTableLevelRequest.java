@@ -144,7 +144,7 @@ public class UpdateTableLevelRequest extends Request {
          * <p>The description of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>level description</p>
+         * <p>Level description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +181,7 @@ public class UpdateTableLevelRequest extends Request {
          * <p>The name of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>level name</p>
+         * <p>Level name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

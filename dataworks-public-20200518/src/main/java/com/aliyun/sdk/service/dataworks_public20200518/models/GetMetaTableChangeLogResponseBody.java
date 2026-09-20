@@ -295,7 +295,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
              * <p>The content of the change.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;[{&quot;action&quot;:&quot;ADD_COLUMN&quot;,&quot;value&quot;:[{&quot;originName&quot;:&quot;&quot;,&quot;originType&quot;:&quot;&quot;,&quot;originComment&quot;:&quot;&quot;,&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;struct<a href="name:string">name:string</a>&quot;,&quot;comment&quot;:&quot;&quot;}]}]&quot;,</p>
+             * <p>&quot;[{\&quot;action\&quot;:\&quot;ADD_COLUMN\&quot;,\&quot;value\&quot;:[{\&quot;originName\&quot;:\&quot;\&quot;,\&quot;originType\&quot;:\&quot;\&quot;,\&quot;originComment\&quot;:\&quot;\&quot;,\&quot;name\&quot;:\&quot;id\&quot;,\&quot;type\&quot;:\&quot;struct<a href="name:string">name:string</a>\&quot;,\&quot;comment\&quot;:\&quot;\&quot;}]}]&quot;,</p>
              */
             public Builder changeContent(String changeContent) {
                 this.changeContent = changeContent;
@@ -314,7 +314,8 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the metatable was created.</p>
+             * <p>The time when the table was created.</p>
+             * <p>The format is a 13-digit number, for example, <code>1590722845000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1590722845000</p>
@@ -325,7 +326,8 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the metatable was modified.</p>
+             * <p>The time when the table was modified.</p>
+             * <p>The format is a 13-digit number, for example, <code>1590722845000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1590722845000</p>
@@ -336,7 +338,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The entity on which the change was made. Valid values: TABLE and PARTITION.</p>
+             * <p>The type of the changed object. Valid values: TABLE and PARTITION.</p>
              * 
              * <strong>example:</strong>
              * <p>TABLE</p>
@@ -451,7 +453,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number. Used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -473,7 +475,7 @@ public class GetMetaTableChangeLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of metatables.</p>
+             * <p>The total number of tables.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

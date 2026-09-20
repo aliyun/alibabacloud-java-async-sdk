@@ -129,7 +129,7 @@ public class ListShiftSchedulesRequest extends Request {
          * <p>The Alibaba Cloud account ID. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1933790683****</p>
+         * <p>1933790683*****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);

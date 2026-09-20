@@ -292,10 +292,10 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the metatable.</p>
+             * <p>The description of the table.</p>
              * 
              * <strong>example:</strong>
-             * <p># Business requirements\n\n&amp;lt;a name=&amp;quot;xiw5n&amp;quot;</p>
+             * <h1>Business requirements\n\n&lt;a name=&quot;xiw5n&quot;</h1>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -303,7 +303,8 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the metatable was created.</p>
+             * <p>The time when the table was created.</p>
+             * <p>The value is a 13-digit number, such as <code>1584444247000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1584444247000</p>
@@ -314,7 +315,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creator of the metatable.</p>
+             * <p>The creator of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -325,7 +326,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who creates the metatable.</p>
+             * <p>The name of the table creator.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -336,7 +337,8 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the metatable was last modified.</p>
+             * <p>The time when the table was modified.</p>
+             * <p>The value is a 13-digit number, such as <code>1584444247000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1584444247000</p>

@@ -266,7 +266,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the table was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1638720736000</p>
@@ -382,7 +382,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the table.</p>
+             * <p>The table information.</p>
              */
             public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -390,7 +390,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the next page exists.</p>
+             * <p>Indicates whether there is a next page.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -401,10 +401,10 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.</p>
+             * <p>The pagination key. Set this parameter based on the HasNext and key values returned in the response.</p>
              * 
              * <strong>example:</strong>
-             * <p>odps | retail_e_commerce_2 | retail_e_commerce_2 | dws_ec_trd__cate_commodity_gmv_kpy_fy</p>
+             * <p>odps.tt.2</p>
              */
             public Builder nextPrimaryKey(String nextPrimaryKey) {
                 this.nextPrimaryKey = nextPrimaryKey;

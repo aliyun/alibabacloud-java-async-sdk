@@ -67,7 +67,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paginated result of alert rules.</p>
          */
         public Builder DIAlarmRulePaging(DIAlarmRulePaging DIAlarmRulePaging) {
             this.DIAlarmRulePaging = DIAlarmRulePaging;
@@ -78,7 +78,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>74C2FECD-5B3A-554A-BCF5-351A36DE9815</p>
+         * <p>74C2FECD-5B3A-554A-BCF5-35****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +144,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert notification methods.</p>
+             * <p>The list of channels.</p>
              */
             public Builder channels(java.util.List<String> channels) {
                 this.channels = channels;
@@ -226,10 +226,10 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
+             * <p>The receiver type.</p>
              * <ul>
-             * <li>If the alert notification method is Mail, Phone, or Sms, the value of this parameter is <strong>AliyunUid</strong>, which indicates the Alibaba Cloud account ID.</li>
-             * <li>If the alert notification method is Ding, the value of this parameter is <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
+             * <li>If the alert notification channel is email, phone call, or text message, the receiver type is Alibaba Cloud user ID (<strong>AliyunUid</strong>).</li>
+             * <li>If the alert notification channel is DingTalk, the receiver type is DingTalk token (<strong>DingToken</strong>).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recipients.</p>
+             * <p>The list of receiver values.</p>
              */
             public Builder receiverValues(java.util.List<String> receiverValues) {
                 this.receiverValues = receiverValues;
@@ -321,7 +321,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The duration of the alert suppression interval. Unit: minutes.</p>
+             * <p>The alert suppression interval. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -332,7 +332,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alert notification methods.</p>
+             * <p>The alert notification channels. Multiple values are supported.</p>
              */
             public Builder notificationChannels(java.util.List<NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -340,7 +340,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The settings of alert notification recipients.</p>
+             * <p>The alert notification receivers. Multiple values are supported.</p>
              */
             public Builder notificationReceivers(java.util.List<NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -420,7 +420,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time interval for alert calculation. Unit: minutes.</p>
+             * <p>The time window for alert calculation. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -448,9 +448,9 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             /**
              * <p>The alert threshold.</p>
              * <ul>
-             * <li>If the alert rule is for task status, no threshold is used.</li>
-             * <li>If the alert rule is for failovers, the threshold is the number of failovers.</li>
-             * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+             * <li>Task status alert: no threshold.</li>
+             * <li>Failover count alert: the threshold is the number of failovers.</li>
+             * <li>Task delay alert: the threshold is the delay duration. Unit: seconds.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -597,7 +597,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task with which the alert rule is associated.</p>
+             * <p>The task ID. This is the task ID associated with the alert rule.</p>
              * 
              * <strong>example:</strong>
              * <p>11260</p>
@@ -608,7 +608,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the alert rule.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql synchronizes to hologres heartbeat alert</p>
@@ -630,11 +630,11 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric type in the alert rule. Valid values:</p>
+             * <p>The alert metric type. Valid values:</p>
              * <ul>
-             * <li>Heartbeat</li>
-             * <li>FailoverCount</li>
-             * <li>Delay</li>
+             * <li>Heartbeat: task status alert.</li>
+             * <li>FailoverCount: failover count alert.</li>
+             * <li>Delay: task delay alert.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -654,7 +654,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conditions that are used to trigger the alert rule.</p>
+             * <p>The list of alert trigger conditions. Multiple conditions are supported.</p>
              */
             public Builder triggerConditions(java.util.List<TriggerConditions> triggerConditions) {
                 this.triggerConditions = triggerConditions;
@@ -747,7 +747,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The alert rules.</p>
+             * <p>The list of alert rules.</p>
              */
             public Builder DIJobAlarmRules(java.util.List<DIJobAlarmRules> DIJobAlarmRules) {
                 this.DIJobAlarmRules = DIJobAlarmRules;
@@ -766,7 +766,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -777,7 +777,7 @@ public class ListDIAlarmRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

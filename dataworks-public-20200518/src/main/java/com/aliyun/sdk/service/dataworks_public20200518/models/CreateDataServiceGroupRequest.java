@@ -158,7 +158,7 @@ public class CreateDataServiceGroupRequest extends Request {
          * <p>The description of the business process.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test business process</p>
+         * <p>Test workflow</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -171,7 +171,7 @@ public class CreateDataServiceGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Business process name</p>
+         * <p>Workflow name</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);

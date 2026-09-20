@@ -78,7 +78,7 @@ public class ListTablesResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>E25887B7-579C-54A5-9C4F-83A0DE367DD</p>
+         * <p>E25887B7-579C-54A5-9C4F-83A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

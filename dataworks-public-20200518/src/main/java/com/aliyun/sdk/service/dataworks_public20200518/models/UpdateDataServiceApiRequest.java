@@ -277,7 +277,7 @@ public class UpdateDataServiceApiRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>API description</p>
+         * <p>Test API description</p>
          */
         public Builder apiDescription(String apiDescription) {
             this.putBodyParameter("ApiDescription", apiDescription);

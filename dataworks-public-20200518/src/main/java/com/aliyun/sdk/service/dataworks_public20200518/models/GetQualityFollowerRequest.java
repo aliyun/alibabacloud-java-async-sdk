@@ -112,11 +112,11 @@ public class GetQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression.</p>
+         * <p>The ID of the partition expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -137,7 +137,7 @@ public class GetQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The name of the engine or data source.</p>
+         * <p>The name of the compute engine or data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

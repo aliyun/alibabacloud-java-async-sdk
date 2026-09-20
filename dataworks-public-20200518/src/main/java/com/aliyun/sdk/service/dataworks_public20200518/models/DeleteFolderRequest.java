@@ -111,7 +111,7 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * <p>DeleteFolder</p>
+         * <p>The ID of the folder. For more information about how to obtain the folder ID, see <a href="https://help.aliyun.com/document_detail/173955.html">ListFolders</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>The ID of the DataWorks workspace. To obtain the workspace ID, log on to the DataWorks console and go to the Workspace Management page. You must set this parameter or ProjectIdentifier to specify the DataWorks workspace for the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -136,7 +136,7 @@ public class DeleteFolderRequest extends Request {
         }
 
         /**
-         * <p><a href="http://100.67.165.184/business/api/folders/delete">http://100.67.165.184/business/api/folders/delete</a></p>
+         * <p>The name of the DataWorks workspace. To obtain the workspace name, log on to the DataWorks console and go to the Workspace Management page. You must set this parameter or ProjectId to specify the DataWorks workspace for the API call.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>

@@ -75,9 +75,6 @@ public class DeleteRemindRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -86,7 +83,7 @@ public class DeleteRemindRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom alert rule.</p>
+         * <p>The ID of the custom monitoring alert rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

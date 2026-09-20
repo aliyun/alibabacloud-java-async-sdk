@@ -142,7 +142,17 @@ public class CreateQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The notification method. Valid values: 1, 2, 4, 5, 6, 7, 8, and 9. The value 1 indicates that the notification is sent by email. The value 2 indicates that the notification is sent by email and text message. The value 4 indicates that the notification is sent by a DingTalk chatbot. The value 5 indicates that the notification is sent by a DingTalk chatbot to all members in a DingTalk group. The value 6 indicates that the notification is sent by Lark. The value 7 indicates that the notification is sent by WeCom. The value 8 indicates that the notification is sent by webhook. The value 9 indicates that the notification is sent by phone call.</p>
+         * <p>The notification method. Valid values:</p>
+         * <ul>
+         * <li>1: email.</li>
+         * <li>2: email and text message.</li>
+         * <li>4: DingTalk chatbot.</li>
+         * <li>5: DingTalk chatbot @ALL.</li>
+         * <li>6: Lark.</li>
+         * <li>7: WeCom.</li>
+         * <li>8: WEBHOOK.</li>
+         * <li>9: phone call alert.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,7 +165,7 @@ public class CreateQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression.</p>
+         * <p>The ID of the partition expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +191,7 @@ public class CreateQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can obtain the ID from the DataWorks console.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -193,7 +203,7 @@ public class CreateQualityFollowerRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute engine or data source.</p>
+         * <p>The name of the engine or data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

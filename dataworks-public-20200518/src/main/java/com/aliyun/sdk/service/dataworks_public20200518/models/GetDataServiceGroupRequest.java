@@ -130,7 +130,7 @@ public class GetDataServiceGroupRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10001</p>
+         * <p>10002</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -142,7 +142,7 @@ public class GetDataServiceGroupRequest extends Request {
          * <p>The tenant ID. This parameter is deprecated.</p>
          * 
          * <strong>example:</strong>
-         * <p>10002</p>
+         * <p>10001</p>
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

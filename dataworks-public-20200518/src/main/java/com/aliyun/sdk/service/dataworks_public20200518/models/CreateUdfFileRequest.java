@@ -254,7 +254,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the class in which the function is defined. This parameter corresponds to the Class Name parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * <p>The name of the class in which the function is defined, which corresponds to the Class Name field in the Create Function form.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The syntax used for calling the function. This parameter corresponds to the Expression Syntax parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * <p>The command format for invoking the function, which corresponds to the Command Format field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
          * <p>StringConcat(String... substrs)</p>
@@ -279,10 +279,12 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</p>
+         * <p>Specifies whether to enable automatic creation of the directory specified by the FileFolderPath parameter if it does not exist. Valid values:</p>
          * <ul>
-         * <li>true: The system automatically creates the directory if the directory does not exist.</li>
-         * <li>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</li>
+         * <li><p>true: Automatically creates the directory if it does not exist.</p>
+         * </li>
+         * <li><p>false: The invocation fails if the directory does not exist.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,10 +297,10 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
+         * <p>The function invocation example, which corresponds to the Example field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
-         * <p>StringConcat(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</p>
+         * <p>StringConcat(\&quot;a\&quot;, \&quot;b\&quot;, \&quot;c\&quot;)</p>
          */
         public Builder example(String example) {
             this.putBodyParameter("Example", example);
@@ -307,7 +309,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The path of the folder in which the file for the function is stored.</p>
+         * <p>The path of the folder where the function file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>Business_process/First_Business_Process/function/string_processing</p>
@@ -319,7 +321,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the file for the function.</p>
+         * <p>The name of the function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +334,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>The categorization of the function, which corresponds to the Function Type field in the Create Function form. Valid values: MATH (mathematical operation function), AGGREGATE (aggregate functions), STRING (character string processing function), DATE (date processing function), ANALYTIC (window function), and OTHER (other function).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -345,7 +347,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>The description of the function input parameters, which corresponds to the Parameter Description field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
          * <p>List of strings to be connected</p>
@@ -357,7 +359,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace Management page and view the workspace ID.</p>
+         * <p>The ID of the DataWorks workspace. You can click the small wrench icon in the upper-right corner of the page to go to the storage management page and view the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -369,8 +371,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the DataWorks workspace. You can click the identifier in the upper-left corner of the DataStudio page to switch to another workspace.</p>
-         * <p>You must specify either this parameter or the projectId parameter to determine the DataWorks workspace to which the operation is called.</p>
+         * <p>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>
@@ -382,7 +383,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The names of the resources that are referenced by the function. This parameter corresponds to the Resources parameter in the Register Function section of the configuration tab of the function in the DataWorks console. Multiple resource names are separated by commas (,).</p>
+         * <p>The resources referenced by the function, which corresponds to the Resources field in the Create Function form. Separate multiple resource names with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,7 +396,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>The description of the return value of the function, which corresponds to the Return Value field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
          * <p>New strings generated by concatenating all strings before and after the input order</p>
@@ -407,7 +408,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * <p>The description of the function. This parameter corresponds to the Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.</p>
+         * <p>The description of the function purpose, which corresponds to the Description field in the Create Function form.</p>
          * 
          * <strong>example:</strong>
          * <p>Concatenate several strings to generate a new string</p>

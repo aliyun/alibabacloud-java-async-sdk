@@ -113,20 +113,10 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The action for the permission request order. Valid values:</p>
+         * <p>The approval action to perform. Valid values:</p>
          * <ul>
-         * <li>1: approve</li>
-         * <li>2: reject</li>
-         * </ul>
-         * <!---->
-         * 
-         * <ul>
-         * <li>0</li>
-         * <li>1</li>
-         * <li>2.</li>
-         * <li>3.</li>
-         * <li>4</li>
-         * <li>5</li>
+         * <li>1: Approve.</li>
+         * <li>2: Reject.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -140,7 +130,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The comment on the order.</p>
+         * <p>The remarks for the approval.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +143,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The ID of the permission request order. You can call the ListPermissionApplyOrders operation to obtain the order ID.</p>
+         * <p>The ID of the permission request order to approve. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

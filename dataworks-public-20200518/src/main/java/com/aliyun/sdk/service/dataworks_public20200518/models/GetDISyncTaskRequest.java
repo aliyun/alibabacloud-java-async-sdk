@@ -114,8 +114,10 @@ public class GetDISyncTaskRequest extends Request {
 
         /**
          * <ul>
-         * <li>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</li>
-         * <li>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</li>
+         * <li><p>If you set TaskType to DI_REALTIME, set this parameter to the ID of the real-time synchronization task that you want to deploy.</p>
+         * </li>
+         * <li><p>If you set TaskType to DI_SOLUTION, set this parameter to the ID of the data synchronization solution that you want to deploy.</p>
+         * </li>
          * </ul>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID of the real-time synchronization task or data synchronization solution.</p>
          * <p>This parameter is required.</p>
@@ -146,8 +148,10 @@ public class GetDISyncTaskRequest extends Request {
         /**
          * <p>The type of the object that you want to query. Valid values:</p>
          * <ul>
-         * <li>DI_REALTIME: real-time synchronization task</li>
-         * <li>DI_SOLUTION: data synchronization solution</li>
+         * <li><p>DI_REALTIME: real-time synchronization task</p>
+         * </li>
+         * <li><p>DI_SOLUTION: data synchronization solution</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

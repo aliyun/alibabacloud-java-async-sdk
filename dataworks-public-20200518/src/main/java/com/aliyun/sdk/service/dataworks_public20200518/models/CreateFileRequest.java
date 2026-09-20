@@ -561,9 +561,9 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The advanced configurations of the node.</p>
-         * <p>This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Advanced Settings tab of the node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-         * <p>The value of this parameter must be in the JSON format.</p>
+         * <p>The advanced settings of the task.</p>
+         * <p>This parameter corresponds to the &quot;Advanced Settings&quot; in the right-side navigation pane of the editing page for EMR Spark Streaming and EMR Streaming SQL DataStudio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Currently, only EMR Spark Streaming and EMR Streaming SQL tasks support this parameter. The parameter value must be in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;queue&quot;:&quot;default&quot;,&quot;SPARK_CONF&quot;:&quot;--conf spark.driver.memory=2g&quot;}</p>
@@ -575,7 +575,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether scheduling configurations immediately take effect after the node is deployed.</p>
+         * <p>Specifies whether the scheduling configuration takes effect immediately after publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -587,12 +587,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic parsing feature for the file. Valid values:</p>
+         * <p>Specifies whether to enable automatic parsing for the file. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The file automatically parses code.</li>
+         * <li>false: The file does not automatically parse code.</li>
          * </ul>
-         * <p>This parameter corresponds to the Analyze Code parameter that is displayed after Same Cycle is selected in the Dependencies section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Code Parsing&quot; setting under &quot;Schedule Configuration &gt; Scheduling Dependency&quot; when &quot;Same Cycle&quot; is selected for a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -604,9 +604,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The interval between automatic reruns after an error occurs. Unit: milliseconds. Maximum value: 1800000 (30 minutes).</p>
-         * <p>This parameter corresponds to the Rerun Interval parameter that is displayed after the Auto Rerun upon Error check box is selected in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-         * <p>The interval that you specify in the DataWorks console is measured in minutes. Pay attention to the conversion between the units of time when you call the operation.</p>
+         * <p>The interval between automatic reruns upon an error. Unit: milliseconds. The maximum value is 1800000 milliseconds (30 minutes).</p>
+         * <p>This parameter corresponds to the &quot;Rerun Interval&quot; setting under &quot;Schedule Configuration &gt; Time Properties &gt; Auto Rerun upon Error&quot; of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. The time unit for &quot;Rerun Interval&quot; in the console is minutes. Convert the time accordingly when calling this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>120000</p>
@@ -618,7 +617,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The number of automatic reruns that are allowed after an error occurs. Maximum value: 10.</p>
+         * <p>The number of automatic reruns allowed upon an error. The maximum value is 10.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -630,11 +629,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the data source for which the node is run.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/211432.html">UpdateDataSource</a> operation to query the available data sources in the workspace.</p>
+         * <p>The data source that the task connects to when running after the file is published. You can call the <a href="https://help.aliyun.com/document_detail/211432.html">UpdateDataSource</a> operation to obtain the list of available data sources for the workspace.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps_first</p>
+         * <p>odps_source</p>
          */
         public Builder connectionName(String connectionName) {
             this.putBodyParameter("ConnectionName", connectionName);
@@ -643,7 +641,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The code for the file. The code format varies based on the file type. To view the code format for a specific file type, go to Operation Center, right-click a node of the file type, and then select View Code.</p>
+         * <p>The code content of the file. Different code types (fileType) have different code formats. You can find the corresponding type of node in Operation Center, right-click the node, and then click View Code to view the specific code format.</p>
          * 
          * <strong>example:</strong>
          * <p>SHOW TABLES;</p>
@@ -655,10 +653,10 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically create the directory that is specified by the FileFolderPath parameter if the directory does not exist. Valid values:</p>
+         * <p>Specifies whether to automatically create the directory if the specified directory (FileFolderPath) does not exist in the system. Valid values:</p>
          * <ul>
-         * <li>true: The system automatically creates the directory if the directory does not exist.</li>
-         * <li>false: The system does not automatically create the directory if the directory does not exist. In this case, the call fails.</li>
+         * <li>true: If the directory does not exist, automatically create the directory.</li>
+         * <li>false: If the directory does not exist, the invocation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -671,21 +669,30 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The CRON expression that represents the periodic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the Scheduling Cycle and Scheduled time parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.</p>
+         * <p>The CRON expression for periodic scheduling. This parameter corresponds to the &quot;Schedule Configuration &gt; Time Property &gt; CRON Expression&quot; setting of a DataStudio node in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure the scheduling cycle and timed scheduling time, DataWorks automatically generates the corresponding CRON expression.</p>
          * <p>Examples:</p>
          * <ul>
-         * <li>CRON expression for a node that is scheduled to run at 05:30 every day: <code>00 30 05 * * ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run at the fifteenth minute of each hour: <code>00 15 00-23/1 * * ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run every 10 minutes: <code>00 00/10 * * * ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run every 10 minutes from 08:00 to 17:00 every day: <code>00 00-59/10 8-17 * * * ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run at 00:20 on the first day of each month: <code>00 20 00 1 * ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run every three months from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></li>
-         * <li>CRON expression for a node that is scheduled to run at 00:05 every Tuesday and Friday: <code>00 05 00 * * 2,5</code></li>
+         * <li><p>Timed scheduling at 05:30 every day: <code>00 30 05 * * ?</code></p>
+         * </li>
+         * <li><p>Timed scheduling at the 15th minute of every hour: <code>00 15 00-23/1 * * ?</code></p>
+         * </li>
+         * <li><p>Schedule every 10 minutes: <code>00 00/10 * * * ?</code></p>
+         * </li>
+         * <li><p>Schedule every 10 minutes from 08:00 to 17:00 every day: <code>00 00-59/10 8-17 * * * ?</code></p>
+         * </li>
+         * <li><p>Timed scheduling at 00:20 on the 1st of every month: <code>00 20 00 1 * ?</code></p>
+         * </li>
+         * <li><p>Schedule every 3 months starting from 00:10 on January 1: <code>00 10 00 1 1-12/3 ?</code></p>
+         * </li>
+         * <li><p>Timed scheduling at 00:05 every Tuesday and Friday: <code>00 05 00 * * 2,5</code></p>
+         * </li>
          * </ul>
-         * <p>The scheduling system of DataWorks imposes the following limits on CRON expressions:</p>
+         * <p>Due to the rules of the DataWorks scheduling system, CRON expressions have the following limits:</p>
          * <ul>
-         * <li>The minimum interval specified in a CRON expression to schedule a node is 5 minutes.</li>
-         * <li>The earliest time specified in a CRON expression to schedule a node every day is 00:05.</li>
+         * <li><p>The minimum scheduling interval is 5 minutes.</p>
+         * </li>
+         * <li><p>The earliest scheduling time each day is 00:05.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -698,8 +705,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the scheduling cycle of the node that corresponds to the file. Valid values: NOT_DAY and DAY. The value NOT_DAY indicates that the node is scheduled to run by minute or hour. The value DAY indicates that the node is scheduled to run by day, week, or month.</p>
-         * <p>This parameter corresponds to the Scheduling Cycle parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The type of the scheduling cycle. Valid values: NOT_DAY (minute or hour) and DAY (day, week, or month).</p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Scheduling Cycle&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DAY</p>
@@ -711,7 +718,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes that generate instances in the previous cycle on which the current node depends.</p>
+         * <p>The list of nodes that the current node depends on from the previous cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -723,14 +730,14 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the cross-cycle scheduling dependency of the node. Valid values:</p>
+         * <p>The mode of cross-cycle dependency. Valid values:</p>
          * <ul>
-         * <li>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</li>
-         * <li>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</li>
-         * <li>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</li>
-         * <li>NONE: No cross-cycle scheduling dependency type is selected for the node.</li>
-         * <li>USER_DEFINE_AND_SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle and the instances generated for one or more specified nodes in the previous cycle.</li>
-         * <li>CHILD_AND_SELF: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle and the instance generated for the node in the previous cycle.</li>
+         * <li>SELF: The dependency is the current node.</li>
+         * <li>CHILD: The dependency is the first-level child nodes.</li>
+         * <li>USER_DEFINE: The dependency is other nodes.</li>
+         * <li>NONE: No dependency is selected. The node does not depend on the previous cycle.   </li>
+         * <li>USER_DEFINE_AND_SELF: The dependency is a combination of the current node and other nodes across cycles.</li>
+         * <li>CHILD_AND_SELF: The dependency is a combination of the first-level child nodes and the current node across cycles.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -743,8 +750,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The end time of automatic scheduling. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * <p>This parameter corresponds to the Validity Period parameter in the Schedule section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The timestamp when automatic scheduling stops. Unit: milliseconds.</p>
+         * <p>This parameter corresponds to the end time (in milliseconds) of the &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1671694850000</p>
@@ -759,7 +766,7 @@ public class CreateFileRequest extends Request {
          * <p>The description of the file.</p>
          * 
          * <strong>example:</strong>
-         * <p>Here is the file description</p>
+         * <p>This is a file description</p>
          */
         public Builder fileDescription(String fileDescription) {
             this.putBodyParameter("FileDescription", fileDescription);
@@ -793,8 +800,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The type of the code for the file. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</p>
+         * <p>The code type of the file. Different file types have different codes. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the code types of files.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -807,10 +814,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Whether to use the last cycle empty run attribute. The values are as follows:</p>
+         * <p>Specifies whether to inherit the dry-run property from the previous cycle. Valid values:</p>
          * <ul>
-         * <li>true: The empty run attribute of the previous cycle is used.</li>
-         * <li>false: The empty run attribute of the previous cycle is not used.</li>
+         * <li><p>true: Inherit the dry-run property from the previous cycle.</p>
+         * </li>
+         * <li><p>false: Do not inherit the dry-run property from the previous cycle.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -835,8 +844,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The output name of the parent file on which the current file depends. If you specify multiple output names, separate them with commas (,).</p>
-         * <p>This parameter corresponds to the Output Name parameter under Parent Nodes in the Dependencies section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The output names of the upstream files on which the file depends. Separate multiple output names with commas (,).</p>
+         * <p>This parameter corresponds to the &quot;Parent Node Output Name&quot; setting under &quot;Schedule Configuration &gt; Scheduling Dependency&quot; when &quot;Same Cycle&quot; is selected for a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>project_root,project.file1,project.001_out</p>
@@ -848,8 +857,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The input parameters of the node. The value of this parameter must be in the JSON format. For more information about the input parameters, see the InputContextParameterList parameter in the Response parameters section of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-         * <p>This parameter corresponds to the Input Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The input context parameters of the node. The parameter value is in JSON format. For the fields included, see the InputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Node Context &gt; Input Parameters of This Node&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;ValueSource&quot;: &quot;project_001.first_node:bizdate_param&quot;,&quot;ParameterName&quot;: &quot;bizdate_input&quot;}]</p>
@@ -870,8 +879,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The output parameters of the node. The value of this parameter must be in the JSON format. For more information about the output parameters, see the OutputContextParameterList parameter in the Response parameters section of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
-         * <p>This parameter corresponds to the Output Parameters table in the Input and Output Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The output context parameters of the node. The parameter value is in JSON format. For the fields included, see the OutputContextParameterList parameter structure in the response of the <a href="https://help.aliyun.com/document_detail/173954.html">GetFile</a> operation.</p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Node Context &gt; Output Parameters of This Node&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;Type&quot;: 1,&quot;Value&quot;: &quot;${bizdate}&quot;,&quot;ParameterName&quot;: &quot;bizdate_param&quot;}]</p>
@@ -883,7 +892,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the file owner. If this parameter is not configured, the ID of the Alibaba Cloud account of the user who calls the operation is used.</p>
+         * <p>The Alibaba Cloud user ID of the file owner. If this parameter is left empty, the Alibaba Cloud user ID of the caller is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000000001</p>
@@ -895,8 +904,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The scheduling parameters of the node. Separate multiple parameters with spaces.</p>
-         * <p>This parameter corresponds to the Parameters section of the Properties tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information about the configurations of the scheduling parameters, see <a href="https://help.aliyun.com/document_detail/137548.html">Configure scheduling parameters</a>.</p>
+         * <p>The scheduling parameters. Separate multiple parameters with spaces. </p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Parameters&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/137548.html">Scheduling parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>a=x b=y</p>
@@ -908,8 +917,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace ID.</p>
-         * <p>You must configure this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</p>
+         * <p>You must specify either this parameter or ProjectIdentifier to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -921,8 +930,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the workspace name.</p>
-         * <p>You must configure this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace name.</p>
+         * <p>You must specify either this parameter or ProjectId to determine the DataWorks workspace for this API call.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>
@@ -934,13 +943,13 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the node that corresponds to the file can be rerun. Valid values:</p>
+         * <p>The rerun property. Valid values:</p>
          * <ul>
-         * <li>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</li>
-         * <li>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</li>
-         * <li>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</li>
+         * <li>ALL_ALLOWED: The node can be rerun regardless of whether it runs successfully or fails.</li>
+         * <li>FAILURE_ALLOWED: The node can be rerun only after it fails.</li>
+         * <li>ALL_DENIED: The node cannot be rerun regardless of whether it runs successfully or fails.</li>
          * </ul>
-         * <p>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Rerun Property&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL_ALLOWED</p>
@@ -952,9 +961,9 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated. Do not use this parameter.</p>
-         * <p>The identifier of the resource group that is used to run the node. This parameter corresponds to the Resource Group parameter in the Resource Group section of the Properties tab in the DataWorks console. You must configure one of the ResourceGroupId and ResourceGroupIdentifier parameters to determine the resource group that is used to run the node.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace. When you call the operation, set the ResourceGroupType parameter to 1. The response parameter Id indicates the ID of an available resource group.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. Do not use it.</p>
+         * <p>The schedule resource group used for executing the node after the file is published. This corresponds to the &quot;Schedule Configuration &gt; Resource Property &gt; Schedule Resource Group&quot; setting on the page. You can specify either this parameter or ResourceGroupIdentifier.</p>
+         * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to obtain the list of active resource groups for the workspace. Set ResourceGroupType to 1 and use the ID field from the result.</p>
          * 
          * <strong>example:</strong>
          * <p>375827434852437</p>
@@ -966,9 +975,9 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The identifier of the resource group that is used to run the node. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation to query the available resource groups in the workspace. The <strong>Identifier</strong> parameter in the response of the operation indicates the identifier of an available resource group.</p>
+         * <p>The resource group used for running the task after the file is published. You can call the <a href="https://help.aliyun.com/document_detail/173913.html">ListResourceGroups</a> operation and use the <strong>identifier</strong> field to obtain the list of available resource groups for the workspace.</p>
          * <blockquote>
-         * <p> You must make sure that the available resource groups in the response of the ListResourceGroups operation are associated with the workspace for which you want to create a file by calling the CreateFile operation.</p>
+         * <p>Ensure that the resource group returned by the ListResourceGroups operation is bound to the workspace used for creating the file. The resource group can be used in CreateFile only after it is bound.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -981,12 +990,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The scheduling type of the node. Valid values:</p>
+         * <p>The scheduling type. Valid values:</p>
          * <ul>
-         * <li>NORMAL: The node is an auto triggered node.</li>
-         * <li>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</li>
-         * <li>PAUSE: The node is a paused node.</li>
-         * <li>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them</li>
+         * <li>NORMAL: A normal scheduling task.</li>
+         * <li>MANUAL: A manual task that is not scheduled on a daily basis. This corresponds to nodes in a manual workflow.</li>
+         * <li>PAUSE: A paused task.</li>
+         * <li>SKIP: A dry-run task that is scheduled on a daily basis but is directly set to successful when scheduling starts.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -999,8 +1008,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The start time of automatic scheduling. Set the value to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-         * <p>Configuring this parameter is equivalent to specifying a start time for the Validity Period parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>The timestamp in milliseconds when automatic scheduling starts.</p>
+         * <p>This parameter corresponds to the start time (in milliseconds) of the &quot;Schedule Configuration &gt; Time Properties &gt; Effective Date&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1671608450000</p>
@@ -1012,8 +1021,8 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to immediately run a node after the node is deployed.</p>
-         * <p>This parameter is valid only for an EMR Spark Streaming node or an EMR Streaming SQL node. This parameter corresponds to the Start Method parameter in the Schedule section of the Configure tab in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>Specifies whether to start the task immediately after publishing.</p>
+         * <p>This parameter corresponds to the &quot;Configuration &gt; Time Properties &gt; Startup Method&quot; setting in the right-side navigation pane of the editing page for EMR Spark Streaming and EMR Streaming SQL DataStudio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1025,12 +1034,12 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to suspend the scheduling of the node. Valid values:</p>
+         * <p>Specifies whether to suspend scheduling. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Suspend scheduling.</li>
+         * <li>false: Do not suspend scheduling.</li>
          * </ul>
-         * <p>This parameter corresponds to the Recurrence parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
+         * <p>This parameter corresponds to the &quot;Schedule Configuration &gt; Time Properties &gt; Scheduling Type&quot; setting of a DataStudio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> when the scheduling type is set to &quot;Suspend Scheduling&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1042,7 +1051,7 @@ public class CreateFileRequest extends Request {
         }
 
         /**
-         * <p>The timeout period.</p>
+         * <p>The timeout value defined in the scheduling configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

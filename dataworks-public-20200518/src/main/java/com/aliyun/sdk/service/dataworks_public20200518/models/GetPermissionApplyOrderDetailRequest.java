@@ -83,11 +83,11 @@ public class GetPermissionApplyOrderDetailRequest extends Request {
         }
 
         /**
-         * <p>The ID of the permission request order. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</p>
+         * <p>The ID of the permission application order. You can call the <a href="https://help.aliyun.com/document_detail/211008.html">ListPermissionApplyOrders</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>48f36729-05f9-4a40-9286-933fd940f30a</p>
+         * <p>48f36729-05f9-4a40-9286-933fd940****</p>
          */
         public Builder flowId(String flowId) {
             this.putQueryParameter("FlowId", flowId);

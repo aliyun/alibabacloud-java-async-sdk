@@ -168,7 +168,7 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * <p>Extension point event encoding.</p>
+         * <p>The event code of the extension point.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,8 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
+         * <p>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;For the message format, refer to <a href="https://help.aliyun.com/document_detail/215367.html">Message format</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>03400b03-b721-4c34-8727-2****1</p>
@@ -193,10 +194,10 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * <p>The operator ID.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>123333232</p>
+         * <p>123333</p>
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -205,7 +206,7 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number in a paged query. This parameter is used for paging. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,7 +218,7 @@ public class ListCheckProcessesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -243,9 +244,9 @@ public class ListCheckProcessesRequest extends Request {
         /**
          * <p>The check status of the extension. Valid values:</p>
          * <ul>
-         * <li>CHECKING</li>
-         * <li>PASSED</li>
-         * <li>BLOCKED</li>
+         * <li>CHECKING: The check is in progress.</li>
+         * <li>PASSED: The check is passed.</li>
+         * <li>BLOCKED: The check is not passed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

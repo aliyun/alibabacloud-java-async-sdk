@@ -279,7 +279,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The EMR cluster ID.</p>
+             * <p>The ID of the EMR cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -419,7 +419,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned result.</p>
+             * <p>The list of instance data.</p>
              */
             public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -427,7 +427,7 @@ public class GetMetaColumnLineageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number. Used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -103,11 +103,7 @@ public class ListDIProjectConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region in which the sync solution resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

@@ -119,7 +119,7 @@ public class UpdateQualityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the monitoring rule is updated.</p>
+         * <p>Indicates whether the quality check rule is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class UpdateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>576b9457-2cf5-4****</p>
@@ -174,7 +174,7 @@ public class UpdateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

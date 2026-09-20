@@ -207,9 +207,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
+         * <p>The type of collection to query. Valid values:</p>
          * <ul>
-         * <li>ALBUM: data album </li>
-         * <li>ALBUM_CATEGORY: category in a data album</li>
+         * <li><strong>ALBUM</strong>: album collection.</li>
+         * <li><strong>ALBUM_CATEGORY</strong>: subcategory within an album.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -223,7 +224,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collection creator.</p>
+         * <p>The user ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>1200759642363000</p>
@@ -250,7 +251,7 @@ public class ListMetaCollectionsRequest extends Request {
          * <p>The keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Keyword</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -259,7 +260,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that specifies the start point of the current read operation.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -271,10 +272,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * <p>The name of the sorting field.</p>
+         * <p>The name of the field used for sorting.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Sort field</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);

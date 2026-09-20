@@ -168,7 +168,7 @@ public class CheckMetaPartitionRequest extends Request {
          * <p>The type of the data source. Set the value to odps.</p>
          * 
          * <strong>example:</strong>
-         * <p>emr</p>
+         * <p>odps</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);

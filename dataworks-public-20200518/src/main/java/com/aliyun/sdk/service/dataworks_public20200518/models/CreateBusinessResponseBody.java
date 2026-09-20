@@ -119,7 +119,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The ID of the business process.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -163,7 +163,7 @@ public class CreateBusinessResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>

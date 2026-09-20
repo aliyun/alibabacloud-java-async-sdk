@@ -119,7 +119,7 @@ public class UpdateRemindResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the modification to the custom alert rule succeeds.</p>
+         * <p>The result of updating the custom monitoring rule.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class UpdateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -174,10 +174,10 @@ public class UpdateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

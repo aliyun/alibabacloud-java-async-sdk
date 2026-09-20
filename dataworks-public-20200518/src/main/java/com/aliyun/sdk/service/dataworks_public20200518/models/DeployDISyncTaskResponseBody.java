@@ -95,7 +95,7 @@ public class DeployDISyncTaskResponseBody extends TeaModel {
          * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>0bc1411515937635973****</p>
+         * <p>0bc14115159376359******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -93,7 +93,10 @@ public class LineageRelationRegisterVO extends TeaModel {
         } 
 
         /**
-         * CreateTimestamp.
+         * <p>The time of lineage relation generation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1684327487964</p>
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;
@@ -101,7 +104,7 @@ public class LineageRelationRegisterVO extends TeaModel {
         }
 
         /**
-         * DestEntity.
+         * <p>The destination entity in lineage relation</p>
          */
         public Builder destEntity(LineageEntityVO destEntity) {
             this.destEntity = destEntity;
@@ -109,7 +112,7 @@ public class LineageRelationRegisterVO extends TeaModel {
         }
 
         /**
-         * Relationship.
+         * <p>The relationship between entities</p>
          */
         public Builder relationship(RelationshipVO relationship) {
             this.relationship = relationship;
@@ -117,7 +120,7 @@ public class LineageRelationRegisterVO extends TeaModel {
         }
 
         /**
-         * SrcEntity.
+         * <p>The source entity in lineage relation</p>
          */
         public Builder srcEntity(LineageEntityVO srcEntity) {
             this.srcEntity = srcEntity;

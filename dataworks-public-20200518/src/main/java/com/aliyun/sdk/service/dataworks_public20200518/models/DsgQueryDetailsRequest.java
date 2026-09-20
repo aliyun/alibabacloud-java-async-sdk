@@ -255,6 +255,7 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query range. Example: &quot;2026-06-26 00:00:00&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +268,7 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query range. Example: &quot;2026-06-30 23:59:59&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,6 +281,12 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li>ODPS.ODPS</li>
+         * <li>EMR</li>
+         * <li>HOLO.POSTGRES</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +299,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * Ip.
+         * <p>The internal IP address of the ECU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>203.107.80.20</p>
          */
         public Builder ip(String ip) {
             this.putBodyParameter("Ip", ip);
@@ -300,7 +311,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * IpAare.
+         * <p>The region to which the IP address belongs. Example: China-Beijing-Beijing, or internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>China-Beijing-Beijing.</p>
          */
         public Builder ipAare(String ipAare) {
             this.putQueryParameter("IpAare", ipAare);
@@ -309,7 +323,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123541234</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -318,6 +335,7 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
+         * <p>The page number. Minimum value: 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,6 +348,7 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
+         * <p>The number of entries per page. Maximum value: 1000.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +361,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project workspace name (essentially ProjectName). Example: dsg_demo_gw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsg_demo_gw</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -351,7 +373,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * Rows.
+         * <p>The minimum value of the export volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder rows(Integer rows) {
             this.putQueryParameter("Rows", rows);
@@ -360,7 +385,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The type of triggered sensitive rule. Example: Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name.</p>
          */
         public Builder ruleType(String ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -369,7 +397,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * SensLevel.
+         * <p>The classification level. Example: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sensLevel(String sensLevel) {
             this.putBodyParameter("SensLevel", sensLevel);
@@ -378,7 +409,10 @@ public class DsgQueryDetailsRequest extends Request {
         }
 
         /**
-         * User.
+         * <p>The operator account. Example: dsg_test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsg_test</p>
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

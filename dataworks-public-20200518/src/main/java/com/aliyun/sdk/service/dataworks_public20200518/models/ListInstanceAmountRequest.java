@@ -113,7 +113,7 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

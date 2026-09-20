@@ -119,7 +119,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the file that was created.</p>
+         * <p>The ID of the file after it is created.</p>
          * 
          * <strong>example:</strong>
          * <p>100000002</p>
@@ -130,7 +130,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -141,7 +141,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The connection does not exist.</p>
@@ -152,7 +152,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -163,7 +163,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can troubleshoot issues based on the ID.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -174,7 +174,7 @@ public class CreateUdfFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

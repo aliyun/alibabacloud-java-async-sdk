@@ -140,10 +140,10 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * <p>The lineage type. Valid values:</p>
+         * <p>The lineage direction. Valid values: </p>
          * <ul>
-         * <li>up: ancestor lineage</li>
-         * <li>down: descendant lineage</li>
+         * <li>up: upstream.</li>
+         * <li>down: downstream.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -182,7 +182,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that specifies the starting point of the current read operation.</p>
          * 
          * <strong>example:</strong>
          * <p>next-token-from-previous-request</p>
@@ -194,7 +194,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>The page size. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

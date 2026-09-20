@@ -197,6 +197,7 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
+         * <p>The start time in the format of &quot;2026-06-30 03:59:59&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,6 +210,7 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
+         * <p>The end time in the format of &quot;2026-06-30 23:59:59&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,6 +223,12 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li>ODPS.ODPS</li>
+         * <li>EMR</li>
+         * <li>HOLO.POSTGRES</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,7 +241,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d0c72253-8eea-435b-91fc-163a90a54b33</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -242,7 +253,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -251,7 +265,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -260,7 +277,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The name of the project space. Example value: dsg_demo_gw.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dsg_demo_gw</p>
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -269,7 +289,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the sensitive field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name.</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -278,7 +301,10 @@ public class DsgGetVisitStatRequest extends Request {
         }
 
         /**
-         * SensLevel.
+         * <p>The classification level. Example value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sensLevel(String sensLevel) {
             this.putBodyParameter("SensLevel", sensLevel);

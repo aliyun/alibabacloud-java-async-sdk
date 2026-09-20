@@ -211,10 +211,10 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \&quot;odps_writer\&quot;, \&quot;mysql\&quot;. If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.</p>
+             * <p>The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;qcc_polardb2&quot;]</p>
+             * <p>[\&quot;qcc_polardb2\&quot;]</p>
              */
             public Builder diDestinationDatasource(String diDestinationDatasource) {
                 this.diDestinationDatasource = diDestinationDatasource;
@@ -222,10 +222,10 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the synchronization task. If the synchronization task has multiple sources, the return value is a JSON array, such as \&quot;odps_writer\&quot;, \&quot;mysql\&quot;. If the RefType parameter is set to from, the synchronization tasks that use the specified data source as the source are returned. In this case, the value of this parameter indicates the specified data source.</p>
+             * <p>The source of the synchronization task. If the synchronization task has multiple sources, the return value is a JSON array, such as \\&quot;odps_writer\\&quot;, \\&quot;mysql\\&quot;. If the RefType parameter is set to from, the synchronization tasks that use the specified data source as the source are returned. In this case, the value of this parameter indicates the specified data source.</p>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;odps_writer&quot;]</p>
+             * <p>[\&quot;odps_writer\&quot;]</p>
              */
             public Builder diSourceDatasource(String diSourceDatasource) {
                 this.diSourceDatasource = diSourceDatasource;

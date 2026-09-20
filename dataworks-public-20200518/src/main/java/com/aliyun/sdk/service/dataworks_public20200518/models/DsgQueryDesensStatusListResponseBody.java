@@ -119,7 +119,7 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Response data details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400010</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +138,11 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>Error message
+         * .</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param error</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +150,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +161,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +172,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +280,12 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             } 
 
             /**
-             * DesensStatus.
+             * <p>Switch status
+             * 1: Enabled
+             * 0: Disabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder desensStatus(Integer desensStatus) {
                 this.desensStatus = desensStatus;
@@ -272,7 +293,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * HandleSpace.
+             * <p>Represents project space name or workspace ID depending on the scenario</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder handleSpace(String handleSpace) {
                 this.handleSpace = handleSpace;
@@ -280,7 +304,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Switch ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56207</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -288,7 +315,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceIdentifier.
+             * <p>Workspace unique identifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_space</p>
              */
             public Builder workspaceIdentifier(String workspaceIdentifier) {
                 this.workspaceIdentifier = workspaceIdentifier;
@@ -296,7 +326,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>Workspace name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_space</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -389,7 +422,7 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             } 
 
             /**
-             * PageData.
+             * <p>Data masking rule type.</p>
              */
             public Builder pageData(java.util.List<PageData> pageData) {
                 this.pageData = pageData;
@@ -397,7 +430,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -405,7 +441,11 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of records displayed per page
+             * .</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -413,7 +453,10 @@ public class DsgQueryDesensStatusListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

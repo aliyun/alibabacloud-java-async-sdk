@@ -119,7 +119,10 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The processing result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -127,7 +130,14 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code. Valid values:</p>
+         * <ul>
+         * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+         * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1010040007</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +145,10 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +156,10 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +167,10 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AFBB799F-8578-51C5-A766-E922EDB8XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +178,14 @@ public class DsgUpdateDesensStatusListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

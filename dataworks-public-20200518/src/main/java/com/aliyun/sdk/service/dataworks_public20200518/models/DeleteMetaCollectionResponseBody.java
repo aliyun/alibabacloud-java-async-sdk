@@ -152,7 +152,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-E****</p>
@@ -163,9 +163,9 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation. Valid values:</p>
-         * <p>true: succeeded</p>
-         * <p>false: failed</p>
+         * <p>The operation result. Valid values:</p>
+         * <p>true: Succeeded.</p>
+         * <p>false: Failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -176,9 +176,9 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true</p>
-         * <p>false</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>true: The call was successful.</p>
+         * <p>false: The call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

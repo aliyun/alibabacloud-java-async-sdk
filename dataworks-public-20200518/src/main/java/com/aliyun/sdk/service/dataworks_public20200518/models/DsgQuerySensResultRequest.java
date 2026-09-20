@@ -306,7 +306,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the field.</p>
+         * <p>The field name.</p>
          * 
          * <strong>example:</strong>
          * <p>col</p>
@@ -318,7 +318,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The type of the database. Valid values:</p>
+         * <p>The database type. Valid values:</p>
          * <ul>
          * <li><strong>ODPS.ODPS</strong></li>
          * <li><strong>HOLO.POSTGRES</strong></li>
@@ -347,7 +347,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The name of a data category.</p>
+         * <p>The classification node name.</p>
          * 
          * <strong>example:</strong>
          * <p>Personal information</p>
@@ -359,10 +359,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The sorting method. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li>DESC</li>
-         * <li>ASC</li>
+         * <li>DESC: descending.</li>
+         * <li>ASC: ascending.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -375,7 +375,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting.</p>
+         * <p>The field used for sorting. Valid values:</p>
          * <ul>
          * <li>gmt_create</li>
          * <li>gmt_modified</li>
@@ -391,7 +391,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -415,7 +415,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace name.</p>
+         * <p>The name of the DataWorks workspace. Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace name.</p>
          * 
          * <strong>example:</strong>
          * <p>project</p>
@@ -427,7 +427,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the schema.</p>
+         * <p>The schema name.</p>
          * 
          * <strong>example:</strong>
          * <p>schema</p>
@@ -439,10 +439,11 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The sensitivity status of the field.</p>
+         * <p>The sensitivity status of the field. Valid values:</p>
          * <ul>
-         * <li>1: indicates sensitive.</li>
-         * <li>-1: indicates non-sensitive.</li>
+         * <li>sensitive: sensitive.</li>
+         * <li>noIdentify: not identified.</li>
+         * <li>noResult: no result.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -455,7 +456,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The sensitive field ID.</p>
+         * <p>The ID of the sensitive field.</p>
          * 
          * <strong>example:</strong>
          * <p>10241024</p>
@@ -479,7 +480,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>table</p>
@@ -491,7 +492,7 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>The tenant ID. Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click the username in the upper-right corner, and choose Menu &gt; User Info to obtain the tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10241024</p>
@@ -503,7 +504,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * endDate.
+         * <p>The query end time in the format of yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-19</p>
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("endDate", endDate);
@@ -512,7 +516,10 @@ public class DsgQuerySensResultRequest extends Request {
         }
 
         /**
-         * startDate.
+         * <p>The query start time in the format of yyyy-MM-dd or yyyy-MM-dd HH:mm:ss.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-05-19</p>
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("startDate", startDate);

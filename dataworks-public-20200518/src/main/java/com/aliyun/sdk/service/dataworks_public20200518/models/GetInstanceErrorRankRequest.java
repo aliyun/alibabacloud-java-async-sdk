@@ -83,7 +83,7 @@ public class GetInstanceErrorRankRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

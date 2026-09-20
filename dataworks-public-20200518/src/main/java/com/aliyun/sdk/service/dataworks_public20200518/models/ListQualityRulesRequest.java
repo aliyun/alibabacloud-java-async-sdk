@@ -142,11 +142,11 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to query the ID.</p>
+         * <p>The ID of the partition expression. Call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234</p>
+         * <p>12345</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -168,7 +168,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
+         * <p>The number of entries to return per page. Default: 10. Maximum: 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -193,7 +193,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute engine or data source. You can obtain the name from data source configurations.</p>
+         * <p>The name of the engine or data source. You can find this name on the Data Source Configuration page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

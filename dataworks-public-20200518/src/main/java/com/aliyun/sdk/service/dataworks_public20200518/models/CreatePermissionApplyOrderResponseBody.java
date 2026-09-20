@@ -67,7 +67,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request order ID.</p>
+         * <p>The list of flow IDs.</p>
          */
         public Builder flowId(java.util.List<String> flowId) {
             this.flowId = flowId;

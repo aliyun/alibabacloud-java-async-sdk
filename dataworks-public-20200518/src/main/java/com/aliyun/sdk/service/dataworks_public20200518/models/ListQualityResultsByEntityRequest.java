@@ -172,7 +172,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The end of the business date range. The value must be in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,11 +185,11 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to query the ID.</p>
+         * <p>The ID of the partition expression. You can call the <a href="https://help.aliyun.com/document_detail/174003.html">GetQualityEntity</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>152322134</p>
+         * <p>15232</p>
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -198,7 +198,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number to return.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 20.</p>
+         * <p>The number of entries to return per page. The default is 10, and the maximum is 20.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -236,7 +236,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute engine or data source. You can obtain the name from data source configurations.</p>
+         * <p>The name of the engine or data source. You can find this name on the Data Source Configuration page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class ListQualityResultsByEntityRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The start of the business date range. The value must be in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

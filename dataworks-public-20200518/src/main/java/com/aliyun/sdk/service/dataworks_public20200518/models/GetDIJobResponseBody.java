@@ -1334,7 +1334,7 @@ public class GetDIJobResponseBody extends TeaModel {
             /**
              * <p>The expression of the rule. The expression is a JSON string.</p>
              * <ul>
-             * <li><p>Example of a renaming rule: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}\]}\]}</code>.</p>
+             * <li><p>Example of a renaming rule: <code>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;,&quot;variables&quot;:[{&quot;variableName&quot;:&quot;srcDatabaseName&quot;,&quot;variableRules&quot;:[{&quot;from&quot;:&quot;fromdb&quot;,&quot;to&quot;:&quot;todb&quot;}\\]}\\]}</code>.</p>
              * <ul>
              * <li><p>expression: the expression of the renaming rule. The expression may contain the following variables:</p>
              * <ul>
@@ -1351,7 +1351,7 @@ public class GetDIJobResponseBody extends TeaModel {
              * </li>
              * </ul>
              * </li>
-             * <li><p>Example of a rule used to add a specific field to the destination and assign a value to the field: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}\]}</code>.</p>
+             * <li><p>Example of a rule used to add a specific field to the destination and assign a value to the field: <code>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}\\]}</code>.</p>
              * <p>If no rule of this type is configured, no fields are added to the destination and no values are assigned by default.</p>
              * <ul>
              * <li><p>columnName: the name of the field that is added.</p>
@@ -1366,14 +1366,14 @@ public class GetDIJobResponseBody extends TeaModel {
              * </li>
              * </ul>
              * </li>
-             * <li><p>Example of a rule used to specify primary key fields for a destination table: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;\]}</code>.</p>
+             * <li><p>Example of a rule used to specify primary key fields for a destination table: <code>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;\\]}</code>.</p>
              * <p>If no rule of this type is configured, the primary key fields in the mapped source table are used for the destination table by default.</p>
              * <ul>
              * <li>If the destination table is an existing table, Data Integration does not modify the schema of the destination table. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</li>
              * <li>If the destination table is automatically created by the system, Data Integration automatically creates the schema of the destination table. The schema contains the primary key fields that you specify. If the specified primary key fields do not exist in the destination table, an error is reported when the synchronization task starts to run.</li>
              * </ul>
              * </li>
-             * <li><p>Example of a rule used to process DML messages: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}\]}</code>.</p>
+             * <li><p>Example of a rule used to process DML messages: <code>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}\\]}</code>.</p>
              * <p>If no rule of this type is configured, the default processing policy for messages generated for insert, update, and delete operations is Normal.</p>
              * <ul>
              * <li>dmlType: the DML operation. Valid values: Insert, Update, and Delete.</li>

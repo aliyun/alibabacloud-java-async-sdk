@@ -67,7 +67,7 @@ public class CheckMetaTableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the metatable exists.</p>
+         * <p>Indicates whether the table exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

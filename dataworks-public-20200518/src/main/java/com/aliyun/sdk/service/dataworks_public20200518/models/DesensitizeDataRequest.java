@@ -98,7 +98,7 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * <p>The data that you want to mask.</p>
+         * <p>The input data to be masked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,8 @@ public class DesensitizeDataRequest extends Request {
         }
 
         /**
-         * <p>The code of the data masking scenario. You can view the code on the Data Masking Management page in Data Security Guard of the DataWorks console.</p>
+         * <p>The masking scene code. You can view this on the Data Masking Management page of DataWorks Data Protection Umbrella in the DataWorks console.</p>
+         * <p>You can obtain this value from Data[].SceneCode in the response of DsgSceneQuerySceneListByName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

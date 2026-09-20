@@ -218,7 +218,7 @@ public class UpdateDataSourceRequest extends Request {
          * </li>
          * <li><p>mongodb</p>
          * <pre><code>{
-         *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+         *   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
          *   &quot;database&quot;: &quot;admin&quot;,
          *   &quot;password&quot;: &quot;sadsda@&quot;,
          *   &quot;tag&quot;: &quot;public&quot;,
@@ -295,7 +295,7 @@ public class UpdateDataSourceRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;accessId&quot;:&quot;xssssss&quot;,&quot;accessKey&quot;:&quot;xsaxsaxsa&quot;,&quot;authType&quot;:2,&quot;endpoint&quot;:&quot;<a href="http://service.odps.aliyun.com/api%22,%22project%22:%22xsaxsax%22,%22tag%22:%22public%22%7D">http://service.odps.aliyun.com/api&quot;,&quot;project&quot;:&quot;xsaxsax&quot;,&quot;tag&quot;:&quot;public&quot;}</a></p>
+         * <p>{&quot;accessId&quot;:&quot;<em><strong><strong>&quot;,&quot;accessKey&quot;:&quot;</strong></strong></em>&quot;,&quot;authType&quot;:2,&quot;endpoint&quot;:&quot;<a href="http://service.odps.aliyun.com/api%22,%22project%22:%22xsaxsax%22,%22tag%22:%22public%22%7D">http://service.odps.aliyun.com/api&quot;,&quot;project&quot;:&quot;xsaxsax&quot;,&quot;tag&quot;:&quot;public&quot;}</a></p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);

@@ -344,7 +344,7 @@ public class AddRecognizeRuleRequest extends Request {
          * <p>Excludes fields. The system does not identify fields that are assigned with values.</p>
          * <ul>
          * <li>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</li>
-         * <li>*Wildcards are supported. For example, the asterisk (*) in default.table.column1* can be used to match any content following default.table.column1, such as default.table.column10.</li>
+         * <li><em>Wildcards are supported. For example, the asterisk (\</em>) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -360,7 +360,7 @@ public class AddRecognizeRuleRequest extends Request {
          * <p>Scans fields. The system identifies only fields that are assigned with values.</p>
          * <ul>
          * <li>The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.</li>
-         * <li>*Wildcards are supported. For example, the asterisk (*) in default.table.column1* can be used to match any content following default.table.column1, such as default.table.column10.</li>
+         * <li><em>Wildcards are supported. For example, the asterisk (\</em>) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -195,9 +195,12 @@ public class CreateDIAlarmRuleRequest extends Request {
         /**
          * <p>The metric type in the alert rule. Valid values:</p>
          * <ul>
-         * <li>Heartbeat</li>
-         * <li>FailoverCount</li>
-         * <li>Delay</li>
+         * <li><p>Heartbeat</p>
+         * </li>
+         * <li><p>FailoverCount</p>
+         * </li>
+         * <li><p>Delay</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -302,8 +305,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The severity level. Valid values:</p>
              * <ul>
-             * <li>Warning</li>
-             * <li>Critical</li>
+             * <li><p>Warning</p>
+             * </li>
+             * <li><p>Critical</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -376,8 +381,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The recipient type. Valid values: AliyunUid and DingToken.</p>
              * <ul>
-             * <li>If the alert notification method is Mail, Phone, or Sms, set this parameter to <strong>AliyunUid</strong>, which specifies the Alibaba Cloud account ID.</li>
-             * <li>If the alert notification method is Ding, set this parameter to <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</li>
+             * <li><p>If the alert notification method is Mail, Phone, or Sms, set this parameter to <strong>AliyunUid</strong>, which specifies the Alibaba Cloud account ID.</p>
+             * </li>
+             * <li><p>If the alert notification method is Ding, set this parameter to <strong>DingToken</strong>, which indicates the DingTalk chatbot token.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -585,8 +592,10 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The severity level. Valid values:</p>
              * <ul>
-             * <li>Warning</li>
-             * <li>Critical</li>
+             * <li><p>Warning</p>
+             * </li>
+             * <li><p>Critical</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -600,9 +609,12 @@ public class CreateDIAlarmRuleRequest extends Request {
             /**
              * <p>The alert threshold.</p>
              * <ul>
-             * <li>If the alert rule is for task status, you do not need to specify a threshold.</li>
-             * <li>If the alert rule is for failovers, specify the number of failovers.</li>
-             * <li>If the alert rule is for latency, the threshold is the latency duration, in seconds.</li>
+             * <li><p>If the alert rule is for task status, you do not need to specify a threshold.</p>
+             * </li>
+             * <li><p>If the alert rule is for failovers, specify the number of failovers.</p>
+             * </li>
+             * <li><p>If the alert rule is for latency, the threshold is the latency duration, in seconds.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

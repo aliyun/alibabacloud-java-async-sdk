@@ -119,7 +119,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of nodes.</p>
+         * <p>The list of nodes on the baseline.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID of the request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-E****</p>
@@ -266,7 +266,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>1234</p>
@@ -278,6 +278,9 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -285,7 +288,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * <p>The Alibaba Cloud UID of the node owner.</p>
              * 
              * <strong>example:</strong>
              * <p>9527952****</p>

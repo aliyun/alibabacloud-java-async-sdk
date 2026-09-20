@@ -87,7 +87,7 @@ public class TopTenErrorTimesInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>9527</p>
+         * <p>10000001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

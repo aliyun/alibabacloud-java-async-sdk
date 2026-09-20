@@ -199,6 +199,7 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query range. Example: &quot;2026-06-26 00:00:00&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +212,7 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query range. Example: &quot;2026-06-30 23:59:59&quot;.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +225,12 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li>ODPS.ODPS</li>
+         * <li>EMR</li>
+         * <li>HOLO.POSTGRES</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -235,7 +243,10 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword of the table or project name. DataWorks supports fuzzy match. You can enter a keyword to query table or project names that contain the keyword.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ods</p>
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -244,7 +255,10 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Long pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -253,7 +267,10 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -262,6 +279,7 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
+         * <p>The project name (ProjectName is easier to understand). Example: dsg_demo_gw.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +292,11 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
+         * <p>The name of the sensitive field.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Name.</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -283,7 +305,10 @@ public class DsgGetVisitDetailRequest extends Request {
         }
 
         /**
-         * SensLevel.
+         * <p>The sensitivity level. Example: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder sensLevel(String sensLevel) {
             this.putBodyParameter("SensLevel", sensLevel);

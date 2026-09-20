@@ -184,7 +184,8 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The data timestamp. The value of the data timestamp must be one or more days before the current date. For example, if the current date is November 11, 2020, set the value to 2020-11-10 00:00:00 or earlier. Configure this parameter in the YYYY-MM-DD 00:00:00 format.</p>
+         * <p>The business date. The value must be less than or equal to the current date minus 1 day. For example, if today is November 11, 2020, the business date must be 00:00:00 on November 10, 2020 or an earlier date. The hour, minute, and second values of the business date must all be set to 00.</p>
+         * <p>Format example: <code>yyyy-MM-dd HH:mm:ss</code>, such as <code>2020-11-11 00:00:00</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +198,7 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The parameters of the manually triggered workflow, which are synchronized to all the instances in the directed acyclic graph (DAG) of the workflow. If a workflow parameter specified in DagParameters is referenced as a scheduling parameter of a node, the value of the scheduling parameter is replaced with the value of the workflow parameter.</p>
+         * <p>The business process parameters. These parameters are synchronized to all instances of the current dagrun. If the scheduling parameters of internal nodes reference the business process parameters in DagParameters, the corresponding parameter values of the nodes are replaced with the business process parameters in DagParameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;kaaaa&quot;: &quot;vaaaaa&quot;, &quot;kbbbb&quot;: &quot;vbbbbb&quot;}</p>
@@ -209,7 +210,7 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes that do not need to be run.</p>
+         * <p>The list of node IDs that do not need to be executed.</p>
          * 
          * <strong>example:</strong>
          * <p>123,456</p>
@@ -221,7 +222,7 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The name of the manually triggered workflow.</p>
+         * <p>The name of the manual business process.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,7 +235,7 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the nodes that you want to run.</p>
+         * <p>The list of node IDs that need to be executed.</p>
          * 
          * <strong>example:</strong>
          * <p>74324,74325</p>
@@ -246,7 +247,8 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The parameters transmitted between nodes in the manually triggered workflow. The parameters are in the following JSON format: <code>{ &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot;, &quot;&lt;ID of a node in the manually triggered workflow&gt;&quot;: &quot;Scheduling parameter settings of the node, which are in the same format as the parameters in the Scheduling Parameter section on the Properties tab of the DataStudio page&quot; }</code></p>
+         * <p>The node parameter information passed when the manual business process is executed. The value is in JSON format:
+         * <code>{      &quot;&lt;Node ID within the manual business process&gt;&quot;: &quot;Scheduling parameter information of the node, in the same format as the parameters in the scheduling configuration of DataStudio&quot;,       &quot;&lt;Node ID within the manual business process&gt;&quot;: &quot;Scheduling parameter information of the node, in the same format as the parameters in the scheduling configuration of DataStudio&quot; }</code></p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;20000123121&quot;: &quot;key1=val2 key2=val2&quot;, &quot;20000123124&quot;: &quot;kkkk=vvvvv aaaa=bbbb&quot;}</p>
@@ -258,8 +260,11 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The environment type of Operation Center. Valid values: PROD and DEV.</p>
+         * <p>The environment identifier of the O&amp;M center. PROD indicates the production environment. DEV indicates the development environment.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD or DEV</p>
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -268,7 +273,7 @@ public class CreateManualDagRequest extends Request {
         }
 
         /**
-         * <p>The name of the workspace to which the manually triggered workflow belongs.</p>
+         * <p>The English name of the workspace to which the manual business process belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

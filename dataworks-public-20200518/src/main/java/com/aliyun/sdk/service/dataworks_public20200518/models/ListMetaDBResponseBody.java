@@ -67,7 +67,7 @@ public class ListMetaDBResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the metadatabases.</p>
+         * <p>The database information.</p>
          */
         public Builder databaseInfo(DatabaseInfo databaseInfo) {
             this.databaseInfo = databaseInfo;
@@ -209,7 +209,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The timestamp at which the metadatabase was created. You can convert the timestamp to the date based on the time zone that you use.</p>
+             * <p>The time when the database was created. The value is a timestamp. You can convert the timestamp to a date based on your time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>1388776825</p>
@@ -220,7 +220,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the metadatabase.</p>
+             * <p>The storage address of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>hdfs://localhost:777/user/hadoop/test.txt</p>
@@ -231,7 +231,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp at which the metadatabase was updated.</p>
+             * <p>The time when the database was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1388776837</p>
@@ -242,7 +242,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metadatabase.</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -253,7 +253,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner ID.</p>
+             * <p>The ID of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1232</p>
@@ -264,7 +264,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the metadatabase.</p>
+             * <p>The type of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>HIVE</p>
@@ -275,7 +275,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the metadatabase.</p>
+             * <p>The unique identifier of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>32342</p>
@@ -345,7 +345,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The metadatabases.</p>
+             * <p>The list of databases.</p>
              */
             public Builder dbList(java.util.List<DbList> dbList) {
                 this.dbList = dbList;
@@ -353,7 +353,7 @@ public class ListMetaDBResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of the metadatabases returned.</p>
+             * <p>The total number of databases.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

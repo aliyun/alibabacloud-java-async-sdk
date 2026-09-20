@@ -124,7 +124,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+         * <p>The engine ID, in the format of <code>Engine type.Engine name</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.some_engine_name</p>
@@ -136,7 +136,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * <p>The E-MapReduce (EMR) cluster ID.</p>
+         * <p>The cluster ID of the EMR cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -148,7 +148,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Valid values: odps and emr.</p>
+         * <p>The data type. Valid values: odps and emr.</p>
          * 
          * <strong>example:</strong>
          * <p>emr</p>
@@ -160,7 +160,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the metadatabase of the EMR cluster.</p>
+         * <p>The database of the EMR cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>

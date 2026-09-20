@@ -119,7 +119,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ID of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3333333</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -127,7 +130,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -135,7 +141,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -143,7 +152,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -151,7 +163,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E6F0DBDD-5AD****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +174,10 @@ public class CreateDagTestResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

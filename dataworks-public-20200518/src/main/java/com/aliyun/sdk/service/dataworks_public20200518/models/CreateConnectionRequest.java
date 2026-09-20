@@ -162,11 +162,7 @@ public class CreateConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where your project resides.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -306,7 +302,7 @@ public class CreateConnectionRequest extends Request {
          * <!---->
          * 
          * <pre><code>{
-         *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+         *   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
          *   &quot;database&quot;: &quot;admin&quot;,
          *   &quot;password&quot;: &quot;sadsda@&quot;,
          *   &quot;tag&quot;: &quot;public&quot;,

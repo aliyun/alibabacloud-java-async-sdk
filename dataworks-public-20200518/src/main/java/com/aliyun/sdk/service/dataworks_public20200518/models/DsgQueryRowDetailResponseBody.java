@@ -158,7 +158,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -166,7 +169,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Indicates whether the deletion is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -174,7 +180,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorCode.
+         * <p>The error code. The value is the same as ErrorCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder dynamicErrorCode(String dynamicErrorCode) {
             this.dynamicErrorCode = dynamicErrorCode;
@@ -182,7 +191,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorMessage.
+         * <p>The error message. The value is the same as ErrorMessage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing parameter</p>
          */
         public Builder dynamicErrorMessage(String dynamicErrorMessage) {
             this.dynamicErrorMessage = dynamicErrorMessage;
@@ -190,7 +202,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>401</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -198,7 +213,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The connection does not exist.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -206,7 +224,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -214,7 +235,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +246,10 @@ public class DsgQueryRowDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the workspace information is queried successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

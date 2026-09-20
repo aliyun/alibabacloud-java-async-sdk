@@ -221,9 +221,6 @@ public class CreateDagComplementRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -232,7 +229,11 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * BizBeginTime.
+         * <p>Optional. The start time of the task. This parameter is required for hourly scheduled tasks.</p>
+         * <p>Format: <code>HH:mm:ss</code>. Example: <code>00:00:00</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00:00:00</p>
          */
         public Builder bizBeginTime(String bizBeginTime) {
             this.putBodyParameter("BizBeginTime", bizBeginTime);
@@ -241,7 +242,11 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * BizEndTime.
+         * <p>Optional. The end time of the task. This parameter is required for hourly scheduled tasks.</p>
+         * <p>Format: <code>HH:mm:ss</code>. Example: <code>23:00:00</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23:00:00</p>
          */
         public Builder bizEndTime(String bizEndTime) {
             this.putBodyParameter("BizEndTime", bizEndTime);
@@ -250,6 +255,8 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The end business date for the data backfill.</p>
+         * <p>Format: <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>2020-05-21 00:00:00</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +269,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * ExcludeNodeIds.
+         * <p>Optional. The list of node IDs to exclude from the data backfill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder excludeNodeIds(String excludeNodeIds) {
             this.putBodyParameter("ExcludeNodeIds", excludeNodeIds);
@@ -271,6 +281,7 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The list of included node IDs. If you want to backfill data for only one node, the node must be included in includeNodeIds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,6 +294,7 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The name of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +307,10 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
-         * NodeParams.
+         * <p>A JSON string in which the key is the node ID and the value is the actual parameter value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{74324:&quot;key1=val1 key2=val&quot;}</p>
          */
         public Builder nodeParams(String nodeParams) {
             this.putBodyParameter("NodeParams", nodeParams);
@@ -304,6 +319,7 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether tasks can execute concurrently.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,6 +332,11 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>PROD: production environment.</li>
+         * <li>DEV: development environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,6 +349,7 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The ID of the root node for the data backfill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,6 +362,8 @@ public class CreateDagComplementRequest extends Request {
         }
 
         /**
+         * <p>The start business date for the data backfill.</p>
+         * <p>Format: <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>2020-05-20 00:00:00</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

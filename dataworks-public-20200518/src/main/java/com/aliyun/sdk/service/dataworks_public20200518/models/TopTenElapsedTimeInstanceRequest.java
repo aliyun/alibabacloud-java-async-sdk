@@ -87,7 +87,7 @@ public class TopTenElapsedTimeInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>100000</p>
+         * <p>1000001</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

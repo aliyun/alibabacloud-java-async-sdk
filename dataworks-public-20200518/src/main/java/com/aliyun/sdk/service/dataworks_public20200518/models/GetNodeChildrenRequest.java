@@ -98,7 +98,7 @@ public class GetNodeChildrenRequest extends Request {
         }
 
         /**
-         * <p>The node ID. You can go to the Operation Center page in the DataWorks console to query the node ID.</p>
+         * <p>The node ID. You can view the node ID in the Operation Center of the DataWorks console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetNodeChildrenRequest extends Request {
         }
 
         /**
-         * <p>The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.</p>
+         * <p>The environment identifier of the Operation Center. PROD indicates the production environment. DEV indicates the development environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

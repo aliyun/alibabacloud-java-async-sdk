@@ -145,7 +145,7 @@ public class CreateTableThemeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>Topic name</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

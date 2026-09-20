@@ -67,7 +67,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of test records.</p>
+         * <p>The data list.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ESDAFWEA</p>
@@ -222,7 +222,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the DataService Studio API on which the test is performed.</p>
+             * <p>The ID of the API to test.</p>
              * 
              * <strong>example:</strong>
              * <p>2343</p>
@@ -233,7 +233,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time that is consumed to complete the test.</p>
+             * <p>The time consumed by the API request.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -244,7 +244,8 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the test was initiated.</p>
+             * <p>The time when the task was created.</p>
+             * <p>The value is a 13-digit number, such as <code>1651824913000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1651824913000</p>
@@ -255,7 +256,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request parameters configured for the test.</p>
+             * <p>The request parameters of the test API.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;name&quot;:&quot;test&quot;}</p>
@@ -266,7 +267,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status code returned for the test. If the test is not complete, this parameter is not returned.</p>
+             * <p>The return code of the test API. This field is empty if the test is not completed.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -277,7 +278,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The result returned for the test.</p>
+             * <p>The returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;id&quot;:2}</p>
@@ -288,7 +289,11 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the test. Valid values: RUNNING and FINISHED.</p>
+             * <p>Indicates whether the task is completed. Valid values:</p>
+             * <ul>
+             * <li>RUNNING</li>
+             * <li>FINISHED</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>
@@ -299,7 +304,7 @@ public class ListDataServiceApiTestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the test.</p>
+             * <p>The test ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

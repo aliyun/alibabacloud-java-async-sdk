@@ -145,7 +145,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -156,7 +156,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code. The value is the same as that of ErrorCode.</p>
+         * <p>The error code. The value is the same as ErrorCode.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -167,7 +167,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. The value is the same as that of ErrorMessage.</p>
+         * <p>The error message. The value is the same as ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>Missing parameter</p>
@@ -211,7 +211,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. It is a unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>900000001</p>
@@ -222,10 +222,10 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: successful.</li>
+         * <li>false: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -115,7 +115,7 @@ public class GetBusinessRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1000000001</p>
+         * <p>1000000111</p>
          */
         public Builder businessId(Long businessId) {
             this.putBodyParameter("BusinessId", businessId);

@@ -134,9 +134,6 @@ public class CreateDagTestRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shanghai</p>
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -145,6 +142,8 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
+         * <p>The business date.</p>
+         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>2020-05-26 00:00:00</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +156,7 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
+         * <p>The name of the workflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +169,7 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
+         * <p>The ID of the node.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +182,10 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
-         * NodeParams.
+         * <p>The parameters of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bizdate=$bizdate tbods=$tbods</p>
          */
         public Builder nodeParams(String nodeParams) {
             this.putBodyParameter("NodeParams", nodeParams);
@@ -190,6 +194,7 @@ public class CreateDagTestRequest extends Request {
         }
 
         /**
+         * <p>The environment of the workspace. Valid values: PROD and DEV.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

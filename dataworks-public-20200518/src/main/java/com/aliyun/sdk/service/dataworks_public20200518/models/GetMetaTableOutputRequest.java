@@ -156,10 +156,11 @@ public class GetMetaTableOutputRequest extends Request {
 
         /**
          * <p>The end date.</p>
+         * <p>The format is <code>yyyy-MM-dd</code>, for example, <code>2020-05-27</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-02-15</p>
+         * <p>2020-05-27</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -168,7 +169,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+         * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,10 +194,11 @@ public class GetMetaTableOutputRequest extends Request {
 
         /**
          * <p>The start date.</p>
+         * <p>The format is <code>yyyy-MM-dd</code>, for example, <code>2020-06-27</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-02-02</p>
+         * <p>2020-06-27</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -205,11 +207,11 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The unique identifier of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps.sample_project.sample_table</p>
+         * <p>odps.engine_name.table_name</p>
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

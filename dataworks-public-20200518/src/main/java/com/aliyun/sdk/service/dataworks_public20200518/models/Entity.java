@@ -80,7 +80,12 @@ public class Entity extends TeaModel {
         } 
 
         /**
-         * EntityContent.
+         * <p>The properties of the entity, including:</p>
+         * <ul>
+         * <li><strong>entityType</strong>: The type of the entity. Examples: maxcompute-table and emr-table.</li>
+         * <li><strong>name</strong>: the name of the entity.</li>
+         * <li><strong>projectName</strong>: the name of the MaxCompute project.</li>
+         * </ul>
          */
         public Builder entityContent(java.util.Map<String, ?> entityContent) {
             this.entityContent = entityContent;
@@ -88,7 +93,10 @@ public class Entity extends TeaModel {
         }
 
         /**
-         * QualifiedName.
+         * <p>The unique identifier of the entity. Example: maxcompute-table.projectA.tableB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute_table.563f0357118d05ef145d6bddf2966cc23e86ca8f2f013f915e565afdf09f7a23</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -96,7 +104,10 @@ public class Entity extends TeaModel {
         }
 
         /**
-         * TenantId.
+         * <p>The tenant ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder tenantId(Long tenantId) {
             this.tenantId = tenantId;

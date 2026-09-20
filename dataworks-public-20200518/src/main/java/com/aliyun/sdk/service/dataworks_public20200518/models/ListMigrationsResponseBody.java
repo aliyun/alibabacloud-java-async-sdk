@@ -423,7 +423,7 @@ public class ListMigrationsResponseBody extends TeaModel {
              * <p>The error message returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>An internal system error occurred. datasource kafka region is not cn-chengdu, can&quot;t open network for it</p>
+             * <p>An internal system error occurred. datasource kafka region is not cn-chengdu, can\&quot;t open network for it</p>
              */
             public Builder message(String message) {
                 this.message = message;

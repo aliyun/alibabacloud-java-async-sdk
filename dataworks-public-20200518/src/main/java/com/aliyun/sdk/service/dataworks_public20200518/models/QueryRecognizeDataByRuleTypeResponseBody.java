@@ -119,7 +119,7 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result in the JSON format.</p>
+         * <p>The returned data in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;custom&quot;: false,       &quot;name&quot;: &quot;EducationDegree&quot;,       &quot;localeName&quot;: &quot;EducationDegree&quot;,       &quot;templateJsonStr&quot;: &quot;{&quot;_clazz&quot;:&quot;com.alipay.dsgclient.sdk.dsg.fastscan.engine.cond.EducationDegreeCond&quot;}&quot;,       &quot;desc&quot;: &quot;&quot;}]</p>
@@ -163,10 +163,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>10000001</p>
+         * <p>100000012</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,10 +174,10 @@ public class QueryRecognizeDataByRuleTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Successful.</li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

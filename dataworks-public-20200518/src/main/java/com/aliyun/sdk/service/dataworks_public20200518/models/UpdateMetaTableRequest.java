@@ -240,7 +240,7 @@ public class UpdateMetaTableRequest extends Request {
          * <p>The display name of the table.</p>
          * 
          * <strong>example:</strong>
-         * <p>test</p>
+         * <p>中文名</p>
          */
         public Builder caption(String caption) {
             this.putQueryParameter("Caption", caption);

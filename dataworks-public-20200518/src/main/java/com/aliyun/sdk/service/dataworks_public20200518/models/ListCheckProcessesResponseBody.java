@@ -75,7 +75,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EF****</p>
@@ -235,7 +235,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Extension point event encoding.</p>
+             * <p>The event code of the extension point.</p>
              * 
              * <strong>example:</strong>
              * <p>commit-file</p>
@@ -268,7 +268,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DataWorks the message ID of the open message. After an extended point event is triggered, you can obtain the message ID from the received event message.</p>
+             * <p>The message ID of the DataWorks open message. After an extension point event is triggered, you can obtain the message ID from the received event message.</p>
              * 
              * <strong>example:</strong>
              * <p>b824a5de-4223-4315-af3e-c4449d236db4</p>
@@ -279,7 +279,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The operator ID.</p>
+             * <p>The ID of the operator.</p>
              * 
              * <strong>example:</strong>
              * <p>297635</p>
@@ -290,7 +290,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the process instance.</p>
+             * <p>The process instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rdk_generate_d395da25-b0d3-4114-b2a5-d0247444a661_none_3496903_365203</p>
@@ -301,7 +301,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the check object, such as the file name or node name.</p>
+             * <p>The name of the operation object, such as the file name or node name.</p>
              * 
              * <strong>example:</strong>
              * <p>odps_sql_test</p>
@@ -323,11 +323,11 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the extender check.</p>
+             * <p>The check status of the extension. Valid values:</p>
              * <ul>
-             * <li>CHECKING CHECKING</li>
-             * <li>PASSED the pass check</li>
-             * <li>BLOCKED check failed</li>
+             * <li>CHECKING: The check is in progress.</li>
+             * <li>PASSED: The check is passed.</li>
+             * <li>BLOCKED: The check is not passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -424,7 +424,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The check details of the extension.</p>
+             * <p>The details of the extension check processes.</p>
              */
             public Builder checkProcesses(java.util.List<CheckProcesses> checkProcesses) {
                 this.checkProcesses = checkProcesses;
@@ -443,7 +443,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries displayed on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -454,7 +454,7 @@ public class ListCheckProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

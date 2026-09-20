@@ -389,7 +389,7 @@ public class UpdateTableRequest extends Request {
          * <p>The comment.</p>
          * 
          * <strong>example:</strong>
-         * <p>comment</p>
+         * <p>Remarks</p>
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -400,8 +400,10 @@ public class UpdateTableRequest extends Request {
         /**
          * <p>Specifies whether the table exists. Valid values:</p>
          * <ul>
-         * <li>true: The table exists.</li>
-         * <li>false: The table does not exist.</li>
+         * <li><p>true: The table exists.</p>
+         * </li>
+         * <li><p>false: The table does not exist.</p>
+         * </li>
          * </ul>
          * <p>This parameter is deprecated. Do not use this parameter.</p>
          * 
@@ -729,6 +731,9 @@ public class UpdateTableRequest extends Request {
 
             /**
              * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中文</p>
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -751,7 +756,7 @@ public class UpdateTableRequest extends Request {
              * <p>The comment of the field.</p>
              * 
              * <strong>example:</strong>
-             * <p>comment</p>
+             * <p>备注</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;

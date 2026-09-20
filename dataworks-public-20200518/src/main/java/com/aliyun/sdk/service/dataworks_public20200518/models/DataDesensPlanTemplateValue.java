@@ -80,7 +80,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         } 
 
         /**
-         * <p>The name of the data masking method.</p>
+         * <p>The name of the Desensitization Method.</p>
          * 
          * <strong>example:</strong>
          * <p>hash</p>
@@ -91,10 +91,12 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether a watermark is added. Valid values:</p>
+         * <p>Indicates whether watermarking is supported. Valid values:</p>
          * <ul>
-         * <li>true: allow</li>
-         * <li>false: disallow</li>
+         * <li><p>true: Watermarking is supported.</p>
+         * </li>
+         * <li><p>false: Watermarking is not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +108,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * <p>The data masking parameters and their descriptions.</p>
+         * <p>A list of Desensitization Parameters and their descriptions.</p>
          */
         public Builder extParamTemplate(java.util.List<?> extParamTemplate) {
             this.extParamTemplate = extParamTemplate;

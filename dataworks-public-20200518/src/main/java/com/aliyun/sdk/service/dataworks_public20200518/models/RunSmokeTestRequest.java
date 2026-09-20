@@ -142,7 +142,8 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * <p>The data timestamp.</p>
+         * <p>The business date.</p>
+         * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>. Example: <code>2020-05-26 00:00:00</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +169,8 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>The ID of the node. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to obtain the node ID.</p>
+         * <p>Full retrieval path: first call ListProjects to obtain the ProjectId, then call ListNodes, and obtain the node ID from Data.Nodes[].NodeId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +183,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * <p>The parameters related to the node. Set this parameter to a JSON string. A key in the string indicates a parameter, and a value in the string indicates the value of the related parameter.</p>
+         * <p>The parameters of the node. This parameter is configured as a JSON string. The key is the node ID, and the value is the actual parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>bizdate=$bizdate tbods=$tbods</p>
@@ -193,7 +195,12 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * <p>The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Differences between workspaces in basic mode and workspaces in standard mode</a>.</p>
+         * <p>The environment of the workspace. Valid values:</p>
+         * <ul>
+         * <li>PROD: production environment.</li>
+         * <li>DEV: development environment.</li>
+         * </ul>
+         * <p>Workspaces in basic mode do not have a development environment. For more information, see <a href="https://help.aliyun.com/document_detail/85772.html">Basic mode and standard mode</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

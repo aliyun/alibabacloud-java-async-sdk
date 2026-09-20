@@ -242,7 +242,7 @@ public class CreateDataSourceRequest extends Request {
          * <li><p>redis</p>
          * <pre><code>{    
          * &quot;password&quot;: &quot;xxxxxx&quot;,   
-         *  &quot;address&quot;:&quot;[{\&quot;host\&quot;:\&quot;xxxxxxx.redis.rds.aliyuncs.com\&quot;,\&quot;port\&quot;:6379}]&quot;,    
+         *  &quot;address&quot;:&quot;[{\\&quot;host\\&quot;:\\&quot;xxxxxxx.redis.rds.aliyuncs.com\\&quot;,\\&quot;port\\&quot;:6379}]&quot;,    
          * &quot;tag&quot;: &quot;public&quot;
          * }
          * </code></pre>
@@ -258,7 +258,7 @@ public class CreateDataSourceRequest extends Request {
          * </li>
          * <li><p>mongodb</p>
          * <pre><code>{
-         *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+         *   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
          *   &quot;database&quot;: &quot;admin&quot;,
          *   &quot;password&quot;: &quot;sadsda@&quot;,
          *   &quot;tag&quot;: &quot;public&quot;,

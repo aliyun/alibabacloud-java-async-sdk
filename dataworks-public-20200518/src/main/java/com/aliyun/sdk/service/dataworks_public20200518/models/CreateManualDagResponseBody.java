@@ -67,7 +67,7 @@ public class CreateManualDagResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the DAG for the manually triggered workflow. You can call an operation with this parameter as a request parameter to query the details and states of the nodes in the manually triggered workflow.</p>
+         * <p>The instance ID of the dagrun for the manual business process. You can use this DagId with the corresponding operation to query the detailed information and status of the internal node instances of this manual business process execution.</p>
          * 
          * <strong>example:</strong>
          * <p>700000123123141</p>
@@ -78,7 +78,7 @@ public class CreateManualDagResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</p>

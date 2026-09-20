@@ -119,7 +119,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the partition filter expression.</p>
+         * <p>The returned information.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>401</p>
@@ -138,7 +138,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>You have no permission.</p>
@@ -149,7 +149,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -160,7 +160,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6d739ef6-098a-47****</p>
@@ -171,7 +171,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -422,7 +422,8 @@ public class GetQualityEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the partition filter expression was created.</p>
+             * <p>The time when the partition expression was created.</p>
+             * <p>The value is a 13-digit number, for example, <code>1593964800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1593964800000</p>
@@ -433,10 +434,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the partition filter expression. Valid values:</p>
+             * <p>The level of the partition expression. Valid values:</p>
              * <ul>
-             * <li>0: The partition filter expression is at the SQL level. This indicates that the system checks data quality after each SQL statement is executed.</li>
-             * <li>1: The partition filter expression is at the node level. This indicates that the system checks data quality after all the SQL statements for a node are executed.</li>
+             * <li>0 (SQL level): DQC verification is triggered after each SQL statement is executed.</li>
+             * <li>1 (Task level): Verification is performed after all SQL statements are executed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -448,7 +449,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the compute engine instance or data source.</p>
+             * <p>The type of the engine or data source.</p>
              * 
              * <strong>example:</strong>
              * <p>odps</p>
@@ -459,7 +460,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to receive alert notifications.</p>
+             * <p>The subscribers. The Alibaba Cloud account IDs that receive alert notifications.</p>
              * 
              * <strong>example:</strong>
              * <p>1822931****</p>
@@ -470,10 +471,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the partition filter expression is associated with a node. Valid values:</p>
+             * <p>Indicates whether the partition expression is associated with scheduling. Valid values:</p>
              * <ul>
-             * <li>true: The partition filter expression is associated with a node.</li>
-             * <li>false: The partition filter expression is not associated with a node.</li>
+             * <li>true: Associated with scheduling.</li>
+             * <li>false: Not associated with scheduling.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -485,7 +486,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the partition filter expression.</p>
+             * <p>The ID of the partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>4003918</p>
@@ -496,7 +497,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition filter expression.</p>
+             * <p>The partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>dt=$[yyyymmdd-1]</p>
@@ -507,7 +508,8 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the partition filter expression was modified.</p>
+             * <p>The time when the partition expression was updated.</p>
+             * <p>The value is a 13-digit number, for example, <code>1593964800000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1593964800000</p>
@@ -518,7 +520,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to modify the partition filter expression.</p>
+             * <p>The account ID of the user who updated the partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>1822931****</p>
@@ -529,7 +531,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+             * <p>The owner. The account ID of the user who configured the partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>1822931****</p>
@@ -540,7 +542,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Alibaba Cloud account that is used to configure the partition filter expression.</p>
+             * <p>The Alibaba Cloud account name of the owner.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -551,7 +553,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the compute engine instance or data source.</p>
+             * <p>The name of the engine or data source.</p>
              * 
              * <strong>example:</strong>
              * <p>autotest</p>
@@ -562,10 +564,10 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the node with which the partition filter expression is associated. The information includes the following items:</p>
+             * <p>The information about the scheduling node associated with the partition expression, including:</p>
              * <ul>
-             * <li>ProjectName: the name of the workspace to which the node belongs.</li>
-             * <li>NodeID: the ID of the node.</li>
+             * <li>ProjectName: the name of the project to which the scheduling node belongs.</li>
+             * <li>NodeID: the node ID of the scheduling node.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -577,7 +579,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates that the partition filter expression is at the SQL level.</p>
+             * <p>The SQL-level partition expression.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -599,7 +601,7 @@ public class GetQualityEntityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node.</p>
+             * <p>The task node.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

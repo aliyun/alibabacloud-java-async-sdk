@@ -69,6 +69,7 @@ public class Cluster extends TeaModel {
         } 
 
         /**
+         * <p>The unique business identifier of the cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -80,6 +81,7 @@ public class Cluster extends TeaModel {
         }
 
         /**
+         * <p>The ID of the cluster associated with DataWorks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

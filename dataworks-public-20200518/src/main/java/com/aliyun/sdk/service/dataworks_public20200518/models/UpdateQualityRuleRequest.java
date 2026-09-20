@@ -388,10 +388,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:</p>
+         * <p>The strength of the quality check rule. The strength indicates the importance of the rule. Valid values:</p>
          * <ul>
-         * <li>1: indicates that the monitoring rule is a strong rule.</li>
-         * <li>0: indicates that the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and nodes that are associated with the rule are blocked from running.</li>
+         * <li>1: strong rule.</li>
+         * <li>0: weak rule.
+         * You can set important rules as strong rules based on your business requirements. If a strong rule is used and a red alert is triggered, the scheduling task is blocked.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -404,7 +405,18 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The checker ID. Valid values: 2: indicates that the current value is compared with the average value of the previous 7 days. 3: indicates that the current value is compared with the average value of the previous 30 days. 4: indicates that the current value is compared with the value 1 day earlier. 5: indicates that the current value is compared with the value 7 days earlier. 6: indicates that the current value is compared with the value 30 days earlier. 7: indicates the variance between the current value and the value 7 days earlier. 8: indicates the variance between the current value and the value 30 days earlier. 9: indicates that the current value is compared with a fixed value. 10: indicates that the current value is compared with the value 1, 7, or 30 days earlier. 11: indicates that the current value is compared with the value of the previous cycle. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID.</p>
+         * <p>The checker ID.
+         * 2: 7-day average fluctuation.
+         * 3: 30-day average fluctuation.
+         * 4: 1-day cycle comparison.
+         * 5: 7-day cycle comparison.
+         * 6: 30-day cycle comparison.
+         * 7: 7-day variance fluctuation.
+         * 8: 30-day variance fluctuation.
+         * 9: comparison with a fixed value.
+         * 10: 1-, 7-, and 30-day fluctuation detection.
+         * 11: previous cycle comparison.
+         * You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the checker ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9</p>
@@ -416,7 +428,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The description of the monitoring rule.</p>
+         * <p>The description of the quality check rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Verify the number of table rows</p>
@@ -428,7 +440,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.</p>
+         * <p>The red alert threshold. This value indicates the degree of deviation from the expected sample value. You can customize this threshold based on your business requirements. If a strong rule is used and the red threshold is triggered, the scheduling task is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -440,7 +452,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the partition filter expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the partition filter expression.</p>
+         * <p>The ID of the partition expression. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the partition expression ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -452,7 +464,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The expected value of the monitoring rule.</p>
+         * <p>The expected value of the check result.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -464,7 +476,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID of the monitoring rule.</p>
+         * <p>The ID of the quality check rule. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -477,7 +489,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.</p>
+         * <p>The name of the method used to collect sample data. Valid values: avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, and table_count-count_distinct.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -490,10 +502,12 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the monitoring rule in the production environment. Valid values:</p>
+         * <p>The enabled or disabled status of the rule, which controls whether the quality rule runs in the production environment.</p>
          * <ul>
-         * <li>true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.</li>
-         * <li>false: The monitoring rule is not triggered when the associated auto triggered node that generates the output data starts to run.</li>
+         * <li><p>true: When the scheduling task associated with the output table data of the data quality rule is executed, the quality rule check is triggered.</p>
+         * </li>
+         * <li><p>false: When the scheduling task associated with the output table data of the data quality rule is executed, the quality rule check is not triggered.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -506,9 +520,9 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The comparison operator, such as &gt;, &gt;=, =, ≠, &lt;, or &lt;=.</p>
+         * <p>The comparison operator. Valid values: &gt;, &gt;=, =, ≠, &lt;, and &lt;=.</p>
          * <blockquote>
-         * <p> If you set the Checker parameter to 9, you must configure the Operator parameter.</p>
+         * <p>When Checker is set to 9, Operator is a required parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -522,10 +536,10 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the threshold is a dynamic threshold. Valid values:</p>
+         * <p>Specifies whether the threshold is dynamic. Valid values:</p>
          * <ul>
-         * <li>0: The threshold is not a dynamic threshold.</li>
-         * <li>2: The threshold is a dynamic threshold.</li>
+         * <li>0: non-dynamic threshold.</li>
+         * <li>2: dynamic threshold.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -538,7 +552,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>26</p>
@@ -550,7 +564,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the name of the compute engine or data source.</p>
+         * <p>The name of the engine or data source. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -576,7 +590,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>bigint</p>
@@ -588,7 +602,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the monitoring rule.</p>
+         * <p>The name of the quality check rule.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -600,11 +614,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule type:</p>
+         * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li>0: System template rule</li>
-         * <li>1: Custom SQL rule</li>
-         * <li>4: Custom template rule</li>
+         * <li>0: system template rule.</li>
+         * <li>1: custom SQL rule.</li>
+         * <li>4: custom template rule.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -617,7 +631,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The variable settings inserted before the custom rule. Format: x=a,y=b.</p>
+         * <p>The variable settings inserted before the custom rule, in the format of x=a,y=b.</p>
          * 
          * <strong>example:</strong>
          * <p>x=a,y=b</p>
@@ -629,7 +643,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the monitoring template. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID of the monitoring template.</p>
+         * <p>The ID of the check template. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the check template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -641,11 +655,11 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The trend of the monitoring result. Valid values:</p>
+         * <p>The trend of the check result. Valid values:</p>
          * <ul>
-         * <li>up: increasing</li>
-         * <li>down: decreasing</li>
-         * <li>abs: absolute value</li>
+         * <li>up: upward trend.</li>
+         * <li>down: downward trend.</li>
+         * <li>abs: absolute value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -658,7 +672,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.</p>
+         * <p>The orange alert threshold. This value indicates the degree of deviation from the expected sample value. You can customize this threshold based on your business requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -670,7 +684,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The filter condition or custom SQL statement that is used for monitoring.</p>
+         * <p>The filter condition or custom SQL statement used by the check task.</p>
          * 
          * <strong>example:</strong>
          * <p>dt=$[yyyymmdd]</p>

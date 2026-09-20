@@ -85,6 +85,9 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
         /**
          * <p>A collection of whitelists.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DsgWhiteListAddOrUpdate</p>
          */
         public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
             String whiteListsShrink = shrink(whiteLists, "WhiteLists", "json");

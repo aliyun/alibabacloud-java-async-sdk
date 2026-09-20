@@ -119,7 +119,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The partition filter expression ID.</p>
+         * <p>The ID of the created partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>

@@ -152,7 +152,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The lineage.</p>
+         * <p>The lineage relationship object.</p>
          */
         public Builder lineageRelation(LineageRelation lineageRelation) {
             this.lineageRelation = lineageRelation;
@@ -160,10 +160,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
-         * <p>EE50E05E-028C-182B-9xxx</p>
+         * <p>EE50E05E-028C-182B-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,8 +173,10 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -268,7 +270,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the lineage between entities.</p>
+             * <p>The lineage relationship ID between entities.</p>
              * 
              * <strong>example:</strong>
              * <p>dfsldfdlsfdsaaaabbbb</p>

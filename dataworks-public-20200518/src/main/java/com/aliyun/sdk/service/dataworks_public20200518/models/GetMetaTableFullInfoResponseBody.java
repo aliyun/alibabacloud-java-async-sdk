@@ -160,7 +160,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1411515937****</p>
@@ -171,7 +171,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -342,7 +342,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the field.</p>
+             * <p>The GUID of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.engine_name.table_name.1</p>
@@ -364,7 +364,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the field.</p>
+             * <p>The type of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -375,7 +375,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the field.</p>
+             * <p>The comment of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>
@@ -388,8 +388,8 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the field is a foreign key. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The field is a foreign key.</li>
+             * <li>false: The field is not a foreign key.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -403,8 +403,8 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the field is a partition field. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The field is a partition field.</li>
+             * <li>false: The field is not a partition field.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -418,8 +418,8 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the field is a primary key. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The field is a primary key.</li>
+             * <li>false: The field is not a primary key.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -431,7 +431,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the field.</p>
+             * <p>The ordinal position of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -761,7 +761,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The EMR cluster ID.</p>
+             * <p>The ID of the EMR cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>C-010A704DA760****</p>
@@ -772,7 +772,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fields in the table.</p>
+             * <p>The list of fields.</p>
              */
             public Builder columnList(java.util.List<ColumnList> columnList) {
                 this.columnList = columnList;
@@ -780,7 +780,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The comment on the table.</p>
+             * <p>The comment of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>comment</p>
@@ -791,7 +791,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was created. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * <p>The time when the table was created. The value is a timestamp. You can convert the timestamp to a date based on the time zone that you use.</p>
              * 
              * <strong>example:</strong>
              * <p>1589870293000</p>
@@ -802,7 +802,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the storage space that is consumed by the table. Unit: bytes.</p>
+             * <p>The storage space occupied by the table, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -824,10 +824,10 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the environment. Valid values:</p>
+             * <p>The environment type. Valid values:</p>
              * <ul>
-             * <li>0: indicates that the table resides in the development environment.</li>
-             * <li>1: indicates that the table resides in the production environment.</li>
+             * <li>0: The table is in the development environment.</li>
+             * <li>1: The table is in the production environment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -839,12 +839,12 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scope in which the table is visible. Valid values:</p>
+             * <p>The visibility of the table. Valid values:</p>
              * <ul>
-             * <li>0: indicates that the table is visible to workspace members.</li>
-             * <li>1: indicates that the table is visible to users within a tenant.</li>
-             * <li>2: indicates that the table is visible to all tenants.</li>
-             * <li>3: indicates that the table is visible only to the table owner.</li>
+             * <li>0: The table is visible to workspace members.</li>
+             * <li>1: The table is visible within the tenant.</li>
+             * <li>2: The table is visible across tenants.</li>
+             * <li>3: The table is visible only to the owner.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -856,7 +856,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last accessed. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * <p>The time when the table was last accessed. The value is a timestamp. You can convert the timestamp to a date based on the time zone that you use.</p>
              * 
              * <strong>example:</strong>
              * <p>1589870294000</p>
@@ -867,7 +867,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the schema of the table was last changed. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * <p>The time when the table schema was last changed. The value is a timestamp. You can convert the timestamp to a date based on the time zone that you use.</p>
              * 
              * <strong>example:</strong>
              * <p>1589870294000</p>
@@ -878,7 +878,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the table was last updated. A timestamp is returned for this parameter. You can convert the timestamp to the related date based on the time zone that you use.</p>
+             * <p>The time when the table was last updated. The value is a timestamp. You can convert the timestamp to a date based on the time zone that you use.</p>
              * 
              * <strong>example:</strong>
              * <p>1589870294000</p>
@@ -889,7 +889,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lifecycle of the table. Unit: days.</p>
+             * <p>The lifecycle of the table, in days.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -922,7 +922,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The partition key column.</p>
+             * <p>The partition keys.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -966,7 +966,7 @@ public class GetMetaTableFullInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the table.</p>
+             * <p>The GUID of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.engine_name.table_name</p>

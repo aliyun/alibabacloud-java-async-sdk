@@ -88,7 +88,7 @@ public class ListProjectIdsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>171111</p>
+         * <p>139699392458****</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

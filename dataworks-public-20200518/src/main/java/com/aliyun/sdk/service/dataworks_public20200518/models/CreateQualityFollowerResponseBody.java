@@ -119,7 +119,7 @@ public class CreateQualityFollowerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the subscription relationship.</p>
+         * <p>The ID of the newly created subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -174,7 +174,7 @@ public class CreateQualityFollowerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

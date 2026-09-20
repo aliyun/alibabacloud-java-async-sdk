@@ -67,7 +67,7 @@ public class UpdateNodeRunModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>E6F0DBDD-5AD****</p>
@@ -80,8 +80,8 @@ public class UpdateNodeRunModeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

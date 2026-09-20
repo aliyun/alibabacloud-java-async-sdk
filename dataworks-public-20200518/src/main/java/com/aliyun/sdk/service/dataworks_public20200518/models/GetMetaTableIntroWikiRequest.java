@@ -97,7 +97,7 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the metatable.</p>
+         * <p>The unique identifier of the table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class GetMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * <p>The version of the instructions.</p>
+         * <p>The version of the usage instructions.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

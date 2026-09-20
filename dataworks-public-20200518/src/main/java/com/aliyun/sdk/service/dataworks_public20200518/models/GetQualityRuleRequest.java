@@ -112,7 +112,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID.</p>
+         * <p>The ID of the DataWorks workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -124,7 +124,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the compute engine or data source.</p>
+         * <p>The name of the engine or data source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitoring rule ID. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to query the ID.</p>
+         * <p>The ID of the quality rule. You can call the <a href="https://help.aliyun.com/document_detail/173995.html">ListQualityRules</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

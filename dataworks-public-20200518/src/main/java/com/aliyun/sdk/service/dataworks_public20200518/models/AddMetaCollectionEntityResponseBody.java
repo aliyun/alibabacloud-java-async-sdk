@@ -152,7 +152,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the request ID to query logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-E****</p>
@@ -163,10 +163,10 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation. Valid values:</p>
+         * <p>The operation result. Valid values: </p>
          * <ul>
-         * <li>true: succeeded</li>
-         * <li>false: failed</li>
+         * <li>true: Succeeded. </li>
+         * <li>false: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,8 +178,11 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true false</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

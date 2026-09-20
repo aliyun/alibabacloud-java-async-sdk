@@ -256,7 +256,7 @@ public class GetDeploymentResponseBody extends TeaModel {
              * <p>The file ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>507642378</p>
+             * <p>5076****</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;

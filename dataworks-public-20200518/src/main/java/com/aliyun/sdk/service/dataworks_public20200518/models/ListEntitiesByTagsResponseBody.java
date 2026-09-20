@@ -119,7 +119,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-E****</p>
@@ -172,7 +172,10 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true<br>false</p>
+         * <ul>
+         * <li>true: The request was successful.  </li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -241,7 +244,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The entities.</p>
+             * <p>The list of entities.</p>
              */
             public Builder entityList(java.util.List<Entity> entityList) {
                 this.entityList = entityList;
@@ -249,7 +252,7 @@ public class ListEntitiesByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * <p>The pagination token that specifies the start point of the next read operation.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>

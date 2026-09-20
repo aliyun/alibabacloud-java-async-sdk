@@ -119,7 +119,7 @@ public class SubmitFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The deployment package ID. The ID is used as the value of a specific request parameter when you call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the details of the deployment operation.</p>
+         * <p>The deployment ID. Call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation with this ID to query the deployment details.</p>
          * 
          * <strong>example:</strong>
          * <p>3000001</p>
@@ -163,7 +163,7 @@ public class SubmitFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID, which is used for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>

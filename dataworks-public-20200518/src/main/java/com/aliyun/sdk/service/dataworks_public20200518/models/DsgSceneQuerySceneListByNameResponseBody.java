@@ -119,7 +119,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The list of data masking scenarios.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can locate logs and troubleshoot issues based on the ID.</p>
+         * <p>The ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>102400001</p>
@@ -173,8 +173,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,10 +259,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the EMR cluster. This parameter is returned only when the data scope that takes effect in the data masking scenario is an EMR compute engine.</p>
+             * <p>The ID of the E-MapReduce (EMR) cluster. This parameter is returned only if the <code>DbType</code> is <code>EMR</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>c-1234</p>
+             * <p>c-123456</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -268,11 +270,14 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the compute engine. Valid values:</p>
+             * <p>The engine type. Valid values:</p>
              * <ul>
-             * <li>ODPS: ODPS.ODPS</li>
-             * <li>HOLO: HOLO.POSTGRES</li>
-             * <li>EMR: EMR</li>
+             * <li><p>MaxCompute: <code>ODPS.ODPS</code></p>
+             * </li>
+             * <li><p>Hologres: <code>HOLO.POSTGRES</code></p>
+             * </li>
+             * <li><p>E-MapReduce (EMR): <code>EMR</code></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -284,7 +289,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the compute engine.</p>
+             * <p>The name of the engine instance.</p>
              * 
              * <strong>example:</strong>
              * <p>dev_project</p>
@@ -445,7 +450,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about multiple levels of data masking scenarios.</p>
+             * <p>The nested data masking scenarios.</p>
              */
             public Builder children(java.util.List<?> children) {
                 this.children = children;
@@ -475,7 +480,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the compute engine for which the data masking scenario takes effect.</p>
+             * <p>The engine instances to which the data masking scenario applies.</p>
              */
             public Builder projects(java.util.List<Projects> projects) {
                 this.projects = projects;
@@ -483,14 +488,20 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the level-1 data masking scenario. Valid values:</p>
+             * <p>The code for the level-1 scenario. Valid values:</p>
              * <ul>
-             * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
-             * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
-             * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
-             * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
-             * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
-             * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+             * <li><p>Data masking in Data Map and DataStudio: <code>dataworks_display_desense_code</code></p>
+             * </li>
+             * <li><p>Data masking at the MaxCompute engine layer: <code>maxcompute_desense_code</code></p>
+             * </li>
+             * <li><p>Data masking at the MaxCompute engine layer (new): <code>maxcompute_new_desense_code</code></p>
+             * </li>
+             * <li><p>Data masking at the Hologres engine layer: <code>hologres_display_desense_code</code></p>
+             * </li>
+             * <li><p>Static data masking in Data Integration: <code>dataworks_data_integration_desense_code</code></p>
+             * </li>
+             * <li><p>Data masking in Data Analysis: <code>dataworks_analysis_desense_code</code></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,8 +515,10 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             /**
              * <p>The level of the data masking scenario. Valid values:</p>
              * <ul>
-             * <li>0: level-1 data masking scenario</li>
-             * <li>1: level-2 data masking scenario</li>
+             * <li><p><code>0</code>: level-1 scenario</p>
+             * </li>
+             * <li><p><code>1</code>: level-2 scenario</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -528,7 +541,7 @@ public class DsgSceneQuerySceneListByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of user groups in the data masking scenario. Separate user groups with commas (,).</p>
+             * <p>The user groups to which the data masking scenario applies. Multiple user group names are separated by a comma (,).</p>
              * 
              * <strong>example:</strong>
              * <p>user1,user2</p>

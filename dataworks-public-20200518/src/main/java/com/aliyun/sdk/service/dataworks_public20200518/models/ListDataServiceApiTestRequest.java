@@ -97,7 +97,7 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataService Studio API on which tests are performed.</p>
+         * <p>The ID of the API to test.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ListDataServiceApiTestRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * <p>The page size. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

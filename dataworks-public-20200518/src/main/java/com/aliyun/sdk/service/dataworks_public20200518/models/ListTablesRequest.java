@@ -115,10 +115,7 @@ public class ListTablesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>odps
-         * emr
-         * mysql
-         * holo</p>
+         * <p>odps</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);

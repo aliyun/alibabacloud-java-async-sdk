@@ -130,7 +130,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1031203110005</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -141,7 +141,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>SUCCESS</p>
+         * <p>The specified parameters are invalid.</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -163,7 +163,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0000-0000-0000-000</p>
+         * <p>0bc1ec92159376****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -306,9 +306,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
             /**
              * <p>The end time.</p>
+             * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, for example, <code>2020-01-01 00:01:00</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-02-12 0:32:12</p>
+             * <p>2020-01-01 00:01:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -319,7 +320,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
              * <p>The workspace ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>128</p>
+             * <p>333</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -328,9 +329,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
             /**
              * <p>The start time.</p>
+             * <p>The format is <code>yyyy-MM-dd HH:mm:ss</code>, for example, <code>2020-01-01 00:00:00</code>.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-02-12 0:34:13</p>
+             * <p>2020-01-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,10 +340,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the MaxCompute table.</p>
+             * <p>The unique identifier of the ODPS table.</p>
              * 
              * <strong>example:</strong>
-             * <p>odps.sample_project.sample_table</p>
+             * <p>odps.engine_name.table_name</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -363,7 +365,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
              * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>987654321</p>
+             * <p>3521</p>
              */
             public Builder taskInstanceId(Long taskInstanceId) {
                 this.taskInstanceId = taskInstanceId;
@@ -371,10 +373,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The waiting time.</p>
+             * <p>The task wait duration, in seconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>323</p>
              */
             public Builder waitTime(String waitTime) {
                 this.waitTime = waitTime;
@@ -467,7 +469,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The partitions.</p>
+             * <p>The list of instances.</p>
              */
             public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -475,7 +477,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. Valid values: 1 to 30. Default value: 1.</p>
+             * <p>The page number. Default value: 1. Minimum value: 1. Maximum value: 30.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -497,10 +499,10 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of tables.</p>
              * 
              * <strong>example:</strong>
-             * <p>128</p>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

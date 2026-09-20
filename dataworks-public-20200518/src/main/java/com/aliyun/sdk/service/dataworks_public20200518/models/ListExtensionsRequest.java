@@ -96,7 +96,7 @@ public class ListExtensionsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the request, used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

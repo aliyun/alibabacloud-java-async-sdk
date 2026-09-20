@@ -331,7 +331,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category ID.</p>
+             * <p>The ID of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>133</p>
@@ -354,6 +354,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
 
             /**
              * <p>The time when the category was created.</p>
+             * <p>The value is a 13-digit number, such as <code>1541576644000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1541576644000</p>
@@ -364,7 +365,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of category levels.</p>
+             * <p>The depth level of the category.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -375,7 +376,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user that performed the last operation.</p>
+             * <p>The ID of the user who last performed an operation.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -387,6 +388,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
 
             /**
              * <p>The time when the category was last modified.</p>
+             * <p>The value is a 13-digit number, such as <code>1541576644000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1541576644000</p>
@@ -408,7 +410,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category owner ID.</p>
+             * <p>The ID of the category owner.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -419,7 +421,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent category ID.</p>
+             * <p>The ID of the parent category.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -515,7 +517,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the category tree.</p>
+             * <p>The list of data entities.</p>
              */
             public Builder dataEntityList(java.util.List<DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -523,7 +525,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number. Used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -545,7 +547,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of categories returned.</p>
+             * <p>The total number of categories.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

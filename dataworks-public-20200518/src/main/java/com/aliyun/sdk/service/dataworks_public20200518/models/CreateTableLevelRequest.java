@@ -130,7 +130,7 @@ public class CreateTableLevelRequest extends Request {
          * <p>The description of the table level.</p>
          * 
          * <strong>example:</strong>
-         * <p>The HTTP status code returned.</p>
+         * <p>Level description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -156,7 +156,7 @@ public class CreateTableLevelRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The description of the table level.</p>
+         * <p>Level 1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -119,7 +119,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the node is disassociated from the partition filter expression.</p>
+         * <p>Indicates whether the scheduling association was successfully deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -130,7 +130,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>401</p>
@@ -141,7 +141,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>You have no permission.</p>
@@ -152,7 +152,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -163,7 +163,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6d739ef6-098a-47****</p>
@@ -174,7 +174,7 @@ public class DeleteQualityRelativeNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the API call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

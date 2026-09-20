@@ -326,7 +326,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compute engine instance ID. Specify the ID in the <code>Engine type.Engine name</code> format.</p>
+             * <p>The engine ID, in the format of <code>Engine type.Engine name</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.engine_name</p>
@@ -351,7 +351,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
              * <p>The comment.</p>
              * 
              * <strong>example:</strong>
-             * <p>The ID of the compute engine instance. The ID is in the Engine type.Engine name format.</p>
+             * <p>Comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -359,7 +359,8 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute engine instance was created.</p>
+             * <p>The time when the engine was created.</p>
+             * <p>The value is a 13-digit number, for example, <code>1541576644000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1541576644000</p>
@@ -370,7 +371,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the service.</p>
+             * <p>The service endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://service.odpsstg.aliyun-inc.com/">http://service.odpsstg.aliyun-inc.com/</a></p>
@@ -381,7 +382,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.</p>
+             * <p>The environment type. A value of 0 indicates a non-production table. A value of 1 indicates a production table.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -392,7 +393,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage path of the metadatabase of the EMR cluster.</p>
+             * <p>The data storage address of the EMR database.</p>
              * 
              * <strong>example:</strong>
              * <p>hdfs://</p>
@@ -403,7 +404,8 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the compute engine instance was modified.</p>
+             * <p>The time when the engine was modified.</p>
+             * <p>The value is a 13-digit number, for example, <code>1541576644000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1541576644000</p>
@@ -414,7 +416,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -425,10 +427,10 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the workspace owner.</p>
+             * <p>The Alibaba Cloud account ID of the workspace owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>23</p>
+             * <p>userId</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -439,7 +441,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
              * <p>The name of the workspace owner.</p>
              * 
              * <strong>example:</strong>
-             * <p>323</p>
+             * <p>my_name</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -472,7 +474,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
              * <p>The display name of the workspace.</p>
              * 
              * <strong>example:</strong>
-             * <p>The storage path of the metadatabase of the EMR cluster.</p>
+             * <p>Test project</p>
              */
             public Builder projectNameCn(String projectNameCn) {
                 this.projectNameCn = projectNameCn;
@@ -491,7 +493,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the metadatabase.</p>
+             * <p>The database type.</p>
              * 
              * <strong>example:</strong>
              * <p>hive</p>

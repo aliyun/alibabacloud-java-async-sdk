@@ -401,7 +401,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;pubEndpoint&quot;: &quot;service.cn.maxcompute.aliyun.com/api&quot;,
              *   &quot;endpoint&quot;: &quot;service.cn.maxcompute.aliyun-inc.com/api&quot;,
              *   &quot;initProperties&quot;: &quot; 
-             *   {\&quot;odpsTypeMode\&quot;:\&quot;STANDARD\&quot;,\&quot;openPai\&quot;:false,\&quot;openPaiGpu\&quot;:false}&quot;,
+             *   {\\&quot;odpsTypeMode\\&quot;:\\&quot;STANDARD\\&quot;,\\&quot;openPai\\&quot;:false,\\&quot;openPaiGpu\\&quot;:false}&quot;,
              *   &quot;resourceGroupType&quot;: &quot;ODPS&quot;,
              *   &quot;resourceGroupId&quot;: &quot;361826516****&quot;,
              *   &quot;vpcEndpoint&quot;: &quot;service.cn.maxcompute.aliyun-inc.com/api&quot;,
@@ -413,7 +413,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              * <li><p>EMR</p>
              * <pre><code>{
              *   &quot;emrClusterId&quot;: &quot;C-xxx&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;emrClusterId\&quot;:\&quot;C-xxx\&quot;,\&quot;emrAccessMode\&quot;:\&quot;simple\&quot;,\&quot;emrResourceQueueName\&quot;:\&quot;default\&quot;,\&quot;emrProjectId\&quot;:\&quot;FP-xxx\&quot;}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;emrClusterId\\&quot;:\\&quot;C-xxx\\&quot;,\\&quot;emrAccessMode\\&quot;:\\&quot;simple\\&quot;,\\&quot;emrResourceQueueName\\&quot;:\\&quot;default\\&quot;,\\&quot;emrProjectId\\&quot;:\\&quot;FP-xxx\\&quot;}&quot;,
              *   &quot;endpoint&quot;: &quot;emr.aliyuncs.com&quot;,
              *   &quot;emrResourceQueueName&quot;: &quot;default&quot;,
              *   &quot;emrAccessMode&quot;: &quot;simple&quot;,
@@ -435,7 +435,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;projectName&quot;: &quot;xc_blxxxsxink_1&quot;,
              *   &quot;queue&quot;: &quot;root.xc_blxsxxxxxxink_1&quot;,
              *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;cluster\&quot;:\&quot;xxxxxx\&quot;,\&quot;bayesProjectName\&quot;:\&quot;xc_blxxixxxnk_1\&quot;,\&quot;bayesProjectId\&quot;:\&quot;ssxxxsa\&quot;,\&quot;name\&quot;:\&quot;sxsxsxxx\&quot;,\&quot;queue\&quot;:\&quot;root.sxxsxxsx\&quot;}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;cluster\\&quot;:\\&quot;xxxxxx\\&quot;,\\&quot;bayesProjectName\\&quot;:\\&quot;xc_blxxixxxnk_1\\&quot;,\\&quot;bayesProjectId\\&quot;:\\&quot;ssxxxsa\\&quot;,\\&quot;name\\&quot;:\\&quot;sxsxsxxx\\&quot;,\\&quot;queue\\&quot;:\\&quot;root.sxxsxxsx\\&quot;}&quot;,
              *   &quot;taskSameAsOwner&quot;: false
              * }
              * </code></pre>
@@ -448,7 +448,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;odpsProjectName&quot;: &quot;xsxssxsxsx&quot;,
              *   &quot;projectName&quot;: &quot;xsxssxsxsx&quot;,
              *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;pubEndpoint\&quot;:\&quot;hgprecn-cn-xsxssxsxs-cn-shanghai.hologres.aliyuncs.com:80\&quot;,\&quot;commonBuyInstanceId\&quot;:\&quot;hgprecn-cn-xsxsxsxs\&quot;,\&quot;project\&quot;:\&quot;holo_upxsxgrade1\&quot;,\&quot;common_buy_instance_id\&quot;:\&quot;hgprecn-cn-xsxsxs\&quot;,\&quot;endpoint\&quot;:\&quot;hgprecn-cn-xsxxsxs-cn-shanghai-internal.hologres.aliyuncs.com:80\&quot;,\&quot;port\&quot;:\&quot;80\&quot;,\&quot;host\&quot;:\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-internal.hologres.aliyuncs.com\&quot;,\&quot;vpcEndpoint\&quot;:\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-vpc.hologres.aliyuncs.com:80\&quot;,\&quot;authType\&quot;:2,\&quot;region\&quot;:\&quot;cn-shanghai\&quot;}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;pubEndpoint\\&quot;:\\&quot;hgprecn-cn-xsxssxsxs-cn-shanghai.hologres.aliyuncs.com:80\\&quot;,\\&quot;commonBuyInstanceId\\&quot;:\\&quot;hgprecn-cn-xsxsxsxs\\&quot;,\\&quot;project\\&quot;:\\&quot;holo_upxsxgrade1\\&quot;,\\&quot;common_buy_instance_id\\&quot;:\\&quot;hgprecn-cn-xsxsxs\\&quot;,\\&quot;endpoint\\&quot;:\\&quot;hgprecn-cn-xsxxsxs-cn-shanghai-internal.hologres.aliyuncs.com:80\\&quot;,\\&quot;port\\&quot;:\\&quot;80\\&quot;,\\&quot;host\\&quot;:\\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-internal.hologres.aliyuncs.com\\&quot;,\\&quot;vpcEndpoint\\&quot;:\\&quot;hgprecn-cn-xsxsxsxs-cn-shanghai-vpc.hologres.aliyuncs.com:80\\&quot;,\\&quot;authType\\&quot;:2,\\&quot;region\\&quot;:\\&quot;cn-shanghai\\&quot;}&quot;,
              *   &quot;taskSameAsOwner&quot;: false
              * }
              * </code></pre>
@@ -473,7 +473,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;odpsProjectName&quot;: &quot;sxasaxsaxaxas&quot;,
              *   &quot;projectName&quot;: &quot;sxasaxsaxaxas&quot;,
              *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;connectionString\&quot;:\&quot;gp-xsxsxsxxs.gpdb.rds.aliyuncs.com\&quot;,\&quot;database\&quot;:\&quot;xsxsxxsxs\&quot;,\&quot;password\&quot;:\&quot;xxxxxxx\&quot;,\&quot;instanceId\&quot;:\&quot;gp-cdcdacdacda\&quot;,\&quot;port\&quot;:\&quot;3432\&quot;,\&quot;ownerId\&quot;:\&quot;12121212\&quot;,\&quot;username\&quot;:\&quot;sdasaddsa\&quot;}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;connectionString\\&quot;:\\&quot;gp-xsxsxsxxs.gpdb.rds.aliyuncs.com\\&quot;,\\&quot;database\\&quot;:\\&quot;xsxsxxsxs\\&quot;,\\&quot;password\\&quot;:\\&quot;xxxxxxx\\&quot;,\\&quot;instanceId\\&quot;:\\&quot;gp-cdcdacdacda\\&quot;,\\&quot;port\\&quot;:\\&quot;3432\\&quot;,\\&quot;ownerId\\&quot;:\\&quot;12121212\\&quot;,\\&quot;username\\&quot;:\\&quot;sdasaddsa\\&quot;}&quot;,
              *   &quot;taskSameAsOwner&quot;: false
              * }
              * </code></pre>
@@ -486,7 +486,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;odpsProjectName&quot;: &quot;am-xsaxaxa&quot;,
              *   &quot;projectName&quot;: &quot;am-xsxsaxa&quot;,
              *   &quot;resourceGroupType&quot;: &quot;DW&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;connectionString\&quot;:\&quot;am-xsaxsa.ads.aliyuncs.com:3306\&quot;,\&quot;database\&quot;:\&quot;xsaxsaxa\&quot;,\&quot;password\&quot;:\&quot;xsaxsaxassxsa\&quot;,\&quot;instanceId\&quot;:\&quot;am-xsaxsasx\&quot;,\&quot;username\&quot;:\&quot;xsaxsadsd\&quot;}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;connectionString\\&quot;:\\&quot;am-xsaxsa.ads.aliyuncs.com:3306\\&quot;,\\&quot;database\\&quot;:\\&quot;xsaxsaxa\\&quot;,\\&quot;password\\&quot;:\\&quot;xsaxsaxassxsa\\&quot;,\\&quot;instanceId\\&quot;:\\&quot;am-xsaxsasx\\&quot;,\\&quot;username\\&quot;:\\&quot;xsaxsadsd\\&quot;}&quot;,
              *   &quot;taskSameAsOwner&quot;: false
              * }
              * </code></pre>
@@ -501,7 +501,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
              *   &quot;projectName&quot;: &quot;xsaxsaxsa&quot;,
              *   &quot;resourceGroupId&quot;: 45208xxxxxx,
              *   &quot;resourceGroupType&quot;: &quot;GATEWAY&quot;,
-             *   &quot;specs&quot;: &quot;{\&quot;cluster\&quot;:{\&quot;hive\&quot;:{\&quot;hiveServer2Url\&quot;:\&quot;jdbc:hive2://xxxxxxer-1-cn-shanghai-pre-kerberos-1:10000\&quot;,\&quot;hiveMetastore\&quot;:\&quot;thrift://xxxxxxxr-1-cn-shanghai-pre-kerberos-1:9083\&quot;,\&quot;version\&quot;:\&quot;2.1.1\&quot;},\&quot;configFiles\&quot;:{\&quot;coreSite\&quot;:\&quot;4534574xxxxxx\&quot;,\&quot;hdfsSite\&quot;:\&quot;453457919xxxxxxx\&quot;,\&quot;mapredSite\&quot;:\&quot;45345750xxxxxx\&quot;,\&quot;yarnSite\&quot;:\&quot;4534575xxxxx\&quot;,\&quot;krb5Conf\&quot;:\&quot;4534576xxxxx1\&quot;,\&quot;hiveSite\&quot;:\&quot;453457xxxxx20\&quot;},\&quot;spark\&quot;:{\&quot;version\&quot;:\&quot;2.4.0\&quot;},\&quot;cdh\&quot;:{\&quot;version\&quot;:\&quot;6.3.2\&quot;},\&quot;hdfs\&quot;:{\&quot;version\&quot;:\&quot;3.0.0\&quot;},\&quot;impala\&quot;:{\&quot;impalaUrl\&quot;:\&quot;jdbc:impala://cdh-xsxssxxsx-1-cn-shanghai-pre-kerberos-1:21050\&quot;,\&quot;version\&quot;:\&quot;3.2.0\&quot;},\&quot;yarn\&quot;:{\&quot;YarnUrl\&quot;:\&quot;http://cdh-xsxsxsxsxs-1-cn-shanghai-pre-kerberos-1:8032\&quot;,\&quot;webUrl\&quot;:\&quot;http://cdh-xsxsxssxxssx-1-cn-shanghai-pre-kerberos-1:8088\&quot;,\&quot;version\&quot;:\&quot;3.0.0\&quot;},\&quot;presto\&quot;:{\&quot;prestoUrl\&quot;:\&quot;jdbc:presto://cdh-xssxsxxsxsxs-1-cn-shanghai-pre-kerberos-1:8080/hive/default\&quot;,\&quot;version\&quot;:\&quot;0.244.1\&quot;}},\&quot;instanceId\&quot;:161sdads733,\&quot;authDetail\&quot;:{\&quot;principal\&quot;:\&quot;hive@HADOOP.COM\&quot;,\&quot;keytabFileId\&quot;:\&quot;45345815xsxsxs3\&quot;,\&quot;type\&quot;:\&quot;kerberos\&quot;,\&quot;username\&quot;:\&quot;xsxsxsxsa@HADOOP.COM\&quot;},\&quot;resGroupStatus\&quot;:\&quot;\&quot;,\&quot;hadoopAuthType\&quot;:\&quot;kerberos\&quot;,\&quot;clusterIdentifier\&quot;:\&quot;xssxsxsxsx\&quot;,\&quot;clusterId\&quot;:xsxsx,\&quot;resGroupId\&quot;:4520870619xsxssxxs,\&quot;accessMode\&quot;:\&quot;security\&quot;,\&quot;authType\&quot;:2}&quot;,
+             *   &quot;specs&quot;: &quot;{\\&quot;cluster\\&quot;:{\\&quot;hive\\&quot;:{\\&quot;hiveServer2Url\\&quot;:\\&quot;jdbc:hive2://xxxxxxer-1-cn-shanghai-pre-kerberos-1:10000\\&quot;,\\&quot;hiveMetastore\\&quot;:\\&quot;thrift://xxxxxxxr-1-cn-shanghai-pre-kerberos-1:9083\\&quot;,\\&quot;version\\&quot;:\\&quot;2.1.1\\&quot;},\\&quot;configFiles\\&quot;:{\\&quot;coreSite\\&quot;:\\&quot;4534574xxxxxx\\&quot;,\\&quot;hdfsSite\\&quot;:\\&quot;453457919xxxxxxx\\&quot;,\\&quot;mapredSite\\&quot;:\\&quot;45345750xxxxxx\\&quot;,\\&quot;yarnSite\\&quot;:\\&quot;4534575xxxxx\\&quot;,\\&quot;krb5Conf\\&quot;:\\&quot;4534576xxxxx1\\&quot;,\\&quot;hiveSite\\&quot;:\\&quot;453457xxxxx20\\&quot;},\\&quot;spark\\&quot;:{\\&quot;version\\&quot;:\\&quot;2.4.0\\&quot;},\\&quot;cdh\\&quot;:{\\&quot;version\\&quot;:\\&quot;6.3.2\\&quot;},\\&quot;hdfs\\&quot;:{\\&quot;version\\&quot;:\\&quot;3.0.0\\&quot;},\\&quot;impala\\&quot;:{\\&quot;impalaUrl\\&quot;:\\&quot;jdbc:impala://cdh-xsxssxxsx-1-cn-shanghai-pre-kerberos-1:21050\\&quot;,\\&quot;version\\&quot;:\\&quot;3.2.0\\&quot;},\\&quot;yarn\\&quot;:{\\&quot;YarnUrl\\&quot;:\\&quot;http://cdh-xsxsxsxsxs-1-cn-shanghai-pre-kerberos-1:8032\\&quot;,\\&quot;webUrl\\&quot;:\\&quot;http://cdh-xsxsxssxxssx-1-cn-shanghai-pre-kerberos-1:8088\\&quot;,\\&quot;version\\&quot;:\\&quot;3.0.0\\&quot;},\\&quot;presto\\&quot;:{\\&quot;prestoUrl\\&quot;:\\&quot;jdbc:presto://cdh-xssxsxxsxsxs-1-cn-shanghai-pre-kerberos-1:8080/hive/default\\&quot;,\\&quot;version\\&quot;:\\&quot;0.244.1\\&quot;}},\\&quot;instanceId\\&quot;:161sdads733,\\&quot;authDetail\\&quot;:{\\&quot;principal\\&quot;:\\&quot;hive@HADOOP.COM\\&quot;,\\&quot;keytabFileId\\&quot;:\\&quot;45345815xsxsxs3\\&quot;,\\&quot;type\\&quot;:\\&quot;kerberos\\&quot;,\\&quot;username\\&quot;:\\&quot;xsxsxsxsa@HADOOP.COM\\&quot;},\\&quot;resGroupStatus\\&quot;:\\&quot;\\&quot;,\\&quot;hadoopAuthType\\&quot;:\\&quot;kerberos\\&quot;,\\&quot;clusterIdentifier\\&quot;:\\&quot;xssxsxsxsx\\&quot;,\\&quot;clusterId\\&quot;:xsxsx,\\&quot;resGroupId\\&quot;:4520870619xsxssxxs,\\&quot;accessMode\\&quot;:\\&quot;security\\&quot;,\\&quot;authType\\&quot;:2}&quot;,
              *   &quot;taskSameAsOwner&quot;: false
              * }
              * </code></pre>

@@ -152,8 +152,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The type of the entities.</p>
-         * <p>For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.</p>
+         * <p>The entity type. Example: maxcompute-table indicates the MaxCompute table type.</p>
          * 
          * <strong>example:</strong>
          * <p>maxcompute-table</p>
@@ -177,7 +176,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that specifies the starting point of the current read operation.</p>
          * 
          * <strong>example:</strong>
          * <p>12222</p>
@@ -189,7 +188,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

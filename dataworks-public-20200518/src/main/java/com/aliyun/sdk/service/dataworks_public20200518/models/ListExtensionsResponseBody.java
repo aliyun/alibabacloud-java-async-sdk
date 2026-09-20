@@ -78,7 +78,7 @@ public class ListExtensionsResponseBody extends TeaModel {
          * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>0000-ABCD-EFG</p>
+         * <p>0000-ABCD-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +144,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the event.</p>
+             * <p>The event code.</p>
              * 
              * <strong>example:</strong>
              * <p>commit-file</p>
@@ -155,7 +155,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the event.</p>
+             * <p>The event name.</p>
              * 
              * <strong>example:</strong>
              * <p>File submission pre-event</p>
@@ -285,7 +285,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique code of the extension.</p>
+             * <p>The unique extension code.</p>
              * 
              * <strong>example:</strong>
              * <p>Extension Code</p>
@@ -318,7 +318,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
+             * <p>The RAM user ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2003****</p>
@@ -329,7 +329,13 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the extension. Valid values: 0: Testing 1: Publishing 3: Disabled 4: Processing 5: Approved 6: Approve Failed</p>
+             * <p>The extension status. Valid values:
+             * 0: testing.
+             * 1: online.
+             * 3: disabled.
+             * 4: pending approval.
+             * 5: approved.
+             * 6: rejected.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -433,7 +439,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>The page number of the request, used for pagination.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -455,7 +461,7 @@ public class ListExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

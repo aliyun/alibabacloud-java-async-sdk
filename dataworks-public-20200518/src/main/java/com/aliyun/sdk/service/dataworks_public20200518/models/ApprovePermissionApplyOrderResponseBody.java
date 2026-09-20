@@ -67,7 +67,7 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the permission request order is processed.</p>
+         * <p>Indicates whether the approval is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

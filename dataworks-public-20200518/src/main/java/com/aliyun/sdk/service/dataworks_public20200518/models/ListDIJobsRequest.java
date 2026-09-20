@@ -153,7 +153,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The destination type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * <p>The destination data source type. If this parameter is not specified, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -165,7 +165,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. Fuzzy match is supported. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * <p>The task name. If this parameter is not specified, no filtering is applied. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_to_holo_sync_8772</p>
@@ -189,7 +189,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The page size. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -201,7 +201,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * <p>The source type. If you do not configure this parameter, no limits are imposed on the tasks.</p>
+         * <p>The source data source type. If this parameter is not specified, no filtering is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>

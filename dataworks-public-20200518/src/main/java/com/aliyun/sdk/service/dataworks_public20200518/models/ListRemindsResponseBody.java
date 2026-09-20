@@ -515,7 +515,7 @@ public class ListRemindsResponseBody extends TeaModel {
              * <p>The name of the custom alert rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Alert Rule</p>
+             * <p>Rule name</p>
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;

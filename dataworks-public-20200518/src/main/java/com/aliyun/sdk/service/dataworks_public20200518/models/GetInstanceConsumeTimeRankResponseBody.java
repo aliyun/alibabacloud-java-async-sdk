@@ -67,7 +67,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ranking record of the running durations of instances.</p>
+         * <p>The ranking records of instance running durations.</p>
          */
         public Builder instanceConsumeTimeRank(InstanceConsumeTimeRank instanceConsumeTimeRank) {
             this.instanceConsumeTimeRank = instanceConsumeTimeRank;
@@ -75,7 +75,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID generated for each request.</p>
          * 
          * <strong>example:</strong>
          * <p>6347364dadsfadf****</p>
@@ -209,7 +209,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data timestamp of the instance.</p>
+             * <p>The data timestamp on which the instance was run.</p>
              * 
              * <strong>example:</strong>
              * <p>1600963200000</p>
@@ -231,7 +231,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>95279527</p>
@@ -242,7 +242,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the task node.</p>
              * 
              * <strong>example:</strong>
              * <p>9527</p>
@@ -254,6 +254,9 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点名称</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -261,7 +264,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * <p>The Alibaba Cloud UID of the node owner.</p>
              * 
              * <strong>example:</strong>
              * <p>952795279527</p>
@@ -272,7 +275,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node.</p>
+             * <p>The type of the task.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -342,7 +345,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ranking data of the running durations of instances.</p>
+             * <p>The ranking data of instance running durations.</p>
              */
             public Builder consumeTimeRank(java.util.List<ConsumeTimeRank> consumeTimeRank) {
                 this.consumeTimeRank = consumeTimeRank;

@@ -214,7 +214,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The list of requested objects.</p>
+         * <p>The list of objects to request permissions for.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyObject(java.util.List<ApplyObject> applyObject) {
@@ -224,7 +224,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The reason for your request. The administrator determines whether to approve the request based on the reason.</p>
+         * <p>The reason for the request. This is used by the administrator for evaluation and approval.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,19 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * ApplyType.
+         * <p>The type of the request order. Valid values:</p>
+         * <ul>
+         * <li>[MaxComputeTable] MaxCompute table permission request order.</li>
+         * <li>[MaxComputeFunction] MaxCompute function permission request order.</li>
+         * <li>[MaxComputeResource] MaxCompute resource permission request order.</li>
+         * <li>[DLFSchema] DLF 1.0 schema permission request order.</li>
+         * <li>[DLFTable] DLF 1.0 table permission request order.</li>
+         * <li>[DLFColumn] DLF 1.0 column permission request order.</li>
+         * <li>[DsApiDeploy] Data service publication permission request order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MaxComputeTable</p>
          */
         public Builder applyType(String applyType) {
             this.putQueryParameter("ApplyType", applyType);
@@ -246,11 +258,11 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account for which you want to request permissions. If you want to request permissions for multiple Alibaba Cloud accounts, separate the IDs of the accounts with commas (,).</p>
+         * <p>The UIDs of the Alibaba Cloud accounts for which permissions are requested. Separate multiple account UIDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>267842600408993176,267842600408993177</p>
+         * <p>26784260040899****,26784260040899****</p>
          */
         public Builder applyUserIds(String applyUserIds) {
             this.putQueryParameter("ApplyUserIds", applyUserIds);
@@ -259,7 +271,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * CatalogName.
+         * <p>The name of the data catalog. Go to the <a href="https://dlf.console.aliyun.com/cn-hangzhou/metadata/catalog?spm=a2c4g.11186623.0.0.5a225658pT4Dkr">Data Lake Formation console</a> to view the data catalog name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder catalogName(String catalogName) {
             this.putQueryParameter("CatalogName", catalogName);
@@ -268,7 +283,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The expiration time of the permissions that you request. This value is a UNIX timestamp. The default value is January 1, 2065. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions. You can go to the Workspace Management page in the DataWorks console, click MaxCompute Management in the left-side navigation pane, and then check whether column-level access control is enabled. You can go to your DataWorks workspace, view the security level of the fields in Data Map, and then view the security level of the Alibaba Cloud account on the User Management page.</p>
+         * <p>The expiration time of the requested permissions. Specify a UNIX timestamp. If you do not specify this parameter, the default expiration time is January 1, 2065.
+         * If LabelSecurity is not enabled for the MaxCompute project, or the security level of the requested table field is 0 or less than or equal to the security level of the requesting account, you can only request permanent permissions.
+         * Go to the management page of the DataWorks workspace and check whether column-level access control is enabled on the advanced configuration page of the MaxCompute engine.
+         * Go to the DataWorks workspace to view the security level of fields in Data Map and the security level of accounts on the member management page.</p>
          * 
          * <strong>example:</strong>
          * <p>1617115071885</p>
@@ -280,7 +298,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The type of compute engine for permission requests. Currently only supports ODPS, which means only MaxCompute compute engine permissions are supported.</p>
+         * <p>This parameter is deprecated. Leave it empty.</p>
          * 
          * <strong>example:</strong>
          * <p>odps</p>
@@ -292,7 +310,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The name of the MaxCompute project you request access to.</p>
+         * <p>The name of the MaxCompute project for which permissions are requested.</p>
          * 
          * <strong>example:</strong>
          * <p>aMaxcomputeProjectName</p>
@@ -304,7 +322,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The request type. The only supported value is 1, which represents an object ACL permission request.</p>
+         * <p>This parameter is deprecated. Leave it empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -316,7 +334,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID to which the MaxCompute project belongs for permission requests. You can check the workspace ID on the DataWorks workspace configuration page.</p>
+         * <p>The ID of the DataWorks workspace to which the MaxCompute project belongs. Go to the DataWorks workspace configuration page to obtain the workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -387,7 +405,10 @@ public class CreatePermissionApplyOrderRequest extends Request {
             } 
 
             /**
-             * Actions.
+             * <p>The permission types to request. Separate multiple permission types with commas (,). Only Select, Describe, and Download types are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Select</p>
              */
             public Builder actions(String actions) {
                 this.actions = actions;
@@ -395,7 +416,8 @@ public class CreatePermissionApplyOrderRequest extends Request {
             }
 
             /**
-             * <p>Permissions for the target columns. Enter the column names here. If applying for permissions on the entire table, enter all column names of the table. Permissions for specific columns can only be requested if labelSecurity is enabled for the MaxCompute project. Otherwise, you can only apply for permissions on the entire table.</p>
+             * <p>The name of the column for which permissions are requested. If you request permissions on the entire table, enter all column names of the table.
+             * You can request permissions on specific columns only if LabelSecurity is enabled for the MaxCompute project. If LabelSecurity is not enabled, you can only request permissions on the entire table.</p>
              * 
              * <strong>example:</strong>
              * <p>aColumnName</p>
@@ -478,7 +500,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
             } 
 
             /**
-             * <p>The type of permissions requested. Use commas (,) to separate multiple permission types in a single request. Currently only supports Select, Describe, Drop, Alter, Update, and Download permission types.</p>
+             * <p>The permission types to request. Separate multiple permission types with commas (,). Only Select, Describe, Drop, Alter, Update, and Download types are supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Select,Describe</p>
@@ -497,7 +519,7 @@ public class CreatePermissionApplyOrderRequest extends Request {
             }
 
             /**
-             * <p>The object you request access to. Currently, only permission requests for MaxCompute tables are supported. The name of the target table needs to be entered here.</p>
+             * <p>The object for which permissions are requested. Only MaxCompute tables are supported. Enter the name of the target table.</p>
              * 
              * <strong>example:</strong>
              * <p>aTableName</p>

@@ -115,7 +115,7 @@ public class DeleteFileRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10000001</p>
+         * <p>10000201</p>
          */
         public Builder fileId(Long fileId) {
             this.putBodyParameter("FileId", fileId);

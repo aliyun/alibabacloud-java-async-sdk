@@ -162,7 +162,7 @@ public class TestNetworkConnectionRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10000</p>
+         * <p>100001</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

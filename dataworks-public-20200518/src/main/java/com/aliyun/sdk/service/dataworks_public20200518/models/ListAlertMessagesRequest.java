@@ -230,7 +230,7 @@ public class ListAlertMessagesRequest extends Request {
          * <p>The ID of the Alibaba Cloud account used by the alert recipient.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456</p>
+         * <p>12345</p>
          */
         public Builder alertUser(String alertUser) {
             this.putBodyParameter("AlertUser", alertUser);
@@ -251,7 +251,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +264,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd&quot;T&quot;HH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

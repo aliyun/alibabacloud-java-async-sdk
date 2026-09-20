@@ -78,7 +78,7 @@ public class RevokeTablePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the permissions are revoked.</p>
+         * <p>Indicates whether the revocation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

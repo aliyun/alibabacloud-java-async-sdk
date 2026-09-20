@@ -67,7 +67,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ranking data of nodes on which errors occurred.</p>
+         * <p>The error ranking data of nodes.</p>
          */
         public Builder instanceErrorRank(InstanceErrorRank instanceErrorRank) {
             this.instanceErrorRank = instanceErrorRank;
@@ -75,7 +75,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID generated for each request.</p>
          * 
          * <strong>example:</strong>
          * <p>952795279527****</p>
@@ -196,7 +196,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of errors that occurred on the node.</p>
+             * <p>The number of errors of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -207,7 +207,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>9527</p>
@@ -219,6 +219,9 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
 
             /**
              * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Node name</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -226,7 +229,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * <p>The Alibaba Cloud UID of the node owner.</p>
              * 
              * <strong>example:</strong>
              * <p>952795279527</p>
@@ -237,7 +240,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node.</p>
+             * <p>The type of the node task.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -248,7 +251,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID.</p>
+             * <p>The ID of the DataWorks workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>9527</p>
@@ -318,7 +321,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ranking data of nodes on which errors occurred within the last month.</p>
+             * <p>The error ranking data of nodes in the last month.</p>
              */
             public Builder errorRank(java.util.List<ErrorRank> errorRank) {
                 this.errorRank = errorRank;
@@ -326,7 +329,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp at which the rankings were updated.</p>
+             * <p>The timestamp when the error ranking was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1600963200000</p>

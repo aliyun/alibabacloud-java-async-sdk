@@ -80,7 +80,7 @@ public class RelationshipVO extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>Additional attributes.</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -88,7 +88,7 @@ public class RelationshipVO extends TeaModel {
         }
 
         /**
-         * RelationshipGuid.
+         * <p>The unique identifier for the relationship.</p>
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.relationshipGuid = relationshipGuid;
@@ -96,7 +96,10 @@ public class RelationshipVO extends TeaModel {
         }
 
         /**
-         * RelationshipType.
+         * <p>The type of the relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql</p>
          */
         public Builder relationshipType(String relationshipType) {
             this.relationshipType = relationshipType;

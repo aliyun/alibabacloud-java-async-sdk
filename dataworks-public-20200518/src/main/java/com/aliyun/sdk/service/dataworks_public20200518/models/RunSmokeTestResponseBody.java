@@ -119,7 +119,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The workflow ID.</p>
+         * <p>The ID of the workflow.</p>
          * 
          * <strong>example:</strong>
          * <p>3333333</p>
@@ -174,7 +174,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

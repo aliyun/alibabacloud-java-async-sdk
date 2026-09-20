@@ -119,7 +119,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The nodes in the baseline.</p>
+         * <p>The list of nodes in the baseline.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-E****</p>
@@ -171,7 +171,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -266,10 +266,10 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node ID.</p>
+             * <p>The ID of the node.</p>
              * 
              * <strong>example:</strong>
-             * <p>1234</p>
+             * <p>12345</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -288,7 +288,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the node owner.</p>
+             * <p>The Alibaba Cloud UID of the node owner.</p>
              * 
              * <strong>example:</strong>
              * <p>9527952****</p>
@@ -302,7 +302,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
              * <p>The ID of the workspace to which the node belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>1234</p>
+             * <p>12345</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

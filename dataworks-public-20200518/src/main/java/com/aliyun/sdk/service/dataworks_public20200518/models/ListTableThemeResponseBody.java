@@ -341,7 +341,7 @@ public class ListTableThemeResponseBody extends TeaModel {
              * <p>The name of the table level.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Level name</p>
              */
             public Builder name(String name) {
                 this.name = name;

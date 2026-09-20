@@ -166,8 +166,8 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-         * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to query the ID.</p>
+         * <p>The ID of the EMR cluster. This parameter is required only when the data source type is EMR.</p>
+         * <p>You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C-010A704DA760****</p>
@@ -179,7 +179,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The type of the data source. Set the value to emr.</p>
+         * <p>The data source type. Currently, only EMR is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>emr</p>
@@ -191,8 +191,8 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the database. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to query the database name.</p>
+         * <p>The name of the database. This parameter is required only when the data source type is EMR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/185662.html">ListMetaDB</a> operation to obtain the database name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -204,7 +204,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The page number requested for pagination.</p>
+         * <p>The page number for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,7 +216,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The number of items per page, with a default of 10 and a maximum of 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -228,7 +228,7 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the table. You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the unique identifier of the table.</p>
+         * <p>The globally unique identifier (GUID) of the table. You can call <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> to obtain the GUID of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.engine_name.table_name</p>
@@ -240,8 +240,8 @@ public class GetMetaTableFullInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the table in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to query the table name.</p>
+         * <p>The name of the EMR table. This parameter is required only when the data source type is EMR.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173916.html">GetMetaDBTableList</a> operation to obtain the table name.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>

@@ -158,7 +158,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>The authentication error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -166,7 +169,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder data(Object data) {
             this.data = data;
@@ -174,7 +180,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorCode.
+         * <p>The error code. The value is the same as ErrorCode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>400</p>
          */
         public Builder dynamicErrorCode(String dynamicErrorCode) {
             this.dynamicErrorCode = dynamicErrorCode;
@@ -182,7 +191,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorMessage.
+         * <p>The error message. The value is the same as ErrorMessage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Missing parameter</p>
          */
         public Builder dynamicErrorMessage(String dynamicErrorMessage) {
             this.dynamicErrorMessage = dynamicErrorMessage;
@@ -190,7 +202,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid.Tenant.ConnectionNotExists</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -198,7 +213,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -206,7 +224,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -214,7 +235,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>952795279527ab****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +246,10 @@ public class DsgGetVisitStatResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

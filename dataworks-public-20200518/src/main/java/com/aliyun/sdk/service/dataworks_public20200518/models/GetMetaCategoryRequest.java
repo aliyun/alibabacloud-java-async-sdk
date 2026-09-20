@@ -110,7 +110,7 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number. Used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -122,7 +122,7 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -134,7 +134,7 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * <p>The category tree ID.</p>
+         * <p>The ID of the tree category.</p>
          * 
          * <strong>example:</strong>
          * <p>333</p>

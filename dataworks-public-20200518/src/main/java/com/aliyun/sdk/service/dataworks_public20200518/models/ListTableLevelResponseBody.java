@@ -282,7 +282,7 @@ public class ListTableLevelResponseBody extends TeaModel {
              * <p>The description of the table level.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Level description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -315,7 +315,7 @@ public class ListTableLevelResponseBody extends TeaModel {
              * <p>The name of the table level.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>Level 1</p>
              */
             public Builder name(String name) {
                 this.name = name;

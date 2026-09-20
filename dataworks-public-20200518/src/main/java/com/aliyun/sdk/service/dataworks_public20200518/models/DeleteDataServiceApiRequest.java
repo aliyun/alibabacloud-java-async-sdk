@@ -112,7 +112,7 @@ public class DeleteDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The ID of the API in DataService Studio.</p>
+         * <p>The ID of the DataService API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,8 @@ public class DeleteDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
+         * <p>You can obtain the workspace ID from PageResult.ProjectList[].ProjectId in the response of ListProjects.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,8 @@ public class DeleteDataServiceApiRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.</p>
+         * <p>The tenant ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the DataStudio page, click the username in the upper-right corner, and choose Menu &gt; User Info to obtain the tenant ID.</p>
+         * <p>You can also obtain the tenant ID from Data.Apis[].TenantId in the response of ListDataServiceApis.</p>
          * 
          * <strong>example:</strong>
          * <p>10002</p>

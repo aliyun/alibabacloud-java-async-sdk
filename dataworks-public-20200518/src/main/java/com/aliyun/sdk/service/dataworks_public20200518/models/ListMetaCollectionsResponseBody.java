@@ -119,7 +119,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>E25887B7-579C-54A5-9C4F-83A0DE367DDE</p>
@@ -171,10 +171,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +244,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The collections.</p>
+             * <p>The array object.</p>
              */
             public Builder collectionList(java.util.List<Collection> collectionList) {
                 this.collectionList = collectionList;
@@ -252,7 +252,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+             * <p>The token for the next page.</p>
              * 
              * <strong>example:</strong>
              * <p>37ae2053d87d380f28ce0dc0853ca51e</p>

@@ -26,6 +26,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AbolishDataServiceApiResponse> abolishDataServiceApi(AbolishDataServiceApiRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Before calling this operation, activate DataWorks Professional Edition or a higher edition. The Basic Edition and Standard Edition do not support the metadata collection feature.</p>
+     * 
      * @param request the request parameters of AddMetaCollectionEntity  AddMetaCollectionEntityRequest
      * @return AddMetaCollectionEntityResponse
      */
@@ -33,9 +36,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  For information about how to add an account to a DataWorks workspace as a member, see <a href="https://help.aliyun.com/document_detail/136941.html">Add workspace members and assign roles to them</a>.</p>
      * <ul>
-     * <li>If you assign a built-in workspace-level role to a member of a DataWorks workspace, the member is automatically granted the permissions of the mapped role of the MaxCompute compute engine in the development environment. For more information, see <a href="https://help.aliyun.com/document_detail/449397.html">Appendix: Mappings between the built-in workspace-level roles of DataWorks and the roles of MaxCompute</a>.</li>
+     * <li>To add the target account as a member of the DataWorks workspace, refer to <a href="https://help.aliyun.com/document_detail/136941.html">Add members to a DataWorks workspace</a>.</li>
+     * <li>When you add a user to a preset role in a DataWorks workspace, the user is also added as a project role member in the MaxCompute project of the development environment of the workspace. For more information, refer to <a href="https://help.aliyun.com/document_detail/449397.html">Mapping between workspace-level preset roles and MaxCompute engine permissions</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of AddProjectMemberToRole  AddProjectMemberToRoleRequest
@@ -56,6 +59,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddToMetaCategoryResponse> addToMetaCategory(AddToMetaCategoryRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note: The 2020 edition of OpenAPI will be discontinued. Migrate to the 2024 edition of OpenAPI as soon as possible — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-approveprocessinstance">ApproveProcessInstance</a>.</em>*</p>
+     * 
      * @param request the request parameters of ApprovePermissionApplyOrder  ApprovePermissionApplyOrderRequest
      * @return ApprovePermissionApplyOrderResponse
      */
@@ -86,6 +92,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckMetaPartitionResponse> checkMetaPartition(CheckMetaPartitionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</p>
+     * 
      * @param request the request parameters of CheckMetaTable  CheckMetaTableRequest
      * @return CheckMetaTableResponse
      */
@@ -112,7 +121,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can configure alert rules only for tasks that can be used for real-time data synchronization.</p>
+     * <p>Alert rules can be configured when your task includes real-time synchronization.</p>
      * 
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
@@ -211,7 +220,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Collections are classified into various types. The names of collections of the same type must be different.</p>
+     * <p>Collections have multiple types. The name must be unique within the same collection type.</p>
      * 
      * @param request the request parameters of CreateMetaCollection  CreateMetaCollectionRequest
      * @return CreateMetaCollectionResponse
@@ -219,6 +228,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI — <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-applyresourceaccesspermission">ApplyResourceAccessPermission</a> as soon as possible.</em>*</p>
+     * 
      * @param request the request parameters of CreatePermissionApplyOrder  CreatePermissionApplyOrderRequest
      * @return CreatePermissionApplyOrderResponse
      */
@@ -415,7 +427,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteQualityEntityResponse> deleteQualityEntity(DeleteQualityEntityRequest request);
 
     /**
-     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.  * @description In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see [Configure monitoring rules](https://help.aliyun.com/document_detail/73690.html).
+     * @deprecated OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.  * @description Data Quality uses partition expressions to determine which monitoring rules to configure. These rules help you immediately detect changes in a data source and identify dirty data generated during ETL processes. These rules can automatically block tasks to prevent dirty data from propagating downstream. This practice prevents tasks from producing unexpected data that could affect normal operations. You can add Followers to a partition expression. When a monitoring rule for that partition expression is triggered, the specified Followers receive a notification, which helps them quickly identify and resolve the issue. For more information, see [Configure monitoring rules](https://help.aliyun.com/document_detail/73690.html).
      * 
      * @param request the request parameters of DeleteQualityFollower  DeleteQualityFollowerRequest
      * @return DeleteQualityFollowerResponse
@@ -475,6 +487,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeployDISyncTaskResponse> deployDISyncTask(DeployDISyncTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This is an asynchronous operation. A successful call returns a deployment ID. Use this ID with the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation to query the execution status and final result of the deployment task.</p>
+     * 
      * @param request the request parameters of DeployFile  DeployFileRequest
      * @return DeployFileResponse
      */
@@ -517,6 +532,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DsgGetVisitDetailResponse> dsgGetVisitDetail(DsgGetVisitDetailRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation retrieves all configuration information of a specific security policy by specifying the security policy ID.</li>
+     * <li>Ensure that the value of the <code>Id</code> parameter is valid and exists. Otherwise, an error message is returned.</li>
+     * <li>The returned data structure includes basic policy information (such as name and description) and detailed policy content (such as control items and their settings).</li>
+     * <li>Note: Some fields of system default policies may not be modified or deleted.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DsgGetVisitStat  DsgGetVisitStatRequest
      * @return DsgGetVisitStatResponse
      */
@@ -541,12 +565,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DsgQueryDesensStatusListResponse> dsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API corresponds to the query feature on the Data Security Guard console interface. It retrieves sensitive data identification results for a specified tenant by associating with the tenant ID.</p>
+     * <ul>
+     * <li>Supports filtering by dimensions such as data source type and project workspace.</li>
+     * <li>Supports ascending or descending sorting on a specific field.</li>
+     * <li>Supports paging.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DsgQueryDetails  DsgQueryDetailsRequest
      * @return DsgQueryDetailsResponse
      */
     CompletableFuture<DsgQueryDetailsResponse> dsgQueryDetails(DsgQueryDetailsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API corresponds to the query feature on the Data Protection Umbrella console interface. It retrieves sensitive data identification results for a specified tenant by associating with the tenant ID.</p>
+     * <ul>
+     * <li>Supports filtering by dimensions such as data source type and project workspace.</li>
+     * <li>Supports ascending or descending sorting on a specific field.</li>
+     * <li>Supports paging query.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DsgQueryRowDetail  DsgQueryRowDetailRequest
      * @return DsgQueryRowDetailResponse
      */
@@ -554,11 +594,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The query capability of the API operation is similar to the query feature in Data Security Guard in the DataWorks console. The API operation can be used to query the identification results of sensitive data of a tenant based on the association with the tenant ID.</p>
+     * <p>This API operation corresponds to the query feature on the Data Security Guard console interface. It retrieves the sensitive data identification results for a specified tenant by associating with the tenant ID.</p>
      * <ul>
-     * <li>You can search for a specific identification result based on filter conditions such as data source type and workspace.</li>
-     * <li>You can sort the identification results of sensitive data of a tenant based on the values of a field in ascending or descending order.</li>
-     * <li>This operation supports paged query.</li>
+     * <li>Supports filtering by data source type, project workspace, and other dimensions.</li>
+     * <li>Supports ascending or descending sorting on a specific field.</li>
+     * <li>Supports paged query.</li>
      * </ul>
      * 
      * @param request the request parameters of DsgQuerySensResult  DsgQuerySensResultRequest
@@ -679,7 +719,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks allows you to use only the <a href="https://help.aliyun.com/document_detail/289109.html">UpdateDISyncTask</a> operation to update a batch synchronization task in Data Integration. To update a real-time synchronization task, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization task in Data Integration. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</p>
+     * <p>DataWorks allows you to directly call the <a href="https://help.aliyun.com/document_detail/289109.html">UpdateDISyncTask</a> operation to update batch synchronization tasks in Data Integration. To update a real-time synchronization task, you must first call the GenerateDISyncTaskConfigForUpdating and <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operations to asynchronously generate the required parameters, and then pass the parameters to the UpdateDISyncTask operation. Only asynchronous updates are supported for real-time synchronization tasks in Data Integration.</p>
      * 
      * @param request the request parameters of GenerateDISyncTaskConfigForUpdating  GenerateDISyncTaskConfigForUpdatingRequest
      * @return GenerateDISyncTaskConfigForUpdatingResponse
@@ -705,6 +745,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetBaselineConfigResponse> getBaselineConfig(GetBaselineConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>调用前需准备有效的 BaselineId：可先通过 ListProjects 获取 ProjectId，再调用 ListBaselines，并从其 Data.Baselines[].BaselineId 获取。</p>
+     * 
      * @param request the request parameters of GetBaselineKeyPath  GetBaselineKeyPathRequest
      * @return GetBaselineKeyPathResponse
      */
@@ -731,7 +774,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can configure alert rules only for tasks that can be used for real-time data synchronization.</p>
+     * <p>Alert rules can be configured when your task includes real-time synchronization.</p>
      * 
      * @param request the request parameters of GetDIAlarmRule  GetDIAlarmRuleRequest
      * @return GetDIAlarmRuleResponse
@@ -765,10 +808,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
      * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
      * Supported DAG states:</li>
-     * <li>CREATED</li>
-     * <li>RUNNING</li>
-     * <li>FAILURE</li>
-     * <li>SUCCESS</li>
+     * <li>CREATED: The DAG is created.</li>
+     * <li>RUNNING: The DAG is running.</li>
+     * <li>FAILURE: The DAG fails to run.</li>
+     * <li>SUCCESS: The DAG is successfully run.</li>
      * </ul>
      * 
      * @param request the request parameters of GetDag  GetDagRequest
@@ -807,6 +850,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataServiceGroupResponse> getDataServiceGroup(GetDataServiceGroupRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>前置条件：请先开通 DataWorks 企业版或旗舰版，并准备已发布的数据服务 API。ProjectId 可通过 ListProjects 获取，ApiId 可通过 ListDataServicePublishedApis 的 Data.Apis[].ApiId 获取；未开通所需版本时会返回 403 Forbidden.Access。</p>
+     * 
      * @param request the request parameters of GetDataServicePublishedApi  GetDataServicePublishedApiRequest
      * @return GetDataServicePublishedApiResponse
      */
@@ -855,6 +901,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFolderResponse> getFolder(GetFolderRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns a 403 Forbidden.Access error.</p>
+     * 
      * @param request the request parameters of GetIDEEventDetail  GetIDEEventDetailRequest
      * @return GetIDEEventDetailResponse
      */
@@ -936,8 +985,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-     * You can log on to the <a href="https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou">EMR console</a> to obtain the ID of the EMR cluster.</p>
+     * <p>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</p>
      * 
      * @param request the request parameters of GetMetaDBInfo  GetMetaDBInfoRequest
      * @return GetMetaDBInfoResponse
@@ -951,6 +999,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaDBTableListResponse> getMetaDBTableList(GetMetaDBTableListRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>前置条件：调用本接口前，请先开通 DataWorks 企业版或旗舰版；未开通时服务会返回 403 Forbidden.Access。</p>
+     * 
      * @param request the request parameters of GetMetaTableBasicInfo  GetMetaTableBasicInfoRequest
      * @return GetMetaTableBasicInfoResponse
      */
@@ -959,7 +1010,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation will be replaced soon. We recommend that you do not call this operation.</p>
+     * <p>We do not recommend that you use this API operation. A new API operation will be released to replace it.</p>
      * </blockquote>
      * 
      * @param request the request parameters of GetMetaTableChangeLog  GetMetaTableChangeLogRequest
@@ -974,7 +1025,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request);
 
     /**
-     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated  * @description You can call this operation to query only the information about a table of the E-MapReduce (EMR) compute engine type.
+     * @deprecated OpenAPI GetMetaTableFullInfo is deprecated  * @description Only tables of the EMR engine type are supported.
      * 
      * @param request the request parameters of GetMetaTableFullInfo  GetMetaTableFullInfoRequest
      * @return GetMetaTableFullInfoResponse
@@ -1008,7 +1059,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine. If you query partitions of a metatable in an EMR compute engine, only DataLake clusters that use Data Lake Formation (DLF) to manage metadata and Hadoop clusters whose cluster version is earlier than 3.41.0 or 5.7.0 are supported.</p>
+     * <p>This operation supports only MaxCompute and E-MapReduce (EMR) tables. For EMR, supported cluster types include new data lake clusters that use Data Lake Formation (DLF) for metadata management, and Hadoop clusters with versions earlier than V3.41.0 or V5.7.0.</p>
      * 
      * @param request the request parameters of GetMetaTablePartition  GetMetaTablePartitionRequest
      * @return GetMetaTablePartitionResponse
@@ -1022,6 +1073,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableProducingTasksResponse> getMetaTableProducingTasks(GetMetaTableProducingTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to activate or upgrade to the required edition.</p>
+     * 
      * @param request the request parameters of GetMetaTableThemeLevel  GetMetaTableThemeLevelRequest
      * @return GetMetaTableThemeLevelResponse
      */
@@ -1096,6 +1150,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOptionValueForProjectResponse> getOptionValueForProject(GetOptionValueForProjectRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note: The 2020 version of OpenAPI will be discontinued. Migrate to the 2024 version of OpenAPI as soon as possible: <a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getapplicationcontents">GetApplicationContents</a>/<a href="https://www.alibabacloud.com/help/en/dataworks/developer-reference/api-dataworks-public-2024-05-18-getprocessinstance">GetProcessInstance</a>.</em>*</p>
+     * 
      * @param request the request parameters of GetPermissionApplyOrderDetail  GetPermissionApplyOrderDetailRequest
      * @return GetPermissionApplyOrderDetailResponse
      */
@@ -1108,7 +1165,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
 
     /**
-     * @deprecated OpenAPI GetProjectDetail is deprecated  * @param request  the request parameters of GetProjectDetail  GetProjectDetailRequest
+     * @deprecated OpenAPI GetProjectDetail is deprecated, please use dataworks-public::2020-05-18::GetProject instead.  * @param request  the request parameters of GetProjectDetail  GetProjectDetailRequest
      * @return GetProjectDetailResponse
      */
     @Deprecated
@@ -1136,10 +1193,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetQualityRuleResponse> getQualityRule(GetQualityRuleRequest request);
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetRemind%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of GetRemind  GetRemindRequest
      * @return GetRemindResponse
      */
@@ -1168,10 +1221,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=GetTopicInfluence%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of GetTopicInfluence  GetTopicInfluenceRequest
      * @return GetTopicInfluenceResponse
      */
@@ -1253,7 +1302,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can configure alert rules only for tasks that can be used for real-time data synchronization.</p>
+     * <p>When your task synchronization type includes real-time synchronization, you can configure alert rules.</p>
      * 
      * @param request the request parameters of ListDIAlarmRules  ListDIAlarmRulesRequest
      * @return ListDIAlarmRulesResponse
@@ -1262,7 +1311,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.</p>
+     * <p>This list operation returns only basic task information. To view detailed task information, call the GetDIJob operation.
+     * Prerequisites: Activate DataWorks Enterprise Edition or Ultimate Edition first. The required ProjectId can be obtained from PageResult.ProjectList[].ProjectId in the ListProjects response. If the required edition is not activated, this operation returns 403 Forbidden.Access.</p>
      * 
      * @param request the request parameters of ListDIJobs  ListDIJobsRequest
      * @return ListDIJobsResponse
@@ -1280,17 +1330,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Supported DAG types:</p>
+     * <p>Dag Type values:</p>
      * <ul>
-     * <li>MANUAL: DAG for a manually triggered workflow</li>
-     * <li>SMOKE_TEST: DAG for a smoke testing workflow</li>
-     * <li>SUPPLY_DATA: DAG for a data backfill instance</li>
-     * <li>BUSINESS_PROCESS_DAG: DAG for a one-time workflow
-     * Supported DAG states:</li>
-     * <li>CREATED: The DAG is created.</li>
-     * <li>RUNNING: The DAG is running.</li>
-     * <li>FAILURE: The DAG fails to run.</li>
-     * <li>SUCCESS: The DAG is successfully run.</li>
+     * <li>MANUAL: manual task workflow</li>
+     * <li>SMOKE_TEST: smoke test workflow</li>
+     * <li>SUPPLY_DATA: data backfill</li>
+     * <li>BUSINESS_PROCESS_DAG: one-time business process workflow
+     * Dag Status values:</li>
+     * <li>CREATED: created</li>
+     * <li>RUNNING: running</li>
+     * <li>FAILURE: failed</li>
+     * <li>SUCCESS: succeeded</li>
      * </ul>
      * 
      * @param request the request parameters of ListDags  ListDagsRequest
@@ -1459,7 +1509,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.</p>
+     * <p>Collections include: ALBUM (album collection) and ALBUM_CATEGORY (subcategory within an album).</p>
      * 
      * @param request the request parameters of ListMetaCollections  ListMetaCollectionsRequest
      * @return ListMetaCollectionsResponse
@@ -1510,6 +1560,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListNodesByOutputResponse> listNodesByOutput(ListNodesByOutputRequest request);
 
     /**
+     * <b>description</b> :
+     * <p><em>Note: The 2020 version of OpenAPI will be discontinued at a scheduled time. Please migrate to the 2024 version of OpenAPI as soon as possible — <a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listmyapplications?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_7.1c237afdFAePBC&scm=20140722.H_3040929._.OR_help-T_cn~zh-V_1">ListMyApplications</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listpendingapprovals?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_5.644e11b8FqtyZe&scm=20140722.H_3040932._.OR_help-T_cn~zh-V_1">ListPendingApprovals</a>/<a href="https://help.aliyun.com/zh/dataworks/developer-reference/api-dataworks-public-2024-05-18-listmyrelatedapprovals?spm=a2c4g.11186623.help-menu-72772.d_1_1_3_12_0_6.62893177dwvvfp&scm=20140722.H_3040931._.OR_help-T_cn~zh-V_1">ListMyRelatedApprovals</a>.</em>*</p>
+     * 
      * @param request the request parameters of ListPermissionApplyOrders  ListPermissionApplyOrdersRequest
      * @return ListPermissionApplyOrdersResponse
      */
@@ -1524,7 +1577,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>An Alibaba Cloud account can assume a role such as the developer, O\&amp;M engineer, or workspace administrator role in a workspace. For more information, see <a href="https://help.aliyun.com/document_detail/136941.html">Manage members and roles</a>.</p>
+     * <p>Your Alibaba Cloud account can have different role permissions such as Developer, O\&amp;M, and Workspace Administrator in a DataWorks workspace. For more information about workspace role permissions, see <a href="https://help.aliyun.com/document_detail/136941.html">DataWorks role management</a>.</p>
      * 
      * @param request the request parameters of ListProjectIds  ListProjectIdsRequest
      * @return ListProjectIdsResponse
@@ -1538,10 +1591,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
     /**
-     * <b>description</b> :
-     * <h2>Debugging</h2>
-     * <p><a href="https://api.aliyun.com/#product=dataworks-public%5C&api=ListProjectRoles%5C&type=RPC%5C&version=2020-05-18">OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.</a></p>
-     * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse
      */
@@ -1554,7 +1603,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
 
     /**
-     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description ****
+     * @deprecated OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.  * @description ***
      * 
      * @param request the request parameters of ListQualityResultsByEntity  ListQualityResultsByEntityRequest
      * @return ListQualityResultsByEntityResponse
@@ -1631,6 +1680,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you begin: Activate DataWorks Enterprise Edition or Ultimate Edition before calling this operation. If the edition is not activated, the service returns 403 Forbidden.Access.</p>
+     * 
      * @param request the request parameters of ListTopics  ListTopicsRequest
      * @return ListTopicsResponse
      */
@@ -1650,7 +1702,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>DataWorks allows you to call only the <a href="https://help.aliyun.com/document_detail/278725.html">CreateDISyncTask</a> operation to create a batch synchronization task or the <a href="https://help.aliyun.com/document_detail/289109.html">UpdateDISyncTask</a> operation to update a batch synchronization task in Data Integration. To create or update a real-time synchronization task, you must first call the <a href="https://help.aliyun.com/document_detail/383463.html">GenerateDISyncTaskConfigForCreating</a> or <a href="https://help.aliyun.com/document_detail/383464.html">GenerateDISyncTaskConfigForUpdating</a> operation to obtain the ID of an asynchronous thread and call the <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization task. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.</p>
+     * <p>DataWorks allows you to directly call the <a href="https://help.aliyun.com/document_detail/278725.html">CreateDISyncTask</a> operation to create or the <a href="https://help.aliyun.com/document_detail/289109.html">UpdateDISyncTask</a> operation to update batch synchronization tasks in Data Integration. To create or update a real-time synchronization task, you must first call the <a href="https://help.aliyun.com/document_detail/383463.html">GenerateDISyncTaskConfigForCreating</a>, <a href="https://help.aliyun.com/document_detail/383464.html">GenerateDISyncTaskConfigForUpdating</a>, and <a href="https://help.aliyun.com/document_detail/383465.html">QueryDISyncTaskConfigProcessResult</a> operations to asynchronously generate the required parameters, and then pass the parameters to the CreateDISyncTask or UpdateDISyncTask operation.
+     * Only asynchronous creation or update is supported for real-time synchronization tasks in Data Integration.</p>
      * 
      * @param request the request parameters of QueryDISyncTaskConfigProcessResult  QueryDISyncTaskConfigProcessResultRequest
      * @return QueryDISyncTaskConfigProcessResultResponse
@@ -1665,8 +1718,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Each time you call this API operation, you must use FML statements to query information about objects that are created in Data Modeling.</p>
      * <ul>
+     * <li>Each time you call this API operation, you must use FML statements to query information about objects that are created in Data Modeling.</li>
      * <li>The information about the objects can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement. The num LIMIT num statement specifies the offset when the information about the objects is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.</li>
      * <li>A maximum of 1,000 entries can be returned each time you call this API operation.</li>
      * </ul>
@@ -1714,7 +1767,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.</p>
+     * <p>This operation is currently in trial. To use this operation, submit a request. After an administrator adds you to the trial list, you can call this operation.</p>
      * 
      * @param request the request parameters of RegisterLineageRelation  RegisterLineageRelationRequest
      * @return RegisterLineageRelationResponse
@@ -1753,7 +1806,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Backfill data</a>.</p>
+     * <p>For more information about data backfill, see <a href="https://help.aliyun.com/document_detail/137937.html">Data backfill</a>.</p>
      * 
      * @param request the request parameters of RunCycleDagNodes  RunCycleDagNodesRequest
      * @return RunCycleDagNodesResponse
@@ -1792,7 +1845,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine.</p>
+     * <p>Only MaxCompute and EMR engine tables are supported for search.</p>
      * 
      * @param request the request parameters of SearchMetaTables  SearchMetaTablesRequest
      * @return SearchMetaTablesResponse
@@ -1868,6 +1921,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitDataServiceApiResponse> submitDataServiceApi(SubmitDataServiceApiRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation is asynchronous. After a successful submission, the system returns a DeploymentId. Call the <a href="https://help.aliyun.com/document_detail/173950.html">GetDeployment</a> operation with this ID to query the status and final result of the deployment task.</p>
+     * 
      * @param request the request parameters of SubmitFile  SubmitFileRequest
      * @return SubmitFileResponse
      */
@@ -1936,7 +1992,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can configure alert rules only for tasks that can be used for real-time data synchronization. You must update all fields in the alert rule.</p>
+     * <p>Alert rules can be configured when your task includes real-time synchronization.
+     * The alert rule is updated as a full-field update. Partial field updates are not supported.</p>
      * 
      * @param request the request parameters of UpdateDIAlarmRule  UpdateDIAlarmRuleRequest
      * @return UpdateDIAlarmRuleResponse
@@ -1978,7 +2035,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you debug or call this operation, you must specify new values for the specified parameters to ensure that the values are different from the original configurations of the file. For example, if the original value of a parameter is A, you must change the value of this parameter to B before you commit the node. If you set the parameter to A, an exception that indicates invalid data occurs.</p>
+     * <p>When you debug or call this operation, the parameter values that you specify must be different from the existing file configurations of the node. For example, if a parameter of the source node is set to A, you must change the value to B before you submit the request. If you still specify A, an invalid exception is returned.</p>
      * 
      * @param request the request parameters of UpdateFile  UpdateFileRequest
      * @return UpdateFileResponse
@@ -2005,7 +2062,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only the name and comment of a collection can be updated.</p>
+     * <p>Currently, only the name (Name) and comment (Comment) can be updated.</p>
      * 
      * @param request the request parameters of UpdateMetaCollection  UpdateMetaCollectionRequest
      * @return UpdateMetaCollectionResponse
@@ -2014,7 +2071,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation supports MaxCompute tables only.</p>
+     * <p>This operation supports only MaxCompute tables.</p>
      * 
      * @param request the request parameters of UpdateMetaTable  UpdateMetaTableRequest
      * @return UpdateMetaTableResponse

@@ -126,7 +126,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 100.</p>
+         * <p>The page number. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class ListProjectsRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmzbn7pti3zfa</p>
+         * <p>rg-acfmzbn7pt****</p>
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -162,7 +162,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The tags to add to the workspace.</p>
+         * <p>The list of tags bound to the workspace.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -231,10 +231,10 @@ public class ListProjectsRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag N to add to the workspace.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
-             * <p>Env</p>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -242,10 +242,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * <p>The value of tag N to add to the workspace.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

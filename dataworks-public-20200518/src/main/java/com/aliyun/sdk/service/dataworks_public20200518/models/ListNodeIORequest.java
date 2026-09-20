@@ -113,7 +113,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the information about ancestor or descendant nodes of the current node. Valid values: input and output.</p>
+         * <p>Specifies whether to query upstream or downstream nodes. Valid values: input and output.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * <p>The node ID. You can call the <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> operation to query the ID.</p>
+         * <p>The ID of the node. You can call <a href="https://help.aliyun.com/document_detail/173979.html">ListNodes</a> to query the NodeId.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * <p>The runtime environment. Valid values: DEV and PROD.</p>
+         * <p>The environment in which the node runs. Valid values: DEV (development environment) and PROD (production environment).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

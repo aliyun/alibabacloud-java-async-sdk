@@ -140,10 +140,10 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * <p>The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.</p>
+         * <p>The keyword of the API name. This parameter is used to filter APIs whose names contain the specified keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>My API Name</p>
+         * <p>MyAPIName</p>
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -152,7 +152,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -164,7 +164,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -176,7 +176,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The workspace ID. You can obtain this value from the PageResult.ProjectList[].ProjectId field returned by the ListProjects operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

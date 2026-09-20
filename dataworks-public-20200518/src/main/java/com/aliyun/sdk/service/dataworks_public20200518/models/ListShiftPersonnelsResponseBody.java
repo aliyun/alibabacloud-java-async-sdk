@@ -67,7 +67,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The pagination result.</p>
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -75,7 +75,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG</p>
@@ -170,7 +170,8 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the on-duty engineer starts the shift.</p>
+             * <p>The start time of the on-duty cycle.</p>
+             * <p>The value is a 13-digit timestamp, for example, <code>1593950832000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1593950832000</p>
@@ -181,7 +182,8 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the on-duty engineer ends the shift.</p>
+             * <p>The end time of the on-duty cycle.</p>
+             * <p>The value is a 13-digit timestamp, for example, <code>1593950832000</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>1593950832000</p>
@@ -192,7 +194,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the on-duty engineer.</p>
+             * <p>The name of the on-duty person.</p>
              * 
              * <strong>example:</strong>
              * <p>Zhang San</p>
@@ -203,7 +205,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the on-duty engineer.</p>
+             * <p>The UID of the on-duty person.</p>
              * 
              * <strong>example:</strong>
              * <p>3726346****</p>
@@ -299,7 +301,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number. Valid values: 1 to 100. Default value: 1.</p>
+             * <p>The page number. Minimum value: 1. Maximum value: 100. Default value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -321,7 +323,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The on-duty engineers in the shift schedule.</p>
+             * <p>The list of on-duty personnel.</p>
              */
             public Builder shiftPersons(java.util.List<ShiftPersons> shiftPersons) {
                 this.shiftPersons = shiftPersons;
@@ -329,7 +331,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

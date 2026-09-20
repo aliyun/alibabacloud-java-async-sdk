@@ -83,7 +83,7 @@ public class RegisterLineageRelationRequest extends Request {
         }
 
         /**
-         * <p>The structure whose lineage you want to register to DataWorks.</p>
+         * <p>The lineage registration structure.</p>
          * <p>This parameter is required.</p>
          */
         public Builder lineageRelationRegisterVO(LineageRelationRegisterVO lineageRelationRegisterVO) {

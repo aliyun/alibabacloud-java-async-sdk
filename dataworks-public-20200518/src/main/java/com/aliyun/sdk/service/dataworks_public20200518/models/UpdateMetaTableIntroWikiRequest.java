@@ -98,7 +98,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * <p>The details of the instructions on how to use the metatable.</p>
+         * <p>The details of the table description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * <p>The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.</p>
+         * <p>The globally unique identifier (GUID) of the table, in the format of odps.{projectName}.{tableName}.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

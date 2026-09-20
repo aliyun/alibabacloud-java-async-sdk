@@ -163,7 +163,7 @@ public class GetRemindResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
+         * <p>0000-ABCD-EFGH-IJK****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

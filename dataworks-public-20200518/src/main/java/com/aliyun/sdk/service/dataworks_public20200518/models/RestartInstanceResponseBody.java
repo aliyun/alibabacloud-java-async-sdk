@@ -119,7 +119,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The details of the result returned after the instance is restarted.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -163,7 +163,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. Used to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>q32ety****</p>
@@ -174,7 +174,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

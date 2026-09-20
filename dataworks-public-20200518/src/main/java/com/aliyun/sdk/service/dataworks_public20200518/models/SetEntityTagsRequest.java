@@ -110,7 +110,7 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of labels.</p>
          */
         public Builder tags(java.util.List<UserEntityTag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

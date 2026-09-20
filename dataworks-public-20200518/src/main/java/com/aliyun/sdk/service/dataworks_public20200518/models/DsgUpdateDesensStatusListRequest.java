@@ -98,6 +98,9 @@ public class DsgUpdateDesensStatusListRequest extends Request {
         }
 
         /**
+         * <p>The switch status. Valid values:
+         * 1: enabled
+         * 0: disabled</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +113,11 @@ public class DsgUpdateDesensStatusListRequest extends Request {
         }
 
         /**
+         * <p>The list of switch IDs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DsgUpdateDesensStatusList</p>
          */
         public Builder ids(java.util.List<Integer> ids) {
             String idsShrink = shrink(ids, "Ids", "json");

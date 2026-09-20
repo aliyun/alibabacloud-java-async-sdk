@@ -271,7 +271,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
              * <p>The description of the business process.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>Workflow description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +293,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
              * <p>The name of the business process.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test</p>
+             * <p>Workflow name</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

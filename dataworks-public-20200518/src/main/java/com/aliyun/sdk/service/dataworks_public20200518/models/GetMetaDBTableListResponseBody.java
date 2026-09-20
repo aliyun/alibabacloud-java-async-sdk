@@ -67,7 +67,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metatable information in a compute engine instance.</p>
+         * <p>Information about the tables in the engine instance.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique ID for this request.</p>
          * 
          * <strong>example:</strong>
          * <p>0bc1ec92159376</p>
@@ -157,7 +157,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the metadatabase.</p>
+             * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -168,7 +168,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GUID of the metatable.</p>
+             * <p>The unique identifier of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>odps.engine_name.tname</p>
@@ -179,7 +179,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the metatable.</p>
+             * <p>The name of the table.</p>
              * 
              * <strong>example:</strong>
              * <p>tname</p>
@@ -286,7 +286,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -297,7 +297,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of metatables in the compute engine instance.</p>
+             * <p>A list of table details.</p>
              */
             public Builder tableEntityList(java.util.List<TableEntityList> tableEntityList) {
                 this.tableEntityList = tableEntityList;
@@ -305,7 +305,7 @@ public class GetMetaDBTableListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of compute engine instances returned.</p>
+             * <p>The total number of tables.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

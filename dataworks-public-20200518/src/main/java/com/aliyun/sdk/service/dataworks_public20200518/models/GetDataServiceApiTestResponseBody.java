@@ -247,7 +247,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
              * <p>Debug information</p>
              * 
              * <strong>example:</strong>
-             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
+             * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
              */
             public Builder debugInfo(String debugInfo) {
                 this.debugInfo = debugInfo;
@@ -258,7 +258,7 @@ public class GetDataServiceApiTestResponseBody extends TeaModel {
              * <p>Node Debug information</p>
              * 
              * <strong>example:</strong>
-             * <p>[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=&quot;color: #92D581;&quot;&gt;INFO</span>]</p>
+             * <p>[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>] [16:15:13.240] resource group is 498774069027041[&lt;span style=\&quot;color: #92D581;\&quot;&gt;INFO</span>]</p>
              */
             public Builder nodesDebugInfo(String nodesDebugInfo) {
                 this.nodesDebugInfo = nodesDebugInfo;

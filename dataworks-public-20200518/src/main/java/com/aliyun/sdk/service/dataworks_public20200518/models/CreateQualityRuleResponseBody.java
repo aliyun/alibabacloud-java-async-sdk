@@ -119,7 +119,7 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the monitoring rule that you created.</p>
+         * <p>The ID of the new rule.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -174,7 +174,7 @@ public class CreateQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Whether the request succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

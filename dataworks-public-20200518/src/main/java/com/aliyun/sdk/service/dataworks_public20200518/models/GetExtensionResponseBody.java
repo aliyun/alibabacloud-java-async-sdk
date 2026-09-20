@@ -519,7 +519,7 @@ public class GetExtensionResponseBody extends TeaModel {
              * <p>The workspace for testing. If the extension is being tested, the extension can be used only in the workspace for testing.</p>
              * 
              * <strong>example:</strong>
-             * <p>13552</p>
+             * <p>1355211</p>
              */
             public Builder projectTesting(Long projectTesting) {
                 this.projectTesting = projectTesting;

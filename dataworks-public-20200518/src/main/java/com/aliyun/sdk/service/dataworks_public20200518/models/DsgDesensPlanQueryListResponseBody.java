@@ -152,7 +152,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paginated data.</p>
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -160,7 +160,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. You can use the ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. You can use this ID to locate logs and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>102400001</p>
@@ -173,8 +173,10 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The request was successful.</p>
+         * </li>
+         * <li><p>false: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +246,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the data masking rule.</p>
+             * <p>The type of the desensitization plan.</p>
              * 
              * <strong>example:</strong>
              * <p>hash</p>
@@ -255,7 +257,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters for the data masking rule. For more information about the parameters, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> API reference.</p>
+             * <p>The parameters for the desensitization rule. For details, see the <a href="https://help.aliyun.com/document_detail/2786295.html">DsgDesensPlanAddOrUpdate</a> operation.</p>
              */
             public Builder extParam(java.util.Map<String, ?> extParam) {
                 this.extParam = extParam;
@@ -621,10 +623,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a watermark is added. Valid values:</p>
+             * <p>Indicates whether to add a watermark. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li><p>true: A watermark is added.</p>
+             * </li>
+             * <li><p>false: No watermark is added.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -636,7 +640,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive field type.</p>
+             * <p>The sensitive data type.</p>
              * 
              * <strong>example:</strong>
              * <p>phone</p>
@@ -647,7 +651,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the data masking method.</p>
+             * <p>The desensitization method.</p>
              * 
              * <strong>example:</strong>
              * <p>HASH</p>
@@ -658,7 +662,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the data masking rule.</p>
+             * <p>The details of the desensitization plan.</p>
              */
             public Builder desensPlan(DesensPlan desensPlan) {
                 this.desensPlan = desensPlan;
@@ -666,7 +670,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data masking rule.</p>
+             * <p>The desensitization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>HASH</p>
@@ -677,7 +681,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data masking method.</p>
+             * <p>The desensitization method.</p>
              * 
              * <strong>example:</strong>
              * <p>HASH</p>
@@ -688,7 +692,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data masking rule was created.</p>
+             * <p>The time when the rule was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-09 15:46:20</p>
@@ -699,7 +703,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the data masking rule was modified.</p>
+             * <p>The time when the rule was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-09 15:46:20</p>
@@ -710,7 +714,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data masking rule.</p>
+             * <p>The ID of the desensitization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -721,7 +725,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner of the data masking rule.</p>
+             * <p>The owner of the desensitization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>user1</p>
@@ -732,7 +736,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the data masking rule.</p>
+             * <p>The name of the desensitization rule.</p>
              * 
              * <strong>example:</strong>
              * <p>phone_hash</p>
@@ -743,14 +747,20 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the level-1 data masking scenario to which the rule belongs. Valid values:</p>
+             * <p>The level-1 desensitization scene code. Valid values:</p>
              * <ul>
-             * <li>dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map</li>
-             * <li>maxcompute_desense_code: data masking at the MaxCompute compute engine layer</li>
-             * <li>maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)</li>
-             * <li>hologres_display_desense_code: data masking at the Hologres compute engine layer</li>
-             * <li>dataworks_data_integration_desense_code: static data masking in Data Integration</li>
-             * <li>dataworks_analysis_desense_code: masking of displayed data in DataAnalysis</li>
+             * <li><p>Desensitization for display in Data Development and Data Map: dataworks_display_desense_code</p>
+             * </li>
+             * <li><p>Desensitization at the MaxCompute engine layer: maxcompute_desense_code</p>
+             * </li>
+             * <li><p>Desensitization at the MaxCompute engine layer (New): maxcompute_new_desense_code</p>
+             * </li>
+             * <li><p>Desensitization at the Hologres engine layer: hologres_display_desense_code</p>
+             * </li>
+             * <li><p>Static desensitization in Data Integration: dataworks_data_integration_desense_code</p>
+             * </li>
+             * <li><p>Desensitization for display in Data Analysis: dataworks_analysis_desense_code</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -762,7 +772,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the level-2 data masking scenario to which the data masking rule belongs.</p>
+             * <p>The name of the level-2 desensitization scene.</p>
              * 
              * <strong>example:</strong>
              * <p>test_scene</p>
@@ -773,10 +783,12 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the data masking rule. Valid values:</p>
+             * <p>The status of the rule. Valid values:</p>
              * <ul>
-             * <li>0: expired</li>
-             * <li>1: effective</li>
+             * <li><p>0: Inactive.</p>
+             * </li>
+             * <li><p>1: Active.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -889,7 +901,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the data masking rule.</p>
+             * <p>The details of the desensitization rules.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -919,7 +931,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data masking rules.</p>
+             * <p>The total number of matching desensitization rules.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

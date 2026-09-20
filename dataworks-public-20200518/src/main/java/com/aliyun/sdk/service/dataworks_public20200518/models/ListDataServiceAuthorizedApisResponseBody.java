@@ -119,7 +119,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the APIs that you are authorized to access.</p>
+         * <p>The information about authorized APIs.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -160,7 +160,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. A unique identifier for the request.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFG****</p>
@@ -171,7 +171,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -383,7 +383,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The API ID.</p>
+             * <p>The ID of the API.</p>
              * 
              * <strong>example:</strong>
              * <p>10002</p>
@@ -397,7 +397,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
              * <p>The name of the API.</p>
              * 
              * <strong>example:</strong>
-             * <p>My API Name</p>
+             * <p>MyAPIName</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -416,7 +416,11 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
+             * <p>The status of the API. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished.</li>
+             * <li>1: published.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -427,7 +431,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API was created.</p>
+             * <p>The time when the API was created. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-23T00:21:01+0800</p>
@@ -438,7 +442,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the API owner.</p>
+             * <p>The Alibaba Cloud ID of the API owner.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -449,7 +453,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the access permissions on the API were granted.</p>
+             * <p>The time when the API was authorized. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-23T00:21:01+0800</p>
@@ -460,7 +464,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the access permissions granted on the API.</p>
+             * <p>The expiration time of the API authorization. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-24T00:21:01+0800</p>
@@ -471,7 +475,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account used by the user who granted the access permissions on the API.</p>
+             * <p>The Alibaba Cloud ID of the user who granted the authorization.</p>
              * 
              * <strong>example:</strong>
              * <p>23456</p>
@@ -493,7 +497,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API was last updated.</p>
+             * <p>The last modification time of the API. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ssZ (the example time zone is +0800).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-23T00:21:01+0800</p>
@@ -611,7 +615,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The APIs that you are authorized to access.</p>
+             * <p>The list of authorized APIs.</p>
              */
             public Builder apiAuthorizedList(java.util.List<ApiAuthorizedList> apiAuthorizedList) {
                 this.apiAuthorizedList = apiAuthorizedList;
@@ -619,7 +623,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.</p>
+             * <p>The page number, which is the same as the PageNumber value in the request.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -641,7 +645,7 @@ public class ListDataServiceAuthorizedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

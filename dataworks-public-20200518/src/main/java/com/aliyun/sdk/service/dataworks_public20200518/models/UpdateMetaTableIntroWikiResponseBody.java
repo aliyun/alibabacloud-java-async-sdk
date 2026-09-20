@@ -67,7 +67,7 @@ public class UpdateMetaTableIntroWikiResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID. You can troubleshoot issues based on the ID.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>abcde</p>
@@ -78,7 +78,7 @@ public class UpdateMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the instructions on how to use the table are updated.</p>
+         * <p>The update result of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

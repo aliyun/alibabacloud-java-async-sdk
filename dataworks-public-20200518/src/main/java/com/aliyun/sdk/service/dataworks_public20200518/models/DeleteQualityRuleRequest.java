@@ -112,7 +112,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -137,7 +137,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * <p>The monitoring rule ID.</p>
+         * <p>The ID of the data quality rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

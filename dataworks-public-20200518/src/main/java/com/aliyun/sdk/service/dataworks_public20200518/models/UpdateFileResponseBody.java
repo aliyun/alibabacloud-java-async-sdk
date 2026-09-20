@@ -106,7 +106,7 @@ public class UpdateFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>Invalid.Tenant.ConnectionNotExists</p>
@@ -117,7 +117,7 @@ public class UpdateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The connection does not exist.</p>
@@ -128,7 +128,7 @@ public class UpdateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -139,7 +139,7 @@ public class UpdateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * <p>The unique ID of the request. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>0000-ABCD-EFGH-IJKLMNOPQ</p>
@@ -150,10 +150,10 @@ public class UpdateFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true: The request is successful.</li>
-         * <li>false: The request fails.</li>
+         * <li>true: The call was successful.</li>
+         * <li>false: The call failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

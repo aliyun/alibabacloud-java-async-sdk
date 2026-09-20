@@ -80,7 +80,10 @@ public class ClusterConfig extends TeaModel {
         } 
 
         /**
-         * ConfigValue.
+         * <p>The configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;spark.driver.memory&quot;:&quot;1g&quot;}</p>
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
@@ -88,7 +91,14 @@ public class ClusterConfig extends TeaModel {
         }
 
         /**
-         * EnableOverwrite.
+         * <p>Specifies whether to overwrite the advanced settings of nodes in DataStudio. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableOverwrite(Boolean enableOverwrite) {
             this.enableOverwrite = enableOverwrite;
@@ -96,7 +106,18 @@ public class ClusterConfig extends TeaModel {
         }
 
         /**
-         * ModuleName.
+         * <p>The module in which the cluster is configured. Valid values:</p>
+         * <ul>
+         * <li>ide: DataStudio.</li>
+         * <li>da: DataAnalysis.</li>
+         * <li>scheduler.auto: Operation Center - auto triggered instances.</li>
+         * <li>scheduler.backfill: Operation Center - data backfill instances.</li>
+         * <li>scheduler.test: Operation Center - test instances.</li>
+         * <li>scheduler.manual: Operation Center - manually triggered instances.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ide</p>
          */
         public Builder moduleName(String moduleName) {
             this.moduleName = moduleName;

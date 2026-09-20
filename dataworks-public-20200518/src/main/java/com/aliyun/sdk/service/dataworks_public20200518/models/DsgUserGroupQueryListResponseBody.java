@@ -152,7 +152,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The paginated query results.</p>
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -173,8 +173,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +311,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The usernames in the user group.</p>
+             * <p>A list of usernames in the user group.</p>
              */
             public Builder accounts(java.util.List<String> accounts) {
                 this.accounts = accounts;
@@ -328,7 +330,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user group was modified.</p>
+             * <p>The time when the user group was last modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-10 17:14:44</p>
@@ -339,7 +341,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user group ID.</p>
+             * <p>The ID of the user group.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -465,7 +467,10 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The user groups.</p>
+             * <p>A list of user groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{     &quot;accounts&quot;: [         &quot;role_project_scheduler&quot;     ],     &quot;gmtCreate&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;gmtModified&quot;: &quot;2024-05-10 15:22:18&quot;,     &quot;id&quot;: 1955,     &quot;name&quot;: &quot;dsg_fin_test-copy&quot;,     &quot;owner&quot;: &quot;UAT&quot; }</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -495,7 +500,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of user groups returned.</p>
+             * <p>The total number of user groups.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

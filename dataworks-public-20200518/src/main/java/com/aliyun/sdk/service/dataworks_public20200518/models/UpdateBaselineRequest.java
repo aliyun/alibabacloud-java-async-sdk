@@ -252,7 +252,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the alerting feature. Valid values: true and false.</p>
+         * <p>Specifies whether alerting is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -264,7 +268,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The alert margin threshold of the baseline. Unit: minutes.</p>
+         * <p>The baseline alert margin. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -276,7 +280,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The alert settings of the baseline.</p>
+         * <p>The baseline alert configurations.</p>
          */
         public Builder alertSettings(java.util.List<AlertSettings> alertSettings) {
             String alertSettingsShrink = shrink(alertSettings, "AlertSettings", "json");
@@ -286,7 +290,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The baseline ID. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to query the ID.</p>
+         * <p>The ID of the baseline. You can call <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +303,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The name of the baseline.</p>
+         * <p>The baseline name.</p>
          * 
          * <strong>example:</strong>
          * <p>BaselineName</p>
@@ -311,7 +315,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The type of the baseline. Valid values: DAILY and HOURLY.</p>
+         * <p>The baseline type. Valid values:</p>
+         * <ul>
+         * <li>DAILY: daily baseline.</li>
+         * <li>HOURLY: hourly baseline.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DAILY</p>
@@ -323,7 +331,11 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the baseline. Valid values: true and false.</p>
+         * <p>Specifies whether the baseline is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -335,7 +347,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The ancestor nodes of nodes in the baseline. Separate the ancestor nodes with commas (,). If a large number of ancestor nodes exist, we recommend that you create a zero load node and configure the zero load node as the descendant node of nodes in the baseline to facilitate node management.</p>
+         * <p>The list of upstream node IDs for the baseline, separated by commas. If there are many nodes, we recommend that you add a virtual node downstream for easier management.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3</p>
@@ -347,7 +359,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The settings of the committed completion time of the baseline.</p>
+         * <p>The baseline committed time configurations.</p>
          */
         public Builder overtimeSettings(java.util.List<OvertimeSettings> overtimeSettings) {
             String overtimeSettingsShrink = shrink(overtimeSettings, "OvertimeSettings", "json");
@@ -357,7 +369,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account used by the baseline owner.</p>
+         * <p>The Alibaba Cloud UID of the baseline owner.</p>
          * 
          * <strong>example:</strong>
          * <p>3726346****</p>
@@ -369,7 +381,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The priority of the baseline. Valid values: {1,3,5,7,8}.</p>
+         * <p>The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -381,7 +393,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> operation to query the ID.</p>
+         * <p>The project ID. You can call <a href="https://help.aliyun.com/document_detail/2261507.html">ListBaselines</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -394,7 +406,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the node that you want to disassociate from the baseline. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+         * <p>The IDs of nodes to remove from the baseline. Separate multiple IDs with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>123,456</p>
@@ -465,7 +477,11 @@ public class UpdateBaselineRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to remind all members by using the at sign (@). Valid values: true and false.</p>
+             * <p>Specifies whether to @all members. Valid values:</p>
+             * <ul>
+             * <li>true: Yes.</li>
+             * <li>false: No.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -476,7 +492,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The webhook URL of the DingTalk chatbot.</p>
+             * <p>The webhook URL of the DingTalk group chatbot.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>
@@ -488,6 +504,87 @@ public class UpdateBaselineRequest extends Request {
 
             public DingRobots build() {
                 return new DingRobots(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateBaselineRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBaselineRequest</p>
+     */
+    public static class TopicSlowConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MinOver")
+        private Integer minOver;
+
+        @com.aliyun.core.annotation.NameInMap("OverFactor")
+        private Double overFactor;
+
+        private TopicSlowConfig(Builder builder) {
+            this.minOver = builder.minOver;
+            this.overFactor = builder.overFactor;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TopicSlowConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return minOver
+         */
+        public Integer getMinOver() {
+            return this.minOver;
+        }
+
+        /**
+         * @return overFactor
+         */
+        public Double getOverFactor() {
+            return this.overFactor;
+        }
+
+        public static final class Builder {
+            private Integer minOver; 
+            private Double overFactor; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopicSlowConfig model) {
+                this.minOver = model.minOver;
+                this.overFactor = model.overFactor;
+            } 
+
+            /**
+             * <p>The minimum slowdown threshold. Unit: seconds. Valid values: 300 to 18000.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
+             */
+            public Builder minOver(Integer minOver) {
+                this.minOver = minOver;
+                return this;
+            }
+
+            /**
+             * <p>The ratio used to calculate the slowdown threshold based on the historical average execution duration of the node. Valid values: 0.1 to 2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
+             */
+            public Builder overFactor(Double overFactor) {
+                this.overFactor = overFactor;
+                return this;
+            }
+
+            public TopicSlowConfig build() {
+                return new TopicSlowConfig(this);
             } 
 
         } 
@@ -532,6 +629,9 @@ public class UpdateBaselineRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SilenceStartTime")
         private String silenceStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("TopicSlowConfig")
+        private TopicSlowConfig topicSlowConfig;
+
         @com.aliyun.core.annotation.NameInMap("TopicTypes")
         private java.util.List<String> topicTypes;
 
@@ -549,6 +649,7 @@ public class UpdateBaselineRequest extends Request {
             this.dingRobots = builder.dingRobots;
             this.silenceEndTime = builder.silenceEndTime;
             this.silenceStartTime = builder.silenceStartTime;
+            this.topicSlowConfig = builder.topicSlowConfig;
             this.topicTypes = builder.topicTypes;
             this.webhooks = builder.webhooks;
         }
@@ -632,6 +733,13 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
+         * @return topicSlowConfig
+         */
+        public TopicSlowConfig getTopicSlowConfig() {
+            return this.topicSlowConfig;
+        }
+
+        /**
          * @return topicTypes
          */
         public java.util.List<String> getTopicTypes() {
@@ -656,6 +764,7 @@ public class UpdateBaselineRequest extends Request {
             private java.util.List<DingRobots> dingRobots; 
             private String silenceEndTime; 
             private String silenceStartTime; 
+            private TopicSlowConfig topicSlowConfig; 
             private java.util.List<String> topicTypes; 
             private java.util.List<String> webhooks; 
 
@@ -673,15 +782,16 @@ public class UpdateBaselineRequest extends Request {
                 this.dingRobots = model.dingRobots;
                 this.silenceEndTime = model.silenceEndTime;
                 this.silenceStartTime = model.silenceStartTime;
+                this.topicSlowConfig = model.topicSlowConfig;
                 this.topicTypes = model.topicTypes;
                 this.webhooks = model.webhooks;
             } 
 
             /**
-             * <p>The interval at which an event alert notification is sent. Unit: minutes. Minimum value: 5. Maximum value: 1,440.</p>
+             * <p>The event alerting interval. Unit: minutes. Minimum value: 5. Maximum value: 1440.</p>
              * 
              * <strong>example:</strong>
-             * <p>1800</p>
+             * <p>30</p>
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -689,7 +799,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of times an event alert notification is sent. Maximum value: 24.</p>
+             * <p>The maximum number of event alerting notifications. Maximum value: 288.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -700,7 +810,14 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The alert notification methods. Valid values: MAIL, SMS, PHONE, DINGROBOTS, and Webhooks. The value MAIL indicates that alert notifications are sent by email. The value SMS indicates that alert notifications are sent by text message. The value PHONE indicates that alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or a more advanced edition. The value DINGROBOTS indicates that alert notifications are sent by using a DingTalk chatbot. You can use this notification method only if the RobotUrls parameter is configured. The value Webhooks indicates that alert notifications are sent by WeCom or Lark. You can use this notification method only if the Webhooks parameter is configured.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>MAIL: email.</li>
+             * <li>SMS: text message.</li>
+             * <li>PHONE: phone call. Only DataWorks Professional Edition and higher support phone call alerts.</li>
+             * <li>DINGROBOTS: DingTalk chatbot. This alert method takes effect only after the RobotUrls parameter is configured.</li>
+             * <li>Webhooks: WeCom or Lark chatbot. This alert method takes effect only after the Webhooks parameter is configured.</li>
+             * </ul>
              */
             public Builder alertMethods(java.util.List<String> alertMethods) {
                 this.alertMethods = alertMethods;
@@ -708,7 +825,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The details of the alert recipient. If you set AlertRecipientType to OWNER, leave this parameter empty. If you set AlertRecipientType to SHIFT_SCHEDULE, set this parameter to the name of the shift schedule. If you set AlertRecipientType to OTHER, set this parameter to the employee IDs of specified personnel.</p>
+             * <p>The alert recipient details. For specified users: a list of employee IDs. For on-duty schedule: the schedule name. For owner: leave empty.</p>
              * 
              * <strong>example:</strong>
              * <p>123123</p>
@@ -719,7 +836,12 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The type of the alert recipient. Valid values: OWNER, OTHER, and SHIFT_SCHEDULE. The value OWNER indicates the node owner. The value OTHER indicates specified personnel. The value SHIFT_SCHEDULE indicates personnel in a shift schedule.</p>
+             * <p>The alert recipient type. Valid values:</p>
+             * <ul>
+             * <li>OWNER: node owner.</li>
+             * <li>OTHER: specified users.</li>
+             * <li>SHIFT_SCHEDULE: on-duty schedule.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>OWNER</p>
@@ -730,7 +852,11 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The type of the alert. Valid values: BASELINE and TOPIC. The value BASELINE indicates a baseline alert. The value TOPIC indicates an event alert.</p>
+             * <p>The alert type. Valid values:</p>
+             * <ul>
+             * <li>BASELINE: baseline alerting.</li>
+             * <li>TOPIC: event alerting.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>BASELINE</p>
@@ -741,7 +867,11 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the baseline alerting feature. This feature is specific to baselines. Valid values: true and false.</p>
+             * <p>Specifies whether baseline alerting is enabled. This is a baseline-specific configuration. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -752,7 +882,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The DingTalk chatbots.</p>
+             * <p>The list of DingTalk chatbots.</p>
              */
             public Builder dingRobots(java.util.List<DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
@@ -760,10 +890,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The end time of silence.</p>
+             * <p>The silence end time.</p>
              * 
              * <strong>example:</strong>
-             * <p>00:00:00</p>
+             * <p>00:00</p>
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -771,10 +901,10 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The start time of silence.</p>
+             * <p>The silence start time.</p>
              * 
              * <strong>example:</strong>
-             * <p>00:00:00</p>
+             * <p>00:00</p>
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -782,7 +912,15 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The types of event alerts, which are event-specific configurations.</p>
+             * <p>The threshold configuration for event slowdown alerts.</p>
+             */
+            public Builder topicSlowConfig(TopicSlowConfig topicSlowConfig) {
+                this.topicSlowConfig = topicSlowConfig;
+                return this;
+            }
+
+            /**
+             * <p>The event alerting type. This is an event-specific configuration.</p>
              */
             public Builder topicTypes(java.util.List<String> topicTypes) {
                 this.topicTypes = topicTypes;
@@ -790,7 +928,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The webhook URLs.</p>
+             * <p>The webhook list.</p>
              */
             public Builder webhooks(java.util.List<String> webhooks) {
                 this.webhooks = webhooks;
@@ -857,7 +995,7 @@ public class UpdateBaselineRequest extends Request {
             } 
 
             /**
-             * <p>The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.</p>
+             * <p>The epoch corresponding to the committed time. For daily baselines, the value is 1. For hourly baselines, you can configure up to 24 epochs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -868,7 +1006,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * <p>The committed completion time in the hh:mm format. Valid values of hh: [0,47]. Valid values of mm: [0,59].</p>
+             * <p>The committed time in hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.</p>
              * 
              * <strong>example:</strong>
              * <p>00:00</p>

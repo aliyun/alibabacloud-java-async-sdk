@@ -142,10 +142,10 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The keyword of a business process name. The keyword is used to search for business processes whose names contain this keyword.</p>
+         * <p>The keyword of the business process name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test business process</p>
+         * <p>TestBusinessProcess</p>
          */
         public Builder groupNameKeyword(String groupNameKeyword) {
             this.putBodyParameter("GroupNameKeyword", groupNameKeyword);
@@ -154,7 +154,7 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -166,7 +166,7 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,6 +179,7 @@ public class ListDataServiceGroupsRequest extends Request {
 
         /**
          * <p>The workspace ID.</p>
+         * <p>You can obtain this value from PageResult.ProjectList[].ProjectId in the response of the ListProjects operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +192,7 @@ public class ListDataServiceGroupsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID. This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> The tenant ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10001</p>

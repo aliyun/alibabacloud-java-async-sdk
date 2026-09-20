@@ -67,7 +67,10 @@ public class UserEntityTag extends TeaModel {
         } 
 
         /**
-         * TagKey.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>priority</p>
          */
         public Builder tagKey(String tagKey) {
             this.tagKey = tagKey;
@@ -75,7 +78,10 @@ public class UserEntityTag extends TeaModel {
         }
 
         /**
-         * TagValue.
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>p1</p>
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

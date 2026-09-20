@@ -167,7 +167,7 @@ public class UpdateDIJobRequest extends Request {
          * <p>The description of the synchronization task.</p>
          * 
          * <strong>example:</strong>
-         * <p>Synchronize mysql to hologres</p>
+         * <p>Synchronize MySQL to Hologres</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

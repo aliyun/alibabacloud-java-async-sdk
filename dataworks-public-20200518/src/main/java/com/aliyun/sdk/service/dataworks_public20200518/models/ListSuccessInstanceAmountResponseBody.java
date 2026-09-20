@@ -67,7 +67,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates the trend of the number of auto triggered node instances that are successfully run every hour on the hour of the current day.</p>
+         * <p>The trend data of successfully completed instance counts at different hours on the business date.</p>
          */
         public Builder instanceStatusTrend(InstanceStatusTrend instanceStatusTrend) {
             this.instanceStatusTrend = instanceStatusTrend;
@@ -75,7 +75,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The request ID. You can use this ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>952795279527ab****</p>
@@ -144,7 +144,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances that are successfully run.</p>
+             * <p>The number of successfully completed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -155,7 +155,8 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+             * <p>The time point. Valid values: hours on the hour from 00:00 to 23:00, such as 00:00, 01:00, and 02:00.</p>
+             * <p>Format: <code>HH:mm</code>. Example: <code>01:00</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>01:00</p>
@@ -225,7 +226,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances that are successfully run.</p>
+             * <p>The number of successfully completed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -236,7 +237,8 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+             * <p>The time point. Valid values: hours on the hour from 00:00 to 23:00, such as 00:00, 01:00, and 02:00.</p>
+             * <p>Format: <code>HH:mm</code>. Example: <code>01:00</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>01:00</p>
@@ -306,7 +308,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of instances that are successfully run.</p>
+             * <p>The number of successfully completed instances.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -317,7 +319,8 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time. The value is an exact hour that ranges from 00:00 to 23:00, such as 00:00, 01:00, or 02:00.</p>
+             * <p>The time point. Valid values: hours on the hour from 00:00 to 23:00, such as 00:00, 01:00, and 02:00.</p>
+             * <p>Format: <code>HH:mm</code>. Example: <code>01:00</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>01:00</p>
@@ -400,7 +403,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average trend.</p>
+             * <p>The historical average trend.</p>
              */
             public Builder avgTrend(java.util.List<AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
@@ -408,7 +411,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trend of the number of auto triggered node instances that are successfully run on the current day.</p>
+             * <p>The trend for the current business date.</p>
              */
             public Builder todayTrend(java.util.List<TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
@@ -416,7 +419,7 @@ public class ListSuccessInstanceAmountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The trend of the number of auto triggered node instances that are successfully run one day earlier than the current day.</p>
+             * <p>The trend for the day before the business date.</p>
              */
             public Builder yesterdayTrend(java.util.List<YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;

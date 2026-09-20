@@ -132,7 +132,10 @@ public class LineageEntityVO extends TeaModel {
         } 
 
         /**
-         * Attributes.
+         * <p>A map of additional key-value attributes for the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attribute map</p>
          */
         public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
@@ -140,7 +143,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * DetailUrl.
+         * <p>A URL for more details about the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://domain.test.url/entity">http://domain.test.url/entity</a></p>
          */
         public Builder detailUrl(String detailUrl) {
             this.detailUrl = detailUrl;
@@ -148,7 +154,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * EntityType.
+         * <p>The type of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table</p>
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -156,7 +165,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The human-readable name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tableName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -164,7 +176,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -172,7 +187,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * ParentName.
+         * <p>The name of the entity\&quot;s parent container, such as a database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbName</p>
          */
         public Builder parentName(String parentName) {
             this.parentName = parentName;
@@ -180,7 +198,10 @@ public class LineageEntityVO extends TeaModel {
         }
 
         /**
-         * QualifiedName.
+         * <p>The unique, fully qualified name of the entity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table.projectName.tablename</p>
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;

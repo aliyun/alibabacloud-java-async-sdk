@@ -112,7 +112,7 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p>Deprecated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://result.aliyun.com/?checkerInstanceId=">https://result.aliyun.com/?checkerInstanceId=</a></p>
@@ -124,7 +124,7 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which the file checker belongs. You can obtain the ID from the CheckerInstanceId parameter in the check event logs returned by DataWorks.</p>
+         * <p>The instance ID to which the file checker belongs. You can obtain this value from the CheckerInstanceId field in the file publish check event.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,11 +137,11 @@ public class CheckFileDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The check status of the file that you want to deploy. Valid values:</p>
+         * <p>The check status of the file pending deployment. Valid values:</p>
          * <ul>
-         * <li>OK: The file passes the check.</li>
-         * <li>WARN: The file passes the check, but an alert is reported.</li>
-         * <li>FAIL: The file fails the check.</li>
+         * <li>OK: The file passed the check.</li>
+         * <li>WARN: The file passed the check but has warnings.</li>
+         * <li>FAIL: The file failed the check.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

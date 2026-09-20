@@ -555,7 +555,7 @@ public class ListConnectionsResponseBody extends TeaModel {
              * <!---->
              * 
              * <pre><code>{
-             *   &quot;address&quot;: &quot;[\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\&quot;]&quot;,
+             *   &quot;address&quot;: &quot;[\\&quot;xsaxxsa.mongodb.rds.aliyuncs.com:3717\\&quot;]&quot;,
              *   &quot;database&quot;: &quot;admin&quot;,
              *   &quot;password&quot;: &quot;sadsda@&quot;,
              *   &quot;tag&quot;: &quot;public&quot;,
@@ -648,7 +648,7 @@ public class ListConnectionsResponseBody extends TeaModel {
              * </code></pre>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;database&quot;:&quot;xxx&quot;,&quot;instanceName&quot;:&quot;xxx&quot;,&quot;password&quot;:&quot;xxx&quot;,&quot;rdsOwnerId&quot;:&quot;xxx&quot;,&quot;tag&quot;:&quot;rds&quot;,&quot;username&quot;:&quot;xxx&quot;}</p>
+             * <p>{\&quot;database\&quot;:\&quot;xxx\&quot;,\&quot;instanceName\&quot;:\&quot;xxx\&quot;,\&quot;password\&quot;:\&quot;xxx\&quot;,\&quot;rdsOwnerId\&quot;:\&quot;xxx\&quot;,\&quot;tag\&quot;:\&quot;rds\&quot;,\&quot;username\&quot;:\&quot;xxx\&quot;}</p>
              */
             public Builder content(String content) {
                 this.content = content;
