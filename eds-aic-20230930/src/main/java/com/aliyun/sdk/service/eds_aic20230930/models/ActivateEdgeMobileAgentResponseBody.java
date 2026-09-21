@@ -67,7 +67,7 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthToken.
+             * <p>The assigned API key. The plaintext value is returned only upon the first activation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpk-81vfd8t8zdfxdf*****</p>
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -175,7 +181,10 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceId.
+             * <p>The device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sn-0001eevqa6jeapl*****</p>
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -183,7 +192,10 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Idempotent.
+             * <p>Indicates whether the request is an idempotent duplicate request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder idempotent(Boolean idempotent) {
                 this.idempotent = idempotent;
@@ -191,7 +203,10 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The EdgeMobile instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>em-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

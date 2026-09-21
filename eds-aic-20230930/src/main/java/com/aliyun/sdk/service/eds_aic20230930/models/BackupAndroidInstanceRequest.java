@@ -118,6 +118,7 @@ public class BackupAndroidInstanceRequest extends Request {
         } 
 
         /**
+         * <p>A list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -127,7 +128,10 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
-         * BackupFileName.
+         * <p>The name of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder backupFileName(String backupFileName) {
             this.putQueryParameter("BackupFileName", backupFileName);
@@ -136,6 +140,7 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
+         * <p>The upload URL for the backup file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -145,7 +150,10 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the full instance backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a backup android instance</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -154,6 +162,7 @@ public class BackupAndroidInstanceRequest extends Request {
         }
 
         /**
+         * <p>The region where the backup is stored.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

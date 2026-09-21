@@ -73,7 +73,13 @@ public class DisconnectAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * EndUserId.
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>If you use the Cloud Phone Matrix Edition and the instance stream pattern is collaborative mode, you can specify <code>EndUserId</code> to disconnect a specific user and invalidate the corresponding ticket.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <p>This parameter is not publicly available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -82,7 +88,7 @@ public class DisconnectAndroidInstanceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>A list of instance IDs. You can specify 1 to 100 IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

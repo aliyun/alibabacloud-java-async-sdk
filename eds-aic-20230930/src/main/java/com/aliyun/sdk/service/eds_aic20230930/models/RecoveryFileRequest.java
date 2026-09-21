@@ -143,7 +143,7 @@ public class RecoveryFileRequest extends Request {
          * <p>Specifies whether to back up the whole instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>false</p>
          */
         public Builder backupAll(Boolean backupAll) {
             this.putQueryParameter("BackupAll", backupAll);
@@ -166,7 +166,7 @@ public class RecoveryFileRequest extends Request {
         /**
          * <p>The OSS path to which the backup file is uploaded.</p>
          * <blockquote>
-         * <p> When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</p>
+         * <p>When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss\://${bucketName}/${key}.</p>
          * </blockquote>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -192,10 +192,6 @@ public class RecoveryFileRequest extends Request {
 
         /**
          * <p>The type of the backup.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>OSS: backup files are stored in OSS buckets.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>

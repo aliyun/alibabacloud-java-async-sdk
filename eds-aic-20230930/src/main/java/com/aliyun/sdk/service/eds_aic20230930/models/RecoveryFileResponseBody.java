@@ -96,7 +96,7 @@ public class RecoveryFileResponseBody extends TeaModel {
          * <p>The number of restored instances.</p>
          * 
          * <strong>example:</strong>
-         * <p>97</p>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -129,7 +129,7 @@ public class RecoveryFileResponseBody extends TeaModel {
          * <p>The ID of the batch task.</p>
          * 
          * <strong>example:</strong>
-         * <p>t-5prhfo7wv1gjx****</p>
+         * <p>t-3eourrxaoliqq****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -209,7 +209,7 @@ public class RecoveryFileResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-5prhfo7wv1gjx****</p>
+             * <p>t-ehs0yoedsskom****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

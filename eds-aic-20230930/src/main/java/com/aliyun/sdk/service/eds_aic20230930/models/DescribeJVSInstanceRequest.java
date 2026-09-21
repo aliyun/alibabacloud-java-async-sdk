@@ -87,7 +87,7 @@ public class DescribeJVSInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -96,7 +96,7 @@ public class DescribeJVSInstanceRequest extends Request {
         }
 
         /**
-         * <p>分页大小，最大值100，默认值10</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -108,7 +108,7 @@ public class DescribeJVSInstanceRequest extends Request {
         }
 
         /**
-         * <p>分页游标，首次查询无需传入</p>
+         * <p>The pagination token.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>

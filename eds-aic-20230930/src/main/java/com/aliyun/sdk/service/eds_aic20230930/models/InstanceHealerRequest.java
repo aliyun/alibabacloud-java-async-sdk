@@ -88,6 +88,7 @@ public class InstanceHealerRequest extends Request {
         } 
 
         /**
+         * <p>The list of instances.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
@@ -97,7 +98,10 @@ public class InstanceHealerRequest extends Request {
         }
 
         /**
-         * Strategy.
+         * <p>The policy type. The only supported value is Clean.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Clean</p>
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);
@@ -106,7 +110,10 @@ public class InstanceHealerRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The timeout period in seconds. If you do not specify this parameter, the default value is 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

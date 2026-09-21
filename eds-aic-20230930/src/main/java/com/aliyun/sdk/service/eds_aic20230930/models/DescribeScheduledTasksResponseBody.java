@@ -132,7 +132,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -148,7 +154,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +165,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -164,7 +176,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of scheduled tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -180,7 +195,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -272,7 +290,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * ExtraParams.
+             * <p>The extra parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
              */
             public Builder extraParams(String extraParams) {
                 this.extraParams = extraParams;
@@ -280,7 +301,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSteps.
+             * <p>The maximum number of steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxSteps(Integer maxSteps) {
                 this.maxSteps = maxSteps;
@@ -288,7 +312,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Skills.
+             * <p>The list of skill IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;sk-abc&quot;]</p>
              */
             public Builder skills(java.util.List<String> skills) {
                 this.skills = skills;
@@ -296,7 +323,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;
@@ -532,7 +562,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CronExpression.
+             * <p>The cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 * * *</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -540,7 +573,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T00:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -548,7 +584,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-12T10:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -556,7 +595,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of bound instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -564,7 +603,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * LastExecutionAt.
+             * <p>The last execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-12T00:00:00</p>
              */
             public Builder lastExecutionAt(String lastExecutionAt) {
                 this.lastExecutionAt = lastExecutionAt;
@@ -572,7 +614,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NextExecutionAt.
+             * <p>The next execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-13T00:00:00</p>
              */
             public Builder nextExecutionAt(String nextExecutionAt) {
                 this.nextExecutionAt = nextExecutionAt;
@@ -580,7 +625,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RunConfig.
+             * <p>The run configuration.</p>
              */
             public Builder runConfig(RunConfig runConfig) {
                 this.runConfig = runConfig;
@@ -588,7 +633,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledId.
+             * <p>The scheduled task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-260705-agb*****</p>
              */
             public Builder scheduledId(String scheduledId) {
                 this.scheduledId = scheduledId;
@@ -596,7 +644,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -604,7 +655,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskConfigId.
+             * <p>The task configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tsk-260615-*****</p>
              */
             public Builder taskConfigId(String taskConfigId) {
                 this.taskConfigId = taskConfigId;
@@ -612,7 +666,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DailyDataSyncTask</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -620,7 +677,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutions.
+             * <p>The total number of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalExecutions(Long totalExecutions) {
                 this.totalExecutions = totalExecutions;
@@ -628,7 +688,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalFailures.
+             * <p>The total number of failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalFailures(Long totalFailures) {
                 this.totalFailures = totalFailures;
@@ -636,7 +699,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrompt.
+             * <p>The user prompt or task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Execute daily data sync task</p>
              */
             public Builder userPrompt(String userPrompt) {
                 this.userPrompt = userPrompt;
@@ -644,7 +710,10 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The CAS version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

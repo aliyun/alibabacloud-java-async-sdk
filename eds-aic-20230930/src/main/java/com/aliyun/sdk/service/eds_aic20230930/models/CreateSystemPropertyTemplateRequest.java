@@ -102,7 +102,10 @@ public class CreateSystemPropertyTemplateRequest extends Request {
         } 
 
         /**
-         * EnableAuto.
+         * <p>Specifies whether to automatically generate preset system properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuto(Boolean enableAuto) {
             this.putQueryParameter("EnableAuto", enableAuto);
@@ -111,7 +114,13 @@ public class CreateSystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The URL of the property template file. The API parses the file synchronously. An error is returned if the file format is invalid.</p>
+         * <blockquote>
+         * <p>The file must be in the following format: <code>{ &quot;properties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -120,7 +129,7 @@ public class CreateSystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * SystemPropertyInfo.
+         * <p>The information about the system property template.</p>
          */
         public Builder systemPropertyInfo(SystemPropertyInfo systemPropertyInfo) {
             String systemPropertyInfoShrink = shrink(systemPropertyInfo, "SystemPropertyInfo", "json");
@@ -130,7 +139,18 @@ public class CreateSystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>Be 2 to 32 characters in length.</p>
+         * </li>
+         * <li><p>Start with an uppercase or lowercase letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * </li>
+         * <li><p>Contain letters, digits, colons (:), underscores (_), and hyphens (-). Periods (.) are not supported.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Template1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -198,7 +218,10 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             } 
 
             /**
-             * PropertyName.
+             * <p>The key of the custom property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propKey</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -206,7 +229,10 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * PropertyValue.
+             * <p>The value of the custom property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propValue</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -455,7 +481,7 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             } 
 
             /**
-             * CustomPropertyInfos.
+             * <p>A list of custom properties.</p>
              */
             public Builder customPropertyInfos(java.util.List<CustomPropertyInfos> customPropertyInfos) {
                 this.customPropertyInfos = customPropertyInfos;
@@ -463,7 +489,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBootloader.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBootloader(String roBootloader) {
                 this.roBootloader = roBootloader;
@@ -471,7 +502,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildDisplayId.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildDisplayId(String roBuildDisplayId) {
                 this.roBuildDisplayId = roBuildDisplayId;
@@ -479,7 +515,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildFingerprint.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildFingerprint(String roBuildFingerprint) {
                 this.roBuildFingerprint = roBuildFingerprint;
@@ -487,7 +528,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildHost.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildHost(String roBuildHost) {
                 this.roBuildHost = roBuildHost;
@@ -495,7 +541,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildId.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildId(String roBuildId) {
                 this.roBuildId = roBuildId;
@@ -503,7 +554,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildProduct.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildProduct(String roBuildProduct) {
                 this.roBuildProduct = roBuildProduct;
@@ -511,7 +567,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildTags.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildTags(String roBuildTags) {
                 this.roBuildTags = roBuildTags;
@@ -519,7 +580,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildType.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildType(String roBuildType) {
                 this.roBuildType = roBuildType;
@@ -527,7 +593,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildUser.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildUser(String roBuildUser) {
                 this.roBuildUser = roBuildUser;
@@ -535,7 +606,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductBoard.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductBoard(String roProductBoard) {
                 this.roProductBoard = roProductBoard;
@@ -543,7 +619,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductBrand.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductBrand(String roProductBrand) {
                 this.roProductBrand = roProductBrand;
@@ -551,7 +632,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductDevice.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductDevice(String roProductDevice) {
                 this.roProductDevice = roProductDevice;
@@ -559,7 +645,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductManufacturer.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductManufacturer(String roProductManufacturer) {
                 this.roProductManufacturer = roProductManufacturer;
@@ -567,7 +658,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductModel.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductModel(String roProductModel) {
                 this.roProductModel = roProductModel;
@@ -575,7 +671,12 @@ public class CreateSystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RwRoSerialNo.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rwRoSerialNo(String rwRoSerialNo) {
                 this.rwRoSerialNo = rwRoSerialNo;

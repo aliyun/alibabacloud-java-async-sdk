@@ -80,7 +80,7 @@ public class UninstallAppResponseBody extends TeaModel {
         } 
 
         /**
-         * ChildTaskInfo.
+         * <p>A list of subtasks.</p>
          */
         public Builder childTaskInfo(java.util.List<ChildTaskInfo> childTaskInfo) {
             this.childTaskInfo = childTaskInfo;
@@ -88,7 +88,7 @@ public class UninstallAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E5138F7E-46B5-526A-8C99-82DEAE6B****</p>
@@ -99,7 +99,7 @@ public class UninstallAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-1ljew7on6ay0j****</p>
@@ -181,7 +181,7 @@ public class UninstallAppResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -189,7 +189,10 @@ public class UninstallAppResponseBody extends TeaModel {
             }
 
             /**
-             * ChildTaskId.
+             * <p>The subtask ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-ybde48cevxxxx</p>
              */
             public Builder childTaskId(String childTaskId) {
                 this.childTaskId = childTaskId;
@@ -197,7 +200,10 @@ public class UninstallAppResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-ty3bnd7b9xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -73,7 +73,7 @@ public class InstallSkillsRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The list of cloud phone instance IDs. You can specify 1 to 200 instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -82,7 +82,7 @@ public class InstallSkillsRequest extends Request {
         }
 
         /**
-         * SkillIds.
+         * <p>The list of skill IDs. You can specify 1 to 10 skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             this.putQueryParameter("SkillIds", skillIds);

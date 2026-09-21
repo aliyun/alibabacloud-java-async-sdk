@@ -106,7 +106,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * SkillInfo.
+         * <p>The skill information.</p>
          */
         public Builder skillInfo(java.util.List<SkillInfo> skillInfo) {
             this.skillInfo = skillInfo;
@@ -138,7 +147,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstallStatus.
+             * <p>The installation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder installStatus(String installStatus) {
                 this.installStatus = installStatus;
@@ -212,7 +227,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The cloud phone instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-6g3nocu5y9vaf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -448,7 +466,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The skill category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -456,7 +477,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-13 15:40:51</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -464,7 +488,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +499,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * IconOssUrl.
+             * <p>The OSS download URL of the skill icon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aHR0cDovL2Nsb3VkLXBob25lLWFpLXRlc3QwLm9zcy1jbi1oYW5nemhv****</p>
              */
             public Builder iconOssUrl(String iconOssUrl) {
                 this.iconOssUrl = iconOssUrl;
@@ -480,7 +510,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledCount.
+             * <p>The number of instances that have the skill installed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder installedCount(Integer installedCount) {
                 this.installedCount = installedCount;
@@ -488,7 +521,7 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledInstances.
+             * <p>The information about the installed instances.</p>
              */
             public Builder installedInstances(java.util.List<InstalledInstances> installedInstances) {
                 this.installedInstances = installedInstances;
@@ -496,7 +529,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Instruction.
+             * <p>The skill summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current weather and forecasts.</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -504,7 +540,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The skill ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-04zzrgosj6xd1****</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -512,7 +551,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>weather</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -520,7 +562,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillSource.
+             * <p>The skill source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER_UPLOAD</p>
              */
             public Builder skillSource(String skillSource) {
                 this.skillSource = skillSource;
@@ -528,7 +573,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SkillStatus.
+             * <p>The skill lifecycle status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UPLOADED</p>
              */
             public Builder skillStatus(String skillStatus) {
                 this.skillStatus = skillStatus;
@@ -536,7 +584,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The source node ID of the skill created from a conversation. This value is empty for user-uploaded skills.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-bp4du4v74mc7qw8****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -544,7 +595,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The skill status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -552,7 +606,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The skill type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -560,7 +617,10 @@ public class DescribeSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The skill version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

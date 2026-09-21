@@ -80,7 +80,7 @@ public class RunSyncCommandResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>An array of objects, where each object contains the execution result for a single instance.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -214,7 +220,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             } 
 
             /**
-             * FinishTime.
+             * <p>The time when command execution finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-11 17:45:03</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -222,7 +231,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the instance on which the command was executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -230,7 +242,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationId.
+             * <p>The invocation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-15775dc8****</p>
              */
             public Builder invocationId(String invocationId) {
                 this.invocationId = invocationId;
@@ -238,7 +253,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             }
 
             /**
-             * InvocationStatus.
+             * <p>The command execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -246,7 +264,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The command output.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -254,7 +275,10 @@ public class RunSyncCommandResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when command execution began.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-11T08:53:32Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

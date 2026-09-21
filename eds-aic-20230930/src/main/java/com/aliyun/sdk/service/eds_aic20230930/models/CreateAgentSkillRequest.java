@@ -129,7 +129,7 @@ public class CreateAgentSkillRequest extends Request {
         } 
 
         /**
-         * FileList.
+         * <p>The list of files in the skill package.</p>
          */
         public Builder fileList(java.util.List<String> fileList) {
             this.putQueryParameter("FileList", fileList);
@@ -138,7 +138,10 @@ public class CreateAgentSkillRequest extends Request {
         }
 
         /**
-         * IconKey.
+         * <p>The icon of the custom skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>icon01</p>
          */
         public Builder iconKey(String iconKey) {
             this.putQueryParameter("IconKey", iconKey);
@@ -147,7 +150,10 @@ public class CreateAgentSkillRequest extends Request {
         }
 
         /**
-         * PackageOssKey.
+         * <p>The OSS path of the skill package. This parameter is reserved by the system and does not need to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test/sk-test/current/skill.zip</p>
          */
         public Builder packageOssKey(String packageOssKey) {
             this.putQueryParameter("PackageOssKey", packageOssKey);
@@ -156,7 +162,10 @@ public class CreateAgentSkillRequest extends Request {
         }
 
         /**
-         * SkillDescription.
+         * <p>The skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</p>
          */
         public Builder skillDescription(String skillDescription) {
             this.putQueryParameter("SkillDescription", skillDescription);
@@ -165,7 +174,10 @@ public class CreateAgentSkillRequest extends Request {
         }
 
         /**
-         * SkillName.
+         * <p>The skill name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather-enhanced</p>
          */
         public Builder skillName(String skillName) {
             this.putQueryParameter("SkillName", skillName);
@@ -174,7 +186,10 @@ public class CreateAgentSkillRequest extends Request {
         }
 
         /**
-         * SkillPackageUrl.
+         * <p>The OSS download URL of the skill package. This parameter is required for API calls.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.oss-cn-hangzhou.aliyuncs.com/weather_skill.zip?Expires=1788168088&OSSAccessKeyId=">https://test.oss-cn-hangzhou.aliyuncs.com/weather_skill.zip?Expires=1788168088&amp;OSSAccessKeyId=</a>****</p>
          */
         public Builder skillPackageUrl(String skillPackageUrl) {
             this.putQueryParameter("SkillPackageUrl", skillPackageUrl);

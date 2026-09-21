@@ -96,7 +96,7 @@ public class BackupFileResponseBody extends TeaModel {
          * <p>The number of instances that are backed up.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -104,7 +104,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The object that is returned.</p>
+         * <p>The result object.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -115,7 +115,7 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
@@ -126,10 +126,10 @@ public class BackupFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the batch task.</p>
+         * <p>The batch task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>t-22ex666a5mco5****</p>
+         * <p>t-14xwibw7pyrjd****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -246,7 +246,7 @@ public class BackupFileResponseBody extends TeaModel {
              * <p>The name of the backup file.</p>
              * 
              * <strong>example:</strong>
-             * <p>a-58ftsoo90p0qa****.ab</p>
+             * <p>MyBackup</p>
              */
             public Builder backupFileName(String backupFileName) {
                 this.backupFileName = backupFileName;
@@ -257,7 +257,7 @@ public class BackupFileResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-22ex666a5mco5****</p>
+             * <p>t-22ex666a653gq****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

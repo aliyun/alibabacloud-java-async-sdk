@@ -54,7 +54,7 @@ public class StopAndroidInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E38B41A8-8E00-5AE4-A957-6636ACB8****</p>

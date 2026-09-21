@@ -67,7 +67,7 @@ public class InstanceHealerResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceHealerModel.
+         * <p>The diagnosis result object.</p>
          */
         public Builder instanceHealerModel(InstanceHealerModel instanceHealerModel) {
             this.instanceHealerModel = instanceHealerModel;
@@ -75,7 +75,10 @@ public class InstanceHealerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class InstanceHealerResponseBody extends TeaModel {
             } 
 
             /**
-             * Result.
+             * <p>The result of the task execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder result(String result) {
                 this.result = result;

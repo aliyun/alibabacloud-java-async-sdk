@@ -93,7 +93,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -101,7 +104,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * MetricTotalModel.
+         * <p>The instance monitoring data.</p>
          */
         public Builder metricTotalModel(java.util.List<MetricTotalModel> metricTotalModel) {
             this.metricTotalModel = metricTotalModel;
@@ -109,7 +112,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If not all results are returned, this parameter is not empty. Use the returned token to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +244,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * Average.
+             * <p>The average value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>99.52</p>
              */
             public Builder average(Double average) {
                 this.average = average;
@@ -243,7 +258,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * GpuId.
+             * <p>The GPU ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-1t1bxvp9az2pk****-gpu-0</p>
              */
             public Builder gpuId(String gpuId) {
                 this.gpuId = gpuId;
@@ -251,7 +269,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Maximum.
+             * <p>The maximum value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -259,7 +283,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Minimum.
+             * <p>The minimum value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>93.1</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -267,7 +297,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the statistics. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548777660000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -275,7 +308,13 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The data value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>bandwidth_package_usage_out\\</code> or \<code>bandwidth_package_usage_in\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>tf-testacc-oos-parameter</p>
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -355,7 +394,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * DataPoints.
+             * <p>A list of monitoring data points.</p>
              */
             public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
@@ -363,7 +402,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpu_utilization</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -371,7 +413,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Required</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -451,7 +496,11 @@ public class DescribeMetricListResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>For instance-level monitoring, the Cloud Phone instance ID is returned.
+             * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, the matrix ID is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-fkuit0cmyru4p****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -459,7 +508,10 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-5hh4a31emkt6u****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -467,7 +519,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
             }
 
             /**
-             * MetricModelList.
+             * <p>The monitoring data for metrics.</p>
              */
             public Builder metricModelList(java.util.List<MetricModelList> metricModelList) {
                 this.metricModelList = metricModelList;

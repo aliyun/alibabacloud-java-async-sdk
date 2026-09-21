@@ -106,7 +106,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The backup files that are returned.</p>
+         * <p>The list of returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The maximum number of entries returned in this call.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -125,7 +125,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -136,7 +136,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. If the request fails, provide this ID to technical support to assist in diagnosing the issue.</p>
+         * <p>The request ID. If you encounter an issue, provide this request ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -147,7 +147,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>91</p>
@@ -463,7 +463,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-34pqe4r0kd9kn****</p>
@@ -474,10 +474,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
-             * <p>defaultInstanceName</p>
+             * <p>Test cloud phone</p>
              */
             public Builder androidInstanceName(String androidInstanceName) {
                 this.androidInstanceName = androidInstanceName;
@@ -485,10 +485,10 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the whole instance is backed up.</p>
+             * <p>Specifies whether to perform a full device backup.</p>
              * 
              * <strong>example:</strong>
-             * <p>true</p>
+             * <p>false</p>
              */
             public Builder backupAll(Boolean backupAll) {
                 this.backupAll = backupAll;
@@ -496,7 +496,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup file.</p>
+             * <p>The backup file ID.</p>
              * 
              * <strong>example:</strong>
              * <p>bf-b0qbg3pbpjkn7****</p>
@@ -507,7 +507,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup file.</p>
+             * <p>The backup file name.</p>
              * 
              * <strong>example:</strong>
              * <p>a-58ftsoo90p0qa****.ab</p>
@@ -518,7 +518,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory in which the backup file is stored.</p>
+             * <p>The directory where the backup file is stored.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</p>
@@ -540,7 +540,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
              * <p>The description of the backup file.</p>
              * 
              * <strong>example:</strong>
-             * <p>This is default description.</p>
+             * <p>Backup file for /data/media directory.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -559,7 +559,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of the source files.</p>
+             * <p>The total size of the source backup files.</p>
              * 
              * <strong>example:</strong>
              * <p>10227168</p>
@@ -570,7 +570,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup file was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -581,7 +581,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup file was last updated.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-05-15 17:33:59</p>
@@ -592,7 +592,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-58ftsoo90p0qi****</p>
@@ -614,7 +614,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of the application packages that are backed up.</p>
+             * <p>The list of backed-up application package names.</p>
              */
             public Builder sourceAppInfoList(java.util.List<String> sourceAppInfoList) {
                 this.sourceAppInfoList = sourceAppInfoList;
@@ -622,7 +622,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directories of the source files.</p>
+             * <p>The list of source backup file directories.</p>
              */
             public Builder sourceFilePathList(java.util.List<String> sourceFilePathList) {
                 this.sourceFilePathList = sourceFilePathList;
@@ -630,12 +630,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup file.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AVAILABLE</li>
-             * <li>RECOVERING</li>
-             * </ul>
+             * <p>The backup file status.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -665,7 +660,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the OSS bucket that stores the backup file.</p>
+             * <p>The domain name of the upload endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -676,11 +671,7 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the backup.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>OSS: backup files are stored in OSS buckets. .</li>
-             * </ul>
+             * <p>The backup type.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>

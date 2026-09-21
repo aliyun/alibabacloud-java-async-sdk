@@ -12,19 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link RebootAndroidInstancesInGroupResponseBody} extends {@link TeaModel}
+ * {@link UpdateCloudPhoneNodeSystemImageResponseBody} extends {@link TeaModel}
  *
- * <p>RebootAndroidInstancesInGroupResponseBody</p>
+ * <p>UpdateCloudPhoneNodeSystemImageResponseBody</p>
  */
-public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
+public class UpdateCloudPhoneNodeSystemImageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
-    private RebootAndroidInstancesInGroupResponseBody(Builder builder) {
+    private UpdateCloudPhoneNodeSystemImageResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
         this.tasks = builder.tasks;
     }
 
@@ -32,7 +36,7 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RebootAndroidInstancesInGroupResponseBody create() {
+    public static UpdateCloudPhoneNodeSystemImageResponseBody create() {
         return builder().build();
     }
 
@@ -48,6 +52,13 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return tasks
      */
     public Tasks getTasks() {
@@ -56,21 +67,23 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private String taskId; 
         private Tasks tasks; 
 
         private Builder() {
         } 
 
-        private Builder(RebootAndroidInstancesInGroupResponseBody model) {
+        private Builder(UpdateCloudPhoneNodeSystemImageResponseBody model) {
             this.requestId = model.requestId;
+            this.taskId = model.taskId;
             this.tasks = model.tasks;
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>227CBB4C-F5DC-589D-A667-C5CA3D52****</p>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,24 +91,35 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-ehs0yoedj0xe9****</p>
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * <p>The task information.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
             return this;
         }
 
-        public RebootAndroidInstancesInGroupResponseBody build() {
-            return new RebootAndroidInstancesInGroupResponseBody(this);
+        public UpdateCloudPhoneNodeSystemImageResponseBody build() {
+            return new UpdateCloudPhoneNodeSystemImageResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link RebootAndroidInstancesInGroupResponseBody} extends {@link TeaModel}
+     * {@link UpdateCloudPhoneNodeSystemImageResponseBody} extends {@link TeaModel}
      *
-     * <p>RebootAndroidInstancesInGroupResponseBody</p>
+     * <p>UpdateCloudPhoneNodeSystemImageResponseBody</p>
      */
     public static class ChildTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -144,7 +168,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -152,7 +179,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The child task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -168,9 +198,9 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link RebootAndroidInstancesInGroupResponseBody} extends {@link TeaModel}
+     * {@link UpdateCloudPhoneNodeSystemImageResponseBody} extends {@link TeaModel}
      *
-     * <p>RebootAndroidInstancesInGroupResponseBody</p>
+     * <p>UpdateCloudPhoneNodeSystemImageResponseBody</p>
      */
     public static class Tasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildTasks")
@@ -219,7 +249,7 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildTasks.
+             * <p>The child tasks.</p>
              */
             public Builder childTasks(java.util.List<ChildTasks> childTasks) {
                 this.childTasks = childTasks;
@@ -227,7 +257,10 @@ public class RebootAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTaskId.
+             * <p>The parent task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder parentTaskId(String parentTaskId) {
                 this.parentTaskId = parentTaskId;

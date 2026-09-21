@@ -93,7 +93,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B886792-2051-5DB4-8AE6-C8E45D3B4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CancelAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>A list of task objects.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -235,7 +244,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CancelAt.
+             * <p>The task\&quot;s cancellation time, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-13T17:42:19Z</p>
              */
             public Builder cancelAt(String cancelAt) {
                 this.cancelAt = cancelAt;
@@ -243,7 +255,12 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStatus.
+             * <p>The task status after the cancellation request. Possible values include:</p>
+             * <p><code>CANCELLING</code> or <code>CANCELED</code>: The task is being or has been canceled.</p>
+             * <p><code>COMPLETED</code>: The task was already complete and could not be canceled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -251,7 +268,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The failure reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task status [COMPLETED] does not support cancellation, only PENDING/RUNNING/CANCELLING tasks can be canceled.</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -259,7 +279,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The mobile node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-ek65k51zoxia3x8xz</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -267,7 +290,12 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousStatus.
+             * <p>The task status before cancellation. Valid values include:</p>
+             * <p>PENDING: The task is being created.</p>
+             * <p>RUNNING: The task is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;
@@ -275,7 +303,10 @@ public class CancelAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The globally unique task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

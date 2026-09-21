@@ -67,7 +67,10 @@ public class ExpandPhoneDataVolumeResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223684716098****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class ExpandPhoneDataVolumeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DB070C80-45AC-52CA-8101-937C25DA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

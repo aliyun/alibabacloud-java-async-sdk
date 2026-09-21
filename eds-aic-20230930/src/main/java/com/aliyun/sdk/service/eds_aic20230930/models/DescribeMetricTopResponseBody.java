@@ -93,7 +93,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -101,7 +104,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * MetricTotalModel.
+         * <p>The instance monitoring data.</p>
          */
         public Builder metricTotalModel(java.util.List<MetricTotalModel> metricTotalModel) {
             this.metricTotalModel = metricTotalModel;
@@ -109,7 +112,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to retrieve the next page of results. If the results are not fully returned in a single query, this parameter is not empty. You can use this token in a subsequent query to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4610632D-D661-5982-B3D7-5D3FD183F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -248,7 +257,13 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             } 
 
             /**
-             * Average.
+             * <p>The average value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>99.52</p>
              */
             public Builder average(Double average) {
                 this.average = average;
@@ -256,7 +271,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-fkuit0cmyru4p****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -264,7 +282,13 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Maximum.
+             * <p>The maximum value. Unit: %.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maximum(Double maximum) {
                 this.maximum = maximum;
@@ -272,7 +296,13 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Minimum.
+             * <p>The minimum value.</p>
+             * <blockquote>
+             * <p>The unit is bps when the metric is \<code>instance_in_traffic\\</code> or \<code>instance_out_traffic\\</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>93.1</p>
              */
             public Builder minimum(Double minimum) {
                 this.minimum = minimum;
@@ -280,7 +310,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudPhone-****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +321,13 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The properties.</p>
+             * <blockquote>
+             * <p>A JSON string that contains the extension properties.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;IP&quot;:&quot;192.168.<em>.</em>**&quot;}</p>
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -296,7 +335,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp of the data point. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1548777660000</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -363,7 +405,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             } 
 
             /**
-             * DataPoints.
+             * <p>The monitoring data points.</p>
              */
             public Builder dataPoints(java.util.List<DataPoints> dataPoints) {
                 this.dataPoints = dataPoints;
@@ -371,7 +413,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance_in_traffic</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -451,7 +496,11 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>For instance-level monitoring, this is the cloud phone instance ID.
+             * &lt;props=&quot;china&quot;&gt;For matrix-level monitoring, this is the matrix ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-fkuit0cmyru4p****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -459,7 +508,10 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-5hh4a31emkt6u****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -467,7 +519,7 @@ public class DescribeMetricTopResponseBody extends TeaModel {
             }
 
             /**
-             * MetricModelList.
+             * <p>The monitoring data of metrics.</p>
              */
             public Builder metricModelList(java.util.List<MetricModelList> metricModelList) {
                 this.metricModelList = metricModelList;

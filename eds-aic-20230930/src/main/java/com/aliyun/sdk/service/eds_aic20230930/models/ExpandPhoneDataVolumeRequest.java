@@ -129,7 +129,10 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Whether to enable automatic payment. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -138,7 +141,10 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -147,7 +153,7 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>A list of cloud phone matrix instance IDs. You can specify 1 to 100 IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -165,7 +171,10 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         }
 
         /**
-         * PhoneDataVolume.
+         * <p>The target size of the phone storage, in GiB.&gt;Notice: The new value must be greater than the current size of the phone storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
@@ -174,7 +183,10 @@ public class ExpandPhoneDataVolumeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

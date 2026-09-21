@@ -101,7 +101,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -110,12 +110,7 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce a restart operation. If a cloud phone instance fails to stop due to system or network issues, a forced restart can be triggered, though it may result in data loss.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to forcefully reboot the instances. If a Cloud Phone instance cannot be shut down because of system or network errors, you can force a reboot. This operation may cause data loss.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -136,7 +131,10 @@ public class RebootAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sales mode. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

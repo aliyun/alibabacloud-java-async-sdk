@@ -77,6 +77,10 @@ public class CreateMobileAgentPackageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
     private CreateMobileAgentPackageRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
@@ -94,6 +98,7 @@ public class CreateMobileAgentPackageRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -214,6 +219,13 @@ public class CreateMobileAgentPackageRequest extends Request {
         return this.promotionId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateMobileAgentPackageRequest, Builder> {
         private String amount; 
         private Boolean autoPay; 
@@ -230,6 +242,7 @@ public class CreateMobileAgentPackageRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private String promotionId; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -252,10 +265,14 @@ public class CreateMobileAgentPackageRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * Amount.
+         * <p>The number of resource plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -264,7 +281,17 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong> (default): Only an order is generated. No payment is made.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated. You can log on to the Elastic Cloud Phone console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -273,7 +300,14 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -282,7 +316,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The region where the instance resides. Currently, only cn-hangzhou is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -300,7 +337,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * CreditAmount.
+         * <p>The credit quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000.0</p>
          */
         public Builder creditAmount(String creditAmount) {
             this.putQueryParameter("CreditAmount", creditAmount);
@@ -309,7 +349,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * CreditConfig.
+         * <p>The credit limit configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder creditConfig(String creditConfig) {
             this.putQueryParameter("CreditConfig", creditConfig);
@@ -327,7 +370,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the node instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudPhone</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -336,7 +382,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * MobileAgentPackageSpec.
+         * <p>The resource plan specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
          */
         public Builder mobileAgentPackageSpec(String mobileAgentPackageSpec) {
             this.putQueryParameter("MobileAgentPackageSpec", mobileAgentPackageSpec);
@@ -354,7 +403,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PaidCallbackUrl.
+         * <p>The redirect URL after a successful payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
          */
         public Builder paidCallbackUrl(String paidCallbackUrl) {
             this.putQueryParameter("PaidCallbackUrl", paidCallbackUrl);
@@ -363,7 +415,10 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -372,7 +427,15 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the duration for which you want to purchase the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -381,11 +444,23 @@ public class CreateMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotional campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * <p>The tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -396,4 +471,87 @@ public class CreateMobileAgentPackageRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMobileAgentPackageRequest} extends {@link TeaModel}
+     *
+     * <p>CreateMobileAgentPackageRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(maxLength = 128)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(maxLength = 256)
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key. This parameter cannot be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

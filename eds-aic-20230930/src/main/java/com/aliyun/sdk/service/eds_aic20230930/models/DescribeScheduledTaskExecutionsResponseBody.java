@@ -132,7 +132,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,7 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * Executions.
+         * <p>The list of task execution records.</p>
          */
         public Builder executions(java.util.List<Executions> executions) {
             this.executions = executions;
@@ -148,7 +151,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -156,7 +162,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +173,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -172,7 +184,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The number of results returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +303,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentType.
+             * <p>The MIME type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image/png</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -293,7 +314,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The OSS pre-signed download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -301,7 +325,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>screenshot.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +336,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -317,7 +347,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The upload time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-05T10:00:00+08:00</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -527,7 +560,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ArtifactCount.
+             * <p>The number of task artifacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder artifactCount(Integer artifactCount) {
                 this.artifactCount = artifactCount;
@@ -535,7 +571,7 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Artifacts.
+             * <p>The list of uploaded task artifacts.</p>
              */
             public Builder artifacts(java.util.List<Artifacts> artifacts) {
                 this.artifacts = artifacts;
@@ -543,7 +579,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * CompletedAt.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-12T00:05:30</p>
              */
             public Builder completedAt(String completedAt) {
                 this.completedAt = completedAt;
@@ -551,7 +590,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigSnapshot.
+             * <p>The configuration snapshot in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;maxSteps&quot;:10}</p>
              */
             public Builder configSnapshot(String configSnapshot) {
                 this.configSnapshot = configSnapshot;
@@ -559,7 +601,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * DurationMs.
+             * <p>The execution duration in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>330000</p>
              */
             public Builder durationMs(Long durationMs) {
                 this.durationMs = durationMs;
@@ -567,7 +612,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TaskTimeout</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -575,7 +623,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task timeout after 600s</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -583,7 +634,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-axxkuuxahbu1*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -591,7 +645,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * <p>The execution output in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;result&quot;:&quot;ok&quot;}</p>
              */
             public Builder output(String output) {
                 this.output = output;
@@ -599,7 +656,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledId.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-260705-agb*****</p>
              */
             public Builder scheduledId(String scheduledId) {
                 this.scheduledId = scheduledId;
@@ -607,7 +667,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * StartedAt.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-12T00:00:00</p>
              */
             public Builder startedAt(String startedAt) {
                 this.startedAt = startedAt;
@@ -615,7 +678,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -623,7 +689,10 @@ public class DescribeScheduledTaskExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the scheduled task execution record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-260703-gby*****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

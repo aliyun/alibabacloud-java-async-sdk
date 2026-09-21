@@ -102,7 +102,7 @@ public class CreateScreenshotRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud phone instances. You can create multiple snapshots simultaneously.</p>
+         * <p>The list of instance IDs. Batch screenshots are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -112,7 +112,7 @@ public class CreateScreenshotRequest extends Request {
         }
 
         /**
-         * <p>The name of the OSS bucket. The name must start with &quot;cloudphone-saved-bucket-&quot;. The OSS bucket and the cloud phone instance must be in the same region. If you leave this parameter empty, the system will create a default OSS bucket named “cloudphone-saved-bucket-{Region of the cloud phone instance}-{AliUid}.”</p>
+         * <p>The custom OSS bucket. The bucket name must start with the cloudphone-saved-bucket- prefix. The cloud phone instance and the OSS bucket must be in the same region. If you leave this parameter empty, a default bucket named cloudphone-saved-bucket-{RegionOfCloudPhone}-{AliUid} is created.</p>
          * 
          * <strong>example:</strong>
          * <p>cloudphone-saved-bucket-cn-shanghai-default</p>
@@ -124,7 +124,14 @@ public class CreateScreenshotRequest extends Request {
         }
 
         /**
-         * ScreenshotId.
+         * <p>The screenshot ID. The generated screenshot is named &quot;ScreenshotId_AndroidInstanceId.png.&quot;</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>The ScreenshotId must be 2 to 128 characters long, beginning with a letter, but cannot start with http\:// or https\://. Allowed characters include letters, digits, underscores (_), and hyphens (-).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder screenshotId(String screenshotId) {
             this.putQueryParameter("ScreenshotId", screenshotId);
@@ -133,7 +140,7 @@ public class CreateScreenshotRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to bypass the snapshot policy control. Default value: false.</p>
+         * <p>Specifies whether to skip the screenshot policy check. The default value is false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

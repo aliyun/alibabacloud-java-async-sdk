@@ -87,7 +87,10 @@ public class EndCoordinationRequest extends Request {
         } 
 
         /**
-         * CoordinatorUserId.
+         * <p>The user ID of the coordination participant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lina</p>
          */
         public Builder coordinatorUserId(String coordinatorUserId) {
             this.putQueryParameter("CoordinatorUserId", coordinatorUserId);
@@ -96,7 +99,10 @@ public class EndCoordinationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance that is in a coordination session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-2zecay9ponatdc4m****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -105,7 +111,10 @@ public class EndCoordinationRequest extends Request {
         }
 
         /**
-         * OwnerUserId.
+         * <p>The user ID of the coordination initiator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xiaoming</p>
          */
         public Builder ownerUserId(String ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);

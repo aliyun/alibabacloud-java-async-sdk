@@ -75,7 +75,7 @@ public class DistributeImageRequest extends Request {
         } 
 
         /**
-         * <p>The regions to which you want to distribute an image.</p>
+         * <p>The list of destination regions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder distributeRegionList(java.util.List<String> distributeRegionList) {
@@ -85,7 +85,7 @@ public class DistributeImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image that you want to distribute.</p>
+         * <p>The ID of the image.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

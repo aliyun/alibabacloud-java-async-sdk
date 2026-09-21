@@ -115,7 +115,10 @@ public class RunCommandRequest extends Request {
         } 
 
         /**
-         * AgentType.
+         * <p>The channel type for running the command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EdsAgent</p>
          */
         public Builder agentType(String agentType) {
             this.putQueryParameter("AgentType", agentType);
@@ -136,15 +139,10 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The encoding method of the command content (<code>CommandContent</code>). The value is not case-sensitive.</p>
+         * <p>The encoding method for the command content (<code>CommandContent</code>). This value is not case-sensitive.</p>
          * <blockquote>
-         * <p> If you set the value to an invalid encoding method, the system will process the command content as <code>PlainText</code>.</p>
+         * <p>An invalid value defaults to <code>PlainText</code>.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Base64: encodes the command content in Base64.</li>
-         * <li>PlainText (default): does not encode the command content. The command content is input as plain text.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PlainText</p>
@@ -156,7 +154,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+         * <p>A list of instance IDs. You can specify up to 50 instances per request.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -165,7 +163,7 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of the command execution. If the command execution exceeds the timeout period, it will be considered timed out. If you leave this parameter empty, it defaults to 60.</p>
+         * <p>The execution timeout in seconds. The command times out if it does not complete within this period. Defaults to 60 seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>

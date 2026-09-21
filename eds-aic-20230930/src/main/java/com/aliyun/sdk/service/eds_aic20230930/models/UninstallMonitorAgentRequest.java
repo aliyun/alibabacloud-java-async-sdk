@@ -73,7 +73,7 @@ public class UninstallMonitorAgentRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,10 @@ public class UninstallMonitorAgentRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The monitoring type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Node</p>
          */
         public Builder saleMode(String saleMode) {
             this.putBodyParameter("SaleMode", saleMode);

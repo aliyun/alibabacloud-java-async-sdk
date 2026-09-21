@@ -158,7 +158,9 @@ public class DescribeMetricLastRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>For instance-level monitoring, specify a list of Cloud Phone instance IDs.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For matrix-level monitoring, specify a list of matrix IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -167,7 +169,10 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-31 11:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -176,7 +181,7 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -185,7 +190,11 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>The number of monitoring data records to return on each page for a paged query.</p>
+         * <p>The default value is 1000. This means that 1000 monitoring data records are returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder length(String length) {
             this.putBodyParameter("Length", length);
@@ -194,6 +203,7 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
+         * <p>The list of monitoring metrics.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricNames(java.util.List<String> metricNames) {
@@ -203,7 +213,10 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that marks the start of the current read position. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -212,7 +225,12 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The statistic period for monitoring data.</p>
+         * <p>Valid values: 60, 900, and 3600.</p>
+         * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -221,7 +239,10 @@ public class DescribeMetricLastRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-31 10:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

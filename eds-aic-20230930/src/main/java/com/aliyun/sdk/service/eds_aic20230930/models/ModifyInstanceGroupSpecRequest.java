@@ -102,7 +102,17 @@ public class ModifyInstanceGroupSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong> (default): Only generates an order without deducting fees.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If your payment method balance is insufficient, set this parameter to false. An unpaid order is generated, and you can log on to the Cloud Phone console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -111,7 +121,7 @@ public class ModifyInstanceGroupSpecRequest extends Request {
         }
 
         /**
-         * InstanceGroupIds.
+         * <p>The list of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
@@ -120,6 +130,7 @@ public class ModifyInstanceGroupSpecRequest extends Request {
         }
 
         /**
+         * <p>The instance group specification. You can call <a href="~~DescribeSpec~~">DescribeSpec</a> to query the specifications available for purchase for cloud phones.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +143,10 @@ public class ModifyInstanceGroupSpecRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

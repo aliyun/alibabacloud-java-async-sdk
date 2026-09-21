@@ -93,7 +93,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E38B41A8-8E00-5AE4-A957-6636ACB8****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class PauseAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>A list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -235,7 +244,17 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentStatus.
+             * <p>The current status of the task. The following are possible values:</p>
+             * <p>PENDING: The task is being created.</p>
+             * <p>RUNNING: The task is running.</p>
+             * <p>COMPLETED: The task is completed.</p>
+             * <p>FAILED: The task failed.</p>
+             * <p>TIMEOUT: The task timed out.</p>
+             * <p>PAUSING: The task is being paused.</p>
+             * <p>PAUSED: The task is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PAUSING</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -243,7 +262,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The reason the task failed to pause.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task status [COMPLETED] does not support pause, only RUNNING tasks can be paused.</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -251,7 +273,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the Mobile node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-anzzuho371azi44xr</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -259,7 +284,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PausingAt.
+             * <p>The time when the pause request was initiated, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-13T17:42:19Z</p>
              */
             public Builder pausingAt(String pausingAt) {
                 this.pausingAt = pausingAt;
@@ -267,7 +295,11 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PreviousStatus.
+             * <p>The status of the task before the pause request. The only valid value is:</p>
+             * <p>RUNNING: The task is running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;
@@ -275,7 +307,10 @@ public class PauseAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The unique ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

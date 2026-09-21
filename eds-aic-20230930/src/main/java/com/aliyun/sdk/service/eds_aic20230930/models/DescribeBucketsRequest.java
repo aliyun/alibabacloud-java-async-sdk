@@ -59,7 +59,13 @@ public class DescribeBucketsRequest extends Request {
         } 
 
         /**
-         * FileType.
+         * <p>The type of the OSS file.</p>
+         * <blockquote>
+         * <p>This parameter is not yet available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>docx</p>
          */
         public Builder fileType(String fileType) {
             this.putQueryParameter("FileType", fileType);

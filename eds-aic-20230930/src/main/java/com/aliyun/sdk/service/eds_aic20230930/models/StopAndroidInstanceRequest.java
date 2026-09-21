@@ -87,7 +87,7 @@ public class StopAndroidInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -96,7 +96,7 @@ public class StopAndroidInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enforce a stop operation. If a cloud phone instance fails to stop due to system or network issues, a forced stop can be triggered, though it may result in data loss.</p>
+         * <p>Specifies whether to forcibly shut down the instance. If an instance cannot shut down because of a system or network exception, you can force it to shut down. This may cause data loss.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -108,7 +108,10 @@ public class StopAndroidInstanceRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The sale pattern. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

@@ -116,7 +116,7 @@ public class CheckResourceStockRequest extends Request {
         } 
 
         /**
-         * <p>Specification ID.</p>
+         * <p>The specification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp.basic.small</p>
@@ -128,7 +128,10 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * Amount.
+         * <p>The number of cloud phone instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -137,7 +140,7 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * <p>Region ID.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +153,10 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * GpuAcceleration.
+         * <p>Specifies whether to enable GPU acceleration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder gpuAcceleration(Boolean gpuAcceleration) {
             this.putQueryParameter("GpuAcceleration", gpuAcceleration);
@@ -159,7 +165,7 @@ public class CheckResourceStockRequest extends Request {
         }
 
         /**
-         * <p>The availability zone of the resource.</p>
+         * <p>The zone to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

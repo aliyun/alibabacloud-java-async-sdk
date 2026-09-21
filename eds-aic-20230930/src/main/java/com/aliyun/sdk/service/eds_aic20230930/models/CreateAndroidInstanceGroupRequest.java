@@ -470,7 +470,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The number of instance groups. Default value: 1. Maximum value: 1.</p>
+         * <p>The number of instance groups. Default value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -483,11 +483,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable automatic payment. Default value: false.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</li>
-         * <li>false: disables automatic payment. You must manually complete the payment.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -500,11 +495,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: automatically renew resource upon expiration.</li>
-         * <li>false: manually renew resources upon expiration.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -534,16 +524,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cn-shenzhen: China (Shenzhen).</li>
-         * <li>cn-beijing: China (Beijing).</li>
-         * <li>cn-shanghai: China (Shanghai).</li>
-         * <li>cn-hongkong: China (Hong Kong).</li>
-         * <li>ap-southeast-1: Singapore.</li>
-         * <li>cn-hangzhou: China (Hangzhou).</li>
-         * </ul>
+         * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions where cloud phone instances can be purchased.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -565,12 +546,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PostPaid: pay-as-you-go.</li>
-         * <li>PrePaid: subscription.</li>
-         * </ul>
+         * <p>The billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -582,10 +558,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. The value cannot exceed 100 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request and prevent repeated submissions. The value cannot exceed 100 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>asadbuvwiabdbvchjsbj</p>
+         * <p>asadbuvwiabdbvchj****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -595,7 +571,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -609,11 +585,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable GPU acceleration.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: enables GPU acceleration.</li>
-         * <li>false (default): disables GPU acceleration.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -625,7 +596,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/2807324.html">DescribeImageList</a> operation to query images.</p>
+         * <p>The image ID. You can call <a href="~~DescribeImageList~~">DescribeImageList</a> to query the list of cloud phone images.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -638,13 +609,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance group.</p>
+         * <p>The instance group name.</p>
          * <blockquote>
-         * <p> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The instance group name cannot exceed 30 characters in length. It must start with an uppercase letter, lowercase letter, or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>. It can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>defaultInstanceGroup</p>
+         * <p>Cloud phoneA</p>
          */
         public Builder instanceGroupName(String instanceGroupName) {
             this.putQueryParameter("InstanceGroupName", instanceGroupName);
@@ -653,13 +624,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the instance group. You can call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the available specifications.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>acp.perf.large: Performance (8 vCPUs, 16 GiB of memory, and 32 GiB of storage.</li>
-         * <li>acp.basic.small: Lightweight (2 vCPUs, 4 GiB of memory, and 32 GiB of storage).</li>
-         * <li>acp.std.large: Standard (4 vCPUs, 8 GiB of memory, and 32 GiB of storage).</li>
-         * </ul>
+         * <p>The instance group specification. You can call <a href="~~DescribeSpec~~">DescribeSpec</a> to query the specifications available for cloud phone instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -682,7 +647,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -695,9 +660,9 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</p>
+         * <p>The key pair ID. If you specify a valid key pair ID when creating an instance group, the key pair is bound to all instances that are successfully created, without the need to call the bindng operation again.</p>
          * <blockquote>
-         * <p> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</p>
+         * <p>Binding a key pair during scale-out is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -729,7 +694,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of cloud phones in the instance group. Maximum value: 100.</p>
+         * <p>The number of instances in the instance group. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -741,10 +706,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * <ul>
-         * <li>This parameter is required if you assign a shared network to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>shared network</strong>. If no shared network is available in the Cloud Phone console, you can leave this parameter empty. The system automatically creates one when you create an instance group.</li>
-         * <li>This parameter is required if you assign a virtual private cloud (VPC) to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <strong>VPC</strong>. If no VPC is available in the Cloud Phone console, you must first create one.</li>
+         * <li><p>To create a shared network instance: the network ID is optional. Specify the network ID of the <strong>Shared Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no shared network exists in the console, you can leave this parameter empty. A shared network is automatically created when the instance group is created.</p>
+         * </li>
+         * <li><p>To create a VPC network instance: the network ID is required. Specify the network ID of the <strong>VPC Network</strong> type on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no VPC network exists in the console, create a network first.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -766,7 +733,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
+         * <p>The subscription duration of the resource. The unit is specified by PeriodUnit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -779,12 +746,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         /**
          * <p>The unit of the subscription duration.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * <li>Hour (Note that this unit is supported only by pay-as-you-go.)</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -796,7 +757,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2807352.html">ListPolicyGroups</a> operation to query policies.</p>
+         * <p>The policy ID. You can call <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> to query the list of policies.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-b7bxrrwxkijjh****</p>
@@ -835,7 +796,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The tags</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -844,10 +805,12 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query vSwitches.</p>
+         * <p>The vSwitch ID. You can call <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> to query the list of vSwitches.</p>
          * <ul>
-         * <li>This parameter is not required if you assign a shared network to cloud phones.</li>
-         * <li>This parameter is required if you assign a VPC to cloud phones. The vSwitch specified by this parameter is used to create cloud phones.</li>
+         * <li><p>To create a shared network instance: leave this parameter empty.</p>
+         * </li>
+         * <li><p>To create a VPC network instance: the vSwitch ID is required. The specified vSwitch is used to create the instance.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1076,11 +1039,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable automatic payment. Default value: false.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</li>
-             * <li>false: disables automatic payment. You must manually complete the payment.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1092,11 +1050,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true: automatically renew resource upon expiration.</li>
-             * <li>false: manually renew resources upon expiration.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1171,7 +1124,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
+             * <p>The subscription duration of the resource. The unit is specified by PeriodUnit.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1183,12 +1136,6 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
             /**
              * <p>The unit of the subscription duration.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Month</li>
-             * <li>Year</li>
-             * <li>Hour (Note that this unit is supported only by pay-as-you-go.)</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Month</p>

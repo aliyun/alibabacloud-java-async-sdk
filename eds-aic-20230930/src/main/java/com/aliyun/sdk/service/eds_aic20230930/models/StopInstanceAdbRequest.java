@@ -60,6 +60,7 @@ public class StopInstanceAdbRequest extends Request {
         } 
 
         /**
+         * <p>The list of Android instance IDs. You can specify 1 to 100 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

@@ -54,7 +54,7 @@ public class StartAndroidInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17C731AB-AAEE-5844-A352-D8D0352D****</p>

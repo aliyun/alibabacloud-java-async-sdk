@@ -143,7 +143,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putQueryParameter("AndroidInstanceIds", androidInstanceIds);
@@ -152,7 +152,10 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -170,7 +173,10 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -179,7 +185,10 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p><strong>[Deprecated]</strong> The sales mode. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
@@ -188,7 +197,11 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * SettingResetType.
+         * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to retain attribute settings during the reset. If this parameter is not specified, attribute configurations are not retained by default. This parameter takes effect only for cloud phone matrix instances. Run the wya dump config command to view the details of retained attributes.
+         * &lt;props=&quot;intl&quot;&gt;This parameter is not supported on the international site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder settingResetType(Integer settingResetType) {
             this.putQueryParameter("SettingResetType", settingResetType);
@@ -197,7 +210,10 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         }
 
         /**
-         * TargetDataDiskSize.
+         * <p>Specify this parameter when you need to reduce storage while resetting instances in a cloud phone matrix. This feature is currently available through a whitelist. This parameter applies only to instances in a cloud phone matrix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder targetDataDiskSize(Integer targetDataDiskSize) {
             this.putQueryParameter("TargetDataDiskSize", targetDataDiskSize);

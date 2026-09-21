@@ -176,7 +176,17 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enable automatic payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong> (default): Generate the order without making a payment.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the WUYING Cloud Phone console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -185,7 +195,14 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enable auto-renewal.</li>
+         * <li><strong>false</strong> (default): Disable auto-renewal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -194,6 +211,7 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * <p>The region where the agent is located.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +224,10 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotency token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -215,6 +236,7 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * <p>The device form factor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +249,7 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,6 +262,12 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * <p>The unit of the subscription duration.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,7 +280,10 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -260,6 +292,7 @@ public class CreateEdgeMobileAgentPackageRequest extends Request {
         }
 
         /**
+         * <p>The number of packages.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

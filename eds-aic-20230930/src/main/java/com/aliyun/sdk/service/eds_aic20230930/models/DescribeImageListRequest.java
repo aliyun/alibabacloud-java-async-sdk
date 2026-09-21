@@ -187,7 +187,7 @@ public class DescribeImageListRequest extends Request {
         } 
 
         /**
-         * ImageBizTags.
+         * <p>An array of tag objects.</p>
          */
         public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
             this.putQueryParameter("ImageBizTags", imageBizTags);
@@ -196,7 +196,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>imgc-075cllfeuazh0****</p>
@@ -208,10 +208,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Android 12 image</p>
+         * <p>Android 12 system image</p>
          */
         public Builder imageName(String imageName) {
             this.putBodyParameter("ImageName", imageName);
@@ -220,10 +220,12 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>Image package type.</p>
+         * <blockquote>
+         * <p>This parameter is not yet available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>VM</p>
+         * <p>null</p>
          */
         public Builder imagePackageType(String imagePackageType) {
             this.putQueryParameter("ImagePackageType", imagePackageType);
@@ -232,12 +234,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The type of the image.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>User: custom images.</li>
-         * <li>System: system images.</li>
-         * </ul>
+         * <p>The image type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +247,10 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpm.gx7.10xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -259,7 +259,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -271,7 +271,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+         * <p>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -283,15 +283,7 @@ public class DescribeImageListRequest extends Request {
         }
 
         /**
-         * <p>The state of the image.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AVAILABLE: The image is available.</li>
-         * <li>DELETE: The image is deleted.</li>
-         * <li>INIT: The image is being initialized.</li>
-         * <li>CREATE_FAILED: The image failed to be created.</li>
-         * <li>CREATING: The image is being created.</li>
-         * </ul>
+         * <p>The status of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>AVAILABLE</p>
@@ -371,7 +363,10 @@ public class DescribeImageListRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -379,7 +374,10 @@ public class DescribeImageListRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;

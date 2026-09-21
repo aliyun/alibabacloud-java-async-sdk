@@ -171,7 +171,7 @@ public class DescribeCreditDetailRequest extends Request {
         } 
 
         /**
-         * AgentTypes.
+         * <p>The list of agent types, used to filter credit change details by specified agent types.</p>
          */
         public Builder agentTypes(java.util.List<String> agentTypes) {
             this.putQueryParameter("AgentTypes", agentTypes);
@@ -180,7 +180,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782906240000</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -189,7 +192,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -198,7 +201,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to read in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +213,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token for the next query. If a query does not return all results, the returned NextToken is not empty. You can pass the returned NextToken in the next query to continue retrieving results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +225,7 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * PackageIds.
+         * <p>The list of package or credit booster pack IDs.</p>
          */
         public Builder packageIds(java.util.List<String> packageIds) {
             this.putQueryParameter("PackageIds", packageIds);
@@ -225,7 +234,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number for pagination. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -234,7 +246,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +258,10 @@ public class DescribeCreditDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1782819840000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

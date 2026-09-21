@@ -90,6 +90,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
+         * <p>The list of cloud phone IDs. The list can contain 1 to 50 IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -99,6 +100,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. The value must be \<code>ALIYUN::ACP::INSTANCE\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,6 +113,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The list of tags. The list can contain 1 to 20 tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -181,7 +184,10 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. The key can be up to 128 characters in length. It cannot be an empty string. The key cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +195,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The value can be up to 128 characters in length and can be an empty string. The value cannot start with \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>design</p>
              */
             public Builder value(String value) {
                 this.value = value;

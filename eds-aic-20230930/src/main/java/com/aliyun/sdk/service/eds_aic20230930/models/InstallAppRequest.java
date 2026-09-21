@@ -87,7 +87,7 @@ public class InstallAppRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the apps that you want to install.</p>
+         * <p>The application IDs.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putQueryParameter("AppIdList", appIdList);
@@ -96,7 +96,7 @@ public class InstallAppRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the instance groups.</p>
+         * <p>The instance group IDs.</p>
          */
         public Builder instanceGroupIdList(java.util.List<String> instanceGroupIdList) {
             this.putQueryParameter("InstanceGroupIdList", instanceGroupIdList);
@@ -105,7 +105,7 @@ public class InstallAppRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud phone instances.</p>
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

@@ -93,7 +93,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates the current read position returned by this call. An empty value means that all data has been read.</p>
+         * <p>The token to use for the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
@@ -104,7 +104,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9888DAD-331E-5FBC-B5A0-F2445115****</p>
@@ -115,7 +115,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The specifications.</p>
+         * <p>The specification information.</p>
          */
         public Builder specInfoModel(java.util.List<SpecInfoModel> specInfoModel) {
             this.specInfoModel = specInfoModel;
@@ -123,7 +123,7 @@ public class DescribeSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -296,7 +296,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of CPU cores.</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -307,7 +307,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of cloud phone instances.</p>
+             * <p>The maximum number of instances.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -318,7 +318,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory size.</p>
+             * <p>The memory size in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>16</p>
@@ -329,7 +329,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of cloud phone instances.</p>
+             * <p>The minimum number of instances.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -340,7 +340,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneCount.
+             * <p>The number of instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder phoneCount(String phoneCount) {
                 this.phoneCount = phoneCount;
@@ -348,7 +351,10 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920*1080</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -356,7 +362,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specification ID.</p>
+             * <p>The specification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp.basic.small</p>
@@ -367,7 +373,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specification status.</p>
+             * <p>The specification status.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -378,7 +384,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specification type.</p>
+             * <p>The specification type.</p>
              * 
              * <strong>example:</strong>
              * <p>ARM</p>
@@ -389,7 +395,7 @@ public class DescribeSpecResponseBody extends TeaModel {
             }
 
             /**
-             * <p>System disk size, in GB.</p>
+             * <p>The size of the system disk, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>

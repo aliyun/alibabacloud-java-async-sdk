@@ -59,7 +59,7 @@ public class DescribeAgentTaskRequest extends Request {
         } 
 
         /**
-         * TaskIds.
+         * <p>The list of task IDs.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

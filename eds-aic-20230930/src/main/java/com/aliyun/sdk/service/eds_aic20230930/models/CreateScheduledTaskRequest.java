@@ -133,6 +133,7 @@ public class CreateScheduledTaskRequest extends Request {
         } 
 
         /**
+         * <p>The cron expression.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,6 +146,7 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +159,10 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * MaxExecutions.
+         * <p>The maximum number of executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maxExecutions(Integer maxExecutions) {
             this.putQueryParameter("MaxExecutions", maxExecutions);
@@ -166,7 +171,10 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
-         * RunConfig.
+         * <p>The run configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;maxSteps&quot;:10,&quot;timeoutSeconds&quot;:3600}</p>
          */
         public Builder runConfig(RunConfig runConfig) {
             String runConfigShrink = shrink(runConfig, "RunConfig", "json");
@@ -176,10 +184,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>每日数据同步任务</p>
+         * <p>Auto-reply to DingTalk messages</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -188,10 +197,11 @@ public class CreateScheduledTaskRequest extends Request {
         }
 
         /**
+         * <p>The user prompt.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>从源系统同步数据到目标系统</p>
+         * <p>Open DingTalk and reply to the first 5 unread messages</p>
          */
         public Builder userPrompt(String userPrompt) {
             this.putQueryParameter("UserPrompt", userPrompt);
@@ -285,7 +295,10 @@ public class CreateScheduledTaskRequest extends Request {
             } 
 
             /**
-             * ExtraParams.
+             * <p>The extended parameters as a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
              */
             public Builder extraParams(String extraParams) {
                 this.extraParams = extraParams;
@@ -293,7 +306,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * MaxSteps.
+             * <p>The maximum number of execution steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxSteps(Integer maxSteps) {
                 this.maxSteps = maxSteps;
@@ -301,7 +317,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * Skills.
+             * <p>The list of skill IDs, up to 1. Written to aim_task_config.run_config when the scheduled task is created and read when the callback is delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;sk-abc&quot;]</p>
              */
             public Builder skills(java.util.List<String> skills) {
                 this.skills = skills;
@@ -309,7 +328,10 @@ public class CreateScheduledTaskRequest extends Request {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;

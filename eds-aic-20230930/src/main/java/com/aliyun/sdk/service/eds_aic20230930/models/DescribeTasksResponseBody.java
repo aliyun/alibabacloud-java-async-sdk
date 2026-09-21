@@ -609,7 +609,7 @@ public class DescribeTasksResponseBody extends TeaModel {
              * <p>The execution result of the task.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Success&quot;: True}</p>
+             * <p>{\&quot;Success\&quot;: True}</p>
              */
             public Builder result(String result) {
                 this.result = result;

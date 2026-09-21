@@ -67,7 +67,10 @@ public class RenewMobileAgentPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223684716098****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -75,7 +78,10 @@ public class RenewMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -172,7 +172,10 @@ public class DescribeSpecRequest extends Request {
         } 
 
         /**
-         * BizRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -190,14 +193,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The matrix specification.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cpm.gn6.gx1</li>
-         * </ul>
+         * <p>The cloud phone matrix specification.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpm.gn6.gx1</p>
+         * <p>cpm.gx7.10xlarge</p>
          */
         public Builder matrixSpec(String matrixSpec) {
             this.putQueryParameter("MatrixSpec", matrixSpec);
@@ -206,7 +205,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 100.</p>
+         * <p>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -218,7 +217,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>Indicates the starting position for reading. If left empty, it starts from the beginning.</p>
+         * <p>The position from which to start the query. Leave this parameter empty to query from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -230,12 +229,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>The purchase mode of cloud mobile phones.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Instance (default): the instance group mode.</li>
-         * <li>Node: the matrix mode [whitelisted].</li>
-         * </ul>
+         * <p>The purchase mode of the cloud phone.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -247,7 +241,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>List of specification IDs.</p>
+         * <p>A list of specification IDs.</p>
          */
         public Builder specIds(java.util.List<String> specIds) {
             this.putQueryParameter("SpecIds", specIds);
@@ -256,7 +250,7 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>Specification status.</p>
+         * <p>The specification status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -268,10 +262,10 @@ public class DescribeSpecRequest extends Request {
         }
 
         /**
-         * <p>Specification type.</p>
+         * <p>The specification type.</p>
          * 
          * <strong>example:</strong>
-         * <p>ARM</p>
+         * <p>CPU</p>
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);

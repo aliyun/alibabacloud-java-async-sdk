@@ -143,7 +143,10 @@ public class DescribeSkillsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The keyword in the skill name or skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>weather</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -152,7 +155,15 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language type. The skill description is returned in this language.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>en: English.</li>
+         * <li>zh-CN: Chinese.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -161,7 +172,10 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +184,10 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +196,10 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * SkillId.
+         * <p>The skill ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sk-051j4pbwxzgol****</p>
          */
         public Builder skillId(String skillId) {
             this.putQueryParameter("SkillId", skillId);
@@ -188,7 +208,10 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * StatusFilter.
+         * <p>The status filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPLOADED</p>
          */
         public Builder statusFilter(String statusFilter) {
             this.putQueryParameter("StatusFilter", statusFilter);
@@ -197,7 +220,10 @@ public class DescribeSkillsRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The skill type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

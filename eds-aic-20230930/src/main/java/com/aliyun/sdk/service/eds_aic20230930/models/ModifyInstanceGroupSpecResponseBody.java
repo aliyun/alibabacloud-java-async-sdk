@@ -80,7 +80,7 @@ public class ModifyInstanceGroupSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderInfo.
+         * <p>The order information.</p>
          */
         public Builder orderInfo(java.util.List<OrderInfo> orderInfo) {
             this.orderInfo = orderInfo;
@@ -88,7 +88,10 @@ public class ModifyInstanceGroupSpecResponseBody extends TeaModel {
         }
 
         /**
-         * OrderTaskId.
+         * <p>The order task ID that is returned when specifications of more than 10 instance groups are changed in a batch. You can call the <strong>DescribeOrderTasks</strong> operation to query the information about each order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-aycabdsjsbgd****</p>
          */
         public Builder orderTaskId(String orderTaskId) {
             this.orderTaskId = orderTaskId;
@@ -165,7 +168,7 @@ public class ModifyInstanceGroupSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceIds.
+             * <p>The list of instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -173,7 +176,10 @@ public class ModifyInstanceGroupSpecResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>296325540190****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

@@ -87,7 +87,7 @@ public class UninstallAppRequest extends Request {
         } 
 
         /**
-         * <p>The IDs of the apps.</p>
+         * <p>A list of application IDs.</p>
          */
         public Builder appIdList(java.util.List<String> appIdList) {
             this.putQueryParameter("AppIdList", appIdList);
@@ -96,7 +96,7 @@ public class UninstallAppRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance groups. If you specify this parameter, you cannot specify InstanceIdList.</p>
+         * <p>A list of instance group IDs. You must specify either this parameter or <code>InstanceIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
          */
         public Builder instanceGroupIdList(java.util.List<String> instanceGroupIdList) {
             this.putQueryParameter("InstanceGroupIdList", instanceGroupIdList);
@@ -105,7 +105,7 @@ public class UninstallAppRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the cloud phone instances. If you specify this parameter, you cannot specify InstanceGroupIdList.</p>
+         * <p>A list of instance IDs. You must specify either this parameter or <code>InstanceGroupIdList</code>. If you specify both, only <code>InstanceGroupIdList</code> takes precedence.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);

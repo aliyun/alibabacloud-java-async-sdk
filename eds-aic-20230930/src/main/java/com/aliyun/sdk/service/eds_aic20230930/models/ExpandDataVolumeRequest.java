@@ -143,7 +143,10 @@ public class ExpandDataVolumeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -152,7 +155,10 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -161,7 +167,7 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * <p>The IDs of the cloud phone matrices.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putQueryParameter("NodeIds", nodeIds);
@@ -179,7 +185,10 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * PhoneDataVolume.
+         * <p>The size of the instance storage. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
@@ -188,7 +197,10 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -197,7 +209,10 @@ public class ExpandDataVolumeRequest extends Request {
         }
 
         /**
-         * ShareDataVolume.
+         * <p>The size of the shared storage for the matrix. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder shareDataVolume(Integer shareDataVolume) {
             this.putQueryParameter("ShareDataVolume", shareDataVolume);

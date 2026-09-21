@@ -93,7 +93,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class CreateAgentSkillResponseBody extends TeaModel {
         }
 
         /**
-         * SkillInfo.
+         * <p>The skill information.</p>
          */
         public Builder skillInfo(java.util.List<SkillInfo> skillInfo) {
             this.skillInfo = skillInfo;
@@ -235,7 +244,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The skill description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current weather and forecasts with wttr.in via curl for locations, rain, temperature, travel planning.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -243,7 +255,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Instruction.
+             * <p>The skill summary.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Current weather and forecasts.</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -251,7 +266,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             }
 
             /**
-             * SkillId.
+             * <p>The unique ID of the skill.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-051j4pbwxzgol****</p>
              */
             public Builder skillId(String skillId) {
                 this.skillId = skillId;
@@ -259,7 +277,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             }
 
             /**
-             * SkillName.
+             * <p>The skill name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev-spec</p>
              */
             public Builder skillName(String skillName) {
                 this.skillName = skillName;
@@ -267,7 +288,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The skill status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +299,10 @@ public class CreateAgentSkillResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The skill type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder type(String type) {
                 this.type = type;

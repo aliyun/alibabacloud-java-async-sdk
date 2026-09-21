@@ -207,7 +207,7 @@ public class CreateAICloudPhoneRequest extends Request {
         } 
 
         /**
-         * <p>购买数量</p>
+         * <p>The quantity to purchase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>是否自动支付（默认false，为true时下单后自动支付）</p>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,7 +232,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>带宽包ID</p>
+         * <p>The bandwidth package ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>业务地域ID</p>
+         * <p>The region ID for the purchase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>镜像ID</p>
+         * <p>The image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -271,7 +271,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>实例组名称</p>
+         * <p>The instance group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,11 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>实例组规格（枚举）：STANDARD=基础型 MEDIUM=标配型</p>
+         * <p>The instance group specification. Valid values:</p>
+         * <ul>
+         * <li>STANDARD: standard.</li>
+         * <li>MEDIUM: advanced.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,7 +301,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>购买时长</p>
+         * <p>The purchase duration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +314,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>购买时长单位（Month/Year）</p>
+         * <p>The unit of the purchase duration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +327,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>策略组ID</p>
+         * <p>The policy group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0bjrh3oxk2q0xxxxx</p>
@@ -335,7 +339,7 @@ public class CreateAICloudPhoneRequest extends Request {
         }
 
         /**
-         * <p>优惠券ID</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>youhuiquan_promotion_xxx</p>

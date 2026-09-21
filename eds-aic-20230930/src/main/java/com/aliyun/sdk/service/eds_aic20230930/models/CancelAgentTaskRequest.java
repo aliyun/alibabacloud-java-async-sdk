@@ -60,6 +60,7 @@ public class CancelAgentTaskRequest extends Request {
         } 
 
         /**
+         * <p>A list of task IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

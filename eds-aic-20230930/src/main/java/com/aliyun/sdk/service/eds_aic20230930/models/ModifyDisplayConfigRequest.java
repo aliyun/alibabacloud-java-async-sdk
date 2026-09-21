@@ -73,7 +73,7 @@ public class ModifyDisplayConfigRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,7 @@ public class ModifyDisplayConfigRequest extends Request {
         }
 
         /**
-         * DisplayConfig.
+         * <p>The display settings.</p>
          */
         public Builder displayConfig(DisplayConfig displayConfig) {
             String displayConfigShrink = shrink(displayConfig, "DisplayConfig", "json");
@@ -190,7 +190,10 @@ public class ModifyDisplayConfigRequest extends Request {
             } 
 
             /**
-             * Dpi.
+             * <p>The dots per inch (DPI). Valid values: 72 to 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder dpi(Integer dpi) {
                 this.dpi = dpi;
@@ -198,7 +201,12 @@ public class ModifyDisplayConfigRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
@@ -206,7 +214,10 @@ public class ModifyDisplayConfigRequest extends Request {
             }
 
             /**
-             * LockResolution.
+             * <p>Specifies whether to lock the resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder lockResolution(String lockResolution) {
                 this.lockResolution = lockResolution;
@@ -214,7 +225,10 @@ public class ModifyDisplayConfigRequest extends Request {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>The resolution height, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -222,7 +236,10 @@ public class ModifyDisplayConfigRequest extends Request {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>The resolution width, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;

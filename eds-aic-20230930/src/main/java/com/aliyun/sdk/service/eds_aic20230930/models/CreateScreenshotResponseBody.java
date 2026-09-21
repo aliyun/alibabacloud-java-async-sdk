@@ -67,7 +67,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+         * <p>The unique ID of the request. If you encounter an issue, provide this request ID for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>3AF82CE1-2801-52CE-BF64-B491DD7C****</p>
@@ -78,7 +78,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -157,7 +157,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cloud phone instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-bwhtebzah2fse****</p>
@@ -168,7 +168,10 @@ public class CreateScreenshotResponseBody extends TeaModel {
             }
 
             /**
-             * ScreenshotId.
+             * <p>The screenshot ID. The generated screenshot is named &quot;ScreenshotId_AndroidInstanceId.png.&quot;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image</p>
              */
             public Builder screenshotId(String screenshotId) {
                 this.screenshotId = screenshotId;
@@ -176,7 +179,7 @@ public class CreateScreenshotResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task. You can use the task ID with the DescribeTasks operation to get the download link for the screenshot.</p>
+             * <p>The task ID. You can use this ID to call the DescribeTasks operation and query the screenshot task. When the task is complete, you can get the download link for the screenshot.</p>
              * 
              * <strong>example:</strong>
              * <p>t-imr0fufqd7cle****</p>

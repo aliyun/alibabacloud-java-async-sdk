@@ -119,7 +119,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>当前页实际返回条数</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -138,7 +138,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>下一页游标，末页不返回</p>
+         * <p>The token that indicates the current position from which to start reading. An empty value indicates reading from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -157,7 +157,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,7 +168,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>符合条件的总记录数</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -309,7 +312,18 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CreditLimit.
+             * <p>The quota limit. Valid values:</p>
+             * <ul>
+             * <li>0: not available for use.</li>
+             * <li><blockquote>
+             * <p>0: the quota is configured based on the numeric value.</p>
+             * </blockquote>
+             * </li>
+             * <li>-1: unlimited.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder creditLimit(Long creditLimit) {
                 this.creditLimit = creditLimit;
@@ -317,7 +331,15 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LimitPeriod.
+             * <p>The quota period. Valid values:</p>
+             * <ul>
+             * <li>total: The total usage limit.</li>
+             * <li>month: Monthly. The quota resets based on the resource activation time as one cycle.</li>
+             * <li>day: Daily. The quota resets at 00:00.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder limitPeriod(String limitPeriod) {
                 this.limitPeriod = limitPeriod;
@@ -543,7 +565,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Credit.
+             * <p>The number of credits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder credit(Long credit) {
                 this.credit = credit;
@@ -551,7 +576,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LimitPeriod.
+             * <p>The dimension of the current credit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder limitPeriod(String limitPeriod) {
                 this.limitPeriod = limitPeriod;
@@ -730,7 +758,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T01:31:32Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -738,7 +769,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreditConfig.
+             * <p>The credit quota configuration. Subsequent quota configurations overwrite previous configurations.</p>
              */
             public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
                 this.creditConfig = creditConfig;
@@ -746,7 +777,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T01:31:32Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -762,7 +796,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -770,7 +807,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * JvsPackageId.
+             * <p>This parameter is not supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder jvsPackageId(String jvsPackageId) {
                 this.jvsPackageId = jvsPackageId;
@@ -778,7 +818,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-10T01:31:32Z</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -786,7 +829,10 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -794,7 +840,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCredit.
+             * <p>The used credits.</p>
              */
             public Builder usedCredit(java.util.List<UsedCredit> usedCredit) {
                 this.usedCredit = usedCredit;

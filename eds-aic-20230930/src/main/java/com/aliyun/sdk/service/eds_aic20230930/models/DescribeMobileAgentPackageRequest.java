@@ -129,7 +129,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The list of node instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -138,7 +138,7 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PackageIds.
+         * <p>The list of packages.</p>
          */
         public Builder packageIds(java.util.List<String> packageIds) {
             this.putQueryParameter("PackageIds", packageIds);
@@ -147,7 +147,10 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PackageSpec.
+         * <p>The package specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
          */
         public Builder packageSpec(String packageSpec) {
             this.putQueryParameter("PackageSpec", packageSpec);
@@ -156,7 +159,10 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PackageStatus.
+         * <p>The package status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder packageStatus(String packageStatus) {
             this.putQueryParameter("PackageStatus", packageStatus);
@@ -165,7 +171,10 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -174,7 +183,10 @@ public class DescribeMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

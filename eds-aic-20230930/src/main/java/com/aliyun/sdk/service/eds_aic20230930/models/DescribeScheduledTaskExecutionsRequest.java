@@ -144,7 +144,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end time of the time range in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-12T23:59:59</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -153,7 +156,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acp-axxkuuxahbu1*****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -162,7 +168,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of results to return per request. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -171,7 +180,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Leave this parameter empty for the first request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -180,6 +192,7 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the scheduled task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +205,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the time range in ISO 8601 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-06-01T00:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -201,7 +217,10 @@ public class DescribeScheduledTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -93,7 +93,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The images.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token that is used to start the next query. An empty value indicates that all data has been returned.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -112,7 +112,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>620740FF-492F-5956-B1BA-361E966C0269</p>
@@ -123,7 +123,7 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -192,7 +192,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -200,7 +203,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -460,7 +466,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the image.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>description</p>
@@ -493,7 +499,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageBizTags.
+             * <p>An array of tag objects.</p>
              */
             public Builder imageBizTags(java.util.List<ImageBizTags> imageBizTags) {
                 this.imageBizTags = imageBizTags;
@@ -501,7 +507,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-075cllfeuazh****</p>
@@ -512,7 +518,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the image.</p>
+             * <p>The image name.</p>
              * 
              * <strong>example:</strong>
              * <p>IMAGE</p>
@@ -523,7 +529,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the image is distributed. The key is the region and the value is the distribution information.</p>
+             * <p>The image distribution information by region. The key is the region and the value is the distribution information.</p>
              */
             public Builder imageRegionDistributeMap(java.util.Map<String, DataImageRegionDistributeMapValue> imageRegionDistributeMap) {
                 this.imageRegionDistributeMap = imageRegionDistributeMap;
@@ -531,7 +537,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of regions.</p>
+             * <p>The list of available regions.</p>
              */
             public Builder imageRegionList(java.util.List<String> imageRegionList) {
                 this.imageRegionList = imageRegionList;
@@ -539,12 +545,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>User: custom images.</li>
-             * <li>System: system images.</li>
-             * </ul>
+             * <p>The image type.</p>
              * 
              * <strong>example:</strong>
              * <p>System</p>
@@ -555,7 +556,10 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241204102337</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -563,7 +567,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The language of the image.</p>
+             * <p>The language.</p>
              * 
              * <strong>example:</strong>
              * <p>zh</p>
@@ -586,12 +590,6 @@ public class DescribeImageListResponseBody extends TeaModel {
 
             /**
              * <p>The rendering type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>GPURemote</li>
-             * <li>CPU</li>
-             * <li>GPULocal</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -602,15 +600,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the image.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AVAILABLE: The image is available.</li>
-             * <li>DELETE: The image is deleted.</li>
-             * <li>INIT: The image is being initialized.</li>
-             * <li>CREATE_FAILED: The image failed to be created.</li>
-             * <li>CREATING: The image is being created.</li>
-             * </ul>
+             * <p>The image status.</p>
              * 
              * <strong>example:</strong>
              * <p>AVAILABLE</p>
@@ -621,7 +611,7 @@ public class DescribeImageListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS type of the image.</p>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Android 12</p>

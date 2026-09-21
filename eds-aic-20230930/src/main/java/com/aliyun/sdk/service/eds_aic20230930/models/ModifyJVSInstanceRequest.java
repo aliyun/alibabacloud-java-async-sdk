@@ -129,7 +129,7 @@ public class ModifyJVSInstanceRequest extends Request {
         } 
 
         /**
-         * <p>目标版本号，如2607W1，支持latest自动解析为最新可用版本</p>
+         * <p>The target version, such as 2607W1. Set this parameter to latest to automatically resolve to the latest available version.</p>
          */
         public Builder agentVersion(String agentVersion) {
             this.putQueryParameter("AgentVersion", agentVersion);
@@ -138,7 +138,10 @@ public class ModifyJVSInstanceRequest extends Request {
         }
 
         /**
-         * ApplyToAll.
+         * <p>Specifies whether to apply the configuration to all instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder applyToAll(Boolean applyToAll) {
             this.putQueryParameter("ApplyToAll", applyToAll);
@@ -147,7 +150,7 @@ public class ModifyJVSInstanceRequest extends Request {
         }
 
         /**
-         * CreditConfig.
+         * <p>The credit quota configuration. If you submit the configuration multiple times, the latest configuration overwrites the previous one.</p>
          */
         public Builder creditConfig(java.util.List<CreditConfig> creditConfig) {
             this.putQueryParameter("CreditConfig", creditConfig);
@@ -165,7 +168,7 @@ public class ModifyJVSInstanceRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -174,7 +177,10 @@ public class ModifyJVSInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>defaultInstanceName</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -242,7 +248,10 @@ public class ModifyJVSInstanceRequest extends Request {
             } 
 
             /**
-             * CreditLimit.
+             * <p>The quota limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder creditLimit(Long creditLimit) {
                 this.creditLimit = creditLimit;
@@ -250,7 +259,15 @@ public class ModifyJVSInstanceRequest extends Request {
             }
 
             /**
-             * LimitPeriod.
+             * <p>The dimension of the current credit. Valid values:</p>
+             * <ul>
+             * <li>total: Total usage limit.</li>
+             * <li>month: Monthly. The quota resets based on the resource activation time cycle.</li>
+             * <li>day: Daily. The quota resets at 00:00.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>day</p>
              */
             public Builder limitPeriod(String limitPeriod) {
                 this.limitPeriod = limitPeriod;

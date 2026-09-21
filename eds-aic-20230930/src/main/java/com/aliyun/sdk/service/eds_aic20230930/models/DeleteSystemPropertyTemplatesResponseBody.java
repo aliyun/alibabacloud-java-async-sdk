@@ -80,7 +80,13 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * <blockquote>
+         * <p>This parameter is returned only when the API call fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -88,7 +94,10 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -96,7 +105,7 @@ public class DeleteSystemPropertyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>

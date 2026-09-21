@@ -106,7 +106,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For example, &quot;200&quot; indicates success.</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -122,7 +128,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310A783E-CC46-5452-A8A3-71AE5DB5****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -243,7 +255,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ContentType.
+             * <p>The MIME type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image/png</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -251,7 +266,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * <p>The OSS pre-signed download URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</p>
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -259,7 +277,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>screenshot.png</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -267,7 +288,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -275,7 +299,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * <p>The upload time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-05T10:00:00+08:00</p>
              */
             public Builder updatedTime(String updatedTime) {
                 this.updatedTime = updatedTime;
@@ -485,7 +512,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ArtifactCount.
+             * <p>The number of task artifacts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder artifactCount(Integer artifactCount) {
                 this.artifactCount = artifactCount;
@@ -493,7 +523,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Artifacts.
+             * <p>The list of uploaded task artifacts.</p>
              */
             public Builder artifacts(java.util.List<Artifacts> artifacts) {
                 this.artifacts = artifacts;
@@ -501,7 +531,17 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStatus.
+             * <p>The current status of the task. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The task is being created.</li>
+             * <li>RUNNING: The task is running.</li>
+             * <li>COMPLETED: The task is completed.</li>
+             * <li>FAILED: The task failed.</li>
+             * <li>TIMEOUT: The task execution timed out.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -509,7 +549,12 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DigestSource.
+             * <p>The source of the digest. Valid values:</p>
+             * <ul>
+             * <li>PROMPT_AUTO: auto-generated.</li>
+             * <li>RESULT_AUTO: result refinement.</li>
+             * <li>USER: user-edited.</li>
+             * </ul>
              */
             public Builder digestSource(String digestSource) {
                 this.digestSource = digestSource;
@@ -517,7 +562,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The Mobile node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-anzzuho371azi44xr</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -533,7 +581,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RunningAt.
+             * <p>The time when the task was created, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-13T17:42:19Z</p>
              */
             public Builder runningAt(String runningAt) {
                 this.runningAt = runningAt;
@@ -541,7 +592,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The number of steps executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder steps(String steps) {
                 this.steps = steps;
@@ -549,7 +603,7 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDigest.
+             * <p>The task digest text, up to 25 characters.</p>
              */
             public Builder taskDigest(String taskDigest) {
                 this.taskDigest = taskDigest;
@@ -557,7 +611,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDuration.
+             * <p>The task duration. This field is returned only when CurrentStatus is FAILED or COMPLETED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder taskDuration(String taskDuration) {
                 this.taskDuration = taskDuration;
@@ -565,7 +622,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID, which is globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -573,7 +633,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskResult.
+             * <p>The task result in the desired state. This field is returned only when CurrentStatus is COMPLETED or FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Download DingTalk succeeded.</p>
              */
             public Builder taskResult(String taskResult) {
                 this.taskResult = taskResult;
@@ -581,7 +644,10 @@ public class DescribeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrompt.
+             * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Download DingTalk from App Store</p>
              */
             public Builder userPrompt(String userPrompt) {
                 this.userPrompt = userPrompt;

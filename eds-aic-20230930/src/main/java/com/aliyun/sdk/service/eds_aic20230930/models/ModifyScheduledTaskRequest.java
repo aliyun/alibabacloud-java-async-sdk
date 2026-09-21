@@ -159,7 +159,10 @@ public class ModifyScheduledTaskRequest extends Request {
         } 
 
         /**
-         * CronExpression.
+         * <p>The cron expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0 30 * * *</p>
          */
         public Builder cronExpression(String cronExpression) {
             this.putQueryParameter("CronExpression", cronExpression);
@@ -168,7 +171,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;acp-5hh431emkt6u*****&quot;]</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -177,7 +183,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * RunConfig.
+         * <p>The run configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;maxSteps&quot;:10,&quot;timeoutSeconds&quot;:3600}</p>
          */
         public Builder runConfig(RunConfig runConfig) {
             String runConfigShrink = shrink(runConfig, "RunConfig", "json");
@@ -187,6 +196,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
+         * <p>The scheduled task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,7 +209,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Switches the status. Valid values: ACTIVE and DISABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -208,7 +221,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NewTaskName</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -217,6 +233,7 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
+         * <p>The CAS version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +246,10 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * UserPrompt.
+         * <p>The user prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Execute daily data synchronization task</p>
          */
         public Builder userPrompt(String userPrompt) {
             this.putQueryParameter("UserPrompt", userPrompt);
@@ -323,7 +343,10 @@ public class ModifyScheduledTaskRequest extends Request {
             } 
 
             /**
-             * ExtraParams.
+             * <p>The extended parameter JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;batchSize&quot;:&quot;1000&quot;}</p>
              */
             public Builder extraParams(String extraParams) {
                 this.extraParams = extraParams;
@@ -331,7 +354,10 @@ public class ModifyScheduledTaskRequest extends Request {
             }
 
             /**
-             * MaxSteps.
+             * <p>The maximum number of execution steps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxSteps(Integer maxSteps) {
                 this.maxSteps = maxSteps;
@@ -339,7 +365,10 @@ public class ModifyScheduledTaskRequest extends Request {
             }
 
             /**
-             * Skills.
+             * <p>The list of skill IDs. A maximum of 1 skill ID is supported. The value overwrites aim_task_config.run_config after modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;sk-abc&quot;]</p>
              */
             public Builder skills(java.util.List<String> skills) {
                 this.skills = skills;
@@ -347,7 +376,10 @@ public class ModifyScheduledTaskRequest extends Request {
             }
 
             /**
-             * TimeoutSeconds.
+             * <p>The timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder timeoutSeconds(Integer timeoutSeconds) {
                 this.timeoutSeconds = timeoutSeconds;

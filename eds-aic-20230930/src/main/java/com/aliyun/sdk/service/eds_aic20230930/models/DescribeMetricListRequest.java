@@ -172,7 +172,9 @@ public class DescribeMetricListRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>For instance-level monitoring, enter a list of Cloud Phone instance IDs.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <p>For matrix-level monitoring, enter a list of matrix IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -181,7 +183,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-31 11:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -190,7 +195,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>A list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -199,7 +204,11 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>The number of entries to return on each page for a paged query.</p>
+         * <p>Default value: 1000. This means that 1000 monitoring data records are returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder length(String length) {
             this.putBodyParameter("Length", length);
@@ -208,6 +217,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
+         * <p>The monitoring metrics.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metricNames(java.util.List<String> metricNames) {
@@ -217,7 +227,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>A token that marks the position from which the query starts. Leave it empty to start from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -226,7 +239,12 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The statistic period of the monitoring data.</p>
+         * <p>Valid values: 60, 900, and 3600.</p>
+         * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -235,7 +253,7 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * ProcessInfos.
+         * <p>A list of process monitoring metrics.</p>
          */
         public Builder processInfos(java.util.List<ProcessInfos> processInfos) {
             this.putBodyParameter("ProcessInfos", processInfos);
@@ -244,7 +262,10 @@ public class DescribeMetricListRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time for the query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-01-31 10:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -312,7 +333,7 @@ public class DescribeMetricListRequest extends Request {
             } 
 
             /**
-             * ProcessIds.
+             * <p>A list of process IDs.</p>
              */
             public Builder processIds(java.util.List<Integer> processIds) {
                 this.processIds = processIds;
@@ -320,7 +341,10 @@ public class DescribeMetricListRequest extends Request {
             }
 
             /**
-             * ProcessName.
+             * <p>The process name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>php-fpm</p>
              */
             public Builder processName(String processName) {
                 this.processName = processName;

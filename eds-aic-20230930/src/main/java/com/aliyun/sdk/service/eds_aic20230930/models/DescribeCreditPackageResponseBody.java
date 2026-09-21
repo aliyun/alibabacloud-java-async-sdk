@@ -119,7 +119,7 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * CreditsPackageInfos.
+         * <p>The credit booster package information.</p>
          */
         public Builder creditsPackageInfos(java.util.List<CreditsPackageInfos> creditsPackageInfos) {
             this.creditsPackageInfos = creditsPackageInfos;
@@ -127,7 +127,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * IsFirstPurchase.
+         * <p>Indicates whether this is the first purchase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isFirstPurchase(Boolean isFirstPurchase) {
             this.isFirstPurchase = isFirstPurchase;
@@ -135,7 +138,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +149,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalAvailableCredits.
+         * <p>The total number of available credits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalAvailableCredits(String totalAvailableCredits) {
             this.totalAvailableCredits = totalAvailableCredits;
@@ -151,7 +160,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalExhaustedCredit.
+         * <p>The total number of consumed credits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalExhaustedCredit(String totalExhaustedCredit) {
             this.totalExhaustedCredit = totalExhaustedCredit;
@@ -303,7 +318,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             } 
 
             /**
-             * AvailableCredits.
+             * <p>The number of available credits in the current credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder availableCredits(String availableCredits) {
                 this.availableCredits = availableCredits;
@@ -319,7 +337,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * CreditPackageId.
+             * <p>The ID of the credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crp-xagydbhfkah****</p>
              */
             public Builder creditPackageId(String creditPackageId) {
                 this.creditPackageId = creditPackageId;
@@ -327,7 +348,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * CreditPackageStatus.
+             * <p>The status of the credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder creditPackageStatus(String creditPackageStatus) {
                 this.creditPackageStatus = creditPackageStatus;
@@ -335,7 +359,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * <p>The effective period of the credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-30 00:00:00</p>
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -343,7 +370,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * ExhaustedCredits.
+             * <p>The number of consumed credits in the current credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder exhaustedCredits(String exhaustedCredits) {
                 this.exhaustedCredits = exhaustedCredits;
@@ -351,7 +381,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time of the credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-30 00:00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -359,7 +392,10 @@ public class DescribeCreditPackageResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCredits.
+             * <p>The total number of credits in the current credit booster package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCredits(String totalCredits) {
                 this.totalCredits = totalCredits;

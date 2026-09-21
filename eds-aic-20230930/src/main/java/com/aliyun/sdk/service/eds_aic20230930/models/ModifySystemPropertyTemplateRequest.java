@@ -116,7 +116,10 @@ public class ModifySystemPropertyTemplateRequest extends Request {
         } 
 
         /**
-         * EnableAuto.
+         * <p>Specifies whether to automatically generate preset system properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAuto(Boolean enableAuto) {
             this.putQueryParameter("EnableAuto", enableAuto);
@@ -125,7 +128,13 @@ public class ModifySystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * FilePath.
+         * <p>The URL of the property template file. The system synchronously parses the file. If the file format is invalid, a parsing error is returned.</p>
+         * <blockquote>
+         * <p>File template format: <code>{ &quot;properties&quot;:{&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;:&quot;value2&quot;}}</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
          */
         public Builder filePath(String filePath) {
             this.putQueryParameter("FilePath", filePath);
@@ -134,7 +143,7 @@ public class ModifySystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * SystemPropertyInfo.
+         * <p>The information about the system property template.</p>
          */
         public Builder systemPropertyInfo(SystemPropertyInfo systemPropertyInfo) {
             String systemPropertyInfoShrink = shrink(systemPropertyInfo, "SystemPropertyInfo", "json");
@@ -144,7 +153,10 @@ public class ModifySystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the property template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-angyvganxlf****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -153,7 +165,10 @@ public class ModifySystemPropertyTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -221,7 +236,10 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             } 
 
             /**
-             * PropertyName.
+             * <p>The key of the custom property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propKey</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -229,7 +247,10 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * PropertyValue.
+             * <p>The value of the custom property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propValue</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -478,7 +499,7 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             } 
 
             /**
-             * CustomPropertyInfos.
+             * <p>The information about custom properties.</p>
              */
             public Builder customPropertyInfos(java.util.List<CustomPropertyInfos> customPropertyInfos) {
                 this.customPropertyInfos = customPropertyInfos;
@@ -486,7 +507,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBootloader.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBootloader(String roBootloader) {
                 this.roBootloader = roBootloader;
@@ -494,7 +520,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildDisplayId.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildDisplayId(String roBuildDisplayId) {
                 this.roBuildDisplayId = roBuildDisplayId;
@@ -502,7 +533,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildFingerprint.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildFingerprint(String roBuildFingerprint) {
                 this.roBuildFingerprint = roBuildFingerprint;
@@ -510,7 +546,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildHost.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildHost(String roBuildHost) {
                 this.roBuildHost = roBuildHost;
@@ -518,7 +559,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildId.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildId(String roBuildId) {
                 this.roBuildId = roBuildId;
@@ -526,7 +572,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildProduct.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildProduct(String roBuildProduct) {
                 this.roBuildProduct = roBuildProduct;
@@ -534,7 +585,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildTags.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildTags(String roBuildTags) {
                 this.roBuildTags = roBuildTags;
@@ -542,7 +598,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildType.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildType(String roBuildType) {
                 this.roBuildType = roBuildType;
@@ -550,7 +611,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoBuildUser.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roBuildUser(String roBuildUser) {
                 this.roBuildUser = roBuildUser;
@@ -558,7 +624,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductBoard.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductBoard(String roProductBoard) {
                 this.roProductBoard = roProductBoard;
@@ -566,7 +637,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductBrand.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductBrand(String roProductBrand) {
                 this.roProductBrand = roProductBrand;
@@ -574,7 +650,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductDevice.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductDevice(String roProductDevice) {
                 this.roProductDevice = roProductDevice;
@@ -582,7 +663,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductManufacturer.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductManufacturer(String roProductManufacturer) {
                 this.roProductManufacturer = roProductManufacturer;
@@ -590,7 +676,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RoProductModel.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductModel(String roProductModel) {
                 this.roProductModel = roProductModel;
@@ -598,7 +689,12 @@ public class ModifySystemPropertyTemplateRequest extends Request {
             }
 
             /**
-             * RwRoSerialNo.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder rwRoSerialNo(String rwRoSerialNo) {
                 this.rwRoSerialNo = rwRoSerialNo;

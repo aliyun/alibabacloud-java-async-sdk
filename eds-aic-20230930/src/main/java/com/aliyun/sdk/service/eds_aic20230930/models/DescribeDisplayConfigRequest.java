@@ -59,7 +59,7 @@ public class DescribeDisplayConfigRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);

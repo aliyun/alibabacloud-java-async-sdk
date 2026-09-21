@@ -106,7 +106,7 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The ADB connection information for the instances.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records returned in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +125,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token to start the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken value to query the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +136,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB95E410-FD1D-53C5-9F7D-93CC44D7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalIp.
+             * <p>The public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>183.201.219.157</p>
              */
             public Builder externalIp(String externalIp) {
                 this.externalIp = externalIp;
@@ -290,7 +305,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalPort.
+             * <p>The public network port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14840/14849</p>
              */
             public Builder externalPort(String externalPort) {
                 this.externalPort = externalPort;
@@ -298,7 +316,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * <p>The time when the connection was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-15 17:33:59</p>
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -306,7 +327,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the connection was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-15 17:33:59</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -314,7 +338,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-uto81vfd8t8z****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -322,7 +349,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * InternalIp.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.239</p>
              */
             public Builder internalIp(String internalIp) {
                 this.internalIp = internalIp;
@@ -330,7 +360,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * InternalPort.
+             * <p>The private network port number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5555/5555</p>
              */
             public Builder internalPort(String internalPort) {
                 this.internalPort = internalPort;
@@ -338,7 +371,10 @@ public class ListInstanceAdbAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * IpProtocol.
+             * <p>The network protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;

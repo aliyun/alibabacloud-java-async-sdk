@@ -73,7 +73,10 @@ public class DescribeCreditPackageRequest extends Request {
         } 
 
         /**
-         * CreditPackageId.
+         * <p>The ID of the credit booster package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crp-xagydbhfkah****</p>
          */
         public Builder creditPackageId(String creditPackageId) {
             this.putQueryParameter("CreditPackageId", creditPackageId);
@@ -82,7 +85,10 @@ public class DescribeCreditPackageRequest extends Request {
         }
 
         /**
-         * CreditPackageStatus.
+         * <p>The status of the credit booster package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder creditPackageStatus(String creditPackageStatus) {
             this.putQueryParameter("CreditPackageStatus", creditPackageStatus);

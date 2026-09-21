@@ -59,7 +59,10 @@ public class GetNetworkBlacklistRequest extends Request {
         } 
 
         /**
-         * Type.
+         * <p>The query type. Valid values: IP and Domain. If you do not specify this parameter, information for both types is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

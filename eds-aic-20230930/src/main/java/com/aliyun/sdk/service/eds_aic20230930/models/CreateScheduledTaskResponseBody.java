@@ -106,7 +106,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of creation results.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -138,7 +147,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>privateAccount not exist.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -225,7 +240,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-iuyb1zv1ap6nb****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +251,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -313,7 +334,7 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceResults.
+             * <p>The list of batch delivery results for instance scheduled tasks.</p>
              */
             public Builder instanceResults(java.util.List<InstanceResults> instanceResults) {
                 this.instanceResults = instanceResults;
@@ -321,7 +342,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduledId.
+             * <p>The scheduled task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-260705-agb*****</p>
              */
             public Builder scheduledId(String scheduledId) {
                 this.scheduledId = scheduledId;
@@ -329,7 +353,10 @@ public class CreateScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskConfigId.
+             * <p>The task configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tsk-260705-0jj*****</p>
              */
             public Builder taskConfigId(String taskConfigId) {
                 this.taskConfigId = taskConfigId;

@@ -67,7 +67,7 @@ public class GetInstancePropertiesResponseBody extends TeaModel {
         } 
 
         /**
-         * PropertyTemplateModel.
+         * <p>The instance properties.</p>
          */
         public Builder propertyTemplateModel(PropertyTemplateModel propertyTemplateModel) {
             this.propertyTemplateModel = propertyTemplateModel;
@@ -75,7 +75,7 @@ public class GetInstancePropertiesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1CBAFFAB-B697-4049-A9B1-67E1FC******</p>
@@ -131,7 +131,13 @@ public class GetInstancePropertiesResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The instance properties.</p>
+             * <blockquote>
+             * <p>Format: <code>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</p>
              */
             public Builder content(String content) {
                 this.content = content;

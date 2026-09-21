@@ -80,7 +80,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The token that marks the position from which to start the next query. If this parameter is empty, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -88,7 +91,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20393E53-8FF1-524C-B494-B478A5369733</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * <p>A collection of resources and their tag information.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -188,7 +194,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID. This is the ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-8jwttemxb4t6y****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -196,7 +205,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ACP::INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -204,7 +216,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -212,7 +227,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TF</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

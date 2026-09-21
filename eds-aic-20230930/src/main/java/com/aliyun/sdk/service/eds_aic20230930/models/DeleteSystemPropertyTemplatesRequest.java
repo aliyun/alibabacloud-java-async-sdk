@@ -59,7 +59,7 @@ public class DeleteSystemPropertyTemplatesRequest extends Request {
         } 
 
         /**
-         * TemplateIds.
+         * <p>The IDs of the property templates.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);

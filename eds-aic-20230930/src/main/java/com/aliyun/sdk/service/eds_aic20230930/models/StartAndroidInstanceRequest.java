@@ -82,7 +82,10 @@ public class StartAndroidInstanceRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The billing mode. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);

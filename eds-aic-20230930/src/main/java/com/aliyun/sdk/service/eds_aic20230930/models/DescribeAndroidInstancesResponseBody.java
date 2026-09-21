@@ -93,7 +93,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud phone instances.</p>
+         * <p>The instance information.</p>
          */
         public Builder instanceModel(java.util.List<InstanceModel> instanceModel) {
             this.instanceModel = instanceModel;
@@ -101,7 +101,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The position from which the current call starts reading. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kmma/xxE9WtwL/ADvZ****</p>
@@ -112,7 +112,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
@@ -123,7 +123,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -192,7 +192,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppManagePolicyId.
+             * <p>The application management policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amp-dgiavcvibfdds****</p>
              */
             public Builder appManagePolicyId(String appManagePolicyId) {
                 this.appManagePolicyId = appManagePolicyId;
@@ -200,7 +203,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppManagePolicyName.
+             * <p>The name of the application management rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AppGroup1</p>
              */
             public Builder appManagePolicyName(String appManagePolicyName) {
                 this.appManagePolicyName = appManagePolicyName;
@@ -267,7 +273,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>releaseFlag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -275,7 +284,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -353,7 +365,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk.</p>
+             * <p>The disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -462,7 +474,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Dpi.
+             * <p>DPI。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder dpi(Integer dpi) {
                 this.dpi = dpi;
@@ -470,7 +485,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <p>The frame rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
@@ -478,7 +496,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LockResolution.
+             * <p>Indicates whether the resolution is locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder lockResolution(String lockResolution) {
                 this.lockResolution = lockResolution;
@@ -486,7 +507,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>The height of the resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -494,7 +518,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>The width of the resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;
@@ -561,7 +588,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * PhoneDataId.
+             * <p>The independent device storage ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pd-sbcudgidbhb****</p>
              */
             public Builder phoneDataId(String phoneDataId) {
                 this.phoneDataId = phoneDataId;
@@ -569,7 +599,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneDataVolume.
+             * <p>The capacity of the independent device storage. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder phoneDataVolume(Integer phoneDataVolume) {
                 this.phoneDataVolume = phoneDataVolume;
@@ -636,7 +669,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key</p>
@@ -647,7 +680,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value</p>
@@ -1380,7 +1413,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance group.</p>
+             * <p>The ID of the instance group to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-ayyhomlal7po****</p>
@@ -1391,7 +1424,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance group.</p>
+             * <p>The instance group name.</p>
              * 
              * <strong>example:</strong>
              * <p>AndroidInstanceGroupName</p>
@@ -1402,7 +1435,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-8at8h6ejkadjh****</p>
@@ -1413,7 +1446,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>name</p>
@@ -1424,7 +1457,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance.</p>
+             * <p>The instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1435,7 +1468,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-i7yv6tkn7kh8dv****</p>
@@ -1446,7 +1479,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the physical instance.</p>
+             * <p>The physical instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-9ey6io0q58rcd****</p>
@@ -1457,7 +1490,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AppManagePolicy.
+             * <p>The application management rule information. This corresponds to the blacklists and whitelists management of application management rules in the console.</p>
              */
             public Builder appManagePolicy(AppManagePolicy appManagePolicy) {
                 this.appManagePolicy = appManagePolicy;
@@ -1465,7 +1498,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user to whom the instance is assigned.</p>
+             * <p>The assigned user.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1476,7 +1509,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageId.
+             * <p>The ID of the bandwidth package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-0q6ixs7vpxcizp***</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -1484,7 +1520,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageType.
+             * <p>The bandwidth type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp_ecd</p>
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
@@ -1492,7 +1531,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the bound user.</p>
+             * <p>The bound user.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1503,7 +1542,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BizImageType.
+             * <p>The image type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder bizImageType(String bizImageType) {
                 this.bizImageType = bizImageType;
@@ -1511,7 +1553,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BizTags.
+             * <p>The tag array.</p>
              */
             public Builder bizTags(java.util.List<BizTags> bizTags) {
                 this.bizTags = bizTags;
@@ -1519,7 +1561,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Channel.
+             * <p>The order source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLOUDPHONE</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -1527,7 +1572,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance.</p>
+             * <p>The billing type of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -1538,7 +1583,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1549,7 +1594,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disks.</p>
+             * <p>The disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1557,7 +1602,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayConfig.
+             * <p>The display settings.</p>
              */
             public Builder displayConfig(DisplayConfig displayConfig) {
                 this.displayConfig = displayConfig;
@@ -1565,7 +1610,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DownBandwidthLimit.
+             * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder downBandwidthLimit(Integer downBandwidthLimit) {
                 this.downBandwidthLimit = downBandwidthLimit;
@@ -1573,7 +1621,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the instance data backup failure or restoration failure.</p>
+             * <p>The error reason for instance data backup failure or restoration failure.</p>
              * 
              * <strong>example:</strong>
              * <p>FilePathNotFound</p>
@@ -1584,7 +1632,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-06 10:42:10</p>
@@ -1595,7 +1643,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription instance group expires.</p>
+             * <p>The expiration time of the subscription instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-15T02:03:33Z</p>
@@ -1606,7 +1654,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was modified.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-05-06 10:42:10</p>
@@ -1617,7 +1665,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imgc-075cllfeuazh0****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1625,7 +1676,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the image.</p>
+             * <p>The image version.</p>
              * 
              * <strong>example:</strong>
              * <p>3.5.3.867</p>
@@ -1636,7 +1687,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance.</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>acp.basic.small</p>
@@ -1647,7 +1698,20 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetStatus.
+             * <p>The network status.</p>
+             * <ul>
+             * <li><p>INIT: Being created.</p>
+             * </li>
+             * <li><p>UPDATING: Being updated.</p>
+             * </li>
+             * <li><p>AVAILABLE: Available.</p>
+             * </li>
+             * <li><p>UNAVAILABLE: Unavailable.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AVAILABLE</p>
              */
             public Builder internetStatus(String internetStatus) {
                 this.internetStatus = internetStatus;
@@ -1655,7 +1719,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the key pair.</p>
+             * <p>The key pair ID.</p>
              * 
              * <strong>example:</strong>
              * <p>kp-5hh431emkpucs****</p>
@@ -1677,7 +1741,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the ENI.</p>
+             * <p>The IP address of the network interface.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.22.48</p>
@@ -1689,7 +1753,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1701,7 +1765,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network_pro_ecd</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1709,7 +1776,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network ID.</p>
+             * <p>The network ID. This corresponds to the network selected during creation in the console (basic shared network or advanced shared network).</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shenzhen+dir-211620****</p>
@@ -1720,7 +1787,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The ID of the plan associated with the AI cloud phone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-bp1bpyt7sfeleukh****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -1728,7 +1798,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the persistent session.</p>
+             * <p>The persistent session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>p-0btrd5zj8epo****</p>
@@ -1739,7 +1809,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneDataInfo.
+             * <p>&lt;props=&quot;china&quot;&gt;The independent device storage information of the cloud phone matrix instance.</p>
              */
             public Builder phoneDataInfo(PhoneDataInfo phoneDataInfo) {
                 this.phoneDataInfo = phoneDataInfo;
@@ -1747,7 +1817,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy.</p>
+             * <p>The policy group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-0bszojpu0seql****</p>
@@ -1770,7 +1840,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
             /**
              * <blockquote>
-             * <p> This parameter is not publicly available.</p>
+             * <p>This parameter is not publicly available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1782,7 +1852,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * QosRuleId.
+             * <p>The ID of the public network rate limiting rule. This applies only to premium bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-5605u0gelk200****</p>
              */
             public Builder qosRuleId(String qosRuleId) {
                 this.qosRuleId = qosRuleId;
@@ -1801,7 +1874,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1823,7 +1896,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerStatus.
+             * <p>&lt;props=&quot;china&quot;&gt;The matrix status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder serverStatus(String serverStatus) {
                 this.serverStatus = serverStatus;
@@ -1831,7 +1907,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServerType.
+             * <p>&lt;props=&quot;china&quot;&gt;The cloud phone matrix specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpm.gx7.10xlarge</p>
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -1839,12 +1918,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>disConnect: The session is disconnected.</li>
-             * <li>connect: The session is connected.</li>
-             * </ul>
+             * <p>The session connection status.</p>
              * 
              * <strong>example:</strong>
              * <p>connect</p>
@@ -1855,7 +1929,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamMode.
+             * <p>&lt;props=&quot;china&quot;&gt;The streaming mode of the instance in the cloud phone matrix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder streamMode(Integer streamMode) {
                 this.streamMode = streamMode;
@@ -1863,7 +1940,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemVersion.
+             * <p>The Android system version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Android 11</p>
              */
             public Builder systemVersion(String systemVersion) {
                 this.systemVersion = systemVersion;
@@ -1871,7 +1951,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1879,7 +1959,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpBandwidthLimit.
+             * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder upBandwidthLimit(Integer upBandwidthLimit) {
                 this.upBandwidthLimit = upBandwidthLimit;
@@ -1887,7 +1970,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-2zepmau2hsbhos42****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1895,7 +1981,10 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

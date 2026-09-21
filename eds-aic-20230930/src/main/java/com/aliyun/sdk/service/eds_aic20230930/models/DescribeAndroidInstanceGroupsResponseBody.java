@@ -93,7 +93,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance group.</p>
+         * <p>The details of the instance groups.</p>
          */
         public Builder instanceGroupModel(java.util.List<InstanceGroupModel> instanceGroupModel) {
             this.instanceGroupModel = instanceGroupModel;
@@ -101,7 +101,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</p>
@@ -112,7 +112,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</p>
@@ -123,7 +123,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -192,7 +192,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-h3m8b5dusopp5****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -200,7 +203,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * QosRuleId.
+             * <p>The ID of the public network bandwidth limit rule (applies only to premium bandwidth).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qos-3kh93uu0vdbka****</p>
              */
             public Builder qosRuleId(String qosRuleId) {
                 this.qosRuleId = qosRuleId;
@@ -267,7 +273,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceQosRule.
+             * <p>The public network bandwidth limit rule bound to the instance.</p>
              */
             public Builder instanceQosRule(java.util.List<InstanceQosRule> instanceQosRule) {
                 this.instanceQosRule = instanceQosRule;
@@ -275,7 +281,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * <p>The total number of public network bandwidth limit rules for the instance group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -342,7 +351,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the disk. Unit: GB.</p>
+             * <p>The disk size (unit: GB).</p>
              * 
              * <strong>example:</strong>
              * <p>32</p>
@@ -353,7 +362,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the disk.</p>
+             * <p>The disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>SYSTEM</p>
@@ -423,7 +432,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>phone</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -431,7 +443,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -992,7 +1007,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-48xr63m4dybjk****</p>
@@ -1003,7 +1018,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the architecture.</p>
+             * <p>The architecture type.</p>
              * 
              * <strong>example:</strong>
              * <p>ARM</p>
@@ -1016,11 +1031,11 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             /**
              * <p>The number of available instances.</p>
              * <blockquote>
-             * <p> Available instances are those not in the Deleting or Deleted state.</p>
+             * <p>Available means the instance status is not &quot;being deleted&quot; or &quot;deleted&quot;.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>5</p>
+             * <p>2</p>
              */
             public Builder availableInstanceAmount(Integer availableInstanceAmount) {
                 this.availableInstanceAmount = availableInstanceAmount;
@@ -1028,7 +1043,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageId.
+             * <p>The ID of the bandwidth package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>np-0q6ixs7vpxciz****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -1036,7 +1054,19 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageStatus.
+             * <p>The status of the bandwidth package.
+             * Valid values:</p>
+             * <ul>
+             * <li>Creating: being created.</li>
+             * <li>Releasing: being released.</li>
+             * <li>InUse: in use.</li>
+             * <li>Failed: failed.</li>
+             * <li>Expired: expired.</li>
+             * <li>Available: unbound and being billed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Creating</p>
              */
             public Builder bandwidthPackageStatus(String bandwidthPackageStatus) {
                 this.bandwidthPackageStatus = bandwidthPackageStatus;
@@ -1044,7 +1074,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageType.
+             * <p>The type of the bandwidth package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp_ecd</p>
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
@@ -1052,7 +1085,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * BindQosRules.
+             * <p>The public network bandwidth limit rules for the instance group.</p>
              */
             public Builder bindQosRules(BindQosRules bindQosRules) {
                 this.bindQosRules = bindQosRules;
@@ -1079,7 +1112,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of vCPUs.</p>
+             * <p>The number of CPU cores.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -1090,7 +1123,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disks.</p>
+             * <p>The disk information.</p>
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
@@ -1098,7 +1131,12 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIpv6.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableIpv6(Boolean enableIpv6) {
                 this.enableIpv6 = enableIpv6;
@@ -1106,10 +1144,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the creation failure.</p>
+             * <p>The reason for the creation failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
+             * <p>InternalError</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -1117,7 +1155,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance group was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -1128,7 +1166,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription instance group expires.</p>
+             * <p>The expiration time of the subscription instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>2027-06-29 07:25:31</p>
@@ -1139,7 +1177,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance group was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-01 10:56:36</p>
@@ -1150,7 +1188,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-06zyt9m93zwax****</p>
@@ -1161,7 +1199,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * <p>The image version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.09.2</p>
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -1172,7 +1213,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              * <p>The list of installed applications.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;TikTok&quot;,&quot;WeChat&quot;</p>
+             * <p>&quot;抖音&quot;,&quot;淘宝&quot;</p>
              */
             public Builder installedAppList(String installedAppList) {
                 this.installedAppList = installedAppList;
@@ -1180,7 +1221,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
+             * <p>The instance group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-h67a2cs0zprfdh****</p>
@@ -1191,10 +1232,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance group.</p>
+             * <p>The instance group name.</p>
              * 
              * <strong>example:</strong>
-             * <p>defaultInstanceGroup</p>
+             * <p>Cloud phoneA</p>
              */
             public Builder instanceGroupName(String instanceGroupName) {
                 this.instanceGroupName = instanceGroupName;
@@ -1202,7 +1243,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the instance group.</p>
+             * <p>The instance group specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>acp.basic.small</p>
@@ -1224,7 +1265,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance group.</p>
+             * <p>The instance group status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1235,7 +1276,12 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Bandwidth.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder ipv6Bandwidth(Integer ipv6Bandwidth) {
                 this.ipv6Bandwidth = ipv6Bandwidth;
@@ -1254,7 +1300,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type of the instance.</p>
+             * <blockquote>
+             * <p>This field is returned only for instance groups with standard networking.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>network_pro_ecd</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1273,7 +1325,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the network.</p>
+             * <p>The network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai+dir-030598****</p>
@@ -1292,7 +1344,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-c6n38xucps8kl****</p>
@@ -1303,7 +1355,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1314,13 +1366,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rendering mode of the instance group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>GPURemote: GPU remote rendering.</li>
-             * <li>CPU: CPU rendering.</li>
-             * <li>GPUocal: GPU local rendering.</li>
-             * </ul>
+             * <p>The rendering method of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>CPU</p>
@@ -1364,7 +1410,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the operating system.</p>
+             * <p>The system version.</p>
              * 
              * <strong>example:</strong>
              * <p>Android 12</p>
@@ -1375,7 +1421,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1383,7 +1429,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
+             * <p>The vSwitch ID in the VPC.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-t4n0yqs009ho024wt****</p>
@@ -1394,7 +1440,10 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

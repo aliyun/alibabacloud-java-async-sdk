@@ -102,7 +102,10 @@ public class DescribeSystemPropertyTemplatesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return for a single request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -111,7 +114,10 @@ public class DescribeSystemPropertyTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The starting position for reading. If this parameter is empty, reading starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6k****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -120,7 +126,7 @@ public class DescribeSystemPropertyTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateIds.
+         * <p>The property template ID.</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putQueryParameter("TemplateIds", templateIds);
@@ -129,7 +135,10 @@ public class DescribeSystemPropertyTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template 1</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

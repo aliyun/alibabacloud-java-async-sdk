@@ -106,7 +106,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The actual number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more data exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * Packages.
+         * <p>The list of packages.</p>
          */
         public Builder packages(java.util.List<Packages> packages) {
             this.packages = packages;
@@ -130,7 +136,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -256,7 +268,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeviceClass.
+             * <p>The device type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BOX</p>
              */
             public Builder deviceClass(String deviceClass) {
                 this.deviceClass = deviceClass;
@@ -264,7 +279,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-05 10:04:07</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -272,7 +290,7 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * LicenseKeys.
+             * <p>The list of license keys.</p>
              */
             public Builder licenseKeys(java.util.List<String> licenseKeys) {
                 this.licenseKeys = licenseKeys;
@@ -280,7 +298,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-0c1g77wjljl9hc****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -288,7 +309,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * PackageSpec.
+             * <p>The package specification. Currently, only hardware is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hardware</p>
              */
             public Builder packageSpec(String packageSpec) {
                 this.packageSpec = packageSpec;
@@ -296,7 +320,10 @@ public class DescribeEdgeMobileAgentPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The package status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder status(String status) {
                 this.status = status;

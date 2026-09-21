@@ -510,12 +510,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the auto-payment feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>False (default): You must manually complete the payment in the Alibaba Cloud Expenses and Costs console.</li>
-         * <li>true: enables the auto-payment feature.</li>
-         * </ul>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -527,12 +522,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the auto-renewal feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: enables the auto-renewal feature. In this case, the system automatically renews instances upon expiration.</li>
-         * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew instances upon expiration.</li>
-         * </ul>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -544,7 +534,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * BandwidthPackageId.
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-uf6g3hgg*******8s3lxiob3</p>
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -553,7 +546,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * BandwidthPackageType.
+         * <p>The bandwidth type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp_ecd</p>
          */
         public Builder bandwidthPackageType(String bandwidthPackageType) {
             this.putQueryParameter("BandwidthPackageType", bandwidthPackageType);
@@ -584,7 +580,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Only the subscription billing method is supported.</p>
+         * <p>The billing type. Only subscription is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -596,7 +592,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The number of cloud phone matrixes you want to purchase.</p>
+         * <p>The number of cloud phone matrices to purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -608,7 +604,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * DisplayConfig.
+         * <p>The display settings.</p>
          */
         public Builder displayConfig(DisplayConfig displayConfig) {
             String displayConfigShrink = shrink(displayConfig, "DisplayConfig", "json");
@@ -618,7 +614,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * DownBandwidthLimit.
+         * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder downBandwidthLimit(Integer downBandwidthLimit) {
             this.putQueryParameter("DownBandwidthLimit", downBandwidthLimit);
@@ -639,12 +638,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The instance specification.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ac.max: By default, this specification allows up to 25 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
-         * <li>ac.plus: By default, this specification allows up to 40 instances. You can adjust this number by using PhoneCount (Value range: 4 to 40).</li>
-         * </ul>
+         * <p>The instance type.</p>
+         * <blockquote>
+         * <p>To purchase more instance types, <a href="https://smartservice.console.aliyun.com/service/pre-sales-chat?spm=5176.6d6ecb63.0.0.729adda2VqVQx7">contact pre-sales support</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ac.max</p>
@@ -677,7 +674,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NetworkInfo.
+         * <p>The network mapping information of the instance.</p>
          */
         public Builder networkInfo(NetworkInfo networkInfo) {
             String networkInfoShrink = shrink(networkInfo, "NetworkInfo", "json");
@@ -687,7 +684,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * <p>The network type of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>network_pro_ecd</p>
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -717,10 +717,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+         * <p>The subscription duration. The unit is specified by PeriodUnit.</p>
          * <ul>
-         * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
-         * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+         * <li>If PeriodUnit is set to <strong>year</strong>, the value can only be 1.</li>
+         * <li>If PeriodUnit is set to <strong>month</strong>, valid values are 1, 2, 3, and 6.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -734,11 +734,6 @@ public class CreateCloudPhoneNodeRequest extends Request {
 
         /**
          * <p>The unit of the subscription duration.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month (default)</li>
-         * <li>Year</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -750,7 +745,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The number of instances per cloud phone matrix.</p>
+         * <p>The number of cloud phone instances to create in a single matrix.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -762,7 +757,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PhoneDataVolume.
+         * <p>The size of the independent device storage. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
@@ -780,7 +778,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The resolution height. Unit: pixel.</p>
+         * <p>The height of the resolution. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1280</p>
@@ -792,7 +790,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The resolution width. Unit: pixel.</p>
+         * <p>The width of the resolution. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -804,7 +802,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The shared storage size Unit: GiB.</p>
+         * <p>The size of the shared device storage. Unit: GiB.</p>
+         * <blockquote>
+         * <p>The minimum value of the shared device storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -816,15 +817,11 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The matrix specification.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cpm.gn6.gx1</li>
-         * </ul>
+         * <p>The specifications of the cloud phone matrix.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>cpm.gn6.gx1</p>
+         * <p>cpm.gx7.10xlarge</p>
          */
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);
@@ -833,7 +830,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * StreamMode.
+         * <p>The streaming mode for instances in the cloud phone matrix. If this parameter is not specified, the default value is preemptive mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder streamMode(Integer streamMode) {
             this.putQueryParameter("StreamMode", streamMode);
@@ -851,7 +851,7 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * <p>The resource tags.</p>
+         * <p>The tags of the resource.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -860,7 +860,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * UpBandwidthLimit.
+         * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder upBandwidthLimit(Integer upBandwidthLimit) {
             this.putQueryParameter("UpBandwidthLimit", upBandwidthLimit);
@@ -869,7 +872,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * UseTemplate.
+         * <p>Specifies whether to use a template during creation. Set this parameter to <code>Random</code> to use a random template from the template list. Alternatively, specify a template ID to use that template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Random</p>
          */
         public Builder useTemplate(String useTemplate) {
             this.putQueryParameter("UseTemplate", useTemplate);
@@ -962,7 +968,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             } 
 
             /**
-             * Dpi.
+             * <p>The DPI. Valid values: 72 to 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder dpi(Integer dpi) {
                 this.dpi = dpi;
@@ -970,7 +979,12 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * Fps.
+             * <blockquote>
+             * <p>This parameter is not yet available for public use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
@@ -978,7 +992,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * LockResolution.
+             * <p>Specifies whether to lock the resolution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder lockResolution(String lockResolution) {
                 this.lockResolution = lockResolution;
@@ -1136,7 +1153,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             } 
 
             /**
-             * BandwidthPackageName.
+             * <p>The name of the bandwidth plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inst-bandwidth-pkg-1</p>
              */
             public Builder bandwidthPackageName(String bandwidthPackageName) {
                 this.bandwidthPackageName = bandwidthPackageName;
@@ -1144,7 +1164,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * CidrBlock.
+             * <p>The private CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.10.13.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -1152,7 +1175,19 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * InternetChargeType.
+             * <p>The billable methods of the bandwidth plan. Valid values:</p>
+             * <p>&lt;props=&quot;china&quot;&gt;</p>
+             * <ul>
+             * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+             * <li><strong>PayBy95</strong>: pay-by-95th-percentile. IPv6 Internet bandwidth does not support pay-by-95th-percentile billing by default. To use this billing method, contact your account manager.</li>
+             * </ul>
+             * <p>&lt;props=&quot;intl&quot;&gt;</p>
+             * <ul>
+             * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PayByBandwidth</p>
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1160,7 +1195,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * IpRatio.
+             * <p>The ratio of IP addresses to instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>128</p>
              */
             public Builder ipRatio(Integer ipRatio) {
                 this.ipRatio = ipRatio;
@@ -1168,7 +1206,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * Isp.
+             * <p>The line type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ChinaTelecom</p>
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -1176,7 +1217,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * LimitedBandwidth.
+             * <p>The maximum bandwidth of the bandwidth plan. Unit: Mbit/s. The total bandwidth of all instances that use this bandwidth plan is subject to this limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder limitedBandwidth(Integer limitedBandwidth) {
                 this.limitedBandwidth = limitedBandwidth;
@@ -1192,7 +1236,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * PayType.
+             * <p>The billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PostPaid</p>
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1200,7 +1247,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
             }
 
             /**
-             * VisibleType.
+             * <p>The visibility scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CPS</p>
              */
             public Builder visibleType(String visibleType) {
                 this.visibleType = visibleType;

@@ -60,6 +60,7 @@ public class DeleteBackupFileRequest extends Request {
         } 
 
         /**
+         * <p>The list of backup file IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFileIdList(java.util.List<String> backupFileIdList) {

@@ -80,7 +80,10 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * OrderId.
+         * <p>The order ID for storage reduction. This parameter is returned only when you reduce storage while resetting instances in a cloud phone matrix. It is not returned in other scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22365781890****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -88,7 +91,7 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
@@ -99,7 +102,7 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The task information.</p>
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -165,7 +168,10 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-xxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -173,7 +179,10 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The child task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -240,7 +249,7 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ChildTasks.
+             * <p>The child tasks.</p>
              */
             public Builder childTasks(java.util.List<ChildTasks> childTasks) {
                 this.childTasks = childTasks;
@@ -248,7 +257,10 @@ public class ResetAndroidInstancesInGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ParentTaskId.
+             * <p>The parent task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-xxxx</p>
              */
             public Builder parentTaskId(String parentTaskId) {
                 this.parentTaskId = parentTaskId;

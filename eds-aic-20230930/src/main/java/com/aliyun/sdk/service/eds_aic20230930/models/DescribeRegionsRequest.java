@@ -75,12 +75,14 @@ public class DescribeRegionsRequest extends Request {
         /**
          * <p>The display language of the console. Valid values:</p>
          * <ul>
-         * <li>cn: Simplified Chinese</li>
-         * <li>en: English</li>
+         * <li><p>cn: Simplified Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>en</p>
+         * <p>cn</p>
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -92,8 +94,10 @@ public class DescribeRegionsRequest extends Request {
          * <p>The sales mode.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Instance: the instance group mode. [Default]</li>
-         * <li>Node: the matrix mode. [Whitelist required]</li>
+         * <li><p>Instance: the instance group mode. [Default]</p>
+         * </li>
+         * <li><p>Node: the matrix mode. [Whitelist required]</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

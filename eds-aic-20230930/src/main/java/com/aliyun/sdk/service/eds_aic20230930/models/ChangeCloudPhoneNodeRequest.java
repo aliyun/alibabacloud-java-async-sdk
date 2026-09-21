@@ -199,7 +199,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -217,7 +220,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * DownBandwidthLimit.
+         * <p>The downstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder downBandwidthLimit(Integer downBandwidthLimit) {
             this.putQueryParameter("DownBandwidthLimit", downBandwidthLimit);
@@ -226,7 +232,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>The instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac.max</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -235,7 +244,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The cloud phone matrix ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cpn-0ugbptfu473fy****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -244,7 +256,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PhoneCount.
+         * <p>The number of cloud phone instances. Call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the maximum and minimum instance count limits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder phoneCount(Integer phoneCount) {
             this.putQueryParameter("PhoneCount", phoneCount);
@@ -253,7 +268,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PhoneDataVolume.
+         * <p>The device storage size. Valid values: 10 GiB to 4000 GiB. If this parameter is left empty, the current size is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder phoneDataVolume(Integer phoneDataVolume) {
             this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
@@ -262,7 +280,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -289,7 +310,10 @@ public class ChangeCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * UpBandwidthLimit.
+         * <p>The upstream bandwidth throttling. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder upBandwidthLimit(Integer upBandwidthLimit) {
             this.putQueryParameter("UpBandwidthLimit", upBandwidthLimit);

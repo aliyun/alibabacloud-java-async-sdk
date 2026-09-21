@@ -93,7 +93,10 @@ public class InstallSkillsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,7 @@ public class InstallSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * InstallResults.
+         * <p>The installation results.</p>
          */
         public Builder installResults(java.util.List<InstallResults> installResults) {
             this.installResults = installResults;
@@ -109,7 +112,10 @@ public class InstallSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +123,10 @@ public class InstallSkillsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +192,10 @@ public class InstallSkillsResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The cloud phone instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-6rnonvrkf59ac****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +203,10 @@ public class InstallSkillsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The installation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLING</p>
              */
             public Builder status(String status) {
                 this.status = status;

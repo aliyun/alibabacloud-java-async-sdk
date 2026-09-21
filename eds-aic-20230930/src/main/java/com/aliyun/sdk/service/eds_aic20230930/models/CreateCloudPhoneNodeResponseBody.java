@@ -93,7 +93,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkPackageOrderModel.
+         * <p>The bandwidth plan order information.</p>
          */
         public Builder networkPackageOrderModel(NetworkPackageOrderModel networkPackageOrderModel) {
             this.networkPackageOrderModel = networkPackageOrderModel;
@@ -101,7 +101,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cloud phone matrixes.</p>
+         * <p>The cloud phone matrix information.</p>
          */
         public Builder nodeInfos(java.util.List<NodeInfos> nodeInfos) {
             this.nodeInfos = nodeInfos;
@@ -189,7 +189,10 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * BandwidthPackageId.
+             * <p>The ID of the Internet Shared Bandwidth instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cbwp-uf63gsv8j0ir53*****</p>
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -197,7 +200,10 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageOrderId.
+             * <p>The bandwidth plan order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25954415983*****</p>
              */
             public Builder bandwidthPackageOrderId(String bandwidthPackageOrderId) {
                 this.bandwidthPackageOrderId = bandwidthPackageOrderId;
@@ -264,7 +270,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the cloud phone instances.</p>
+             * <p>The list of cloud phone instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -272,7 +278,7 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud phone matrix.</p>
+             * <p>The cloud phone matrix ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cpn-e5kxgjyt8s1mb****</p>

@@ -67,7 +67,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The response object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -336,7 +339,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentType.
+             * <p>The agent type. This field is populated only when querying by a single agent type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloudphone_enterprise</p>
              */
             public Builder agentType(String agentType) {
                 this.agentType = agentType;
@@ -344,7 +350,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ApiKeyName.
+             * <p>The API key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder apiKeyName(String apiKeyName) {
                 this.apiKeyName = apiKeyName;
@@ -352,7 +361,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CachedTokens.
+             * <p>The number of cached tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder cachedTokens(Long cachedTokens) {
                 this.cachedTokens = cachedTokens;
@@ -360,7 +372,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ChangeTime.
+             * <p>The time when the change occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-30T08:14:02Z</p>
              */
             public Builder changeTime(String changeTime) {
                 this.changeTime = changeTime;
@@ -368,7 +383,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreditChange.
+             * <p>The credit change amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.7637</p>
              */
             public Builder creditChange(String creditChange) {
                 this.creditChange = creditChange;
@@ -376,7 +394,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Open Xiaohongshu</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -384,7 +405,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DurationMs.
+             * <p>The model inference duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder durationMs(Long durationMs) {
                 this.durationMs = durationMs;
@@ -392,7 +416,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InputTokens.
+             * <p>The number of input tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder inputTokens(Long inputTokens) {
                 this.inputTokens = inputTokens;
@@ -400,7 +427,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-12oe0l75vl7o5****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -408,7 +438,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-instance</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -416,7 +449,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -424,7 +460,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTokens.
+             * <p>The number of output tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder outputTokens(Long outputTokens) {
                 this.outputTokens = outputTokens;
@@ -432,7 +471,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The credit or package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-0c1g77wjljl9h****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -440,7 +482,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1A923337-44D9-5CAD-B2A5-4B9E6628B1C8</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -448,7 +493,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The globally unique task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-1fr0k51pozyr5****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -456,7 +504,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTokens.
+             * <p>The total number of tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>350</p>
              */
             public Builder totalTokens(Long totalTokens) {
                 this.totalTokens = totalTokens;
@@ -464,7 +515,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TtftMs.
+             * <p>The response time of the first token, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder ttftMs(Long ttftMs) {
                 this.ttftMs = ttftMs;
@@ -583,7 +637,7 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Details.
+             * <p>The credit change details.</p>
              */
             public Builder details(java.util.List<Details> details) {
                 this.details = details;
@@ -591,7 +645,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * <p>The token for the next query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -599,7 +656,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number for pagination. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -607,7 +667,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -615,7 +678,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of detail records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -623,7 +689,10 @@ public class DescribeCreditDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCreditChange.
+             * <p>The total credit change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCreditChange(String totalCreditChange) {
                 this.totalCreditChange = totalCreditChange;

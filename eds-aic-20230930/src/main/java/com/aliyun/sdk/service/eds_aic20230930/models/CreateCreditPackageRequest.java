@@ -143,7 +143,17 @@ public class CreateCreditPackageRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong> (default): generates an order without charging your account.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -161,7 +171,10 @@ public class CreateCreditPackageRequest extends Request {
         }
 
         /**
-         * CreditAmount.
+         * <p>The number of credits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder creditAmount(String creditAmount) {
             this.putQueryParameter("CreditAmount", creditAmount);
@@ -179,7 +192,10 @@ public class CreateCreditPackageRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration for which you want to purchase the resource. The unit is specified by PeriodUnit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -188,7 +204,15 @@ public class CreateCreditPackageRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the duration for which you want to purchase the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -197,7 +221,10 @@ public class CreateCreditPackageRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotional campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

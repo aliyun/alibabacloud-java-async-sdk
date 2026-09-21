@@ -87,7 +87,7 @@ public class RefreshAuthTokensRequest extends Request {
         } 
 
         /**
-         * <p>统一过期时间（秒），同时应用于 API Key TTL 和 JWT 有效期</p>
+         * <p>The validity period in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>600</p>
@@ -99,7 +99,7 @@ public class RefreshAuthTokensRequest extends Request {
         }
 
         /**
-         * <p>逗号分隔的实例 ID 列表（与 LicenseKeys 至少填一个）</p>
+         * <p>The list of instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-2zef0gov2nh2l3xxx,acp-2zef0gov2nh2l3yyy</p>
@@ -111,7 +111,7 @@ public class RefreshAuthTokensRequest extends Request {
         }
 
         /**
-         * <p>逗号分隔的 licenseKey 列表（与 InstanceIds 至少填一个）</p>
+         * <p>The list of license keys.</p>
          * 
          * <strong>example:</strong>
          * <p>lk-abcdef1234567890,lk-abcdef1234567891</p>

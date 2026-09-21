@@ -118,6 +118,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         } 
 
         /**
+         * <p>A list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -127,7 +128,10 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
-         * BackupFileId.
+         * <p>The ID of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bf-azhps4rdyi2th****</p>
          */
         public Builder backupFileId(String backupFileId) {
             this.putQueryParameter("BackupFileId", backupFileId);
@@ -136,6 +140,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
+         * <p>The OSS URL where the backup file is uploaded.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -145,7 +150,10 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
-         * UploadEndpoint.
+         * <p>The region where the backup is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
          */
         public Builder uploadEndpoint(String uploadEndpoint) {
             this.putQueryParameter("UploadEndpoint", uploadEndpoint);
@@ -154,6 +162,7 @@ public class RecoverAndroidInstanceRequest extends Request {
         }
 
         /**
+         * <p>The upload type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

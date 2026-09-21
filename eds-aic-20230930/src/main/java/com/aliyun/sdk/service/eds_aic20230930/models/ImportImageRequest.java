@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ImportImageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseImageId")
+    private String baseImageId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageDescription")
     private String imageDescription;
 
@@ -31,6 +35,7 @@ public class ImportImageRequest extends Request {
 
     private ImportImageRequest(Builder builder) {
         super(builder);
+        this.baseImageId = builder.baseImageId;
         this.imageDescription = builder.imageDescription;
         this.imageFileURL = builder.imageFileURL;
         this.imageName = builder.imageName;
@@ -47,6 +52,13 @@ public class ImportImageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseImageId
+     */
+    public String getBaseImageId() {
+        return this.baseImageId;
     }
 
     /**
@@ -71,6 +83,7 @@ public class ImportImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ImportImageRequest, Builder> {
+        private String baseImageId; 
         private String imageDescription; 
         private String imageFileURL; 
         private String imageName; 
@@ -81,13 +94,29 @@ public class ImportImageRequest extends Request {
 
         private Builder(ImportImageRequest request) {
             super(request);
+            this.baseImageId = request.baseImageId;
             this.imageDescription = request.imageDescription;
             this.imageFileURL = request.imageFileURL;
             this.imageName = request.imageName;
         } 
 
         /**
-         * ImageDescription.
+         * <p>The ID of the base image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-0aae4rgn0bk8f****</p>
+         */
+        public Builder baseImageId(String baseImageId) {
+            this.putQueryParameter("BaseImageId", baseImageId);
+            this.baseImageId = baseImageId;
+            return this;
+        }
+
+        /**
+         * <p>The description of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android 12 custom image</p>
          */
         public Builder imageDescription(String imageDescription) {
             this.putQueryParameter("ImageDescription", imageDescription);
@@ -96,7 +125,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * ImageFileURL.
+         * <p>The URL of the image. The URL must be an Alibaba Cloud Object Storage Service (OSS) address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxx.oss-xxx/xxxx.tgz">https://xxx.oss-xxx/xxxx.tgz</a></p>
          */
         public Builder imageFileURL(String imageFileURL) {
             this.putQueryParameter("ImageFileURL", imageFileURL);
@@ -105,7 +137,10 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The name of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import custom image</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);

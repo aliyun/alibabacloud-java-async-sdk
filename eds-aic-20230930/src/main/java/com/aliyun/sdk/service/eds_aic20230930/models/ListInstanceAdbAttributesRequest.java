@@ -144,7 +144,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         } 
 
         /**
-         * ExternalIp.
+         * <p>The public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>106.38.188.223</p>
          */
         public Builder externalIp(String externalIp) {
             this.putQueryParameter("ExternalIp", externalIp);
@@ -153,7 +156,7 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>The list of cloud phone instance IDs. You can specify from 1 to 100 IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -162,7 +165,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * InternalIp.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.3.23</p>
          */
         public Builder internalIp(String internalIp) {
             this.putQueryParameter("InternalIp", internalIp);
@@ -171,7 +177,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * InternalPort.
+         * <p>The ADB port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5555</p>
          */
         public Builder internalPort(String internalPort) {
             this.putQueryParameter("InternalPort", internalPort);
@@ -180,7 +189,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * <p>The network protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TCP</p>
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -189,7 +201,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return on each page for a paged query. Valid values: 1 to 100. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -198,7 +213,10 @@ public class ListInstanceAdbAttributesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token that indicates the position from which the query starts. If you leave this parameter empty, the query starts from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

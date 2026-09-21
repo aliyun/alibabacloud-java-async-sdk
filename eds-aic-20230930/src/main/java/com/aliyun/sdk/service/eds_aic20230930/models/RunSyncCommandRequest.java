@@ -102,7 +102,10 @@ public class RunSyncCommandRequest extends Request {
         } 
 
         /**
-         * CommandContent.
+         * <p>The content of the command to execute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls</p>
          */
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
@@ -111,7 +114,10 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * ContentEncoding.
+         * <p>The encoding of the command content. If you provide a value that is not a valid option, the system uses the default value, <code>PlainText</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.putQueryParameter("ContentEncoding", contentEncoding);
@@ -120,7 +126,7 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * <p>An array of Cloud Phone instance IDs. You can specify up to 50 instances in a single request.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -129,7 +135,10 @@ public class RunSyncCommandRequest extends Request {
         }
 
         /**
-         * WaitTime.
+         * <p>The timeout for command execution, in milliseconds. Valid range: 500 to 3000. Default: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder waitTime(Long waitTime) {
             this.putQueryParameter("WaitTime", waitTime);

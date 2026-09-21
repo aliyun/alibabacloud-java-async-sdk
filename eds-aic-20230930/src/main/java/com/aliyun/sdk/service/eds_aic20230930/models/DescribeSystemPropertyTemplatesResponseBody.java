@@ -93,7 +93,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * NextToken.
+         * <p>The token used to start the next query. An empty value indicates that all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +104,7 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
@@ -112,7 +115,7 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * SystemPropertyTemplateModel.
+         * <p>The list of property template objects.</p>
          */
         public Builder systemPropertyTemplateModel(java.util.List<SystemPropertyTemplateModel> systemPropertyTemplateModel) {
             this.systemPropertyTemplateModel = systemPropertyTemplateModel;
@@ -120,7 +123,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -186,7 +192,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * PropertyName.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propKey</p>
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -194,7 +203,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValue.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>propValue</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -261,7 +273,7 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomPropertyInfos.
+             * <p>The custom property information.</p>
              */
             public Builder customPropertyInfos(java.util.List<CustomPropertyInfos> customPropertyInfos) {
                 this.customPropertyInfos = customPropertyInfos;
@@ -269,7 +281,12 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RoProductDevice.
+             * <blockquote>
+             * <p>This parameter is not yet available for use.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder roProductDevice(String roProductDevice) {
                 this.roProductDevice = roProductDevice;
@@ -388,7 +405,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * EnableAuto.
+             * <p>Indicates whether preset system properties can be automatically generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableAuto(Boolean enableAuto) {
                 this.enableAuto = enableAuto;
@@ -396,7 +416,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>The URL path of the property template file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://filepath****.com">https://filepath****.com</a></p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -404,7 +427,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>init</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -412,7 +438,7 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemPropertyInfo.
+             * <p>The system property template information.</p>
              */
             public Builder systemPropertyInfo(SystemPropertyInfo systemPropertyInfo) {
                 this.systemPropertyInfo = systemPropertyInfo;
@@ -420,7 +446,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The property template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-0caoenwutkkx****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -428,7 +457,10 @@ public class DescribeSystemPropertyTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Template 1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

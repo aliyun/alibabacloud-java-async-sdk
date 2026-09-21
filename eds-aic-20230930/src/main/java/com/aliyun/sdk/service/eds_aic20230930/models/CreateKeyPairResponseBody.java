@@ -67,7 +67,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -203,7 +203,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private key of the key pair. The PEM-encoded private key that is in PKCS#8 format and adheres to the ADB connection specification.</p>
+             * <p>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format and is compatible with ADB.</p>
              * 
              * <strong>example:</strong>
              * <p>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</p>

@@ -60,6 +60,7 @@ public class StartInstanceAdbRequest extends Request {
         } 
 
         /**
+         * <p>A list of 1 to 100 cloud phone instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {

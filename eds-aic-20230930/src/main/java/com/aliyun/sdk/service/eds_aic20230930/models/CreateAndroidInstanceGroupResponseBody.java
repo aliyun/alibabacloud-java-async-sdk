@@ -106,7 +106,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The IDs of the instance groups.</p>
+         * <p>The list of instance group IDs.</p>
          */
         public Builder instanceGroupIds(java.util.List<String> instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
@@ -114,7 +114,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance groups.</p>
+         * <p>The instance group information.</p>
          */
         public Builder instanceGroupInfos(java.util.List<InstanceGroupInfos> instanceGroupInfos) {
             this.instanceGroupInfos = instanceGroupInfos;
@@ -130,7 +130,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>22365781890****</p>
@@ -141,7 +141,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
@@ -210,7 +210,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance group.</p>
+             * <p>The instance group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ag-cuv4scs4obxch****</p>
@@ -221,7 +221,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the instances.</p>
+             * <p>The list of instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;

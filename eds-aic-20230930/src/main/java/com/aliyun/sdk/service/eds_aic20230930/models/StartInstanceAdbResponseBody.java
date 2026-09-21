@@ -54,7 +54,10 @@ public class StartInstanceAdbResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

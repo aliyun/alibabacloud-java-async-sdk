@@ -54,7 +54,10 @@ public class ModifyDisplayConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A578AD3A-8E7C-54FE-A09F-B060941*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

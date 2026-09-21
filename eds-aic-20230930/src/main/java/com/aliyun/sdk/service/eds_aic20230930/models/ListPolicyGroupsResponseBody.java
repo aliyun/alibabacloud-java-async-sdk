@@ -93,7 +93,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</p>
@@ -104,7 +104,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policies.</p>
+         * <p>The policy information.</p>
          */
         public Builder policyGroupModel(java.util.List<PolicyGroupModel> policyGroupModel) {
             this.policyGroupModel = policyGroupModel;
@@ -112,7 +112,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</p>
@@ -123,7 +123,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -330,12 +330,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the rule.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>prc: an application package name.</li>
-             * <li>domain: a domain name.</li>
-             * </ul>
+             * <p>The rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>domain</p>
@@ -346,10 +341,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application package or domain name.</p>
+             * <p>The application package name or domain name.</p>
              * 
              * <strong>example:</strong>
-             * <p>*.example.com</p>
+             * <p>*.baidu.com</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -494,12 +489,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether a custom proxy is manually configured.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>Indicates whether a transparent proxy is manually configured.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -510,7 +500,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IPv4 address of the custom proxy.</p>
+             * <p>The proxy IP address of the transparent proxy. The value must be in IPv4 format.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX</p>
@@ -521,12 +511,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the network redirection feature is enabled. When this feature is enabled, network traffic is automatically redirected to the on-premises network by default.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>Indicates whether network redirection is enabled. After this feature is enabled, traffic is redirected to the client-side network by default.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -537,7 +522,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
+             * <p>The port of the transparent proxy. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>1145</p>
@@ -548,7 +533,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+             * <p>The proxy password. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -559,11 +544,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the proxy protocol.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>socks5.</li>
-             * </ul>
+             * <p>The proxy protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>socks5</p>
@@ -574,7 +555,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+             * <p>The proxy username. The value must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -585,7 +566,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The proxy rules.</p>
+             * <p>The list of proxy rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -652,7 +633,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceGroupIds.
+             * <p>The list of instance group IDs.</p>
              */
             public Builder androidInstanceGroupIds(java.util.List<String> androidInstanceGroupIds) {
                 this.androidInstanceGroupIds = androidInstanceGroupIds;
@@ -660,7 +641,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CloudPhoneMatrixIds.
+             * <p>The list of matrix IDs.</p>
              */
             public Builder cloudPhoneMatrixIds(java.util.List<String> cloudPhoneMatrixIds) {
                 this.cloudPhoneMatrixIds = cloudPhoneMatrixIds;
@@ -779,7 +760,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * WatermarkColor.
+             * <p>The watermark font color. Valid values: 0 to 16777215.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder watermarkColor(Integer watermarkColor) {
                 this.watermarkColor = watermarkColor;
@@ -787,7 +771,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkCustomText.
+             * <p>The custom watermark content. The value can be up to 10 characters in length and does not support emoji characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom text</p>
              */
             public Builder watermarkCustomText(String watermarkCustomText) {
                 this.watermarkCustomText = watermarkCustomText;
@@ -795,7 +782,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkFontSize.
+             * <p>The watermark font size. Valid values: 10 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder watermarkFontSize(Integer watermarkFontSize) {
                 this.watermarkFontSize = watermarkFontSize;
@@ -803,7 +793,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkSwitch.
+             * <p>The screen watermark switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder watermarkSwitch(String watermarkSwitch) {
                 this.watermarkSwitch = watermarkSwitch;
@@ -811,7 +804,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkTransparencyValue.
+             * <p>The watermark opacity. A larger value indicates lower transparency. Valid values: 10 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
                 this.watermarkTransparencyValue = watermarkTransparencyValue;
@@ -819,7 +815,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkTypes.
+             * <p>The screen watermark content.</p>
              */
             public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;
@@ -1050,12 +1046,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to enable the webcam redirection feature.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>Indicates whether local camera redirection is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -1066,13 +1057,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write permissions on the clipboard.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>read: read-only.</li>
-             * <li>readwrite: read and write.</li>
-             * <li>off: read/write disabled.</li>
-             * </ul>
+             * <p>The clipboard permission.</p>
              * 
              * <strong>example:</strong>
              * <p>readwrite</p>
@@ -1083,7 +1068,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-04 10:28:54</p>
@@ -1094,14 +1079,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file transfer policy of the HTML5 client.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>all: File upload and download are supported.</li>
-             * <li>download: Only file download is supported.</li>
-             * <li>upload: Only file upload is supported.</li>
-             * <li>off: File upload or download is forbidden.</li>
-             * </ul>
+             * <p>The file transfer policy for the HTML5 client.</p>
              * 
              * <strong>example:</strong>
              * <p>download</p>
@@ -1112,13 +1090,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write permissions on the on-premises drive.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>read: read-only.</li>
-             * <li>readwrite: ready and write.</li>
-             * <li>off: read/write denied.</li>
-             * </ul>
+             * <p>The local disk mapping permission.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1129,12 +1101,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Identifies whether the resolution is locked.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>The locked resolution.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -1145,7 +1112,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network redirection policy.</p>
+             * <p>The network redirection settings.</p>
              */
             public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
                 this.netRedirectPolicy = netRedirectPolicy;
@@ -1153,7 +1120,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the policy.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-9q6o8qpiy8opkj****</p>
@@ -1164,10 +1131,10 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy.</p>
+             * <p>The policy name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Default Policy</p>
+             * <p>Default policy.</p>
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
@@ -1175,7 +1142,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyRelatedResources.
+             * <p>The resources associated with the policy.</p>
              */
             public Builder policyRelatedResources(PolicyRelatedResources policyRelatedResources) {
                 this.policyRelatedResources = policyRelatedResources;
@@ -1205,7 +1172,7 @@ public class ListPolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Watermark.
+             * <p>The screen watermark settings.</p>
              */
             public Builder watermark(Watermark watermark) {
                 this.watermark = watermark;

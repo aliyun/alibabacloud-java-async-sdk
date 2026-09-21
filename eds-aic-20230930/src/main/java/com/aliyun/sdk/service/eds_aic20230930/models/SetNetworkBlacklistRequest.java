@@ -73,7 +73,10 @@ public class SetNetworkBlacklistRequest extends Request {
         } 
 
         /**
-         * DomainBlacklist.
+         * <p>Domain name blacklist.</p>
+         * <blockquote>
+         * <p>Supports a maximum of 200 domain names.</p>
+         * </blockquote>
          */
         public Builder domainBlacklist(java.util.List<String> domainBlacklist) {
             this.putQueryParameter("DomainBlacklist", domainBlacklist);
@@ -82,7 +85,10 @@ public class SetNetworkBlacklistRequest extends Request {
         }
 
         /**
-         * IpBlacklist.
+         * <p>IP address blacklist.</p>
+         * <blockquote>
+         * <p>Supports a maximum of 200 IP addresses or IP address segments.</p>
+         * </blockquote>
          */
         public Builder ipBlacklist(java.util.List<String> ipBlacklist) {
             this.putQueryParameter("IpBlacklist", ipBlacklist);

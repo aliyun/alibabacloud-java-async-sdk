@@ -106,7 +106,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For example, &quot;200&quot; indicates success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * <p>The number of tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -122,7 +128,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,7 @@ public class RunAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -256,7 +268,22 @@ public class RunAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentStatus.
+             * <p>The current status of the task. Valid values:</p>
+             * <p>PENDING: The task is being created.</p>
+             * <p>RUNNING: The task is running.</p>
+             * <p>COMPLETED: The task is completed.</p>
+             * <p>FAILED: The task failed.</p>
+             * <p>TIMEOUT: The task timed out.</p>
+             * <p>CALL_FOR_USER: Waiting for user action.</p>
+             * <p>PAUSING: The task is being paused.</p>
+             * <p>PAUSED: The task is paused.</p>
+             * <p>CANCELLING: The task is being canceled.</p>
+             * <p>CANCELED: The task is canceled.</p>
+             * <p>STOPPED: The task is stopped.</p>
+             * <p>TIMEOUT: The task timed out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -264,7 +291,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The Mobile node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-ek65k51zoxia3x8xz</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -272,7 +302,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RunningAt.
+             * <p>The time when the task was created, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-13T17:42:19Z</p>
              */
             public Builder runningAt(String runningAt) {
                 this.runningAt = runningAt;
@@ -280,7 +313,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * <p>The session ID. Tasks with the same session ID share context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ses-260702-21bh****。</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -288,7 +324,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID, which is globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -296,7 +335,10 @@ public class RunAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrompt.
+             * <p>The user instruction in natural language. The Agent performs operations based on this instruction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Go to App Store and download DingTalk</p>
              */
             public Builder userPrompt(String userPrompt) {
                 this.userPrompt = userPrompt;

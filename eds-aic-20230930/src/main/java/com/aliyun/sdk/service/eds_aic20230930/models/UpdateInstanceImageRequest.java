@@ -110,7 +110,10 @@ public class UpdateInstanceImageRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The ID of the image. Call <a href="t2730769.xdita#"></a>to query the list of images for cloud phones.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imgc-075cllfeuazh0****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -119,7 +122,7 @@ public class UpdateInstanceImageRequest extends Request {
         }
 
         /**
-         * InstanceIdList.
+         * <p>The list of instances.</p>
          */
         public Builder instanceIdList(java.util.List<String> instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -128,7 +131,10 @@ public class UpdateInstanceImageRequest extends Request {
         }
 
         /**
-         * Reset.
+         * <p>Specifies whether to reset the instance. If you reset the instance, all user data on the instance is cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder reset(Boolean reset) {
             this.putQueryParameter("Reset", reset);

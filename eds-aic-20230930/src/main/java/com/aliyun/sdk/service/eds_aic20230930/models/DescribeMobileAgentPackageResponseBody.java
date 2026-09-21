@@ -106,7 +106,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * PackageList.
+         * <p>The list of package information.</p>
          */
         public Builder packageList(java.util.List<PackageList> packageList) {
             this.packageList = packageList;
@@ -130,7 +136,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -151,6 +163,87 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeMobileAgentPackageResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMobileAgentPackageResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeMobileAgentPackageResponseBody} extends {@link TeaModel}
@@ -185,6 +278,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PeriodStartTime")
         private String periodStartTime;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("UsedCredit")
         private String usedCredit;
 
@@ -198,6 +294,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             this.packageStatus = builder.packageStatus;
             this.periodEndTime = builder.periodEndTime;
             this.periodStartTime = builder.periodStartTime;
+            this.tags = builder.tags;
             this.usedCredit = builder.usedCredit;
         }
 
@@ -273,6 +370,13 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return usedCredit
          */
         public String getUsedCredit() {
@@ -289,6 +393,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             private String packageStatus; 
             private String periodEndTime; 
             private String periodStartTime; 
+            private java.util.List<Tags> tags; 
             private String usedCredit; 
 
             private Builder() {
@@ -304,11 +409,15 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
                 this.packageStatus = model.packageStatus;
                 this.periodEndTime = model.periodEndTime;
                 this.periodStartTime = model.periodStartTime;
+                this.tags = model.tags;
                 this.usedCredit = model.usedCredit;
             } 
 
             /**
-             * ExpiredAt.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-10-30 00:00:00</p>
              */
             public Builder expiredAt(String expiredAt) {
                 this.expiredAt = expiredAt;
@@ -316,7 +425,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of node instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -324,7 +433,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageCredit.
+             * <p>The credit quota of the package.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8000</p>
              */
             public Builder packageCredit(String packageCredit) {
                 this.packageCredit = packageCredit;
@@ -332,7 +444,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageId.
+             * <p>The package ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cmag-bp19i1yxu60r7twy****</p>
              */
             public Builder packageId(String packageId) {
                 this.packageId = packageId;
@@ -340,7 +455,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageSpec.
+             * <p>The package specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>advanced</p>
              */
             public Builder packageSpec(String packageSpec) {
                 this.packageSpec = packageSpec;
@@ -356,7 +474,10 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * PackageStatus.
+             * <p>The package status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACTIVE</p>
              */
             public Builder packageStatus(String packageStatus) {
                 this.packageStatus = packageStatus;
@@ -380,7 +501,18 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
             }
 
             /**
-             * UsedCredit.
+             * <p>The labels.</p>
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>The number of credits that have been used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder usedCredit(String usedCredit) {
                 this.usedCredit = usedCredit;

@@ -116,7 +116,7 @@ public class ModifyAppRequest extends Request {
          * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>defaultAppName</p>
+         * <p>Application name</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -128,7 +128,7 @@ public class ModifyAppRequest extends Request {
          * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
-         * <p>default description.</p>
+         * <p>Application description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

@@ -143,7 +143,10 @@ public class RenewCloudPhoneNodesRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. The default value is false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -152,12 +155,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the auto-renewal feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true: enables the auto-renewal feature. In this case, the system automatically renews the instance upon expiration.</li>
-         * <li>false (default): disables the auto-renewal feature. In this case, you need to manually renew the instance upon expiration.</li>
-         * </ul>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -169,7 +167,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The cloud phone matrix IDs.</p>
+         * <p>A list of cloud phone matrix IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -187,10 +185,12 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration. The unit is specified by <code>PeriodUnit</code>. Valid values:</p>
+         * <p>The renewal duration. The <code>PeriodUnit</code> parameter specifies the unit.</p>
          * <ul>
-         * <li>When <code>PeriodUnit</code> is set to <strong>year</strong>: 1.</li>
-         * <li>When <code>PeriodUnit</code> is set to <strong>month</strong>: 1, 2, 3, and 6.</li>
+         * <li><p>If <code>PeriodUnit</code> is <strong>Year</strong>, the value must be 1.</p>
+         * </li>
+         * <li><p>If <code>PeriodUnit</code> is <strong>Month</strong>, the valid values are 1, 2, 3, and 6.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,12 +203,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month (default)</li>
-         * <li>Year</li>
-         * </ul>
+         * <p>The unit of the renewal duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -220,7 +215,7 @@ public class RenewCloudPhoneNodesRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The promotion ID.</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

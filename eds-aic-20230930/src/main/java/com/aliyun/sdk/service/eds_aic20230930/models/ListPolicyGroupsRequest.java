@@ -116,7 +116,7 @@ public class ListPolicyGroupsRequest extends Request {
         } 
 
         /**
-         * <p>The maximum number of entries per page. Value range: 1 to 100. Default value: 20.</p>
+         * <p>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</p>
+         * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -140,7 +140,7 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the policies.</p>
+         * <p>The list of policy IDs.</p>
          */
         public Builder policyGroupIds(java.util.List<String> policyGroupIds) {
             this.putBodyParameter("PolicyGroupIds", policyGroupIds);
@@ -149,10 +149,10 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>defaultPolicyGroup</p>
+         * <p>Default policy</p>
          */
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);
@@ -161,7 +161,10 @@ public class ListPolicyGroupsRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Instance</p>
          */
         public Builder policyType(String policyType) {
             this.putBodyParameter("PolicyType", policyType);

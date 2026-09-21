@@ -67,7 +67,7 @@ public class ModifySystemPropertyTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</p>
@@ -78,7 +78,10 @@ public class ModifySystemPropertyTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the property template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-angyvganxlf****</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

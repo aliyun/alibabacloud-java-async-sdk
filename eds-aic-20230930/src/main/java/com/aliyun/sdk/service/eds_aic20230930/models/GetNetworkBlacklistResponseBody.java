@@ -67,7 +67,7 @@ public class GetNetworkBlacklistResponseBody extends TeaModel {
         } 
 
         /**
-         * NetworkBlacklistModel.
+         * <p>The network blacklist.</p>
          */
         public Builder networkBlacklistModel(NetworkBlacklistModel networkBlacklistModel) {
             this.networkBlacklistModel = networkBlacklistModel;
@@ -75,7 +75,10 @@ public class GetNetworkBlacklistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A578AD3A-8E7C-54FE-A09F-B060941*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,7 @@ public class GetNetworkBlacklistResponseBody extends TeaModel {
             } 
 
             /**
-             * DomainBlacklist.
+             * <p>The list of blacklisted domain names.</p>
              */
             public Builder domainBlacklist(java.util.List<String> domainBlacklist) {
                 this.domainBlacklist = domainBlacklist;
@@ -149,7 +152,7 @@ public class GetNetworkBlacklistResponseBody extends TeaModel {
             }
 
             /**
-             * IpBlacklist.
+             * <p>The list of blacklisted IP addresses.</p>
              */
             public Builder ipBlacklist(java.util.List<String> ipBlacklist) {
                 this.ipBlacklist = ipBlacklist;

@@ -130,7 +130,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         } 
 
         /**
-         * DeviceClass.
+         * <p>The device type filter. Valid values: BOX, PHONE, PAD, and OTHER.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BOX</p>
          */
         public Builder deviceClass(String deviceClass) {
             this.putQueryParameter("DeviceClass", deviceClass);
@@ -139,7 +142,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         }
 
         /**
-         * LicenseKeys.
+         * <p>The list of license keys. Separate multiple keys with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lic-ez197xvdf0j5eo0*****</p>
          */
         public Builder licenseKeys(String licenseKeys) {
             this.putQueryParameter("LicenseKeys", licenseKeys);
@@ -148,7 +154,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -157,7 +166,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token. Leave this parameter empty for the first query. For subsequent queries, use the value returned in the previous response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -166,7 +178,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         }
 
         /**
-         * PackageIds.
+         * <p>The list of package IDs. Separate multiple IDs with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cmag-0c1g77wjljl9hc****</p>
          */
         public Builder packageIds(String packageIds) {
             this.putQueryParameter("PackageIds", packageIds);
@@ -175,7 +190,10 @@ public class DescribeEdgeMobileAgentPackagesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The package status filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -73,7 +73,7 @@ public class InstallMonitorAgentRequest extends Request {
         } 
 
         /**
-         * AndroidInstanceIds.
+         * <p>A list of instance IDs.</p>
          */
         public Builder androidInstanceIds(java.util.List<String> androidInstanceIds) {
             this.putBodyParameter("AndroidInstanceIds", androidInstanceIds);
@@ -82,7 +82,16 @@ public class InstallMonitorAgentRequest extends Request {
         }
 
         /**
-         * SaleMode.
+         * <p>The monitoring type.</p>
+         * <ul>
+         * <li><p>Instance mode: Instance</p>
+         * </li>
+         * <li><p>Node mode: Node</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NODE</p>
          */
         public Builder saleMode(String saleMode) {
             this.putBodyParameter("SaleMode", saleMode);

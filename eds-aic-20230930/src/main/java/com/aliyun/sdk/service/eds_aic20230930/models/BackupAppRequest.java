@@ -133,6 +133,7 @@ public class BackupAppRequest extends Request {
         } 
 
         /**
+         * <p>A list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder androidInstanceIdList(java.util.List<String> androidInstanceIdList) {
@@ -142,7 +143,10 @@ public class BackupAppRequest extends Request {
         }
 
         /**
-         * BackupFileName.
+         * <p>The name of the backup file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyBackup</p>
          */
         public Builder backupFileName(String backupFileName) {
             this.putQueryParameter("BackupFileName", backupFileName);
@@ -151,6 +155,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
+         * <p>The URL of the backup file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder backupFilePath(String backupFilePath) {
@@ -160,7 +165,10 @@ public class BackupAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the application backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a backup app</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -169,6 +177,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
+         * <p>A list of package names for the applications to back up.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sourceAppList(java.util.List<String> sourceAppList) {
@@ -178,6 +187,7 @@ public class BackupAppRequest extends Request {
         }
 
         /**
+         * <p>Specifies the region where the backup is created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

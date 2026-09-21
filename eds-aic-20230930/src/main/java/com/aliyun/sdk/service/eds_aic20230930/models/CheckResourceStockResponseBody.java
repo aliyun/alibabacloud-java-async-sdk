@@ -67,7 +67,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>805D8FB6-512A-531C-9E4D-2A807D3C****</p>
@@ -78,7 +78,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of resource inventory.</p>
+         * <p>The resource inventory details.</p>
          */
         public Builder resourceStockModels(java.util.List<ResourceStockModels> resourceStockModels) {
             this.resourceStockModels = resourceStockModels;
@@ -157,7 +157,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Region ID.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -168,7 +168,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Inventory status of the instance group.</p>
+             * <p>The inventory status of the instance group.</p>
              * 
              * <strong>example:</strong>
              * <p>Available</p>
@@ -179,7 +179,7 @@ public class CheckResourceStockResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Zone ID.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai-b</p>

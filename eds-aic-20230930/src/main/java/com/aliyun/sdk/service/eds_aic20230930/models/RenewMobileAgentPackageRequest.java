@@ -157,7 +157,17 @@ public class RenewMobileAgentPackageRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong> (default): Only an order is generated. No payment is made.</li>
+         * </ul>
+         * <blockquote>
+         * <p>If your payment method has an insufficient balance, set this parameter to false. An unpaid order is generated, and you can log on to the Elastic Cloud Phone console to complete the payment.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -166,7 +176,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -175,7 +188,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence key.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -184,7 +197,7 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * MobileAgentPackageIds.
+         * <p>The list of resource plan IDs.</p>
          */
         public Builder mobileAgentPackageIds(java.util.List<String> mobileAgentPackageIds) {
             this.putQueryParameter("MobileAgentPackageIds", mobileAgentPackageIds);
@@ -193,7 +206,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PaidCallbackUrl.
+         * <p>The redirect URL after a successful payment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></p>
          */
         public Builder paidCallbackUrl(String paidCallbackUrl) {
             this.putQueryParameter("PaidCallbackUrl", paidCallbackUrl);
@@ -202,7 +218,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The duration for which you want to purchase the resource. The unit is specified by <code>PeriodUnit</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -211,7 +230,15 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * <p>The unit of the duration for which you want to purchase the resource.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>Month</strong>: month.</li>
+         * <li><strong>Year</strong>: year.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -220,7 +247,10 @@ public class RenewMobileAgentPackageRequest extends Request {
         }
 
         /**
-         * PromotionId.
+         * <p>The ID of the promotional campaign.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50003308011****</p>
          */
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);

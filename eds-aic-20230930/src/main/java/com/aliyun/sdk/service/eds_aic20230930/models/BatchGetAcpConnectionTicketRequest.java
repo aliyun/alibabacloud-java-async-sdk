@@ -129,7 +129,10 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         } 
 
         /**
-         * ConnectionMode.
+         * <p>The connection mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder connectionMode(String connectionMode) {
             this.putQueryParameter("ConnectionMode", connectionMode);
@@ -171,7 +174,7 @@ public class BatchGetAcpConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The instance connection tasks.</p>
+         * <p>The instance connection task, which is used to query whether the ticket retrieval task is completed.</p>
          */
         public Builder instanceTasks(java.util.List<InstanceTasks> instanceTasks) {
             this.putQueryParameter("InstanceTasks", instanceTasks);

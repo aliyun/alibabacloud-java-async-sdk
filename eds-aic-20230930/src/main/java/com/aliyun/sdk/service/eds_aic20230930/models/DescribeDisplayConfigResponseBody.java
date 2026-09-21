@@ -67,7 +67,7 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * DisplayConfigModel.
+         * <p>A list of display settings.</p>
          */
         public Builder displayConfigModel(java.util.List<DisplayConfigModel> displayConfigModel) {
             this.displayConfigModel = displayConfigModel;
@@ -75,7 +75,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FFEF7EFE-1E36-56D1-B5BF-5BACE43B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-jewjt8xryuituz4qn-****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -201,7 +207,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Dpi.
+             * <p>The dots per inch (DPI). The value ranges from 72 to 600.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>240</p>
              */
             public Builder dpi(Integer dpi) {
                 this.dpi = dpi;
@@ -209,7 +218,12 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * <blockquote>
+             * <p>This parameter is not publicly available.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder fps(Integer fps) {
                 this.fps = fps;
@@ -217,7 +231,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LockResolution.
+             * <p>Indicates whether the resolution is locked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder lockResolution(String lockResolution) {
                 this.lockResolution = lockResolution;
@@ -225,7 +242,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionHeight.
+             * <p>The height of the resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder resolutionHeight(Integer resolutionHeight) {
                 this.resolutionHeight = resolutionHeight;
@@ -233,7 +253,10 @@ public class DescribeDisplayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResolutionWidth.
+             * <p>The width of the resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder resolutionWidth(Integer resolutionWidth) {
                 this.resolutionWidth = resolutionWidth;

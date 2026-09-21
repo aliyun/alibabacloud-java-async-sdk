@@ -102,7 +102,10 @@ public class ResumeAgentTaskRequest extends Request {
         } 
 
         /**
-         * AdditionalPrompt.
+         * <p>The additional prompt to append. This parameter takes effect only when the task is passively paused, such as when the task is paused and waiting for user confirmation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>验证码为***。</p>
          */
         public Builder additionalPrompt(String additionalPrompt) {
             this.putQueryParameter("AdditionalPrompt", additionalPrompt);
@@ -120,6 +123,7 @@ public class ResumeAgentTaskRequest extends Request {
         }
 
         /**
+         * <p>The list of task IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder taskIds(java.util.List<String> taskIds) {

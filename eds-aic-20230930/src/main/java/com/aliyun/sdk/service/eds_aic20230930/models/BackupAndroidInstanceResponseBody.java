@@ -93,7 +93,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of instances that were backed up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -101,7 +104,7 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440D7342-5FC2-5E7C-B2DB-D0B4EAC2BDF1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-14xwibw7pyrjd****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -209,7 +218,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>The cloud phone instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-34pqe4r0kd9kn****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -217,7 +229,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileId.
+             * <p>The ID of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bf-b0qbg3pbpjkn7****</p>
              */
             public Builder backupFileId(String backupFileId) {
                 this.backupFileId = backupFileId;
@@ -225,7 +240,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * BackupFileName.
+             * <p>The name of the backup file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a-58ftsoo90p0qa****.ab</p>
              */
             public Builder backupFileName(String backupFileName) {
                 this.backupFileName = backupFileName;
@@ -233,7 +251,10 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-bp67acfmxazb4p****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

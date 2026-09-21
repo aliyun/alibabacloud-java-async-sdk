@@ -281,7 +281,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port used for establishing a connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -300,7 +303,7 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the task.</p>
+             * <p>The state of the task. If FINISHED is returned, it indicates that a value can be retrieved from the Ticket field. If the returned value is not FINISHED, you still need to use this operation to query the Ticket generation result by using TaskId.</p>
              * 
              * <strong>example:</strong>
              * <p>FINISHED</p>

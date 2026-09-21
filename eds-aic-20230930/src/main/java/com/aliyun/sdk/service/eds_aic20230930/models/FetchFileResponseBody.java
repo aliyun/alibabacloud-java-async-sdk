@@ -80,7 +80,7 @@ public class FetchFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>An array of results, with one entry for each instance specified in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -91,7 +91,7 @@ public class FetchFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</p>
+         * <p>The request ID. Provide this ID when contacting support for troubleshooting.</p>
          * 
          * <strong>example:</strong>
          * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -102,7 +102,7 @@ public class FetchFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the batch task.</p>
+         * <p>The batch task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-ehs0yoedj0xe9****</p>
@@ -171,7 +171,10 @@ public class FetchFileResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>The ID of the cloud phone instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-34pqe4r0kd9kn****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -179,10 +182,10 @@ public class FetchFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the batch task.</p>
+             * <p>The ID of the task created for this specific instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>t-ehs0yoedj0xe9****</p>
+             * <p>t-bp67acfmxazb4p****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

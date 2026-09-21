@@ -157,7 +157,7 @@ public class DescribeScheduledTasksRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -166,7 +166,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -175,7 +178,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that indicates the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -184,7 +190,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,7 +202,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -202,7 +214,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * ScheduledIds.
+         * <p>Filters by scheduled task IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;scheduled-abcd1234&quot;]</p>
          */
         public Builder scheduledIds(java.util.List<String> scheduledIds) {
             this.putQueryParameter("ScheduledIds", scheduledIds);
@@ -211,7 +226,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Filters by status: ACTIVE/DISABLED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -220,7 +238,10 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DataSync</p>
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

@@ -80,7 +80,7 @@ public class CreateMobileAgentPackageResponseBody extends TeaModel {
         } 
 
         /**
-         * MobileAgentPackageIds.
+         * <p>The list of resource plan IDs.</p>
          */
         public Builder mobileAgentPackageIds(java.util.List<String> mobileAgentPackageIds) {
             this.mobileAgentPackageIds = mobileAgentPackageIds;
@@ -88,7 +88,10 @@ public class CreateMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22326560487****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +99,10 @@ public class CreateMobileAgentPackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69BCBBE4-FCF2-59B8-AD9D-531EB422****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

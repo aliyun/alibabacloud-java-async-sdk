@@ -106,7 +106,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates success.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of deletion results.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -138,7 +147,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ScheduledId.
+             * <p>The ID of the scheduled task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sch-260705-agbx1eev</p>
              */
             public Builder scheduledId(String scheduledId) {
                 this.scheduledId = scheduledId;
@@ -212,7 +227,10 @@ public class DeleteScheduledTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the deletion is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

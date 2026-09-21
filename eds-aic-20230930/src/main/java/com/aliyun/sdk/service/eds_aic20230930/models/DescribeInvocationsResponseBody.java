@@ -80,7 +80,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>The list of returned results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>440D7342-5E7C-B2DB-D0B4EAC2BDF1****</p>
@@ -99,7 +99,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -220,7 +220,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the command execution.</p>
+             * <p>The time when the command finished running.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11 17:45:03</p>
@@ -231,7 +231,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cloud phone instance on which the command is executed.</p>
+             * <p>The ID of the instance where the command was run.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-uto81vfd8t8z****</p>
@@ -242,7 +242,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the execution.</p>
+             * <p>The ID of the command execution.</p>
              * 
              * <strong>example:</strong>
              * <p>t-15775dc8****</p>
@@ -253,18 +253,10 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution state of the command.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Failed: The execution of the command failed.</li>
-             * <li>Timeout: The execution of the command timed out.</li>
-             * <li>Running: The command is being executed.</li>
-             * <li>Success: The execution of the command is successful.</li>
-             * <li>Pending: The command is waiting to be executed.</li>
-             * </ul>
+             * <p>The status of the command execution.</p>
              * 
              * <strong>example:</strong>
-             * <p>RUNNING</p>
+             * <p>Running</p>
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -283,7 +275,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the command execution.</p>
+             * <p>The time when the command started to run.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-11 17:45:03</p>

@@ -59,7 +59,7 @@ public class DeleteMobileAgentPackageRequest extends Request {
         } 
 
         /**
-         * PackageIds.
+         * <p>The list of packages.</p>
          */
         public Builder packageIds(java.util.List<String> packageIds) {
             this.putQueryParameter("PackageIds", packageIds);

@@ -59,7 +59,7 @@ public class DeleteAgentSkillRequest extends Request {
         } 
 
         /**
-         * SkillIds.
+         * <p>The list of skill IDs.</p>
          */
         public Builder skillIds(java.util.List<String> skillIds) {
             this.putQueryParameter("SkillIds", skillIds);

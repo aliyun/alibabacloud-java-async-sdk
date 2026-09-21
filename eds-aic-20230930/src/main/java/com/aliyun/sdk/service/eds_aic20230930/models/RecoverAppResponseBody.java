@@ -93,7 +93,10 @@ public class RecoverAppResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of recovered instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -101,7 +104,7 @@ public class RecoverAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -109,7 +112,10 @@ public class RecoverAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,10 @@ public class RecoverAppResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-1ljew7on6ay0j****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -183,7 +192,10 @@ public class RecoverAppResponseBody extends TeaModel {
             } 
 
             /**
-             * AndroidInstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-34pqe4r0kd9kn****</p>
              */
             public Builder androidInstanceId(String androidInstanceId) {
                 this.androidInstanceId = androidInstanceId;
@@ -191,7 +203,10 @@ public class RecoverAppResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-22ex666a653gq****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

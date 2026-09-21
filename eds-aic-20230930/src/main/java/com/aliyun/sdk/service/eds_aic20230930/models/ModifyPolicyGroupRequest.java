@@ -199,12 +199,7 @@ public class ModifyPolicyGroupRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the webcam redirection feature.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
+         * <p>Specifies whether to enable local camera redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -216,13 +211,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The read/write permissions on the clipboard.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only.</li>
-         * <li>readwrite: ready and write.</li>
-         * <li>off: read/write disabled.</li>
-         * </ul>
+         * <p>The clipboard permission.</p>
          * 
          * <strong>example:</strong>
          * <p>readwrite</p>
@@ -234,14 +223,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The file transfer policy of the Alibaba Cloud Workspace web client.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>all: File upload and download are supported.</li>
-         * <li>download: Only file download is supported.</li>
-         * <li>upload: Only file upload is supported.</li>
-         * <li>off: File upload or download is forbidden.</li>
-         * </ul>
+         * <p>The file transfer policy for the Wuying web client.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -253,13 +235,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The read/write permissions on the on-premises drive.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>read: read-only.</li>
-         * <li>readwrite: ready and write.</li>
-         * <li>off: read/write disabled.</li>
-         * </ul>
+         * <p>The local disk mapping permission.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -272,11 +248,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to lock the resolution.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>off</li>
-         * <li>on</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -288,7 +259,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The network redirection policy.</p>
+         * <p>Network redirection.</p>
          */
         public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
             String netRedirectPolicyShrink = shrink(netRedirectPolicy, "NetRedirectPolicy", "json");
@@ -298,7 +269,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-4bi18ebi9tfjh****</p>
@@ -310,10 +281,10 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the policy.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>defaultPolicyGroup</p>
+         * <p>Default policy</p>
          */
         public Builder policyGroupName(String policyGroupName) {
             this.putBodyParameter("PolicyGroupName", policyGroupName);
@@ -346,7 +317,7 @@ public class ModifyPolicyGroupRequest extends Request {
         }
 
         /**
-         * Watermark.
+         * <p>The screen watermark.</p>
          */
         public Builder watermark(Watermark watermark) {
             String watermarkShrink = shrink(watermark, "Watermark", "json");
@@ -415,7 +386,10 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * RuleType.
+             * <p>The rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -423,7 +397,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Target.
+             * <p>The application package name or domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -568,12 +545,7 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to manually configure a custom proxy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
+             * <p>Specifies whether to manually configure a transparent proxy.</p>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -584,7 +556,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The IPv4 address of the custom proxy.</p>
+             * <p>The IP address of the transparent proxy. The value must be an IPv4 address.</p>
              * 
              * <strong>example:</strong>
              * <p>47.100.XX.XX</p>
@@ -596,11 +568,6 @@ public class ModifyPolicyGroupRequest extends Request {
 
             /**
              * <p>Specifies whether to enable network redirection.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>off</li>
-             * <li>on</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>off</p>
@@ -611,7 +578,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The port of the custom proxy. Valid values: 1 to 65535.</p>
+             * <p>The port for the transparent proxy. The port number must be an integer from 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>1145</p>
@@ -622,7 +589,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+             * <p>The password for the proxy. The password must be 1 to 256 characters in length and cannot contain Chinese characters or spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>password</p>
@@ -633,11 +600,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the proxy protocol.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>socks5.</li>
-             * </ul>
+             * <p>The proxy protocol type.</p>
              * 
              * <strong>example:</strong>
              * <p>socks5</p>
@@ -648,7 +611,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * <p>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</p>
+             * <p>The username for the proxy. The username must be 1 to 256 characters in length and cannot contain Chinese characters or spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>username</p>
@@ -659,7 +622,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * Rules.
+             * <p>The proxy rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -778,7 +741,10 @@ public class ModifyPolicyGroupRequest extends Request {
             } 
 
             /**
-             * WatermarkColor.
+             * <p>The font color of the watermark. Valid values: 0 to 16777215.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder watermarkColor(Integer watermarkColor) {
                 this.watermarkColor = watermarkColor;
@@ -786,7 +752,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * WatermarkCustomText.
+             * <p>The custom text for the watermark. The text can be up to 10 characters in length and cannot contain emoji characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom text</p>
              */
             public Builder watermarkCustomText(String watermarkCustomText) {
                 this.watermarkCustomText = watermarkCustomText;
@@ -794,7 +763,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * WatermarkFontSize.
+             * <p>The font size of the watermark. Valid values: 10 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder watermarkFontSize(Integer watermarkFontSize) {
                 this.watermarkFontSize = watermarkFontSize;
@@ -802,7 +774,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * WatermarkSwitch.
+             * <p>Specifies whether to enable the screen watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>off</p>
              */
             public Builder watermarkSwitch(String watermarkSwitch) {
                 this.watermarkSwitch = watermarkSwitch;
@@ -810,7 +785,10 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * WatermarkTransparencyValue.
+             * <p>The opacity of the watermark. A larger value makes the watermark more opaque. Valid values: 10 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder watermarkTransparencyValue(Integer watermarkTransparencyValue) {
                 this.watermarkTransparencyValue = watermarkTransparencyValue;
@@ -818,7 +796,7 @@ public class ModifyPolicyGroupRequest extends Request {
             }
 
             /**
-             * WatermarkTypes.
+             * <p>The content of the screen watermark.</p>
              */
             public Builder watermarkTypes(java.util.List<String> watermarkTypes) {
                 this.watermarkTypes = watermarkTypes;

@@ -80,7 +80,7 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * NodeInfos.
+         * <p>The cloud phone matrix information.</p>
          */
         public Builder nodeInfos(java.util.List<NodeInfos> nodeInfos) {
             this.nodeInfos = nodeInfos;
@@ -88,7 +88,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The generated order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>223684716098****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +99,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4610632D-D661-5982-B3D7-5D3FD183F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +168,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-jewjt8xryuitu****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +179,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneDataVolume.
+             * <p>The dedicated device storage capacity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder phoneDataVolume(Integer phoneDataVolume) {
                 this.phoneDataVolume = phoneDataVolume;
@@ -250,7 +262,7 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceInfos.
+             * <p>The cloud phone instance information.</p>
              */
             public Builder instanceInfos(java.util.List<InstanceInfos> instanceInfos) {
                 this.instanceInfos = instanceInfos;
@@ -258,7 +270,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The cloud phone matrix ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cpn-e5kxgjyt8s1mb****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -266,7 +281,10 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ShareDataVolume.
+             * <p>When the matrix uses dedicated device storage, a 64 GiB shared storage space is allocated by default (not modifiable) for storing images and other matrix-wide files. When the matrix uses shared device storage (with the size specified at purchase), this storage space is shared by all instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder shareDataVolume(Integer shareDataVolume) {
                 this.shareDataVolume = shareDataVolume;

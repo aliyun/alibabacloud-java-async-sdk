@@ -67,7 +67,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The token data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9A51B1DF-96FF-3BCC-B08C-783161D3****</p>
@@ -196,7 +196,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>JWT Token 或 API Key 明文</p>
+             * <p>The authorization token value.</p>
              * 
              * <strong>example:</strong>
              * <p>cp******lp</p>
@@ -207,7 +207,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>过期时间（Unix 时间戳，秒）</p>
+             * <p>The expiration timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719648600</p>
@@ -218,7 +218,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>有效期（秒）</p>
+             * <p>The validity period in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>600</p>
@@ -229,7 +229,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例 ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>acp-2zef0gov2nh2l3xxx</p>
@@ -240,7 +240,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>签发时间（Unix 时间戳，秒）</p>
+             * <p>The issuance timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1719648000</p>
@@ -251,7 +251,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权密钥</p>
+             * <p>The license key.</p>
              * 
              * <strong>example:</strong>
              * <p>lk-abcdef1234567890</p>
@@ -321,7 +321,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>模型网关访问 URL（与 apiCode 绑定，可选）</p>
+             * <p>The model gateway access URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://ai-gateway.example.com/v1">https://ai-gateway.example.com/v1</a></p>
@@ -332,7 +332,7 @@ public class RefreshAuthTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>批量签发的令牌结果列表</p>
+             * <p>The list of tokens.</p>
              */
             public Builder tokens(java.util.List<Tokens> tokens) {
                 this.tokens = tokens;

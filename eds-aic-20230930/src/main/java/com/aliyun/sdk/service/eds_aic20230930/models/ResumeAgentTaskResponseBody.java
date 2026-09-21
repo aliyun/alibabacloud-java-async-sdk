@@ -93,7 +93,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The API status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * <p>The list of tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -222,7 +231,19 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentStatus.
+             * <p>The current status of the task. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The task is being created.</li>
+             * <li>RUNNING: The task is running.</li>
+             * <li>COMPLETED: The task is completed.</li>
+             * <li>FAILED: The task has failed.</li>
+             * <li>TIMEOUT: The task has timed out.</li>
+             * <li>PAUSING: The task is being paused.</li>
+             * <li>PAUSED: The task is paused.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -230,7 +251,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReason.
+             * <p>The reason why the task failed to resume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task status [COMPLETED] does not support resume, only PAUSED tasks can be resumed.</p>
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -238,7 +262,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The Mobile node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acp-ek65k51zoxia3x8xz</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -246,7 +273,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ResumingAt.
+             * <p>The time when the task is resumed, in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-13T17:42:19Z</p>
              */
             public Builder resumingAt(String resumingAt) {
                 this.resumingAt = resumingAt;
@@ -254,7 +284,10 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID, which is globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-imr0fufqd7cle****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

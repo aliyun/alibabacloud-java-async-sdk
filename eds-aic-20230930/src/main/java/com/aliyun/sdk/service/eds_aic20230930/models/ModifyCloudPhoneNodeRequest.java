@@ -111,7 +111,10 @@ public class ModifyCloudPhoneNodeRequest extends Request {
         }
 
         /**
-         * StreamMode.
+         * <p>Specifies the streaming mode for instances in the cloud phone matrix. If this parameter is left empty, the exclusive mode is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder streamMode(Integer streamMode) {
             this.putQueryParameter("StreamMode", streamMode);
