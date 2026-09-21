@@ -573,12 +573,12 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * <p>The Alarm Metric of the alerting events to query. Valid values:</p>
+         * <p>The alert type of the alert events to query. Valid values:</p>
          * <ul>
          * <li><strong>Abnormal process behavior</strong></li>
          * <li><strong>Web shell</strong></li>
          * <li><strong>Unusual logon</strong></li>
-         * <li><strong>Anomaly event</strong></li>
+         * <li><strong>Abnormal event</strong></li>
          * <li><strong>Sensitive file tampering</strong></li>
          * <li><strong>Malicious process (cloud scan)</strong></li>
          * <li><strong>Suspicious network connection</strong></li>
@@ -591,7 +591,7 @@ public class ExportSuspEventsRequest extends Request {
          * <li><strong>Web application threat detection</strong></li>
          * <li><strong>Malicious script</strong></li>
          * <li><strong>Threat intelligence</strong></li>
-         * <li><strong>Malicious network connectivity behavior</strong></li>
+         * <li><strong>Malicious network behavior</strong></li>
          * <li><strong>Container cluster exception</strong></li>
          * <li><strong>Web shell (local scan)</strong></li>
          * <li><strong>Vulnerability exploits</strong></li>
@@ -622,10 +622,13 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
+         * <p>The ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

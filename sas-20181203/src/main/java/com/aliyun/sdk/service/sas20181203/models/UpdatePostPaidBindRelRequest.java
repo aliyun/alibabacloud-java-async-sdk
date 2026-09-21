@@ -160,7 +160,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The edition to automatically bind when new assets are added. Valid values:</p>
+         * <p>The edition that is automatically bound when new assets are added. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: Free Edition </li>
          * <li><strong>3</strong>: Enterprise Edition</li>
@@ -188,7 +188,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -197,7 +197,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         * <p>Specifies whether to perform only a dry run of the request. Valid values: true: performs only a dry run without executing the actual operation. false: performs the actual operation. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -206,7 +206,7 @@ public class UpdatePostPaidBindRelRequest extends Request {
         }
 
         /**
-         * <p>The abbreviated name of the cloud service. Valid values:</p>
+         * <p>The abbreviation of the cloud service. Valid values:</p>
          * <ul>
          * <li><strong>sas</strong>: Security Center</li>
          * </ul>

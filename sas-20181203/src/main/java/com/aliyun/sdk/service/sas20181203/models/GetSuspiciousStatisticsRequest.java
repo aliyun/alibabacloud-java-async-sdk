@@ -108,6 +108,9 @@ public class GetSuspiciousStatisticsRequest extends Request {
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

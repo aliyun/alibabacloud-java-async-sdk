@@ -105,6 +105,9 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
          * <blockquote>
          * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -132,6 +135,7 @@ public class DescribeVulCheckTaskStatusDetailRequest extends Request {
 
         /**
          * <p>The UUID of the server to query.</p>
+         * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 503 with the error code ServiceUnavailable.</p>
          * 
          * <strong>example:</strong>
          * <p>5d55af3c-35f3-4d4d-8ccc-8c5443b0****</p>

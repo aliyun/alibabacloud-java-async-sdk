@@ -272,7 +272,7 @@ public class GetAegisContainerPluginRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the rule was modified. Unit: milliseconds.</p>
+             * <p>The timestamp when the rule was last modified. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1671607025000</p>

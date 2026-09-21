@@ -74,11 +74,12 @@ public class ListUnfinishedOnceTaskRequest extends Request {
         } 
 
         /**
-         * <p>The target object value. Valid values:</p>
+         * <p>The target object value.</p>
          * <ul>
-         * <li>If the task type is <strong>IMAGE_SCAN</strong>, the target object value is the <strong>Digest</strong> of the image.</li>
-         * <li>If the task type is <strong>ASSETS_COLLECTION</strong>, the target object value is the <strong>Uuid</strong> of the server.</li>
+         * <li>If TaskType is set to IMAGE_SCAN, you must provide the image digest.</li>
+         * <li>If TaskType is set to ASSETS_COLLECTION, you must provide the machine UUID.</li>
          * </ul>
+         * <p>If this parameter is not provided in the preceding scenarios, the service returns HTTP 400 with error code -101.</p>
          * 
          * <strong>example:</strong>
          * <p>4fe8e1cd-3c37-4851-b9de-124da32c****</p>
@@ -93,7 +94,7 @@ public class ListUnfinishedOnceTaskRequest extends Request {
          * <p>The task type. Valid values:</p>
          * <ul>
          * <li><strong>ASSETS_COLLECTION</strong>: asset information collection task</li>
-         * <li><strong>IMAGE_SCAN</strong>: image scan task.</li>
+         * <li><strong>IMAGE_SCAN</strong>: image scan task</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

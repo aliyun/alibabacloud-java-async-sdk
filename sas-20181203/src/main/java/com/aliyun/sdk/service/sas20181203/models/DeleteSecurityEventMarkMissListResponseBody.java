@@ -54,7 +54,7 @@ public class DeleteSecurityEventMarkMissListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23AD0BD2-8771-5647-819E-6BA51E2XXXXX</p>

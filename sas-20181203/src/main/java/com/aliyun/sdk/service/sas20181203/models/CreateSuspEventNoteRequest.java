@@ -115,10 +115,13 @@ public class CreateSuspEventNoteRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member accounts in the resource folder.</p>
+         * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
          * <blockquote>
          * <p>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

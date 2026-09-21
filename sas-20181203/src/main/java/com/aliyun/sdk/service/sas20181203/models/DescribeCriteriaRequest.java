@@ -101,9 +101,9 @@ public class DescribeCriteriaRequest extends Request {
         } 
 
         /**
-         * <p>The type of the asset. Valid values:</p>
+         * <p>The Asset Type to query. Valid values:</p>
          * <ul>
-         * <li>Set the value to <strong>ecs</strong>, which specifies to query all Elastic Compute Service (ECS) instances.</li>
+         * <li><strong>ecs</strong>: queries all ECS servers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,13 @@ public class DescribeCriteriaRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -125,10 +131,10 @@ public class DescribeCriteriaRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: <strong>false</strong>. Valid values:</p>
+         * <p>Specifies whether the fuzzy query field supports automatic matching. Default value: <strong>false</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Supported.</li>
+         * <li><strong>false</strong>: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,7 +147,7 @@ public class DescribeCriteriaRequest extends Request {
         }
 
         /**
-         * <p>The keyword that you specify for fuzzy search when you query the asset.</p>
+         * <p>The fuzzy match value entered when querying assets.</p>
          * 
          * <strong>example:</strong>
          * <p>47.96</p>

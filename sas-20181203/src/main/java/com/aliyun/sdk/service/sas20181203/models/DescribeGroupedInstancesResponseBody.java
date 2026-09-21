@@ -291,8 +291,8 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             /**
              * <p>The server group type. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Default group.</li>
-             * <li><strong>1</strong>: Other group.</li>
+             * <li><strong>0</strong>: default group</li>
+             * <li><strong>1</strong>: other group</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -304,9 +304,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of compute cores of all assets of the specified asset type.</p>
+             * <p>The total number of compute cores for all assets of the specified asset type.</p>
              * <blockquote>
-             * <p>If the request parameter <strong>MachineTypes</strong> is not set, this parameter returns the total number of compute cores of assets of all types.</p>
+             * <p>If the <strong>MachineTypes</strong> request parameter is not set, this parameter returns the total number of compute cores for assets of all types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             /**
              * <p>The total number of assets of the specified asset type.</p>
              * <blockquote>
-             * <p>If the request parameter <strong>MachineTypes</strong> is not set, this parameter returns the total number of assets of all types.</p>
+             * <p>If the <strong>MachineTypes</strong> request parameter is not set, this parameter returns the total number of assets of all types.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

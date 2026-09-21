@@ -59,7 +59,8 @@ public class GetFileProtectEventRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
+         * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101. You can call ListFileProtectEvent to obtain valid event IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

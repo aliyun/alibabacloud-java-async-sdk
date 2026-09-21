@@ -146,7 +146,7 @@ public class DescribeAlarmEventDetailRequest extends Request {
         }
 
         /**
-         * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>
@@ -166,6 +166,9 @@ public class DescribeAlarmEventDetailRequest extends Request {
          * <blockquote>
          * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

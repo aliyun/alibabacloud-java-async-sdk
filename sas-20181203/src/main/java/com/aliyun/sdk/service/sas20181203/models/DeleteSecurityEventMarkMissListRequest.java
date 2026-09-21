@@ -87,7 +87,7 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
         } 
 
         /**
-         * <p>The list of alert whitelisting rule IDs.</p>
+         * <p>The list of alert whitelist rule IDs.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             this.putQueryParameter("Ids", ids);
@@ -100,6 +100,9 @@ public class DeleteSecurityEventMarkMissListRequest extends Request {
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

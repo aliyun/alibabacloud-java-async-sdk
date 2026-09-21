@@ -108,7 +108,7 @@ public class AddPublishBatchRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>批次1</p>
+         * <p>Batch1</p>
          */
         public Builder batchName(String batchName) {
             this.putQueryParameter("BatchName", batchName);
@@ -117,7 +117,7 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
-         * <p>The interval between two release batches.</p>
+         * <p>The interval between release batches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,11 +130,11 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
-         * <p>The dimension based on which the asset is selected. Valid values:</p>
+         * <p>The dimension for asset selection. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: selects the asset by instance.</li>
-         * <li><strong>1</strong>: selects the asset by machine group.</li>
-         * <li><strong>2</strong>: selects the asset by the ID of the instance that is deployed in the virtual private cloud (VPC).</li>
+         * <li><strong>0</strong>: server instance</li>
+         * <li><strong>1</strong>: server group</li>
+         * <li><strong>2</strong>: VPC-connected instance ID</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class AddPublishBatchRequest extends Request {
         }
 
         /**
-         * <p>The version to which you want to upgrade the agent.</p>
+         * <p>The target version to which you want to upgrade.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

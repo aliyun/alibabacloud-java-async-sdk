@@ -160,11 +160,11 @@ public class OperationSuspEventsRequest extends Request {
         /**
          * <p>The operation to perform on the alert. Valid values:</p>
          * <ul>
-         * <li><strong>deal</strong>: handles the alert (quarantine).</li>
-         * <li><strong>ignore</strong>: ignores the alert.</li>
-         * <li><strong>mark_mis_info</strong>: marks the alert as a false positive (adds it to the whitelist).</li>
-         * <li><strong>rm_mark_mis_info</strong>: unmarks the alert as a false positive (removes it from the whitelist).</li>
-         * <li><strong>offline_handled</strong>: marks the alert as handled.</li>
+         * <li><strong>deal</strong>: Handle the alert (quarantine).</li>
+         * <li><strong>ignore</strong>: Ignore the alert.</li>
+         * <li><strong>mark_mis_info</strong>: Mark as false positive (add to whitelist).</li>
+         * <li><strong>rm_mark_mis_info</strong>: Unmark as false positive (remove from whitelist).</li>
+         * <li><strong>offline_handled</strong>: Mark as handled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -178,7 +178,13 @@ public class OperationSuspEventsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of a member account in the resource directory.</p>
+         * <blockquote>
+         * <p>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -201,9 +207,9 @@ public class OperationSuspEventsRequest extends Request {
         /**
          * <p>The sub-operation type to perform when quarantining the alert event. Valid values:</p>
          * <ul>
-         * <li><strong>killAndQuaraFileByPidAndMd5andPath</strong>: terminates the process by PID and quarantines the source file of the process.</li>
-         * <li><strong>quaraFileByMd5andPath</strong>: quarantines the source file of the process.</li>
-         * <li><strong>killAndQuaraFileByMd5andPath</strong>: terminates the process and quarantines the source file of the process.</li>
+         * <li><strong>killAndQuaraFileByPidAndMd5andPath</strong>: Terminate the process by PID and quarantine the source file of the process.</li>
+         * <li><strong>quaraFileByMd5andPath</strong>: Quarantine the source file of the process.</li>
+         * <li><strong>killAndQuaraFileByMd5andPath</strong>: Terminate the process and quarantine the source file of the process.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,8 +240,8 @@ public class OperationSuspEventsRequest extends Request {
         /**
          * <p>The type of the exception event to handle. Valid values:</p>
          * <ul>
-         * <li><strong>alarm</strong>: alert.</li>
-         * <li><strong>Empty</strong>: exception.</li>
+         * <li><strong>alarm</strong>: alert</li>
+         * <li><strong>Empty</strong>: exception</li>
          * </ul>
          * 
          * <strong>example:</strong>

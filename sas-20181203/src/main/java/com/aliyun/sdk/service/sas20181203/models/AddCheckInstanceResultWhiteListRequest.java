@@ -194,7 +194,12 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         * <p>Specifies whether to perform only a dry run. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run without executing the actual operation.</li>
+         * <li>false: performs the actual operation.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -221,7 +226,7 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         }
 
         /**
-         * <p>The remarks. Maximum length: 65535 bytes.</p>
+         * <p>The remarks. Maximum length: 65,535 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

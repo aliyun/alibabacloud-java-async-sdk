@@ -118,7 +118,8 @@ public class ListInterceptionRulePageRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster to query.</p>
+         * <p>This parameter must be the ID of an ACK cluster that has the container firewall feature enabled. Call DescribeClusterInfoList with Type set to interceptionSwitch, or call ListClusterInterceptionConfig to query available clusters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,9 +144,9 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * <p>The type of the query condition. Valid values:</p>
+         * <p>The type of the search condition. Valid values:</p>
          * <ul>
-         * <li><strong>ID</strong></li>
+         * <li><strong>ID</strong> </li>
          * <li><strong>RULE_NAME</strong></li>
          * <li><strong>SRC_TARGET</strong></li>
          * <li><strong>DST_TARGET</strong></li>
@@ -164,7 +165,7 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the current page when using paging.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +178,7 @@ public class ListInterceptionRulePageRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page when using paging.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

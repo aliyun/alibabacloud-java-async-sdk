@@ -206,10 +206,10 @@ public class ModifyStrategyRequest extends Request {
         } 
 
         /**
-         * <p>The type of the baseline check policy. Valid values:</p>
+         * <p>The policy type. Valid values:</p>
          * <ul>
-         * <li><strong>custom</strong>: a custom baseline check policy</li>
-         * <li><strong>common</strong>: a standard baseline check policy</li>
+         * <li><strong>custom</strong>: custom policy.</li>
+         * <li><strong>common</strong>: standard policy.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -223,12 +223,12 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The new interval of the baseline check. Valid values:</p>
+         * <p>The cycle of the baseline check. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: every 2 days</li>
-         * <li><strong>3</strong>: every 4 days</li>
-         * <li><strong>7</strong>: every 8 days</li>
-         * <li><strong>30</strong>: every 31 days</li>
+         * <li><strong>1</strong>: Every 1 day.</li>
+         * <li><strong>3</strong>: Every 3 days.</li>
+         * <li><strong>7</strong>: Every 7 days.</li>
+         * <li><strong>30</strong>: Every 30 days.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -242,16 +242,17 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The new time range during which the baseline check starts. Valid values:</p>
+         * <p>The start time of the baseline check. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The baseline check starts within the time range from 00:00 to 06:00.</li>
-         * <li><strong>6</strong>: The baseline check starts within the time range from 06:00 to 12:00.</li>
-         * <li><strong>12</strong>: The baseline check starts within the time range from 12:00 to 18:00.</li>
-         * <li><strong>18</strong>: The baseline check starts within the time range from 18:00 to 24:00.</li>
+         * <li><strong>0</strong>: The baseline check starts between 00:00 and 06:00.</li>
+         * <li><strong>6</strong>: The baseline check starts between 06:00 and 12:00.</li>
+         * <li><strong>12</strong>: The baseline check starts between 12:00 and 18:00.</li>
+         * <li><strong>18</strong>: The baseline check starts between 18:00 and 24:00.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is deprecated.</p>
+         * <p>This parameter is deprecated.</p>
          * </blockquote>
+         * <p>The value indicates the start hour of the daily check period, in hours.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -263,7 +264,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The time when the baseline check based on the baseline check policy ends. Specify the time in the hh:mm:ss format.</p>
+         * <p>The end time of the policy execution. Format: hh:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,7 +289,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The new name of the baseline check policy.</p>
+         * <p>The name of the baseline check policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,22 +302,22 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The custom configurations of the baseline. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The custom configuration of baseline check items. The value is in JSON format and contains the following parameters:</p>
          * <ul>
-         * <li><p><strong>typeName</strong>: the name of the baseline.</p>
+         * <li><p><strong>typeName</strong>: The baseline name.</p>
          * </li>
-         * <li><p><strong>checkDetails</strong>: the details of the baseline. The value is in the JSON format.</p>
+         * <li><p><strong>checkDetails</strong>: The check details. The value is in JSON format.</p>
          * <ul>
-         * <li><p><strong>checkId</strong>: the ID of the check item.</p>
+         * <li><p><strong>checkId</strong>: The ID of the check item.</p>
          * </li>
-         * <li><p><strong>rules</strong>: the rule configurations. The value is in the JSON format.</p>
+         * <li><p><strong>rules</strong>: The policy configuration. The value is in JSON format.</p>
          * <ul>
-         * <li><p><strong>ruleId</strong>: the ID of the rule.</p>
+         * <li><p><strong>ruleId</strong>: The ID of the policy configuration.</p>
          * </li>
-         * <li><p><strong>paramList</strong>: the list of parameters in the rule. The value is in the JSON format.</p>
+         * <li><p><strong>paramList</strong>: The collection of policy parameter settings. The value is in JSON format.</p>
          * <ul>
-         * <li><strong>paramName</strong>: the name of the parameter.</li>
-         * <li><strong>value</strong>: the value of the parameter.</li>
+         * <li><strong>paramName</strong>: The parameter name.</li>
+         * <li><strong>value</strong>: The parameter settings value.</li>
          * </ul>
          * </li>
          * </ul>
@@ -335,7 +336,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The subtype of the baselines. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</p>
+         * <p>The subtype of the check item. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the subtype.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -360,7 +361,7 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The time when the baseline check based on the baseline check policy starts. Specify the time in the hh:mm:ss format.</p>
+         * <p>The start time of the policy execution. Format: hh:mm:ss.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -373,10 +374,10 @@ public class ModifyStrategyRequest extends Request {
         }
 
         /**
-         * <p>The method that is used to apply the baseline check policy. Valid values:</p>
+         * <p>The scan method of the policy. Valid values:</p>
          * <ul>
-         * <li><strong>groupId</strong>: asset groups</li>
-         * <li><strong>uuid</strong>: assets</li>
+         * <li><strong>groupId</strong>: group-based scan.</li>
+         * <li><strong>uuid</strong>: asset-based scan.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

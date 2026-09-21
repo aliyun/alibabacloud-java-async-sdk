@@ -210,7 +210,7 @@ public class DescribeEventLevelCountRequest extends Request {
         }
 
         /**
-         * <p>The container IDs.</p>
+         * <p>The container ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxxxx30389a10c28f6d38f2398f0dcexxxxxxx922b9e8290dc7c3019d4a8,48b87f2c0662e334820f436cb9133f1ae4e053d39b6fad42xxxxxxxxxx</p>
@@ -254,6 +254,9 @@ public class DescribeEventLevelCountRequest extends Request {
          * <blockquote>
          * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

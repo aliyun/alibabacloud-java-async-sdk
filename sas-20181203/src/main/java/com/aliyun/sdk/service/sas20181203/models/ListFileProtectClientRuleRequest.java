@@ -138,7 +138,7 @@ public class ListFileProtectClientRuleRequest extends Request {
          * </li>
          * <li><p>2: suspicious</p>
          * </li>
-         * <li><p>3: high-risk.</p>
+         * <li><p>3: high-risk</p>
          * </li>
          * </ul>
          * 
@@ -179,7 +179,7 @@ public class ListFileProtectClientRuleRequest extends Request {
          * <p>The operating system type. Valid values:</p>
          * <ul>
          * <li><strong>windows</strong>: Windows</li>
-         * <li><strong>linux</strong>: Linux.</li>
+         * <li><strong>linux</strong>: Linux</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,11 +194,11 @@ public class ListFileProtectClientRuleRequest extends Request {
         /**
          * <p>The rule action. Valid values:</p>
          * <ul>
-         * <li><p><strong>block</strong>: blocks the request.</p>
+         * <li><p><strong>block</strong>: Block.</p>
          * </li>
-         * <li><p><strong>monitor</strong>: monitors the request.</p>
+         * <li><p><strong>monitor</strong>: Monitor.</p>
          * </li>
-         * <li><p><strong>pass</strong>: allows the request.</p>
+         * <li><p><strong>pass</strong>: Allow.</p>
          * </li>
          * </ul>
          * 

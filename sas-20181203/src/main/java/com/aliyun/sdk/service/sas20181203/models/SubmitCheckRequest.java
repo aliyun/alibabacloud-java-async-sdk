@@ -87,7 +87,13 @@ public class SubmitCheckRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member account in the resource directory.</p>
+         * <blockquote>
+         * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -96,7 +102,7 @@ public class SubmitCheckRequest extends Request {
         }
 
         /**
-         * <p>The scan range. Valid values:</p>
+         * <p>The check scope. Valid values:</p>
          * <ul>
          * <li><strong>FULL</strong>: scans all check items</li>
          * <li><strong>POLICY</strong>: scans custom-configured check items</li>

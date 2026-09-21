@@ -149,7 +149,7 @@ public class DescribeChartDataRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>CID_ASSET_RISK_TREND</p>
+         * <p>BIZ_STAT_QUERY_SECURITY_SCORE</p>
          */
         public Builder charId(String charId) {
             this.putQueryParameter("CharId", charId);
@@ -164,7 +164,7 @@ public class DescribeChartDataRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>CID_VUL_SUMMARY</p>
+         * <p>BIZ_STAT_QUERY_SECURITY_SCORE</p>
          */
         public Builder chartId(String chartId) {
             this.putQueryParameter("ChartId", chartId);
@@ -173,10 +173,10 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,13 @@ public class DescribeChartDataRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

@@ -143,7 +143,7 @@ public class CreateHoneypotNodeRequest extends Request {
         }
 
         /**
-         * <p>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified (such as 0.0.0.0/0). If this parameter is not specified, the API returns InvalidParam (400).</p>
+         * <p>The list of allowed CIDR blocks. This parameter is required. At least one allowed CIDR block must be specified, such as 0.0.0.0/0. If this parameter is not specified, the API returns InvalidParam (400).</p>
          */
         public Builder securityGroupProbeIpList(java.util.List<String> securityGroupProbeIpList) {
             this.putQueryParameter("SecurityGroupProbeIpList", securityGroupProbeIpList);

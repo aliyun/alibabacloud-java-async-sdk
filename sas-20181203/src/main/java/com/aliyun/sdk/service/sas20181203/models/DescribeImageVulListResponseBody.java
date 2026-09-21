@@ -106,7 +106,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the current page in a paging query.</p>
+         * <p>The page number of the current page when paging is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of vulnerabilities displayed per page in a paging query. Default value: <strong>10</strong>, which indicates that 10 vulnerabilities are displayed per page.</p>
+         * <p>The number of vulnerabilities displayed per page when paging is used. Default value: <strong>10</strong>, which indicates that 10 vulnerabilities are displayed per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</p>
+         * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>D6B20156-49B0-5CF0-B14D-7ECA4B50DAAB</p>
@@ -476,7 +476,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of software packages that caused the vulnerability.</p>
+             * <p>The list of software packages that cause the vulnerability.</p>
              */
             public Builder rpmEntityList(java.util.List<RpmEntityList> rpmEntityList) {
                 this.rpmEntityList = rpmEntityList;
@@ -991,7 +991,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the vulnerability can be fixed in the console. Valid values:</p>
+             * <p>Indicates whether the vulnerability can be fixed from the console. Valid values:</p>
              * <ul>
              * <li><strong>yes</strong>: Can be fixed.</li>
              * <li><strong>no</strong>: Cannot be fixed.</li>
@@ -1006,7 +1006,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the software package that caused the vulnerability can be upgraded through Security Center. Valid values:</p>
+             * <p>Indicates whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</p>
              * <ul>
              * <li><strong>true</strong>: Upgrade is supported.</li>
              * <li><strong>false</strong>: Upgrade is not supported.</li>
@@ -1032,7 +1032,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
+             * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
              * <p>docker-law</p>
@@ -1043,7 +1043,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the container.</p>
+             * <p>The container ID.</p>
              * 
              * <strong>example:</strong>
              * <p>04d20e98c8e2c93b7b864372084320a15a58c8671e53c972ce3a71d9c163****</p>
@@ -1196,11 +1196,11 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority level for fixing the vulnerability. Valid values:</p>
+             * <p>The priority of vulnerability fixing. Valid values:</p>
              * <ul>
-             * <li><strong>asap</strong>: High-priority vulnerability that must be fixed as soon as possible.</li>
-             * <li><strong>later</strong>: Medium-priority vulnerability that can be fixed later.</li>
-             * <li><strong>nntf</strong>: Low-priority vulnerability that does not need to be fixed for now.</li>
+             * <li><strong>asap</strong>: high-priority vulnerability</li>
+             * <li><strong>later</strong>: medium-priority vulnerability</li>
+             * <li><strong>nntf</strong>: low-priority vulnerability</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1234,7 +1234,7 @@ public class DescribeImageVulListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the related vulnerability.</p>
+             * <p>The details of the associated vulnerability.</p>
              * 
              * <strong>example:</strong>
              * <p>CVE-2019-9893</p>

@@ -89,7 +89,7 @@ public class GetFileDetectResultRequest extends Request {
         } 
 
         /**
-         * <p>The list of file identifiers. A maximum of 100 elements can be specified.</p>
+         * <p>The list of file identifiers. A maximum of 200 elements can be specified.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hashKeyList(java.util.List<String> hashKeyList) {

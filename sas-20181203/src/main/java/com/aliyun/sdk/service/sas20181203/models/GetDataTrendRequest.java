@@ -126,7 +126,7 @@ public class GetDataTrendRequest extends Request {
          * <li><strong>VUL_NEW</strong>: number of new vulnerability risks</li>
          * <li><strong>VUL_OPERATE</strong>: number of handled vulnerability risks</li>
          * <li><strong>SUSP_NEW</strong>: number of new alert risks</li>
-         * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks.</li>
+         * <li><strong>SUSP_OPERATE</strong>: number of handled alert risks</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -169,7 +169,13 @@ public class GetDataTrendRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <blockquote>
+         * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

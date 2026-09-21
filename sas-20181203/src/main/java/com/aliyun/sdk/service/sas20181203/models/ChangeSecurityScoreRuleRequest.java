@@ -143,10 +143,13 @@ public class ChangeSecurityScoreRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the member account in the resource directory.</p>
+         * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
          * <blockquote>
          * <p>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -361,9 +364,9 @@ public class ChangeSecurityScoreRuleRequest extends Request {
              * <li><strong>SS_SAS_APP_VUL</strong>: Pending application vulnerabilities to fix.</li>
              * <li><strong>SS_SAS_SYS_VUL</strong>: Pending system vulnerabilities to fix.</li>
              * <li><strong>SS_SAS_CLOUD_HC</strong>: Pending Cloud Security Posture Management (CSPM) risks.</li>
-             * <li><strong>SS_SDDP_DATA_RISK</strong>: Pending data security risks to address.</li>
+             * <li><strong>SS_SDDP_DATA_RISK</strong>: Pending data security risks to remediate.</li>
              * <li><strong>SS_WAF_API_RISK</strong>: Pending API security risks.</li>
-             * <li><strong>SS_DDOS_BH_ASSET</strong>: Assets in DDoS blackhole filtering status.</li>
+             * <li><strong>SS_DDOS_BH_ASSET</strong>: Assets under DDoS blackhole filtering.</li>
              * <li><strong>SS_SAS_AK_LEAK</strong>: Unhandled AccessKey/SecretKey leak events.</li>
              * <li><strong>SS_PRODUCT_CONNECT</strong>: Security products not properly connected.</li>
              * <li><strong>SS_KEY_CONFIG</strong>: Key feature configuration.</li>
@@ -491,7 +494,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             /**
              * <p>The deduction threshold for the security score rule category.</p>
              * <blockquote>
-             * <p>The valid range is 0 to 100. The sum of all security score rule category deduction thresholds must equal 100.</p>
+             * <p>The valid range is 0 to 100. The sum of deduction thresholds for all security score rule categories must equal 100.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -609,7 +612,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             }
 
             /**
-             * <p>The sub-rule type of the individual deduction item. The mapping between security score types and sub-rule types is as follows:</p>
+             * <p>The sub-rule type of the individual deduction item. The relationship between security score types and sub-rule types is as follows:</p>
              * <ul>
              * <li><p>SS_REINFORCE: Key feature configuration.</p>
              * <ul>
@@ -640,7 +643,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
              * </li>
              * <li><p>SS_HC: Baseline issues.</p>
              * <ul>
-             * <li>WEAK_EXPLOIT: A weak password risk exposed to the Internet exists.</li>
+             * <li>WEAK_EXPLOIT: A weak password risk with Internet Exposure exists.</li>
              * <li>WEAK_PASSWORD: A weak password risk exists.</li>
              * <li>HC_EXPLOIT: A high-risk intrusion vulnerability exists.</li>
              * <li>HC_OTHER_WARNING: A security configuration risk exists.</li>
@@ -653,7 +656,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
              * <li>CSPM_COMPLIANCE_NOT_PASS: One failed compliance check item exists.</li>
              * </ul>
              * </li>
-             * <li><p>SS_AK: AccessKey pair leak risk. Categorization not applicable.</p>
+             * <li><p>SS_AK: AccessKey pair leak risk.</p>
              * </li>
              * </ul>
              * 
@@ -760,7 +763,7 @@ public class ChangeSecurityScoreRuleRequest extends Request {
             /**
              * <p>The deduction value of the security score rule.</p>
              * <blockquote>
-             * <p>The valid range is 0 to 100. The sum of all security score rule deduction thresholds must equal 100.</p>
+             * <p>The valid range is 0 to 100. The sum of deduction thresholds for all security score rules must equal 100.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

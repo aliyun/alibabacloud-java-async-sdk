@@ -259,10 +259,10 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether more scan tasks can be created. Valid values:</p>
+             * <p>Indicates whether you can continue to create scan tasks. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>: More scan tasks can be created.</li>
-             * <li><strong>false</strong>: No more scan tasks can be created.</li>
+             * <li><strong>true</strong>: You can continue to create scan tasks.</li>
+             * <li><strong>false</strong>: You cannot continue to create scan tasks.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when image information was collected, in milliseconds.</p>
+             * <p>The timestamp when image information was collected. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1644286364150</p>
@@ -285,7 +285,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the scan task started running, in milliseconds.</p>
+             * <p>The timestamp when the scan task started running. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1644286364150</p>
@@ -324,7 +324,7 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
              * <li><strong>TASK_NOT_SUPPORT_REGION</strong>: The image is in a region that does not support scanning.</li>
              * </ul>
              * <blockquote>
-             * <p>For the regions that support image security scanning, refer to the table of supported regions after the response parameters table in this document.</p>
+             * <p>For the regions that support image security scanning, see the table of supported regions after the response parameters table in this topic.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -340,8 +340,8 @@ public class CreateContainerScanTaskByAppNameResponseBody extends TeaModel {
              * <ul>
              * <li><strong>INIT</strong>: Initializing.</li>
              * <li><strong>PRE_ANALYZER</strong>: Pre-analyzing.</li>
-             * <li><strong>SUCCESS</strong>: Execution succeeded.</li>
-             * <li><strong>FAIL</strong>: Execution failed.</li>
+             * <li><strong>SUCCESS</strong>: Succeeded.</li>
+             * <li><strong>FAIL</strong>: Failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>

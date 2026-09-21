@@ -177,10 +177,11 @@ public class CreateInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the container cluster.</p>
+         * <p>The ID of the container cluster to query.</p>
          * <blockquote>
-         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</p>
+         * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * <p>This parameter must be from an ACK cluster. You can call the DescribeClustersV1 operation of Container Service for Kubernetes (ACK) to query existing clusters, or call the CreateCluster operation to create a cluster, and then call the DescribeGroupedContainerInstances operation of Security Center to obtain the ID of a managed cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,10 +207,10 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The information about the destination network object. The value of this parameter contains the following fields:</p>
+         * <p>The list of destination objects. The metric descriptions are as follows:</p>
          * <ul>
-         * <li>targetId: the ID of the destination network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
-         * <li>ports: the destination port ranges.</li>
+         * <li>targetId: The ID of the destination object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</li>
+         * <li>ports: The list of destination port ranges.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,11 +231,11 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The action on traffic. Valid values:</p>
+         * <p>The interception mode. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: blocks traffic.</li>
-         * <li><strong>2</strong>: allows traffic and generates alerts.</li>
-         * <li><strong>3</strong>: allows traffic and does not generate alerts.</li>
+         * <li><strong>1</strong>: Block Mode.</li>
+         * <li><strong>2</strong>: Alert mode.</li>
+         * <li><strong>3</strong>: Allow mode.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -248,7 +249,7 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The priority of the defense rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +262,7 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the defense rule.</p>
+         * <p>The name of the rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,10 +275,10 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies the status of the defense rule. Valid values:</p>
+         * <p>Specifies whether to enable the rule. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: disables the rule.</li>
-         * <li><strong>1</strong>: enables the rule.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * <li><strong>1</strong>: Enabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -291,9 +292,9 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the defense rule. Valid values:</p>
+         * <p>The type of the rule. Valid values:</p>
          * <ul>
-         * <li>customize: custom rule</li>
+         * <li>customize: user-defined rule</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,9 +307,9 @@ public class CreateInterceptionRuleRequest extends Request {
         }
 
         /**
-         * <p>The source network object. The value of this parameter contains the following field:</p>
+         * <p>The source object. The metric description is as follows:</p>
          * <ul>
-         * <li>targetId: the ID of the source network object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</li>
+         * <li>targetId: The ID of the source object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>

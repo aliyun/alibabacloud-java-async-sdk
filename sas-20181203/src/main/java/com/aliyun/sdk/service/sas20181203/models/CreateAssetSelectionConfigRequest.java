@@ -138,7 +138,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -147,7 +147,7 @@ public class CreateAssetSelectionConfigRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values: true: performs only a dry run without performing the actual operation. false: performs the actual request. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -183,12 +183,12 @@ public class CreateAssetSelectionConfigRequest extends Request {
         }
 
         /**
-         * <p>The target asset type. Valid values:</p>
+         * <p>The Asset Type of the target. Valid values:</p>
          * <ul>
          * <li><strong>all_instance</strong>: all servers.</li>
-         * <li><strong>instance</strong>: select by server.</li>
-         * <li><strong>group</strong>: select by group.</li>
-         * <li><strong>vpc</strong>: select by VPC.</li>
+         * <li><strong>instance</strong>: selected by server.</li>
+         * <li><strong>group</strong>: selected by group.</li>
+         * <li><strong>vpc</strong>: selected by VPC.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

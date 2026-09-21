@@ -92,6 +92,7 @@ public class QueryPreCheckDatabaseRequest extends Request {
          * <blockquote>
          * <p>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * <p>You must specify at least one of TaskId and InstanceUuid. If neither is specified, the API returns HTTP 400 with error code -106.</p>
          * 
          * <strong>example:</strong>
          * <p>ebc895506c6911ed800000163e0e****</p>
@@ -107,6 +108,8 @@ public class QueryPreCheckDatabaseRequest extends Request {
          * <blockquote>
          * <p>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * <p>You must specify at least one of TaskId and InstanceUuid. If neither is specified, the API returns HTTP 400 with error code -106.</p>
+         * <p>Call DescribeUniBackupDatabase to obtain the InstanceUuid, and then pass it to StartPreCheckDatabase. The CreateMark returned by StartPreCheckDatabase is the TaskId required by this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>t-000bc9nqwxsbyvod****</p>

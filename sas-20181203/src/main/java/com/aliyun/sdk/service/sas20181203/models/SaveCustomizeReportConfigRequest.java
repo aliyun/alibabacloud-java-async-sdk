@@ -343,14 +343,14 @@ public class SaveCustomizeReportConfigRequest extends Request {
         } 
 
         /**
-         * <p>The grouping type. Valid values:</p>
+         * <p>The group type. Valid values:</p>
          * <ul>
-         * <li><strong>ALIYUN_RG</strong></li>
-         * <li><strong>SAS_GROUP</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <li><strong>ALIYUN_RG</strong>: Alibaba Cloud resource group.</li>
+         * <li><strong>SAS_GROUP</strong>: Security Center group.<blockquote>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SAS_GROUP</p>
@@ -362,11 +362,11 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>Whether the new account is connected by default. Values: </p>
+         * <p>Specifies whether newly added accounts are included by default. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Yes. </li>
-         * <li><strong>false</strong>: No. <blockquote>
-         * <p>Only supported in version 2.0.0.</p>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.<blockquote>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -381,9 +381,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The time when the report is pinned. Unit: milliseconds.</p>
+         * <p>The pinned time. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The email address of the recipient. Separate multiple email addresses with commas (,).</p>
+         * <p>The email addresses of contacts. Separate multiple email addresses with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -409,9 +409,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The most recent days for report statistics.</p>
+         * <p>The number of recent days for report statistics.</p>
          * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -424,9 +424,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The end date on which the report is sent. The value is in the yyyy-MM-dd format.</p>
+         * <p>The end date for report statistics. Format: yyyy-MM-dd.</p>
          * <blockquote>
-         * <p> This parameter is required if the ReportType parameter is set to 3.</p>
+         * <p>This parameter is required when ReportType is set to 3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -439,9 +439,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the report.</p>
+         * <p>The report ID.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</p>
+         * <p>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -456,8 +456,8 @@ public class SaveCustomizeReportConfigRequest extends Request {
         /**
          * <p>The language of the report. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -470,10 +470,10 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The time range in which the report is sent. Valid values:</p>
+         * <p>The report sending type. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: 00:00 to 06:00.</li>
-         * <li><strong>2</strong>: 06:00 to 12:00.</li>
+         * <li><strong>1</strong>: 0:00 to 6:00.</li>
+         * <li><strong>2</strong>: 6:00 to 12:00.</li>
          * <li><strong>3</strong>: 12:00 to 18:00.</li>
          * <li><strong>4</strong>: 18:00 to 24:00.</li>
          * </ul>
@@ -488,9 +488,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The start date on which the report is sent. The value is in the yyyy-MM-dd format.</p>
+         * <p>The start date for report statistics. Format: yyyy-MM-dd.</p>
          * <blockquote>
-         * <p> This parameter is required if the ReportType parameter is set to 3.</p>
+         * <p>This parameter is required when ReportType is set to 3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -503,7 +503,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The status of the report. Valid values:</p>
+         * <p>The report status. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: disabled.</li>
          * <li><strong>1</strong>: enabled.</li>
@@ -520,13 +520,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The type of the report. Valid values:</p>
+         * <p>The report type. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: daily report.</li>
          * <li><strong>1</strong>: weekly report.</li>
          * <li><strong>2</strong>: monthly report.</li>
-         * <li><strong>3</strong>: report whose statistics are collected within a custom time range.</li>
-         * <li><strong>4</strong>: report of the most recent time range.</li>
+         * <li><strong>3</strong>: custom period.</li>
+         * <li><strong>4</strong>: latest period.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -540,7 +540,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The version of the report. Valid values:</p>
+         * <p>The security report version. Valid values:</p>
          * <ul>
          * <li><strong>1.0.0</strong></li>
          * <li><strong>2.0.0</strong></li>
@@ -556,7 +556,13 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>Invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -565,9 +571,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The end time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * <p>The send end time. Format: HH:mm:ss.</p>
          * <blockquote>
-         * <p> This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.</p>
+         * <p>This parameter is required when ReportType is set to 0, 1, 2, or 4.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -580,9 +586,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The exact day within the sending period.</p>
+         * <p>The specific execution dates within the send period.</p>
          * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -595,15 +601,15 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The interval at which the report is sent. Valid values:</p>
+         * <p>The send period type. Valid values:</p>
          * <ul>
-         * <li><strong>DAY</strong></li>
-         * <li><strong>WEEK</strong></li>
-         * <li><strong>MONTH</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <li><strong>DAY</strong>: day.</li>
+         * <li><strong>WEEK</strong>: week.</li>
+         * <li><strong>MONTH</strong>: month.<blockquote>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>MONTH</p>
@@ -615,9 +621,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The start time at which the report is sent. The value is in the HH:mm:ss format.</p>
+         * <p>The send start time. Format: HH:mm:ss.</p>
          * <blockquote>
-         * <p> This parameter is required if the ReportType parameter is set to 0, 1, 2, or 4.</p>
+         * <p>This parameter is required when ReportType is set to 0, 1, 2, or 4.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -630,9 +636,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The groups.</p>
+         * <p>The targets within the group.</p>
          * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -645,9 +651,9 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account. Separate multiple IDs with commas (,).</p>
+         * <p>The list of target users. Separate multiple values with commas (,).</p>
          * <blockquote>
-         * <p> This parameter is supported only in version 2.0.0.</p>
+         * <p>This parameter is supported only in version 2.0.0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -660,7 +666,7 @@ public class SaveCustomizeReportConfigRequest extends Request {
         }
 
         /**
-         * <p>The title of the report.</p>
+         * <p>The report name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

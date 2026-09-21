@@ -87,11 +87,12 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
         } 
 
         /**
-         * <p>The data source for statistics on instance alarms, with a default value of aqs:</p>
+         * <p>The data source from which instance alert statistics are collected. Default value: aqs.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><em>sas</em>: Situation Awareness data source</li>
-         * <li><em>aqs</em>: Alarm event data</li>
-         * <li><em>honeypot</em>: Honeypot</li>
+         * <li><strong>sas</strong>: Threat Detection Service data source.</li>
+         * <li><strong>aqs</strong>: alert event data.</li>
+         * <li><strong>honeypot</strong>: cloud honeypot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +105,13 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+         * <blockquote>
+         * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -113,9 +120,9 @@ public class GetInstanceAlarmStatisticsRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the server to be queried.</p>
+         * <p>The UUID of the server to query.</p>
          * <blockquote>
-         * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</p>
+         * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

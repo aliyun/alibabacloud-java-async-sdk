@@ -371,6 +371,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, call GetCurrentVersionPublish to check the account eligibility. You can call this operation only when the returned BigCustomer parameter is true, which indicates that the account is a premium customer.</p>
+     * 
      * @param request the request parameters of AddPublishBatch  AddPublishBatchRequest
      * @return AddPublishBatchResponse
      */
@@ -1079,6 +1082,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, make sure that your current Security Center edition supports container runtime scanning. Call <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> and verify that the response parameter IsNewContainerVersion is true, which indicates that container runtime scanning is available. If the value is false, upgrade your Security Center edition before calling this operation.</p>
+     * 
      * @param request the request parameters of CreateContainerScanTaskByAppName  CreateContainerScanTaskByAppNameRequest
      * @return CreateContainerScanTaskByAppNameResponse
      */
@@ -1307,6 +1313,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before creating a management node, make sure that your account has a sufficient honeypot probe quota. Call <a href="~~DescribeHoneyPotAuth~~">DescribeHoneyPotAuth</a> and <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query the quota and node usage. If the quota is insufficient, call <a href="~~DeleteHoneypotNode~~">DeleteHoneypotNode</a> to release existing nodes or purchase more probe capacity.</p>
+     * 
      * @param request the request parameters of CreateHoneypotNode  CreateHoneypotNodeRequest
      * @return CreateHoneypotNodeResponse
      */
@@ -1651,7 +1660,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</p>
+     * <p>Before you call this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images that the image scan task covers and the number of authorizations consumed. Make sure that sufficient authorizations are available for the image scan task to prevent the image scan task from being overwritten due to insufficient authorizations.</p>
      * 
      * @param request the request parameters of CreateOssScanConfig  CreateOssScanConfigRequest
      * @return CreateOssScanConfigResponse
@@ -1672,7 +1681,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</p>
+     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center. Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>.</p>
      * 
      * @param request the request parameters of CreateRdDefaultSyncList  CreateRdDefaultSyncListRequest
      * @return CreateRdDefaultSyncListResponse
@@ -1830,6 +1839,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, choose one of the following paths:</p>
+     * <ul>
+     * <li>If DatabaseAddByUser is not set to true, install the Security Center agent on the ECS instance first, call StartDiscoverDatabaseTask to initiate database discovery, and then call DescribeUniBackupDatabase to confirm that the target database has been discovered.</li>
+     * <li>If DatabaseAddByUser is set to true, you can manually register the database.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateUniBackupPolicy  CreateUniBackupPolicyRequest
      * @return CreateUniBackupPolicyResponse
      */
@@ -3675,6 +3691,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before querying chart data for a custom report, perform the following steps in order:</p>
+     * <ol>
+     * <li>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId and confirm the report version.</li>
+     * <li>Call <a href="~~DescribeChartList~~">DescribeChartList</a>, set ProjectCode to customize_report, and pass in the ReportId to obtain the chart ID.</li>
+     * <li>Call this operation to query chart data. If the report version is 1.0.0, the CharId parameter is required. If the report version is 2.0.0, the ChartId parameter is required. Use the IDs returned by the corresponding report and chart.</li>
+     * </ol>
+     * 
      * @param request the request parameters of DescribeChartData  DescribeChartDataRequest
      * @return DescribeChartDataResponse
      */
@@ -5998,7 +6022,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first, wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</p>
+     * <p>To view the latest container image vulnerability information, call the <a href="~~PublicCreateImageScanTask~~">PublicCreateImageScanTask</a> operation to create an image scan task first. Wait 1 to 5 minutes, and then call this operation to query the container image vulnerability list.</p>
      * 
      * @param request the request parameters of DescribeImageVulList  DescribeImageVulListRequest
      * @return DescribeImageVulListResponse
@@ -6329,6 +6353,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The caller must be a resource directory management account or a Security Center delegated administrator account. Before invoking this operation, verify the role of the current account in the resource directory. Member accounts must be configured as delegated administrators by the management account before they can execute management operations.</p>
+     * 
      * @param request the request parameters of DescribeMonitorAccounts  DescribeMonitorAccountsRequest
      * @return DescribeMonitorAccountsResponse
      */
@@ -8909,6 +8936,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, associate the target instance with a specified blocking rule by calling <a href="~~ModifyCustomBlockRecord~~">ModifyCustomBlockRecord</a>. You can call <a href="~~CreateCustomBlockRecord~~">CreateCustomBlockRecord</a> to create a rule, call <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> to query rules, and then perform the association and enablement operations.</p>
+     * 
      * @param request the request parameters of EnableCustomInstanceBlockRecord  EnableCustomInstanceBlockRecordRequest
      * @return EnableCustomInstanceBlockRecordResponse
      */
@@ -9261,6 +9291,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAgentlessTaskCountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for Security Center agentless detection can call this operation. UuidList can contain up to 100 UUIDs. Duplicate UUIDs are deduplicated based on the order of first occurrence. The returned Data is keyed by UUID and does not aggregate results across multiple resources. RiskMachine, ScanMachine, and LastTaskTime are account-level statistics and remain consistent across all resources in the same request.</p>
+     * 
+     * @param request the request parameters of GetAgentlessTaskCountBatch  GetAgentlessTaskCountBatchRequest
+     * @return GetAgentlessTaskCountBatchResponse
+     */
+    @Override
+    public CompletableFuture<GetAgentlessTaskCountBatchResponse> getAgentlessTaskCountBatch(GetAgentlessTaskCountBatchRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAgentlessTaskCountBatch").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentlessTaskCountBatchResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAgentlessTaskCountBatchResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -10192,11 +10243,18 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</p>
+     * <p>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. To submit files for detection, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</p>
      * <h3>File unique identifier</h3>
-     * <p>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</p>
+     * <p>All file detection-related operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</p>
      * <h3>Query detection results</h3>
-     * <p>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</p>
+     * <p>You can filter file properties by using the FileLabel field in the Ext extension field. For example, you can combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can use the Highlight field in the Ext extension field to locate malicious code segments in web shell files. The Highlight field is a list type. Each element in the list corresponds to a code range, and the numbers represent the offset in characters from the beginning of the file.
+     * Before querying file detection results, complete the following steps in order:</p>
+     * <ol>
+     * <li>Call <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> to obtain OSS upload parameters.</li>
+     * <li>Use the returned signature information to upload the file to OSS by using a form. For more information about the upload method, see <a href="https://www.alibabacloud.com/help/zh/oss/developer-reference/postobject">OSS PostObject form upload documentation</a>.</li>
+     * <li>Call <a href="~~CreateFileDetect~~">CreateFileDetect</a> to submit a file detection task.</li>
+     * <li>Call <a href="~~GetFileDetectResult~~">GetFileDetectResult</a> to query the detection result.</li>
+     * </ol>
      * 
      * @param request the request parameters of GetFileDetectResult  GetFileDetectResultRequest
      * @return GetFileDetectResultResponse
@@ -11554,6 +11612,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before processing, call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to check the CanBeDealOnLine and EventStatus fields of the events. An event can be processed only when CanBeDealOnLine is true. If CanBeDealOnLine is false or EventStatus is 64, the event has expired and cannot be processed by this operation. <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> returns an empty array for expired events.</p>
+     * 
      * @param request the request parameters of HandleSimilarSecurityEvents  HandleSimilarSecurityEventsRequest
      * @return HandleSimilarSecurityEventsResponse
      */
@@ -13577,7 +13638,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.</p>
+     * <p>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.
+     * Before calling this operation, enable the multi-account security management feature by calling <a href="~~EnableServiceAccessResourceDirectory~~">EnableServiceAccessResourceDirectory</a>. Otherwise, the API returns a ServiceDisable error.</p>
      * 
      * @param request the request parameters of ListRdDefaultSyncList  ListRdDefaultSyncListRequest
      * @return ListRdDefaultSyncListResponse
@@ -14047,6 +14109,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>An HTTP 200 status code only indicates that the request was accepted, not that the record was actually modified. Call <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> to query and verify the operation result.</p>
+     * 
      * @param request the request parameters of ModifyAccessKeyLeakDeal  ModifyAccessKeyLeakDealRequest
      * @return ModifyAccessKeyLeakDealResponse
      */
@@ -15342,6 +15407,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, purchase and allocate the web tamper-proofing value-added service authorization for the specified server. You can query the number of active authorizations by using the WhiteCount field of <a href="~~DescribeWebLockStatus~~">DescribeWebLockStatus</a>, and allocate authorizations through the console or by invoking <a href="~~BindAuthToMachine~~">BindAuthToMachine</a>.</p>
+     * 
      * @param request the request parameters of ModifyWebLockStart  ModifyWebLockStartRequest
      * @return ModifyWebLockStartResponse
      */
@@ -16667,6 +16735,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, ensure that you have sufficient honeypot probe quota. First, create a management node by calling CreateHoneypotNode, then create a honeypot by calling CreateHoneypot. Wait until the honeypot enters the running state before calling this operation.</p>
+     * 
      * @param request the request parameters of StopHoneypot  StopHoneypotRequest
      * @return StopHoneypotResponse
      */
@@ -17634,6 +17705,34 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation upgrades a v1.0.0 backup policy to v2.0.0. Before you call this operation, make sure that the ECS instance is running, Cloud Assistant is installed, the Security Center agent is online, and a v1.0.0 policy exists. You can call <a href="~~CreateBackupPolicy~~">CreateBackupPolicy</a> with PolicyVersion set to 1.0.0 to create a policy, and then call DescribeBackupPolicies to obtain the policy ID.
+     * Before you call this operation, you can check or complete the following prerequisites:</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th>Prerequisite</th>
+     * <th>Related API</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td>The ECS instance is running.</td>
+     * <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/StartInstance">Ecs/StartInstance</a></td>
+     * </tr>
+     * <tr>
+     * <td>Cloud Assistant is installed on the ECS instance.</td>
+     * <td><a href="https://api.aliyun.com/document/Ecs/2014-05-26/InstallCloudAssistant">Ecs/InstallCloudAssistant</a></td>
+     * </tr>
+     * <tr>
+     * <td>The Security Center agent is installed.</td>
+     * <td><a href="~~OperateAgentClientInstall~~">OperateAgentClientInstall</a></td>
+     * </tr>
+     * <tr>
+     * <td>Check the agent installation status.</td>
+     * <td><a href="~~DescribeAgentInstallStatus~~">DescribeAgentInstallStatus</a></td>
+     * </tr>
+     * </tbody></table>
+     * 
      * @param request the request parameters of UpgradeBackupPolicyVersion  UpgradeBackupPolicyVersionRequest
      * @return UpgradeBackupPolicyVersionResponse
      */
@@ -17696,6 +17795,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, complete the following steps in order:</p>
+     * <ol>
+     * <li>Call <a href="~~CreateHoneypotNode~~">CreateHoneypotNode</a> to create a management node, or call <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> to query existing nodes and obtain a valid NodeId.</li>
+     * <li>Call <a href="~~GetHoneyPotUploadPolicyInfo~~">GetHoneyPotUploadPolicyInfo</a> to obtain the OSS upload credentials, upload policy, and Data.Key.</li>
+     * <li>Use the returned STS credentials to upload the file to the specified bucket by using the OSS PostObject protocol.</li>
+     * <li>After the file is uploaded, call this operation to register the upload result.</li>
+     * </ol>
+     * 
      * @param request the request parameters of UploadedHoneyPotFile  UploadedHoneyPotFileRequest
      * @return UploadedHoneyPotFileResponse
      */

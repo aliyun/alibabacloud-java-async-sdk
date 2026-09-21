@@ -144,7 +144,7 @@ public class CreateSasTrialRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -153,7 +153,7 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * <p>是否只预检此次请求。true：仅检查请求，不执行实际操作；false：正常执行请求。默认值为 false。</p>
+         * <p>Specifies whether to perform only a dry run. true: performs only a dry run without performing the actual request. false: performs the actual request. Default value: false.</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -164,8 +164,8 @@ public class CreateSasTrialRequest extends Request {
         /**
          * <p>Specifies whether the request is from the ECS console. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: yes.</li>
-         * <li><strong>false</strong>: no.</li>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * <p>The reason for applying for a trial. This parameter is required for a second trial.</p>
+         * <p>The reason for applying for the trial. This parameter is required for a second trial.</p>
          */
         public Builder requestForm(RequestForm requestForm) {
             String requestFormShrink = shrink(requestForm, "RequestForm", "json");
@@ -206,12 +206,12 @@ public class CreateSasTrialRequest extends Request {
         /**
          * <p>The trial type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: trial not allowed.</li>
-         * <li><strong>1</strong>: first trial.</li>
-         * <li><strong>2</strong>: second trial.</li>
+         * <li><strong>0</strong>: Trial is not allowed.</li>
+         * <li><strong>1</strong>: First trial.</li>
+         * <li><strong>2</strong>: Second trial.</li>
          * </ul>
          * <blockquote>
-         * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. A trial can be started only when the value is not 0.</p>
+         * <p>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. The trial can be started only when the value is not 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class CreateSasTrialRequest extends Request {
         }
 
         /**
-         * <p>The trial version. Valid values:</p>
+         * <p>The trial edition. Valid values:</p>
          * <ul>
          * <li><strong>3</strong>: Enterprise Edition.</li>
          * <li><strong>7</strong>: Ultimate Edition.</li>
@@ -289,7 +289,7 @@ public class CreateSasTrialRequest extends Request {
             } 
 
             /**
-             * <p>The reason for applying for a trial.</p>
+             * <p>The reason for applying for the trial.</p>
              * 
              * <strong>example:</strong>
              * <p>for poc</p>

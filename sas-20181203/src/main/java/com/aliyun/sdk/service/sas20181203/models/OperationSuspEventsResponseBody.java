@@ -106,10 +106,10 @@ public class OperationSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the alert events are handled. Valid values:</p>
+         * <p>Indicates whether the alert event is handled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Handled.</li>
-         * <li><strong>false</strong>: Not handled.</li>
+         * <li><strong>false</strong>: Failed to handle.</li>
          * </ul>
          * 
          * <strong>example:</strong>

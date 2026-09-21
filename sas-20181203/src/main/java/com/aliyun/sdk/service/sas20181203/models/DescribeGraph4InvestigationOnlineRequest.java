@@ -117,6 +117,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends Request {
 
         /**
          * <p>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID. The value is in the data.SuspEvents[index].UniqueInfo path.</p>
+         * <p>This parameter is required. If this parameter is not specified, the API returns error code -101.</p>
          * 
          * <strong>example:</strong>
          * <p>786fc80896b25422b5324cb6e57bxxxx</p>
@@ -129,6 +130,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends Request {
 
         /**
          * <p>The UUID of the asset associated with the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID. The value is in the data.SuspEvents[index].Uuid path.</p>
+         * <p>This parameter is required. If this parameter is not specified, the API returns error code -101.</p>
          * 
          * <strong>example:</strong>
          * <p>3502e4b0-f362-4059-84a2-f47fa2b5exxx</p>
@@ -140,7 +142,7 @@ public class DescribeGraph4InvestigationOnlineRequest extends Request {
         }
 
         /**
-         * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+         * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
          * <li><strong>zh</strong>: Chinese</li>
          * <li><strong>en</strong>: English</li>

@@ -88,10 +88,12 @@ public class DescribeReportExportRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the export task.</p>
-         * <blockquote>
-         * <p>You can call <a href="~~ExportCustomizeReport~~">ExportCustomizeReport</a> to obtain this parameter.</p>
-         * </blockquote>
+         * <p>The ID of the export task. Obtain this ID by following these steps:</p>
+         * <ol>
+         * <li>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain the ReportId.</li>
+         * <li>Pass the ReportId to <a href="~~ExportCustomizeReport~~">ExportCustomizeReport</a> to obtain the ExportId from the response.</li>
+         * <li>Pass the ExportId to this operation to query the export status.</li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -106,8 +108,8 @@ public class DescribeReportExportRequest extends Request {
         /**
          * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,10 +122,13 @@ public class DescribeReportExportRequest extends Request {
         }
 
         /**
-         * <p>The Alibaba Cloud account ID of the member accounts in the resource directory.</p>
+         * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
          * <blockquote>
-         * <p>You can call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</p>
+         * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>127608589417****</p>
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
