@@ -491,9 +491,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <ul>
      * <li>This operation creates a new agent session.</li>
      * <li>Use <code>_meta.agent.agentName</code> to specify the agent name to bind. This parameter is required.<ul>
-     * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire pipeline of data integration, development, O&amp;M, governance, and analytics.</li>
-     * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visualization report output.</li>
-     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. A DataWorks enterprise-grade dedicated AI assistant built on open source frameworks such as OpenClaw and Hermes Agent.</li>
+     * <li>dataworks_data_agent: DataWorks built-in agent — Data Agent. Provides intelligent data development AI capabilities that cover the entire workflow of data integration, development, O&amp;M, governance, and analytics.</li>
+     * <li>dataworks_chatbi_agent: DataWorks built-in agent — ChatBI. Uses natural language processing and intelligent analytics to automate the entire analysis workflow through conversational interaction, from requirement parsing, data extraction, and automatic code generation to visual report output.</li>
+     * <li>dataworks_ai_assistant_agent: DataWorks built-in agent — AI Assistant Service. An enterprise-grade dedicated AI assistant for DataWorks built on open source frameworks such as OpenClaw and Hermes Agent.</li>
      * </ul>
      * </li>
      * <li>Use <code>_meta.config.sessionSource</code> to pass through a session source identifier for subsequent retrieval by source.</li>
@@ -6266,7 +6266,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This feature is available in DataWorks Basic Edition and higher.</p>
+     * <p>You must purchase DataWorks Basic Edition or a higher edition to use this feature.</p>
      * 
      * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
      * @return ListProjectRolesResponse

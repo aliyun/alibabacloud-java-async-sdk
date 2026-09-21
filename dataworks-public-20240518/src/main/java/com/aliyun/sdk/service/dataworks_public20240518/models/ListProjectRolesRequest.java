@@ -156,7 +156,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>An array of workspace role codes.</p>
+         * <p>The list of workspace role codes.</p>
          */
         public Builder codes(java.util.List<String> codes) {
             String codesShrink = shrink(codes, "Codes", "json");
@@ -166,7 +166,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>An array of workspace role names.</p>
+         * <p>The list of workspace role names.</p>
          */
         public Builder names(java.util.List<String> names) {
             String namesShrink = shrink(names, "Names", "json");
@@ -176,7 +176,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>The page number to return.</p>
+         * <p>The page number. Used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +188,7 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Default value: 10. Maximum value: 100.</p>
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -200,8 +200,8 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DataWorks workspace. You can find the ID on the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</p>
-         * <p>This parameter specifies the DataWorks workspace for which you want to list roles.</p>
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to obtain the ID.</p>
+         * <p>This parameter specifies the DataWorks workspace for this API invoke operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,12 +214,10 @@ public class ListProjectRolesRequest extends Request {
         }
 
         /**
-         * <p>The type of the workspace role.</p>
+         * <p>The type of the workspace role. Valid values:</p>
          * <ul>
-         * <li><p><code>UserCustom</code>: Custom Role</p>
-         * </li>
-         * <li><p><code>System</code>: System Role</p>
-         * </li>
+         * <li>UserCustom: user-defined role.</li>
+         * <li>System: system role.</li>
          * </ul>
          * 
          * <strong>example:</strong>

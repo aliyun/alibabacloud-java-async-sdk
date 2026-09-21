@@ -75,7 +75,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID. Use this ID to locate logs and troubleshoot issues.</p>
+         * <p>The request ID. Used for locating logs and troubleshooting issues.</p>
          * 
          * <strong>example:</strong>
          * <p>61649187-0BCF-5E75-8D4B-64FDBEBBB447</p>
@@ -310,7 +310,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
             /**
              * <p>The ID of the DataWorks workspace.</p>
-             * <p>Note: For system-defined roles, this parameter returns -1.</p>
+             * <p>Note: For default system workspace roles, the ProjectId returns a fixed value of -1.</p>
              * 
              * <strong>example:</strong>
              * <p>21229</p>
@@ -417,7 +417,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned page number.</p>
+             * <p>The page number. Used for paging.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -439,7 +439,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of workspace roles.</p>
+             * <p>The list of workspace roles.</p>
              */
             public Builder projectRoles(java.util.List<ProjectRoles> projectRoles) {
                 this.projectRoles = projectRoles;
@@ -447,7 +447,7 @@ public class ListProjectRolesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of matching entries.</p>
+             * <p>The total number of entries that meet the conditions.</p>
              * 
              * <strong>example:</strong>
              * <p>42</p>
