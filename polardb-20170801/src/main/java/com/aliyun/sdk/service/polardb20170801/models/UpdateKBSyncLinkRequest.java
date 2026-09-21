@@ -60,7 +60,6 @@ public class UpdateKBSyncLinkRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserAccessToken")
-    @com.aliyun.core.annotation.Validation(maxLength = 4096)
     private String userAccessToken;
 
     @com.aliyun.core.annotation.Query

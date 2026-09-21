@@ -151,7 +151,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>myapp</p>
