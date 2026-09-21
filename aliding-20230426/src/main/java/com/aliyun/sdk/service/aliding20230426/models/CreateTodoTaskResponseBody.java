@@ -463,10 +463,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -564,10 +561,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>fieldKey</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fieldKey</p>
+             * fieldKey.
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -575,10 +569,7 @@ public class CreateTodoTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>fieldValue</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fieldValue</p>
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

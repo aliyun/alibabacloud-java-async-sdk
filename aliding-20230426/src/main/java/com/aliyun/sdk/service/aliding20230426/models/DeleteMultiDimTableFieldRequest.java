@@ -129,9 +129,6 @@ public class DeleteMultiDimTableFieldRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r1R7q3QmWew5lo02fxB7nxxxxxxxx</p>
          */
         public Builder baseId(String baseId) {
             this.putBodyParameter("BaseId", baseId);

@@ -152,9 +152,6 @@ public class QueryMinutesTextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>607452e01401526ee39609e1</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("conferenceId", conferenceId);
@@ -164,9 +161,6 @@ public class QueryMinutesTextRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         public Builder direction(String direction) {
             this.putBodyParameter("direction", direction);

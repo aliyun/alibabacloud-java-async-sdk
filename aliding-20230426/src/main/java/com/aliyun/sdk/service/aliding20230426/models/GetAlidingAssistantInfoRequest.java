@@ -99,9 +99,6 @@ public class GetAlidingAssistantInfoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("AssistantId", assistantId);

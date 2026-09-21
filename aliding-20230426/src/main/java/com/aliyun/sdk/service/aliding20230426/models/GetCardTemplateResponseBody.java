@@ -272,10 +272,7 @@ public class GetCardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lastMessage</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;

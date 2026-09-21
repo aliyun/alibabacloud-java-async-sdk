@@ -410,9 +410,6 @@ public class CreateEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("calendarId", calendarId);
@@ -479,9 +476,6 @@ public class CreateEventRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>208579</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

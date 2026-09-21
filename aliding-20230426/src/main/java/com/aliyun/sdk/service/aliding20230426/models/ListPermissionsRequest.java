@@ -113,9 +113,6 @@ public class ListPermissionsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>KGZLxjv9VGkoG9YwHE5wx7k2V6EDybno</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);

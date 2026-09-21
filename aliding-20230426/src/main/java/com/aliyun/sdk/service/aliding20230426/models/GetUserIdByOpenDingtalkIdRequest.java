@@ -111,7 +111,7 @@ public class GetUserIdByOpenDingtalkIdRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DTOJdYJ2IQC4HuexhtjsSXXXX</p>
+         * <p>DTOJdYJ2IQC4HuexhtjsS8QiEiE</p>
          */
         public Builder openDingtalkId(String openDingtalkId) {
             this.putBodyParameter("openDingtalkId", openDingtalkId);

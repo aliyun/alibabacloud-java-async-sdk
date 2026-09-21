@@ -129,9 +129,6 @@ public class DeletePermissionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a9E05BDRVQRkezKGCE3nlwPDJ63zgkYA</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);

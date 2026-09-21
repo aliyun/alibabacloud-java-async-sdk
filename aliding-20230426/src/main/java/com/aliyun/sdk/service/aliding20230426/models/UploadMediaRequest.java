@@ -162,9 +162,6 @@ public class UploadMediaRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>image</p>
          */
         public Builder mediaType(String mediaType) {
             this.putBodyParameter("mediaType", mediaType);
@@ -174,9 +171,6 @@ public class UploadMediaRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -186,9 +180,6 @@ public class UploadMediaRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://alicdn.com/xxx.jpg">https://alicdn.com/xxx.jpg</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("url", url);

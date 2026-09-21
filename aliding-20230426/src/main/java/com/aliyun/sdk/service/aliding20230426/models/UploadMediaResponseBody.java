@@ -75,10 +75,7 @@ public class UploadMediaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>abcd-1234-wxyz-9876</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

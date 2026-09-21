@@ -140,10 +140,7 @@ public class CreateScheduleConferenceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234567</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -12,46 +12,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeSkillRequest} extends {@link RequestModel}
+ * {@link InvokeContainerRequest} extends {@link RequestModel}
  *
- * <p>InvokeSkillRequest</p>
+ * <p>InvokeContainerRequest</p>
  */
-public class InvokeSkillRequest extends Request {
+public class InvokeContainerRequest extends Request {
     @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("AccountContext")
+    @com.aliyun.core.annotation.NameInMap("accountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.Map<String, ?> params;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SkillId")
+    @com.aliyun.core.annotation.NameInMap("operationId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String skillId;
+    private String operationId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Stream")
-    private Boolean stream;
+    @com.aliyun.core.annotation.NameInMap("params")
+    private String params;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("sourceIdOfAssistantId")
-    private String sourceIdOfAssistantId;
-
-    private InvokeSkillRequest(Builder builder) {
+    private InvokeContainerRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
+        this.operationId = builder.operationId;
         this.params = builder.params;
-        this.skillId = builder.skillId;
-        this.stream = builder.stream;
-        this.sourceIdOfAssistantId = builder.sourceIdOfAssistantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InvokeSkillRequest create() {
+    public static InvokeContainerRequest create() {
         return builder().build();
     }
 
@@ -68,112 +58,78 @@ public class InvokeSkillRequest extends Request {
     }
 
     /**
+     * @return operationId
+     */
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    /**
      * @return params
      */
-    public java.util.Map<String, ?> getParams() {
+    public String getParams() {
         return this.params;
     }
 
-    /**
-     * @return skillId
-     */
-    public String getSkillId() {
-        return this.skillId;
-    }
-
-    /**
-     * @return stream
-     */
-    public Boolean getStream() {
-        return this.stream;
-    }
-
-    /**
-     * @return sourceIdOfAssistantId
-     */
-    public String getSourceIdOfAssistantId() {
-        return this.sourceIdOfAssistantId;
-    }
-
-    public static final class Builder extends Request.Builder<InvokeSkillRequest, Builder> {
+    public static final class Builder extends Request.Builder<InvokeContainerRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> params; 
-        private String skillId; 
-        private Boolean stream; 
-        private String sourceIdOfAssistantId; 
+        private String operationId; 
+        private String params; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InvokeSkillRequest request) {
+        private Builder(InvokeContainerRequest request) {
             super(request);
             this.accountContext = request.accountContext;
+            this.operationId = request.operationId;
             this.params = request.params;
-            this.skillId = request.skillId;
-            this.stream = request.stream;
-            this.sourceIdOfAssistantId = request.sourceIdOfAssistantId;
         } 
 
         /**
-         * AccountContext.
+         * accountContext.
          */
         public Builder accountContext(AccountContext accountContext) {
-            String accountContextShrink = shrink(accountContext, "AccountContext", "json");
-            this.putHeaderParameter("AccountContext", accountContextShrink);
+            String accountContextShrink = shrink(accountContext, "accountContext", "json");
+            this.putHeaderParameter("accountContext", accountContextShrink);
             this.accountContext = accountContext;
             return this;
         }
 
         /**
-         * Params.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>createSandbox</p>
          */
-        public Builder params(java.util.Map<String, ?> params) {
-            String paramsShrink = shrink(params, "Params", "json");
-            this.putBodyParameter("Params", paramsShrink);
+        public Builder operationId(String operationId) {
+            this.putBodyParameter("operationId", operationId);
+            this.operationId = operationId;
+            return this;
+        }
+
+        /**
+         * params.
+         */
+        public Builder params(String params) {
+            this.putBodyParameter("params", params);
             this.params = params;
             return this;
         }
 
-        /**
-         * <p>This parameter is required.</p>
-         */
-        public Builder skillId(String skillId) {
-            this.putBodyParameter("SkillId", skillId);
-            this.skillId = skillId;
-            return this;
-        }
-
-        /**
-         * Stream.
-         */
-        public Builder stream(Boolean stream) {
-            this.putBodyParameter("Stream", stream);
-            this.stream = stream;
-            return this;
-        }
-
-        /**
-         * sourceIdOfAssistantId.
-         */
-        public Builder sourceIdOfAssistantId(String sourceIdOfAssistantId) {
-            this.putBodyParameter("sourceIdOfAssistantId", sourceIdOfAssistantId);
-            this.sourceIdOfAssistantId = sourceIdOfAssistantId;
-            return this;
-        }
-
         @Override
-        public InvokeSkillRequest build() {
-            return new InvokeSkillRequest(this);
+        public InvokeContainerRequest build() {
+            return new InvokeContainerRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InvokeSkillRequest} extends {@link TeaModel}
+     * {@link InvokeContainerRequest} extends {@link TeaModel}
      *
-     * <p>InvokeSkillRequest</p>
+     * <p>InvokeContainerRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")

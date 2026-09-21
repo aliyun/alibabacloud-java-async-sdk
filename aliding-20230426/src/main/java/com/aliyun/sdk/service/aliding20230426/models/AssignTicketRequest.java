@@ -166,9 +166,6 @@ public class AssignTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eKWh3xxxxiE</p>
          */
         public Builder openTeamId(String openTeamId) {
             this.putBodyParameter("OpenTeamId", openTeamId);
@@ -178,9 +175,6 @@ public class AssignTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Dq9hP8Sk2v6vQxxxxiE</p>
          */
         public Builder openTicketId(String openTicketId) {
             this.putBodyParameter("OpenTicketId", openTicketId);

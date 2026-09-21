@@ -99,9 +99,6 @@ public class GetConversaionSpaceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cidB8Pzg****FIWPv2PMA==</p>
          */
         public Builder openConversationId(String openConversationId) {
             this.putBodyParameter("OpenConversationId", openConversationId);

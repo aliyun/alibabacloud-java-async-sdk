@@ -186,9 +186,6 @@ public class CopyDentryRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b9XJljElJv6RPGyA</p>
          */
         public Builder dentryId(String dentryId) {
             this.putBodyParameter("DentryId", dentryId);
@@ -207,9 +204,6 @@ public class CopyDentryRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>24458420428</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -219,9 +213,6 @@ public class CopyDentryRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>b9XJljElJv6RPG</p>
          */
         public Builder targetSpaceId(String targetSpaceId) {
             this.putBodyParameter("TargetSpaceId", targetSpaceId);

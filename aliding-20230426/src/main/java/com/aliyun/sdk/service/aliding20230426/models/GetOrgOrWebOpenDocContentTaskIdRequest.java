@@ -141,9 +141,6 @@ public class GetOrgOrWebOpenDocContentTaskIdRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20eMKjyp810mMdK4Hz4B5BA6JxAZB1Gv</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);

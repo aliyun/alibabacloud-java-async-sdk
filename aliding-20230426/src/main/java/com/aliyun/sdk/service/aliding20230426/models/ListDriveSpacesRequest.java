@@ -129,9 +129,6 @@ public class ListDriveSpacesRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -150,9 +147,6 @@ public class ListDriveSpacesRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>org</p>
          */
         public Builder spaceType(String spaceType) {
             this.putBodyParameter("SpaceType", spaceType);

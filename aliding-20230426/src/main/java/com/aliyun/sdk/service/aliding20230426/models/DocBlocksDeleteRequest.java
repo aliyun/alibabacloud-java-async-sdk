@@ -116,7 +116,7 @@ public class DocBlocksDeleteRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>mgokkwiovcq5eu02le8</p>
+         * <p>1</p>
          */
         public Builder blockId(String blockId) {
             this.putBodyParameter("BlockId", blockId);

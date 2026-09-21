@@ -159,9 +159,6 @@ public class ListNodesRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MNDoBb60VLBPraakI1Ywxyyn8lemrZQ3</p>
          */
         public Builder parentNodeId(String parentNodeId) {
             this.putBodyParameter("ParentNodeId", parentNodeId);

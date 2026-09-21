@@ -21,7 +21,7 @@ public class ListCalendarsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("response")
-    private Response response;
+    private ListCalendarsResponseBodyResponse response;
 
     private ListCalendarsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -50,13 +50,13 @@ public class ListCalendarsResponseBody extends TeaModel {
     /**
      * @return response
      */
-    public Response getResponse() {
+    public ListCalendarsResponseBodyResponse getResponse() {
         return this.response;
     }
 
     public static final class Builder {
         private String requestId; 
-        private Response response; 
+        private ListCalendarsResponseBodyResponse response; 
 
         private Builder() {
         } 
@@ -67,10 +67,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,7 +77,7 @@ public class ListCalendarsResponseBody extends TeaModel {
         /**
          * response.
          */
-        public Builder response(Response response) {
+        public Builder response(ListCalendarsResponseBodyResponse response) {
             this.response = response;
             return this;
         }
@@ -277,11 +274,11 @@ public class ListCalendarsResponseBody extends TeaModel {
      *
      * <p>ListCalendarsResponseBody</p>
      */
-    public static class Response extends TeaModel {
+    public static class ListCalendarsResponseBodyResponse extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Calendars")
         private java.util.List<Calendars> calendars;
 
-        private Response(Builder builder) {
+        private ListCalendarsResponseBodyResponse(Builder builder) {
             this.calendars = builder.calendars;
         }
 
@@ -289,7 +286,7 @@ public class ListCalendarsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Response create() {
+        public static ListCalendarsResponseBodyResponse create() {
             return builder().build();
         }
 
@@ -306,7 +303,7 @@ public class ListCalendarsResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Response model) {
+            private Builder(ListCalendarsResponseBodyResponse model) {
                 this.calendars = model.calendars;
             } 
 
@@ -318,8 +315,8 @@ public class ListCalendarsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Response build() {
-                return new Response(this);
+            public ListCalendarsResponseBodyResponse build() {
+                return new ListCalendarsResponseBodyResponse(this);
             } 
 
         } 

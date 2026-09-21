@@ -258,9 +258,6 @@ public class CreateAlidingAssistantRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>@lADPDetfgMsFFUvNAkjNAkg</p>
          */
         public Builder icon(String icon) {
             this.putBodyParameter("Icon", icon);
@@ -298,9 +295,6 @@ public class CreateAlidingAssistantRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>11</p>
          */
         public Builder source(Integer source) {
             this.putBodyParameter("Source", source);

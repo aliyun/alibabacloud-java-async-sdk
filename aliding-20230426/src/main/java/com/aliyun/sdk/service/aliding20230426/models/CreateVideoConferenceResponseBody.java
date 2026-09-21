@@ -172,10 +172,7 @@ public class CreateVideoConferenceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3032809F-8C14-57E2-9B76-7AC2134FE3C8</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

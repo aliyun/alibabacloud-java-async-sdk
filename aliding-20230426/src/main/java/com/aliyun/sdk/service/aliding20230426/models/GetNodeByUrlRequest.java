@@ -133,9 +133,6 @@ public class GetNodeByUrlRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y">https://alidocs.dingtalk.com/i/nodes/EpGBa2L*********gN7R35y</a></p>
          */
         public Builder url(String url) {
             this.putBodyParameter("Url", url);

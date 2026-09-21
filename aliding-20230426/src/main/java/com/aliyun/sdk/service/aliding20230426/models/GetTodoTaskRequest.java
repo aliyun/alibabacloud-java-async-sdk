@@ -99,9 +99,6 @@ public class GetTodoTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OPJpwtxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

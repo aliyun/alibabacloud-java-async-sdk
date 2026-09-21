@@ -220,9 +220,6 @@ public class ListDentriesRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         public Builder parentId(String parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -232,9 +229,6 @@ public class ListDentriesRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>854xxxxx</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);

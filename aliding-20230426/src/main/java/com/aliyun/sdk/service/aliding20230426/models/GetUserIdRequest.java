@@ -107,10 +107,7 @@ public class GetUserIdRequest extends Request {
         }
 
         /**
-         * <p>unionId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>****iE</p>
+         * UnionId.
          */
         public Builder unionId(String unionId) {
             this.putBodyParameter("UnionId", unionId);

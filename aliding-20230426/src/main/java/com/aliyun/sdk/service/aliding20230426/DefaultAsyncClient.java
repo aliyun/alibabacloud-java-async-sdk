@@ -3211,6 +3211,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of InvokeContainer  InvokeContainerRequest
+     * @return InvokeContainerResponse
+     */
+    @Override
+    public CompletableFuture<InvokeContainerResponse> invokeContainer(InvokeContainerRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeContainer").setMethod(HttpMethod.POST).setPathRegex("/spi/ai/v1/container/invoke").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvokeContainerResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokeContainerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InvokeSkill  InvokeSkillRequest
      * @return InvokeSkillResponse
      */

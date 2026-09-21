@@ -162,9 +162,6 @@ public class AddFolderRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>140822073803</p>
          */
         public Builder parentId(String parentId) {
             this.putBodyParameter("ParentId", parentId);
@@ -174,9 +171,6 @@ public class AddFolderRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xPar2SZ63KodG3aV</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);
@@ -329,9 +323,6 @@ public class AddFolderRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -340,9 +331,6 @@ public class AddFolderRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -351,9 +339,6 @@ public class AddFolderRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>PUBLIC</p>
              */
             public Builder visibility(String visibility) {
                 this.visibility = visibility;

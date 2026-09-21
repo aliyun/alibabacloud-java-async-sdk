@@ -127,9 +127,6 @@ public class GetDocContentTakIdRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>qnYMoO1rWxrkmoj2I5L2PYkoJ47Z3je9</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);

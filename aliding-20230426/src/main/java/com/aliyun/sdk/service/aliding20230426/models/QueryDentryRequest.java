@@ -128,9 +128,6 @@ public class QueryDentryRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
          */
         public Builder dentryId(String dentryId) {
             this.putBodyParameter("DentryId", dentryId);
@@ -149,9 +146,6 @@ public class QueryDentryRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>space-fxhb96vuddz8htqt</p>
          */
         public Builder spaceId(String spaceId) {
             this.putBodyParameter("SpaceId", spaceId);

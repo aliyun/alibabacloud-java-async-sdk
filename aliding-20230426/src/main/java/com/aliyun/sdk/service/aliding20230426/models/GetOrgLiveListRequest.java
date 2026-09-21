@@ -192,9 +192,6 @@ public class GetOrgLiveListRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -204,9 +201,6 @@ public class GetOrgLiveListRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);

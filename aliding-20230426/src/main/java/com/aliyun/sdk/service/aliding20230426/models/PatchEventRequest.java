@@ -334,9 +334,6 @@ public class PatchEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -375,9 +372,6 @@ public class PatchEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>iiiP35sJadba8aBSgjrwPRKgiEiF</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -551,9 +545,6 @@ public class PatchEventRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

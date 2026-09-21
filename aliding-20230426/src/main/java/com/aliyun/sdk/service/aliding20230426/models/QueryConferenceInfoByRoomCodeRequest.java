@@ -147,9 +147,6 @@ public class QueryConferenceInfoByRoomCodeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);
@@ -159,9 +156,6 @@ public class QueryConferenceInfoByRoomCodeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>583 480 813</p>
          */
         public Builder roomCode(String roomCode) {
             this.putBodyParameter("roomCode", roomCode);

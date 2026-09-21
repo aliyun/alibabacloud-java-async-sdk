@@ -129,9 +129,6 @@ public class QueryCloudRecordVideoPlayInfoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6139b4xxx</p>
          */
         public Builder conferenceId(String conferenceId) {
             this.putBodyParameter("ConferenceId", conferenceId);
@@ -141,9 +138,6 @@ public class QueryCloudRecordVideoPlayInfoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>44444444</p>
          */
         public Builder mediaId(String mediaId) {
             this.putBodyParameter("MediaId", mediaId);
@@ -153,9 +147,6 @@ public class QueryCloudRecordVideoPlayInfoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-shenzhen</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

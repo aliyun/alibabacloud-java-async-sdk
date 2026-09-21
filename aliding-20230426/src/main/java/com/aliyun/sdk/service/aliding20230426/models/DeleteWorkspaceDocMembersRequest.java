@@ -139,9 +139,6 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>YRBGv0xxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -161,9 +158,6 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>YRBGvyxxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -292,9 +286,6 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>012345</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -303,9 +294,6 @@ public class DeleteWorkspaceDocMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>USER</p>
              */
             public Builder memberType(String memberType) {
                 this.memberType = memberType;

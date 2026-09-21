@@ -199,9 +199,6 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>fsdfasdjf132342d</p>
          */
         public Builder avatarFrameMediaId(String avatarFrameMediaId) {
             this.putBodyParameter("avatarFrameMediaId", avatarFrameMediaId);
@@ -211,9 +208,6 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>#FFFBB4</p>
          */
         public Builder defaultBgColor(String defaultBgColor) {
             this.putBodyParameter("defaultBgColor", defaultBgColor);
@@ -232,9 +226,6 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1273adf23</p>
          */
         public Builder medalMediaId(String medalMediaId) {
             this.putBodyParameter("medalMediaId", medalMediaId);
@@ -253,9 +244,6 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -265,9 +253,6 @@ public class CreateOrgHonorTemplateRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>363784</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);

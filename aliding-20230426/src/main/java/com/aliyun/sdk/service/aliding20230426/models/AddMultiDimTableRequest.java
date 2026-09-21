@@ -127,9 +127,6 @@ public class AddMultiDimTableRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>r1R7q3QmWew5lo02fxB7nxxxxxxxx</p>
          */
         public Builder baseId(String baseId) {
             this.putBodyParameter("BaseId", baseId);
@@ -316,9 +313,6 @@ public class AddMultiDimTableRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>text</p>
              */
             public Builder type(String type) {
                 this.type = type;

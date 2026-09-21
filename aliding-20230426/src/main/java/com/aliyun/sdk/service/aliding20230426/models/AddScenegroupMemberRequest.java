@@ -112,9 +112,6 @@ public class AddScenegroupMemberRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123xx,224xx</p>
          */
         public Builder userIds(String userIds) {
             this.putBodyParameter("UserIds", userIds);

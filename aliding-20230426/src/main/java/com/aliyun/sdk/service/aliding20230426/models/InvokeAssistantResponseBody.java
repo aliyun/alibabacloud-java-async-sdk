@@ -157,6 +157,561 @@ public class InvokeAssistantResponseBody extends TeaModel {
      *
      * <p>InvokeAssistantResponseBody</p>
      */
+    public static class AppendDataModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("surfaceId")
+        private String surfaceId;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Object value;
+
+        private AppendDataModel(Builder builder) {
+            this.path = builder.path;
+            this.surfaceId = builder.surfaceId;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppendDataModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return surfaceId
+         */
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        /**
+         * @return value
+         */
+        public Object getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String path; 
+            private String surfaceId; 
+            private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppendDataModel model) {
+                this.path = model.path;
+                this.surfaceId = model.surfaceId;
+                this.value = model.value;
+            } 
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * surfaceId.
+             */
+            public Builder surfaceId(String surfaceId) {
+                this.surfaceId = surfaceId;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Object value) {
+                this.value = value;
+                return this;
+            }
+
+            public AppendDataModel build() {
+                return new AppendDataModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class CreateSurface extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("surfaceId")
+        private String surfaceId;
+
+        private CreateSurface(Builder builder) {
+            this.surfaceId = builder.surfaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CreateSurface create() {
+            return builder().build();
+        }
+
+        /**
+         * @return surfaceId
+         */
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        public static final class Builder {
+            private String surfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CreateSurface model) {
+                this.surfaceId = model.surfaceId;
+            } 
+
+            /**
+             * surfaceId.
+             */
+            public Builder surfaceId(String surfaceId) {
+                this.surfaceId = surfaceId;
+                return this;
+            }
+
+            public CreateSurface build() {
+                return new CreateSurface(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class DeleteSurface extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("surfaceId")
+        private String surfaceId;
+
+        private DeleteSurface(Builder builder) {
+            this.surfaceId = builder.surfaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteSurface create() {
+            return builder().build();
+        }
+
+        /**
+         * @return surfaceId
+         */
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        public static final class Builder {
+            private String surfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteSurface model) {
+                this.surfaceId = model.surfaceId;
+            } 
+
+            /**
+             * surfaceId.
+             */
+            public Builder surfaceId(String surfaceId) {
+                this.surfaceId = surfaceId;
+                return this;
+            }
+
+            public DeleteSurface build() {
+                return new DeleteSurface(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class UpdateComponents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("components")
+        private java.util.List<?> components;
+
+        @com.aliyun.core.annotation.NameInMap("surfaceId")
+        private String surfaceId;
+
+        private UpdateComponents(Builder builder) {
+            this.components = builder.components;
+            this.surfaceId = builder.surfaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpdateComponents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return components
+         */
+        public java.util.List<?> getComponents() {
+            return this.components;
+        }
+
+        /**
+         * @return surfaceId
+         */
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        public static final class Builder {
+            private java.util.List<?> components; 
+            private String surfaceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateComponents model) {
+                this.components = model.components;
+                this.surfaceId = model.surfaceId;
+            } 
+
+            /**
+             * components.
+             */
+            public Builder components(java.util.List<?> components) {
+                this.components = components;
+                return this;
+            }
+
+            /**
+             * surfaceId.
+             */
+            public Builder surfaceId(String surfaceId) {
+                this.surfaceId = surfaceId;
+                return this;
+            }
+
+            public UpdateComponents build() {
+                return new UpdateComponents(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class UpdateDataModel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("surfaceId")
+        private String surfaceId;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Object value;
+
+        private UpdateDataModel(Builder builder) {
+            this.path = builder.path;
+            this.surfaceId = builder.surfaceId;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UpdateDataModel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return surfaceId
+         */
+        public String getSurfaceId() {
+            return this.surfaceId;
+        }
+
+        /**
+         * @return value
+         */
+        public Object getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String path; 
+            private String surfaceId; 
+            private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UpdateDataModel model) {
+                this.path = model.path;
+                this.surfaceId = model.surfaceId;
+                this.value = model.value;
+            } 
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * surfaceId.
+             */
+            public Builder surfaceId(String surfaceId) {
+                this.surfaceId = surfaceId;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(Object value) {
+                this.value = value;
+                return this;
+            }
+
+            public UpdateDataModel build() {
+                return new UpdateDataModel(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
+    public static class A2uiMessages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appendDataModel")
+        private AppendDataModel appendDataModel;
+
+        @com.aliyun.core.annotation.NameInMap("createSurface")
+        private CreateSurface createSurface;
+
+        @com.aliyun.core.annotation.NameInMap("deleteSurface")
+        private DeleteSurface deleteSurface;
+
+        @com.aliyun.core.annotation.NameInMap("profile")
+        private String profile;
+
+        @com.aliyun.core.annotation.NameInMap("updateComponents")
+        private UpdateComponents updateComponents;
+
+        @com.aliyun.core.annotation.NameInMap("updateDataModel")
+        private UpdateDataModel updateDataModel;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private A2uiMessages(Builder builder) {
+            this.appendDataModel = builder.appendDataModel;
+            this.createSurface = builder.createSurface;
+            this.deleteSurface = builder.deleteSurface;
+            this.profile = builder.profile;
+            this.updateComponents = builder.updateComponents;
+            this.updateDataModel = builder.updateDataModel;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static A2uiMessages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appendDataModel
+         */
+        public AppendDataModel getAppendDataModel() {
+            return this.appendDataModel;
+        }
+
+        /**
+         * @return createSurface
+         */
+        public CreateSurface getCreateSurface() {
+            return this.createSurface;
+        }
+
+        /**
+         * @return deleteSurface
+         */
+        public DeleteSurface getDeleteSurface() {
+            return this.deleteSurface;
+        }
+
+        /**
+         * @return profile
+         */
+        public String getProfile() {
+            return this.profile;
+        }
+
+        /**
+         * @return updateComponents
+         */
+        public UpdateComponents getUpdateComponents() {
+            return this.updateComponents;
+        }
+
+        /**
+         * @return updateDataModel
+         */
+        public UpdateDataModel getUpdateDataModel() {
+            return this.updateDataModel;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private AppendDataModel appendDataModel; 
+            private CreateSurface createSurface; 
+            private DeleteSurface deleteSurface; 
+            private String profile; 
+            private UpdateComponents updateComponents; 
+            private UpdateDataModel updateDataModel; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(A2uiMessages model) {
+                this.appendDataModel = model.appendDataModel;
+                this.createSurface = model.createSurface;
+                this.deleteSurface = model.deleteSurface;
+                this.profile = model.profile;
+                this.updateComponents = model.updateComponents;
+                this.updateDataModel = model.updateDataModel;
+                this.version = model.version;
+            } 
+
+            /**
+             * appendDataModel.
+             */
+            public Builder appendDataModel(AppendDataModel appendDataModel) {
+                this.appendDataModel = appendDataModel;
+                return this;
+            }
+
+            /**
+             * createSurface.
+             */
+            public Builder createSurface(CreateSurface createSurface) {
+                this.createSurface = createSurface;
+                return this;
+            }
+
+            /**
+             * deleteSurface.
+             */
+            public Builder deleteSurface(DeleteSurface deleteSurface) {
+                this.deleteSurface = deleteSurface;
+                return this;
+            }
+
+            /**
+             * profile.
+             */
+            public Builder profile(String profile) {
+                this.profile = profile;
+                return this;
+            }
+
+            /**
+             * updateComponents.
+             */
+            public Builder updateComponents(UpdateComponents updateComponents) {
+                this.updateComponents = updateComponents;
+                return this;
+            }
+
+            /**
+             * updateDataModel.
+             */
+            public Builder updateDataModel(UpdateDataModel updateDataModel) {
+                this.updateDataModel = updateDataModel;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public A2uiMessages build() {
+                return new A2uiMessages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantResponseBody} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantResponseBody</p>
+     */
     public static class AguiEventList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("activityType")
         private String activityType;
@@ -1981,6 +2536,9 @@ public class InvokeAssistantResponseBody extends TeaModel {
      * <p>InvokeAssistantResponseBody</p>
      */
     public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("a2uiMessages")
+        private java.util.List<A2uiMessages> a2uiMessages;
+
         @com.aliyun.core.annotation.NameInMap("aguiContent")
         private AguiContent aguiContent;
 
@@ -2007,6 +2565,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
         private String type;
 
         private Content(Builder builder) {
+            this.a2uiMessages = builder.a2uiMessages;
             this.aguiContent = builder.aguiContent;
             this.cardCallback = builder.cardCallback;
             this.dingCard = builder.dingCard;
@@ -2023,6 +2582,13 @@ public class InvokeAssistantResponseBody extends TeaModel {
 
         public static Content create() {
             return builder().build();
+        }
+
+        /**
+         * @return a2uiMessages
+         */
+        public java.util.List<A2uiMessages> getA2uiMessages() {
+            return this.a2uiMessages;
         }
 
         /**
@@ -2082,6 +2648,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<A2uiMessages> a2uiMessages; 
             private AguiContent aguiContent; 
             private CardCallback cardCallback; 
             private DingCard dingCard; 
@@ -2095,6 +2662,7 @@ public class InvokeAssistantResponseBody extends TeaModel {
             } 
 
             private Builder(Content model) {
+                this.a2uiMessages = model.a2uiMessages;
                 this.aguiContent = model.aguiContent;
                 this.cardCallback = model.cardCallback;
                 this.dingCard = model.dingCard;
@@ -2104,6 +2672,14 @@ public class InvokeAssistantResponseBody extends TeaModel {
                 this.text = model.text;
                 this.type = model.type;
             } 
+
+            /**
+             * a2uiMessages.
+             */
+            public Builder a2uiMessages(java.util.List<A2uiMessages> a2uiMessages) {
+                this.a2uiMessages = a2uiMessages;
+                return this;
+            }
 
             /**
              * aguiContent.

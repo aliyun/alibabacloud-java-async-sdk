@@ -147,9 +147,6 @@ public class QueryOrgHonorsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15</p>
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("nextToken", nextToken);
@@ -159,9 +156,6 @@ public class QueryOrgHonorsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);

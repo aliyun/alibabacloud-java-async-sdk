@@ -894,10 +894,7 @@ public class CreateTodoTaskRequest extends Request {
             } 
 
             /**
-             * <p>fieldKey</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fieldKey</p>
+             * fieldKey.
              */
             public Builder fieldKey(String fieldKey) {
                 this.fieldKey = fieldKey;
@@ -905,10 +902,7 @@ public class CreateTodoTaskRequest extends Request {
             }
 
             /**
-             * <p>fieldValue</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fieldValue</p>
+             * fieldValue.
              */
             public Builder fieldValue(String fieldValue) {
                 this.fieldValue = fieldValue;

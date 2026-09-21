@@ -132,9 +132,6 @@ public class DeleteTodoTaskRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>63edc8da7e917d6ecdaab11b</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);

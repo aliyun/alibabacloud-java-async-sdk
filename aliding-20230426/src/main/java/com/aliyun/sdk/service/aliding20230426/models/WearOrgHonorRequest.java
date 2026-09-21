@@ -154,9 +154,6 @@ public class WearOrgHonorRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>21659595</p>
          */
         public Builder honorId(String honorId) {
             this.putBodyParameter("honorId", honorId);
@@ -166,9 +163,6 @@ public class WearOrgHonorRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
          */
         public Builder orgId(Long orgId) {
             this.putBodyParameter("orgId", orgId);
@@ -178,9 +172,6 @@ public class WearOrgHonorRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>363784</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("userId", userId);
@@ -190,9 +181,6 @@ public class WearOrgHonorRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
          */
         public Builder wear(Boolean wear) {
             this.putBodyParameter("wear", wear);

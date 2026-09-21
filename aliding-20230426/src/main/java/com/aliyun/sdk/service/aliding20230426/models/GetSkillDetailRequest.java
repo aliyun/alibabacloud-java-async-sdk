@@ -198,10 +198,7 @@ public class GetSkillDetailRequest extends Request {
             } 
 
             /**
-             * <p>Buc SsoTicket</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bucxxx</p>
+             * SsoTicket.
              */
             public Builder ssoTicket(String ssoTicket) {
                 this.ssoTicket = ssoTicket;

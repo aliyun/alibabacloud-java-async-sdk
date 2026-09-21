@@ -156,9 +156,6 @@ public class CopyDentryByNodeIdRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>P7QG4Yx2Jpx4OolYC1QPg5BaJ9dEq3XD</p>
          */
         public Builder dentryUuid(String dentryUuid) {
             this.putBodyParameter("DentryUuid", dentryUuid);

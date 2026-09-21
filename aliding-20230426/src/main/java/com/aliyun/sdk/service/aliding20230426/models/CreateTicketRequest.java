@@ -220,9 +220,6 @@ public class CreateTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>G3IOe205RLciE</p>
          */
         public Builder openTeamId(String openTeamId) {
             this.putBodyParameter("OpenTeamId", openTeamId);
@@ -232,9 +229,6 @@ public class CreateTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxxx</p>
          */
         public Builder openTemplateBizId(String openTemplateBizId) {
             this.putBodyParameter("OpenTemplateBizId", openTemplateBizId);
@@ -254,9 +248,6 @@ public class CreateTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SG</p>
          */
         public Builder scene(String scene) {
             this.putBodyParameter("Scene", scene);
@@ -286,9 +277,6 @@ public class CreateTicketRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Killer Ball Wo Mouichido</p>
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

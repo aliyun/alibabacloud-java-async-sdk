@@ -153,9 +153,6 @@ public class AddAttendeeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -165,9 +162,6 @@ public class AddAttendeeRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cnNTbW1YbU9sL2p6aFJZdEgvdlQrQT08</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -242,9 +236,6 @@ public class AddAttendeeRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;

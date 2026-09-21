@@ -122,10 +122,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

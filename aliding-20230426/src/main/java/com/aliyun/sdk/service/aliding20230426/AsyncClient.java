@@ -1074,6 +1074,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     ResponseIterable<InvokeAssistantResponseBody> invokeAssistantWithResponseIterable(InvokeAssistantRequest request);
 
     /**
+     * @param request the request parameters of InvokeContainer  InvokeContainerRequest
+     * @return InvokeContainerResponse
+     */
+    CompletableFuture<InvokeContainerResponse> invokeContainer(InvokeContainerRequest request);
+
+    /**
      * @param request the request parameters of InvokeSkill  InvokeSkillRequest
      * @return InvokeSkillResponse
      */

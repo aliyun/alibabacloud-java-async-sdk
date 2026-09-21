@@ -279,9 +279,6 @@ public class UpdateWorkspaceMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>012345</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -290,9 +287,6 @@ public class UpdateWorkspaceMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>USER</p>
              */
             public Builder memberType(String memberType) {
                 this.memberType = memberType;
@@ -301,9 +295,6 @@ public class UpdateWorkspaceMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ONLY_VIEWER</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

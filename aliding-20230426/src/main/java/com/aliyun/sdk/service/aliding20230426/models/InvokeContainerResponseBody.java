@@ -12,38 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeSkillResponseBody} extends {@link TeaModel}
+ * {@link InvokeContainerResponseBody} extends {@link TeaModel}
  *
- * <p>InvokeSkillResponseBody</p>
+ * <p>InvokeContainerResponseBody</p>
  */
-public class InvokeSkillResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Data")
+public class InvokeContainerResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("data")
     private Object data;
 
-    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @com.aliyun.core.annotation.NameInMap("Finished")
-    private Boolean finished;
-
-    @com.aliyun.core.annotation.NameInMap("Metadata")
-    private Object metadata;
-
-    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private InvokeSkillResponseBody(Builder builder) {
+    private InvokeContainerResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMsg = builder.errorMsg;
-        this.finished = builder.finished;
-        this.metadata = builder.metadata;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -52,7 +44,7 @@ public class InvokeSkillResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InvokeSkillResponseBody create() {
+    public static InvokeContainerResponseBody create() {
         return builder().build();
     }
 
@@ -82,20 +74,6 @@ public class InvokeSkillResponseBody extends TeaModel {
     }
 
     /**
-     * @return finished
-     */
-    public Boolean getFinished() {
-        return this.finished;
-    }
-
-    /**
-     * @return metadata
-     */
-    public Object getMetadata() {
-        return this.metadata;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -113,26 +91,22 @@ public class InvokeSkillResponseBody extends TeaModel {
         private Object data; 
         private String errorCode; 
         private String errorMsg; 
-        private Boolean finished; 
-        private Object metadata; 
         private String requestId; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(InvokeSkillResponseBody model) {
+        private Builder(InvokeContainerResponseBody model) {
             this.data = model.data;
             this.errorCode = model.errorCode;
             this.errorMsg = model.errorMsg;
-            this.finished = model.finished;
-            this.metadata = model.metadata;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
 
         /**
-         * Data.
+         * data.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -140,7 +114,7 @@ public class InvokeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * errorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -148,7 +122,7 @@ public class InvokeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * errorMsg.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -156,23 +130,7 @@ public class InvokeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Finished.
-         */
-        public Builder finished(Boolean finished) {
-            this.finished = finished;
-            return this;
-        }
-
-        /**
-         * Metadata.
-         */
-        public Builder metadata(Object metadata) {
-            this.metadata = metadata;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,15 +138,15 @@ public class InvokeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public InvokeSkillResponseBody build() {
-            return new InvokeSkillResponseBody(this);
+        public InvokeContainerResponseBody build() {
+            return new InvokeContainerResponseBody(this);
         } 
 
     } 

@@ -100,9 +100,6 @@ public class DeleteScenegroupMemberRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cidvkLfbOyIiSYqjgvAiWwFow==</p>
          */
         public Builder openConversationId(String openConversationId) {
             this.putBodyParameter("OpenConversationId", openConversationId);
@@ -112,9 +109,6 @@ public class DeleteScenegroupMemberRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123xxx,223xxx</p>
          */
         public Builder userIds(String userIds) {
             this.putBodyParameter("UserIds", userIds);

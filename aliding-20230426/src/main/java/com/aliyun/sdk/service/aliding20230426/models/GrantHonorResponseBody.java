@@ -88,10 +88,7 @@ public class GrantHonorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>45b4d029-ab94-4672-aa0f-bd79590374cb</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

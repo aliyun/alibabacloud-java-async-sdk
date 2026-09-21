@@ -128,9 +128,6 @@ public class DocUpdateContentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[]</p>
          */
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
@@ -149,9 +146,6 @@ public class DocUpdateContentRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4j6OJzVEG4jJO3p8</p>
          */
         public Builder docKey(String docKey) {
             this.putBodyParameter("DocKey", docKey);

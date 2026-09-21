@@ -172,10 +172,7 @@ public class RemoveAttendeeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>RequestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>A348BA5D-FFD4-57E4-9450-23A14D72F331</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

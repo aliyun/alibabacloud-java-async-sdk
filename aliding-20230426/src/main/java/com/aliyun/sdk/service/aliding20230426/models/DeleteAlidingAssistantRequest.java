@@ -99,9 +99,6 @@ public class DeleteAlidingAssistantRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1234</p>
          */
         public Builder assistantId(String assistantId) {
             this.putBodyParameter("AssistantId", assistantId);

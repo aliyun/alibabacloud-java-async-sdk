@@ -117,10 +117,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -1046,10 +1043,7 @@ public class GetSpaceDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>WordCount</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * WordCount.
              */
             public Builder wordCount(Long wordCount) {
                 this.wordCount = wordCount;

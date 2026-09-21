@@ -109,9 +109,6 @@ public class GetDeptNoRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>012345</p>
          */
         public Builder deptId(String deptId) {
             this.putBodyParameter("deptId", deptId);

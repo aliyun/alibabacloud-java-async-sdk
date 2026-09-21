@@ -172,10 +172,7 @@ public class DeleteEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>4248DCC9-785F-5A14-8BE0-830FD52E1261</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

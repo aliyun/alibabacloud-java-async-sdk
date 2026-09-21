@@ -139,9 +139,6 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -161,9 +158,6 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -306,9 +300,6 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>012345</p>
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -317,9 +308,6 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>USER</p>
              */
             public Builder memberType(String memberType) {
                 this.memberType = memberType;
@@ -328,9 +316,6 @@ public class AddWorkspaceDocMembersRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>EDITOR</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

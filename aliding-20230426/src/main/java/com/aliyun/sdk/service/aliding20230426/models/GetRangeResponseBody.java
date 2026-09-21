@@ -151,10 +151,7 @@ public class GetRangeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,10 +251,7 @@ public class GetRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>red</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Red.
              */
             public Builder red(Integer red) {
                 this.red = red;
@@ -265,10 +259,7 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>green</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Green.
              */
             public Builder green(Integer green) {
                 this.green = green;
@@ -276,10 +267,7 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>blue</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Blue.
              */
             public Builder blue(Integer blue) {
                 this.blue = blue;
@@ -287,10 +275,7 @@ public class GetRangeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>hexString</p>
-             * 
-             * <strong>example:</strong>
-             * <p>#000000</p>
+             * HexString.
              */
             public Builder hexString(String hexString) {
                 this.hexString = hexString;

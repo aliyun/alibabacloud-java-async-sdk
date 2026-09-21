@@ -129,9 +129,6 @@ public class GetMultiDimTableRecordRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>101114</p>
          */
         public Builder baseId(String baseId) {
             this.putBodyParameter("BaseId", baseId);
@@ -141,9 +138,6 @@ public class GetMultiDimTableRecordRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
          */
         public Builder recordId(String recordId) {
             this.putBodyParameter("RecordId", recordId);
@@ -153,9 +147,6 @@ public class GetMultiDimTableRecordRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
          */
         public Builder sheetIdOrName(String sheetIdOrName) {
             this.putBodyParameter("SheetIdOrName", sheetIdOrName);

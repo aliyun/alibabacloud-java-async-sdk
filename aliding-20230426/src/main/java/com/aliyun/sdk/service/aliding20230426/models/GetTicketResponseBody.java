@@ -673,10 +673,7 @@ public class GetTicketResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>OpenTemplateBizId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OpenTemplateBizId</p>
+             * OpenTemplateBizId.
              */
             public Builder openTemplateBizId(String openTemplateBizId) {
                 this.openTemplateBizId = openTemplateBizId;
@@ -684,10 +681,7 @@ public class GetTicketResponseBody extends TeaModel {
             }
 
             /**
-             * <p>OpenTemplateBizId</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OpenTemplateBizId</p>
+             * OpenTemplateId.
              */
             public Builder openTemplateId(String openTemplateId) {
                 this.openTemplateId = openTemplateId;

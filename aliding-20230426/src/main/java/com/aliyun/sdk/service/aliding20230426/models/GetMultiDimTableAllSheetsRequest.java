@@ -99,9 +99,6 @@ public class GetMultiDimTableAllSheetsRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>144972</p>
          */
         public Builder baseId(String baseId) {
             this.putBodyParameter("BaseId", baseId);

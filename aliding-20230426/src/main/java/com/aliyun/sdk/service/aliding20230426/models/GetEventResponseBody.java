@@ -447,10 +447,7 @@ public class GetEventResponseBody extends TeaModel {
         }
 
         /**
-         * <p>requestId</p>
-         * 
-         * <strong>example:</strong>
-         * <p>requestId</p>
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -989,7 +986,7 @@ public class GetEventResponseBody extends TeaModel {
             }
 
             /**
-             * <p>--</p>
+             * MeetingRooms.
              */
             public Builder meetingRooms(java.util.List<String> meetingRooms) {
                 this.meetingRooms = meetingRooms;

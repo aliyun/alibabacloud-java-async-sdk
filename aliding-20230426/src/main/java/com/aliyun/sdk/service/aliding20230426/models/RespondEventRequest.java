@@ -129,9 +129,6 @@ public class RespondEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>primary</p>
          */
         public Builder calendarId(String calendarId) {
             this.putBodyParameter("CalendarId", calendarId);
@@ -141,9 +138,6 @@ public class RespondEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>RHN2REJFc2w4VHNiUUlvcVB0ejFydz09</p>
          */
         public Builder eventId(String eventId) {
             this.putBodyParameter("EventId", eventId);
@@ -153,9 +147,6 @@ public class RespondEventRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>accepted</p>
          */
         public Builder responseStatus(String responseStatus) {
             this.putBodyParameter("ResponseStatus", responseStatus);

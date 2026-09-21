@@ -156,9 +156,6 @@ public class UpdateTodoTaskExecutorStatusRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>15002141</p>
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);
