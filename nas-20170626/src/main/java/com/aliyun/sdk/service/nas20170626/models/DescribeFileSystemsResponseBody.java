@@ -125,7 +125,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of file systems per page.</p>
+         * <p>The number of file systems on each page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -163,6 +163,123 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFileSystemsResponseBody</p>
+     */
+    public static class AutoUpgradeConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("capacityUsedRatio")
+        private Integer capacityUsedRatio;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("step")
+        private Integer step;
+
+        @com.aliyun.core.annotation.NameInMap("time")
+        private Integer time;
+
+        private AutoUpgradeConfig(Builder builder) {
+            this.capacityUsedRatio = builder.capacityUsedRatio;
+            this.enabled = builder.enabled;
+            this.step = builder.step;
+            this.time = builder.time;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoUpgradeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacityUsedRatio
+         */
+        public Integer getCapacityUsedRatio() {
+            return this.capacityUsedRatio;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return step
+         */
+        public Integer getStep() {
+            return this.step;
+        }
+
+        /**
+         * @return time
+         */
+        public Integer getTime() {
+            return this.time;
+        }
+
+        public static final class Builder {
+            private Integer capacityUsedRatio; 
+            private Boolean enabled; 
+            private Integer step; 
+            private Integer time; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoUpgradeConfig model) {
+                this.capacityUsedRatio = model.capacityUsedRatio;
+                this.enabled = model.enabled;
+                this.step = model.step;
+                this.time = model.time;
+            } 
+
+            /**
+             * capacityUsedRatio.
+             */
+            public Builder capacityUsedRatio(Integer capacityUsedRatio) {
+                this.capacityUsedRatio = capacityUsedRatio;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * step.
+             */
+            public Builder step(Integer step) {
+                this.step = step;
+                return this;
+            }
+
+            /**
+             * time.
+             */
+            public Builder time(Integer time) {
+                this.time = time;
+                return this;
+            }
+
+            public AutoUpgradeConfig build() {
+                return new AutoUpgradeConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeFileSystemsResponseBody} extends {@link TeaModel}
@@ -1427,6 +1544,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
+        @com.aliyun.core.annotation.NameInMap("AutoUpgradeConfig")
+        private AutoUpgradeConfig autoUpgradeConfig;
+
         @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
@@ -1526,6 +1646,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private FileSystem(Builder builder) {
             this.accessPointCount = builder.accessPointCount;
             this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
+            this.autoUpgradeConfig = builder.autoUpgradeConfig;
             this.bandwidth = builder.bandwidth;
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
@@ -1580,6 +1701,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
          */
         public String getAutoSnapshotPolicyId() {
             return this.autoSnapshotPolicyId;
+        }
+
+        /**
+         * @return autoUpgradeConfig
+         */
+        public AutoUpgradeConfig getAutoUpgradeConfig() {
+            return this.autoUpgradeConfig;
         }
 
         /**
@@ -1809,6 +1937,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private String accessPointCount; 
             private String autoSnapshotPolicyId; 
+            private AutoUpgradeConfig autoUpgradeConfig; 
             private Long bandwidth; 
             private Long capacity; 
             private String chargeType; 
@@ -1848,6 +1977,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Builder(FileSystem model) {
                 this.accessPointCount = model.accessPointCount;
                 this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.autoUpgradeConfig = model.autoUpgradeConfig;
                 this.bandwidth = model.bandwidth;
                 this.capacity = model.capacity;
                 this.chargeType = model.chargeType;
@@ -1895,6 +2025,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+                return this;
+            }
+
+            /**
+             * AutoUpgradeConfig.
+             */
+            public Builder autoUpgradeConfig(AutoUpgradeConfig autoUpgradeConfig) {
+                this.autoUpgradeConfig = autoUpgradeConfig;
                 return this;
             }
 

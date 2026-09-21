@@ -161,9 +161,9 @@ public class DescribeFileSystemsRequest extends Request {
          * <p>The file system ID.</p>
          * <ul>
          * <li>General-purpose NAS: 31a8e4****.</li>
-         * <li>Extreme NAS: must start with extreme-, such as extreme-0015****.</li>
-         * <li>CPFS (locally redundant): must start with cpfs-, such as cpfs-125487****.</li>
-         * <li>CPFS SE (zone-redundant): must start with cpfsse-, such as cpfsse-022c71b134****.</li>
+         * <li>Extreme NAS: Must start with extreme-, such as extreme-0015****.</li>
+         * <li>Cloud Parallel File Storage (CPFS) (locally redundant version): Must start with cpfs-, such as cpfs-125487****.</li>
+         * <li>CPFS SE (zone-redundant version): Must start with cpfsse-, such as cpfsse-022c71b134****.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -176,14 +176,14 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The type of the file system.</p>
+         * <p>The file system type.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>all (default): queries all types.</li>
          * <li>standard: General-purpose NAS.</li>
          * <li>extreme: Extreme NAS.</li>
-         * <li>cpfs: Cloud Parallel File Storage (CPFS) with locally redundant storage.</li>
-         * <li>cpfsse: CPFS SE with zone-redundant storage.</li>
+         * <li>cpfs: Cloud Parallel File Storage (CPFS) (locally redundant version).</li>
+         * <li>cpfsse: CPFS SE (zone-redundant version).</li>
          * </ul>
          * <blockquote>
          * <p>To query multiple types, separate them with commas (,).</p>
@@ -200,6 +200,7 @@ public class DescribeFileSystemsRequest extends Request {
 
         /**
          * <p>The page number of the file system list.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,7 +212,9 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The number of file systems on each page in a paging query.</p>
+         * <p>The number of file systems on each page during a paged query.</p>
+         * <p>Valid values: 1 to 100.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -236,7 +239,18 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The storage type. Currently, only CPFS for Lingjun specifications are supported for a filtered query. Other FileSystemType values are not supported. The following specifications are supported:</p>
+         * <p>The storage type. Currently, only CPFS for Lingjun specifications are supported for filtered query. Other file system types (FileSystemType) are not supported. The following specifications are supported:</p>
+         * <ul>
+         * <li>bm_advance_400</li>
+         * <li>bm_advance_400_large</li>
+         * <li>bm_advance_new</li>
+         * <li>bm_advance_100</li>
+         * <li>cpfslight_100</li>
+         * <li>bm_p100_stepsize_300</li>
+         * <li>bm_p400_stepsize_1</li>
+         * <li>bm_p400_stepsize_300</li>
+         * </ul>
+         * <p>You can specify multiple specifications separated by commas (,). For example: bm_advance_400,bm_advance_new.</p>
          * 
          * <strong>example:</strong>
          * <p>bm_advance_400</p>
@@ -257,7 +271,8 @@ public class DescribeFileSystemsRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC must be the same as the VPC of the Elastic Computing Service (ECS) server to which you want to mount the file system.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1sevsgtqvk5gxbl****</p>
@@ -349,7 +364,7 @@ public class DescribeFileSystemsRequest extends Request {
              * <p>The tag value.</p>
              * <p>Limits:</p>
              * <ul>
-             * <li>N can be an integer from 1 to 20.</li>
+             * <li>Valid values of N: 1 to 20.</li>
              * <li>The tag value can be up to 128 characters in length.</li>
              * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
              * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
