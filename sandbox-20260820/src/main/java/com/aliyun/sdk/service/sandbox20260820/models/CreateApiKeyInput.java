@@ -106,7 +106,10 @@ public class CreateApiKeyInput extends TeaModel {
         } 
 
         /**
-         * apiKeyName.
+         * <p>The name of the API key. The name can be up to 128 characters in length and can contain letters, digits, spaces, hyphens (-), underscores (_), and periods (.).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ci-pipeline-key</p>
          */
         public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = apiKeyName;
@@ -114,7 +117,10 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * expireTime.
+         * <p>The expiration time of the API key. The time is in UTC and in the RFC 3339 format. If you leave this parameter empty, the API key never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31T23:59:59Z</p>
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -122,7 +128,7 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * ipBlacklist.
+         * <p>The IP blacklist. After you configure this parameter, IP addresses in the list cannot use the API key. This parameter is mutually exclusive with ipWhitelist.</p>
          */
         public Builder ipBlacklist(java.util.List<IPConfig> ipBlacklist) {
             this.ipBlacklist = ipBlacklist;
@@ -130,7 +136,7 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * ipWhitelist.
+         * <p>The IP address whitelist. After you configure this parameter, only IP addresses in the list can use the API key. This parameter is mutually exclusive with ipBlacklist.</p>
          */
         public Builder ipWhitelist(java.util.List<IPConfig> ipWhitelist) {
             this.ipWhitelist = ipWhitelist;
@@ -138,7 +144,10 @@ public class CreateApiKeyInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The ID of the team to which the API key belongs. The value is in UUID format. If you do not specify this parameter, the default team of the current account is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5f4a2c18-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;

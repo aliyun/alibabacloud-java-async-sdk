@@ -132,7 +132,7 @@ public class CreateVolumeInput extends TeaModel {
         } 
 
         /**
-         * agenticBucketVolumeConfig.
+         * <p>The AgenticBucket Volume configuration.</p>
          */
         public Builder agenticBucketVolumeConfig(AgenticBucketVolumeConfig agenticBucketVolumeConfig) {
             this.agenticBucketVolumeConfig = agenticBucketVolumeConfig;
@@ -140,7 +140,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * agenticFSVolumeConfig.
+         * <p>The AgenticFS Volume configuration.</p>
          */
         public Builder agenticFSVolumeConfig(AgenticFSVolumeConfig agenticFSVolumeConfig) {
             this.agenticFSVolumeConfig = agenticFSVolumeConfig;
@@ -148,7 +148,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * juiceFSVolumeConfig.
+         * <p>The JuiceFS Volume configuration.</p>
          */
         public Builder juiceFSVolumeConfig(JuiceFSVolumeConfig juiceFSVolumeConfig) {
             this.juiceFSVolumeConfig = juiceFSVolumeConfig;
@@ -156,7 +156,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * mountConfig.
+         * <p>The mount configuration.</p>
          */
         public Builder mountConfig(MountConfig mountConfig) {
             this.mountConfig = mountConfig;
@@ -164,7 +164,7 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * ossVolumeConfig.
+         * <p>The OSS Volume configuration.</p>
          */
         public Builder ossVolumeConfig(OSSVolumeConfig ossVolumeConfig) {
             this.ossVolumeConfig = ossVolumeConfig;
@@ -172,7 +172,10 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * teamID.
+         * <p>The unique identifier of the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>37ddc466-****</p>
          */
         public Builder teamID(String teamID) {
             this.teamID = teamID;
@@ -180,7 +183,10 @@ public class CreateVolumeInput extends TeaModel {
         }
 
         /**
-         * volumeName.
+         * <p>The name, which must be unique within the team.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>workspace</p>
          */
         public Builder volumeName(String volumeName) {
             this.volumeName = volumeName;
@@ -259,7 +265,10 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * groupID.
+             * <p>The groupID of the local directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder groupID(Integer groupID) {
                 this.groupID = groupID;
@@ -267,7 +276,10 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * serverAddr.
+             * <p>The Access Point endpoint address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-xxxx.xxxx-jnk89.cn-hangzhou.nas.aliyuncs.com:/</p>
              */
             public Builder serverAddr(String serverAddr) {
                 this.serverAddr = serverAddr;
@@ -275,7 +287,10 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * userID.
+             * <p>The userID of the local directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder userID(Integer userID) {
                 this.userID = userID;
@@ -355,7 +370,10 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -363,7 +381,7 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -371,7 +389,10 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -438,7 +459,10 @@ public class CreateVolumeInput extends TeaModel {
             } 
 
             /**
-             * role.
+             * <p>The permission role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1118555931230119:role/aliyunfcdefaultrole</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -446,7 +470,7 @@ public class CreateVolumeInput extends TeaModel {
             }
 
             /**
-             * vpcConfig.
+             * <p>The VPC configuration.</p>
              */
             public Builder vpcConfig(VpcConfig vpcConfig) {
                 this.vpcConfig = vpcConfig;

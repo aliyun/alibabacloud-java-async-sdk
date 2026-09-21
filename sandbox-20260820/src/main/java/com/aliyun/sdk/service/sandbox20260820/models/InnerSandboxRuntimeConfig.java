@@ -67,7 +67,10 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
         } 
 
         /**
-         * role.
+         * <p>The RAM role that grants the required permissions to the sandbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::xxxx:role/xxx_role</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -75,7 +78,7 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
         }
 
         /**
-         * vpcConfig.
+         * <p>The VPC configuration.</p>
          */
         public Builder vpcConfig(VpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
@@ -154,7 +157,10 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
             } 
 
             /**
-             * securityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -162,7 +168,7 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
             }
 
             /**
-             * vSwitchIds.
+             * <p>The vSwitch IDs.</p>
              */
             public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -170,7 +176,10 @@ public class InnerSandboxRuntimeConfig extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

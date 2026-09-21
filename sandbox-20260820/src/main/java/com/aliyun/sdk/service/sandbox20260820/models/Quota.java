@@ -20,6 +20,9 @@ public class Quota extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("cpuCores")
     private Integer cpuCores;
 
+    @com.aliyun.core.annotation.NameInMap("instanceCount")
+    private Integer instanceCount;
+
     @com.aliyun.core.annotation.NameInMap("memoryGB")
     private Integer memoryGB;
 
@@ -28,6 +31,7 @@ public class Quota extends TeaModel {
 
     private Quota(Builder builder) {
         this.cpuCores = builder.cpuCores;
+        this.instanceCount = builder.instanceCount;
         this.memoryGB = builder.memoryGB;
         this.tagValue = builder.tagValue;
     }
@@ -52,6 +56,13 @@ public class Quota extends TeaModel {
     }
 
     /**
+     * @return instanceCount
+     */
+    public Integer getInstanceCount() {
+        return this.instanceCount;
+    }
+
+    /**
      * @return memoryGB
      */
     public Integer getMemoryGB() {
@@ -67,6 +78,7 @@ public class Quota extends TeaModel {
 
     public static final class Builder {
         private Integer cpuCores; 
+        private Integer instanceCount; 
         private Integer memoryGB; 
         private String tagValue; 
 
@@ -75,6 +87,7 @@ public class Quota extends TeaModel {
 
         private Builder(Quota model) {
             this.cpuCores = model.cpuCores;
+            this.instanceCount = model.instanceCount;
             this.memoryGB = model.memoryGB;
             this.tagValue = model.tagValue;
         } 
@@ -84,6 +97,14 @@ public class Quota extends TeaModel {
          */
         public Builder cpuCores(Integer cpuCores) {
             this.cpuCores = cpuCores;
+            return this;
+        }
+
+        /**
+         * instanceCount.
+         */
+        public Builder instanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
             return this;
         }
 

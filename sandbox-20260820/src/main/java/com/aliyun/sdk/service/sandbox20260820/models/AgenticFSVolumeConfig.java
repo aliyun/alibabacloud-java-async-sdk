@@ -119,7 +119,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         } 
 
         /**
-         * accessPointID.
+         * <p>The access point ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-xxxx</p>
          */
         public Builder accessPointID(String accessPointID) {
             this.accessPointID = accessPointID;
@@ -127,7 +130,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * agenticSpaceID.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentic-xxxx</p>
          */
         public Builder agenticSpaceID(String agenticSpaceID) {
             this.agenticSpaceID = agenticSpaceID;
@@ -135,7 +141,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * fileSystemID.
+         * <p>The file system ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>03204sl2qjiax4ocdt2</p>
          */
         public Builder fileSystemID(String fileSystemID) {
             this.fileSystemID = fileSystemID;
@@ -143,7 +152,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * groupID.
+         * <p>The group ID for local mounting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder groupID(Integer groupID) {
             this.groupID = groupID;
@@ -151,7 +163,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * serverAddr.
+         * <p>The AgenticFS access point address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-xxxx.03204sl2qjiax4ocdt2-ljs60.cn-shanghai.nas.aliyuncs.com</p>
          */
         public Builder serverAddr(String serverAddr) {
             this.serverAddr = serverAddr;
@@ -159,7 +174,10 @@ public class AgenticFSVolumeConfig extends TeaModel {
         }
 
         /**
-         * userID.
+         * <p>The user ID for local mounting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder userID(Integer userID) {
             this.userID = userID;
