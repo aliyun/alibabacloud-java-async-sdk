@@ -20,6 +20,9 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("datasets")
     private java.util.List<Datasets> datasets;
 
+    @com.aliyun.core.annotation.NameInMap("diagnostics")
+    private java.util.Map<String, ?> diagnostics;
+
     @com.aliyun.core.annotation.NameInMap("effectiveScript")
     private String effectiveScript;
 
@@ -28,6 +31,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
 
     private PreviewDataPipelineResponseBody(Builder builder) {
         this.datasets = builder.datasets;
+        this.diagnostics = builder.diagnostics;
         this.effectiveScript = builder.effectiveScript;
         this.requestId = builder.requestId;
     }
@@ -52,6 +56,13 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
     }
 
     /**
+     * @return diagnostics
+     */
+    public java.util.Map<String, ?> getDiagnostics() {
+        return this.diagnostics;
+    }
+
+    /**
      * @return effectiveScript
      */
     public String getEffectiveScript() {
@@ -67,6 +78,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Datasets> datasets; 
+        private java.util.Map<String, ?> diagnostics; 
         private String effectiveScript; 
         private String requestId; 
 
@@ -75,6 +87,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
 
         private Builder(PreviewDataPipelineResponseBody model) {
             this.datasets = model.datasets;
+            this.diagnostics = model.diagnostics;
             this.effectiveScript = model.effectiveScript;
             this.requestId = model.requestId;
         } 
@@ -88,7 +101,15 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The effective SPL.</p>
+         * <p>The aggregated diagnostics.</p>
+         */
+        public Builder diagnostics(java.util.Map<String, ?> diagnostics) {
+            this.diagnostics = diagnostics;
+            return this;
+        }
+
+        /**
+         * <p>The effective SPL script.</p>
          * 
          * <strong>example:</strong>
          * <ul>

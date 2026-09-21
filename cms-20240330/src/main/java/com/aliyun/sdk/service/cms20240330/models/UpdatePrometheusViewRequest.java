@@ -24,10 +24,12 @@ public class UpdatePrometheusViewRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("authFreeReadPolicy")
+    @Deprecated
     private String authFreeReadPolicy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableAuthFreeRead")
+    @Deprecated
     private Boolean enableAuthFreeRead;
 
     @com.aliyun.core.annotation.Body
@@ -158,7 +160,7 @@ public class UpdatePrometheusViewRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Prometheus view instance.</p>
+         * <p>The instance ID of the Prometheus view graph instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +173,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The policy for password-free read access. IP address segments and VPC IDs are supported.</p>
+         * <p>The authentication-free read policy. IP CIDR blocks and VPC IDs are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -192,7 +194,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password-free read access.</p>
+         * <p>Specifies whether authentication-free read is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -204,7 +206,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable authentication tokens.</p>
+         * <p>Specifies whether authToken is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -216,7 +218,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>A list of Prometheus instances.</p>
+         * <p>The list of Prometheus instances.</p>
          */
         public Builder prometheusInstances(java.util.List<PrometheusInstances> prometheusInstances) {
             this.putBodyParameter("prometheusInstances", prometheusInstances);
@@ -237,7 +239,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The status of the Prometheus view.</p>
+         * <p>The running status.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -249,7 +251,7 @@ public class UpdatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The workspace to which the view belongs.</p>
+         * <p>The workspace to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-108490012345-cn-heyuan</p>
@@ -344,7 +346,7 @@ public class UpdatePrometheusViewRequest extends Request {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-north-2-gov-1</p>

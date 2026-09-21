@@ -114,7 +114,7 @@ public class ListDataPipelinesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next page.</p>
+         * <p>The pagination token for the next page.</p>
          * 
          * <strong>example:</strong>
          * <p>eyJvZmZzZXQiOjEwfQ==</p>

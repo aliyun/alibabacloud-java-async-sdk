@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreatePrometheusViewRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("authFreeReadPolicy")
+    @Deprecated
     private String authFreeReadPolicy;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enableAuthFreeRead")
+    @Deprecated
     private Boolean enableAuthFreeRead;
 
     @com.aliyun.core.annotation.Body
@@ -188,7 +190,7 @@ public class CreatePrometheusViewRequest extends Request {
         } 
 
         /**
-         * <p>Not in use.</p>
+         * <p>Not yet enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -209,7 +211,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether anonymous read is supported.</p>
+         * <p>Specifies whether authentication-free read is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -268,7 +270,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>Not in use.</p>
+         * <p>Not yet enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -280,7 +282,7 @@ public class CreatePrometheusViewRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The operation to perform.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -291,8 +293,8 @@ public class CreatePrometheusViewRequest extends Request {
         /**
          * <p>Valid values:</p>
          * <ul>
-         * <li>V1: legacy version</li>
-         * <li>V2: new version.</li>
+         * <li>V1: Legacy version.</li>
+         * <li>V2: New version.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

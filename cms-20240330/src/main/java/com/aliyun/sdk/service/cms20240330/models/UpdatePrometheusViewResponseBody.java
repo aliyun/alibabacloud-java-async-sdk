@@ -67,7 +67,7 @@ public class UpdatePrometheusViewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Prometheus view instance.</p>
+         * <p>The instance ID of the Prometheus view graph instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxxxxx</p>
@@ -78,7 +78,7 @@ public class UpdatePrometheusViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>64D964F5-76C7-19A2-9399-457744AB3619</p>

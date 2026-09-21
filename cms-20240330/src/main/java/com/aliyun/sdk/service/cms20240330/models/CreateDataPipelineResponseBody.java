@@ -97,6 +97,168 @@ public class CreateDataPipelineResponseBody extends TeaModel {
      *
      * <p>CreateDataPipelineResponseBody</p>
      */
+    public static class Assignments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expression")
+        private String expression;
+
+        @com.aliyun.core.annotation.NameInMap("field")
+        private String field;
+
+        private Assignments(Builder builder) {
+            this.expression = builder.expression;
+            this.field = builder.field;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Assignments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return field
+         */
+        public String getField() {
+            return this.field;
+        }
+
+        public static final class Builder {
+            private String expression; 
+            private String field; 
+
+            private Builder() {
+            } 
+
+            private Builder(Assignments model) {
+                this.expression = model.expression;
+                this.field = model.field;
+            } 
+
+            /**
+             * <p>The assignment expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duration / 1000000.0</p>
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * <p>The output field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latency_ms</p>
+             */
+            public Builder field(String field) {
+                this.field = field;
+                return this;
+            }
+
+            public Assignments build() {
+                return new Assignments(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class Projections extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("target")
+        private String target;
+
+        private Projections(Builder builder) {
+            this.source = builder.source;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Projections create() {
+            return builder().build();
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String source; 
+            private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(Projections model) {
+                this.source = model.source;
+                this.target = model.target;
+            } 
+
+            /**
+             * <p>The source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceName</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The target field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public Projections build() {
+                return new Projections(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keepPrefix")
         private Integer keepPrefix;
@@ -270,6 +432,486 @@ public class CreateDataPipelineResponseBody extends TeaModel {
      *
      * <p>CreateDataPipelineResponseBody</p>
      */
+    public static class Field extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("container")
+        private String container;
+
+        @com.aliyun.core.annotation.NameInMap("kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private java.util.List<String> path;
+
+        private Field(Builder builder) {
+            this.container = builder.container;
+            this.kind = builder.kind;
+            this.name = builder.name;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Field create() {
+            return builder().build();
+        }
+
+        /**
+         * @return container
+         */
+        public String getContainer() {
+            return this.container;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public java.util.List<String> getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private String container; 
+            private String kind; 
+            private String name; 
+            private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Field model) {
+                this.container = model.container;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.path = model.path;
+            } 
+
+            /**
+             * <p>The JSON object container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attributes</p>
+             */
+            public Builder container(String container) {
+                this.container = container;
+                return this;
+            }
+
+            /**
+             * <p>The reference data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field</p>
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * <p>The field or dimension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceName</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The JSON literal key path.</p>
+             */
+            public Builder path(java.util.List<String> path) {
+                this.path = path;
+                return this;
+            }
+
+            public Field build() {
+                return new Field(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class Conditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("field")
+        private Field field;
+
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private Conditions(Builder builder) {
+            this.field = builder.field;
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Conditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return field
+         */
+        public Field getField() {
+            return this.field;
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private Field field; 
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.field = model.field;
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The field reference.</p>
+             */
+            public Builder field(Field field) {
+                this.field = field;
+                return this;
+            }
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The match values.</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public Conditions build() {
+                return new Conditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class MetricName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private MetricName(Builder builder) {
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetricName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricName model) {
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The metric names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;http_requests_total&quot;]</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public MetricName build() {
+                return new MetricName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ServiceName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private ServiceName(Builder builder) {
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceName model) {
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The match values.</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public ServiceName build() {
+                return new ServiceName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class Scope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        private java.util.List<Conditions> conditions;
+
+        @com.aliyun.core.annotation.NameInMap("metricName")
+        private MetricName metricName;
+
+        @com.aliyun.core.annotation.NameInMap("serviceName")
+        private ServiceName serviceName;
+
+        private Scope(Builder builder) {
+            this.conditions = builder.conditions;
+            this.metricName = builder.metricName;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Scope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<Conditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return metricName
+         */
+        public MetricName getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public ServiceName getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private java.util.List<Conditions> conditions; 
+            private MetricName metricName; 
+            private ServiceName serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scope model) {
+                this.conditions = model.conditions;
+                this.metricName = model.metricName;
+                this.serviceName = model.serviceName;
+            } 
+
+            /**
+             * <p>The additional field conditions.</p>
+             */
+            public Builder conditions(java.util.List<Conditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * <p>The metric name scope.</p>
+             */
+            public Builder metricName(MetricName metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * <p>The service name scope.</p>
+             */
+            public Builder serviceName(ServiceName serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public Scope build() {
+                return new Scope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
     public static class Selector extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceNames")
         private java.util.List<String> serviceNames;
@@ -304,7 +946,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -388,14 +1030,26 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applications")
         private java.util.List<String> applications;
 
+        @com.aliyun.core.annotation.NameInMap("assignments")
+        private java.util.List<Assignments> assignments;
+
         @com.aliyun.core.annotation.NameInMap("expression")
         private String expression;
 
         @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List<String> fields;
 
+        @com.aliyun.core.annotation.NameInMap("parameters")
+        private java.util.Map<String, ?> parameters;
+
+        @com.aliyun.core.annotation.NameInMap("projections")
+        private java.util.List<Projections> projections;
+
         @com.aliyun.core.annotation.NameInMap("rules")
         private java.util.List<Rules> rules;
+
+        @com.aliyun.core.annotation.NameInMap("scope")
+        private Scope scope;
 
         @com.aliyun.core.annotation.NameInMap("script")
         private String script;
@@ -408,9 +1062,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
         private Config(Builder builder) {
             this.applications = builder.applications;
+            this.assignments = builder.assignments;
             this.expression = builder.expression;
             this.fields = builder.fields;
+            this.parameters = builder.parameters;
+            this.projections = builder.projections;
             this.rules = builder.rules;
+            this.scope = builder.scope;
             this.script = builder.script;
             this.selector = builder.selector;
             this.target = builder.target;
@@ -432,6 +1090,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignments
+         */
+        public java.util.List<Assignments> getAssignments() {
+            return this.assignments;
+        }
+
+        /**
          * @return expression
          */
         public String getExpression() {
@@ -446,10 +1111,31 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameters
+         */
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return projections
+         */
+        public java.util.List<Projections> getProjections() {
+            return this.projections;
+        }
+
+        /**
          * @return rules
          */
         public java.util.List<Rules> getRules() {
             return this.rules;
+        }
+
+        /**
+         * @return scope
+         */
+        public Scope getScope() {
+            return this.scope;
         }
 
         /**
@@ -475,9 +1161,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> applications; 
+            private java.util.List<Assignments> assignments; 
             private String expression; 
             private java.util.List<String> fields; 
+            private java.util.Map<String, ?> parameters; 
+            private java.util.List<Projections> projections; 
             private java.util.List<Rules> rules; 
+            private Scope scope; 
             private String script; 
             private Selector selector; 
             private Target target; 
@@ -487,19 +1177,31 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
             private Builder(Config model) {
                 this.applications = model.applications;
+                this.assignments = model.assignments;
                 this.expression = model.expression;
                 this.fields = model.fields;
+                this.parameters = model.parameters;
+                this.projections = model.projections;
                 this.rules = model.rules;
+                this.scope = model.scope;
                 this.script = model.script;
                 this.selector = model.selector;
                 this.target = model.target;
             } 
 
             /**
-             * <p>The application list.</p>
+             * <p>The list of applications.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
+                return this;
+            }
+
+            /**
+             * <p>The list of field assignments.</p>
+             */
+            public Builder assignments(java.util.List<Assignments> assignments) {
+                this.assignments = assignments;
                 return this;
             }
 
@@ -515,7 +1217,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field list.</p>
+             * <p>The list of fields.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -523,10 +1225,34 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking rule list.</p>
+             * <p>The extended parameters.</p>
+             */
+            public Builder parameters(java.util.Map<String, ?> parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * <p>The list of field projections.</p>
+             */
+            public Builder projections(java.util.List<Projections> projections) {
+                this.projections = projections;
+                return this;
+            }
+
+            /**
+             * <p>The list of masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
+                return this;
+            }
+
+            /**
+             * <p>The scope in which the pipeline processing processor takes effect.</p>
+             */
+            public Builder scope(Scope scope) {
+                this.scope = scope;
                 return this;
             }
 
@@ -752,6 +1478,168 @@ public class CreateDataPipelineResponseBody extends TeaModel {
      *
      * <p>CreateDataPipelineResponseBody</p>
      */
+    public static class ConfigAssignments extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("expression")
+        private String expression;
+
+        @com.aliyun.core.annotation.NameInMap("field")
+        private String field;
+
+        private ConfigAssignments(Builder builder) {
+            this.expression = builder.expression;
+            this.field = builder.field;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigAssignments create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return field
+         */
+        public String getField() {
+            return this.field;
+        }
+
+        public static final class Builder {
+            private String expression; 
+            private String field; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigAssignments model) {
+                this.expression = model.expression;
+                this.field = model.field;
+            } 
+
+            /**
+             * <p>The assignment expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>duration / 1000000.0</p>
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * <p>The output field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latency_ms</p>
+             */
+            public Builder field(String field) {
+                this.field = field;
+                return this;
+            }
+
+            public ConfigAssignments build() {
+                return new ConfigAssignments(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ConfigProjections extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("target")
+        private String target;
+
+        private ConfigProjections(Builder builder) {
+            this.source = builder.source;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigProjections create() {
+            return builder().build();
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String source; 
+            private String target; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigProjections model) {
+                this.source = model.source;
+                this.target = model.target;
+            } 
+
+            /**
+             * <p>The source field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serviceName</p>
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * <p>The target field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service</p>
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public ConfigProjections build() {
+                return new ConfigProjections(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
     public static class ConfigRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("keepPrefix")
         private Integer keepPrefix;
@@ -925,6 +1813,486 @@ public class CreateDataPipelineResponseBody extends TeaModel {
      *
      * <p>CreateDataPipelineResponseBody</p>
      */
+    public static class ConditionsField extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("container")
+        private String container;
+
+        @com.aliyun.core.annotation.NameInMap("kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private java.util.List<String> path;
+
+        private ConditionsField(Builder builder) {
+            this.container = builder.container;
+            this.kind = builder.kind;
+            this.name = builder.name;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConditionsField create() {
+            return builder().build();
+        }
+
+        /**
+         * @return container
+         */
+        public String getContainer() {
+            return this.container;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public java.util.List<String> getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private String container; 
+            private String kind; 
+            private String name; 
+            private java.util.List<String> path; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionsField model) {
+                this.container = model.container;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.path = model.path;
+            } 
+
+            /**
+             * <p>The JSON object container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attributes</p>
+             */
+            public Builder container(String container) {
+                this.container = container;
+                return this;
+            }
+
+            /**
+             * <p>The reference data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>field</p>
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * <p>The field or dimension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>service.name</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The JSON literal key path.</p>
+             */
+            public Builder path(java.util.List<String> path) {
+                this.path = path;
+                return this;
+            }
+
+            public ConditionsField build() {
+                return new ConditionsField(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ScopeConditions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("field")
+        private ConditionsField field;
+
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private ScopeConditions(Builder builder) {
+            this.field = builder.field;
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScopeConditions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return field
+         */
+        public ConditionsField getField() {
+            return this.field;
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private ConditionsField field; 
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScopeConditions model) {
+                this.field = model.field;
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The field reference.</p>
+             */
+            public Builder field(ConditionsField field) {
+                this.field = field;
+                return this;
+            }
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The match values.</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public ScopeConditions build() {
+                return new ScopeConditions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ScopeMetricName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private ScopeMetricName(Builder builder) {
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScopeMetricName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScopeMetricName model) {
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The metric names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;http_requests_total&quot;]</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public ScopeMetricName build() {
+                return new ScopeMetricName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ScopeServiceName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("matchType")
+        private String matchType;
+
+        @com.aliyun.core.annotation.NameInMap("values")
+        private java.util.List<String> values;
+
+        private ScopeServiceName(Builder builder) {
+            this.matchType = builder.matchType;
+            this.values = builder.values;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ScopeServiceName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return matchType
+         */
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        /**
+         * @return values
+         */
+        public java.util.List<String> getValues() {
+            return this.values;
+        }
+
+        public static final class Builder {
+            private String matchType; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScopeServiceName model) {
+                this.matchType = model.matchType;
+                this.values = model.values;
+            } 
+
+            /**
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GLOB</p>
+             */
+            public Builder matchType(String matchType) {
+                this.matchType = matchType;
+                return this;
+            }
+
+            /**
+             * <p>The match values.</p>
+             */
+            public Builder values(java.util.List<String> values) {
+                this.values = values;
+                return this;
+            }
+
+            public ScopeServiceName build() {
+                return new ScopeServiceName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
+    public static class ConfigScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        private java.util.List<ScopeConditions> conditions;
+
+        @com.aliyun.core.annotation.NameInMap("metricName")
+        private ScopeMetricName metricName;
+
+        @com.aliyun.core.annotation.NameInMap("serviceName")
+        private ScopeServiceName serviceName;
+
+        private ConfigScope(Builder builder) {
+            this.conditions = builder.conditions;
+            this.metricName = builder.metricName;
+            this.serviceName = builder.serviceName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditions
+         */
+        public java.util.List<ScopeConditions> getConditions() {
+            return this.conditions;
+        }
+
+        /**
+         * @return metricName
+         */
+        public ScopeMetricName getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return serviceName
+         */
+        public ScopeServiceName getServiceName() {
+            return this.serviceName;
+        }
+
+        public static final class Builder {
+            private java.util.List<ScopeConditions> conditions; 
+            private ScopeMetricName metricName; 
+            private ScopeServiceName serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigScope model) {
+                this.conditions = model.conditions;
+                this.metricName = model.metricName;
+                this.serviceName = model.serviceName;
+            } 
+
+            /**
+             * <p>The additional field conditions.</p>
+             */
+            public Builder conditions(java.util.List<ScopeConditions> conditions) {
+                this.conditions = conditions;
+                return this;
+            }
+
+            /**
+             * <p>The metric name scope.</p>
+             */
+            public Builder metricName(ScopeMetricName metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * <p>The service name scope.</p>
+             */
+            public Builder serviceName(ScopeServiceName serviceName) {
+                this.serviceName = serviceName;
+                return this;
+            }
+
+            public ConfigScope build() {
+                return new ConfigScope(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateDataPipelineResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateDataPipelineResponseBody</p>
+     */
     public static class ConfigSelector extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("serviceNames")
         private java.util.List<String> serviceNames;
@@ -959,7 +2327,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The service name list.</p>
+             * <p>The list of service names.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1043,14 +2411,26 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("applications")
         private java.util.List<String> applications;
 
+        @com.aliyun.core.annotation.NameInMap("assignments")
+        private java.util.List<ConfigAssignments> assignments;
+
         @com.aliyun.core.annotation.NameInMap("expression")
         private String expression;
 
         @com.aliyun.core.annotation.NameInMap("fields")
         private java.util.List<String> fields;
 
+        @com.aliyun.core.annotation.NameInMap("parameters")
+        private java.util.Map<String, ?> parameters;
+
+        @com.aliyun.core.annotation.NameInMap("projections")
+        private java.util.List<ConfigProjections> projections;
+
         @com.aliyun.core.annotation.NameInMap("rules")
         private java.util.List<ConfigRules> rules;
+
+        @com.aliyun.core.annotation.NameInMap("scope")
+        private ConfigScope scope;
 
         @com.aliyun.core.annotation.NameInMap("script")
         private String script;
@@ -1063,9 +2443,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
         private ProcessorsConfig(Builder builder) {
             this.applications = builder.applications;
+            this.assignments = builder.assignments;
             this.expression = builder.expression;
             this.fields = builder.fields;
+            this.parameters = builder.parameters;
+            this.projections = builder.projections;
             this.rules = builder.rules;
+            this.scope = builder.scope;
             this.script = builder.script;
             this.selector = builder.selector;
             this.target = builder.target;
@@ -1087,6 +2471,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         }
 
         /**
+         * @return assignments
+         */
+        public java.util.List<ConfigAssignments> getAssignments() {
+            return this.assignments;
+        }
+
+        /**
          * @return expression
          */
         public String getExpression() {
@@ -1101,10 +2492,31 @@ public class CreateDataPipelineResponseBody extends TeaModel {
         }
 
         /**
+         * @return parameters
+         */
+        public java.util.Map<String, ?> getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return projections
+         */
+        public java.util.List<ConfigProjections> getProjections() {
+            return this.projections;
+        }
+
+        /**
          * @return rules
          */
         public java.util.List<ConfigRules> getRules() {
             return this.rules;
+        }
+
+        /**
+         * @return scope
+         */
+        public ConfigScope getScope() {
+            return this.scope;
         }
 
         /**
@@ -1130,9 +2542,13 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> applications; 
+            private java.util.List<ConfigAssignments> assignments; 
             private String expression; 
             private java.util.List<String> fields; 
+            private java.util.Map<String, ?> parameters; 
+            private java.util.List<ConfigProjections> projections; 
             private java.util.List<ConfigRules> rules; 
+            private ConfigScope scope; 
             private String script; 
             private ConfigSelector selector; 
             private ConfigTarget target; 
@@ -1142,19 +2558,31 @@ public class CreateDataPipelineResponseBody extends TeaModel {
 
             private Builder(ProcessorsConfig model) {
                 this.applications = model.applications;
+                this.assignments = model.assignments;
                 this.expression = model.expression;
                 this.fields = model.fields;
+                this.parameters = model.parameters;
+                this.projections = model.projections;
                 this.rules = model.rules;
+                this.scope = model.scope;
                 this.script = model.script;
                 this.selector = model.selector;
                 this.target = model.target;
             } 
 
             /**
-             * <p>The application list.</p>
+             * <p>The list of applications.</p>
              */
             public Builder applications(java.util.List<String> applications) {
                 this.applications = applications;
+                return this;
+            }
+
+            /**
+             * <p>The list of field assignments.</p>
+             */
+            public Builder assignments(java.util.List<ConfigAssignments> assignments) {
+                this.assignments = assignments;
                 return this;
             }
 
@@ -1170,7 +2598,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field list.</p>
+             * <p>The list of fields.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -1178,10 +2606,34 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The masking rule list.</p>
+             * <p>The extended parameters.</p>
+             */
+            public Builder parameters(java.util.Map<String, ?> parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * <p>The list of field projections.</p>
+             */
+            public Builder projections(java.util.List<ConfigProjections> projections) {
+                this.projections = projections;
+                return this;
+            }
+
+            /**
+             * <p>The list of masking rules.</p>
              */
             public Builder rules(java.util.List<ConfigRules> rules) {
                 this.rules = rules;
+                return this;
+            }
+
+            /**
+             * <p>The scope in which the pipeline processing processor takes effect.</p>
+             */
+            public Builder scope(ConfigScope scope) {
+                this.scope = scope;
                 return this;
             }
 
@@ -1717,7 +3169,7 @@ public class CreateDataPipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data source type.</p>
+             * <p>The type of the data source.</p>
              * 
              * <strong>example:</strong>
              * <p>traces-default</p>

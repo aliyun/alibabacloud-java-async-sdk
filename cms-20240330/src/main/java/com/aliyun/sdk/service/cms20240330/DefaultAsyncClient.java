@@ -2295,7 +2295,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Uses a paged query to retrieve data stream pipelines in a specified workspace. Paging is supported.</p>
+     * <p>Queries data pipelines in a specified workspace by using paging.</p>
      * 
      * @param request the request parameters of ListDataPipelines  ListDataPipelinesRequest
      * @return ListDataPipelinesResponse
@@ -3325,7 +3325,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Updates the information about a Prometheus view instance.</p>
+     * <p>Updates the information of a Prometheus view instance.</p>
      * 
      * @param request the request parameters of UpdatePrometheusView  UpdatePrometheusViewRequest
      * @return UpdatePrometheusViewResponse
