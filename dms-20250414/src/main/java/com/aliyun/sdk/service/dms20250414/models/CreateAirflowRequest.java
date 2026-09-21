@@ -370,10 +370,10 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The Airflow version. Supported versions: 2.10 and 3.1.</p>
+         * <p>The Airflow version. Valid values: &quot;3.2.2&quot;, &quot;3.1.0&quot;, &quot;2.10.4&quot;, and &quot;3.0.6&quot;.</p>
          * 
          * <strong>example:</strong>
-         * <p>3.1</p>
+         * <p>3.2.2</p>
          */
         public Builder airflowVersion(String airflowVersion) {
             this.putQueryParameter("AirflowVersion", airflowVersion);
@@ -382,7 +382,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The compute specifications for the Airflow instance. Valid values: <strong>SMALL</strong>, <strong>MEDIUM</strong>, <strong>LARGE</strong>, <strong>XLARGE</strong>, or <strong>X2LARGE</strong>.</p>
+         * <p>The specification of the Airflow instance. Valid values: <strong>SMALL</strong>, <strong>MEDIUM</strong>, <strong>LARGE</strong>, <strong>XLARGE</strong>, and <strong>X2LARGE</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>A client token to ensure request idempotence.</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>token-****</p>
@@ -407,7 +407,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The path to the DAG directory for Airflow to scan.</p>
+         * <p>The DAG directory scanned by Airflow.</p>
          * 
          * <strong>example:</strong>
          * <p>default/dags</p>
@@ -419,7 +419,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>A list of data mount configurations.</p>
+         * <p>The list of data mount information.</p>
          */
         public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
             String dataMountInfoListShrink = shrink(dataMountInfoList, "DataMountInfoList", "json");
@@ -441,7 +441,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable worker elasticity.</p>
+         * <p>Specifies whether to enable Worker elasticity.</p>
          */
         public Builder enableServerless(Boolean enableServerless) {
             this.putQueryParameter("EnableServerless", enableServerless);
@@ -450,7 +450,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The graceful shutdown timeout for workers, in seconds.</p>
+         * <p>The timeout period for the Worker to gracefully shut down.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -475,7 +475,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The OSS path for log storage.</p>
+         * <p>The OSS path for storing logs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,7 +488,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The path to the plugin directory for the Airflow instance to scan.</p>
+         * <p>The plugin directory scanned by the Airflow instance.</p>
          * 
          * <strong>example:</strong>
          * <p>default/plugins</p>
@@ -500,7 +500,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The path to the Python requirements file.</p>
+         * <p>The path of the package installation file.</p>
          * 
          * <strong>example:</strong>
          * <p>default/requirements.txt</p>
@@ -512,7 +512,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -525,7 +525,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The path to the startup script in the Airflow container.</p>
+         * <p>The startup script of the Airflow container.</p>
          * 
          * <strong>example:</strong>
          * <p>default/startup.sh</p>
@@ -537,7 +537,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -550,7 +550,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -563,7 +563,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The number of elastic worker nodes.</p>
+         * <p>The number of extended Worker node replicas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -576,7 +576,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the DMS workspace.</p>
+         * <p>The ID of the Data Management workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -589,7 +589,7 @@ public class CreateAirflowRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone where the instance will be created.</p>
+         * <p>The zone ID within the region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

@@ -132,7 +132,7 @@ public class CreateAirflowResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the access denial.</p>
+         * <p>The details of the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>NOT_FOUND</p>
@@ -165,7 +165,7 @@ public class CreateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message.</p>
+         * <p>The log information.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -195,12 +195,10 @@ public class CreateAirflowResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request succeeded.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,7 +567,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Airflow instance.</p>
+             * <p>The instance ID of the Airflow instance.</p>
              * 
              * <strong>example:</strong>
              * <p>af-****</p>
@@ -613,7 +611,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application type. This value is always airflow.</p>
+             * <p>The type.</p>
              * 
              * <strong>example:</strong>
              * <p>airflow</p>
@@ -624,7 +622,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Custom Airflow configurations.</p>
+             * <p>The custom Airflow configuration.</p>
              */
             public Builder customAirflowCfg(java.util.List<String> customAirflowCfg) {
                 this.customAirflowCfg = customAirflowCfg;
@@ -643,7 +641,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of data mount configurations.</p>
+             * <p>The list of data mount information.</p>
              */
             public Builder dataMountInfoList(java.util.List<DataMountInfo> dataMountInfoList) {
                 this.dataMountInfoList = dataMountInfoList;
@@ -651,7 +649,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment error message.</p>
+             * <p>The error log information.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc not found</p>
@@ -673,7 +671,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to enable serverless workers.</p>
+             * <p>Specifies whether to enable Worker elasticity.</p>
              */
             public Builder enableServerless(Boolean enableServerless) {
                 this.enableServerless = enableServerless;
@@ -681,7 +679,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-12T05:46:01.000+0000</p>
@@ -692,7 +690,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period for a graceful shutdown, in seconds.</p>
+             * <p>The timeout period for the Worker to gracefully shut down.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -725,7 +723,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plugin directory that Airflow scans.</p>
+             * <p>The directory that Airflow scans for plugins.</p>
              * 
              * <strong>example:</strong>
              * <p>default/plugins</p>
@@ -736,7 +734,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The path to the requirements file.</p>
+             * <p>The path of the installable package.</p>
              * 
              * <strong>example:</strong>
              * <p>default/requirements.txt</p>
@@ -747,7 +745,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-2ze1nak7h0alg1xxx</p>
@@ -758,7 +756,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file that is loaded when the Airflow instance starts. You can use this file to set environment variables.</p>
+             * <p>The file loaded when the Airflow instance starts. You can use this file to set environment variables and other configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>default/startup.sh</p>
@@ -769,7 +767,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the Airflow instance.</p>
+             * <p>The instance status of the Airflow instance.</p>
              * 
              * <strong>example:</strong>
              * <p>DEPLOYING</p>
@@ -780,7 +778,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VSwitch ID.</p>
+             * <p>The ID of the vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-8vbaf073jawozfpbg****</p>
@@ -791,7 +789,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>VPC ID。</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf63r6coyiw9o5gf****</p>
@@ -802,7 +800,7 @@ public class CreateAirflowResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scaled-out worker nodes.</p>
+             * <p>The number of worker scale-out nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

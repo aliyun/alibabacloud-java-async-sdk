@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateDataLakeFunctionResponse} extends {@link TeaModel}
+ * {@link ResetAgenticApiKeyResponse} extends {@link TeaModel}
  *
- * <p>UpdateDataLakeFunctionResponse</p>
+ * <p>ResetAgenticApiKeyResponse</p>
  */
-public class UpdateDataLakeFunctionResponse extends Response {
+public class ResetAgenticApiKeyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class UpdateDataLakeFunctionResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateDataLakeFunctionResponseBody body;
+    private ResetAgenticApiKeyResponseBody body;
 
-    private UpdateDataLakeFunctionResponse(BuilderImpl builder) {
+    private ResetAgenticApiKeyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateDataLakeFunctionResponse create() {
+    public static ResetAgenticApiKeyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class UpdateDataLakeFunctionResponse extends Response {
     /**
      * @return body
      */
-    public UpdateDataLakeFunctionResponseBody getBody() {
+    public ResetAgenticApiKeyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateDataLakeFunctionResponse, Builder> {
+    public interface Builder extends Response.Builder<ResetAgenticApiKeyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateDataLakeFunctionResponseBody body);
+        Builder body(ResetAgenticApiKeyResponseBody body);
 
         @Override
-        UpdateDataLakeFunctionResponse build();
+        ResetAgenticApiKeyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateDataLakeFunctionResponse, Builder>
+            extends Response.BuilderImpl<ResetAgenticApiKeyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private UpdateDataLakeFunctionResponseBody body; 
+        private ResetAgenticApiKeyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateDataLakeFunctionResponse response) {
+        private BuilderImpl(ResetAgenticApiKeyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class UpdateDataLakeFunctionResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateDataLakeFunctionResponseBody body) {
+        public Builder body(ResetAgenticApiKeyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateDataLakeFunctionResponse build() {
-            return new UpdateDataLakeFunctionResponse(this);
+        public ResetAgenticApiKeyResponse build() {
+            return new ResetAgenticApiKeyResponse(this);
         } 
 
     } 

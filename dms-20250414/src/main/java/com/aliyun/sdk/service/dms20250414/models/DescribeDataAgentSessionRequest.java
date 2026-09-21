@@ -87,7 +87,7 @@ public class DescribeDataAgentSessionRequest extends Request {
         } 
 
         /**
-         * <p>The current DMS unit.</p>
+         * <p>The current Data Management unit.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
