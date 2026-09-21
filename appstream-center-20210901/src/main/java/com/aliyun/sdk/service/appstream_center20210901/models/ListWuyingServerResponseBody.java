@@ -255,7 +255,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of data disk.</p>
+             * <p>The type of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_auto</p>
@@ -266,7 +266,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskId.
+             * <p>The ID of the data cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1234567890abcde</p>
              */
             public Builder dataDiskId(String dataDiskId) {
                 this.dataDiskId = dataDiskId;
@@ -274,7 +277,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * DataDiskNo.
+             * <p>The sequence number of the data cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataDiskNo(String dataDiskNo) {
                 this.dataDiskNo = dataDiskNo;
@@ -282,7 +288,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The PL of the data disk.</p>
+             * <p>The performance level (PL) of the data cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -293,7 +299,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data disk. Unit: GB.</p>
+             * <p>The size of the data cloud disk. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -363,7 +369,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>p-0ceitx****c5</p>
@@ -374,7 +380,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ENI.</p>
+             * <p>The ID of the network interface controller (NIC).</p>
              * 
              * <strong>example:</strong>
              * <p>eni-uf65b****dfnt3wb</p>
@@ -444,7 +450,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Primary.
+             * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+             * <ul>
+             * <li>true: The IP address is the primary private IP address.</li>
+             * <li>false: The IP address is a secondary private IP address.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -452,7 +465,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -593,7 +609,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The memory size. Unit: MB.</p>
+             * <p>The GPU memory size. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>196,608</p>
@@ -604,7 +620,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpec.
+             * <p>The GPU specification description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NVIDIA T4</p>
              */
             public Builder gpuSpec(String gpuSpec) {
                 this.gpuSpec = gpuSpec;
@@ -623,7 +642,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Workstation specifications.</p>
+             * <p>The workstation instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
@@ -693,7 +712,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceSessionStartTime.
+             * <p>The session start time in ISO 8601 format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T08:00:00Z</p>
              */
             public Builder resourceSessionStartTime(String resourceSessionStartTime) {
                 this.resourceSessionStartTime = resourceSessionStartTime;
@@ -701,7 +723,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -745,6 +770,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EniPrivateIpAddressQuantity")
         private Integer eniPrivateIpAddressQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("ErdmaStatus")
+        private String erdmaStatus;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -803,6 +831,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubPayType")
         private String subPayType;
 
+        @com.aliyun.core.annotation.NameInMap("SupportASP")
+        private Boolean supportASP;
+
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
@@ -851,6 +882,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.dataDisk = builder.dataDisk;
             this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
+            this.erdmaStatus = builder.erdmaStatus;
             this.expiredTime = builder.expiredTime;
             this.fotaVersion = builder.fotaVersion;
             this.imageId = builder.imageId;
@@ -870,6 +902,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             this.sessions = builder.sessions;
             this.status = builder.status;
             this.subPayType = builder.subPayType;
+            this.supportASP = builder.supportASP;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskId = builder.systemDiskId;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
@@ -947,6 +980,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
          */
         public Integer getEniPrivateIpAddressQuantity() {
             return this.eniPrivateIpAddressQuantity;
+        }
+
+        /**
+         * @return erdmaStatus
+         */
+        public String getErdmaStatus() {
+            return this.erdmaStatus;
         }
 
         /**
@@ -1083,6 +1123,13 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportASP
+         */
+        public Boolean getSupportASP() {
+            return this.supportASP;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -1182,6 +1229,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private String createTime; 
             private java.util.List<DataDisk> dataDisk; 
             private Integer eniPrivateIpAddressQuantity; 
+            private String erdmaStatus; 
             private String expiredTime; 
             private String fotaVersion; 
             private String imageId; 
@@ -1201,6 +1249,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             private java.util.List<Sessions> sessions; 
             private String status; 
             private String subPayType; 
+            private Boolean supportASP; 
             private String systemDiskCategory; 
             private String systemDiskId; 
             private String systemDiskPerformanceLevel; 
@@ -1227,6 +1276,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.createTime = model.createTime;
                 this.dataDisk = model.dataDisk;
                 this.eniPrivateIpAddressQuantity = model.eniPrivateIpAddressQuantity;
+                this.erdmaStatus = model.erdmaStatus;
                 this.expiredTime = model.expiredTime;
                 this.fotaVersion = model.fotaVersion;
                 this.imageId = model.imageId;
@@ -1246,6 +1296,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
                 this.sessions = model.sessions;
                 this.status = model.status;
                 this.subPayType = model.subPayType;
+                this.supportASP = model.supportASP;
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskId = model.systemDiskId;
                 this.systemDiskPerformanceLevel = model.systemDiskPerformanceLevel;
@@ -1262,7 +1313,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * AddVirtualNodePoolStatus.
+             * <p>The status of adding the workstation to a virtual node pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Added</p>
              */
             public Builder addVirtualNodePoolStatus(String addVirtualNodePoolStatus) {
                 this.addVirtualNodePoolStatus = addVirtualNodePoolStatus;
@@ -1270,7 +1324,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * AliUid.
+             * <p>The UID of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567890123456</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -1278,7 +1335,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth size. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -1286,7 +1346,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1297,7 +1357,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method.</p>
+             * <p>The payment method.</p>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -1308,7 +1368,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the storage resource was created.</p>
+             * <p>The creation time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-08-02T16:52:11.000+00:00</p>
@@ -1319,7 +1379,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data disks.</p>
+             * <p>The list of data cloud disks.</p>
              */
             public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1327,7 +1387,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * EniPrivateIpAddressQuantity.
+             * <p>The maximum number of private IP addresses per elastic network interface (ENI), including the primary IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
                 this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
@@ -1335,7 +1398,18 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the subscription instance expires.</p>
+             * <p>The eRDMA activation status. Valid values: disabled, enabling, enabled, and failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
+             */
+            public Builder erdmaStatus(String erdmaStatus) {
+                this.erdmaStatus = erdmaStatus;
+                return this;
+            }
+
+            /**
+             * <p>The expiration time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-09-03T16:00:00.000+00:00</p>
@@ -1346,7 +1420,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * FotaVersion.
+             * <p>The FOTA version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0.0</p>
              */
             public Builder fotaVersion(String fotaVersion) {
                 this.fotaVersion = fotaVersion;
@@ -1354,7 +1431,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom image.</p>
+             * <p>The image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>imgc-06****oagaev</p>
@@ -1365,10 +1442,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name.</p>
+             * <p>The name of the image.</p>
              * 
              * <strong>example:</strong>
-             * <p>Ubuntu 22.04</p>
+             * <p>Alibaba Cloud Linux 3.2104 LTS 64位</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -1376,7 +1453,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of information about the workstation instance.</p>
+             * <p>The list of workstation instance information.</p>
              */
             public Builder instanceInfoList(java.util.List<InstanceInfoList> instanceInfoList) {
                 this.instanceInfoList = instanceInfoList;
@@ -1384,7 +1461,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPrice.
+             * <p>The maximum price for the spot instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -1392,7 +1472,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address.</p>
+             * <p>The internal IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>10.80.21.149</p>
@@ -1403,7 +1483,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the office network.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou+dir-1b****ayv2</p>
@@ -1414,7 +1494,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The office network name.</p>
+             * <p>The name of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleOfficeSite</p>
@@ -1425,7 +1505,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the office network.</p>
+             * <p>The network type of the office network.</p>
              * 
              * <strong>example:</strong>
              * <p>SIMPLE</p>
@@ -1436,7 +1516,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OS type.</p>
+             * <p>The type of the operating system.</p>
              * 
              * <strong>example:</strong>
              * <p>Linux</p>
@@ -1447,7 +1527,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyGroupIdList.
+             * <p>The list of policy group IDs.</p>
              */
             public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
                 this.policyGroupIdList = policyGroupIdList;
@@ -1455,7 +1535,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSets.
+             * <p>The set of private IP addresses, including the primary IP address and secondary IP addresses.</p>
              */
             public Builder privateIpSets(java.util.List<PrivateIpSets> privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -1463,7 +1543,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSessionStatus.
+             * <p>The resource session status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder resourceSessionStatus(String resourceSessionStatus) {
                 this.resourceSessionStatus = resourceSessionStatus;
@@ -1471,7 +1554,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * <p>The list of security group IDs.</p>
              */
             public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1479,7 +1562,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications.</p>
+             * <p>The instance type information.</p>
              */
             public Builder serverInstanceTypeInfo(ServerInstanceTypeInfo serverInstanceTypeInfo) {
                 this.serverInstanceTypeInfo = serverInstanceTypeInfo;
@@ -1487,7 +1570,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Sessions.
+             * <p>The list of sessions.</p>
              */
             public Builder sessions(java.util.List<Sessions> sessions) {
                 this.sessions = sessions;
@@ -1495,7 +1578,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the workstation.</p>
+             * <p>The workstation status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -1506,7 +1589,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SubPayType.
+             * <p>The sub-payment type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spot</p>
              */
             public Builder subPayType(String subPayType) {
                 this.subPayType = subPayType;
@@ -1514,7 +1600,18 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the system disk.</p>
+             * <p>Whether ASP streaming connection is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder supportASP(Boolean supportASP) {
+                this.supportASP = supportASP;
+                return this;
+            }
+
+            /**
+             * <p>The system cloud disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_auto</p>
@@ -1525,7 +1622,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskId.
+             * <p>The system cloud disk ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp1234567890abcde</p>
              */
             public Builder systemDiskId(String systemDiskId) {
                 this.systemDiskId = systemDiskId;
@@ -1533,7 +1633,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the system disk.</p>
+             * <p>The performance level (PL) of the system cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -1544,7 +1644,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the system disk. Unit: GiB.</p>
+             * <p>The system cloud disk size. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1555,7 +1655,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * TimerGroupId.
+             * <p>The timer group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tg-bp1234567890abcde</p>
              */
             public Builder timerGroupId(String timerGroupId) {
                 this.timerGroupId = timerGroupId;
@@ -1563,7 +1666,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>The list of authorized users.</p>
              */
             public Builder users(java.util.List<String> users) {
                 this.users = users;
@@ -1571,7 +1674,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualKubeletIp.
+             * <p>The IP address of the Virtual Kubelet node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.100</p>
              */
             public Builder virtualKubeletIp(String virtualKubeletIp) {
                 this.virtualKubeletIp = virtualKubeletIp;
@@ -1579,7 +1685,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualNodePoolId.
+             * <p>The virtual node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vnp-bp1234567890abcde</p>
              */
             public Builder virtualNodePoolId(String virtualNodePoolId) {
                 this.virtualNodePoolId = virtualNodePoolId;
@@ -1587,7 +1696,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * VkUpgradeNeeded.
+             * <p>Indicates whether a VirtualKubelet upgrade is needed.</p>
              */
             public Builder vkUpgradeNeeded(Boolean vkUpgradeNeeded) {
                 this.vkUpgradeNeeded = vkUpgradeNeeded;
@@ -1595,7 +1704,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * VkVersion.
+             * <p>The Virtual Kubelet version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
              */
             public Builder vkVersion(String vkVersion) {
                 this.vkVersion = vkVersion;
@@ -1603,7 +1715,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the workstation.</p>
+             * <p>The workstation ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ws-0byd****8wn2lwi</p>
@@ -1614,7 +1726,7 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the workstation.</p>
+             * <p>The workstation name.</p>
              * 
              * <strong>example:</strong>
              * <p>exampleServerName</p>
@@ -1625,7 +1737,10 @@ public class ListWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

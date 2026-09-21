@@ -206,6 +206,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
             /**
              * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OfficeApp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -224,7 +227,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application version.</p>
+             * <p>The application version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InitialVersion</p>
              */
             public Builder appVersionName(String appVersionName) {
                 this.appVersionName = appVersionName;
@@ -304,7 +310,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of destination resources.</p>
+             * <p>The target resource count.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -315,7 +321,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the scaling policy. Format: HH:mm.</p>
+             * <p>The end time. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>11:00</p>
@@ -326,7 +332,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the scaling policy. Format: HH:mm.</p>
+             * <p>The start time. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>09:30</p>
@@ -409,7 +415,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The schedule type of the scaling policy. This parameter must be configured together with <code>RecurrenceValues</code>.``</p>
+             * <p>The type of the policy execution cycle. You must specify both <code>RecurrenceType</code> and <code>RecurrenceValues</code> at the same time.</p>
              * 
              * <strong>example:</strong>
              * <p>Weekly</p>
@@ -420,7 +426,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The days of each week on which the scaling policy is executed.</p>
+             * <p>The list of values for the policy execution cycle.</p>
              */
             public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
@@ -428,7 +434,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time periods during which the scaling policy can be executed.</p>
+             * <p>The list of time periods for the policy execution cycle.</p>
              */
             public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
                 this.timerPeriods = timerPeriods;
@@ -727,7 +733,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>空闲会话数上限。指定该值时，当会话使用率超过<code>ScalingUsageThreshold</code>且当前交付组空闲会话数小于<code>MaxIdleAppInstanceAmount</code>时，才会触发自动扩容，否则认为交付组空闲会话已足够使用，不自动扩容。该参数可用于灵活控制弹性扩容行为和降低使用成本。</p>
+             * <p>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the delivery group is considered to have sufficient idle sessions and automatic scale-out is not triggered. This parameter provides flexible control over elastic scaling behavior and helps reduce costs.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -738,7 +744,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of resources that can be created for scale-out.</p>
+             * <p>The maximum number of resources that can be created during scale-out.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -749,7 +755,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of subscription resources.</p>
+             * <p>The total number of current subscription resources.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -760,13 +766,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
+             * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</p>
              * <ul>
-             * <li>appstreaming.general.4c8g: 1 to 2</li>
-             * <li>appstreaming.general.8c16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
+             * <li>appstreaming.general.4c8g: 1 to 2.</li>
+             * <li>appstreaming.general.8c16g: 1 to 4.</li>
+             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4.</li>
+             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4.</li>
+             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -778,7 +784,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource type that you purchase.</p>
+             * <p>The specification type ID of the purchased resource.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -789,7 +795,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-g6922kced36hx****</p>
@@ -800,7 +806,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource type.</p>
+             * <p>The resource specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WUYING-General_4vCPU8GiB</p>
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -808,7 +817,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of subscription resources that are in use.</p>
+             * <p>The resource count of subscription resources in use.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -819,7 +828,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The schedules of the scaling policy.</p>
+             * <p>The list of policy execution cycles.</p>
              */
             public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
@@ -827,7 +836,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Default value: 5.</p>
+             * <p>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Default value: 5.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -838,7 +847,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of scalable resources.</p>
+             * <p>The total number of elastic resources.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -849,7 +858,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scalable resources that are in use.</p>
+             * <p>The resource count of elastic resources in use.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -860,7 +869,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10.</p>
+             * <p>The number of resources created per scale-out operation. Valid values: 1 to 10.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -871,7 +880,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <code>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</code>.</p>
+             * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: <code>Session usage = Number of current sessions ÷ (Total number of resources × Concurrent sessions per resource) × 100%</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>85</p>
@@ -882,7 +891,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration date of the scaling policy. Format: yyyy-MM-dd.</p>
+             * <p>The date when the policy expires. Format: yyyy-MM-dd.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-08</p>
@@ -893,7 +902,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective date of the scaling policy. Format: yyyy-MM-dd.</p>
+             * <p>The date when the policy takes effect. Format: yyyy-MM-dd.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01</p>
@@ -904,16 +913,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scaling policy.</p>
+             * <p>The elastic policy type.</p>
              * <blockquote>
-             * <p> <code>NODE_SCALING_BY_USAGE</code> is returned for this parameter only if ChargeType is set to <code>PrePaid</code>. <code>NODE_SCALING_BY_SCHEDULE</code> is returned for this parameter only if ChargeType is set to <code>PostPaid</code>.</p>
+             * <p><code>NODE_SCALING_BY_USAGE</code> (usage-based scaling policy) applies only to <code>PrePaid</code> (subscription) resources. <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling policy) applies only to <code>PostPaid</code> (pay-as-you-go) resources.</p>
              * </blockquote>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>NODE_FIXED: No scalable resources are used.</li>
-             * <li>NODE_SCALING_BY_SCHEDULE: Scheduled scaling is used.</li>
-             * <li>NODE_SCALING_BY_USAGE: Resources are scaled based on usage.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NODE_FIXED</p>
@@ -924,7 +927,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the warmup policy is enabled for resources.</p>
+             * <p>Indicates whether the resource prefetch policy is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1007,7 +1010,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The new OTA version. A null value indicates that no new version is available.</p>
+             * <p>The new OTA version. An empty value indicates that no new version is available.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0.1-D-20220630.11****</p>
@@ -1029,7 +1032,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the OTA update task.</p>
+             * <p>The OTA upgrade task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ota-e49929gv8acz5****</p>
@@ -1112,7 +1115,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>标签键。</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>department</p>
@@ -1123,7 +1126,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签类型。</p>
+             * <p>The tag type.</p>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -1134,7 +1137,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>标签值。</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>design</p>
@@ -1672,7 +1675,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>接入类型。</p>
+             * <p>The access type.</p>
              * 
              * <strong>example:</strong>
              * <p>INTERNET</p>
@@ -1683,7 +1686,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of subscription resources. Minimum value: 1.</p>
+             * <p>The number of subscription resources configured by the user. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1694,7 +1697,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID of the application.</p>
+             * <p>The application image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>img-8z4nztpaqvay4****</p>
@@ -1705,7 +1708,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image name of the application.</p>
+             * <p>The application image name.</p>
              * 
              * <strong>example:</strong>
              * <p>OfficeApps</p>
@@ -1716,7 +1719,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-9ciijz60n4xsv****</p>
@@ -1727,7 +1730,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the delivery group.</p>
+             * <p>The delivery group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OfficeApp</p>
              */
             public Builder appInstanceGroupName(String appInstanceGroupName) {
                 this.appInstanceGroupName = appInstanceGroupName;
@@ -1735,7 +1741,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type of the delivery group.</p>
+             * <p>The specification type of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p><strong>dynamic</strong></p>
@@ -1746,7 +1752,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource type of the delivery group.</p>
+             * <p>The name of the specification type of the delivery group.</p>
              * 
              * <strong>example:</strong>
              * <p>test001</p>
@@ -1757,7 +1763,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy ID of the application.</p>
+             * <p>The application policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-g3k5wa2ms2****</p>
@@ -1768,7 +1774,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The applications.</p>
+             * <p>The list of application information.</p>
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
@@ -1776,7 +1782,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>授权模式。</p>
+             * <p>The authorization mode.</p>
              * 
              * <strong>example:</strong>
              * <p>App</p>
@@ -1788,11 +1794,6 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
             /**
              * <p>The sales mode.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AppInstance: by session</li>
-             * <li>Node: by resource</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Node</p>
@@ -1804,11 +1805,6 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
             /**
              * <p>The billing method.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PostPaid: pay-as-you-go</li>
-             * <li>PrePaid: subscription</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PrePaid</p>
@@ -1819,10 +1815,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the delivery group expires.</p>
+             * <p>The expiration time of the delivery group. The time is in ISO 8601 format, including milliseconds and time zone offset. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.SSSXXX.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-04-27T16:00:00.000+00:00</p>
+             * <p>2026-09-24T16:00:00.000+00:00</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1830,7 +1826,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the delivery group was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-26T15:06:16.000+00:00</p>
@@ -1863,7 +1859,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the resource group.</p>
+             * <p>The resource group information.</p>
              */
             public Builder nodePool(java.util.List<NodePool> nodePool) {
                 this.nodePool = nodePool;
@@ -1871,7 +1867,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>办公网络ID。</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing+dir-172301****</p>
@@ -1882,7 +1878,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the operating system.</p>
+             * <p>The operating system type.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows</p>
@@ -1893,7 +1889,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the over-the-air (OTA) update task.</p>
+             * <p>The OTA upgrade task information.</p>
              */
             public Builder otaInfo(OtaInfo otaInfo) {
                 this.otaInfo = otaInfo;
@@ -1912,7 +1908,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+             * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1923,7 +1919,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of reserved instances. The value indicates the percentage of unused sessions in the delivery group. Valid values: 0 to 99.</p>
+             * <p>The percentage of reserved instances, which is the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -1934,7 +1930,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of reserved instances. The value indicates the maximum number of unused sessions in the delivery group. Minimum value: 1.</p>
+             * <p>The maximum number of reserved instances, which is the maximum number of unused sessions in the delivery group. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1945,7 +1941,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of reserved instances. The value indicates the minimum number of unused sessions in the delivery group. Minimum value: 1.</p>
+             * <p>The minimum number of reserved instances, which is the minimum number of unused sessions in the delivery group. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1967,7 +1963,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Minimum value: 0.</p>
+             * <p>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Minimum value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1978,7 +1974,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sessions that are created each time the delivery group is scaled out. Minimum value: 1.</p>
+             * <p>The number of sessions created per scale-out operation. Minimum value: 1.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1989,7 +1985,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage rate is calculated by using the following formula: Session usage rate = Number of sessions in use/Total number of sessions × 100%. Valid values: 0 to 99.</p>
+             * <p>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: Session usage = Number of sessions in use ÷ Total number of sessions × 100%. Valid values: 0 to 99.</p>
              * 
              * <strong>example:</strong>
              * <p>85</p>
@@ -2000,7 +1996,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+             * <p>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -2011,7 +2007,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>会话类型。</p>
+             * <p>The session type.</p>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -2022,12 +2018,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether user permission verification is skipped.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false: This is the default value.</li>
-             * </ul>
+             * <p>Indicates whether user authorization verification is skipped.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2038,7 +2029,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification ID that uniquely corresponds to the ID of the delivery group.</p>
+             * <p>The ID that uniquely corresponds to the delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>spec-8o18t8uc31qib0****</p>
@@ -2049,18 +2040,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the delivery group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>PUBLISHED: The delivery group is published.</li>
-             * <li>FAILED: The delivery group failed to be published.</li>
-             * <li>MAINTAIN_FAILED: The delivery group failed to be updated.</li>
-             * <li>EXPIRED: The delivery group is expired.</li>
-             * <li>MAINTAINING: The delivery group is being updated.</li>
-             * <li>CEASED: The delivery group has overdue payments.</li>
-             * <li>EXPIRED_RECYCLING: The delivery group is expired and being recycled.</li>
-             * <li>DEPLOYING: The delivery group is being published.</li>
-             * </ul>
+             * <p>The delivery group status.</p>
              * 
              * <strong>example:</strong>
              * <p>PUBLISHED</p>
@@ -2071,7 +2051,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SupportUserGroupMixedAuth.
+             * <p>Indicates whether mixed authorization of users and user groups is supported.</p>
              */
             public Builder supportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
                 this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
@@ -2079,7 +2059,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>资源标签列表。</p>
+             * <p>The list of resource tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -2087,7 +2067,10 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupAuthMode.
+             * <p>The user and user group authorization mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mixed</p>
              */
             public Builder userGroupAuthMode(String userGroupAuthMode) {
                 this.userGroupAuthMode = userGroupAuthMode;

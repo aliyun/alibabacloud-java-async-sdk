@@ -67,7 +67,7 @@ public class CreateModelTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The creation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateModelTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ModelTemplateId.
+             * <p>The model group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt-xxxx</p>
              */
             public Builder modelTemplateId(String modelTemplateId) {
                 this.modelTemplateId = modelTemplateId;

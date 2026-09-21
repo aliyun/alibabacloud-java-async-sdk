@@ -73,7 +73,10 @@ public class RestartWuyingServerRequest extends Request {
         } 
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

@@ -162,7 +162,10 @@ public class ConfigRuntimeChannelRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putBodyParameter("AgentPlatform", agentPlatform);
@@ -171,6 +174,12 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent provider.</p>
+         * <ul>
+         * <li>JVS Computer: set to OpenClaw.</li>
+         * <li>OpenClaw: set to OpenClaw.</li>
+         * <li>Hermes Agent: set to HermesAgent.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +192,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The third-party channel code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,6 +205,24 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel configuration JSON string.</p>
+         * <ul>
+         * <li>Simple configuration mode example:</li>
+         * </ul>
+         * <pre><code class="language-json">{
+         *     &quot;appKey&quot;: &quot;abc&quot;,
+         *     &quot;appSecret&quot;: &quot;efg&quot;
+         * }
+         * </code></pre>
+         * <ul>
+         * <li>Custom configuration mode example:</li>
+         * </ul>
+         * <pre><code class="language-json">{
+         *   &quot;enabled&quot;: true,
+         *   &quot;clientId&quot;: &quot;xxx&quot;,
+         *   &quot;clientSecret&quot;: &quot;xxx&quot;
+         * }
+         * </code></pre>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +238,10 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
-         * ConfigMode.
+         * <p>The configuration mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Simple</p>
          */
         public Builder configMode(String configMode) {
             this.putBodyParameter("ConfigMode", configMode);
@@ -219,7 +250,11 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The channel name.</p>
+         * <p>If you leave this parameter empty, the system automatically uses the value of Code as the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>钉钉</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -228,6 +263,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The list of runtime IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeIds(java.util.List<String> runtimeIds) {
@@ -237,6 +273,7 @@ public class ConfigRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,7 @@ public class GetFileUploadInfoRequest extends Request {
         } 
 
         /**
+         * <p>The file type. Currently supported values: BrowserBookmarks and BrowserRestrictionUrls.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

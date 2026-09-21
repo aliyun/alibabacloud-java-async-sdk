@@ -67,7 +67,7 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,14 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The JSON configuration object of the model provider template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;api&quot;: &quot;openai-completions&quot;,
+             *     &quot;apiKey&quot;: &quot;sk-xxxx&quot;,
+             *     &quot;baseUrl&quot;: &quot;<a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a>&quot;
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -201,7 +211,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the model provider template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云百炼服务商。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -209,7 +222,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * EnableWuyingProxy.
+             * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWuyingProxy(Boolean enableWuyingProxy) {
                 this.enableWuyingProxy = enableWuyingProxy;
@@ -217,7 +233,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the model provider template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>阿里云百炼。</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +244,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderName.
+             * <p>The name of the model provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -233,7 +255,10 @@ public class GetModelProviderTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderTemplateId.
+             * <p>The ID of the model provider template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpt-xxxx</p>
              */
             public Builder providerTemplateId(String providerTemplateId) {
                 this.providerTemplateId = providerTemplateId;

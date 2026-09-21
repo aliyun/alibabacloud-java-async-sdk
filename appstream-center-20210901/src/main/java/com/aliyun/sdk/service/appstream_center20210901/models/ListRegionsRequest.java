@@ -74,7 +74,7 @@ public class ListRegionsRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is not publicly available.</p>
+         * <p>This parameter is not publicly available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -88,10 +88,6 @@ public class ListRegionsRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CloudApp</p>

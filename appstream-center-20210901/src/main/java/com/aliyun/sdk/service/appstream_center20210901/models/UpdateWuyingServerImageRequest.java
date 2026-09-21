@@ -111,7 +111,7 @@ public class UpdateWuyingServerImageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workstation.</p>
+         * <p>The workstation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-0bw2f11****dial</p>

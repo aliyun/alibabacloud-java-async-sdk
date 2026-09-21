@@ -90,6 +90,7 @@ public class ConfigRuntimeModelTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The model group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class ConfigRuntimeModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The list of Agent runtime IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeIds(java.util.List<String> runtimeIds) {
@@ -111,6 +113,7 @@ public class ConfigRuntimeModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The Agent runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

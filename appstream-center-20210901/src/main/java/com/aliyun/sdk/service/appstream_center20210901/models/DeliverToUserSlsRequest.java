@@ -131,6 +131,7 @@ public class DeliverToUserSlsRequest extends Request {
         } 
 
         /**
+         * <p>The list of delivery scopes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +144,10 @@ public class DeliverToUserSlsRequest extends Request {
         }
 
         /**
-         * ExistedProjectName.
+         * <p>The name of an existing SLS project. Either this parameter or ProjectName must be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic-desktop-xxx</p>
          */
         public Builder existedProjectName(String existedProjectName) {
             this.putBodyParameter("ExistedProjectName", existedProjectName);
@@ -152,7 +156,10 @@ public class DeliverToUserSlsRequest extends Request {
         }
 
         /**
-         * LogStoreName.
+         * <p>The LogStore name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic_desktop_xxx</p>
          */
         public Builder logStoreName(String logStoreName) {
             this.putBodyParameter("LogStoreName", logStoreName);
@@ -161,7 +168,10 @@ public class DeliverToUserSlsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * <p>The SLS project name. Either this parameter or ExistedProjectName must be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic-desktop-xxx</p>
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -170,6 +180,7 @@ public class DeliverToUserSlsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the SLS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +193,10 @@ public class DeliverToUserSlsRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * <p>The data retention period in days. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("Ttl", ttl);
@@ -238,6 +252,7 @@ public class DeliverToUserSlsRequest extends Request {
             } 
 
             /**
+             * <p>The product type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -31,6 +31,10 @@ public class GetConnectionTicketRequest extends Request {
     private java.util.List<String> appInstanceGroupIdList;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupSetId")
+    private String appInstanceGroupSetId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
@@ -77,6 +81,7 @@ public class GetConnectionTicketRequest extends Request {
         this.accessType = builder.accessType;
         this.appId = builder.appId;
         this.appInstanceGroupIdList = builder.appInstanceGroupIdList;
+        this.appInstanceGroupSetId = builder.appInstanceGroupSetId;
         this.appInstanceId = builder.appInstanceId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
         this.appPolicyId = builder.appPolicyId;
@@ -121,6 +126,13 @@ public class GetConnectionTicketRequest extends Request {
      */
     public java.util.List<String> getAppInstanceGroupIdList() {
         return this.appInstanceGroupIdList;
+    }
+
+    /**
+     * @return appInstanceGroupSetId
+     */
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     /**
@@ -197,6 +209,7 @@ public class GetConnectionTicketRequest extends Request {
         private String accessType; 
         private String appId; 
         private java.util.List<String> appInstanceGroupIdList; 
+        private String appInstanceGroupSetId; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
         private String appPolicyId; 
@@ -217,6 +230,7 @@ public class GetConnectionTicketRequest extends Request {
             this.accessType = request.accessType;
             this.appId = request.appId;
             this.appInstanceGroupIdList = request.appInstanceGroupIdList;
+            this.appInstanceGroupSetId = request.appInstanceGroupSetId;
             this.appInstanceId = request.appInstanceId;
             this.appInstancePersistentId = request.appInstancePersistentId;
             this.appPolicyId = request.appPolicyId;
@@ -230,7 +244,10 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * AccessType.
+         * <p>The access type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
          */
         public Builder accessType(String accessType) {
             this.putBodyParameter("AccessType", accessType);
@@ -241,7 +258,7 @@ public class GetConnectionTicketRequest extends Request {
         /**
          * <p>The application ID.</p>
          * <blockquote>
-         * <p> This parameter is required for the first call to this operation and optional for subsequent calls to the operation.</p>
+         * <p>This parameter is required for the initial call and optional for subsequent calls.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -254,11 +271,11 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The delivery groups.</p>
+         * <p>The list of delivery groups.</p>
          * <blockquote>
          * <ul>
-         * <li>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups. </li>
-         * <li>This parameter is required if you configure <code>AppInstanceId</code> or <code>AppInstancePersistentId</code>.</li>
+         * <li>If you specify this parameter, application instances are allocated only from the specified and authorized delivery groups.</li>
+         * <li>If you specify the <code>AppInstanceId</code> or <code>AppInstancePersistentId</code> parameter, this parameter is required.</li>
          * </ul>
          * </blockquote>
          */
@@ -269,11 +286,23 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The delivery group set ID used to obtain the connection credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
+         */
+        public Builder appInstanceGroupSetId(String appInstanceGroupSetId) {
+            this.putBodyParameter("AppInstanceGroupSetId", appInstanceGroupSetId);
+            this.appInstanceGroupSetId = appInstanceGroupSetId;
+            return this;
+        }
+
+        /**
+         * <p>The application instance ID.</p>
          * <blockquote>
          * <ul>
-         * <li>If you configure this parameter, the system attempts to assign only the specified application instance.</li>
-         * <li>If you configure this parameter, you must also configure <code>AppInstanceGroupIdList</code> and the number of delivery groups specified by <code>AppInstanceGroupIdList</code> must be 1.</li>
+         * <li>If you specify this parameter, only the specified application instance is allocated.</li>
+         * <li>If you specify this parameter, you must also specify the <code>AppInstanceGroupIdList</code> parameter, and the number of delivery group IDs in <code>AppInstanceGroupIdList</code> must be 1.</li>
          * </ul>
          * </blockquote>
          * 
@@ -287,7 +316,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the persistent session.</p>
+         * <p>The persistent session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>p-0bxls9m3cl7s****</p>
@@ -299,7 +328,10 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * AppPolicyId.
+         * <p>The policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg-0clfzcy0adpcf****</p>
          */
         public Builder appPolicyId(String appPolicyId) {
             this.putBodyParameter("AppPolicyId", appPolicyId);
@@ -308,7 +340,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</p>
+         * <p>The application startup parameter. This parameter is optional. You can refer to the method for specifying startup parameters in the image creation documentation and manually verify the startup parameters during image creation. This field is suitable for startup parameters with variable content, allowing API callers to set them flexibly. For more information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation parameters and startup parameters</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>/q /n</p>
@@ -320,7 +352,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The application version. If you configure this parameter, only an application of the specified version is started. If you do not configure this parameter, an application of a random authorized version is started.</p>
+         * <p>The application version. If you specify this parameter, only the specified version of the application is opened. If you do not specify this parameter, any authorized version of the application is opened.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -334,7 +366,7 @@ public class GetConnectionTicketRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> If you configure this parameter, the system assigns application instances only among the delivery groups that reside in the specified region.</p>
+         * <p>If you specify this parameter, application instances are allocated only from delivery groups in the specified region.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,7 +379,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the convenience account.</p>
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -361,6 +393,9 @@ public class GetConnectionTicketRequest extends Request {
 
         /**
          * <p>The environment configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;userConfigReenter&quot;:&quot;NATIVE&quot;}</p>
          */
         public Builder environmentConfig(String environmentConfig) {
             this.putBodyParameter("EnvironmentConfig", environmentConfig);
@@ -370,11 +405,6 @@ public class GetConnectionTicketRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * <li>AndroidCloud: Cloud Phone</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -387,9 +417,9 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is required for calls other than the first call to this operation. You can use this parameter to query the task status and connection credential.</p>
+         * <p>This parameter is required for non-initial calls. Use this parameter query to invoke the node status and connection credential retrieval.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

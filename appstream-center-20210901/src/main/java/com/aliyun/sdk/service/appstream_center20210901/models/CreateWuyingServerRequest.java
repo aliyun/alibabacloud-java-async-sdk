@@ -47,6 +47,14 @@ public class CreateWuyingServerRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ErdmaEnabled")
+    private Boolean erdmaEnabled;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GpuDriverVersion")
+    private String gpuDriverVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
@@ -135,6 +143,8 @@ public class CreateWuyingServerRequest extends Request {
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
         this.dataDisk = builder.dataDisk;
+        this.erdmaEnabled = builder.erdmaEnabled;
+        this.gpuDriverVersion = builder.gpuDriverVersion;
         this.hostName = builder.hostName;
         this.idempotenceToken = builder.idempotenceToken;
         this.imageId = builder.imageId;
@@ -217,6 +227,20 @@ public class CreateWuyingServerRequest extends Request {
      */
     public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return erdmaEnabled
+     */
+    public Boolean getErdmaEnabled() {
+        return this.erdmaEnabled;
+    }
+
+    /**
+     * @return gpuDriverVersion
+     */
+    public String getGpuDriverVersion() {
+        return this.gpuDriverVersion;
     }
 
     /**
@@ -367,6 +391,8 @@ public class CreateWuyingServerRequest extends Request {
         private String bizRegionId; 
         private String chargeType; 
         private java.util.List<DataDisk> dataDisk; 
+        private Boolean erdmaEnabled; 
+        private String gpuDriverVersion; 
         private String hostName; 
         private String idempotenceToken; 
         private String imageId; 
@@ -401,6 +427,8 @@ public class CreateWuyingServerRequest extends Request {
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
             this.dataDisk = request.dataDisk;
+            this.erdmaEnabled = request.erdmaEnabled;
+            this.gpuDriverVersion = request.gpuDriverVersion;
             this.hostName = request.hostName;
             this.idempotenceToken = request.idempotenceToken;
             this.imageId = request.imageId;
@@ -424,7 +452,7 @@ public class CreateWuyingServerRequest extends Request {
         } 
 
         /**
-         * <p>Quantity.</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -436,7 +464,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Auto payment.</p>
+         * <p>Specifies whether to enable automatic payment.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -448,7 +476,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Auto-renewal.</p>
+         * <p>Specifies whether to enable auto-renewal.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -460,7 +488,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>bandwidth value, the NetworkStrategyType is valid for DirectIp. Unit: Mbps, range 2~100</p>
+         * <p>The bandwidth value. This parameter takes effect only when NetworkStrategyType is set to DirectIp. Unit: Mbit/s. Valid values: 2 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -472,7 +500,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Region.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -484,11 +512,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PrePaid: subscription</li>
-         * </ul>
+         * <p>The billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -500,7 +524,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The list of data disks.</p>
+         * <p>The list of data cloud disks.</p>
          */
         public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
             this.putBodyParameter("DataDisk", dataDisk);
@@ -509,7 +533,64 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * HostName.
+         * <p>Specifies whether to enable dedicated eRDMA network interfaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder erdmaEnabled(Boolean erdmaEnabled) {
+            this.putBodyParameter("ErdmaEnabled", erdmaEnabled);
+            this.erdmaEnabled = erdmaEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The GPU driver configuration version, such as grid19.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>grid19</p>
+         */
+        public Builder gpuDriverVersion(String gpuDriverVersion) {
+            this.putBodyParameter("GpuDriverVersion", gpuDriverVersion);
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+
+        /**
+         * <p>The hostname. The following limits apply:</p>
+         * <ul>
+         * <li><p>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive use is not allowed.</p>
+         * </li>
+         * <li><p>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+         * </li>
+         * <li><p>Linux workstations:</p>
+         * <ul>
+         * <li><p>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment between periods can contain uppercase and lowercase letters, digits, and hyphens (-).</p>
+         * </li>
+         * <li><p>You can use the placeholder <code>${instance_id}</code> to include the instance ID in the HostName parameter. For example, if you set <code>HostName=k8s-${instance_id}</code> and the created ECS instance ID is <code>i-123abc****</code>, the hostname of the instance is <code>k8s-i-123abc****</code>.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p>When creating multiple workstation instances at a time, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> naming format to uniformly name multiple workstations. For example, if you set Hostname to <code>ecd-[1,4]-test</code>, the hostname of the first workstation is <code>ecd-0001-test</code>, the hostname of the second workstation is <code>ecd-0002-test</code>, and so on.</p>
+         * <ul>
+         * <li><p><code>name_prefix</code>: The prefix of the hostname.</p>
+         * </li>
+         * <li><p><code>[begin_number,bits]</code>: The sequential number in the hostname.</p>
+         * <ul>
+         * <li><p><code>begin_number</code>: The starting number. Valid values: 0 to 999999. Default value: 0. If an invalid value is specified, the value is set to 0.</p>
+         * </li>
+         * <li><p><code>bits</code>: The number of digits. Valid values: 1 to 6. Default value: 6. If an invalid value is specified, the value is set to 6.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * <li><p><code>name_suffix</code>: The suffix of the hostname.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testhost</p>
          */
         public Builder hostName(String hostName) {
             this.putBodyParameter("HostName", hostName);
@@ -518,7 +599,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Idempotence token to ensure operation uniqueness</p>
+         * <p>The idempotency token that ensures operation uniqueness.</p>
          * 
          * <strong>example:</strong>
          * <p>6a1b8c3d</p>
@@ -530,7 +611,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>img-bp13mu****</p>
@@ -542,7 +623,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * MaxPrice.
+         * <p>The maximum price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.05</p>
          */
         public Builder maxPrice(Float maxPrice) {
             this.putBodyParameter("MaxPrice", maxPrice);
@@ -551,7 +635,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The type of the network policy (in invitational preview).</p>
+         * <p>The network policy type (invite-only preview).</p>
          * 
          * <strong>example:</strong>
          * <p>DirectIp</p>
@@ -563,7 +647,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The office network IDs.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-643067****</p>
@@ -575,7 +659,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Workstation login password.</p>
+         * <p>The workstation logon password.</p>
          * 
          * <strong>example:</strong>
          * <p>YourPassword123</p>
@@ -587,7 +671,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The subscription period.</p>
+         * <p>The subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -600,11 +684,6 @@ public class CreateWuyingServerRequest extends Request {
 
         /**
          * <p>The time unit.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -616,9 +695,9 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The ID of the discount.</p>
+         * <p>The discount ID.</p>
          * <blockquote>
-         * <p> If PromotionId is set, it will try to apply the corresponding discount.</p>
+         * <p>If PromotionId is specified, the corresponding discount is applied.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -631,7 +710,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * SavingPlanId.
+         * <p>The savings plan ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>spn-ce3f5b4fk**46CY</p>
          */
         public Builder savingPlanId(String savingPlanId) {
             this.putBodyParameter("SavingPlanId", savingPlanId);
@@ -640,7 +722,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Workstation specifications.</p>
+         * <p>The workstation instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</p>
@@ -652,7 +734,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * ServerPortRange.
+         * <p>The service port range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22/22</p>
          */
         public Builder serverPortRange(String serverPortRange) {
             this.putBodyParameter("ServerPortRange", serverPortRange);
@@ -661,7 +746,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * SubPayType.
+         * <p>The sub-billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>postPaid</p>
          */
         public Builder subPayType(String subPayType) {
             this.putBodyParameter("SubPayType", subPayType);
@@ -670,11 +758,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The system disk category.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cloud_auto.</li>
-         * </ul>
+         * <p>The system cloud disk type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_auto</p>
@@ -686,7 +770,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The performance level (PL) of the system disk.</p>
+         * <p>The system cloud disk performance level.</p>
          * 
          * <strong>example:</strong>
          * <p>PL0</p>
@@ -698,7 +782,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GB.</p>
+         * <p>The system cloud disk size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -719,7 +803,10 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * VirtualNodePoolId.
+         * <p>The virtual node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnp-0b************gyw</p>
          */
         public Builder virtualNodePoolId(String virtualNodePoolId) {
             this.putBodyParameter("VirtualNodePoolId", virtualNodePoolId);
@@ -728,7 +815,7 @@ public class CreateWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the workstation. The numeric suffix is automatically added when multiple workstations are created.</p>
+         * <p>The workstation name. When creating multiple workstations, a numeric suffix is automatically appended.</p>
          * 
          * <strong>example:</strong>
          * <p>exampleServerName</p>
@@ -812,11 +899,7 @@ public class CreateWuyingServerRequest extends Request {
             } 
 
             /**
-             * <p>The data disk category.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>cloud_auto.</li>
-             * </ul>
+             * <p>The data cloud disk type.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_auto</p>
@@ -827,7 +910,7 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * <p>The PL of the data disk.</p>
+             * <p>The data cloud disk performance level.</p>
              * 
              * <strong>example:</strong>
              * <p>PL0</p>
@@ -838,7 +921,7 @@ public class CreateWuyingServerRequest extends Request {
             }
 
             /**
-             * <p>The data disk size.</p>
+             * <p>The data cloud disk size.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

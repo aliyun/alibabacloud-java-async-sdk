@@ -286,12 +286,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the region where the resource resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * <li>cn-hangzhou: China (Hangzhou)</li>
-         * </ul>
+         * <p>The region ID of the resource. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -303,7 +298,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -312,7 +310,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * Cpu.
+         * <p>The number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -321,7 +322,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * Gpu.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder gpu(Float gpu) {
             this.putQueryParameter("Gpu", gpu);
@@ -330,7 +334,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * GpuMemory.
+         * <p>The GPU memory size. This value is meaningful for GPU-accelerated cloud desktops. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
          */
         public Builder gpuMemory(Integer gpuMemory) {
             this.putQueryParameter("GpuMemory", gpuMemory);
@@ -339,7 +346,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * InstanceTypeForModify.
+         * <p>The current specification of the instance for specification change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eds.proworkstation_flagship_elite_ne.32c64g.48g1x</p>
          */
         public Builder instanceTypeForModify(String instanceTypeForModify) {
             this.putQueryParameter("InstanceTypeForModify", instanceTypeForModify);
@@ -348,12 +358,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The language that you want to use.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>en-US: English (US)</li>
-         * <li>zh-CN: Simplified Chinese</li>
-         * </ul>
+         * <p>The language type.</p>
          * 
          * <strong>example:</strong>
          * <p>zh-CN</p>
@@ -365,7 +370,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * Memory.
+         * <p>The memory size. Unit: MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10240</p>
          */
         public Builder memory(Integer memory) {
             this.putQueryParameter("Memory", memory);
@@ -374,7 +382,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The resource type that you want to query. If you do not configure this parameter, all resource types are returned.</p>
+         * <p>The resource specification type to query. If this parameter is not specified, all specification types are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -386,7 +394,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * NodeInstanceTypeFamily.
+         * <p>The instance family.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appstreaming.vgpu</p>
          */
         public Builder nodeInstanceTypeFamily(String nodeInstanceTypeFamily) {
             this.putQueryParameter("NodeInstanceTypeFamily", nodeInstanceTypeFamily);
@@ -395,7 +406,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>CPU/Memory</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CPU</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -404,7 +418,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The specification change type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -413,11 +430,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The operating system that is supported.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Windows: the Windows operating system</li>
-         * </ul>
+         * <p>The supported operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -429,7 +442,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the query results to display.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -442,7 +455,7 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>The number of query results per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -456,10 +469,6 @@ public class ListNodeInstanceTypeRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -472,7 +481,10 @@ public class ListNodeInstanceTypeRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>DESC/ASC</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ASC</p>
          */
         public Builder sortType(String sortType) {
             this.putQueryParameter("SortType", sortType);

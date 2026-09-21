@@ -89,7 +89,7 @@ public class TagCloudResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</p>
+         * <p>The list of resource IDs. A maximum of 50 IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putBodyParameter("ResourceIds", resourceIds);
@@ -98,15 +98,7 @@ public class TagCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the cloud resource.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CenterImageId: center image ID.</li>
-         * <li>AppId: app ID.</li>
-         * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-         * <li>AppInstanceGroupId: delivery group ID.</li>
-         * <li>AliUid: tenant ID.</li>
-         * </ul>
+         * <p>The cloud resource type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,19 +111,19 @@ public class TagCloudResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags that you want to remove from the cloud resources. System and custom tags are supported.</p>
+         * <p>The list of tags. System tags and custom tags are supported.</p>
          * <ul>
-         * <li><p>Valid values for system tags:</p>
+         * <li><p>System tag enumeration values:</p>
          * <ul>
-         * <li><code>System/Scheduler/GRAYSCALE</code>: canary tags.</li>
-         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tags used to stop new users bound to the delivery group from establishing a connection.</li>
+         * <li><code>System/Scheduler/GRAYSCALE</code>: canary release tag</li>
+         * <li><code>System/Scheduler/STOP_NEW_USER_CONNECTION</code>: tag that prevents newly bound users in a delivery group from establishing connections</li>
          * </ul>
          * </li>
-         * <li><p>You can create up to 20 custom tags.</p>
+         * <li><p>Custom tags: A maximum of 20 custom tags can be created.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</p>
+         * <p>Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -203,7 +195,7 @@ public class TagCloudResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The key of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</p>
+             * <p>The tag key. Tags are case-sensitive. The key must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,7 +207,7 @@ public class TagCloudResourcesRequest extends Request {
             }
 
             /**
-             * <p>The value of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</p>
+             * <p>The tag value. Tags are case-sensitive. The value must be 1 to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

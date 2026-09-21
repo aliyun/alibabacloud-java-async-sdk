@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyWuyingServerAttributeRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ErdmaEnabled")
+    private Boolean erdmaEnabled;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
@@ -35,6 +39,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
 
     private ModifyWuyingServerAttributeRequest(Builder builder) {
         super(builder);
+        this.erdmaEnabled = builder.erdmaEnabled;
         this.password = builder.password;
         this.productType = builder.productType;
         this.wuyingServerId = builder.wuyingServerId;
@@ -52,6 +57,13 @@ public class ModifyWuyingServerAttributeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return erdmaEnabled
+     */
+    public Boolean getErdmaEnabled() {
+        return this.erdmaEnabled;
     }
 
     /**
@@ -83,6 +95,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyWuyingServerAttributeRequest, Builder> {
+        private Boolean erdmaEnabled; 
         private String password; 
         private String productType; 
         private String wuyingServerId; 
@@ -94,6 +107,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
 
         private Builder(ModifyWuyingServerAttributeRequest request) {
             super(request);
+            this.erdmaEnabled = request.erdmaEnabled;
             this.password = request.password;
             this.productType = request.productType;
             this.wuyingServerId = request.wuyingServerId;
@@ -101,7 +115,19 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Workstation login password.</p>
+         * <p>Specifies whether to enable dedicated eRDMA network interfaces. Only true is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder erdmaEnabled(Boolean erdmaEnabled) {
+            this.putBodyParameter("ErdmaEnabled", erdmaEnabled);
+            this.erdmaEnabled = erdmaEnabled;
+            return this;
+        }
+
+        /**
+         * <p>The logon password of the workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>yourPassword</p>
@@ -113,7 +139,10 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -122,7 +151,7 @@ public class ModifyWuyingServerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workstation.</p>
+         * <p>The workstation ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-0bw2f11****dial</p>

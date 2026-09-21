@@ -67,7 +67,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud resources on which the operation failed and the corresponding tags.</p>
+         * <p>The list of failed resources and tag information.</p>
          */
         public Builder failedResources(java.util.List<FailedResources> failedResources) {
             this.failedResources = failedResources;
@@ -75,7 +75,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System/Scheduler/STOP_NEW_USER_CONNECTION</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -162,7 +168,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>The tag type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -170,7 +179,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -276,7 +288,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TAG_KEY_DUPLICATED</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -284,7 +299,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Duplicate tag keys exist.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -292,7 +310,10 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-001</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -300,15 +321,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>CenterImageId: center image ID.</li>
-             * <li>AppId: app ID.</li>
-             * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-             * <li>AppInstanceGroupId: delivery group ID.</li>
-             * <li>AliUid: tenant ID.</li>
-             * </ul>
+             * <p>The cloud resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>AppInstanceGroupId</p>
@@ -319,7 +332,7 @@ public class TagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of failed tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

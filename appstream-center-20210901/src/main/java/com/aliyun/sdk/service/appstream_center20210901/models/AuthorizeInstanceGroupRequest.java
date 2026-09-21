@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AuthorizeInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupSetId")
+    private String appInstanceGroupSetId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
@@ -58,6 +61,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
     private AuthorizeInstanceGroupRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
+        this.appInstanceGroupSetId = builder.appInstanceGroupSetId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
         this.authorizeUserGroupIds = builder.authorizeUserGroupIds;
         this.authorizeUserIds = builder.authorizeUserIds;
@@ -86,6 +90,13 @@ public class AuthorizeInstanceGroupRequest extends Request {
      */
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    /**
+     * @return appInstanceGroupSetId
+     */
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     /**
@@ -146,6 +157,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<AuthorizeInstanceGroupRequest, Builder> {
         private String appInstanceGroupId; 
+        private String appInstanceGroupSetId; 
         private String appInstancePersistentId; 
         private java.util.List<String> authorizeUserGroupIds; 
         private java.util.List<String> authorizeUserIds; 
@@ -162,6 +174,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         private Builder(AuthorizeInstanceGroupRequest request) {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
+            this.appInstanceGroupSetId = request.appInstanceGroupSetId;
             this.appInstancePersistentId = request.appInstancePersistentId;
             this.authorizeUserGroupIds = request.authorizeUserGroupIds;
             this.authorizeUserIds = request.authorizeUserIds;
@@ -173,7 +186,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -185,7 +198,26 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>持久会话ID。</p>
+         * <p>The delivery group set ID. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
+         */
+        public Builder appInstanceGroupSetId(String appInstanceGroupSetId) {
+            this.putBodyParameter("AppInstanceGroupSetId", appInstanceGroupSetId);
+            this.appInstanceGroupSetId = appInstanceGroupSetId;
+            return this;
+        }
+
+        /**
+         * <p>The persistent session ID.</p>
+         * <blockquote>
+         * <p>Metric description</p>
+         * <ul>
+         * <li>This parameter is required when the authorization mode of the delivery group is Session. You can call the ListPersistentAppInstances operation to obtain a valid ID.</li>
+         * <li>This parameter is required when ProductType is set to WuyingServer. You can call the ListPersistentAppInstances operation to obtain a valid ID.</li>
+         * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>p-0cc7s3mw2fg4j****</p>
@@ -197,7 +229,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * AuthorizeUserGroupIds.
+         * <p>The list of authorized user group IDs to grant authorization.</p>
          */
         public Builder authorizeUserGroupIds(java.util.List<String> authorizeUserGroupIds) {
             this.putBodyParameter("AuthorizeUserGroupIds", authorizeUserGroupIds);
@@ -206,7 +238,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+         * <p>The list of usernames to add to the delivery group authorization. You can specify 1 to 100 usernames.</p>
          */
         public Builder authorizeUserIds(java.util.List<String> authorizeUserIds) {
             this.putBodyParameter("AuthorizeUserIds", authorizeUserIds);
@@ -215,7 +247,13 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * AvatarId.
+         * <p>The user avatar ID.</p>
+         * <blockquote>
+         * <p>This parameter is not available for public use.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder avatarId(String avatarId) {
             this.putBodyParameter("AvatarId", avatarId);
@@ -224,6 +262,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
+         * <p>The product type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +275,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * UnAuthorizeUserGroupIds.
+         * <p>The list of authorized user group IDs to revoke authorization.</p>
          */
         public Builder unAuthorizeUserGroupIds(java.util.List<String> unAuthorizeUserGroupIds) {
             this.putBodyParameter("UnAuthorizeUserGroupIds", unAuthorizeUserGroupIds);
@@ -245,7 +284,7 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
+         * <p>The list of usernames to remove from the delivery group authorization. You can specify 1 to 100 usernames.</p>
          */
         public Builder unAuthorizeUserIds(java.util.List<String> unAuthorizeUserIds) {
             this.putBodyParameter("UnAuthorizeUserIds", unAuthorizeUserIds);
@@ -335,11 +374,6 @@ public class AuthorizeInstanceGroupRequest extends Request {
 
             /**
              * <p>The user type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ad: Active Directory (AD) account</li>
-             * <li>simple: convenience account</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>simple</p>

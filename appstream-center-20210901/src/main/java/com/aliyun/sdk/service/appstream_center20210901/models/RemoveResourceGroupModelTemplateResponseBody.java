@@ -80,7 +80,7 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The removal results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -188,7 +194,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InvalidParameter.resourceGroupIds</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -196,7 +205,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The parameter resourceGroupIds is invalid.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -204,7 +216,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -212,7 +227,10 @@ public class RemoveResourceGroupModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the execution is successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

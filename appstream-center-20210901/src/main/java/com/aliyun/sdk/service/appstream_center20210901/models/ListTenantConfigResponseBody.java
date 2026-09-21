@@ -78,7 +78,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user configurations.</p>
+         * <p>The user configuration information.</p>
          */
         public Builder tenantConfigModel(TenantConfigModel tenantConfigModel) {
             this.tenantConfigModel = tenantConfigModel;
@@ -158,12 +158,7 @@ public class ListTenantConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the resource expiration reminder feature is enabled.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether resource expiration reminders are enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -174,7 +169,10 @@ public class ListTenantConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MultiSessionSupportType.
+             * <p>The support type for creating shared session delivery groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder multiSessionSupportType(String multiSessionSupportType) {
                 this.multiSessionSupportType = multiSessionSupportType;
@@ -182,7 +180,8 @@ public class ListTenantConfigResponseBody extends TeaModel {
             }
 
             /**
-             * MultiSessionSupportedRegions.
+             * <p>The list of region IDs that support creating shared session delivery groups.
+             * Note: This field has a value only when the support type for creating shared session delivery groups is Specific.</p>
              */
             public Builder multiSessionSupportedRegions(java.util.List<String> multiSessionSupportedRegions) {
                 this.multiSessionSupportedRegions = multiSessionSupportedRegions;

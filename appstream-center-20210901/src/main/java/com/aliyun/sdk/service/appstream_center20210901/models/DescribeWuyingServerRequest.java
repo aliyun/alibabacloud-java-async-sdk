@@ -60,6 +60,7 @@ public class DescribeWuyingServerRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the development host.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

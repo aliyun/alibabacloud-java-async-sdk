@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListAuthorizedUserGroupsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupSetId")
+    private String appInstanceGroupSetId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GroupId")
@@ -48,6 +51,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
     private ListAuthorizedUserGroupsRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
+        this.appInstanceGroupSetId = builder.appInstanceGroupSetId;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
         this.pageNumber = builder.pageNumber;
@@ -73,6 +77,13 @@ public class ListAuthorizedUserGroupsRequest extends Request {
      */
     public String getAppInstanceGroupId() {
         return this.appInstanceGroupId;
+    }
+
+    /**
+     * @return appInstanceGroupSetId
+     */
+    public String getAppInstanceGroupSetId() {
+        return this.appInstanceGroupSetId;
     }
 
     /**
@@ -112,6 +123,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListAuthorizedUserGroupsRequest, Builder> {
         private String appInstanceGroupId; 
+        private String appInstanceGroupSetId; 
         private String groupId; 
         private String groupName; 
         private Integer pageNumber; 
@@ -125,6 +137,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         private Builder(ListAuthorizedUserGroupsRequest request) {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
+            this.appInstanceGroupSetId = request.appInstanceGroupSetId;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
             this.pageNumber = request.pageNumber;
@@ -134,7 +147,6 @@ public class ListAuthorizedUserGroupsRequest extends Request {
 
         /**
          * <p>The ID of the delivery group.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -146,7 +158,19 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the user group (exact match).</p>
+         * <p>The ID of the delivery group set. You must specify either AppInstanceGroupSetId or AppInstanceGroupId, but not both.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>set-3jm9d0abc00example</p>
+         */
+        public Builder appInstanceGroupSetId(String appInstanceGroupSetId) {
+            this.putBodyParameter("AppInstanceGroupSetId", appInstanceGroupSetId);
+            this.appInstanceGroupSetId = appInstanceGroupSetId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the user group. This parameter is used for exact match.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-00001</p>
@@ -158,7 +182,10 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * <p>The name of the user group (fuzzy match).</p>
+         * <p>The name of the user group. This parameter is used for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserGroup001</p>
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("GroupName", groupName);
@@ -167,7 +194,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number, starting from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +207,7 @@ public class ListAuthorizedUserGroupsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries to return per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,10 +221,6 @@ public class ListAuthorizedUserGroupsRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

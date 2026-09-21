@@ -102,6 +102,7 @@ public class ListModelTemplateResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The model group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListModelTemplateResourceGroupRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. The values 0 and 1 return the same result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +127,10 @@ public class ListModelTemplateResourceGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -132,7 +139,7 @@ public class ListModelTemplateResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupIds.
+         * <p>The list of resource group IDs.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {
             this.putQueryParameter("ResourceGroupIds", resourceGroupIds);

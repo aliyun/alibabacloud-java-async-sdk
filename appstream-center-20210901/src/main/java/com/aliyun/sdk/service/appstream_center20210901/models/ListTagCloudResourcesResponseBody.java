@@ -93,7 +93,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the next query is required.</p>
+         * <p>The pagination token that indicates whether more results exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</p>
@@ -115,7 +115,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags added to the cloud resources.</p>
+         * <p>The list of tags bound to resources.</p>
          */
         public Builder resourceTags(java.util.List<ResourceTags> resourceTags) {
             this.resourceTags = resourceTags;
@@ -217,11 +217,6 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The tag type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Custom: custom tag.</li>
-             * <li>System: system tag.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -326,14 +321,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AppId: app ID.</li>
-             * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-             * <li>AppInstanceGroupId: delivery group ID.</li>
-             * <li>AliUid: tenant ID.</li>
-             * </ul>
+             * <p>The cloud resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>AppInstanceGroupId</p>
@@ -344,7 +332,7 @@ public class ListTagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

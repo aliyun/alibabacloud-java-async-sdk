@@ -74,11 +74,11 @@ public class DescribeWuyingServerEipInfoRequest extends Request {
         } 
 
         /**
-         * <p>The Internet service provider (ISP). Valid values:</p>
+         * <p>The Internet service operation provider. Valid values: </p>
          * <ul>
-         * <li>ChinaMobile: China Mobile</li>
-         * <li>ChinaTelecom: China Telecom</li>
-         * <li>ChinaUnicom: China Unicom</li>
+         * <li>ChinaMobile: China Shift.</li>
+         * <li>ChinaTelecom: China Telecom.</li>
+         * <li>ChinaUnicom: China Unicom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeWuyingServerEipInfoRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workstation.</p>
+         * <p>The workspace ID. You can obtain this ID from the WuyingServerIdList returned by CreateWuyingServer after creating a workspace, or query the ID of an existing workspace by calling ListWuyingServer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

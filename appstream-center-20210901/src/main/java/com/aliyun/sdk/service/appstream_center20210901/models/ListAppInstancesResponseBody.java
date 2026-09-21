@@ -106,7 +106,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The app instances.</p>
+         * <p>The list of queried application instances.</p>
          */
         public Builder appInstanceModels(java.util.List<AppInstanceModels> appInstanceModels) {
             this.appInstanceModels = appInstanceModels;
@@ -114,7 +114,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page. We recommend that you configure this parameter.</p>
+         * <p>The page number of the query results to display. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page. The value cannot be greater than <code>100</code>. We recommend that you configure this parameter.</p>
+         * <p>The number of query results per page. Maximum value: <code>100</code>. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +147,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -216,7 +216,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the end user that is bound to the application instance.</p>
+             * <p>The ID of the end user bound to the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>app.test</p>
@@ -227,7 +227,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The use duration of the application instance. Unit: seconds.</p>
+             * <p>The usage duration of the instance. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>2000</p>
@@ -427,7 +427,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-dk8p95irqfst9****</p>
@@ -438,7 +438,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application instance.</p>
+             * <p>The application instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-8dl7dzchklmka****</p>
@@ -449,7 +449,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the binding between the application instance and end users.</p>
+             * <p>The binding information between the instance and the user.</p>
              */
             public Builder bindInfo(BindInfo bindInfo) {
                 this.bindInfo = bindInfo;
@@ -457,14 +457,14 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the app instance. Valid values:</p>
+             * <p>The billing method of the instance. Valid values:</p>
              * <ul>
              * <li><strong>PrePaid</strong>: subscription.</li>
-             * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+             * <li><strong>PostPaid</strong>: pay-as-you-go.<blockquote>
+             * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
              * </blockquote>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -475,7 +475,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-07T20:29:19.000+08:00</p>
@@ -486,7 +486,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application instance was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-07T20:29:19.000+08:00</p>
@@ -497,7 +497,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address associated with the primary NIC. This value is returned only if <code>StrategyType</code> is set to <code>Mixed</code>.</p>
+             * <p>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<code>StrategyType</code>) of the delivery group is set to mixed mode pattern (<code>Mixed</code>). Otherwise, this value is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>10.13.13.211</p>
@@ -508,7 +508,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceId.
+             * <p>The NIC ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eni-2ze1jetnxkm***qq7i</p>
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -516,7 +519,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * <p>The private IP address of the egress traffic NIC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.12.32</p>
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -524,9 +530,9 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the node on which the app instance runs.</p>
+             * <p>The ID of the node on which the instance runs.</p>
              * <blockquote>
-             * <p> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</p>
+             * <p>This parameter is returned only when the billing mode of the delivery group to which this instance belongs is resource-based billing (ChargeResourceMode=Node).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -538,12 +544,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session status. This parameter is returned only if the application instance is in the <code>RUNNING</code> state.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>disconnect: disconnected</li>
-             * <li>connect: connected</li>
-             * </ul>
+             * <p>The session connection status. This value is returned only when the instance status is running (<code>RUNNING</code>). Otherwise, this value is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>connect</p>
@@ -554,7 +555,7 @@ public class ListAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application instance.</p>
+             * <p>The application instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>BOUND</p>

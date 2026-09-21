@@ -118,7 +118,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the persistent sessions.</p>
+         * <p>The list of persistent session IDs.</p>
          */
         public Builder appInstancePersistentIds(java.util.List<String> appInstancePersistentIds) {
             this.putQueryParameter("AppInstancePersistentIds", appInstancePersistentIds);
@@ -140,7 +140,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number of the query results to display. The value starts from <strong>1</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +152,7 @@ public class ListPersistentAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value cannot be greater than <strong>100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of query results per page. The maximum value is <strong>100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,12 +165,6 @@ public class ListPersistentAppInstancesRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * <li>CloudBrowser: Cloud-based Browser</li>
-         * <li>AndroidCloud: Cloud Phone</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

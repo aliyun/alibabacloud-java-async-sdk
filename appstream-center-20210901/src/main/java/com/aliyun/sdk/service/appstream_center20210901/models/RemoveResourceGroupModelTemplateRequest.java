@@ -75,6 +75,7 @@ public class RemoveResourceGroupModelTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The model group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class RemoveResourceGroupModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The list of resource group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceGroupIds(java.util.List<String> resourceGroupIds) {

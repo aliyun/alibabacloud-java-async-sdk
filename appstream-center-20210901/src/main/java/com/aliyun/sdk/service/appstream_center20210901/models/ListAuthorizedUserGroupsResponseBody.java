@@ -117,7 +117,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries returned on each page.</p>
+         * <p>The maximum number of entries returned per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -150,7 +150,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the user groups.</p>
+         * <p>The list of user group information.</p>
          */
         public Builder userGroups(java.util.List<UserGroups> userGroups) {
             this.userGroups = userGroups;
@@ -173,6 +173,9 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupSetId")
+        private String appInstanceGroupSetId;
+
         @com.aliyun.core.annotation.NameInMap("AuthMode")
         private String authMode;
 
@@ -184,6 +187,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
         private UserGroups(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
+            this.appInstanceGroupSetId = builder.appInstanceGroupSetId;
             this.authMode = builder.authMode;
             this.groupId = builder.groupId;
             this.groupName = builder.groupName;
@@ -202,6 +206,13 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
          */
         public String getAppInstanceGroupId() {
             return this.appInstanceGroupId;
+        }
+
+        /**
+         * @return appInstanceGroupSetId
+         */
+        public String getAppInstanceGroupSetId() {
+            return this.appInstanceGroupSetId;
         }
 
         /**
@@ -227,6 +238,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appInstanceGroupId; 
+            private String appInstanceGroupSetId; 
             private String authMode; 
             private String groupId; 
             private String groupName; 
@@ -236,6 +248,7 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
             private Builder(UserGroups model) {
                 this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceGroupSetId = model.appInstanceGroupSetId;
                 this.authMode = model.authMode;
                 this.groupId = model.groupId;
                 this.groupName = model.groupName;
@@ -253,13 +266,18 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The ID of the delivery group set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set-3jm9d0abc00example</p>
+             */
+            public Builder appInstanceGroupSetId(String appInstanceGroupSetId) {
+                this.appInstanceGroupSetId = appInstanceGroupSetId;
+                return this;
+            }
+
+            /**
              * <p>The authorization mode.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>App: authorizes access to apps.</li>
-             * <li>AppInstanceGroup: authorizes access to delivery groups.</li>
-             * <li>Session: authorizes access to sessions.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>App</p>
@@ -282,6 +300,9 @@ public class ListAuthorizedUserGroupsResponseBody extends TeaModel {
 
             /**
              * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserGroup001</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

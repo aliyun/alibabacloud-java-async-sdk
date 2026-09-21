@@ -214,7 +214,10 @@ public class ListModelTemplatesRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -223,7 +226,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * AgentPlatformList.
+         * <p>The list of Agent platforms. Supports COMMON. If specified together with AgentPlatform, AgentPlatform takes precedence and this list is ignored. If neither platform filter is specified, the default value is ENTERPRISE. To query Common model groups, explicitly include COMMON. If filtering by Provider at the same time, set the value to Common.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatformList(java.util.List<String> agentPlatformList) {
             this.putQueryParameter("AgentPlatformList", agentPlatformList);
@@ -232,7 +238,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * AgentProvider.
+         * <p>The Agent provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw</p>
          */
         public Builder agentProvider(String agentProvider) {
             this.putQueryParameter("AgentProvider", agentProvider);
@@ -241,7 +250,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * AgentProviderList.
+         * <p>The list of Agent providers. Supports Common. If specified together with AgentProvider, AgentProvider takes precedence and this list is ignored. To query Common model groups, explicitly include COMMON in the platform filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw</p>
          */
         public Builder agentProviderList(java.util.List<String> agentProviderList) {
             this.putQueryParameter("AgentProviderList", agentProviderList);
@@ -250,6 +262,7 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The business type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +275,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * HasModel.
+         * <p>Specifies whether models are configured in the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasModel(Boolean hasModel) {
             this.putQueryParameter("HasModel", hasModel);
@@ -271,7 +287,7 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * ModelTemplateIdList.
+         * <p>The list of template group IDs used for filtering.</p>
          */
         public Builder modelTemplateIdList(java.util.List<String> modelTemplateIdList) {
             String modelTemplateIdListShrink = shrink(modelTemplateIdList, "ModelTemplateIdList", "json");
@@ -281,7 +297,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The model group name. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>coding-openai</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -290,7 +309,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -299,7 +321,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -308,7 +333,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * RefScope.
+         * <p>The authorization scope filter. Valid values: ALL_USER, USER_MIXED, and RESOURCE_MIXED (strictly uppercase. Case variants and unknown values return InvalidParameter). If not specified, no filtering is applied. Unlike the create/update operations, the filter scenario allows RESOURCE_MIXED (to filter non-Common model groups).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_USER</p>
          */
         public Builder refScope(String refScope) {
             this.putQueryParameter("RefScope", refScope);
@@ -317,7 +345,10 @@ public class ListModelTemplatesRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The template source filter. Valid values: User (tenant-created, default if not specified) and System (system preset).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

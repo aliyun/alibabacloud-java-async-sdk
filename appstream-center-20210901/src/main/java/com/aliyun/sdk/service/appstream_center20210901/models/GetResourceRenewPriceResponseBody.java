@@ -194,7 +194,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon description.</p>
+             * <p>The coupon descriptions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**活动</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -214,6 +217,9 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
             /**
              * <p>The coupon name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**活动</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -221,12 +227,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the coupon was used.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the coupon is selected.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -335,7 +336,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The currency type.</p>
+             * <p>The currency.</p>
              * 
              * <strong>example:</strong>
              * <p>CNY</p>
@@ -346,7 +347,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * <p>The discount amount. The actual price equals the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -368,7 +369,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon description.</p>
+             * <p>The coupon descriptions.</p>
              */
             public Builder promotions(java.util.List<Promotions> promotions) {
                 this.promotions = promotions;
@@ -376,7 +377,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</p>
+             * <p>The actual price. The actual price equals the original price minus the discount amount.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -446,7 +447,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the price calculation rule.</p>
+             * <p>The pricing rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**活动</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -454,7 +458,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the price calculation rule.</p>
+             * <p>The pricing rule ID.</p>
              * 
              * <strong>example:</strong>
              * <p>20002****</p>
@@ -532,7 +536,7 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price calculation rules.</p>
+             * <p>The pricing rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

@@ -78,7 +78,7 @@ public class PageListAppInstanceGroupUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The users.</p>
+         * <p>The queried users.</p>
          */
         public Builder users(java.util.List<String> users) {
             this.users = users;

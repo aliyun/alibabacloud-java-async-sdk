@@ -106,7 +106,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of returned data objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of query results per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -204,7 +216,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Max.
+             * <p>The maximum multiplier. An empty value indicates no upper limit. For example, Min=1 with an empty Max is displayed as 1x and above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder max(Float max) {
                 this.max = max;
@@ -212,7 +227,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum multiplier. When equal to Max, it is a fixed multiplier. For example, Min=Max=2 is displayed as 2x.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder min(Float min) {
                 this.min = min;
@@ -279,7 +297,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * RequestModality.
+             * <p>The list of request modalities, such as Text, Image, and Audio.</p>
              */
             public Builder requestModality(java.util.List<String> requestModality) {
                 this.requestModality = requestModality;
@@ -287,7 +305,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseModality.
+             * <p>The list of response modalities, such as Text, Image, and Audio.</p>
              */
             public Builder responseModality(java.util.List<String> responseModality) {
                 this.responseModality = responseModality;
@@ -367,7 +385,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Price.
+             * <p>The price in string format, such as 0.2.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder price(String price) {
                 this.price = price;
@@ -375,7 +396,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PriceName.
+             * <p>The price name, such as Input, Output, or Image Generation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Input</p>
              */
             public Builder priceName(String priceName) {
                 this.priceName = priceName;
@@ -383,7 +407,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PriceUnit.
+             * <p>The price unit, such as per image or per thousand tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>per million tokens</p>
              */
             public Builder priceUnit(String priceUnit) {
                 this.priceUnit = priceUnit;
@@ -450,7 +477,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Prices.
+             * <p>The list of prices within this range.</p>
              */
             public Builder prices(java.util.List<Prices> prices) {
                 this.prices = prices;
@@ -458,7 +485,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RangeName.
+             * <p>The range name, such as Default or 0-1M tokens.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default</p>
              */
             public Builder rangeName(String rangeName) {
                 this.rangeName = rangeName;
@@ -694,7 +724,26 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The model configuration JSON object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
+             *     &quot;cost&quot;: {
+             *         &quot;input&quot;: 0,
+             *         &quot;output&quot;: 0,
+             *         &quot;cacheRead&quot;: 0,
+             *         &quot;cacheWrite&quot;: 0
+             *     },
+             *     &quot;name&quot;: &quot;Qwen3.6-Plus&quot;,
+             *     &quot;input&quot;: [&quot;image&quot;, &quot;text&quot;],
+             *     &quot;compat&quot;: {
+             *         &quot;supportsUsageInStreaming&quot;: true
+             *     },
+             *     &quot;maxTokens&quot;: 65536,
+             *     &quot;reasoning&quot;: false,
+             *     &quot;contextWindow&quot;: 1000000
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -702,7 +751,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CreditMultiplier.
+             * <p>The credit consumption multiplier (rate). An empty value indicates that the model does not participate in credit-based billing.</p>
              */
             public Builder creditMultiplier(CreditMultiplier creditMultiplier) {
                 this.creditMultiplier = creditMultiplier;
@@ -710,7 +759,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen Plus series models</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -718,7 +770,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Features.
+             * <p>The list of model features, such as function-calling, web-search, and structured-outputs.</p>
              */
             public Builder features(java.util.List<String> features) {
                 this.features = features;
@@ -726,7 +778,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * InferenceMetadata.
+             * <p>The inference metadata, including request and response modalities.</p>
              */
             public Builder inferenceMetadata(InferenceMetadata inferenceMetadata) {
                 this.inferenceMetadata = inferenceMetadata;
@@ -734,7 +786,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultModel.
+             * <p>Indicates whether this is the default model under the associated model group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefaultModel(Boolean isDefaultModel) {
                 this.isDefaultModel = isDefaultModel;
@@ -742,7 +797,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCode.
+             * <p>The model code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.6-plus</p>
              */
             public Builder llmCode(String llmCode) {
                 this.llmCode = llmCode;
@@ -750,7 +808,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * LlmTemplateId.
+             * <p>The model template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>llmt-xxxx</p>
              */
             public Builder llmTemplateId(String llmTemplateId) {
                 this.llmTemplateId = llmTemplateId;
@@ -758,7 +819,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelInfo.
+             * <p>The model information, such as context window size and maximum input/output tokens.</p>
              */
             public Builder modelInfo(java.util.Map<String, ?> modelInfo) {
                 this.modelInfo = modelInfo;
@@ -766,7 +827,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3.6-Plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -774,7 +838,7 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Prices.
+             * <p>The list of pricing information.</p>
              */
             public Builder prices(java.util.List<DataPrices> prices) {
                 this.prices = prices;
@@ -782,7 +846,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderTemplateId.
+             * <p>The ID of the model provider template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpt-xxxx</p>
              */
             public Builder providerTemplateId(String providerTemplateId) {
                 this.providerTemplateId = providerTemplateId;
@@ -790,7 +857,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedTime.
+             * <p>The publish time in ISO 8601 format, such as 2026-03-04T06:25:17.000+00:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-04T06:25:17.000+00:00</p>
              */
             public Builder publishedTime(String publishedTime) {
                 this.publishedTime = publishedTime;
@@ -798,7 +868,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RefScope.
+             * <p>The authorization scope of the model group. Valid values: ALL_USER (all users), USER_MIXED (specified users and user groups), and RESOURCE_MIXED (specified resources). Returned only when SmartModel is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_USER</p>
              */
             public Builder refScope(String refScope) {
                 this.refScope = refScope;
@@ -806,7 +879,10 @@ public class ListLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RoutePolicyCount.
+             * <p>The number of routing policies configured under this model tier. Returned only when SmartModel is true. Returns 0 for tiers with no configured policies.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder routePolicyCount(Integer routePolicyCount) {
                 this.routePolicyCount = routePolicyCount;

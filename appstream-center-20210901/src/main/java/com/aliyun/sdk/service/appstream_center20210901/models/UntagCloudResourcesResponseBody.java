@@ -67,7 +67,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud resources whose tags failed to be removed and the corresponding tags.</p>
+         * <p>The list of failed resources and tag information.</p>
          */
         public Builder failedResources(java.util.List<FailedResources> failedResources) {
             this.failedResources = failedResources;
@@ -156,11 +156,6 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The tag type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Custom: custom tag.</li>
-             * <li>System: system tag.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Custom</p>
@@ -280,7 +275,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error description.</p>
              * 
              * <strong>example:</strong>
              * <p>Failed to untag resource.</p>
@@ -291,7 +286,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource IDs.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-00000001</p>
@@ -302,14 +297,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cloud resource.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>AppId: app ID.</li>
-             * <li>WyId: Alibaba Cloud Workspace user ID.</li>
-             * <li>AppInstanceGroupId: delivery group ID.</li>
-             * <li>AliUid: tenant ID.</li>
-             * </ul>
+             * <p>The cloud resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>AppInstanceGroupId</p>
@@ -320,7 +308,7 @@ public class UntagCloudResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags that failed to be removed from the cloud resources.</p>
+             * <p>The list of failed tag information.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

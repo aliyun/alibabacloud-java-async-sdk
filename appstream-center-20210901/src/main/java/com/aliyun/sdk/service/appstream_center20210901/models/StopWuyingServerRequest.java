@@ -87,12 +87,7 @@ public class StopWuyingServerRequest extends Request {
         } 
 
         /**
-         * <p>Force restart.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>True.</li>
-         * <li>False</li>
-         * </ul>
+         * <p>Specifies whether to forcibly restart the workstation.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -104,7 +99,10 @@ public class StopWuyingServerRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WuyingServer</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);

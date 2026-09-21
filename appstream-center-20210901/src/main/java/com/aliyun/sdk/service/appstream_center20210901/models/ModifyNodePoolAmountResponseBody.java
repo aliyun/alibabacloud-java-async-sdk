@@ -67,7 +67,7 @@ public class ModifyNodePoolAmountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;

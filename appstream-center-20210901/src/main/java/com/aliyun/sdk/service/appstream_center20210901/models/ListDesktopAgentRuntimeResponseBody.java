@@ -106,7 +106,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of returned result objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -217,7 +229,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentImOnlineStatus.
+             * <p>The agent IM online status (Online/Offline). Default value: Offline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Online</p>
              */
             public Builder agentImOnlineStatus(String agentImOnlineStatus) {
                 this.agentImOnlineStatus = agentImOnlineStatus;
@@ -225,7 +240,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentImStatus.
+             * <p>The agent IM status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder agentImStatus(String agentImStatus) {
                 this.agentImStatus = agentImStatus;
@@ -233,7 +251,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * CloudSpaceStatus.
+             * <p>The CloudSpace status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder cloudSpaceStatus(String cloudSpaceStatus) {
                 this.cloudSpaceStatus = cloudSpaceStatus;
@@ -391,7 +412,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentInstanceStatus.
+             * <p>The agent instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder agentInstanceStatus(String agentInstanceStatus) {
                 this.agentInstanceStatus = agentInstanceStatus;
@@ -399,7 +423,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentInstanceVersion.
+             * <p>The agent instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026.3.13</p>
              */
             public Builder agentInstanceVersion(String agentInstanceVersion) {
                 this.agentInstanceVersion = agentInstanceVersion;
@@ -407,7 +434,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentPlatform.
+             * <p>The agent platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
              */
             public Builder agentPlatform(String agentPlatform) {
                 this.agentPlatform = agentPlatform;
@@ -415,7 +445,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProvider.
+             * <p>The agent provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AgenticComputer</p>
              */
             public Builder agentProvider(String agentProvider) {
                 this.agentProvider = agentProvider;
@@ -423,7 +456,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfigure.
+             * <p>Indicates whether the agent instance has a third-party channel configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder channelConfigure(Boolean channelConfigure) {
                 this.channelConfigure = channelConfigure;
@@ -431,7 +467,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfiguredList.
+             * <p>The list of third-party channels configured for the agent instance.</p>
              */
             public Builder channelConfiguredList(java.util.List<String> channelConfiguredList) {
                 this.channelConfiguredList = channelConfiguredList;
@@ -439,7 +475,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSource.
+             * <p>The deployment source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Admin</p>
              */
             public Builder deploymentSource(String deploymentSource) {
                 this.deploymentSource = deploymentSource;
@@ -447,7 +486,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelConfigure.
+             * <p>Indicates whether the agent instance has a model configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modelConfigure(Boolean modelConfigure) {
                 this.modelConfigure = modelConfigure;
@@ -455,7 +497,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateId.
+             * <p>The configured model group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt-xxxx</p>
              */
             public Builder modelTemplateId(String modelTemplateId) {
                 this.modelTemplateId = modelTemplateId;
@@ -522,7 +567,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -530,7 +578,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>resource-group-001</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -610,7 +661,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentUninstalled.
+             * <p>Indicates whether the agent has been uninstalled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder agentUninstalled(Boolean agentUninstalled) {
                 this.agentUninstalled = agentUninstalled;
@@ -618,7 +672,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelModified.
+             * <p>Indicates whether the third-party channel configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder channelModified(Boolean channelModified) {
                 this.channelModified = channelModified;
@@ -626,7 +683,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelModified.
+             * <p>Indicates whether the model configuration has been modified (inconsistent with the configuration distributed by the administrator).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modelModified(Boolean modelModified) {
                 this.modelModified = modelModified;
@@ -927,7 +987,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentImInfo.
+             * <p>The agent IM information.</p>
              */
             public Builder agentImInfo(AgentImInfo agentImInfo) {
                 this.agentImInfo = agentImInfo;
@@ -935,7 +995,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AgentInstanceInfoList.
+             * <p>The list of agent instance information.</p>
              */
             public Builder agentInstanceInfoList(java.util.List<AgentInstanceInfoList> agentInstanceInfoList) {
                 this.agentInstanceInfoList = agentInstanceInfoList;
@@ -943,7 +1003,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * AuthUsers.
+             * <p>The list of authorized users.</p>
              */
             public Builder authUsers(java.util.List<String> authUsers) {
                 this.authUsers = authUsers;
@@ -951,7 +1011,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfigure.
+             * <p>Indicates whether a third-party channel is configured for the agent runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder channelConfigure(Boolean channelConfigure) {
                 this.channelConfigure = channelConfigure;
@@ -959,7 +1022,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelConfiguredList.
+             * <p>The list of third-party channels configured for the agent runtime.</p>
              */
             public Builder channelConfiguredList(java.util.List<String> channelConfiguredList) {
                 this.channelConfiguredList = channelConfiguredList;
@@ -967,7 +1030,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopId.
+             * <p>The agent runtime ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-xxxx</p>
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -975,7 +1041,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopName.
+             * <p>The agent runtime name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Agent-001</p>
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -983,7 +1052,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopStatus.
+             * <p>The Cloud Desktop status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -991,7 +1063,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * HasAuthUser.
+             * <p>Indicates whether there is an authorized user with authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasAuthUser(Boolean hasAuthUser) {
                 this.hasAuthUser = hasAuthUser;
@@ -999,7 +1074,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementStatuses.
+             * <p>The management status list, parsed from the managementStatus combined value.</p>
              */
             public Builder managementStatuses(java.util.List<String> managementStatuses) {
                 this.managementStatuses = managementStatuses;
@@ -1007,7 +1082,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelConfigure.
+             * <p>Indicates whether a model is configured for the agent runtime.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder modelConfigure(Boolean modelConfigure) {
                 this.modelConfigure = modelConfigure;
@@ -1015,7 +1093,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateId.
+             * <p>The active model template ID. This parameter is returned only when modelConfigure is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt-xxxx</p>
              */
             public Builder modelTemplateId(String modelTemplateId) {
                 this.modelTemplateId = modelTemplateId;
@@ -1023,7 +1104,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateName.
+             * <p>The active model template name. This parameter is returned only when modelConfigure is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-template-001</p>
              */
             public Builder modelTemplateName(String modelTemplateName) {
                 this.modelTemplateName = modelTemplateName;
@@ -1031,7 +1115,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Windows</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -1039,7 +1126,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * QrCodeConfiguringList.
+             * <p>The list of channel codes in QR code configuration.</p>
              */
             public Builder qrCodeConfiguringList(java.util.List<String> qrCodeConfiguringList) {
                 this.qrCodeConfiguringList = qrCodeConfiguringList;
@@ -1047,7 +1134,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1055,7 +1145,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionLocation.
+             * <p>The region location (the Chinese mainland or outside the Chinese mainland).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mainland</p>
              */
             public Builder regionLocation(String regionLocation) {
                 this.regionLocation = regionLocation;
@@ -1063,7 +1156,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * <p>The resource group information.</p>
              */
             public Builder resourceGroup(ResourceGroup resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -1071,7 +1164,10 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID, which is the Cloud Desktop ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecd-xxxx</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -1079,7 +1175,7 @@ public class ListDesktopAgentRuntimeResponseBody extends TeaModel {
             }
 
             /**
-             * RiskInfo.
+             * <p>The risk information. This parameter is returned only when the request parameter IncludeRiskInfo is set to true. Otherwise, null is returned.</p>
              */
             public Builder riskInfo(RiskInfo riskInfo) {
                 this.riskInfo = riskInfo;

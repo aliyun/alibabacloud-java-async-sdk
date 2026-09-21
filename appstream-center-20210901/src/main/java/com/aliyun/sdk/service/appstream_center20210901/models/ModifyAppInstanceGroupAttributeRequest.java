@@ -202,7 +202,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The name of the delivery group.</p>
+         * <p>The delivery group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OfficeApp</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -224,9 +227,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The network settings.</p>
+         * <p>The network configuration.</p>
          * <blockquote>
-         * <p> If you want to use this parameter, submit a ticket.</p>
+         * <p>To use this parameter, submit a ticket.</p>
          * </blockquote>
          */
         public Builder network(Network network) {
@@ -237,7 +240,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The information about the resource group.</p>
+         * <p>The resource group object.</p>
          */
         public Builder nodePool(NodePool nodePool) {
             String nodePoolShrink = shrink(nodePool, "NodePool", "json");
@@ -247,14 +250,9 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether only one application can be opened in a session.</p>
+         * <p>Specifies whether to allow only one application per session.</p>
          * <ul>
-         * <li>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</li>
-         * </ul>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>If enabled, opening multiple applications within the delivery group allocates a separate session for each application, consuming more sessions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +265,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The application ID of the pre-open application. If you set <code>PreOpenMode</code> to <code>SINGLE_APP</code>, you cannot leave this parameter empty.``</p>
+         * <p>The AppId of the pre-open application. If the PreOpenMode parameter is set to <code>SINGLE_APP</code>, PreOpenAppId cannot be an empty string.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-b2ronxxd****</p>
@@ -280,11 +278,6 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
         /**
          * <p>The pre-open mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>SINGLE_APP: enables the pre-open mode for a single application.</li>
-         * <li>OFF: disables the pre-open mode. This is the default value.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OFF</p>
@@ -297,10 +290,6 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +312,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
         }
 
         /**
-         * <p>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. Default value: <code>15</code>.</p>
+         * <p>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the duration specified here before being logged off. Set this parameter to <code>-1</code> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <code>15</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -415,12 +404,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The policy used for the domain name.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>allow</li>
-             * <li>block</li>
-             * </ul>
+             * <p>The policy value.</p>
              * 
              * <strong>example:</strong>
              * <p>block</p>
@@ -477,7 +461,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The domain name rules.</p>
+             * <p>The domain name rule configurations.</p>
              */
             public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
@@ -544,14 +528,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
-             * <ul>
-             * <li>appstreaming.general.4c8g: 1 to 2</li>
-             * <li>appstreaming.general.8c16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
-             * </ul>
+             * <p>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. Too many simultaneous sessions may degrade the application experience. The valid value range varies depending on the resource specification. You can call the ListNodeInstanceType operation to obtain the valid value range for each resource specification.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -562,7 +539,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-ew7va2g1wl3vm****</p>
@@ -632,12 +609,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to reset after unbinding from a delivery group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Specifies whether to reset after unbinding.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -648,12 +620,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to skip user permission verification.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false: This is the default value.</li>
-             * </ul>
+             * <p>Specifies whether to skip user authorization check.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -723,7 +690,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
+             * <p>The user data storage system ID (NAS ID).</p>
              * 
              * <strong>example:</strong>
              * <p>06ae94****</p>
@@ -734,12 +701,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether user data roaming is enabled.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Specifies whether to enable user data roaming.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -809,10 +771,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the File Storage NAS (NAS) file system used to store user data.</p>
+             * <p>The file system ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>06ae94****</p>
+             * <p>file-0001</p>
              */
             public Builder fileSystemId(String fileSystemId) {
                 this.fileSystemId = fileSystemId;
@@ -820,7 +782,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * ProfileFollowSwitch.
+             * <p>Specifies whether to enable user data roaming.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
                 this.profileFollowSwitch = profileFollowSwitch;
@@ -900,7 +865,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             } 
 
             /**
-             * <p>The storage types.</p>
+             * <p>The list of storage types.</p>
              */
             public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
@@ -908,7 +873,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * <p>The configurations of user data roaming.</p>
+             * <p>The user data roaming configuration.</p>
              */
             public Builder userProfile(UserProfile userProfile) {
                 this.userProfile = userProfile;
@@ -916,7 +881,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
             }
 
             /**
-             * UserProfileFollow.
+             * <p>The user data roaming configuration.</p>
              */
             public Builder userProfileFollow(UserProfileFollow userProfileFollow) {
                 this.userProfileFollow = userProfileFollow;

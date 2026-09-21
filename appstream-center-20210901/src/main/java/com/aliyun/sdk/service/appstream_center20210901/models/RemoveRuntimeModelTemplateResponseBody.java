@@ -80,7 +80,7 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of removal results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -201,7 +207,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The error code returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Runtime.NotFound</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -209,7 +218,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatusCode.
+             * <p>The HTTP status code returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder httpStatusCode(Integer httpStatusCode) {
                 this.httpStatusCode = httpStatusCode;
@@ -217,7 +229,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The runtime is not found.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -225,7 +240,15 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeId.
+             * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+             * <ul>
+             * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
+             * <li>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</li>
+             * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>jvs-xxxxx</p>
              */
             public Builder runtimeId(String runtimeId) {
                 this.runtimeId = runtimeId;
@@ -233,7 +256,10 @@ public class RemoveRuntimeModelTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the operation was successful.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

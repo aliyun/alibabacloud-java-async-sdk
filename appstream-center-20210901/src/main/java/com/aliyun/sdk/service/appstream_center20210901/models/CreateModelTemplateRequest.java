@@ -132,7 +132,10 @@ public class CreateModelTemplateRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -141,6 +144,7 @@ public class CreateModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The Agent provider name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,6 +157,7 @@ public class CreateModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The business type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +170,10 @@ public class CreateModelTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The template group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test model group</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -174,6 +182,7 @@ public class CreateModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The template group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +195,10 @@ public class CreateModelTemplateRequest extends Request {
         }
 
         /**
-         * RefScope.
+         * <p>The authorization scope. This parameter is optional and effective only for Common model groups. Valid values: ALL_USER and USER_MIXED (strictly uppercase). If not specified, Common model groups default to USER_MIXED. Non-Common groups ignore this parameter and use RESOURCE_MIXED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_USER</p>
          */
         public Builder refScope(String refScope) {
             this.putQueryParameter("RefScope", refScope);

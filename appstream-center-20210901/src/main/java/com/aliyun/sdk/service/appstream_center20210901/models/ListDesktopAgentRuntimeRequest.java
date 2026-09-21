@@ -423,7 +423,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         } 
 
         /**
-         * AgentImOnlineStatus.
+         * <p>The agent IM online status filter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Online</p>
          */
         public Builder agentImOnlineStatus(String agentImOnlineStatus) {
             this.putQueryParameter("AgentImOnlineStatus", agentImOnlineStatus);
@@ -432,7 +435,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentInstanceStatuses.
+         * <p>The list of agent instance statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder agentInstanceStatuses(java.util.List<String> agentInstanceStatuses) {
             this.putQueryParameter("AgentInstanceStatuses", agentInstanceStatuses);
@@ -441,7 +447,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentInstanceVersions.
+         * <p>The list of agent instance versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw 2026.4.15</p>
          */
         public Builder agentInstanceVersions(java.util.List<String> agentInstanceVersions) {
             this.putQueryParameter("AgentInstanceVersions", agentInstanceVersions);
@@ -450,7 +459,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentPlatform.
+         * <p>The agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -459,7 +471,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentPlatformList.
+         * <p>The list of agent platforms. If both AgentPlatformList and AgentPlatform are specified, AgentPlatform takes precedence and this list is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatformList(java.util.List<String> agentPlatformList) {
             this.putQueryParameter("AgentPlatformList", agentPlatformList);
@@ -468,7 +483,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentProvider.
+         * <p>The agent provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgenticComputer</p>
          */
         public Builder agentProvider(String agentProvider) {
             this.putQueryParameter("AgentProvider", agentProvider);
@@ -477,7 +495,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentProviderList.
+         * <p>The list of agent providers. If both AgentProviderList and AgentProvider are specified, AgentProvider takes precedence and this list is ignored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw</p>
          */
         public Builder agentProviderList(java.util.List<String> agentProviderList) {
             this.putQueryParameter("AgentProviderList", agentProviderList);
@@ -486,7 +507,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AgentTemplateIds.
+         * <p>The list of agent template IDs. A match occurs only when all valid templates are assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>at-xxxxx</p>
          */
         public Builder agentTemplateIds(java.util.List<String> agentTemplateIds) {
             this.putQueryParameter("AgentTemplateIds", agentTemplateIds);
@@ -495,7 +519,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * AuthUsers.
+         * <p>The list of authorized users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user001</p>
          */
         public Builder authUsers(java.util.List<String> authUsers) {
             this.putQueryParameter("AuthUsers", authUsers);
@@ -504,7 +531,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * BizRegionId.
+         * <p>The business region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
@@ -513,7 +543,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -522,7 +555,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ChannelConfigure.
+         * <p>Specifies whether a third-party channel is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder channelConfigure(Boolean channelConfigure) {
             this.putQueryParameter("ChannelConfigure", channelConfigure);
@@ -531,7 +567,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * DeploymentSource.
+         * <p>The deployment source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Admin</p>
          */
         public Builder deploymentSource(String deploymentSource) {
             this.putQueryParameter("DeploymentSource", deploymentSource);
@@ -540,7 +579,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * DesktopIds.
+         * <p>The list of agent runtime IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>jvs-xxxxx</p>
          */
         public Builder desktopIds(java.util.List<String> desktopIds) {
             this.putQueryParameter("DesktopIds", desktopIds);
@@ -549,7 +591,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * DesktopNames.
+         * <p>The list of agent runtime names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Desktop001</p>
          */
         public Builder desktopNames(java.util.List<String> desktopNames) {
             this.putQueryParameter("DesktopNames", desktopNames);
@@ -558,7 +603,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * DesktopStatuses.
+         * <p>The list of Cloud Desktop statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder desktopStatuses(java.util.List<String> desktopStatuses) {
             this.putQueryParameter("DesktopStatuses", desktopStatuses);
@@ -567,7 +615,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * HasAuthUser.
+         * <p>Indicates whether authorization is granted to an authorized user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasAuthUser(Boolean hasAuthUser) {
             this.putQueryParameter("HasAuthUser", hasAuthUser);
@@ -576,7 +627,11 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * HasRisk.
+         * <p>Specifies whether risks exist. This parameter is used to filter Cloud Desktops with or without risks. It takes effect only when IncludeRiskInfo is set to true.</p>
+         * <p>Set this parameter to true to return only records with risks. Set this parameter to false to return only records without risks. If this parameter is not specified, no filtering is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasRisk(Boolean hasRisk) {
             this.putQueryParameter("HasRisk", hasRisk);
@@ -585,7 +640,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * IncludeRiskInfo.
+         * <p>Specifies whether to query and return risk information. Default value: false. If this parameter is set to true, the RiskInfo field is included in the response, and the HasRisk filter takes effect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeRiskInfo(Boolean includeRiskInfo) {
             this.putQueryParameter("IncludeRiskInfo", includeRiskInfo);
@@ -594,7 +652,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ManagementStatus.
+         * <p>The management status filter, such as Hibernated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hibernated</p>
          */
         public Builder managementStatus(String managementStatus) {
             this.putQueryParameter("ManagementStatus", managementStatus);
@@ -603,7 +664,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ModelConfigure.
+         * <p>Specifies whether a model is configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder modelConfigure(Boolean modelConfigure) {
             this.putQueryParameter("ModelConfigure", modelConfigure);
@@ -612,7 +676,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ModelTemplateId.
+         * <p>The model group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder modelTemplateId(String modelTemplateId) {
             this.putQueryParameter("ModelTemplateId", modelTemplateId);
@@ -621,7 +688,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou+dir-xxxx</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -630,7 +700,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -639,7 +712,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -648,7 +724,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -657,7 +736,10 @@ public class ListDesktopAgentRuntimeRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The list of resource IDs (underlying actual resource IDs).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecd-xxxxx</p>
          */
         public Builder resourceIds(java.util.List<String> resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);

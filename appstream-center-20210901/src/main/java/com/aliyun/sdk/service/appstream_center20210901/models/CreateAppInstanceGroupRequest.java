@@ -445,7 +445,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The image ID of the application. To obtain the image ID, log on to the <a href="https://appstreaming.console.aliyun.com/">App Streaming console</a>. In the left-side navigation pane, choose <strong>Maintenance</strong> &gt; <strong>Custom Images</strong> or Maintenance &gt; <strong>System Images</strong>.</p>
+         * <p>The application image ID. You can obtain the ID from the <strong>O&amp;M</strong> &gt; <strong>Custom Images</strong> or <strong>System Images</strong> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING CloudApp console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -459,6 +459,9 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The name of the delivery group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OfficeApp</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putBodyParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -467,7 +470,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Package type.</p>
+         * <p>The package type.</p>
          * 
          * <strong>example:</strong>
          * <p>browser.package.5.250.appstreaming.general.basic</p>
@@ -479,7 +482,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Policy ID.</p>
+         * <p>The policy ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pg-0clfzcy0adpcf****</p>
@@ -491,7 +494,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The authentication mode of the delivery group.</p>
+         * <p>The delivery group authorization mode.</p>
          * 
          * <strong>example:</strong>
          * <p>App</p>
@@ -504,11 +507,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable automatic payment.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false: manual payment. This is the default value.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -521,11 +519,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>Specifies whether to enable auto-renewal.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false: manual payment. This is the default value.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -537,12 +530,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * <li>cn-hangzhou: China (Hangzhou)</li>
-         * </ul>
+         * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -556,10 +544,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The sales mode.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Node: by resource</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -573,11 +557,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The billing method.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>PostPaid: pay-as-you-go</li>
-         * <li>PrePaid: subscription</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -590,7 +569,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cls-d39iq73l5c0a8****</p>
@@ -602,9 +581,9 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The network settings.</p>
+         * <p>The network configuration.</p>
          * <blockquote>
-         * <p> If you want to use this parameter, submit a ticket.</p>
+         * <p>To use this parameter, submit a ticket.</p>
          * </blockquote>
          */
         public Builder network(Network network) {
@@ -625,14 +604,14 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of resources. This parameter is required if you set <code>ChargeType</code> to <code>PrePaid</code>. The unit of this parameter is specified by <code>PeriodUnit</code>.</p>
+         * <p>The duration for which you want to purchase resources when <code>ChargeType</code> is set to <code>PrePaid</code>. This parameter is required in this case. The unit is specified by <code>PeriodUnit</code>.</p>
          * <ul>
-         * <li><p>Valid value if you set <code>PeriodUnit</code> to <code>Week</code>:</p>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Week</code>, valid values of this parameter:</p>
          * <ul>
          * <li>1</li>
          * </ul>
          * </li>
-         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Month</code>:</p>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of this parameter:</p>
          * <ul>
          * <li>1</li>
          * <li>2</li>
@@ -640,7 +619,7 @@ public class CreateAppInstanceGroupRequest extends Request {
          * <li>6</li>
          * </ul>
          * </li>
-         * <li><p>Valid values if you set <code>PeriodUnit</code> to <code>Year</code>:</p>
+         * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of this parameter:</p>
          * <ul>
          * <li>1</li>
          * <li>2</li>
@@ -649,7 +628,7 @@ public class CreateAppInstanceGroupRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to 1.</p>
+         * <p>When <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to the fixed value 1.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -663,19 +642,14 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration. This parameter is available if you set <code>ChargeType</code> to <code>PrePaid</code>.</p>
+         * <p>The unit of the subscription duration when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
          * <blockquote>
-         * <p> The value of this parameter is case-insensitive. For example, <code>Week</code> is valid and <code>week</code> is invalid. If you specify an invalid value combination for Period and PeriodUnit, such as <code>2 Week</code>, the operation can still be called. However, an error occurs when you place the order.</p>
+         * <p>This parameter is case-sensitive. For example, <code>Week</code> is valid, but <code>week</code> is invalid.
+         * In addition, if the request parameters do not match the valid combinations, such as <code>2 Week</code>, the API call succeeds but an error occurs during the order placement phase.</p>
          * </blockquote>
          * <blockquote>
-         * <p> If you set <code>ChargeType</code> to <code>PostPaid</code>, set this parameter to <code>Month</code>.</p>
+         * <p>When <code>ChargeType</code> is set to <code>PostPaid</code>, set this parameter to the fixed value <code>Month</code>.</p>
          * </blockquote>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Month</li>
-         * <li>Year</li>
-         * <li>Week</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -688,10 +662,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the pre-open application.</p>
+         * <p>The pre-opened application ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cag-b2ron*******</p>
+         * <p>cag-b2ronxxd****</p>
          */
         public Builder preOpenAppId(String preOpenAppId) {
             this.putBodyParameter("PreOpenAppId", preOpenAppId);
@@ -701,10 +675,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -717,7 +687,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</p>
+         * <p>The promotion ID. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>17440009****</p>
@@ -749,7 +719,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The period of time during which the application can be recycled. The recycling period is the period of time between the time when the end user disconnects from the application and the time when processes exit the application. If you do not want to recycle the application, set this parameter to <code>-1</code>. Valid values:-1 and 3 to 300. The value must be an integer. Default value: <code>15</code>. Unit: minutes.</p>
+         * <p>The application recycling time, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling time. Set this parameter to <code>-1</code> if you do not want to recycle the application. Valid values: -1 and 3 to 300 (integer). Default value: <code>15</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -772,7 +742,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Payment method subtype.</p>
+         * <p>The billing method subtype.</p>
          * 
          * <strong>example:</strong>
          * <p>postPaid</p>
@@ -784,7 +754,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The custom policy.</p>
+         * <p>The user-defined policy.</p>
          */
         public Builder userDefinePolicy(UserDefinePolicy userDefinePolicy) {
             String userDefinePolicyShrink = shrink(userDefinePolicy, "UserDefinePolicy", "json");
@@ -794,7 +764,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>List of authorized user group IDs.</p>
+         * <p>The list of authorized user group IDs.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -803,7 +773,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The information about the user that you want to add to the assigned user list of the delivery group. This parameter is required if you configure <code>Users</code>.</p>
+         * <p>The information about the users to be added as assigned users of the delivery group. This parameter is required if the <code>Users</code> parameter is specified.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             String userInfoShrink = shrink(userInfo, "UserInfo", "json");
@@ -813,7 +783,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The users that you want to add to the assigned user list of the delivery group.</p>
+         * <p>The list of usernames to be added as assigned users of the delivery group.</p>
          */
         public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
@@ -822,7 +792,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>Display policy.</p>
+         * <p>The display policy.</p>
          */
         public Builder videoPolicy(VideoPolicy videoPolicy) {
             String videoPolicyShrink = shrink(videoPolicy, "VideoPolicy", "json");
@@ -902,12 +872,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The policy used for the domain name.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>allow</li>
-             * <li>block</li>
-             * </ul>
+             * <p>The policy value.</p>
              * 
              * <strong>example:</strong>
              * <p>block</p>
@@ -977,7 +942,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The destination. The value is a CIDR block.</p>
+             * <p>The access destination in CIDR format.</p>
              * 
              * <strong>example:</strong>
              * <p>139.196.XX.XX/32</p>
@@ -989,10 +954,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
             /**
              * <p>The network egress mode.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>Shared: accesses the network by using NAT Gateway.</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Shared</p>
@@ -1114,7 +1075,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The domain name rules.</p>
+             * <p>The domain name rule configurations.</p>
              */
             public Builder domainRules(java.util.List<DomainRules> domainRules) {
                 this.domainRules = domainRules;
@@ -1122,7 +1083,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The validity period of the public IP address. If the specified value is exceeded, the IP address is updated at next logon. Minimum value: 60. Unit: minutes.</p>
+             * <p>The duration in minutes after which a public IP address triggers an update upon the next logon. Minimum value: 60. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -1133,7 +1094,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Office Network ID.</p>
+             * <p>The office network ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hongkong+dir-842567****</p>
@@ -1144,7 +1105,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The route settings. This parameter is available only if you set <code>StrategyType</code> to <code>Mixed</code>.</p>
+             * <p>The route configurations. This parameter can be configured only when the network policy type (StrategyType) is set to mixed mode (Mixed).</p>
              */
             public Builder routes(java.util.List<Routes> routes) {
                 this.routes = routes;
@@ -1152,12 +1113,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The type of the network policy.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>Mixed: the hybrid mode. In this mode, a device is deployed in one virtual private cloud (VPC). Two NICs are provided and an independent public IP address is configured for the device.</li>
-             * <li>Shared: the shared mode. In this mode, a single NIC is provided for a device and the network is accessed by using NAT Gateway.</li>
-             * </ul>
+             * <p>The network policy type.</p>
              * 
              * <strong>example:</strong>
              * <p>Shared</p>
@@ -1168,7 +1124,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>List of virtual switch IDs.</p>
+             * <p>The list of vSwitch IDs.</p>
              * <ul>
              * <li>Valid only for custom office networks.</li>
              * </ul>
@@ -1251,7 +1207,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The number of resources.</p>
+             * <p>The resource count.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1262,7 +1218,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The end time of the time period. Format: HH:mm.</p>
+             * <p>The end time. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>15:00</p>
@@ -1273,7 +1229,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The start time of the time period. Format: HH:mm.</p>
+             * <p>The start time. Format: HH:mm.</p>
              * 
              * <strong>example:</strong>
              * <p>12:00</p>
@@ -1356,11 +1312,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The schedule type of the scaling policy. This parameter must be configured together with <code>RecurrenceValues</code>.``</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>Weekly: The scaling policy is executed on specific days each week.</li>
-             * </ul>
+             * <p>The type of the policy execution schedule. You must specify both <code>RecurrenceType</code> and <code>RecurrenceValues</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>weekly</p>
@@ -1371,7 +1323,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The days of each week on which the scaling policy is executed.</p>
+             * <p>The list of values for the policy execution schedule.</p>
              */
             public Builder recurrenceValues(java.util.List<Integer> recurrenceValues) {
                 this.recurrenceValues = recurrenceValues;
@@ -1379,13 +1331,13 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The time periods during which the scaling policy can be executed. The time periods must meet the following requirements:</p>
+             * <p>The list of time periods for the policy execution schedule. Requirements for time period settings:</p>
              * <ul>
-             * <li>Up to three time periods can be added.</li>
-             * <li>Time periods cannot be overlapped.</li>
-             * <li>The interval between two consecutive time periods must be greater than or equal to 5 minutes.</li>
-             * <li>Each time period must be greater than or equal to 15 minutes.</li>
-             * <li>The total length of the time periods that you specify cannot be greater than a day.</li>
+             * <li>You can add up to three time periods.</li>
+             * <li>Time periods cannot overlap.</li>
+             * <li>The interval between time periods must be at least 5 minutes.</li>
+             * <li>Each time period must be at least 15 minutes long.</li>
+             * <li>All time periods combined must not span across days.</li>
              * </ul>
              */
             public Builder timerPeriods(java.util.List<TimerPeriods> timerPeriods) {
@@ -1596,7 +1548,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Maximum number of idle sessions. When this value is specified, auto-scaling is triggered only if the session utilization exceeds <code>ScalingUsageThreshold</code> and the current number of idle sessions in the delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, it is considered that sufficient idle sessions are available, and no auto-scaling will occur. This parameter allows flexible control over elastic scaling behavior and helps reduce usage costs.</p>
+             * <p>The maximum number of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <code>ScalingUsageThreshold</code> and the number of idle sessions in the current delivery group is less than <code>MaxIdleAppInstanceAmount</code>. Otherwise, the idle sessions in the delivery group are considered sufficient and no automatic scale-out is performed. This parameter allows you to flexibly control elastic scaling behavior and reduce costs.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1607,7 +1559,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of resources that can be created for scale-out. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+             * <p>The maximum number of resources that can be created during scale-out. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1618,15 +1570,13 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of resources that you want to purchase. Valid values: 1 to 100.</p>
+             * <p>The number of resources to purchase. Valid values: 1 to 100.</p>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>This parameter is required if the resources are subscription resources.</p>
-             * </li>
-             * <li><p>If the resources are pay-as-you-go resources, this parameter is required only if you set <code>StrategyType</code> to <code>NODE_FIXED</code> or <code>NODE_SCALING_BY_USAGE</code>.</p>
-             * </li>
+             * <li>This parameter is required for subscription resources.</li>
+             * <li>This parameter is required for pay-as-you-go resources when the scaling mode (<code>StrategyType</code>) is set to fixed quantity (<code>NODE_FIXED</code>) or automatic scaling (<code>NODE_SCALING_BY_USAGE</code>).</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1637,14 +1587,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, the user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</p>
-             * <ul>
-             * <li>appstreaming.general.4c8g: 1 to 2</li>
-             * <li>appstreaming.general.8c16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c16g.4g: 1 to 4</li>
-             * <li>appstreaming.vgpu.8c31g.16g: 1 to 4</li>
-             * <li>appstreaming.vgpu.14c93g.12g: 1 to 6</li>
-             * </ul>
+             * <p>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. Too many simultaneous sessions may degrade the application experience. The valid value range varies by resource specification. You can obtain the valid value range for each resource specification by calling the ListNodeInstanceType operation.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1655,15 +1598,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The ID of the resource type that you want to purchase. You can call the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> operation to obtain the ID.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>appstreaming.vgpu.8c16g.4g: WUYING - Graphics_8 vCPUs, 16 GiB Memory, 4 GiB GPU Memory</li>
-             * <li>appstreaming.general.8c16g: WUYING - General_8 vCPUs, 16 GiB Memory</li>
-             * <li>appstreaming.general.4c8g: WUYING - General_4 vCPUs, 8 GiB Memory</li>
-             * <li>appstreaming.vgpu.14c93g.12g: WUYING - Graphics_14 vCPUs, 93 GiB Memory, 12 GiB GPU Memory.</li>
-             * <li>appstreaming.vgpu.8c31g.16g: WUYING - Graphics_8 vCPUs, 31 GiB Memory, 16 GiB GPU Memory</li>
-             * </ul>
+             * <p>The instance type ID of the resource to purchase. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/428502.html">ListNodeInstanceType</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>appstreaming.general.4c8g</p>
@@ -1674,7 +1609,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The schedules of the scaling policy. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * <p>The list of policy execution schedules. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
              */
             public Builder recurrenceSchedules(java.util.List<RecurrenceSchedules> recurrenceSchedules) {
                 this.recurrenceSchedules = recurrenceSchedules;
@@ -1682,10 +1617,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The maximum retention period of a resource to which no session is connected. If no session is connected to a resource, the resource is automatically scaled in after the specified retention period elapses. Valid values: 5 to 120. Default value: 5. Unit: minutes. If one of the following situations occurs, the resource is not scaled in.</p>
+             * <p>The maximum duration (in minutes) that a resource without session connections is retained. When no sessions are connected to a resource, a countdown starts based on the duration specified here. The resource is released when the countdown ends. Valid values: 5 to 120. Default value: 5. The following exceptions apply:</p>
              * <ul>
-             * <li>If automatic scale-out is triggered after the resource is scaled in, the scale-in is not executed. This prevents repeated scale-in and scale-out.</li>
-             * <li>If automatic scale-out is triggered due to an increase in the number of sessions during the specified period of time, the resource is not scaled in and the countdown restarts.</li>
+             * <li>If the scale-in would trigger automatic scale-out again, the scale-in is not performed to avoid repeated scale-in and scale-out operations.</li>
+             * <li>If automatic scale-out is triggered due to an increase in sessions during this period, the resource is not released as originally planned, and the countdown restarts.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1697,7 +1632,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>.</p>
+             * <p>The number of resources created per scale-out operation. Valid values: 1 to 10. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources).</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1708,7 +1643,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <code>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</code>. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_USAGE</code>. Valid values: 0 to 100. Default value: 85.</p>
+             * <p>The upper threshold of session usage (%). Automatic scale-out is triggered when the session usage exceeds this threshold. The session usage is calculated as follows: <code>Session usage = Current sessions ÷ (Total resources × Concurrent sessions per resource) × 100%</code>. This parameter is required when <code>StrategyType</code> is set to <code>NODE_SCALING_BY_USAGE</code> (elastic resources). Valid values: 0 to 100. Default value: 85.</p>
              * 
              * <strong>example:</strong>
              * <p>85</p>
@@ -1719,7 +1654,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The expiration date of the scaling policy. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be from 7 days to 1 year. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * <p>The date when the policy expires. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be between 7 days and 1 year, inclusive. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-09-08</p>
@@ -1730,7 +1665,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The effective date of the scaling policy. Format: yyyy-MM-dd. The date must be the same as or later than the current date. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * <p>The date when the policy takes effect. Format: yyyy-MM-dd. The date must be equal to or later than the current date. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-01</p>
@@ -1741,23 +1676,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The scaling policy of resources.</p>
+             * <p>The scaling mode.</p>
              * <blockquote>
+             * <ul>
+             * <li><code>NODE_FIXED</code> (Fixed Quantity): applicable to subscription and pay-as-you-go resources.</li>
+             * <li><code>NODE_SCALING_BY_USAGE</code> (Automatic Scaling): applicable to subscription and pay-as-you-go resources.</li>
+             * <li><code>NODE_SCALING_BY_SCHEDULE</code> (Scheduled Scaling): applicable only to pay-as-you-go resources.</li>
+             * </ul>
              * </blockquote>
-             * <ul>
-             * <li><p><code>NODE_FIXED</code>: fixed number of resources. This value is applicable to pay-as-you-go resources and subscription resources.</p>
-             * </li>
-             * <li><p><code>NODE_SCALING_BY_USAGE</code>: auto scaling. This value is applicable to pay-as-you-go resources and subscription resources.</p>
-             * </li>
-             * <li><p><code>NODE_SCALING_BY_SCHEDULE</code>: scheduled scaling. This value is applicable only to pay-as-you-go resources.</p>
-             * </li>
-             * </ul>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>NODE_FIXED: fixed number of resources</li>
-             * <li>NODE_SCALING_BY_SCHEDULE: scheduled scaling</li>
-             * <li>NODE_SCALING_BY_USAGE: auto scaling</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NODE_FIXED</p>
@@ -1768,7 +1694,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the warmup policy for resources. This parameter is required if you set <code>StrategyType</code> to <code>NODE_SCALING_BY_SCHEDULE</code>.</p>
+             * <p>Specifies whether to enable the resource prefetch policy. This parameter is required when <code>StrategyType</code> (scaling mode) is set to <code>NODE_SCALING_BY_SCHEDULE</code> (scheduled scaling).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1890,12 +1816,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the debugging mode. If you want to call the <code>GetDebugAppInstance</code> and <code>CreateImageFromAppInstanceGroup</code> operations, you must set this parameter to <code>ON</code>.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>OFF</li>
-             * <li>ON</li>
-             * </ul>
+             * <p>Specifies whether to enable debug mode. To call the GetDebugAppInstance and CreateImageFromAppInstanceGroup operations, set this parameter to ON.</p>
              * 
              * <strong>example:</strong>
              * <p>OFF</p>
@@ -1906,9 +1827,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Only one application is allowed to be opened within a single session.</p>
+             * <p>Specifies whether to allow only one application per session.</p>
              * <ul>
-             * <li>When enabled, launching multiple applications from the delivery group will allocate a separate session for each application, resulting in higher session consumption.</li>
+             * <li>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, which consumes more sessions.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1920,7 +1841,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Persistent session scheduling mode.</p>
+             * <p>The persistent session scheduling mode.</p>
              * 
              * <strong>example:</strong>
              * <p>DYNAMIC</p>
@@ -1931,9 +1852,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Session pre-launch toggle.</p>
+             * <p>Specifies whether to enable session pre-opening.</p>
              * <ul>
-             * <li>If not specified, the default value is true.</li>
+             * <li>If this parameter is not specified, the default value is true.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1946,11 +1867,6 @@ public class CreateAppInstanceGroupRequest extends Request {
 
             /**
              * <p>The session type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>CONSOLE: console session</li>
-             * <li>NORMAL: Remote Desktop Protocol (RDP)-based O&amp;M session</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -1961,9 +1877,9 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>The generation mode of the session users. Valid value:</p>
+             * <p>The generation mode for session users.</p>
              * <ul>
-             * <li>wyid. In this case, you must set sessionPreOpen to false.</li>
+             * <li>wyid: In this mode, the session pre-open parameter SessionPreOpen must be set to false.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2034,12 +1950,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to reset after unbinding from a delivery group.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Specifies whether to reset after unbinding.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -2050,12 +1961,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to skip user permission verification.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false: This is the default value.</li>
-             * </ul>
+             * <p>Specifies whether to skip user authorization verification.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2138,10 +2044,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Remote storage path for user data roaming.</p>
+             * <p>The remote storage path for user data roaming.</p>
              * <ul>
-             * <li>If left empty, the default value is the delivery group ID.</li>
-             * <li>For cross-delivery-group (within the same VPC) user data roaming, the same value must be configured for all participating delivery groups.</li>
+             * <li>If this parameter is not specified, the default value is the delivery group ID.</li>
+             * <li>To enable user data roaming across delivery groups within the same VPC, set this parameter to the same value for all delivery groups involved.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2153,7 +2059,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Remote storage type used for user data roaming.</p>
+             * <p>The remote storage type used for user data roaming.</p>
              * 
              * <strong>example:</strong>
              * <p>NAS</p>
@@ -2164,7 +2070,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>User data roaming toggle.</p>
+             * <p>Specifies whether to enable user data roaming.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -2234,7 +2140,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The storage types.</p>
+             * <p>The list of storage types.</p>
              */
             public Builder storageTypeList(java.util.List<String> storageTypeList) {
                 this.storageTypeList = storageTypeList;
@@ -2242,7 +2148,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>User data roaming configuration.</p>
+             * <p>The user data roaming configuration.</p>
              */
             public Builder userProfile(UserProfile userProfile) {
                 this.userProfile = userProfile;
@@ -2296,7 +2202,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The content of the custom policy. The content must meet the specifications of image versions. To use this parameter, submit a ticket to apply to enable the whitelist feature.</p>
+             * <p>The custom policy content. The content must comply with the image version specifications. To use this parameter, submit a ticket to request whitelist access.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;target&quot;:&quot;agent&quot;,&quot;config&quot;:{&quot;abc&quot;:&quot;xxx&quot;}}]</p>
@@ -2353,11 +2259,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>The account type of the user.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>Simple: convenience account</li>
-             * </ul>
+             * <p>The type of the user account.</p>
              * 
              * <strong>example:</strong>
              * <p>Simple</p>
@@ -2479,7 +2381,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * <p>Frame rate (FPS).</p>
+             * <p>The frame rate (FPS).</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -2490,7 +2392,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Resolution height, in pixels.</p>
+             * <p>The height of the resolution. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1080</p>
@@ -2501,7 +2403,7 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Resolution width, in pixels.</p>
+             * <p>The width of the resolution. Unit: pixels.</p>
              * 
              * <strong>example:</strong>
              * <p>1920</p>
@@ -2512,11 +2414,11 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Streaming mode. Combined with the Webrtc parameter, it indicates the protocol type.</p>
+             * <p>The streaming mode. This parameter is used together with the Webrtc parameter to specify the protocol type.</p>
              * <ul>
-             * <li>When Webrtc=true and StreamingMode=video, it indicates a WebRTC stream.</li>
-             * <li>When Webrtc=false and StreamingMode=video, it indicates a video stream.</li>
-             * <li>When Webrtc=false and StreamingMode=mix, it indicates a mixed stream.</li>
+             * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC streaming.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video streaming.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: hybrid streaming.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2528,11 +2430,11 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether to use adaptive resolution.</p>
+             * <p>Specifies whether to use adaptive resolution.</p>
              * <ul>
-             * <li><p>true: The session resolution follows changes in the terminal&quot;s display area. In this case, SessionResolutionWidth and SessionResolutionHeight represent the maximum values for resolution adjustment.</p>
+             * <li><p><code>true</code>: The session resolution follows the terminal display area changes. In this case, SessionResolutionWidth and SessionResolutionHeight specify the maximum resolution values.</p>
              * </li>
-             * <li><p>false: The session resolution does not follow changes in the terminal&quot;s display area. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</p>
+             * <li><p><code>false</code>: The session resolution does not follow the terminal display area changes. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</p>
              * </li>
              * </ul>
              * 
@@ -2545,11 +2447,11 @@ public class CreateAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether to enable WebRTC. Combined with the StreamingMode parameter, it indicates the protocol type.</p>
+             * <p>Specifies whether to enable WebRTC. This parameter is used together with the StreamingMode parameter to specify the protocol type.</p>
              * <ul>
-             * <li>When Webrtc=true and StreamingMode=video, it indicates a WebRTC stream.</li>
-             * <li>When Webrtc=false and StreamingMode=video, it indicates a video stream.</li>
-             * <li>When Webrtc=false and StreamingMode=mix, it indicates a mixed stream.</li>
+             * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC streaming.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video streaming.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: hybrid streaming.</li>
              * </ul>
              * 
              * <strong>example:</strong>

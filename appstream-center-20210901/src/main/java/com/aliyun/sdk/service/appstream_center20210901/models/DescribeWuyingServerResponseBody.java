@@ -67,7 +67,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The details of the development host.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -144,7 +144,14 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Primary.
+             * <p>Indicates whether the IP address is the primary private IP address. Valid values:</p>
+             * <ul>
+             * <li>true: The IP address is the primary private IP address.</li>
+             * <li>false: The IP address is a secondary private IP address.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -152,7 +159,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * <p>The private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -218,6 +228,9 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("SupportASP")
+        private Boolean supportASP;
+
         @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
         private String systemDiskCategory;
 
@@ -246,6 +259,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             this.osType = builder.osType;
             this.privateIpSets = builder.privateIpSets;
             this.status = builder.status;
+            this.supportASP = builder.supportASP;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.wuyingServerId = builder.wuyingServerId;
@@ -366,6 +380,13 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportASP
+         */
+        public Boolean getSupportASP() {
+            return this.supportASP;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -409,6 +430,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             private String osType; 
             private java.util.List<PrivateIpSets> privateIpSets; 
             private String status; 
+            private Boolean supportASP; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private String wuyingServerId; 
@@ -433,6 +455,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
                 this.osType = model.osType;
                 this.privateIpSets = model.privateIpSets;
                 this.status = model.status;
+                this.supportASP = model.supportASP;
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskSize = model.systemDiskSize;
                 this.wuyingServerId = model.wuyingServerId;
@@ -440,7 +463,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             } 
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth size, in Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -448,7 +474,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * BizRegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder bizRegionId(String bizRegionId) {
                 this.bizRegionId = bizRegionId;
@@ -456,7 +485,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -464,7 +496,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in US English date and time format with a 12-hour clock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sep 2, 2026 1:46:41 PM</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -472,7 +507,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * EniPrivateIpAddressQuantity.
+             * <p>The maximum number of private IP addresses per NIC, including the primary IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder eniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
                 this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
@@ -480,7 +518,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The expiration time, in US English date and time format with a 12-hour clock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Oct 3, 2026 12:00:00 AM</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -488,7 +529,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>img-bp1234567890abcde</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -496,7 +540,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * <p>The image name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ubuntu 22.04</p>
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -504,7 +551,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkInterfaceIp.
+             * <p>The internal IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.0.1</p>
              */
             public Builder networkInterfaceIp(String networkInterfaceIp) {
                 this.networkInterfaceIp = networkInterfaceIp;
@@ -512,7 +562,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou+dir-abc123</p>
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -520,7 +573,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteName.
+             * <p>The workspace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Default Workspace</p>
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -528,7 +584,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OfficeSiteType.
+             * <p>The workspace type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder officeSiteType(String officeSiteType) {
                 this.officeSiteType = officeSiteType;
@@ -536,7 +595,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * <p>The operating system type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Linux</p>
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -544,7 +606,7 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpSets.
+             * <p>The set of private IP addresses, including the primary and secondary IP addresses.</p>
              */
             public Builder privateIpSets(java.util.List<PrivateIpSets> privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -552,7 +614,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the development host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +625,21 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskCategory.
+             * <p>Whether ASP streaming connection is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder supportASP(Boolean supportASP) {
+                this.supportASP = supportASP;
+                return this;
+            }
+
+            /**
+             * <p>The type of the system cloud disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -568,7 +647,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * <p>The size of the system cloud disk, in GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -576,7 +658,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingServerId.
+             * <p>The ID of the development host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aig-bp1234567890abcde</p>
              */
             public Builder wuyingServerId(String wuyingServerId) {
                 this.wuyingServerId = wuyingServerId;
@@ -584,7 +669,10 @@ public class DescribeWuyingServerResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingServerName.
+             * <p>The name of the development host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-dev-server</p>
              */
             public Builder wuyingServerName(String wuyingServerName) {
                 this.wuyingServerName = wuyingServerName;

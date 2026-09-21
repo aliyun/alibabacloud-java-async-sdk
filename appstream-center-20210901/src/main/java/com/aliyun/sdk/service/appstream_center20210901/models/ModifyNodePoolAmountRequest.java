@@ -103,7 +103,7 @@ public class ModifyNodePoolAmountRequest extends Request {
         }
 
         /**
-         * <p>The parameters related to the configuration change of the node pool.</p>
+         * <p>The parameters for node pool specification changes.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodePool(NodePool nodePool) {
@@ -115,10 +115,6 @@ public class ModifyNodePoolAmountRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +200,12 @@ public class ModifyNodePoolAmountRequest extends Request {
             } 
 
             /**
-             * <p>The total number of subscription nodes after the change.</p>
+             * <p>The total number of subscription nodes after the upgrade.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This value must be greater than the current number of purchased nodes (Amount) in the delivery group. Otherwise, the API returns InvalidAmount.UnIncrease.</li>
+             * </ul>
+             * </blockquote>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -216,11 +217,7 @@ public class ModifyNodePoolAmountRequest extends Request {
             }
 
             /**
-             * <p>The change mode of subscription nodes.</p>
-             * <p>Valid value:</p>
-             * <ul>
-             * <li>EXPAND_FROM_POST_PAID_EXPLICIT: changes from specified pay-as-you-go nodes</li>
-             * </ul>
+             * <p>The modification mode for subscription nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>EXPAND_FROM_POST_PAID_EXPLICIT</p>
@@ -231,7 +228,7 @@ public class ModifyNodePoolAmountRequest extends Request {
             }
 
             /**
-             * <p>The nodes for which you want to change the billing method.</p>
+             * <p>The list of nodes whose billing type is to be modified.</p>
              */
             public Builder prePaidNodeAmountModifyNodeIds(java.util.List<String> prePaidNodeAmountModifyNodeIds) {
                 this.prePaidNodeAmountModifyNodeIds = prePaidNodeAmountModifyNodeIds;

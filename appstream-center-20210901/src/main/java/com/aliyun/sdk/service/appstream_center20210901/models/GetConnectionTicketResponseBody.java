@@ -184,7 +184,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-53fvrq1oan****</p>
@@ -195,7 +195,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-7ybdeiyoeh5e****</p>
@@ -206,7 +206,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the persistent session.</p>
+         * <p>The persistent session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>p-0bxls9m3cl7s****</p>
@@ -218,6 +218,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
         /**
          * <p>The avatar ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder avatarId(String avatarId) {
             this.avatarId = avatarId;
@@ -236,11 +239,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operating system.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>Windows: the Windows operating system</li>
-         * </ul>
+         * <p>The operating system type.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows</p>
@@ -274,12 +273,6 @@ public class GetConnectionTicketResponseBody extends TeaModel {
 
         /**
          * <p>The task status.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Finished: The task is complete.</li>
-         * <li>Failed: The task failed.</li>
-         * <li>Running: The task is being executed.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -290,7 +283,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The tenant ID (Alibaba Cloud account UID).</p>
          * 
          * <strong>example:</strong>
          * <p>148871678899****</p>
@@ -301,9 +294,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The credential that is used to connect to App Streaming.</p>
+         * <p>The credential for connecting to the cloud application.</p>
          * <blockquote>
-         * <p> This parameter is displayed for calls other than the first call to this operation.</p>
+         * <p>This parameter is returned only for non-initial calls.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

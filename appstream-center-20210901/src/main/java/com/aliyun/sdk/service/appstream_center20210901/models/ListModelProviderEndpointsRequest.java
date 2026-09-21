@@ -101,7 +101,10 @@ public class ListModelProviderEndpointsRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The agent platform name. This parameter is not processed and is only passed through as a redundant field, such as ENTERPRISE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -110,7 +113,10 @@ public class ListModelProviderEndpointsRequest extends Request {
         }
 
         /**
-         * AgentProvider.
+         * <p>The agent provider name, such as HermesAgent or OpenClaw. If this parameter is specified, the providerName in the returned endpoints is the alias from the perspective of the specified agent provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AgenticComputer</p>
          */
         public Builder agentProvider(String agentProvider) {
             this.putQueryParameter("AgentProvider", agentProvider);
@@ -119,7 +125,10 @@ public class ListModelProviderEndpointsRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -128,7 +137,10 @@ public class ListModelProviderEndpointsRequest extends Request {
         }
 
         /**
-         * ProviderName.
+         * <p>The name of the model provider, such as bailian, moonshot, or siliconflow. If this parameter is not specified, the endpoint configurations of all managed providers are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder providerName(String providerName) {
             this.putQueryParameter("ProviderName", providerName);

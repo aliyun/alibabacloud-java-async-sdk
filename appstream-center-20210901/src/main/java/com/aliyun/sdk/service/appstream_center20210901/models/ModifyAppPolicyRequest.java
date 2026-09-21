@@ -103,10 +103,6 @@ public class ModifyAppPolicyRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Enumerated values:</p>
-         * <ul>
-         * <li>CloudApp: RDS Cloud App</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +115,7 @@ public class ModifyAppPolicyRequest extends Request {
         }
 
         /**
-         * <p>Displays the policy.</p>
+         * <p>The display policy.</p>
          */
         public Builder videoPolicy(VideoPolicy videoPolicy) {
             String videoPolicyShrink = shrink(videoPolicy, "VideoPolicy", "json");
@@ -254,11 +250,6 @@ public class ModifyAppPolicyRequest extends Request {
 
             /**
              * <p>The frame rate (FPS).</p>
-             * <p>Enumerated values:</p>
-             * <ul>
-             * <li>30: 30 FPS</li>
-             * <li>60: 60 FPS</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -291,11 +282,11 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * <p>The stream mode. This parameter is used together with <code>Webrtc</code> to specify the protocol type.</p>
+             * <p>The streaming mode. Used together with the Webrtc parameter to specify the protocol type.</p>
              * <ul>
-             * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, Web Real-Time Communications (WebRTC) streams are used.</li>
-             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
-             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+             * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC stream.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video stream.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: mixed stream.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,10 +298,12 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * <p>Whether to use adaptive resolution.</p>
+             * <p>Specifies whether to use adaptive resolution.</p>
              * <ul>
-             * <li><code>true</code>: The session resolution changes with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> indicates the maximum resolution width and <code>SessionResolutionHeight</code> indicates the maximum resolution height.</li>
-             * <li><code>false</code>: The session resolution does not change with the display area of the terminal. In this case, <code>SessionResolutionWidth</code> specifies the fixed resolution width and <code>SessionResolutionHeight</code> specifies the fixed resolution height.</li>
+             * <li><p><code>true</code>: The session resolution follows changes in the terminal display area. In this case, SessionResolutionWidth and SessionResolutionHeight specify the maximum resolution values.</p>
+             * </li>
+             * <li><p><code>false</code>: The session resolution does not follow changes in the terminal display area. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -322,13 +315,7 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * <p>The image quality policy.</p>
-             * <p>Enumerated values:</p>
-             * <ul>
-             * <li>adaptive: adaptive.</li>
-             * <li>smooth: smooth first.</li>
-             * <li>quality: quality first.</li>
-             * </ul>
+             * <p>The visual quality strategy.</p>
              * 
              * <strong>example:</strong>
              * <p>smooth</p>
@@ -339,11 +326,11 @@ public class ModifyAppPolicyRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable WebRTC. This parameter is used together with <code>StreamingMode</code> to specify the protocol type.</p>
+             * <p>Specifies whether to enable WebRTC. Used together with the StreamingMode parameter to specify the protocol type.</p>
              * <ul>
-             * <li>If you set <code>Webrtc</code> to <code>true</code> and <code>StreamingMode</code> to <code>video</code>, WebRTC streams are used.</li>
-             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>video</code>, video streams are used.</li>
-             * <li>If you set <code>Webrtc</code> to <code>false</code> and <code>StreamingMode</code> to <code>mix</code>, mixed streams are used.</li>
+             * <li>Webrtc=<code>true</code> and StreamingMode=<code>video</code>: WebRTC stream.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>video</code>: video stream.</li>
+             * <li>Webrtc=<code>false</code> and StreamingMode=<code>mix</code>: mixed stream.</li>
              * </ul>
              * 
              * <strong>example:</strong>

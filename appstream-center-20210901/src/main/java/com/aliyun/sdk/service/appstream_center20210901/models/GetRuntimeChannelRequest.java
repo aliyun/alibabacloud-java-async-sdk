@@ -118,7 +118,10 @@ public class GetRuntimeChannelRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -127,6 +130,12 @@ public class GetRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent provider.</p>
+         * <ul>
+         * <li>JVS Computer: Set to OpenClaw.</li>
+         * <li>OpenClaw: Set to OpenClaw.</li>
+         * <li>Hermes Agent: Set to HermesAgent.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +148,10 @@ public class GetRuntimeChannelRequest extends Request {
         }
 
         /**
-         * IncludeRiskInfo.
+         * <p>Specifies whether to include risk information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeRiskInfo(Boolean includeRiskInfo) {
             this.putQueryParameter("IncludeRiskInfo", includeRiskInfo);
@@ -148,6 +160,12 @@ public class GetRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent runtime ID. The ID mapping is as follows:</p>
+         * <ul>
+         * <li>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</li>
+         * <li>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</li>
+         * <li>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +178,7 @@ public class GetRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

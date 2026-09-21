@@ -106,7 +106,7 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of returned data objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of query results per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -321,7 +333,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentPlatform.
+             * <p>The Agent platform (such as ENTERPRISE or ENTERPRISE_JVS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENTERPRISE_AGENTIC_COMPUTER</p>
              */
             public Builder agentPlatform(String agentPlatform) {
                 this.agentPlatform = agentPlatform;
@@ -329,7 +344,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * AgentProvider.
+             * <p>The Agent provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OpenClaw</p>
              */
             public Builder agentProvider(String agentProvider) {
                 this.agentProvider = agentProvider;
@@ -337,7 +355,16 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The model group configuration JSON object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;defaults&quot;: {
+             *         &quot;model&quot;: {
+             *             &quot;primary&quot;: &quot;bailian/qwen3.5-plus&quot;
+             *         }
+             *     }
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -345,7 +372,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template group description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test model group</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -353,7 +383,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * HasModel.
+             * <p>Specifies whether models are configured in the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasModel(Boolean hasModel) {
                 this.hasModel = hasModel;
@@ -361,7 +394,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelCount.
+             * <p>The number of models in the model group, including referenced system provider models.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder modelCount(Integer modelCount) {
                 this.modelCount = modelCount;
@@ -369,7 +405,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateId.
+             * <p>The model group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt-xxxx</p>
              */
             public Builder modelTemplateId(String modelTemplateId) {
                 this.modelTemplateId = modelTemplateId;
@@ -377,7 +416,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-template-001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -385,7 +427,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * RefScope.
+             * <p>The group authorization scope. Valid values: ALL_USER (all users) and USER_MIXED (a mix of user groups and users, only for Common groups).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL_USER</p>
              */
             public Builder refScope(String refScope) {
                 this.refScope = refScope;
@@ -393,7 +438,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * <p>The number of authorized users in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -401,7 +449,10 @@ public class ListModelTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupCount.
+             * <p>The number of authorized user groups in the group. This value is returned only when ListModelTemplates is called and refScope is USER_MIXED. Otherwise, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder userGroupCount(Integer userGroupCount) {
                 this.userGroupCount = userGroupCount;

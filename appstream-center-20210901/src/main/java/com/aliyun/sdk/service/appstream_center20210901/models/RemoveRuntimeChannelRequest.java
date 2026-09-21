@@ -119,7 +119,10 @@ public class RemoveRuntimeChannelRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putBodyParameter("AgentPlatform", agentPlatform);
@@ -128,6 +131,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The Agent provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +144,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The channel code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The list of Agent runtime IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtimeIds(java.util.List<String> runtimeIds) {
@@ -161,6 +167,7 @@ public class RemoveRuntimeChannelRequest extends Request {
         }
 
         /**
+         * <p>The runtime type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

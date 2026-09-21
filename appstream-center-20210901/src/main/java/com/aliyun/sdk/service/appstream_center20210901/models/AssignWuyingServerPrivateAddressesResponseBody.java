@@ -67,7 +67,7 @@ public class AssignWuyingServerPrivateAddressesResponseBody extends TeaModel {
         } 
 
         /**
-         * AssignedPrivateIpAddresses.
+         * <p>The list of assigned secondary private IP addresses.</p>
          */
         public Builder assignedPrivateIpAddresses(java.util.List<String> assignedPrivateIpAddresses) {
             this.assignedPrivateIpAddresses = assignedPrivateIpAddresses;
@@ -75,7 +75,10 @@ public class AssignWuyingServerPrivateAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -157,7 +157,10 @@ public class ListLlmTemplatesRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * <p>The business type. This parameter is required when SmartModel is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -166,7 +169,10 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * LlmCode.
+         * <p>The model code used for filtering. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen3.6-plus</p>
          */
         public Builder llmCode(String llmCode) {
             this.putQueryParameter("LlmCode", llmCode);
@@ -175,7 +181,7 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * LlmTemplateIds.
+         * <p>The model template IDs used for filtering.</p>
          */
         public Builder llmTemplateIds(java.util.List<String> llmTemplateIds) {
             String llmTemplateIdsShrink = shrink(llmTemplateIds, "LlmTemplateIds", "json");
@@ -185,7 +191,10 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * ModelTemplateId.
+         * <p>The ID of the associated model group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder modelTemplateId(String modelTemplateId) {
             this.putQueryParameter("ModelTemplateId", modelTemplateId);
@@ -194,7 +203,10 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1. Both 0 and 1 return the same result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +215,10 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +227,10 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * ProviderTemplateId.
+         * <p>The ID of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mpt-xxxx</p>
          */
         public Builder providerTemplateId(String providerTemplateId) {
             this.putQueryParameter("ProviderTemplateId", providerTemplateId);
@@ -221,7 +239,15 @@ public class ListLlmTemplatesRequest extends Request {
         }
 
         /**
-         * SmartModel.
+         * <p>Specifies whether to query smart models. Valid values:</p>
+         * <ul>
+         * <li>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</li>
+         * <li>false: Smart model filtering is not applied.</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder smartModel(Boolean smartModel) {
             this.putQueryParameter("SmartModel", smartModel);

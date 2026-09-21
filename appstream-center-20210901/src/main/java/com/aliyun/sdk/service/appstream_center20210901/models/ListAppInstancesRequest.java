@@ -159,7 +159,7 @@ public class ListAppInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the application instance.</p>
+         * <p>The application instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ai-azn3kmwruh1vl****</p>
@@ -184,7 +184,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the application instances. Up to 100 IDs can be specified.</p>
+         * <p>The list of application instance IDs. The maximum length is 100.</p>
          */
         public Builder appInstanceIdList(java.util.List<String> appInstanceIdList) {
             this.putBodyParameter("AppInstanceIdList", appInstanceIdList);
@@ -193,12 +193,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query the information about deleted app instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Specifies whether to query information about deleted instances. If this parameter is set to true, the AppInstanceIdList parameter is required. Otherwise, a parameter error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -210,7 +205,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
+         * <p>The page number of the query results to display. Default value: <code>1</code>. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +217,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value cannot be greater than <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
+         * <p>The number of query results per page. Maximum value: <code>100</code>. Default value: <code>20</code>. We recommend that you specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -234,7 +229,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the application instances.</p>
+         * <p>The list of application instance statuses.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
@@ -243,7 +238,7 @@ public class ListAppInstancesRequest extends Request {
         }
 
         /**
-         * <p>The user IDs. You can specify up to 100 IDs.</p>
+         * <p>The list of user IDs. The maximum length is 100.</p>
          */
         public Builder userIdList(java.util.List<String> userIdList) {
             this.putQueryParameter("UserIdList", userIdList);

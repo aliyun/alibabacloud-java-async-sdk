@@ -106,7 +106,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number of the query results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of query results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -128,7 +128,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The app instances of the persistent session type.</p>
+         * <p>The list of persistent session application instances.</p>
          */
         public Builder persistentAppInstanceModels(java.util.List<PersistentAppInstanceModels> persistentAppInstanceModels) {
             this.persistentAppInstanceModels = persistentAppInstanceModels;
@@ -147,7 +147,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of query results.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -294,7 +294,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the delivery group.</p>
+             * <p>The delivery group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>aig-0bxls9m9arax6****</p>
@@ -305,7 +305,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the app instance.</p>
+             * <p>The application instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-azn3kmwruh1vl****</p>
@@ -316,7 +316,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the app instance of the persistent session type.</p>
+             * <p>The persistent session ID.</p>
              * 
              * <strong>example:</strong>
              * <p>p-0cc7s3mw2fg4j****</p>
@@ -327,7 +327,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the app instance of the persistent session type.</p>
+             * <p>The name of the persistent session application instance.</p>
              * 
              * <strong>example:</strong>
              * <p>test-persistent-name</p>
@@ -338,19 +338,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the app instance of the persistent session type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>STARTING</li>
-             * <li>RUNNING</li>
-             * <li>STOPPED</li>
-             * <li>UNAVAILABLE</li>
-             * <li>DELETING</li>
-             * <li>PENDING</li>
-             * <li>STOPPING</li>
-             * <li>DELETED</li>
-             * <li>REBUILDING</li>
-             * </ul>
+             * <p>The instance status of the persistent session application.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -361,19 +349,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the app instance.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>INIT: The app instance is being initialized.</li>
-             * <li>STARTING: The app instance is being started.</li>
-             * <li>CLOSING: The app instance is being stopped.</li>
-             * <li>CLOSED: The app instance is closed.</li>
-             * <li>RUNNING: The app instance is running.</li>
-             * <li>idle: The app instance is idle.</li>
-             * <li>BOUND: The app instance is bound to an app instance group.</li>
-             * <li>UNAVAILABLE: The app instance is unavailable.</li>
-             * <li>DELETED: The app instance is deleted.</li>
-             * </ul>
+             * <p>The application instance status.</p>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -384,7 +360,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The authorized users.</p>
+             * <p>The list of authorized usernames.</p>
              */
             public Builder authorizedUsers(java.util.List<String> authorizedUsers) {
                 this.authorizedUsers = authorizedUsers;
@@ -392,7 +368,7 @@ public class ListPersistentAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the app instance was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-03-13T03:22:18.000+00:00</p>

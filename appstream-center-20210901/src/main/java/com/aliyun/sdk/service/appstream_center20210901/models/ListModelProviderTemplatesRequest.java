@@ -159,7 +159,10 @@ public class ListModelProviderTemplatesRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -168,6 +171,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The name of the agent provider.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +184,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The business type. Not all business types are supported. Only business types within the supported range are valid. Refer to the listed enumeration values.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +197,10 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * ModelTemplateId.
+         * <p>The model group ID to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder modelTemplateId(String modelTemplateId) {
             this.putQueryParameter("ModelTemplateId", modelTemplateId);
@@ -201,7 +209,10 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1. Values 0 and 1 return the same result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -210,7 +221,10 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -219,7 +233,10 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * ProviderName.
+         * <p>The model provider name to filter by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bailian</p>
          */
         public Builder providerName(String providerName) {
             this.putQueryParameter("ProviderName", providerName);
@@ -228,7 +245,7 @@ public class ListModelProviderTemplatesRequest extends Request {
         }
 
         /**
-         * ProviderTemplateIds.
+         * <p>The model provider template IDs to filter by.</p>
          */
         public Builder providerTemplateIds(java.util.List<String> providerTemplateIds) {
             String providerTemplateIdsShrink = shrink(providerTemplateIds, "ProviderTemplateIds", "json");

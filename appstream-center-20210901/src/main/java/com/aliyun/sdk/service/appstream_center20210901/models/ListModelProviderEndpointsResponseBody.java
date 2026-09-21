@@ -67,7 +67,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID, which uniquely identifies the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +196,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiType.
+             * <p>The API compatibility type, such as openai-compatible or anthropic-compatible.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openai-compatible</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -201,7 +207,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * BaseUrl.
+             * <p>The API base URL, such as <a href="https://coding.dashscope.aliyuncs.com/v1">https://coding.dashscope.aliyuncs.com/v1</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://coding.dashscope.aliyuncs.com/v1">https://coding.dashscope.aliyuncs.com/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -209,7 +218,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The endpoint description, such as Coding Plan - OpenAI compatible protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Coding Plan - OpenAI</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -217,7 +229,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The endpoint identifier name, such as coding-openai or cn-beijing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>coding-openai</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +240,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderUrl.
+             * <p>The provider URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test">https://test</a></p>
              */
             public Builder providerUrl(String providerUrl) {
                 this.providerUrl = providerUrl;
@@ -233,7 +251,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags used for categorization and filtering, such as coding-plan, on-demand, or cn-beijing.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -326,7 +344,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The provider description, such as Alibaba Cloud Bailian.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen Plus series models</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +355,7 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * <p>The list of all endpoints under the provider.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -342,7 +363,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderName.
+             * <p>The provider name, such as bailian or moonshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -350,7 +374,10 @@ public class ListModelProviderEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderUrl.
+             * <p>The provider website URL, which is used to direct users to obtain an API key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test">https://test</a></p>
              */
             public Builder providerUrl(String providerUrl) {
                 this.providerUrl = providerUrl;

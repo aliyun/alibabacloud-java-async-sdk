@@ -67,7 +67,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the associated EIP.</p>
+         * <p>The EIP information.</p>
          */
         public Builder eipInfoModel(EipInfoModel eipInfoModel) {
             this.eipInfoModel = eipInfoModel;
@@ -170,7 +170,10 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * EipId.
+             * <p>The EIP ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eip-wz96s3j***mmau4pvv9</p>
              */
             public Builder eipId(String eipId) {
                 this.eipId = eipId;
@@ -189,7 +192,7 @@ public class DescribeWuyingServerEipInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the elastic network interface (ENI).</p>
+             * <p>The network interface controller (NIC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>eni-bp174p2xxxxxbyh02ix</p>

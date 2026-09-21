@@ -190,7 +190,10 @@ public class CreateModelProviderTemplateRequest extends Request {
         } 
 
         /**
-         * AgentPlatform.
+         * <p>The Agent platform.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENTERPRISE</p>
          */
         public Builder agentPlatform(String agentPlatform) {
             this.putQueryParameter("AgentPlatform", agentPlatform);
@@ -199,6 +202,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The Agent provider name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +215,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The business type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +228,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The model provider configuration in JSON format, which contains connection information such as baseUrl, apiKey, and api. The apiKey is encrypted after creation. When ProviderType is set to WuyingCredit, this parameter is not required because the configuration is copied from the system template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +245,10 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼服务商</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -248,7 +257,10 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * EnableWuyingProxy.
+         * <p>Specifies whether to enable the WUYING secure proxy. This parameter must be set to true when ProviderType is set to WuyingCredit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWuyingProxy(Boolean enableWuyingProxy) {
             this.putQueryParameter("EnableWuyingProxy", enableWuyingProxy);
@@ -257,6 +269,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the associated model template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +282,10 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -278,6 +294,7 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The model provider name. The name must be unique within the same model template. The naming rules vary based on the value of ProviderType. For more information, see the description of ProviderType.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +307,15 @@ public class CreateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * ProviderType.
+         * <p>The model provider type. Different types impose different constraints on ProviderName and Config. Valid values:</p>
+         * <ul>
+         * <li>WuyingCredit: WUYING credit plan. ProviderName must be set to wuying-credit. The template is created by copying from a system template, and Config is not required.</li>
+         * <li>Managed: managed provider. System-reserved names such as wuying-credit cannot be used. Config is required.</li>
+         * <li>Custom: user-defined provider. ProviderName must start with the prefix provider-. Config is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Managed</p>
          */
         public Builder providerType(String providerType) {
             this.putQueryParameter("ProviderType", providerType);

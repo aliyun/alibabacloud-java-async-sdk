@@ -88,7 +88,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
         } 
 
         /**
-         * LlmTemplateItems.
+         * <p>The list of model configurations to create.</p>
          */
         public Builder llmTemplateItems(java.util.List<LlmTemplateItems> llmTemplateItems) {
             this.putBodyParameter("LlmTemplateItems", llmTemplateItems);
@@ -97,7 +97,10 @@ public class BatchCreateLlmTemplatesRequest extends Request {
         }
 
         /**
-         * ModelTemplateId.
+         * <p>The ID of the associated model group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mt-xxxx</p>
          */
         public Builder modelTemplateId(String modelTemplateId) {
             this.putBodyParameter("ModelTemplateId", modelTemplateId);
@@ -106,6 +109,7 @@ public class BatchCreateLlmTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the model provider template to which the models belong.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +220,26 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             } 
 
             /**
-             * Config.
+             * <p>The model configuration JSON object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
+             *     &quot;cost&quot;: {
+             *         &quot;input&quot;: 0,
+             *         &quot;output&quot;: 0,
+             *         &quot;cacheRead&quot;: 0,
+             *         &quot;cacheWrite&quot;: 0
+             *     },
+             *     &quot;name&quot;: &quot;Qwen3.6-Plus&quot;,
+             *     &quot;input&quot;: [&quot;image&quot;, &quot;text&quot;],
+             *     &quot;compat&quot;: {
+             *         &quot;supportsUsageInStreaming&quot;: true
+             *     },
+             *     &quot;maxTokens&quot;: 65536,
+             *     &quot;reasoning&quot;: false,
+             *     &quot;contextWindow&quot;: 1000000
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -224,7 +247,10 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The model description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>千问Plus系列模型</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -232,7 +258,10 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * IsDefaultModel.
+             * <p>Specifies whether to set the model as the default model. A model group can have at most one default model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefaultModel(Boolean isDefaultModel) {
                 this.isDefaultModel = isDefaultModel;
@@ -240,7 +269,10 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * LlmCode.
+             * <p>The model code, which must be unique within the same provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.6-plus</p>
              */
             public Builder llmCode(String llmCode) {
                 this.llmCode = llmCode;
@@ -248,7 +280,10 @@ public class BatchCreateLlmTemplatesRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3.6-Plus</p>
              */
             public Builder name(String name) {
                 this.name = name;

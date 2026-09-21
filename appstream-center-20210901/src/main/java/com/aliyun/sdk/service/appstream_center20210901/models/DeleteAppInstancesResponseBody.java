@@ -67,7 +67,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The list of instance deletion results.</p>
          */
         public Builder deleteAppInstanceModels(java.util.List<DeleteAppInstanceModels> deleteAppInstanceModels) {
             this.deleteAppInstanceModels = deleteAppInstanceModels;
@@ -170,7 +170,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application instance.</p>
+             * <p>The application instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ai-gbuea*****</p>
@@ -181,7 +181,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code.</p>
+             * <p>The error code returned when an error occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>InvalidParameter.ProductType</p>
@@ -192,7 +192,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>The error message returned when an error occurs.</p>
              * 
              * <strong>example:</strong>
              * <p>The parameter ProductType is invalid.</p>
@@ -203,12 +203,7 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the application instance is deleted.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>Indicates whether the deletion is triggered successfully.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

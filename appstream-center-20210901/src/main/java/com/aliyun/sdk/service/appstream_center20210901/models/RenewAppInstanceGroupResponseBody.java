@@ -93,7 +93,7 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.ProductType</p>
@@ -104,7 +104,7 @@ public class RenewAppInstanceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message returned if the call failed.</p>
          * 
          * <strong>example:</strong>
          * <p>The parameter ProductType is invalid.</p>

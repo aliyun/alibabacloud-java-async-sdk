@@ -80,7 +80,7 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -88,7 +88,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +259,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * AvatarUrl.
+             * <p>The channel avatar URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://test.com/test.jpg">https://test.com/test.jpg</a></p>
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
@@ -261,7 +270,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelType.
+             * <p>The channel type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System</p>
              */
             public Builder channelType(String channelType) {
                 this.channelType = channelType;
@@ -269,7 +281,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The channel code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dingtalk-connector</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -277,7 +292,14 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The channel configuration JSON string.</p>
+             * <p>Currently, only the simple configuration mode is supported. You must pass AppKey and AppSecret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;appKey&quot;: &quot;abc&quot;,
+             *     &quot;appSecret&quot;: &quot;efg&quot;
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -285,7 +307,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigMode.
+             * <p>The configuration mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Simple</p>
              */
             public Builder configMode(String configMode) {
                 this.configMode = configMode;
@@ -293,7 +318,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * QrCodeNotifyUrl.
+             * <p>The QR code configuration notification page URL (returned only for ENTERPRISE/ENTERPRISE_JVS platforms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&code=dingtalk-connector&region=cn-shanghai">https://eds.console.aliyun.com/public/scan-pair?taskId=e7eb5d86-1b94-4d58-****-3b78b01df99e&amp;code=dingtalk-connector&amp;region=cn-shanghai</a></p>
              */
             public Builder qrCodeNotifyUrl(String qrCodeNotifyUrl) {
                 this.qrCodeNotifyUrl = qrCodeNotifyUrl;
@@ -301,7 +329,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * QrCodeStatus.
+             * <p>The QR code configuration status (returned only when not in a desired state).</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58">https://q.qq.com/qqbot/openclaw/entity-picker.html?session_id=c0882266-77c0-4094-af93-442*****2a58</a></p>
              */
             public Builder qrCodeStatus(String qrCodeStatus) {
                 this.qrCodeStatus = qrCodeStatus;
@@ -309,7 +340,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * RiskType.
+             * <p>The risk type (returned only when <strong>includeRiskInfo=true</strong>).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -317,7 +351,10 @@ public class GetRuntimeChannelResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The configuration status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Configured</p>
              */
             public Builder status(String status) {
                 this.status = status;

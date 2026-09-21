@@ -340,7 +340,10 @@ public class ListWuyingServerRequest extends Request {
         } 
 
         /**
-         * AddVirtualNodePoolStatusList.
+         * <p>The list of statuses for joining a virtual node pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder addVirtualNodePoolStatusList(java.util.List<String> addVirtualNodePoolStatusList) {
             this.putBodyParameter("AddVirtualNodePoolStatusList", addVirtualNodePoolStatusList);
@@ -361,7 +364,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder bizType(Integer bizType) {
             this.putBodyParameter("BizType", bizType);
@@ -370,7 +376,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the Internet access package.</p>
+         * <p>The billing type.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -382,7 +388,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * CreateTimeEnd.
+         * <p>The end time of the creation time range, in ISO 8601 format. This time point is exclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-01T00:00:00Z</p>
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putBodyParameter("CreateTimeEnd", createTimeEnd);
@@ -391,7 +400,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * <p>The start time of the creation time range, in ISO 8601 format. This time point is inclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01T00:00:00Z</p>
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putBodyParameter("CreateTimeStart", createTimeStart);
@@ -400,7 +412,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ExpiredTimeEnd.
+         * <p>The end time of the expiration time range, in ISO 8601 format. This time point is exclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-08-01T00:00:00Z</p>
          */
         public Builder expiredTimeEnd(String expiredTimeEnd) {
             this.putBodyParameter("ExpiredTimeEnd", expiredTimeEnd);
@@ -409,7 +424,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ExpiredTimeStart.
+         * <p>The start time of the expiration time range, in ISO 8601 format. This time point is inclusive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-01T00:00:00Z</p>
          */
         public Builder expiredTimeStart(String expiredTimeStart) {
             this.putBodyParameter("ExpiredTimeStart", expiredTimeStart);
@@ -430,7 +448,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceIp.
+         * <p>The internal IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.31.1.1</p>
          */
         public Builder networkInterfaceIp(String networkInterfaceIp) {
             this.putBodyParameter("NetworkInterfaceIp", networkInterfaceIp);
@@ -439,7 +460,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The office network IDs.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-172301****</p>
@@ -463,7 +484,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -475,7 +496,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * <p>The product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wuying_server</p>
          */
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
@@ -484,7 +508,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>Workstation specifications.</p>
+         * <p>The workstation instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.proworkstation_flagship_elite.32c64g.48g1x</p>
@@ -496,7 +520,7 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * <p>The status of the workstation.</p>
+         * <p>The workstation status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -508,7 +532,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * Users.
+         * <p>The list of authorized users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder users(java.util.List<String> users) {
             this.putBodyParameter("Users", users);
@@ -517,7 +544,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * VirtualNodePoolId.
+         * <p>The virtual node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnp-bp1234567890abcde</p>
          */
         public Builder virtualNodePoolId(String virtualNodePoolId) {
             this.putBodyParameter("VirtualNodePoolId", virtualNodePoolId);
@@ -529,7 +559,7 @@ public class ListWuyingServerRequest extends Request {
          * <p>The list of workstation IDs.</p>
          * 
          * <strong>example:</strong>
-         * <p>aig-bp1234567890abcde</p>
+         * <p>1</p>
          */
         public Builder wuyingServerIdList(java.util.List<String> wuyingServerIdList) {
             this.putBodyParameter("WuyingServerIdList", wuyingServerIdList);
@@ -550,7 +580,10 @@ public class ListWuyingServerRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

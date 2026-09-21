@@ -67,7 +67,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned result object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Max.
+             * <p>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with a null Max is displayed as 1x and above.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder max(Float max) {
                 this.max = max;
@@ -149,7 +155,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * <p>The minimum multiplier. When equal to Max, the multiplier is fixed. For example, Min=Max=2 is displayed as 2x.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder min(Float min) {
                 this.min = min;
@@ -216,7 +225,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * RequestModality.
+             * <p>The list of request modalities (such as Text, Image, and Audio).</p>
              */
             public Builder requestModality(java.util.List<String> requestModality) {
                 this.requestModality = requestModality;
@@ -224,7 +233,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseModality.
+             * <p>The list of response modalities (such as Text, Image, and Audio).</p>
              */
             public Builder responseModality(java.util.List<String> responseModality) {
                 this.responseModality = responseModality;
@@ -369,7 +378,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * CreditMultiplier.
+             * <p>The credit consumption multiplier. A null value indicates that the model does not participate in credit-based billing.</p>
              */
             public Builder creditMultiplier(CreditMultiplier creditMultiplier) {
                 this.creditMultiplier = creditMultiplier;
@@ -377,7 +386,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The model description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The Qwen3.6 native vision-language series Plus model demonstrates outstanding performance comparable to current top frontier models, with significant improvements over the 3.5 series. The model features significantly enhanced capabilities in agentic coding, frontend programming, vibe coding, multimodal universal recognition, OCR, and object localization</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,7 +397,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Features.
+             * <p>The list of model features (such as function-calling, web-search, and structured-outputs).</p>
              */
             public Builder features(java.util.List<String> features) {
                 this.features = features;
@@ -393,7 +405,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * InferenceMetadata.
+             * <p>The inference metadata (request and response modalities).</p>
              */
             public Builder inferenceMetadata(InferenceMetadata inferenceMetadata) {
                 this.inferenceMetadata = inferenceMetadata;
@@ -401,7 +413,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCode.
+             * <p>The model code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.6-plus</p>
              */
             public Builder llmCode(String llmCode) {
                 this.llmCode = llmCode;
@@ -409,7 +424,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Qwen3.6-Plus</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -417,7 +435,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * PublishedTime.
+             * <p>The publish time (ISO 8601 format).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-04T06:25:17.000+00:00</p>
              */
             public Builder publishedTime(String publishedTime) {
                 this.publishedTime = publishedTime;
@@ -425,7 +446,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RiskType.
+             * <p>The model risk type (returned only when the request parameter IncludeRiskInfo is set to true).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -518,7 +542,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * LlmInfoList.
+             * <p>The list of model information.</p>
              */
             public Builder llmInfoList(java.util.List<LlmInfoList> llmInfoList) {
                 this.llmInfoList = llmInfoList;
@@ -526,7 +550,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelProviderTemplateId.
+             * <p>The model provider template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpt-xxxx</p>
              */
             public Builder modelProviderTemplateId(String modelProviderTemplateId) {
                 this.modelProviderTemplateId = modelProviderTemplateId;
@@ -534,7 +561,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model provider template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>百炼</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +572,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderName.
+             * <p>The model provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -661,7 +694,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultModel.
+             * <p>The default model (format: providerName/llmCode).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian/qwen3.6-plus</p>
              */
             public Builder defaultModel(String defaultModel) {
                 this.defaultModel = defaultModel;
@@ -669,7 +705,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelProviderList.
+             * <p>The list of model providers.</p>
              */
             public Builder modelProviderList(java.util.List<ModelProviderList> modelProviderList) {
                 this.modelProviderList = modelProviderList;
@@ -677,7 +713,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateId.
+             * <p>The configured model group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mt-xxxx</p>
              */
             public Builder modelTemplateId(String modelTemplateId) {
                 this.modelTemplateId = modelTemplateId;
@@ -685,7 +724,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateName.
+             * <p>The model group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model-template-001</p>
              */
             public Builder modelTemplateName(String modelTemplateName) {
                 this.modelTemplateName = modelTemplateName;
@@ -693,7 +735,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTemplateRefType.
+             * <p>The model template association type (only when present).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Runtime</p>
              */
             public Builder modelTemplateRefType(String modelTemplateRefType) {
                 this.modelTemplateRefType = modelTemplateRefType;
@@ -701,7 +746,10 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID to which the runtime belongs (null if not assigned to a resource group).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

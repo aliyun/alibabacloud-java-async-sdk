@@ -116,7 +116,27 @@ public class UpdateModelTemplateRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The model group configuration JSON object. You can use this field to modify the default model. The configuration format varies depending on the agent provider (AgentProvider):</p>
+         * <ul>
+         * <li><p><strong>OpenClaw / AgenticComputer scenarios:</strong>
+         * Set the default model by using the <code>defaults.model.primary</code> field in the format of <code>provider name/model code</code>.</p>
+         * </li>
+         * <li><p><strong>HermesAgent scenario:</strong>
+         * Specify the provider name by using <code>model.provider</code> and the model code by using <code>model.default</code>.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>:</p>
+         * <ul>
+         * <li>When you modify the default model, the system verifies whether the specified provider and model code already exist in the model group.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenClaw：
+         * {&quot;defaults&quot;:{&quot;model&quot;:{&quot;primary&quot;:&quot;bailian/qwen3.5-plus&quot;}}}</p>
+         * <p>HermesAgent：
+         * {&quot;model&quot;:{&quot;provider&quot;:&quot;bailian&quot;,&quot;default&quot;:&quot;qwen3.5-plus&quot;}}</p>
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -125,7 +145,10 @@ public class UpdateModelTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The template group description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test model group</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,6 +157,7 @@ public class UpdateModelTemplateRequest extends Request {
         }
 
         /**
+         * <p>The model group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +170,10 @@ public class UpdateModelTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The template group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>model-template-001</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -155,7 +182,10 @@ public class UpdateModelTemplateRequest extends Request {
         }
 
         /**
-         * RefScope.
+         * <p>The authorization scope. This parameter is optional and can be modified only for Common model groups. Valid values: ALL_USER and USER_MIXED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL_USER</p>
          */
         public Builder refScope(String refScope) {
             this.putQueryParameter("RefScope", refScope);

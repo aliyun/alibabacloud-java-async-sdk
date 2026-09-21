@@ -105,7 +105,7 @@ public class ListOtaTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID. You can call ListAppInstanceGroup to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,11 +118,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the OTA update task.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Fota: update of the system components of Alibaba Cloud Workspace</li>
-         * </ul>
+         * <p>The type of the over-the-air update task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,7 +131,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * <p>The page number of the page to return.</p>
+         * <p>The page number of the query results to display.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +144,7 @@ public class ListOtaTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+         * <p>The number of query results per page. Valid values: 1 to 100.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

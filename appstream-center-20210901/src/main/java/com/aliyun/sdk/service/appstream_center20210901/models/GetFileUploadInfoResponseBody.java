@@ -67,7 +67,7 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>Returns None.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +248,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessKeyId.
+             * <p>The temporary AccessKey ID returned by Security Token Service (STS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LTA****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -253,7 +259,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * <p>The bucket name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>appstream-*</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -261,7 +270,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -269,7 +281,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FilePath.
+             * <p>The folder path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai/aig_upm/***</p>
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -277,7 +292,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxFileSize.
+             * <p>The maximum file size in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52428800</p>
              */
             public Builder maxFileSize(Long maxFileSize) {
                 this.maxFileSize = maxFileSize;
@@ -285,7 +303,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OssPoint.
+             * <p>The OSS endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder ossPoint(String ossPoint) {
                 this.ossPoint = ossPoint;
@@ -293,7 +314,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Policy.
+             * <p>The PostObject policy (Base64-encoded).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -301,7 +325,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>F591F0EA-AA10-52D2-ADA3-68397887B17C</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -309,7 +336,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Signature.
+             * <p>The PostObject policy signature (HMAC-SHA1).</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder signature(String signature) {
                 this.signature = signature;
@@ -317,7 +347,10 @@ public class GetFileUploadInfoResponseBody extends TeaModel {
             }
 
             /**
-             * StsToken.
+             * <p>The temporary token returned by STS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>C*****</p>
              */
             public Builder stsToken(String stsToken) {
                 this.stsToken = stsToken;

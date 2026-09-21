@@ -116,7 +116,7 @@ public class UpdateModelProviderTemplateRequest extends Request {
         } 
 
         /**
-         * Config.
+         * <p>The model provider configuration.</p>
          */
         public Builder config(Config config) {
             String configShrink = shrink(config, "Config", "json");
@@ -126,7 +126,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼服务商</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -135,7 +138,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * EnableWuyingProxy.
+         * <p>Specifies whether to enable the WUYING security gateway proxy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableWuyingProxy(Boolean enableWuyingProxy) {
             this.putBodyParameter("EnableWuyingProxy", enableWuyingProxy);
@@ -144,7 +150,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the model provider template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云百炼</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -153,6 +162,7 @@ public class UpdateModelProviderTemplateRequest extends Request {
         }
 
         /**
+         * <p>The ID of the model provider template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +247,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key of the model service, used for authentication. The key is stored in encrypted form after creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -245,7 +258,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
             }
 
             /**
-             * ApiType.
+             * <p>The API protocol type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openai-completions</p>
              */
             public Builder apiType(String apiType) {
                 this.apiType = apiType;
@@ -253,7 +269,10 @@ public class UpdateModelProviderTemplateRequest extends Request {
             }
 
             /**
-             * BaseUrl.
+             * <p>The base URL of the model service API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;

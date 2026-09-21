@@ -244,7 +244,7 @@ public class ListAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The image ID of the app. You can obtain the ID from the Images page in the App Streaming console.</p>
+         * <p>The application image ID. You can obtain this value from the Image Management page in the WUYING Workspace console.</p>
          * 
          * <strong>example:</strong>
          * <p>img-8z4nztpaqvay4****</p>
@@ -256,7 +256,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the delivery group.</p>
+         * <p>The delivery group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -268,7 +268,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The name of the delivery groups to query. Fuzzy match is used for queries. For example, if you set this parameter to <code>Office App</code>, all delivery groups whose names contain <code>Office App</code> are queried, such as <code>My Office Apps</code> and <code>Office App A</code>.</p>
+         * <p>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <code>OfficeApp</code>, all delivery groups whose names contain <code>OfficeApp</code> are returned, such as <code>MyOfficeApp</code> and <code>OfficeAppA</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OfficeApp</p>
          */
         public Builder appInstanceGroupName(String appInstanceGroupName) {
             this.putQueryParameter("AppInstanceGroupName", appInstanceGroupName);
@@ -277,12 +280,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>cn-shanghai: China (Shanghai)</li>
-         * <li>cn-hangzhou: China (Hangzhou)</li>
-         * </ul>
+         * <p>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -294,7 +292,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * ExcludedUserGroupIds.
+         * <p>The list of excluded authorized user group IDs.</p>
          */
         public Builder excludedUserGroupIds(java.util.List<String> excludedUserGroupIds) {
             this.putBodyParameter("ExcludedUserGroupIds", excludedUserGroupIds);
@@ -303,7 +301,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</p>
+         * <p>The specification type ID of the purchased resource. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</p>
          * 
          * <strong>example:</strong>
          * <p>appstreaming.vgpu.4c8g.2g</p>
@@ -315,7 +313,10 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * OfficeSiteId.
+         * <p>The office network ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hongkong+dir-643067****</p>
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -324,7 +325,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the query results to display.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -336,7 +337,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value cannot be greater than <code>100</code>.</p>
+         * <p>The number of query results per page. Maximum value: <code>100</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -349,10 +350,6 @@ public class ListAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +362,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -377,7 +374,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * <p>The status of the delivery groups.</p>
+         * <p>The list of delivery group statuses.</p>
          */
         public Builder status(java.util.List<String> status) {
             this.putBodyParameter("Status", status);
@@ -386,7 +383,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -395,7 +392,7 @@ public class ListAppInstanceGroupRequest extends Request {
         }
 
         /**
-         * UserGroupIds.
+         * <p>The list of authorized user group IDs.</p>
          */
         public Builder userGroupIds(java.util.List<String> userGroupIds) {
             this.putBodyParameter("UserGroupIds", userGroupIds);
@@ -463,7 +460,10 @@ public class ListAppInstanceGroupRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -471,7 +471,10 @@ public class ListAppInstanceGroupRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>design</p>
              */
             public Builder value(String value) {
                 this.value = value;

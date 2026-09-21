@@ -106,7 +106,7 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of returned data objects.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the current query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page in the query result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of query results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +294,14 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Config.
+             * <p>The model provider configuration JSON object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;api&quot;: &quot;openai-completions&quot;,
+             *     &quot;apiKey&quot;: &quot;sk-xxxx&quot;,
+             *     &quot;baseUrl&quot;: &quot;<a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a>&quot;
+             * }</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -290,7 +309,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The model provider template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Bailian provider</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +320,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableWuyingProxy.
+             * <p>Indicates whether the WUYING secure gateway proxy is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWuyingProxy(Boolean enableWuyingProxy) {
                 this.enableWuyingProxy = enableWuyingProxy;
@@ -306,7 +331,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model provider template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba Cloud Bailian</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -314,7 +342,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderName.
+             * <p>The model provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder providerName(String providerName) {
                 this.providerName = providerName;
@@ -322,7 +353,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderTemplateId.
+             * <p>The model provider template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mpt-xxxx</p>
              */
             public Builder providerTemplateId(String providerTemplateId) {
                 this.providerTemplateId = providerTemplateId;
@@ -330,7 +364,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderType.
+             * <p>The model provider type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WuyingCredit</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -338,7 +375,10 @@ public class ListModelProviderTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * WuyingProviderKey.
+             * <p>The ProviderKey of the WUYING secure gateway proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wuying-key-12345</p>
              */
             public Builder wuyingProviderKey(String wuyingProviderKey) {
                 this.wuyingProviderKey = wuyingProviderKey;

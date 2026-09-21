@@ -60,6 +60,7 @@ public class DeleteLlmTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The model template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

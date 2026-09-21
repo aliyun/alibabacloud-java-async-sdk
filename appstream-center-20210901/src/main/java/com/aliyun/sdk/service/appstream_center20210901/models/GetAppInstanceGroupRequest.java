@@ -75,7 +75,7 @@ public class GetAppInstanceGroupRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">listAppInstanceGroup</a> operation to obtain the ID.</p>
+         * <p>The ID of the delivery group. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,10 +89,6 @@ public class GetAppInstanceGroupRequest extends Request {
 
         /**
          * <p>The product type.</p>
-         * <p>Valid value:</p>
-         * <ul>
-         * <li>CloudApp: App Streaming</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

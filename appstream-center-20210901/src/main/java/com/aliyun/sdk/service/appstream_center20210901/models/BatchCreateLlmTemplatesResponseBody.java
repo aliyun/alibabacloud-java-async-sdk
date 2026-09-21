@@ -67,7 +67,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data object.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * LlmCode.
+             * <p>The model code that was skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen3.5-plus</p>
              */
             public Builder llmCode(String llmCode) {
                 this.llmCode = llmCode;
@@ -149,7 +155,10 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why the item was skipped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM template already exists with same providerTemplateId and llmCode.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -242,7 +251,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * LlmTemplateIds.
+             * <p>The list of successfully created model template IDs.</p>
              */
             public Builder llmTemplateIds(java.util.List<String> llmTemplateIds) {
                 this.llmTemplateIds = llmTemplateIds;
@@ -250,7 +259,7 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SkippedItems.
+             * <p>The list of skipped model configuration items.</p>
              */
             public Builder skippedItems(java.util.List<SkippedItems> skippedItems) {
                 this.skippedItems = skippedItems;
@@ -258,7 +267,10 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully created items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -266,7 +278,10 @@ public class BatchCreateLlmTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

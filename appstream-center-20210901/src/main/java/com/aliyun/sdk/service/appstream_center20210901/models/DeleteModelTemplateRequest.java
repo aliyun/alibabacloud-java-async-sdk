@@ -60,6 +60,7 @@ public class DeleteModelTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The model group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -75,6 +75,7 @@ public class UnassignWuyingServerPrivateAddressesRequest extends Request {
         } 
 
         /**
+         * <p>The list of secondary private IP addresses to unbind.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UnassignWuyingServerPrivateAddressesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the development host.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the query results to display.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -117,7 +117,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on each page.</p>
+         * <p>The number of query results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The OTA update tasks.</p>
+         * <p>The list of over-the-air update tasks.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -147,7 +147,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of OTA update tasks.</p>
+         * <p>The total number of over-the-air update tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -254,15 +254,6 @@ public class ListOtaTaskResponseBody extends TeaModel {
 
             /**
              * <p>The task status.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>FAILED</li>
-             * <li>RUNNING</li>
-             * <li>TERMINATED</li>
-             * <li>PART_FINISHED</li>
-             * <li>STANDBY</li>
-             * <li>FINISHED</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>RUNNING</p>
@@ -284,7 +275,7 @@ public class ListOtaTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the OTA update task. The time follows the ISO 8601 standard.</p>
+             * <p>The task start time in ISO 8601 format.</p>
              * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
              * 
              * <strong>example:</strong>
