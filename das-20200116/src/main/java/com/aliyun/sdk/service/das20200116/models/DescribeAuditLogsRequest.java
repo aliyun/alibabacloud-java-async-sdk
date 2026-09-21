@@ -102,10 +102,6 @@ public class DescribeAuditLogsRequest extends Request {
     private String ruleCategory;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RuleID")
-    private String ruleID;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
@@ -148,7 +144,6 @@ public class DescribeAuditLogsRequest extends Request {
         this.productId = builder.productId;
         this.ruleAggQuery = builder.ruleAggQuery;
         this.ruleCategory = builder.ruleCategory;
-        this.ruleID = builder.ruleID;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.sqlText = builder.sqlText;
@@ -317,13 +312,6 @@ public class DescribeAuditLogsRequest extends Request {
     }
 
     /**
-     * @return ruleID
-     */
-    public String getRuleID() {
-        return this.ruleID;
-    }
-
-    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -380,7 +368,6 @@ public class DescribeAuditLogsRequest extends Request {
         private Long productId; 
         private Boolean ruleAggQuery; 
         private String ruleCategory; 
-        private String ruleID; 
         private String ruleId; 
         private String ruleName; 
         private String sqlText; 
@@ -414,7 +401,6 @@ public class DescribeAuditLogsRequest extends Request {
             this.productId = request.productId;
             this.ruleAggQuery = request.ruleAggQuery;
             this.ruleCategory = request.ruleCategory;
-            this.ruleID = request.ruleID;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.sqlText = request.sqlText;
@@ -423,7 +409,10 @@ public class DescribeAuditLogsRequest extends Request {
         } 
 
         /**
-         * AsyncRequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2c548e83-1473-4fda-b3dc-5a189074ead5</p>
          */
         public Builder asyncRequestId(String asyncRequestId) {
             this.putQueryParameter("AsyncRequestId", asyncRequestId);
@@ -432,7 +421,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * <p>The IP address of the request client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11.26.118.7</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -441,7 +433,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * ClientUa.
+         * <p>The client type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql</p>
          */
         public Builder clientUa(String clientUa) {
             this.putQueryParameter("ClientUa", clientUa);
@@ -450,7 +445,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -459,7 +457,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestDB</p>
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -468,7 +469,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * EffectRowRange.
+         * <p>The range of affected rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in[1 33]</p>
          */
         public Builder effectRowRange(String effectRowRange) {
             this.putQueryParameter("EffectRowRange", effectRowRange);
@@ -477,7 +481,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the alert log. The value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15682887991222</p>
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -486,7 +493,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * ExecuteTimeRange.
+         * <p>The range of the execution time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>in[1000 2000]</p>
          */
         public Builder executeTimeRange(String executeTimeRange) {
             this.putQueryParameter("ExecuteTimeRange", executeTimeRange);
@@ -495,7 +505,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the asset instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4ni1cezz5y3xxxx</p>
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -504,7 +517,16 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * IpType.
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>default</strong> (default): non-Alibaba Cloud service.</p>
+         * </li>
+         * <li><p><strong>aliyun</strong>: Alibaba Cloud service.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -513,7 +535,14 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the request and response. Default value: zh_cn. Valid values:</p>
+         * <ul>
+         * <li>zh_cn: Chinese.</li>
+         * <li>en_us: English.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -522,7 +551,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * LoadWhiteList.
+         * <p>Specifies whether to load the whitelist status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder loadWhiteList(Boolean loadWhiteList) {
             this.putQueryParameter("LoadWhiteList", loadWhiteList);
@@ -540,7 +572,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * LogSource.
+         * <p>The data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLOW_SQL</p>
          */
         public Builder logSource(String logSource) {
             this.putQueryParameter("LogSource", logSource);
@@ -549,7 +584,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * <p>The operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Insert</p>
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -558,7 +596,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * OssObjectKey.
+         * <p>The key of the OSS storage object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>N.A</p>
          */
         public Builder ossObjectKey(String ossObjectKey) {
             this.putQueryParameter("OssObjectKey", ossObjectKey);
@@ -567,7 +608,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of records per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -576,7 +620,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * <p>The name of the product to which the data asset belongs. Valid values: <strong>RDS, PolarDB, PolarDB-X 2.0</strong>, and others.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RDS</p>
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -585,7 +632,19 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * ProductId.
+         * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
+         * <ul>
+         * <li>3: ADB-MYSQL</li>
+         * <li>5: RDS</li>
+         * <li>7: PolarDB-X</li>
+         * <li>8: PolarDB</li>
+         * <li>9: ADB-PG</li>
+         * <li>11: MongoDB</li>
+         * <li>25: Redis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder productId(Long productId) {
             this.putQueryParameter("ProductId", productId);
@@ -594,7 +653,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * RuleAggQuery.
+         * <p>Specifies whether to use aggregate query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ruleAggQuery(Boolean ruleAggQuery) {
             this.putQueryParameter("RuleAggQuery", ruleAggQuery);
@@ -603,7 +665,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * RuleCategory.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder ruleCategory(String ruleCategory) {
             this.putQueryParameter("RuleCategory", ruleCategory);
@@ -612,16 +677,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * RuleID.
-         */
-        public Builder ruleID(String ruleID) {
-            this.putQueryParameter("RuleID", ruleID);
-            this.ruleID = ruleID;
-            return this;
-        }
-
-        /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>867028</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -630,7 +689,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The name of the audit policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_rule</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -639,7 +701,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * SqlText.
+         * <p>The content of the SQL statement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT * FROM test where name = \&quot;das\&quot;</p>
          */
         public Builder sqlText(String sqlText) {
             this.putQueryParameter("SqlText", sqlText);
@@ -648,7 +713,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the alert log, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1608888296000</p>
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -657,7 +725,10 @@ public class DescribeAuditLogsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>admin</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

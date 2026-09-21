@@ -129,7 +129,7 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         } 
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -141,10 +141,10 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * <p>The end date of the time range to query. Specify the date in the <em>yyyyMMdd</em> format. The time must be in UTC.</p>
+         * <p>The end date of the query. Format: <i>yyyyMMdd</i> (UTC).</p>
          * <ul>
-         * <li>The default value of this parameter is one day before the current day.</li>
-         * <li>The value must be earlier than the current day. The interval between the start date and the end date cannot exceed 30 days.</li>
+         * <li>If this parameter is left empty, the default value is the day before the current date.</li>
+         * <li>You can only query data from the day before the current date or earlier. The interval between the start date and the end date cannot exceed 30 days.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL.</li>
+         * <li><strong>MySQL</strong>: RDS MySQL.</li>
          * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL.</li>
          * </ul>
          * 
@@ -175,7 +175,7 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         /**
          * <p>The instance ID.</p>
          * <blockquote>
-         * <p> You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * <p>Only RDS MySQL and PolarDB for MySQL instances are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,15 +188,15 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * <p>The region in which the instance resides. Valid values:</p>
+         * <p>The region to which the instance belongs. Valid values:</p>
          * <ul>
-         * <li><strong>cn-china</strong>: Chinese mainland.</li>
-         * <li><strong>cn-hongkong</strong>: China (Hong Kong).</li>
+         * <li><strong>cn-china</strong>: the Chinese mainland.</li>
+         * <li><strong>cn-hongkong</strong>: Hong Kong (China).</li>
          * <li><strong>ap-southeast-1</strong>: Singapore.</li>
          * </ul>
-         * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region specified by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect, and the system obtains data from the region in which the first specified instance resides.****</p>
+         * <p>This parameter takes effect only when the <strong>InstanceIds</strong> request parameter is left empty. If <strong>InstanceIds</strong> is left empty, data is retrieved based on the region specified by the <strong>Region</strong> parameter. The default region is <strong>cn-china</strong>. If <strong>InstanceIds</strong> is not empty, data is retrieved based on the region of the first instance specified by <strong>InstanceIds</strong>, even if the <strong>Region</strong> parameter is set.</p>
          * <blockquote>
-         * <p> If your instances reside in the regions inside the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
+         * <p>For instances created in regions within the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,10 +209,10 @@ public class GetSqlOptimizeAdviceRequest extends Request {
         }
 
         /**
-         * <p>The start date of the time range to query. Specify the date in the <em>yyyyMMdd</em> format. The time must be in UTC.</p>
+         * <p>The start date of the query. Format: <i>yyyyMMdd</i> (UTC).</p>
          * <ul>
-         * <li>The default value of this parameter is one day before the current day.</li>
-         * <li>The value must be earlier than the current day.</li>
+         * <li>If this parameter is left empty, the default value is the day before the current date.</li>
+         * <li>You can only query data from the day before the current date or earlier.</li>
          * </ul>
          * 
          * <strong>example:</strong>

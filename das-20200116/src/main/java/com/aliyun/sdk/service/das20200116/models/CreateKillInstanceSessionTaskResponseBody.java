@@ -106,7 +106,7 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,9 +117,9 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task that terminated the sessions.</p>
+         * <p>The task ID for terminating sessions.</p>
          * <blockquote>
-         * <p> If the sessions of a PolarDB for MySQL cluster were terminated, <strong>NodeId</strong> is left empty, and <strong>KillAllSessions</strong> is set to <strong>true</strong>, the task IDs are returned based on the number of nodes. Example: [&quot;f77d535b45405bd462b21caa3ee8****&quot;, &quot;e93ab549abb081eb5dcd5396a29b****&quot;].</p>
+         * <p>When you invoke this API operation for a PolarDB for MySQL instance with the <strong>NodeId</strong> request parameter left empty (no node ID specified) and the <strong>KillAllSessions</strong> request parameter set to <strong>true</strong> (terminate all sessions), a list of task IDs is returned based on the number of nodes, such as [&quot;f77d535b45405bd462b21caa3ee8\<em>\</em>\<em>\</em>&quot;, &quot;e93ab549abb081eb5dcd5396a29b\<em>\</em>\<em>\</em>&quot;\].</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -156,10 +156,10 @@ public class CreateKillInstanceSessionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -120,7 +120,7 @@ public class GetQueryOptimizeShareUrlResponseBody extends TeaModel {
          * <p>The share URL.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="https://hdm.console.aliyun.com/#/queryOptimize?Keywords=&OnlyOptimizedSql=true&Time=1684771200000&Engine=MySQL&InstanceIds=&Rules=&PageNo=1&PageSize=10&OrderBy=count&Asc=false&SqlIds=&dbNames=&region=cn-china&user=">https://hdm.console.aliyun.com/#/queryOptimize?Keywords=&amp;OnlyOptimizedSql=true&amp;Time=1684771200000&amp;Engine=MySQL&amp;InstanceIds=&amp;Rules=&amp;PageNo=1&amp;PageSize=10&amp;OrderBy=count&amp;Asc=false&amp;SqlIds=&amp;dbNames=&amp;region=cn-china&amp;user=</a></p>
+         * <p><a href="https://hdm.console.aliyun.com/#/queryOptimize">https://hdm.console.aliyun.com/#/queryOptimize</a>****</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class GetQueryOptimizeShareUrlResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,8 +155,10 @@ public class GetQueryOptimizeShareUrlResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

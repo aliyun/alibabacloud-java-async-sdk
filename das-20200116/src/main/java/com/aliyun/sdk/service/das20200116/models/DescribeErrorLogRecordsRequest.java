@@ -160,6 +160,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</p>
+         * <blockquote>
+         * <p>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +176,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The filter conditions.</p>
+         * <blockquote>
+         * <p>Only error log filtering for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle) is supported.</p>
+         * </blockquote>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -181,6 +188,7 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,7 +201,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp16v3824rt73****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -202,7 +213,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -211,7 +225,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -220,7 +237,17 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
-         * Role.
+         * <p>The node role. Valid values:</p>
+         * <ul>
+         * <li>db</li>
+         * <li>mongos</li>
+         * </ul>
+         * <blockquote>
+         * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>db</p>
          */
         public Builder role(String role) {
             this.putBodyParameter("Role", role);
@@ -229,6 +256,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. The value is in the format of a UNIX timestamp, in milliseconds.</p>
+         * <blockquote>
+         * <p>Notice: The data type of this parameter is Long. During the sequence of serialization/deserialization, precision loss may occur. Ensure that the value does not exceed 9007199254740991.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -300,7 +331,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The filter parameter. Set this parameter to filters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>filters</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -308,7 +342,10 @@ public class DescribeErrorLogRecordsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The error log content to filter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deadlock</p>
              */
             public Builder value(String value) {
                 this.value = value;

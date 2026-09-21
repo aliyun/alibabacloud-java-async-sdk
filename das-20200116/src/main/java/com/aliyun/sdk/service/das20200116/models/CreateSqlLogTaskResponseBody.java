@@ -127,7 +127,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, error information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: successful.</li>
+         * <li><strong>false</strong>: failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
+             * <p>The task creation time. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1681363254423</p>
@@ -299,7 +299,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The end time. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1608888296000</p>
@@ -310,7 +310,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the database instance.</p>
+             * <p>The database instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pc-2ze8g2am97624****</p>
@@ -321,7 +321,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>Export_test</p>
@@ -332,7 +332,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The start time. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1596177993000</p>
@@ -343,16 +343,16 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the task. Valid values:</p>
+             * <p>The task status.</p>
              * <ul>
-             * <li><strong>INIT</strong>: The task is to be scheduled.</li>
-             * <li><strong>RUNNING</strong>: The task is running.</li>
-             * <li><strong>FAILED</strong>: The task failed.</li>
-             * <li><strong>CANCELED</strong>: The task is canceled.</li>
-             * <li><strong>COMPLETED</strong>: The task is complete.</li>
+             * <li><strong>INIT</strong>: pending scheduling.</li>
+             * <li><strong>RUNNING</strong>: running.</li>
+             * <li><strong>FAILED</strong>: failed.</li>
+             * <li><strong>CANCELED</strong>: canceled.</li>
+             * <li><strong>COMPLETED</strong>: completed.</li>
              * </ul>
              * <blockquote>
-             * <p> You can view the result of a task that is in the <strong>COMPLETED</strong> state.</p>
+             * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the task results.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

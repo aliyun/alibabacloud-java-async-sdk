@@ -127,7 +127,7 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -460,8 +462,10 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the task is complete. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -475,10 +479,14 @@ public class GetAutoIncrementUsageStatisticResponseBody extends TeaModel {
             /**
              * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>INIT</strong>: The task is being initialized.</li>
-             * <li><strong>RUNNING</strong>: The task is being executed.</li>
-             * <li><strong>SUCCESS</strong>: The task succeeds.</li>
-             * <li><strong>FAIL</strong>: The task fails.</li>
+             * <li><p><strong>INIT</strong>: The task is being initialized.</p>
+             * </li>
+             * <li><p><strong>RUNNING</strong>: The task is being executed.</p>
+             * </li>
+             * <li><p><strong>SUCCESS</strong>: The task succeeds.</p>
+             * </li>
+             * <li><p><strong>FAIL</strong>: The task fails.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

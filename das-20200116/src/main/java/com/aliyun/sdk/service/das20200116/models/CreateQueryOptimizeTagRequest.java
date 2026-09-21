@@ -135,10 +135,10 @@ public class CreateQueryOptimizeTagRequest extends Request {
 
         /**
          * <p>The remarks.</p>
-         * <p>The remarks can be 1 to 300 characters in length.</p>
+         * <p>The value must be 1 to 300 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Slow SQL queries of offline synchronization. No optimization is required.</p>
+         * <p>Slow SQL from offline synchronization. No optimization needed.</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -149,9 +149,9 @@ public class CreateQueryOptimizeTagRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+         * <li><strong>MySQL</strong>: RDS MySQL</li>
          * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
-         * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * <li><strong>PostgreSQL</strong>: RDS PostgreSQL</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -178,11 +178,11 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+         * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query SQL template IDs. You can specify multiple template IDs separated by commas (,) to add tags in batches.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0e941</p>
+         * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</p>
          */
         public Builder sqlIds(String sqlIds) {
             this.putQueryParameter("SqlIds", sqlIds);
@@ -191,10 +191,10 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * <p>The status of <strong>Tags</strong>. Valid values:</p>
+         * <p>The status of the <strong>Tags</strong> request parameter.</p>
          * <ul>
-         * <li><strong>0</strong>: removes all tags added to the SQL templates that are specified by <strong>SqlIds</strong> and leaves <strong>Tags</strong> empty.</li>
-         * <li><strong>1</strong>: adds the tags specified by <strong>Tags</strong> to the SQL templates that are specified by <strong>SqlIds</strong>.</li>
+         * <li><strong>0</strong>: Clears all tags for the SQL template IDs specified by <strong>SqlIds</strong> and ignores the <strong>Tags</strong> parameter.</li>
+         * <li><strong>1</strong>: Sets the tags for the SQL template IDs specified by <strong>SqlIds</strong> to the values specified by <strong>Tags</strong>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -208,12 +208,12 @@ public class CreateQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
+         * <p>The SQL tag. You can specify multiple values separated by commas (,).</p>
          * <ul>
-         * <li><strong>DAS_IMPORTANT</strong>: The SQL template is important.</li>
-         * <li><strong>DAS_NOT_IMPORTANT</strong>: The SQL template is unimportant.</li>
-         * <li><strong>USER_IGNORE</strong>: The scheduling of the SQL template does not need to be optimized.</li>
-         * <li><strong>DAS_IN_PLAN</strong>: The scheduling of the SQL template needs to be optimized.</li>
+         * <li><strong>DAS_IMPORTANT</strong>: important SQL.</li>
+         * <li><strong>DAS_NOT_IMPORTANT</strong>: unimportant SQL.</li>
+         * <li><strong>USER_IGNORE</strong>: optimization not required.</li>
+         * <li><strong>DAS_IN_PLAN</strong>: scheduled for optimization.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

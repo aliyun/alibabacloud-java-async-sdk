@@ -127,7 +127,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,9 +266,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -280,9 +285,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the automatic throttling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -296,9 +304,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -312,9 +323,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the auto scaling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -328,9 +342,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -596,8 +613,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The connection mode of the instance. Valid values:</p>
              * <ul>
-             * <li><strong>standard</strong>: standard mode.</li>
-             * <li><strong>safe</strong>: database proxy mode.</li>
+             * <li><p><strong>standard</strong>: standard mode.</p>
+             * </li>
+             * <li><p><strong>safe</strong>: database proxy mode.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -622,9 +641,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The database engine. Valid values:</p>
              * <ul>
-             * <li><strong>MySQL</strong></li>
-             * <li><strong>Redis</strong></li>
-             * <li><strong>PolarDBMySQL</strong></li>
+             * <li><p><strong>MySQL</strong></p>
+             * </li>
+             * <li><p><strong>Redis</strong></p>
+             * </li>
+             * <li><p><strong>PolarDBMySQL</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -660,12 +682,15 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The type of the instance on which the database is deployed. Valid values:</p>
              * <ul>
-             * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
-             * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
-             * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+             * <li><p><strong>RDS</strong>: an Alibaba Cloud database instance.</p>
+             * </li>
+             * <li><p><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</p>
+             * </li>
+             * <li><p><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> The value IDC indicates that the instance is deployed in a data center.</p>
+             * <p>The value IDC indicates that the instance is deployed in a data center.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -973,9 +998,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: disabled.</li>
-             * <li><strong>1</strong>: enabled.</li>
-             * <li><strong>2</strong>: not supported.</li>
+             * <li><p><strong>0</strong>: disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: enabled.</p>
+             * </li>
+             * <li><p><strong>2</strong>: not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -989,7 +1017,7 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * <blockquote>
-             * <p> The end time must be later than the start time.</p>
+             * <p>The end time must be later than the start time.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1052,9 +1080,12 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The state of the inspection and scoring task. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The task is waiting for execution.</li>
-             * <li><strong>1</strong>: The task is in progress.</li>
-             * <li><strong>2</strong>: The task is complete.</li>
+             * <li><p><strong>0</strong>: The task is waiting for execution.</p>
+             * </li>
+             * <li><p><strong>1</strong>: The task is in progress.</p>
+             * </li>
+             * <li><p><strong>2</strong>: The task is complete.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1068,8 +1099,10 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
             /**
              * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: automatic mode.</li>
-             * <li><strong>1</strong>: manual mode.</li>
+             * <li><p><strong>0</strong>: automatic mode.</p>
+             * </li>
+             * <li><p><strong>1</strong>: manual mode.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

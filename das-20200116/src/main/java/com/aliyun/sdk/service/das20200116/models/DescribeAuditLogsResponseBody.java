@@ -119,7 +119,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * AsyncRequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3926fba5-1774-44f4-af2d-ac7b33e86c3b</p>
          */
         public Builder asyncRequestId(String asyncRequestId) {
             this.asyncRequestId = asyncRequestId;
@@ -127,7 +130,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -135,7 +141,7 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The client IP addresses in the SQL log records.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -143,7 +149,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size for the paged query. This value indicates the number of records per page for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A7021857-AFD9-5AD6-979D-AA7DFC5AFADF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records. This parameter is valid only for the Redis engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -615,7 +630,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientIp.
+             * <p>The client IP address in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.104.16.251</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -623,7 +641,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientPort.
+             * <p>The client port number in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53815</p>
              */
             public Builder clientPort(String clientPort) {
                 this.clientPort = clientPort;
@@ -631,7 +652,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientUa.
+             * <p>The client type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql</p>
              */
             public Builder clientUa(String clientUa) {
                 this.clientUa = clientUa;
@@ -639,7 +663,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -647,7 +674,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The alert time, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1536751124000</p>
              */
             public Builder creationTime(Long creationTime) {
                 this.creationTime = creationTime;
@@ -655,7 +685,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>chngc_b2b_migration_sh</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -663,7 +696,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectRow.
+             * <p>The number of affected rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder effectRow(Long effectRow) {
                 this.effectRow = effectRow;
@@ -671,7 +707,14 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteStatus.
+             * <p>The execution status. Valid values:</p>
+             * <ul>
+             * <li>0: failed.</li>
+             * <li>1: succeeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeStatus(Integer executeStatus) {
                 this.executeStatus = executeStatus;
@@ -679,7 +722,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * <p>The execution duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751870592000</p>
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -687,7 +733,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -695,7 +744,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InWhiteList.
+             * <p>Indicates whether the alert is in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder inWhiteList(Boolean inWhiteList) {
                 this.inWhiteList = inWhiteList;
@@ -703,7 +755,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceAuditStatus.
+             * <p>The audit status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder instanceAuditStatus(String instanceAuditStatus) {
                 this.instanceAuditStatus = instanceAuditStatus;
@@ -711,7 +766,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceDescription.
+             * <p>The description of the data asset instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>instance dscription</p>
              */
             public Builder instanceDescription(String instanceDescription) {
                 this.instanceDescription = instanceDescription;
@@ -719,7 +777,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-instance-003</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -727,7 +788,12 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * IpType.
+             * <p>The network type. Valid values:</p>
+             * <p><strong>default</strong> (default): non-Alibaba Cloud service.</p>
+             * <p><strong>aliyun</strong>: Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -735,7 +801,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogSource.
+             * <p>The data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLOW_SQL</p>
              */
             public Builder logSource(String logSource) {
                 this.logSource = logSource;
@@ -743,7 +812,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * <p>The log execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1751870592000</p>
              */
             public Builder logTime(Long logTime) {
                 this.logTime = logTime;
@@ -751,7 +823,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The raw log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -759,7 +834,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperateType.
+             * <p>The operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Drop</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -767,7 +845,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OssObjectKey.
+             * <p>The key of the OSS storage object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>N.A</p>
              */
             public Builder ossObjectKey(String ossObjectKey) {
                 this.ossObjectKey = ossObjectKey;
@@ -775,7 +856,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageName.
+             * <p>The MaxCompute package name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -783,7 +867,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * <p>The name of the product to which the data asset belongs. Valid values: RDS, PolarDB, PolarDB-X 2.0, and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RDS</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -791,7 +878,19 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductId.
+             * <p>The ID that corresponds to the product name to which the data object belongs. Valid values:</p>
+             * <ul>
+             * <li>3: ADB-MYSQL</li>
+             * <li>5: RDS</li>
+             * <li>7: PolarDB-X</li>
+             * <li>8: PolarDB</li>
+             * <li>9: ADB-PG</li>
+             * <li>11: MongoDB</li>
+             * <li>25: Redis</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
@@ -799,7 +898,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCategory.
+             * <p>The rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ruleCategory(String ruleCategory) {
                 this.ruleCategory = ruleCategory;
@@ -807,7 +909,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The audit policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9953411</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -815,7 +920,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the audit policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -823,7 +931,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlText.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from test03</p>
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -831,7 +942,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name used in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>it_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -839,7 +953,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user UID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19********94</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -847,7 +964,10 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -855,7 +975,15 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnLevel.
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: low.</li>
+             * <li><strong>2</strong>: medium.</li>
+             * <li><strong>3</strong>: high.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder warnLevel(String warnLevel) {
                 this.warnLevel = warnLevel;
@@ -863,7 +991,15 @@ public class DescribeAuditLogsResponseBody extends TeaModel {
             }
 
             /**
-             * WarnLevelName.
+             * <p>The risk level name. Valid values:</p>
+             * <ul>
+             * <li>Low.</li>
+             * <li>Medium.</li>
+             * <li>High.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder warnLevelName(String warnLevelName) {
                 this.warnLevelName = warnLevelName;

@@ -118,7 +118,7 @@ public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends Request 
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>SELECT * FROM test where name = &quot;das&quot;</p>
+         * <p>SELECT * FROM test where name = \&quot;das\&quot;</p>
          */
         public Builder sqlText(String sqlText) {
             this.putQueryParameter("SqlText", sqlText);

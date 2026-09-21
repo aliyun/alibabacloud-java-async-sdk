@@ -127,7 +127,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,8 +279,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -292,8 +296,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -462,8 +468,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -477,8 +485,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -647,8 +657,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong>:</li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>:</p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -662,8 +674,10 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -901,7 +915,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>The database instances for which the automatic fragment recycling feature is enabled and DAS Enterprise Edition is disabled.</p>
              * <blockquote>
-             * <p> Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</p>
+             * <p>Automatic fragment recycling tasks are run on this type of database instances only if DAS Enterprise Edition is enabled for the database instances again.</p>
              * </blockquote>
              */
             public Builder hasEnableRuleButNotDasProList(java.util.List<HasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList) {
@@ -912,7 +926,7 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
             /**
              * <p>The number of database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
              * <blockquote>
-             * <p> If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+             * <p>If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -118,7 +118,7 @@ public class GetMongoDBCurrentOpRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dds-uf608087********</p>
+         * <p>dds-uf6079bda570****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -129,7 +129,7 @@ public class GetMongoDBCurrentOpRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
+         * <p>If you do not specify a node ID, the sessions of the primary node are queried by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

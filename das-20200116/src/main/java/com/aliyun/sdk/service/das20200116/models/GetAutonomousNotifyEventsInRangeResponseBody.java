@@ -127,7 +127,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +329,7 @@ public class GetAutonomousNotifyEventsInRangeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+             * List.
              */
             public Builder list(List list) {
                 this.list = list;

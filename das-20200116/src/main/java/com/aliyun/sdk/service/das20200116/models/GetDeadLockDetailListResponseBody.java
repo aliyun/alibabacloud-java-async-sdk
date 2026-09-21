@@ -127,7 +127,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -432,7 +434,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
-             * <p>school</p>
+             * <p>testdb1</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -443,7 +445,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The hostname.</p>
              * 
              * <strong>example:</strong>
-             * <p>sd74020124</p>
+             * <p>sd7402****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -487,7 +489,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The logon name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>sd74020124\Administrator</p>
+             * <p>sd7402****\\Administrator</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -498,7 +500,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The locked object.</p>
              * 
              * <strong>example:</strong>
-             * <p>school.dbo.test2</p>
+             * <p>testdb1.dbo.test2</p>
              */
             public Builder objectOwned(String objectOwned) {
                 this.objectOwned = objectOwned;
@@ -509,7 +511,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The object that the transaction requested to lock.</p>
              * 
              * <strong>example:</strong>
-             * <p>school.dbo.test1</p>
+             * <p>testdb1.dbo.test1</p>
              */
             public Builder objectRequested(String objectRequested) {
                 this.objectRequested = objectRequested;
@@ -563,8 +565,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the session is the victim of the deadlock. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: no.</li>
-             * <li><strong>1</strong>: yes.</li>
+             * <li><p><strong>0</strong>: no.</p>
+             * </li>
+             * <li><p><strong>1</strong>: yes.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -922,7 +926,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
-             * <p>school</p>
+             * <p>testdb1</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -933,7 +937,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The hostname.</p>
              * 
              * <strong>example:</strong>
-             * <p>sd74020124</p>
+             * <p>sd7402****</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -977,7 +981,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The logon name of the user.</p>
              * 
              * <strong>example:</strong>
-             * <p>sd74020124\Administrator</p>
+             * <p>sd7402****\\Administrator</p>
              */
             public Builder loginName(String loginName) {
                 this.loginName = loginName;
@@ -988,7 +992,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The locked object.</p>
              * 
              * <strong>example:</strong>
-             * <p>school.dbo.test1</p>
+             * <p>testdb1.dbo.test1</p>
              */
             public Builder objectOwned(String objectOwned) {
                 this.objectOwned = objectOwned;
@@ -999,7 +1003,7 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
              * <p>The object that the transaction requested to lock.</p>
              * 
              * <strong>example:</strong>
-             * <p>school.dbo.test2</p>
+             * <p>testdb1.dbo.test2</p>
              */
             public Builder objectRequested(String objectRequested) {
                 this.objectRequested = objectRequested;
@@ -1053,8 +1057,10 @@ public class GetDeadLockDetailListResponseBody extends TeaModel {
             /**
              * <p>Indicates whether the session is the victim of the deadlock. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: no.</li>
-             * <li><strong>1</strong>: yes.</li>
+             * <li><p><strong>0</strong>: no.</p>
+             * </li>
+             * <li><p><strong>1</strong>: yes.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

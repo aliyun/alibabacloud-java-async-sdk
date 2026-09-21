@@ -100,7 +100,7 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB for Redis instance.</p>
+         * <p>The instance ID of the Redis instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +113,7 @@ public class DescribeHotBigKeysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+         * <p>The ID of the data shard in the Redis instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-****-db-0</p>

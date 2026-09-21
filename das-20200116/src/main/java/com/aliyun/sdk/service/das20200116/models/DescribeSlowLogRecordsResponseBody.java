@@ -106,7 +106,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p> This parameter returns <strong>Successful</strong> when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A1C79EE2-D04D-571B-8C60-961FAF8E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,16 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -217,7 +238,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Comments.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -236,7 +260,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Multiple tags separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAS_IMPORTANT,DAS_IN_PLAN</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -1005,7 +1032,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user1</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1013,7 +1043,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationName.
+             * <p>The application name.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>MyApp</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -1021,7 +1057,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CPUTime.
+             * <p>The CPU query time.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder CPUTime(Double CPUTime) {
                 this.CPUTime = CPUTime;
@@ -1029,7 +1071,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CPUTimeSeconds.
+             * <p>The CPU query time, in seconds.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder CPUTimeSeconds(Double CPUTimeSeconds) {
                 this.CPUTimeSeconds = CPUTimeSeconds;
@@ -1037,7 +1085,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The client IP address connected to the Redis proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.15.204</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -1045,7 +1096,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Cmd.
+             * <p>The command executed at the Redis proxy layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -1053,7 +1107,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The slow query statement.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB Tair (Redis® OSS-Compatible) database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>GET async_c4d163675f44fe83f6214cf9ba5exxxx</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -1061,7 +1121,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -1069,7 +1132,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * <p>Redis Proxy DbId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-uf6cfc5e1bcb1xxx-db-5</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -1077,7 +1143,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2zebg30mk056g****</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -1085,7 +1154,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DocsExamined.
+             * <p>The number of documents scanned during the MongoDB operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder docsExamined(String docsExamined) {
                 this.docsExamined = docsExamined;
@@ -1093,7 +1165,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtText.
+             * <p>The extension field that contains additional information about the SQL execution.</p>
+             * <blockquote>
+             * <p>Only PolarDB for MySQL instances are supported.</p>
+             * </blockquote>
              */
             public Builder extText(String extText) {
                 this.extText = extText;
@@ -1101,7 +1176,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Fail.
+             * <p>Indicates whether the SQL execution was successful. 0 indicates success. A non-zero value indicates failure.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for Lindorm instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder fail(String fail) {
                 this.fail = fail;
@@ -1109,7 +1190,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Frows.
+             * <p>The number of rows fetched by the compute node (CN) of the PolarDB-X 2.0 database.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -1117,7 +1204,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * <p>The source address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -1125,7 +1215,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IOWrites.
+             * <p>The number of I/O writes.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder IOWrites(Long IOWrites) {
                 this.IOWrites = IOWrites;
@@ -1133,7 +1229,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -1141,7 +1240,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * KeysExamined.
+             * <p>The number of index rows scanned in MongoDB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valueA</p>
              */
             public Builder keysExamined(String keysExamined) {
                 this.keysExamined = keysExamined;
@@ -1149,7 +1251,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowsCountAffected.
+             * <p>The number of rows affected by the last statement.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder lastRowsCountAffected(Long lastRowsCountAffected) {
                 this.lastRowsCountAffected = lastRowsCountAffected;
@@ -1157,7 +1265,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LockTime.
+             * <p>The lock wait time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder lockTime(Double lockTime) {
                 this.lockTime = lockTime;
@@ -1165,7 +1276,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LockTimeSeconds.
+             * <p>The lock wait time, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder lockTimeSeconds(Double lockTimeSeconds) {
                 this.lockTimeSeconds = lockTimeSeconds;
@@ -1173,7 +1287,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalIOReads.
+             * <p>The number of logical reads.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder logicalIOReads(Long logicalIOReads) {
                 this.logicalIOReads = logicalIOReads;
@@ -1181,7 +1301,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>app.event</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1189,7 +1315,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-uf6cfc5e1xxx-proxy-11</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1197,7 +1326,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OpType.
+             * <p>The operation type.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>getMore</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -1205,7 +1340,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * OriginTime.
+             * <p>The execution time at the Redis proxy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-18 10:54:55.311</p>
              */
             public Builder originTime(String originTime) {
                 this.originTime = originTime;
@@ -1213,7 +1351,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Params.
+             * <p>The parameter values attached to the SQL statement in parameter query scenarios. Multiple parameters are separated by commas (,).</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for Lindorm database instances are supported.</p>
+             * </blockquote>
              */
             public Builder params(String params) {
                 this.params = params;
@@ -1221,7 +1362,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalIOReads.
+             * <p>The number of physical reads.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder physicalIOReads(Long physicalIOReads) {
                 this.physicalIOReads = physicalIOReads;
@@ -1229,7 +1376,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Psql.
+             * <p>The SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM my_table WHERE ROWNUM &lt;= 10</p>
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -1237,7 +1387,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * <p>The query ID.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>d236d0c4ae8485f6ffe5fdbe5e1bdxxx</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -1245,7 +1401,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-01 11:00:00</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -1253,7 +1412,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The query duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121</p>
              */
             public Builder queryTime(Long queryTime) {
                 this.queryTime = queryTime;
@@ -1261,7 +1423,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeSeconds.
+             * <p>The query duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder queryTimeSeconds(Double queryTimeSeconds) {
                 this.queryTimeSeconds = queryTimeSeconds;
@@ -1269,7 +1434,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The error message when the slow query execution fails.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for Lindorm instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>create-by-mse-can-not-delete</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1277,7 +1448,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * <p>The unique identifier of the slow query log record.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for Lindorm instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>hotspot-request-001</p>
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -1285,7 +1462,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSize.
+             * <p>The request packet size at the Redis proxy layer, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>58</p>
              */
             public Builder requestSize(Long requestSize) {
                 this.requestSize = requestSize;
@@ -1293,7 +1473,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseSize.
+             * <p>The response packet size at the Redis proxy layer, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1535916</p>
              */
             public Builder responseSize(Long responseSize) {
                 this.responseSize = responseSize;
@@ -1301,7 +1484,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnItemNumbers.
+             * <p>The number of returned items.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder returnItemNumbers(String returnItemNumbers) {
                 this.returnItemNumbers = returnItemNumbers;
@@ -1309,7 +1495,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnNum.
+             * <p>The number of rows returned.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder returnNum(String returnNum) {
                 this.returnNum = returnNum;
@@ -1317,7 +1509,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 database instance.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -1325,7 +1523,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RowsCountAffected.
+             * <p>The number of rows affected.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rowsCountAffected(Long rowsCountAffected) {
                 this.rowsCountAffected = rowsCountAffected;
@@ -1333,7 +1537,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RowsExamined.
+             * <p>The number of rows scanned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder rowsExamined(Long rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -1341,7 +1548,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * RowsSent.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder rowsSent(Long rowsSent) {
                 this.rowsSent = rowsSent;
@@ -1349,7 +1559,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * <p>The total response time at the Redis proxy layer, in microseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2055</p>
              */
             public Builder rt(Long rt) {
                 this.rt = rt;
@@ -1357,7 +1570,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * <p>The SQL text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM my_table WHERE ROWNUM &lt;= 10</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -1365,7 +1581,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * <p>The data schema.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -1373,7 +1592,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Scnt.
+             * <p>The number of data node (DN) requests from the compute node (CN) of the PolarDB-X 2.0 database.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -1381,10 +1606,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>sqlid。</p>
+             * <p>The SQL template ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>8ad7069f236bcdaaa9b3ae4b6299****</p>
+             * <p>sqlId</p>
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -1392,7 +1617,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlTag.
+             * <p>The tag.</p>
              */
             public Builder sqlTag(SqlTag sqlTag) {
                 this.sqlTag = sqlTag;
@@ -1400,7 +1625,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * <p>The type of the SQL statement. Valid values:</p>
+             * <ul>
+             * <li><strong>SELECT</strong></li>
+             * <li><strong>UPDATE</strong></li>
+             * <li><strong>DELETE</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -1408,7 +1641,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SubInstanceId.
+             * <p>The sub-instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-8vb219d10038****</p>
              */
             public Builder subInstanceId(String subInstanceId) {
                 this.subInstanceId = subInstanceId;
@@ -1416,7 +1652,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tableNameExample</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1424,7 +1663,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID of the PolarDB-X 2.0 database.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>6a63b6ac4572abfaef7d1163f684****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -1432,7 +1677,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadId.
+             * <p>The thread ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>57472578</p>
              */
             public Builder threadId(String threadId) {
                 this.threadId = threadId;
@@ -1440,7 +1688,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1747118812</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1448,7 +1699,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID of PolarDB-X 2.0, which is the execute ID of the SQL statement on the database data node.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>074ce334-5247-40b9-b0c1-158aea5d****</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -1619,7 +1876,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstanceId.
+             * <p>The numeric ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dbInstanceId(Long dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -1627,7 +1887,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp157g54vy772****</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -1635,7 +1898,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672617600000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1643,7 +1909,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsNumbers.
+             * <p>The number of items in the log list on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder itemsNumbers(Long itemsNumbers) {
                 this.itemsNumbers = itemsNumbers;
@@ -1651,7 +1920,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * <p>The returned data.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -1659,7 +1928,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRecordsPerPage.
+             * <p>The maximum number of records per page for the paged query. Valid values: 5 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -1667,7 +1939,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>node123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1675,7 +1950,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumbers.
+             * <p>The page number for the paged query. The value starts from 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumbers(Integer pageNumbers) {
                 this.pageNumbers = pageNumbers;
@@ -1683,7 +1961,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1691,7 +1972,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecords.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

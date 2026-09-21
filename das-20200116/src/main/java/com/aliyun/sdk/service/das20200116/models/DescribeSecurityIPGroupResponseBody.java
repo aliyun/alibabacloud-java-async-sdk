@@ -106,7 +106,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an exception message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAC553F1-C669-53F1-A295-2CF050E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -217,7 +236,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * EngineName.
+             * <p>The database engine type of the target instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PolarDBMySQL</p>
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -225,7 +247,7 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIds.
+             * <p>The list of database instance IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -233,7 +255,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNum.
+             * <p>The number of instances under the current logon account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -417,7 +442,7 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstances.
+             * <p>The list of database instances bound to the cross-engine whitelist template.</p>
              */
             public Builder dbInstances(java.util.List<String> dbInstances) {
                 this.dbInstances = dbInstances;
@@ -425,7 +450,7 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EngineInfoList.
+             * <p>The instance information for each product bound to the template.</p>
              */
             public Builder engineInfoList(java.util.List<EngineInfoList> engineInfoList) {
                 this.engineInfoList = engineInfoList;
@@ -433,7 +458,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GEcsSgIdList.
+             * <p>The ECS security group ID. This field is invalid and contains redundant data that will be deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder gEcsSgIdList(String gEcsSgIdList) {
                 this.gEcsSgIdList = gEcsSgIdList;
@@ -441,7 +469,13 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GIpList.
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p>Separate multiple IP addresses with commas (,).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.28/32</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -449,7 +483,18 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalIgName.
+             * <p>The IP whitelist template name. The name must meet the following requirements:</p>
+             * <ul>
+             * <li><p>Contains only lowercase letters, digits, and underscores (_).</p>
+             * </li>
+             * <li><p>Starts with a letter and ends with a letter or digit.</p>
+             * </li>
+             * <li><p>Contains 2 to 120 characters in length.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>test_123</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -457,7 +502,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalSecurityGroupId.
+             * <p>The IP whitelist template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-1no2rzybnqcv****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -465,7 +513,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -473,7 +524,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpType.
+             * <p>The IP type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipv4</p>
              */
             public Builder securityIpType(String securityIpType) {
                 this.securityIpType = securityIpType;
@@ -481,7 +535,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * <p>The account ID. You can obtain the ID of the <strong>logon account</strong> on the <strong>Security Settings</strong> page in <strong>Account Management</strong> of the Alibaba Cloud console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>160-79abe3f4****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -489,7 +546,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>641***</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -497,7 +557,10 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             }
 
             /**
-             * WhitelistNetType.
+             * <p>The network type of the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mix</p>
              */
             public Builder whitelistNetType(String whitelistNetType) {
                 this.whitelistNetType = whitelistNetType;
@@ -551,7 +614,7 @@ public class DescribeSecurityIPGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * SecurityIpGroups.
+             * <p>The list of all cross-engine whitelist templates for the user in the specified region.</p>
              */
             public Builder securityIpGroups(java.util.List<SecurityIpGroups> securityIpGroups) {
                 this.securityIpGroups = securityIpGroups;

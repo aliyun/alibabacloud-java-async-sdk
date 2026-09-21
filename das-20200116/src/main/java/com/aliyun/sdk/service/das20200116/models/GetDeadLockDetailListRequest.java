@@ -135,7 +135,7 @@ public class GetDeadLockDetailListRequest extends Request {
          * <p>The name of the database. When you specify multiple databases, you must separate the database names with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>school1,school2</p>
+         * <p>testdb1,testdb2</p>
          */
         public Builder dbNameList(String dbNameList) {
             this.putQueryParameter("DbNameList", dbNameList);
@@ -161,7 +161,7 @@ public class GetDeadLockDetailListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-2ze2016723b328gs2</p>
+         * <p>rm-2ze2016723b32****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

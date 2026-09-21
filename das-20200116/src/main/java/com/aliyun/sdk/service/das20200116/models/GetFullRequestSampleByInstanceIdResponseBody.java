@@ -106,7 +106,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -127,7 +127,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,8 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,7 +444,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
+             * <p>The database name.</p>
              * 
              * <strong>example:</strong>
              * <p>dbtest</p>
@@ -455,7 +455,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows fetched by PolarDB-X 2.0 compute nodes.</p>
+             * <p>The number of rows fetched by the PolarDB-X 2.0 compute node (CN).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -488,7 +488,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source IP address.</p>
+             * <p>The source of the access.</p>
              * 
              * <strong>example:</strong>
              * <p>172.17.XX.XX</p>
@@ -521,7 +521,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows updated or returned on PolarDB-X 2.0 compute nodes.</p>
+             * <p>The number of rows updated or returned by the PolarDB-X 2.0 compute node (CN).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -532,9 +532,9 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of scanned rows.</p>
+             * <p>The total number of rows examined.</p>
              * <blockquote>
-             * <p>This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+             * <p>Currently, the following databases support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -546,7 +546,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned by the SQL statement.</p>
+             * <p>The number of rows returned.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>
@@ -557,7 +557,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed to execute the SQL statement. Unit: seconds.</p>
+             * <p>The execution duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.409789</p>
@@ -568,7 +568,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of scanned rows.</p>
+             * <p>The number of rows scanned.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -579,7 +579,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of requests sent from PolarDB-X 2.0 compute nodes to data nodes.</p>
+             * <p>The number of DN requests from the PolarDB-X 2.0 compute node (CN).</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -590,7 +590,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sample SQL statement.</p>
+             * <p>The SQL sample.</p>
              * 
              * <strong>example:</strong>
              * <p>select * from testdb01 where ****</p>
@@ -601,7 +601,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement ID.</p>
+             * <p>SQL ID。</p>
              * 
              * <strong>example:</strong>
              * <p>651b56fe9418d48edb8fdf0980ec****</p>
@@ -623,7 +623,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL statement was executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the SQL statement was executed. The value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1660100753556</p>
@@ -634,7 +634,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of updated rows.</p>
+             * <p>The number of rows updated.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -645,7 +645,7 @@ public class GetFullRequestSampleByInstanceIdResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user who executes the SQL statement.</p>
+             * <p>The username that executed the SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>testuser</p>

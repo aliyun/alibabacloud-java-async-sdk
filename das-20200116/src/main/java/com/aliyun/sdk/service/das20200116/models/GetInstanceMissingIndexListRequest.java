@@ -310,12 +310,12 @@ public class GetInstanceMissingIndexListRequest extends Request {
         /**
          * <p>The database instance ID.</p>
          * <blockquote>
-         * <p> Only ApsaraDB RDS for SQL Server instances are supported.</p>
+         * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-************</p>
+         * <p>rm-t4nfalp2ap421****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

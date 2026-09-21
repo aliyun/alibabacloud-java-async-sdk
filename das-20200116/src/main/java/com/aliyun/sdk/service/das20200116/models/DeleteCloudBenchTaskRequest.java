@@ -60,7 +60,7 @@ public class DeleteCloudBenchTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the stress testing task. You can call the <a href="https://help.aliyun.com/document_detail/230670.html">DescribeCloudBenchTasks</a> operation to query the ID.</p>
+         * <p>The unique task ID. You can call the <a href="https://help.aliyun.com/document_detail/230670.html">DescribeCloudBenchTasks</a> API to get this task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

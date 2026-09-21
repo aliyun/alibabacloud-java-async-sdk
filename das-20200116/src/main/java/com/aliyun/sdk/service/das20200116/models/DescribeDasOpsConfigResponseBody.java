@@ -106,7 +106,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D00DB161-FEF6-5428-B37A-8D29A4C2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -295,7 +314,14 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoRenew.
+             * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+             * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -303,7 +329,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The payment method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://prodpopscanGGfYbZif.302prod.xaliyun.com">http://prodpopscanGGfYbZif.302prod.xaliyun.com</a></p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -311,7 +340,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityInstanceId.
+             * <p>The Alibaba Cloud Managed Services instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-2zelo5v5u0678jx04</p>
              */
             public Builder commodityInstanceId(String commodityInstanceId) {
                 this.commodityInstanceId = commodityInstanceId;
@@ -319,7 +351,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EcoEnable.
+             * <p>Indicates whether DAS Economy Edition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ecoEnable(Boolean ecoEnable) {
                 this.ecoEnable = ecoEnable;
@@ -327,7 +362,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the Alibaba Cloud Managed Services is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -335,7 +373,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -343,7 +384,7 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OpsEnable.
+             * <p>Indicates whether the Alibaba Cloud Managed Services is enabled.</p>
              */
             public Builder opsEnable(Boolean opsEnable) {
                 this.opsEnable = opsEnable;
@@ -351,7 +392,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>275772887390786</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -359,7 +403,10 @@ public class DescribeDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

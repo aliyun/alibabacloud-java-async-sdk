@@ -93,7 +93,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         } 
 
         /**
-         * Answer.
+         * <p>The answer content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxx</p>
          */
         public Builder answer(String answer) {
             this.answer = answer;
@@ -101,7 +104,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         }
 
         /**
-         * Event.
+         * <p>The type of the returned answer information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         public Builder event(String event) {
             this.event = event;
@@ -109,7 +115,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The session ID, which is the same as the SessionId in the request parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -117,7 +126,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
         }
 
         /**
-         * Metadata.
+         * <p>The metadata.</p>
          */
         public Builder metadata(Metadata metadata) {
             this.metadata = metadata;
@@ -222,7 +231,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
             } 
 
             /**
-             * CharCount.
+             * <p>The number of characters in the answer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1403</p>
              */
             public Builder charCount(Long charCount) {
                 this.charCount = charCount;
@@ -230,7 +242,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The error type returned when an exception occurs. This field is empty when no exception occurs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1810001</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -238,7 +253,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * RequestId.
+             * <p>The request ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>04930480-9404-50CB-8252-Axxxxxxxx</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -246,7 +264,10 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * ToolName.
+             * <p>The tool command that is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SqlFilter</p>
              */
             public Builder toolName(String toolName) {
                 this.toolName = toolName;
@@ -254,7 +275,7 @@ public class GetDasAgentSSEResponseBody extends TeaModel {
             }
 
             /**
-             * ToolParams.
+             * <p>The tool parameters.</p>
              */
             public Builder toolParams(java.util.List<String> toolParams) {
                 this.toolParams = toolParams;

@@ -106,7 +106,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,14 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -295,7 +311,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ChargeType.
+             * <p>The payment method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prepay</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -303,7 +322,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityInstanceId.
+             * <p>The Alibaba Cloud Managed Services instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-2zelo5v5u0678jx04</p>
              */
             public Builder commodityInstanceId(String commodityInstanceId) {
                 this.commodityInstanceId = commodityInstanceId;
@@ -311,7 +333,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EcoEnable.
+             * <p>Indicates whether DAS Economy Edition is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ecoEnable(Boolean ecoEnable) {
                 this.ecoEnable = ecoEnable;
@@ -319,7 +344,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the Alibaba Cloud Managed Services feature is enabled (including DAS Economy Edition).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -327,7 +355,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1608888296000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -335,7 +366,7 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OpsEnable.
+             * <p>Indicates whether Alibaba Cloud Managed Services is enabled.</p>
              */
             public Builder opsEnable(Boolean opsEnable) {
                 this.opsEnable = opsEnable;
@@ -343,7 +374,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * <p>The order ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>285412912420536</p>
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -351,7 +385,10 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1672531200000</p>
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -359,7 +396,20 @@ public class ModifyDasOpsConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>INIT</strong>: Pending scheduling.</li>
+             * <li><strong>RUNNING</strong>: Running.</li>
+             * <li><strong>FAILED</strong>: Failed.</li>
+             * <li><strong>CANCELED</strong>: Canceled.</li>
+             * <li><strong>COMPLETED</strong>: Completed.</li>
+             * </ul>
+             * <blockquote>
+             * <p>When the task is in the <strong>COMPLETED</strong> state, you can view the task result.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPLETED</p>
              */
             public Builder status(String status) {
                 this.status = status;

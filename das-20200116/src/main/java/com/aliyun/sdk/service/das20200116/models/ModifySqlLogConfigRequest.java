@@ -144,13 +144,15 @@ public class ModifySqlLogConfigRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable DAS Enterprise Edition. Valid values:</p>
+         * <p>Indicates whether to enable DAS Enterprise Edition. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enables DAS Enterprise Edition.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables DAS Enterprise Edition.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if you want to enable DAS Enterprise Edition. By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled.</p>
+         * <p>This parameter is required when you enable DAS Enterprise Edition. By default, this operation enables the latest supported version.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,7 +165,10 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * EnableAudit.
+         * <p>Indicates whether to enable security audit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.putQueryParameter("EnableAudit", enableAudit);
@@ -181,9 +186,9 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * <p>The number of days for which the SQL Explorer and Audit data is stored in hot storage. Valid values: 1 to 7.</p>
+         * <p>The hot storage retention period, in days. The value must be an integer from 1 to 7.</p>
          * <blockquote>
-         * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+         * <p>This parameter is required only if you enable DAS Enterprise Edition V3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -200,7 +205,7 @@ public class ModifySqlLogConfigRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rr-2ze770smbq3tpr2o9</p>
+         * <p>rr-2ze770smbq3tp****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -209,13 +214,15 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the SQL Explorer feature. Valid values:</p>
+         * <p>Indicates whether to enable SQL Explorer. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: enables SQL Explorer.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables SQL Explorer.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is required if only DAS Enterprise Edition V3 can be enabled for the database instance.</p>
+         * <p>This parameter is required only if you enable DAS Enterprise Edition V3.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -228,15 +235,19 @@ public class ModifySqlLogConfigRequest extends Request {
         }
 
         /**
-         * <p>The total storage duration of the SQL Explorer and Audit data. Unit: day. Valid values:</p>
+         * <p>The data retention period, in days. Valid values:</p>
          * <ul>
-         * <li>7</li>
-         * <li>30</li>
-         * <li>180</li>
-         * <li>365</li>
+         * <li><p>7</p>
+         * </li>
+         * <li><p>30</p>
+         * </li>
+         * <li><p>180</p>
+         * </li>
+         * <li><p>365</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you want to enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</p>
+         * <p>If you enable DAS Enterprise Edition V3, the value of this parameter must be 30 or greater.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

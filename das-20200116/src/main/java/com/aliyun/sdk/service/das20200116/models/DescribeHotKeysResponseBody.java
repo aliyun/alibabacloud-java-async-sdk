@@ -106,7 +106,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the hot keys.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,10 +322,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -333,10 +330,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5500~6000</p>
+             * Hot.
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -352,10 +346,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -363,10 +354,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -390,10 +378,7 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;

@@ -117,7 +117,10 @@ public class DescribeQueryExplainRequest extends Request {
         } 
 
         /**
-         * DbName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dbtest01</p>
          */
         public Builder dbName(String dbName) {
             this.putBodyParameter("DbName", dbName);
@@ -126,6 +129,7 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +142,13 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The ID of the node.</p>
+         * <blockquote>
+         * <p>For PolarDB for MySQL instances, if you specify a node ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.For high availability ApsaraDB RDS for MySQL instances, if you specify an instance ID, the system queries the execution plan on that node. Otherwise, it queries the execution plan on a secondary node.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp1v203xzzh0a****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -147,7 +157,10 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
-         * Schema.
+         * <p>Schema information. This is a reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder schema(String schema) {
             this.putBodyParameter("Schema", schema);
@@ -156,10 +169,11 @@ public class DescribeQueryExplainRequest extends Request {
         }
 
         /**
+         * <p>The SQL statement for which you want to get the execution plan.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>select * from test where name = &quot;mockUser&quot;</p>
+         * <p>select * from test where name = \&quot;mockUser\&quot;</p>
          */
         public Builder sql(String sql) {
             this.putBodyParameter("Sql", sql);

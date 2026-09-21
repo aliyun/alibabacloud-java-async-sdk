@@ -263,7 +263,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>yuecq--test****</p>
@@ -275,14 +275,14 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of the instance on which the database is deployed. Valid values:</p>
+         * <p>The database product to which the instance belongs. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>: an Alibaba Cloud database instance.</li>
-         * <li><strong>ECS</strong>: an Elastic Compute Service (ECS) instance on which a self-managed database is deployed.</li>
-         * <li><strong>IDC</strong>: a self-managed database instance that is not deployed on Alibaba Cloud.</li>
+         * <li><strong>RDS</strong>: cloud instance.</li>
+         * <li><strong>ECS</strong>: self-managed instance on ECS.</li>
+         * <li><strong>IDC</strong>: self-managed instance not on a public cloud.</li>
          * </ul>
          * <blockquote>
-         * <p> IDC refers to your data center.</p>
+         * <p>IDC stands for Internet Data Center.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -308,7 +308,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The endpoint that is used to access the instance over internal networks.</p>
+         * <p>The internal endpoint of the instance to be connected.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1jdv45i7l6****.mysql.rds.aliyuncs.com</p>
@@ -332,7 +332,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The password for the username.</p>
+         * <p>The password of the username.</p>
          * 
          * <strong>example:</strong>
          * <p>122****</p>
@@ -344,7 +344,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The port that is used to access the instance over internal networks.</p>
+         * <p>The internal network connection port of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -356,7 +356,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -368,7 +368,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The username that is used to log on to the database.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>test****</p>
@@ -380,7 +380,7 @@ public class AddHDMInstanceRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>VPC ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-m5e666n89m2bx8jar****</p>

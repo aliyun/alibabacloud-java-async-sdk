@@ -161,11 +161,13 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         /**
          * <p>Specifies whether to filter instances for which DAS Enterprise Edition is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set this parameter to <strong>true</strong>, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to <strong>false</strong>, all database instances are queried.</p>
+         * <p>If you set this parameter to <strong>true</strong>, only database instances for which DAS Enterprise Edition is disabled are queried. If you set this parameter to <strong>false</strong>, all database instances are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         /**
          * <p>The database instance ID.</p>
          * <blockquote>
-         * <p> The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+         * <p>The database instance must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -196,7 +198,7 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
+         * <p>For ApsaraDB RDS for MySQL Cluster Edition instances or PolarDB for MySQL clusters, you must specify the node ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -224,7 +226,7 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         /**
          * <p>The duration threshold for automatic SQL optimization events. After this parameter is specified, the system collects statistics on automatic SQL optimization events whose duration does not exceed the specified threshold.</p>
          * <blockquote>
-         * <p> This parameter is a reserved parameter and does not take effect.</p>
+         * <p>This parameter is a reserved parameter and does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,11 +241,13 @@ public class GetInstanceSqlOptimizeStatisticRequest extends Request {
         /**
          * <p>Specifies whether to merge automatic SQL optimization events. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: merges automatic SQL optimization events.</li>
-         * <li><strong>false</strong>: does not merge automatic SQL optimization events.</li>
+         * <li><p><strong>true</strong>: merges automatic SQL optimization events.</p>
+         * </li>
+         * <li><p><strong>false</strong>: does not merge automatic SQL optimization events.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is a reserved parameter and does not take effect.</p>
+         * <p>This parameter is a reserved parameter and does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

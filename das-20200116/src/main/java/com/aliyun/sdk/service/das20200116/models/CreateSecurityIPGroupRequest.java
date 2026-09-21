@@ -90,6 +90,10 @@ public class CreateSecurityIPGroupRequest extends Request {
         } 
 
         /**
+         * <p>The IP addresses in the whitelist template.</p>
+         * <blockquote>
+         * <p>Separate multiple IP addresses with commas (,). IP addresses cannot be duplicated. A maximum of 1000 IP addresses are supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +106,15 @@ public class CreateSecurityIPGroupRequest extends Request {
         }
 
         /**
+         * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+         * <ul>
+         * <li><p>Contains only lowercase letters, digits, and underscores (_).</p>
+         * </li>
+         * <li><p>Starts with a letter and ends with a letter or digit.</p>
+         * </li>
+         * <li><p>Is 2 to 120 characters in length.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +127,7 @@ public class CreateSecurityIPGroupRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

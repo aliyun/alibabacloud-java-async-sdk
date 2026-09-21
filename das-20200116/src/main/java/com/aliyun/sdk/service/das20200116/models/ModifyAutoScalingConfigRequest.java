@@ -303,8 +303,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to apply the <strong>Bandwidth</strong> configuration of the bandwidth auto scaling feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -318,9 +320,12 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>10</strong></li>
-             * <li><strong>20</strong></li>
-             * <li><strong>30</strong></li>
+             * <li><p><strong>10</strong></p>
+             * </li>
+             * <li><p><strong>20</strong></p>
+             * </li>
+             * <li><p><strong>30</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -334,12 +339,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>50</strong></li>
-             * <li><strong>60</strong></li>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
-             * <li><strong>95</strong></li>
+             * <li><p><strong>50</strong></p>
+             * </li>
+             * <li><p><strong>60</strong></p>
+             * </li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
+             * <li><p><strong>95</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -353,8 +364,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic bandwidth downgrade. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,11 +381,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window of the bandwidth auto scaling feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
              * <ul>
-             * <li><strong>1m</strong></li>
-             * <li><strong>5m</strong></li>
-             * <li><strong>10m</strong></li>
-             * <li><strong>15m</strong></li>
-             * <li><strong>30m</strong></li>
+             * <li><p><strong>1m</strong></p>
+             * </li>
+             * <li><p><strong>5m</strong></p>
+             * </li>
+             * <li><p><strong>10m</strong></p>
+             * </li>
+             * <li><p><strong>15m</strong></p>
+             * </li>
+             * <li><p><strong>30m</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,8 +404,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic bandwidth upgrade. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -499,8 +519,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to apply the <strong>Resource</strong> configuration of the resource auto scaling feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -514,9 +536,12 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average CPU utilization threshold that triggers automatic resource scale-out. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -530,12 +555,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
              * <ul>
-             * <li><strong>1m</strong></li>
-             * <li><strong>3m</strong></li>
-             * <li><strong>5m</strong></li>
-             * <li><strong>10m</strong></li>
-             * <li><strong>20m</strong></li>
-             * <li><strong>30m</strong></li>
+             * <li><p><strong>1m</strong></p>
+             * </li>
+             * <li><p><strong>3m</strong></p>
+             * </li>
+             * <li><p><strong>5m</strong></p>
+             * </li>
+             * <li><p><strong>10m</strong></p>
+             * </li>
+             * <li><p><strong>20m</strong></p>
+             * </li>
+             * <li><p><strong>30m</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -549,8 +580,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable resource auto scaling. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -564,12 +597,18 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
              * <ul>
-             * <li><strong>1m</strong></li>
-             * <li><strong>3m</strong></li>
-             * <li><strong>5m</strong></li>
-             * <li><strong>10m</strong></li>
-             * <li><strong>20m</strong></li>
-             * <li><strong>30m</strong></li>
+             * <li><p><strong>1m</strong></p>
+             * </li>
+             * <li><p><strong>3m</strong></p>
+             * </li>
+             * <li><p><strong>5m</strong></p>
+             * </li>
+             * <li><p><strong>10m</strong></p>
+             * </li>
+             * <li><p><strong>20m</strong></p>
+             * </li>
+             * <li><p><strong>30m</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,11 +774,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to apply the <strong>Shard</strong> configuration of the shard auto scaling feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</p>
+             * <p>The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -753,11 +794,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic shard removal. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> The automatic shard removal feature is in a canary release.</p>
+             * <p>The automatic shard removal feature is in a canary release.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -771,11 +814,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window of the automatic shard removal feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>h</strong> time unit suffix specifies the hour. The <strong>d</strong> time unit suffix specifies the day. Valid values:</p>
              * <ul>
-             * <li><strong>1h</strong></li>
-             * <li><strong>2h</strong></li>
-             * <li><strong>3h</strong></li>
-             * <li><strong>1d</strong></li>
-             * <li><strong>7d</strong></li>
+             * <li><p><strong>1h</strong></p>
+             * </li>
+             * <li><p><strong>2h</strong></p>
+             * </li>
+             * <li><p><strong>3h</strong></p>
+             * </li>
+             * <li><p><strong>1d</strong></p>
+             * </li>
+             * <li><p><strong>7d</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -800,9 +848,12 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average memory usage threshold that triggers automatic shard removal. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>10</strong></li>
-             * <li><strong>20</strong></li>
-             * <li><strong>30</strong></li>
+             * <li><p><strong>10</strong></p>
+             * </li>
+             * <li><p><strong>20</strong></p>
+             * </li>
+             * <li><p><strong>30</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -816,11 +867,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average memory usage threshold that triggers automatic shard addition. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>50</strong></li>
-             * <li><strong>60</strong></li>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
+             * <li><p><strong>50</strong></p>
+             * </li>
+             * <li><p><strong>60</strong></p>
+             * </li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -845,8 +901,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic shard addition. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -860,10 +918,14 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window of the automatic shard addition feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
              * <ul>
-             * <li><strong>5m</strong></li>
-             * <li><strong>10m</strong></li>
-             * <li><strong>15m</strong></li>
-             * <li><strong>30m</strong></li>
+             * <li><p><strong>5m</strong></p>
+             * </li>
+             * <li><p><strong>10m</strong></p>
+             * </li>
+             * <li><p><strong>15m</strong></p>
+             * </li>
+             * <li><p><strong>30m</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1028,8 +1090,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to apply the <strong>Spec</strong> configuration of the specification auto scaling feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1043,8 +1107,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute, the <strong>h</strong> time unit suffix specifies the hour, and the <strong>d</strong> time unit suffix specifies the day.</p>
              * <ul>
-             * <li>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
-             * <li>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
+             * <li><p>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</p>
+             * </li>
+             * <li><p>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1058,14 +1124,19 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>50</strong></li>
-             * <li><strong>60</strong></li>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
+             * <li><p><strong>50</strong></p>
+             * </li>
+             * <li><p><strong>60</strong></p>
+             * </li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+             * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1079,11 +1150,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic specification scale-down. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+             * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1097,7 +1170,7 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The maximum number of read-only nodes of the instance.</p>
              * <blockquote>
-             * <p> This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
+             * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1111,8 +1184,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</p>
              * <ul>
-             * <li>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></li>
-             * <li>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></li>
+             * <li><p>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></p>
+             * </li>
+             * <li><p>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1126,14 +1201,19 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>50</strong></li>
-             * <li><strong>60</strong></li>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
+             * <li><p><strong>50</strong></p>
+             * </li>
+             * <li><p><strong>60</strong></p>
+             * </li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</p>
+             * <p>This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1147,9 +1227,12 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute and the <strong>h</strong> time unit suffix specifies the hour.</p>
              * <ul>
-             * <li>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
-             * <li>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <strong>5m</strong>, <strong>20m</strong>, <strong>30m</strong>, <strong>40m</strong>, and <strong>1h</strong>.</li>
-             * <li>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
+             * <li><p>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</p>
+             * </li>
+             * <li><p>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <strong>5m</strong>, <strong>20m</strong>, <strong>30m</strong>, <strong>40m</strong>, and <strong>1h</strong>.</p>
+             * </li>
+             * <li><p>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1163,8 +1246,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic specification scale-up. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1264,8 +1349,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to apply the <strong>Storage</strong> configuration of the automatic storage expansion feature. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1279,11 +1366,16 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:</p>
              * <ul>
-             * <li><strong>50</strong></li>
-             * <li><strong>60</strong></li>
-             * <li><strong>70</strong></li>
-             * <li><strong>80</strong></li>
-             * <li><strong>90</strong></li>
+             * <li><p><strong>50</strong></p>
+             * </li>
+             * <li><p><strong>60</strong></p>
+             * </li>
+             * <li><p><strong>70</strong></p>
+             * </li>
+             * <li><p><strong>80</strong></p>
+             * </li>
+             * <li><p><strong>90</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1297,11 +1389,13 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>The maximum storage size of the database instance. Unit: GB. The value must be greater than or equal to the total storage size of the instance.</p>
              * <ul>
-             * <li>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</li>
-             * <li>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</li>
+             * <li><p>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</p>
+             * </li>
+             * <li><p>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</p>
+             * </li>
              * </ul>
              * <blockquote>
-             * <p> The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</p>
+             * <p>The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1315,8 +1409,10 @@ public class ModifyAutoScalingConfigRequest extends Request {
             /**
              * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

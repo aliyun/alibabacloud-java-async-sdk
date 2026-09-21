@@ -106,7 +106,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +125,13 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0A74B755-98B7-59DB-8724-1321B394****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -282,7 +301,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the analysis task range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729998000000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -290,7 +312,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pc-bp1u5mas9exx7****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -298,7 +323,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * LockNumber.
+             * <p>The number of deadlocks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder lockNumber(Integer lockNumber) {
                 this.lockNumber = lockNumber;
@@ -306,7 +334,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID. This parameter is used for PolarDB for MySQL clusters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-bp16v3824rt73****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -314,7 +345,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the analysis task range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1729994400000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -322,7 +356,14 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li><strong>SUCCESS</strong>: The analysis is successful.</li>
+             * <li><strong>FAILED</strong>: The analysis failed or encountered an exception.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +371,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The full deadlock analysis task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>B6D17591-B48B-4D31-9CD6-1321B394****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -338,7 +382,10 @@ public class GetDeadlockHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>108************</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

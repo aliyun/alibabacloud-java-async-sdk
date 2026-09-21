@@ -106,7 +106,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information (such as an error code) is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>52D540CF-C517-1F57-BB42-9035F96******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -204,7 +223,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of slow logs.</p>
              */
             public Builder count(java.util.List<Long> count) {
                 this.count = count;
@@ -212,7 +231,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-bp1s1m8hwzrm77kfvz-db-0</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -474,7 +496,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AvgLockTime.
+             * <p>The average lock wait time. Unit: seconds.</p>
              */
             public Builder avgLockTime(java.util.List<Double> avgLockTime) {
                 this.avgLockTime = avgLockTime;
@@ -482,7 +504,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsExamined.
+             * <p>The average number of rows examined.</p>
              */
             public Builder avgRowsExamined(java.util.List<Double> avgRowsExamined) {
                 this.avgRowsExamined = avgRowsExamined;
@@ -490,7 +512,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsSent.
+             * <p>The average number of rows returned.</p>
              */
             public Builder avgRowsSent(java.util.List<Double> avgRowsSent) {
                 this.avgRowsSent = avgRowsSent;
@@ -498,7 +520,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRt.
+             * <p>The average execution duration.</p>
              */
             public Builder avgRt(java.util.List<Double> avgRt) {
                 this.avgRt = avgRt;
@@ -506,7 +528,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of slow logs.</p>
              */
             public Builder count(java.util.List<Long> count) {
                 this.count = count;
@@ -514,7 +536,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * <p>The task status.</p>
              */
             public Builder item(java.util.List<Item> item) {
                 this.item = item;
@@ -522,7 +544,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LockTime.
+             * <p>The lock wait time. Unit: milliseconds.</p>
              */
             public Builder lockTime(java.util.List<Double> lockTime) {
                 this.lockTime = lockTime;
@@ -530,7 +552,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTime.
+             * <p>The maximum lock wait time. Unit: seconds.</p>
              */
             public Builder maxLockTime(java.util.List<Double> maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -538,7 +560,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsExamined.
+             * <p>The maximum number of rows examined.</p>
              */
             public Builder maxRowsExamined(java.util.List<Long> maxRowsExamined) {
                 this.maxRowsExamined = maxRowsExamined;
@@ -546,7 +568,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsSent.
+             * <p>The maximum number of rows returned.</p>
              */
             public Builder maxRowsSent(java.util.List<Long> maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
@@ -554,7 +576,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRt.
+             * <p>The maximum response time. Unit: ms.</p>
              */
             public Builder maxRt(java.util.List<Double> maxRt) {
                 this.maxRt = maxRt;
@@ -562,7 +584,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RowsExamined.
+             * <p>The total number of rows examined.</p>
+             * <blockquote>
+             * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+             * </blockquote>
              */
             public Builder rowsExamined(java.util.List<Long> rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -570,7 +595,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RowsSent.
+             * <p>The number of rows returned.</p>
              */
             public Builder rowsSent(java.util.List<Long> rowsSent) {
                 this.rowsSent = rowsSent;
@@ -578,7 +603,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * <p>The execution duration. Unit: seconds.</p>
              */
             public Builder rt(java.util.List<Double> rt) {
                 this.rt = rt;
@@ -586,7 +611,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of queried records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -594,7 +622,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Ts.
+             * <p>The execution timestamp.</p>
              */
             public Builder ts(java.util.List<Long> ts) {
                 this.ts = ts;
@@ -602,7 +630,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TsEnd.
+             * <p>Deprecated.</p>
              */
             public Builder tsEnd(java.util.List<Long> tsEnd) {
                 this.tsEnd = tsEnd;
@@ -682,7 +710,11 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * Comments.
+             * <p>The remarks.</p>
+             * <p>The value must be 1 to 300 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dba archiving</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -701,7 +733,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>Multiple tags separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAS_IN_PLAN</p>
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -768,7 +803,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * Timestamp.
+             * <p>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1723775362</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -776,7 +814,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tf-testacc-oos-parameter</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -2130,7 +2171,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The database account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edu_admin</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -2138,7 +2182,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgCPUTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder avgCPUTime(Double avgCPUTime) {
                 this.avgCPUTime = avgCPUTime;
@@ -2146,7 +2195,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgCPUTimeSeconds.
+             * <p>The average CPU query time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder avgCPUTimeSeconds(Double avgCPUTimeSeconds) {
                 this.avgCPUTimeSeconds = avgCPUTimeSeconds;
@@ -2154,7 +2206,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgDocExamined.
+             * <p>The average number of documents scanned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder avgDocExamined(Double avgDocExamined) {
                 this.avgDocExamined = avgDocExamined;
@@ -2162,7 +2220,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgFrows.
+             * <p>The average number of rows fetched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgFrows(Double avgFrows) {
                 this.avgFrows = avgFrows;
@@ -2170,7 +2231,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgIOWrites.
+             * <p>The average number of I/O writes.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgIOWrites(Double avgIOWrites) {
                 this.avgIOWrites = avgIOWrites;
@@ -2178,7 +2245,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgKeysExamined.
+             * <p>The average number of rows scanned by the index.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder avgKeysExamined(Double avgKeysExamined) {
                 this.avgKeysExamined = avgKeysExamined;
@@ -2186,7 +2259,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLastRowsCountAffected.
+             * <p>The average number of rows affected by the last statement.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgLastRowsCountAffected(Double avgLastRowsCountAffected) {
                 this.avgLastRowsCountAffected = avgLastRowsCountAffected;
@@ -2194,7 +2273,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLockTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder avgLockTime(Double avgLockTime) {
                 this.avgLockTime = avgLockTime;
@@ -2202,7 +2286,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLockTimeSeconds.
+             * <p>The average lock wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder avgLockTimeSeconds(Double avgLockTimeSeconds) {
                 this.avgLockTimeSeconds = avgLockTimeSeconds;
@@ -2210,7 +2297,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgLogicalIOReads.
+             * <p>The average number of logical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgLogicalIOReads(Double avgLogicalIOReads) {
                 this.avgLogicalIOReads = avgLogicalIOReads;
@@ -2218,7 +2311,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPhysicalIOReads.
+             * <p>The average number of physical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgPhysicalIOReads(Double avgPhysicalIOReads) {
                 this.avgPhysicalIOReads = avgPhysicalIOReads;
@@ -2226,7 +2325,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgQueryTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder avgQueryTime(Double avgQueryTime) {
                 this.avgQueryTime = avgQueryTime;
@@ -2234,7 +2338,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgQueryTimeSeconds.
+             * <p>The average query execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.211</p>
              */
             public Builder avgQueryTimeSeconds(Double avgQueryTimeSeconds) {
                 this.avgQueryTimeSeconds = avgQueryTimeSeconds;
@@ -2242,7 +2349,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRequestSize.
+             * <p>The average size of the request, in bytes. This parameter is valid only for Redis.</p>
              */
             public Builder avgRequestSize(Double avgRequestSize) {
                 this.avgRequestSize = avgRequestSize;
@@ -2250,7 +2357,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgResponseSize.
+             * <p>The average response size, in bytes. This parameter is valid only for Redis.</p>
              */
             public Builder avgResponseSize(Double avgResponseSize) {
                 this.avgResponseSize = avgResponseSize;
@@ -2258,7 +2365,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgReturnNum.
+             * <p>The average number of rows returned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder avgReturnNum(Double avgReturnNum) {
                 this.avgReturnNum = avgReturnNum;
@@ -2266,7 +2379,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRows.
+             * <p>The average number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgRows(Double avgRows) {
                 this.avgRows = avgRows;
@@ -2274,7 +2390,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsCountAffected.
+             * <p>The average number of rows affected.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder avgRowsCountAffected(Double avgRowsCountAffected) {
                 this.avgRowsCountAffected = avgRowsCountAffected;
@@ -2282,7 +2404,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsExamined.
+             * <p>The average number of rows examined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>53421.0</p>
              */
             public Builder avgRowsExamined(Double avgRowsExamined) {
                 this.avgRowsExamined = avgRowsExamined;
@@ -2290,7 +2415,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRowsSent.
+             * <p>The average number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder avgRowsSent(Double avgRowsSent) {
                 this.avgRowsSent = avgRowsSent;
@@ -2298,7 +2426,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgRt.
+             * <p>The average execution duration.</p>
              */
             public Builder avgRt(Double avgRt) {
                 this.avgRt = avgRt;
@@ -2306,7 +2434,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * AvgScnt.
+             * <p>The average number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder avgScnt(Double avgScnt) {
                 this.avgScnt = avgScnt;
@@ -2314,7 +2445,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CPUTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder CPUTime(Double CPUTime) {
                 this.CPUTime = CPUTime;
@@ -2322,7 +2458,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CPUTimeSeconds.
+             * <p>The CPU query time. Unit: seconds.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder CPUTimeSeconds(Double CPUTimeSeconds) {
                 this.CPUTimeSeconds = CPUTimeSeconds;
@@ -2330,7 +2472,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The client IP address in the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.57.84.109</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -2338,7 +2483,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Cmd.
+             * <p>The command that was executed. This parameter is valid only for Redis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>systemctl restart nginx.service</p>
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -2346,7 +2494,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Command.
+             * <p>The slow query statement.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for Tair (Redis® OSS-Compatible) database instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT b?.id,b?.t?,b?.id,b?.t? FROM testtb? b? JOIN testtb? b? ON b?.id=b?.id WHERE b?.t? LIKE ? ORDER BY b?.t? DESC</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -2354,7 +2508,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of elements in the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -2362,7 +2519,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * CountRate.
+             * <p>The proportion of executions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2034</p>
              */
             public Builder countRate(Double countRate) {
                 this.countRate = countRate;
@@ -2370,7 +2530,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>member_score</p>
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -2378,7 +2541,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>work-wechat-api</p>
              */
             public Builder database(String database) {
                 this.database = database;
@@ -2386,7 +2552,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * <p>The database ID. This parameter is valid only for Redis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbId(String dbId) {
                 this.dbId = dbId;
@@ -2394,7 +2563,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -2402,7 +2574,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DocExamined.
+             * <p>The number of documents scanned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2000000</p>
              */
             public Builder docExamined(Long docExamined) {
                 this.docExamined = docExamined;
@@ -2410,7 +2588,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DocsExamined.
+             * <p>The number of documents scanned during the MongoDB operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder docsExamined(Long docsExamined) {
                 this.docsExamined = docsExamined;
@@ -2418,7 +2599,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Frows.
+             * <p>The number of rows fetched by the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -2426,7 +2613,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Histogram.
+             * <p>The trend chart data.</p>
              */
             public Builder histogram(Histogram histogram) {
                 this.histogram = histogram;
@@ -2434,7 +2621,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * <p>The IP address of the client.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.23.142.178</p>
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -2442,7 +2632,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HostInsId.
+             * <p>The host instance ID.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>mongo-abc123456</p>
              */
             public Builder hostInsId(String hostInsId) {
                 this.hostInsId = hostInsId;
@@ -2450,7 +2646,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * IOWrites.
+             * <p>The number of I/O writes.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder IOWrites(Long IOWrites) {
                 this.IOWrites = IOWrites;
@@ -2458,7 +2660,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * <p>The shard name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-uf6zix1z2jh1y6fe5</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -2466,7 +2671,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * InsRole.
+             * <p>The instance role.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>__system</p>
              */
             public Builder insRole(String insRole) {
                 this.insRole = insRole;
@@ -2474,7 +2685,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * KeysExamined.
+             * <p>The number of rows scanned by the MongoDB index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder keysExamined(Long keysExamined) {
                 this.keysExamined = keysExamined;
@@ -2482,7 +2696,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LastRowsCountAffected.
+             * <p>The number of rows affected by the last statement.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder lastRowsCountAffected(Long lastRowsCountAffected) {
                 this.lastRowsCountAffected = lastRowsCountAffected;
@@ -2490,7 +2710,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LockTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder lockTime(Double lockTime) {
                 this.lockTime = lockTime;
@@ -2498,7 +2723,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LockTimeSeconds.
+             * <p>The lock wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder lockTimeSeconds(Double lockTimeSeconds) {
                 this.lockTimeSeconds = lockTimeSeconds;
@@ -2506,7 +2734,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * LogicalIOReads.
+             * <p>The number of logical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder logicalIOReads(Long logicalIOReads) {
                 this.logicalIOReads = logicalIOReads;
@@ -2514,7 +2748,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCPUTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder maxCPUTime(Double maxCPUTime) {
                 this.maxCPUTime = maxCPUTime;
@@ -2522,7 +2761,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCPUTimeSeconds.
+             * <p>The maximum CPU query time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>456</p>
              */
             public Builder maxCPUTimeSeconds(Double maxCPUTimeSeconds) {
                 this.maxCPUTimeSeconds = maxCPUTimeSeconds;
@@ -2530,7 +2772,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxDocExamined.
+             * <p>The maximum number of documents scanned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000000</p>
              */
             public Builder maxDocExamined(Long maxDocExamined) {
                 this.maxDocExamined = maxDocExamined;
@@ -2538,7 +2786,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxFrows.
+             * <p>The maximum number of rows fetched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxFrows(Long maxFrows) {
                 this.maxFrows = maxFrows;
@@ -2546,7 +2797,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxIOWrites.
+             * <p>The maximum number of I/O writes.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxIOWrites(Long maxIOWrites) {
                 this.maxIOWrites = maxIOWrites;
@@ -2554,7 +2811,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxKeysExamined.
+             * <p>The maximum number of rows scanned by the index.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2000000</p>
              */
             public Builder maxKeysExamined(Long maxKeysExamined) {
                 this.maxKeysExamined = maxKeysExamined;
@@ -2562,7 +2825,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLastRowsCountAffected.
+             * <p>The maximum number of rows affected by the last statement.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxLastRowsCountAffected(Long maxLastRowsCountAffected) {
                 this.maxLastRowsCountAffected = maxLastRowsCountAffected;
@@ -2570,7 +2839,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder maxLockTime(Double maxLockTime) {
                 this.maxLockTime = maxLockTime;
@@ -2578,7 +2852,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLockTimeSeconds.
+             * <p>The maximum lock wait time. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0</p>
              */
             public Builder maxLockTimeSeconds(Double maxLockTimeSeconds) {
                 this.maxLockTimeSeconds = maxLockTimeSeconds;
@@ -2586,7 +2863,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLogicalIOReads.
+             * <p>The maximum number of logical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxLogicalIOReads(Long maxLogicalIOReads) {
                 this.maxLogicalIOReads = maxLogicalIOReads;
@@ -2594,7 +2877,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPhysicalIOReads.
+             * <p>The maximum number of physical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxPhysicalIOReads(Long maxPhysicalIOReads) {
                 this.maxPhysicalIOReads = maxPhysicalIOReads;
@@ -2602,7 +2891,12 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueryTime.
+             * <p>Deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder maxQueryTime(Double maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -2610,7 +2904,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueryTimeSeconds.
+             * <p>The maximum query execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14.402</p>
              */
             public Builder maxQueryTimeSeconds(Double maxQueryTimeSeconds) {
                 this.maxQueryTimeSeconds = maxQueryTimeSeconds;
@@ -2618,7 +2915,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRequestSize.
+             * <p>The maximum size of the request, in bytes. This parameter is valid only for Redis.</p>
              */
             public Builder maxRequestSize(Double maxRequestSize) {
                 this.maxRequestSize = maxRequestSize;
@@ -2626,7 +2923,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResponseSize.
+             * <p>The maximum response size, in bytes. This parameter is valid only for Redis.</p>
              */
             public Builder maxResponseSize(Double maxResponseSize) {
                 this.maxResponseSize = maxResponseSize;
@@ -2634,7 +2931,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReturnNum.
+             * <p>The maximum number of rows returned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder maxReturnNum(Long maxReturnNum) {
                 this.maxReturnNum = maxReturnNum;
@@ -2642,7 +2945,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRows.
+             * <p>The maximum number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxRows(Long maxRows) {
                 this.maxRows = maxRows;
@@ -2650,7 +2956,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsCountAffected.
+             * <p>The maximum number of rows affected.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxRowsCountAffected(Long maxRowsCountAffected) {
                 this.maxRowsCountAffected = maxRowsCountAffected;
@@ -2658,7 +2970,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsExamined.
+             * <p>The maximum number of rows examined.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>318613</p>
              */
             public Builder maxRowsExamined(Long maxRowsExamined) {
                 this.maxRowsExamined = maxRowsExamined;
@@ -2666,7 +2981,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRowsSent.
+             * <p>The maximum number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>256</p>
              */
             public Builder maxRowsSent(Long maxRowsSent) {
                 this.maxRowsSent = maxRowsSent;
@@ -2674,7 +2992,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRt.
+             * <p>The maximum execution duration, in seconds.</p>
              */
             public Builder maxRt(Double maxRt) {
                 this.maxRt = maxRt;
@@ -2682,7 +3000,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScnt.
+             * <p>The maximum number of requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxScnt(Long maxScnt) {
                 this.maxScnt = maxScnt;
@@ -2690,7 +3011,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>database.collection</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -2698,7 +3025,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * <blockquote>
+             * <p>Databases that support this field: ApsaraDB for MongoDB and Tair (Redis® OSS-Compatible).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>DLNode</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -2706,7 +3039,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * OpType.
+             * <p>The operation type.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Insert</p>
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -2714,7 +3053,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * OriginAlias.
+             * <p>The source alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order-1</p>
              */
             public Builder originAlias(String originAlias) {
                 this.originAlias = originAlias;
@@ -2722,7 +3064,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalIOReads.
+             * <p>The number of physical reads.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder physicalIOReads(Long physicalIOReads) {
                 this.physicalIOReads = physicalIOReads;
@@ -2730,7 +3078,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Psql.
+             * <p>The SQL template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT b?.id,b?.t?,b?.id,b?.t? FROM testtb? b? JOIN testtb? b? ON b?.id=b?.id WHERE b?.t? LIKE ? ORDER BY b?.id DESC</p>
              */
             public Builder psql(String psql) {
                 this.psql = psql;
@@ -2738,7 +3089,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * QueryId.
+             * <p>The query ID.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>sq-1pzcdMwRb</p>
              */
             public Builder queryId(String queryId) {
                 this.queryId = queryId;
@@ -2746,7 +3103,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStartTime.
+             * <p>The time when the query started. Format: yyyy-MM-dd hh:mm:ss (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-25T03:00:00Z</p>
              */
             public Builder queryStartTime(String queryStartTime) {
                 this.queryStartTime = queryStartTime;
@@ -2754,7 +3114,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The query execution time threshold. Unit: milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>272.444</p>
              */
             public Builder queryTime(Long queryTime) {
                 this.queryTime = queryTime;
@@ -2762,7 +3125,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeRate.
+             * <p>The proportion of query duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1018</p>
              */
             public Builder queryTimeRate(Double queryTimeRate) {
                 this.queryTimeRate = queryTimeRate;
@@ -2770,7 +3136,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeSeconds.
+             * <p>The query execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25.472</p>
              */
             public Builder queryTimeSeconds(Double queryTimeSeconds) {
                 this.queryTimeSeconds = queryTimeSeconds;
@@ -2778,7 +3147,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnItemNumbers.
+             * <p>The return item numbers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>暂无</p>
              */
             public Builder returnItemNumbers(String returnItemNumbers) {
                 this.returnItemNumbers = returnItemNumbers;
@@ -2786,7 +3158,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnNum.
+             * <p>The number of rows returned.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for MongoDB instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder returnNum(Long returnNum) {
                 this.returnNum = returnNum;
@@ -2794,7 +3172,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * <p>The total number of rows updated or returned by the compute nodes of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>105</p>
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -2802,7 +3186,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RowsCountAffected.
+             * <p>The number of rows affected.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB RDS for SQL Server instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder rowsCountAffected(Long rowsCountAffected) {
                 this.rowsCountAffected = rowsCountAffected;
@@ -2810,7 +3200,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RowsExamined.
+             * <p>The total number of rows examined.</p>
+             * <blockquote>
+             * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2444081</p>
              */
             public Builder rowsExamined(Long rowsExamined) {
                 this.rowsExamined = rowsExamined;
@@ -2818,7 +3214,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RowsSent.
+             * <p>The number of rows returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>772</p>
              */
             public Builder rowsSent(Long rowsSent) {
                 this.rowsSent = rowsSent;
@@ -2826,7 +3225,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID. For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query Governance</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>181**47</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -2834,7 +3236,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * <p>The details of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT \&quot;Hello, World!\&quot; FROM DUAL</p>
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -2842,7 +3247,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Scheme.
+             * <p>HTTP or HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder scheme(String scheme) {
                 this.scheme = scheme;
@@ -2850,7 +3258,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Scnt.
+             * <p>The number of DN requests from the compute node (CN) of the ApsaraDB for PolarDB-X 2.0 database instance.</p>
+             * <blockquote>
+             * <p>This field is supported only for ApsaraDB for PolarDB-X 2.0 instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -2869,7 +3283,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SqlTag.
+             * <p>The tag.</p>
              */
             public Builder sqlTag(SqlTag sqlTag) {
                 this.sqlTag = sqlTag;
@@ -2877,7 +3291,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * <p>The type of the SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LOGIN</p>
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -2885,7 +3302,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * SubInstanceId.
+             * <p>The child instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>r-8vba51c588ba3a94</p>
              */
             public Builder subInstanceId(String subInstanceId) {
                 this.subInstanceId = subInstanceId;
@@ -2893,7 +3313,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>users\nifconfig\n</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -2901,7 +3324,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadId.
+             * <p>The thread_id. This field is available only for PolarDB for MySQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder threadId(String threadId) {
                 this.threadId = threadId;
@@ -2909,7 +3335,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The execution time, in UNIX timestamp format. Unit: milliseconds (ms).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708568930</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -2917,7 +3346,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records. This parameter is valid only for the Redis engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -2925,7 +3357,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Trend.
+             * <p>The slow log trends.</p>
              */
             public Builder trend(java.util.List<Trend> trend) {
                 this.trend = trend;
@@ -2933,7 +3365,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user-1</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -3104,7 +3539,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * DbInstanceId.
+             * <p>The numeric ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-k2ja51w7cnusg5a1x</p>
              */
             public Builder dbInstanceId(Long dbInstanceId) {
                 this.dbInstanceId = dbInstanceId;
@@ -3112,7 +3550,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceName.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -3120,7 +3561,13 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the query task, in UNIX timestamp format. Unit: milliseconds.</p>
+             * <blockquote>
+             * <p>The end time of the query task must be later than the start time.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-08T02:15:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -3128,7 +3575,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsNumbers.
+             * <p>The number of items in the log list on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder itemsNumbers(Long itemsNumbers) {
                 this.itemsNumbers = itemsNumbers;
@@ -3136,7 +3586,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * <p>The name of the operation object.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -3144,7 +3594,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRecordsPerPage.
+             * <p>The maximum number of records per page for the paged query. Valid values: 5 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -3152,7 +3605,18 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * <p>For MongoDB instances, specify a node for storage analysis by using this parameter. Call the <a href="https://help.aliyun.com/document_detail/123802.html">DescribeRoleZoneInfo</a> operation to query the details of each node in a MongoDB instance.</p>
+             * <ul>
+             * <li>If you specify the <strong>InsName</strong> (node ID) of the target node, such as <code>d-bp1872fa24d5****</code>, this operation analyzes the corresponding Hidden node.</li>
+             * <li>If you specify the <code>InsName#RoleId</code> of the target node, such as <code>d-bp1872fa24d5****#299****5</code>, this operation analyzes the specified node.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Notice: For MongoDB replica set instances, if you do not specify this parameter, this operation analyzes the only Hidden node by default. For MongoDB sharded cluster instances, specify this parameter to designate the target node.</notice></p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>pi-wz99g5rn7w1x8h0sf</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -3160,7 +3624,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumbers.
+             * <p>The page number for the paged query. The value starts from 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumbers(Integer pageNumbers) {
                 this.pageNumbers = pageNumbers;
@@ -3168,7 +3635,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time, in UNIX timestamp format. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-08T02:01:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3176,7 +3646,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecords.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;
@@ -3321,7 +3794,7 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>AsyncResult&lt;DBLogRecords<SlowLogStat>&gt;</p>
+             * <p>The data.</p>
              */
             public Builder data(DataData data) {
                 this.data = data;
@@ -3329,7 +3802,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * <p>The error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10910</p>
              */
             public Builder errorCode(Integer errorCode) {
                 this.errorCode = errorCode;
@@ -3337,7 +3813,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * IsFinish.
+             * <p>Indicates whether the task is finished.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFinish(Boolean isFinish) {
                 this.isFinish = isFinish;
@@ -3345,7 +3824,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successful</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -3353,7 +3835,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * RequestKey.
+             * <p>The key of the request parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder requestKey(String requestKey) {
                 this.requestKey = requestKey;
@@ -3361,7 +3846,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ResultId.
+             * <p>The result ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>async__665ee69612f1627c7fd9f3c85075****</p>
              */
             public Builder resultId(String resultId) {
                 this.resultId = resultId;
@@ -3369,7 +3857,15 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The current status. Valid values:</p>
+             * <ul>
+             * <li><strong>RUNNING</strong>: running.</li>
+             * <li><strong>SUCCESS</strong>: succeeded.</li>
+             * <li><strong>FAIL</strong>: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -3377,7 +3873,10 @@ public class DescribeSlowLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The request time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1735104224250</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

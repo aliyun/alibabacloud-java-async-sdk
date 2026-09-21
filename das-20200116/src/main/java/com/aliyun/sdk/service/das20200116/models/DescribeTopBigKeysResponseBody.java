@@ -117,10 +117,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information about the large keys.</p>
-         * <blockquote>
-         * <p>This parameter is left empty If no large keys exist within the specified time range.</p>
-         * </blockquote>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -152,8 +149,10 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,10 +261,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -273,10 +269,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -284,10 +277,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -295,10 +285,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -306,10 +293,7 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;

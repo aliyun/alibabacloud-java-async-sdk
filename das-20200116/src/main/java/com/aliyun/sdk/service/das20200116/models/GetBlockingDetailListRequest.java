@@ -149,7 +149,7 @@ public class GetBlockingDetailListRequest extends Request {
          * <p>The name of the database. Separate multiple database names with commas (,).</p>
          * 
          * <strong>example:</strong>
-         * <p>school1,school2</p>
+         * <p>testdb1,testdb2</p>
          */
         public Builder dbNameList(String dbNameList) {
             this.putQueryParameter("DbNameList", dbNameList);
@@ -175,7 +175,7 @@ public class GetBlockingDetailListRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-t4nfalp2ap421312z</p>
+         * <p>rm-t4nfalp2ap421****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -93,7 +93,7 @@ public class GetStorageAnalysisResultRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp10xxxxxxxxx</p>
+         * <p>rm-2ze1jdv45i7l6****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -104,11 +104,11 @@ public class GetStorageAnalysisResultRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is reserved.</p>
+         * <p>This parameter is reserved.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>202****</p>
+         * <p>None</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

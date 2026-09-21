@@ -129,9 +129,9 @@ public class DescribeCloudBenchTasksRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time of the query task must be later than the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         * <p>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +156,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+         * <p>The maximum number of records per page. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1596177993000</p>
@@ -180,12 +180,12 @@ public class DescribeCloudBenchTasksRequest extends Request {
         }
 
         /**
-         * <p>The status of the stress testing task. Valid values:</p>
+         * <p>The running status of the task. Valid values:</p>
          * <ul>
-         * <li><strong>SUCCESS</strong>: The task is successful.</li>
-         * <li><strong>IGNORED</strong>: The task is ignored.</li>
-         * <li><strong>RUNNING</strong>: The task is running.</li>
-         * <li><strong>EXCEPTION</strong>: The task is abnormal.</li>
+         * <li><strong>SUCCESS</strong>: Successful.</li>
+         * <li><strong>IGNORED</strong>: Ignored.</li>
+         * <li><strong>RUNNING</strong>: Running.</li>
+         * <li><strong>EXCEPTION</strong>: Exception.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,8 +200,8 @@ public class DescribeCloudBenchTasksRequest extends Request {
         /**
          * <p>The type of the stress testing task. Valid values:</p>
          * <ul>
-         * <li><strong>pressure test</strong> (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</li>
-         * <li><strong>smart pressure test</strong>: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</li>
+         * <li><strong>pressure test</strong> (default): intelligent stress testing. Traffic captured from the target instance is replayed on the destination instance at the maximum speed supported by the destination instance specifications.</li>
+         * <li><strong>smart pressure test</strong>: generated stress testing. By analyzing and learning from traffic captured from the target instance within a short period, traffic that is consistent with the business model and traffic distribution of the original traffic is generated for continuous stress testing. This reduces the time required to collect data from the target instance and lowers storage costs and performance overhead.</li>
          * </ul>
          * 
          * <strong>example:</strong>

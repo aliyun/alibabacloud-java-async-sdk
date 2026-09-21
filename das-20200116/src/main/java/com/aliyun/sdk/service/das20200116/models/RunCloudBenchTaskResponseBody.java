@@ -106,7 +106,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information, including the error codes and the number of returned entries.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +277,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP status code returned.</p>
+             * <p>The returned status code.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -286,10 +288,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed information of the check item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;Data&quot;: { &quot;total&quot;: 1, &quot;list&quot;:[...] }, &quot;Code&quot;: 200, &quot;Success&quot;: true }</p>
+             * Details.
              */
             public Builder details(String details) {
                 this.details = details;
@@ -299,7 +298,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             /**
              * <p>The returned message.</p>
              * <blockquote>
-             * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+             * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -311,17 +310,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the check item. Valid values:</p>
-             * <ul>
-             * <li><strong>SqlArchiveStatusChecker</strong>: checks whether SQL Explorer is available.</li>
-             * <li><strong>BenchClientEnvChecker</strong>: checks whether the runtime environment for programs on the stress testing client is available.</li>
-             * <li><strong>SpecChecker</strong>: checks whether the destination instance type and the instance type of the stress testing client support this API operation.</li>
-             * <li><strong>SourceInstanceChecker</strong>: checks whether the account of the source instance is available and whether the source instance is connected to the destination instance.</li>
-             * <li><strong>BenchTargetChecker</strong>: checks whether the account of the destination instance is available and whether the source instance is connected to the destination instance.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>BenchTargetChecker</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,10 +318,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sequence number of the check item. Valid values: <strong>0</strong> to <strong>10</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Order.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -340,16 +326,7 @@ public class RunCloudBenchTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task. Valid values:</p>
-             * <ul>
-             * <li><strong>SUCCESS</strong>: The task is successful.</li>
-             * <li><strong>IGNORED</strong>: The task is ignored.</li>
-             * <li><strong>RUNNING</strong>: The task is running.</li>
-             * <li><strong>EXCEPTION</strong>: An error occurred.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SUCCESS</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

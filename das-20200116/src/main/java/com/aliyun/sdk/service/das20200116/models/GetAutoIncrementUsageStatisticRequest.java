@@ -106,11 +106,11 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         /**
          * <p>The database name. If you specify a database, the operation queries the usage of auto-increment table IDs in the specified database. Otherwise, the operation queries the usage of auto-increment table IDs in all databases on the instance.</p>
          * <blockquote>
-         * <p> Specify the parameter value as a JSON array, such as [&quot;db1&quot;,&quot;db2&quot;]. Separate multiple database names with commas (,).</p>
+         * <p>Specify the parameter value as a JSON array, such as [\&quot;db1\&quot;,\&quot;db2\&quot;]. Separate multiple database names with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;db1&quot;,&quot;db2&quot;]</p>
+         * <p>[\&quot;db1\&quot;,\&quot;db2\&quot;]</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -147,8 +147,10 @@ public class GetAutoIncrementUsageStatisticRequest extends Request {
         /**
          * <p>Specifies whether to query real-time data. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: queries data in real time except for data generated in the last 10 minutes.****</li>
-         * <li><strong>false</strong>: queries data generated in the last 2 hours. If no such data exists, queries the latest data.</li>
+         * <li><p><strong>true</strong>: queries data in real time except for data generated in the last 10 minutes.\<em>\</em>\<em>\</em></p>
+         * </li>
+         * <li><p><strong>false</strong>: queries data generated in the last 2 hours. If no such data exists, queries the latest data.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

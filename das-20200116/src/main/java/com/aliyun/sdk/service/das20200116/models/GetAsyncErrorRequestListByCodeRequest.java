@@ -118,7 +118,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         /**
          * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+         * <p>The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+         * <p>This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class GetAsyncErrorRequestListByCodeRequest extends Request {
         /**
          * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <blockquote>
-         * <p> The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+         * <p>The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

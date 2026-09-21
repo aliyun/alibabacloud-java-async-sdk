@@ -106,7 +106,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Long code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,13 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAA17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -173,12 +192,24 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
+        @com.aliyun.core.annotation.NameInMap("Db")
+        private String db;
+
+        @com.aliyun.core.annotation.NameInMap("User")
+        private String user;
+
+        @com.aliyun.core.annotation.NameInMap("UserIp")
+        private String userIp;
+
         private Logs(Builder builder) {
             this.category = builder.category;
             this.connInfo = builder.connInfo;
             this.content = builder.content;
             this.createTime = builder.createTime;
             this.DBInstanceName = builder.DBInstanceName;
+            this.db = builder.db;
+            this.user = builder.user;
+            this.userIp = builder.userIp;
         }
 
         public static Builder builder() {
@@ -224,12 +255,36 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             return this.DBInstanceName;
         }
 
+        /**
+         * @return db
+         */
+        public String getDb() {
+            return this.db;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        /**
+         * @return userIp
+         */
+        public String getUserIp() {
+            return this.userIp;
+        }
+
         public static final class Builder {
             private String category; 
             private String connInfo; 
             private String content; 
             private String createTime; 
             private String DBInstanceName; 
+            private String db; 
+            private String user; 
+            private String userIp; 
 
             private Builder() {
             } 
@@ -240,10 +295,30 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
                 this.content = model.content;
                 this.createTime = model.createTime;
                 this.DBInstanceName = model.DBInstanceName;
+                this.db = model.db;
+                this.user = model.user;
+                this.userIp = model.userIp;
             } 
 
             /**
-             * Category.
+             * <p>The log category. Valid values:</p>
+             * <ul>
+             * <li><strong>NETWORK</strong>: network connectivity log.</li>
+             * <li><strong>ACCESS</strong>: access control log.</li>
+             * <li><strong>-</strong>: general log.</li>
+             * <li><strong>COMMAND</strong>: slow log.</li>
+             * <li><strong>SHARDING</strong>: cluster log.</li>
+             * <li><strong>STORAGE</strong>: storage engine log.</li>
+             * <li><strong>CONNPOOL</strong>: connection pool log.</li>
+             * <li><strong>ASIO</strong>: asynchronous I/O log.</li>
+             * <li><strong>WRITE</strong>: slow update log.</li>
+             * </ul>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>NETWORK</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -251,7 +326,13 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnInfo.
+             * <p>The log connection information.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>conn18xxxxxx</p>
              */
             public Builder connInfo(String connInfo) {
                 this.connInfo = connInfo;
@@ -259,7 +340,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The error log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-15T15:14:27.175188+08:00 0 [Note] [MY-012468] [InnoDB] Transactions deadlock detected, dumping detailed information.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -267,7 +351,13 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the error log was generated. The value is a UNIX timestamp in milliseconds.</p>
+             * <blockquote>
+             * <p>Notice: For ApsaraDB for MongoDB instances, the time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1731983067000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -275,10 +365,58 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceName.
+             * <p>The node ID.</p>
+             * <blockquote>
+             * <p>Only ApsaraDB for MongoDB instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>d-bp128a003436****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
+                return this;
+            }
+
+            /**
+             * <p>The database name.</p>
+             * <blockquote>
+             * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>db_name</p>
+             */
+            public Builder db(String db) {
+                this.db = db;
+                return this;
+            }
+
+            /**
+             * <p>The database account.</p>
+             * <blockquote>
+             * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>db_user</p>
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            /**
+             * <p>The client IP address.</p>
+             * <blockquote>
+             * <p>Only certain special logs of ApsaraDB RDS for PostgreSQL and PolarDB for PostgreSQL instances are supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>x.x.x.x</p>
+             */
+            public Builder userIp(String userIp) {
+                this.userIp = userIp;
                 return this;
             }
 
@@ -407,7 +545,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-23T05:48:43Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -415,7 +556,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ItemsNumbers.
+             * <p>The total number of log entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder itemsNumbers(Long itemsNumbers) {
                 this.itemsNumbers = itemsNumbers;
@@ -423,7 +567,7 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Logs.
+             * <p>The log details.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -431,7 +575,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRecordsPerPage.
+             * <p>The maximum number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -439,7 +586,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumbers.
+             * <p>The page number of the current query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumbers(Integer pageNumbers) {
                 this.pageNumbers = pageNumbers;
@@ -447,7 +597,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-22T05:48:43Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -455,7 +608,10 @@ public class DescribeErrorLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecords.
+             * <p>The total number of log entries within the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;

@@ -101,7 +101,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1nti25tc7bq5****</p>
@@ -113,7 +113,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number for the paging query. Pages start from page 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The maximum number of records per page for the paging query. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

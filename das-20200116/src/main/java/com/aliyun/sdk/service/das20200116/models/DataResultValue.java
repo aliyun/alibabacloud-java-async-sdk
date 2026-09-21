@@ -80,7 +80,10 @@ public class DataResultValue extends TeaModel {
         } 
 
         /**
-         * sqlId.
+         * <p>The SQL template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61f45ee381b2fa4e8a6545e3bee9</p>
          */
         public Builder sqlId(String sqlId) {
             this.sqlId = sqlId;
@@ -88,7 +91,10 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -96,7 +102,10 @@ public class DataResultValue extends TeaModel {
         }
 
         /**
-         * count.
+         * <p>The number of errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;

@@ -120,7 +120,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
          * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
-         * <p>[         {             &quot;sqlId&quot;: &quot;2cd4432556c3dab9d825ba363637****&quot;,             &quot;database&quot;: &quot;dbgateway&quot;,             &quot;originHost&quot;: &quot;172.16.1****&quot;,             &quot;tables&quot;: [                 &quot;meter_****&quot;             ],             &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,             &quot;errorCode&quot;: &quot;1062&quot;,             &quot;user&quot;: &quot;dbgat****&quot;,             &quot;sql&quot;: &quot;insert into meter_****\n        ( \n        <strong><strong>\n     )\n        values (now(), now(), &quot;bbbc8624-5e19-455a-9714-8466f688</strong></strong>&quot;, &quot;2022-02-10 14:00:00&quot;, &quot;{&quot;endTime&quot;:&quot;2022-02-10 14:00:00&quot;,&quot;endTimestamp&quot;:1644472800,&quot;startTime&quot;:&quot;2022-02-10 13:00:00&quot;,&quot;startTimestamp&quot;:1644469200}&quot;, null, null)&quot;,             &quot;timestamp&quot;: 1644476100435         }]</p>
+         * <p>[         {             &quot;sqlId&quot;: &quot;2cd4432556c3dab9d825ba363637****&quot;,             &quot;database&quot;: &quot;dbgateway&quot;,             &quot;originHost&quot;: &quot;172.16.1****&quot;,             &quot;tables&quot;: [                 &quot;meter_****&quot;             ],             &quot;instanceId&quot;: &quot;rm-2ze8g2am97624****&quot;,             &quot;errorCode&quot;: &quot;1062&quot;,             &quot;user&quot;: &quot;dbgat****&quot;,             &quot;sql&quot;: &quot;insert into meter_****\n        ( \n        <strong><strong>\n     )\n        values (now(), now(), \&quot;bbbc8624-5e19-455a-9714-8466f688</strong></strong>\&quot;, \&quot;2022-02-10 14:00:00\&quot;, \&quot;{\&quot;endTime\&quot;:\&quot;2022-02-10 14:00:00\&quot;,\&quot;endTimestamp\&quot;:1644472800,\&quot;startTime\&quot;:\&quot;2022-02-10 13:00:00\&quot;,\&quot;startTimestamp\&quot;:1644469200}\&quot;, null, null)&quot;,             &quot;timestamp&quot;: 1644476100435         }]</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -130,7 +130,7 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -155,8 +155,10 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

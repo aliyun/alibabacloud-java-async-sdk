@@ -106,7 +106,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>返回码。200 表示成功。</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -125,7 +125,10 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>返回消息。成功时为空，失败时为错误原因描述。</p>
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -136,7 +139,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求 ID。可用于问题排查和服务端关联。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -147,7 +150,11 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求是否成功。取值：true 或 false。</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +236,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>目标 SLS Logstore 名称。</p>
+             * <p>The LogStore name for real-time delivery to Simple Log Service.</p>
              * 
              * <strong>example:</strong>
              * <p>cdn222</p>
@@ -240,7 +247,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标 SLS Project 名称。</p>
+             * <p>The project.</p>
              * 
              * <strong>example:</strong>
              * <p>facedetect7</p>
@@ -251,7 +258,7 @@ public class ModifyForwardSqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>目标 SLS 的 VPC 网络 Endpoint 地址。</p>
+             * <p>The VPC endpoint of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing-intranet.log.aliyuncs.com</p>

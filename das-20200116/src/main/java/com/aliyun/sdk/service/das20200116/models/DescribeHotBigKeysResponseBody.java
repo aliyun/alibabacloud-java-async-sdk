@@ -106,7 +106,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of hot keys and large keys.</p>
+         * <p>The details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -259,10 +259,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -270,10 +267,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,10 +275,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -292,10 +283,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -303,10 +291,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -505,10 +490,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -524,10 +506,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -535,10 +514,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -546,10 +522,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -557,10 +530,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -762,10 +732,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -773,10 +740,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5500~6000</p>
+             * Hot.
              */
             public Builder hot(String hot) {
                 this.hot = hot;
@@ -784,10 +748,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -795,10 +756,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -806,10 +764,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The statistical value that is calculated based on the least frequently used (LFU) caching algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>253</p>
+             * Lfu.
              */
             public Builder lfu(Integer lfu) {
                 this.lfu = lfu;
@@ -817,10 +772,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -828,10 +780,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -999,10 +948,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database in which the key is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(String db) {
                 this.db = db;
@@ -1010,10 +956,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>abc:def:eng</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1021,10 +964,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zset</p>
+             * KeyType.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -1032,10 +972,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1234,10 +1171,10 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reason why the large key failed to be queried.</p>
+             * <p>The reason why the big keys sorted by the number of child elements failed to be retrieved.</p>
              * 
              * <strong>example:</strong>
-             * <p>current version doesn&quot;t support</p>
+             * <p>current version doesn\&quot;t support</p>
              */
             public Builder bigKeyMsg(String bigKeyMsg) {
                 this.bigKeyMsg = bigKeyMsg;
@@ -1245,7 +1182,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of large keys.</p>
+             * BigKeys.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -1253,7 +1190,10 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * HighTrafficKeyMsg.
+             * <p>The reason why the hot keys sorted by traffic failed to be retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>current version doesn\&quot;t support</p>
              */
             public Builder highTrafficKeyMsg(String highTrafficKeyMsg) {
                 this.highTrafficKeyMsg = highTrafficKeyMsg;
@@ -1269,10 +1209,10 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the hot key failed to be queried.</p>
+             * <p>The reason why the hot keys sorted by QPS failed to be retrieved.</p>
              * 
              * <strong>example:</strong>
-             * <p>current version doesn&quot;t support</p>
+             * <p>current version doesn\&quot;t support</p>
              */
             public Builder hotKeyMsg(String hotKeyMsg) {
                 this.hotKeyMsg = hotKeyMsg;
@@ -1280,7 +1220,7 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of hot keys.</p>
+             * HotKeys.
              */
             public Builder hotKeys(HotKeys hotKeys) {
                 this.hotKeys = hotKeys;
@@ -1288,7 +1228,10 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             }
 
             /**
-             * LargeKeyMsg.
+             * <p>The reason why the big keys sorted by memory usage failed to be retrieved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>current version doesn\&quot;t support</p>
              */
             public Builder largeKeyMsg(String largeKeyMsg) {
                 this.largeKeyMsg = largeKeyMsg;

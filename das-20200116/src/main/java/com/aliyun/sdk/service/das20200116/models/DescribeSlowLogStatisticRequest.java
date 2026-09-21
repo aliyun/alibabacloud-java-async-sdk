@@ -202,7 +202,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
         } 
 
         /**
-         * Asc.
+         * <p>Specifies whether to sort results in ascending order. This feature is disabled by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asc(Boolean asc) {
             this.putBodyParameter("Asc", asc);
@@ -211,6 +214,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +227,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The list of query filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -232,6 +236,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +249,14 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * <ul>
+         * <li>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is applicable only to cluster instances. If you do not specify this parameter, the log details of the primary node are queried by default.</li>
+         * <li>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> (compute node) or <strong>polarx_dn</strong> (data node).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>r-x****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -253,7 +265,15 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <p>The sorting method. Valid values:</p>
+         * <p><strong>Count</strong></p>
+         * <p><strong>QueryTime</strong></p>
+         * <p><strong>LockTime</strong></p>
+         * <p><strong>RowsExamined</strong></p>
+         * <p><strong>RowsSent</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>count</p>
          */
         public Builder orderBy(String orderBy) {
             this.putBodyParameter("OrderBy", orderBy);
@@ -262,7 +282,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. The value starts from 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -271,7 +294,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The maximum number of entries per page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -280,6 +306,7 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify a UNIX timestamp in UTC. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -292,7 +319,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04ea3310df40c3fa8a6b4854db49f79a</p>
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -301,7 +331,23 @@ public class DescribeSlowLogStatisticRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The task type.</p>
+         * <p>SQL engine-specific:</p>
+         * <p><strong>SlowLogRequestOrigin</strong>: aggregates logs by source IP address.</p>
+         * <p><strong>SlowLogRequestUser</strong>: aggregates logs by source user.</p>
+         * <p><strong>SQL</strong>: aggregates logs by SQL ID.</p>
+         * <p>MongoDB engine-specific:</p>
+         * <p><strong>SlowLogRequestOrigin</strong>: aggregates logs by source IP address.</p>
+         * <p><strong>SlowLogRequestUser</strong>: aggregates logs by source user.</p>
+         * <p><strong>SQL</strong>: aggregates logs by Query ID.</p>
+         * <p><strong>SlowLogRequestOpType</strong>: aggregates logs by operation type.</p>
+         * <p><strong>SlowLogRequestNamespace</strong>: aggregates logs by namespace.</p>
+         * <p>Redis engine-specific:</p>
+         * <p><strong>SlowLogRequestNodeId</strong>: aggregates logs by node ID.</p>
+         * <p><strong>SlowLogRequestHostInsId</strong>: aggregates logs by HostInsId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
@@ -369,7 +415,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyWords</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -377,7 +426,10 @@ public class DescribeSlowLogStatisticRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder value(String value) {
                 this.value = value;

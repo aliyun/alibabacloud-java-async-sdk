@@ -106,7 +106,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>Response status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>Response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,9 +125,9 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>Response message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request succeeds, this parameter returns <strong>Successful</strong>. If it fails, it returns error details such as an error code.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>54F3DBAE-9420-511A-9C29-265E8C04****</p>
@@ -150,10 +150,12 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request succeeded:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Succeeded.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1016,7 +1018,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The average execution latency. Unit: millisecond.</p>
+             * <p>Average SQL execution duration, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1717</p>
@@ -1027,7 +1029,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of executions.</p>
+             * <p>Total number of executions.</p>
              * 
              * <strong>example:</strong>
              * <p>100000</p>
@@ -1038,7 +1040,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The percentage of the number of executions.</p>
+             * <p>Percentage of total executions.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0586</p>
@@ -1049,7 +1051,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ratio of the CPU execution duration to the total execution duration of the SQL statement.</p>
+             * <p>Ratio of CPU execution time to total SQL execution time.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1060,7 +1062,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU execution duration. Unit: millisecond.</p>
+             * <p>CPU runtime, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1071,7 +1073,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data read duration. Unit: millisecond.</p>
+             * <p>Data read time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1082,7 +1084,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes from which data can be read.</p>
+             * <p>Number of readable data nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1093,7 +1095,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data write duration. Unit: millisecond.</p>
+             * <p>Data write time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1104,7 +1106,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes to which data can be written.</p>
+             * <p>Number of writable data nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1115,7 +1117,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
+             * <p>Database name.</p>
              * 
              * <strong>example:</strong>
              * <p>testDB</p>
@@ -1126,7 +1128,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration. Unit: millisecond.</p>
+             * <p>Actual runtime, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1137,7 +1139,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of errors.</p>
+             * <p>Number of errors.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1148,7 +1150,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL statement was executed for the first time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>First execution time, in Unix time format, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1659308149000</p>
@@ -1159,10 +1161,12 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether full table scan was enabled. Valid values:</p>
+             * <p>Indicates whether a full table scan occurred. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Yes.</p>
+             * </li>
+             * <li><p><strong>false</strong>: No.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1174,7 +1178,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The primary key ID.</p>
+             * <p>Primary key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>26186357</p>
@@ -1185,7 +1189,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-2ze8g2am97624****</p>
@@ -1196,7 +1200,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL statement was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>Last update time, in Unix time format, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1661306520000</p>
@@ -1207,7 +1211,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average lock wait latency. Unit: millisecond.</p>
+             * <p>Average lock wait time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1218,7 +1222,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical database ID.</p>
+             * <p>Logical database ID.</p>
              * 
              * <strong>example:</strong>
              * <p>58275984</p>
@@ -1229,7 +1233,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of logical nodes.</p>
+             * <p>Number of logical nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1240,7 +1244,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum execution latency. Unit: millisecond.</p>
+             * <p>Maximum execution duration, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>36.233</p>
@@ -1251,7 +1255,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of mutex spins.</p>
+             * <p>Number of mutex spins.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1262,7 +1266,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of mutex waits.</p>
+             * <p>Number of mutex waits.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1273,9 +1277,9 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>Node ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only if the database instance is an ApsaraDB RDS for MySQL Cluster Edition instance or a PolarDB for MySQL cluster.</p>
+             * <p>This parameter is returned for ApsaraDB RDS for MySQL Cluster Edition or PolarDB for MySQL database instances.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1287,7 +1291,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of physical asynchronous nodes.</p>
+             * <p>Number of physical asynchronous nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1298,7 +1302,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of physical nodes.</p>
+             * <p>Number of physical nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1309,7 +1313,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL template.</p>
+             * <p>SQL template.</p>
              * 
              * <strong>example:</strong>
              * <p>select ?</p>
@@ -1320,7 +1324,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of redo nodes.</p>
+             * <p>Number of redo nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1331,7 +1335,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows that are affected by the SQL statement.</p>
+             * <p>Number of rows affected.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1342,7 +1346,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows affected by the SQL statement.</p>
+             * <p>Average number of rows affected.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1353,7 +1357,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of scanned rows.</p>
+             * <p>Total number of rows scanned.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -1364,7 +1368,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of scanned rows.</p>
+             * <p>Average number of rows scanned.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1375,7 +1379,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of returned rows.</p>
+             * <p>Average number of rows sent.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1386,7 +1390,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of rows returned by the SQL statement.</p>
+             * <p>Number of rows returned.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1397,7 +1401,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of rows returned for the SQL statement.</p>
+             * <p>Average number of rows returned per SQL statement.</p>
              * 
              * <strong>example:</strong>
              * <p>0.52</p>
@@ -1408,7 +1412,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sorted rows.</p>
+             * <p>Number of rows sorted.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1419,7 +1423,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration percentage.</p>
+             * <p>Percentage of total execution duration.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1384</p>
@@ -1430,10 +1434,12 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether read/write splitting was enabled. Valid values:</p>
+             * <p>Indicates whether read/write splitting is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0:</strong> Read/write splitting was disabled.</li>
-             * <li><strong>1:</strong> Read/write splitting was enabled.</li>
+             * <li><p><strong>0</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1445,7 +1451,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read/write splitting parameters.</p>
+             * <p>Read/write splitting parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1456,10 +1462,12 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indices whether multi-index scanning was enabled. Valid values:</p>
+             * <p>Indicates whether multiple index scans are enabled. Valid values:</p>
              * <ul>
-             * <li><strong>0:</strong> Multi-index scanning was disabled.</li>
-             * <li><strong>1:</strong> Multi-index scanning was enabled.</li>
+             * <li><p><strong>0</strong>: Disabled.</p>
+             * </li>
+             * <li><p><strong>1</strong>: Enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1471,9 +1479,9 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of joins that performed table scans without using indexes.</p>
+             * <p>The average number of connections that perform table scans without using an index.</p>
              * <blockquote>
-             * <p>If the value of this parameter is not 0, check the table indexes.</p>
+             * <p>Notice: If this parameter value is not 0, carefully check the indexes of the table.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1485,7 +1493,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of joins that selected a range.</p>
+             * <p>Average number of range joins.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1496,7 +1504,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average selected range.</p>
+             * <p>Average range selection.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1507,7 +1515,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of scanned rows.</p>
+             * <p>Average number of scans.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1518,7 +1526,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The semi-synchronous replication latency. Unit: millisecond.</p>
+             * <p>Semi-synchronous replication delay, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0.12</p>
@@ -1529,7 +1537,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed for locking the server. Unit: millisecond.</p>
+             * <p>Server lock time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1540,7 +1548,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of merges that the sorting algorithm must perform.</p>
+             * <p>Number of merge passes required by the sort algorithm.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1551,7 +1559,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of sorts that were performed by using a range.</p>
+             * <p>Average number of range-based sorts.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1562,7 +1570,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of sorted rows.</p>
+             * <p>Average number of sorted rows.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1573,7 +1581,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of sorts that were performed during table scans.</p>
+             * <p>Average number of sorted scans.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1584,7 +1592,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL template ID.</p>
+             * <p>SQL template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>2e8147b5ca2dfc640dfd5e43d96a****</p>
@@ -1595,11 +1603,14 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SQL statement. Valid values:</p>
+             * <p>SQL type. Valid values:</p>
              * <ul>
-             * <li><strong>SELECT</strong></li>
-             * <li><strong>UPDATE</strong></li>
-             * <li><strong>DELETE</strong></li>
+             * <li><p><strong>SELECT</strong></p>
+             * </li>
+             * <li><p><strong>UPDATE</strong></p>
+             * </li>
+             * <li><p><strong>DELETE</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1611,7 +1622,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The names of tables in the database.</p>
+             * <p>Database table names.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -1619,7 +1630,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reserved parameter.</p>
+             * <p>Reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -1630,7 +1641,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>Data timestamp in Unix time format, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1643040000000</p>
@@ -1641,7 +1652,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of on-disk temporary tables.</p>
+             * <p>Number of temporary disk tables.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1652,7 +1663,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of on-disk temporary tables.</p>
+             * <p>Average number of temporary disk tables.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1663,7 +1674,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of temporary tables.</p>
+             * <p>Number of temporary tables.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1674,7 +1685,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The average number of temporary tables.</p>
+             * <p>Average number of temporary tables.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1685,7 +1696,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution latency. Unit: millisecond.</p>
+             * <p>Total execution duration, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60913.256</p>
@@ -1696,7 +1707,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time consumed for locking the storage transaction. Unit: millisecond.</p>
+             * <p>Transaction lock time, in milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1707,7 +1718,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user ID.</p>
+             * <p>User ID.</p>
              * 
              * <strong>example:</strong>
              * <p>196278346919****</p>
@@ -1718,7 +1729,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of warnings.</p>
+             * <p>Number of warnings.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1827,7 +1838,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The reserved parameter.</p>
+             * <p>Reserved parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -1838,7 +1849,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the data returned.</p>
+             * <p>Detailed information list.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -1846,7 +1857,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number.</p>
+             * <p>Page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1857,7 +1868,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>Maximum number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1868,7 +1879,7 @@ public class GetPfsSqlSummariesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>Total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>264</p>

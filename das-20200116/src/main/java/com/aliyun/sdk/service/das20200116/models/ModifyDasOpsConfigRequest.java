@@ -88,7 +88,14 @@ public class ModifyDasOpsConfigRequest extends Request {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable DAS Alibaba Cloud Managed Services. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enable.</li>
+         * <li><strong>false</strong>: Disable. Shutdown only turns off the feature but does not unsubscribe from the service. To unsubscribe, go to the unsubscription management page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -97,7 +104,7 @@ public class ModifyDasOpsConfigRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>A reserved parameter.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -106,6 +113,7 @@ public class ModifyDasOpsConfigRequest extends Request {
         }
 
         /**
+         * <p>The database instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -177,7 +185,13 @@ public class ModifyDasOpsConfigRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The filter parameter.</p>
+             * <blockquote>
+             * <p>For supported filter parameters and their values, see <strong>Supplementary description of request parameters</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -185,7 +199,10 @@ public class ModifyDasOpsConfigRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder value(String value) {
                 this.value = value;

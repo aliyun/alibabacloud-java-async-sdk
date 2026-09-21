@@ -160,7 +160,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * <p>The end of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>A list of filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -182,7 +182,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The database instance ID.</p>
+         * <p>The ID of the database instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,8 +197,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <ul>
-         * <li>For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.</li>
-         * <li>For PolarDB-X 2.0 instances, set this parameter to <strong>polarx_cn</strong> if the node is a compute node, or <strong>polarx_dn</strong> if the node is a data node.</li>
+         * <li><p>This parameter is applicable only to ApsaraDB RDS for MySQL and PolarDB for MySQL cluster instances. If this parameter is omitted, the log details of the primary node are returned by default.</p>
+         * </li>
+         * <li><p>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> (compute node) or <strong>polarx_dn</strong> (data node).</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -223,7 +225,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 10.</p>
+         * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -235,10 +237,12 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The role of the node of the PolarDB-X 2.0 instance. Valid values:</p>
+         * <p>The role of the node in the PolarDB-X 2.0 database instance.</p>
          * <ul>
-         * <li>**polarx_cn**: compute node</li>
-         * <li>**polarx_dn**: data node</li>
+         * <li><p><strong>polarx_cn</strong>: compute node.</p>
+         * </li>
+         * <li><p><strong>polarx_dn</strong>: data node.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -251,7 +255,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.</p>
+         * <p>The beginning of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,9 +327,9 @@ public class DescribeSqlLogRecordsRequest extends Request {
             } 
 
             /**
-             * <p>The filter parameter.</p>
+             * <p>The filter key.</p>
              * <blockquote>
-             * <p> For more information about the supported filter parameters and their valid values, see the <strong>Supported parameters and values for Key</strong> section of this topic.</p>
+             * <p>For details on supported filter keys and their values, see <strong>Additional information about request parameters</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -337,7 +341,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
             }
 
             /**
-             * <p>The value of the filter parameter.</p>
+             * <p>The filter value.</p>
              * 
              * <strong>example:</strong>
              * <p>select</p>

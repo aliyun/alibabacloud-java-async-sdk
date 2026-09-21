@@ -132,7 +132,7 @@ public class CreateRequestDiagnosisRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.</p>
+         * <p>This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class CreateRequestDiagnosisRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>select * from test where name = &quot;mockUser&quot;</p>
+         * <p>select * from test where name = \&quot;mockUser\&quot;</p>
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

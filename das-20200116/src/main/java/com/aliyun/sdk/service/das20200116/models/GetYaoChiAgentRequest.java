@@ -116,7 +116,10 @@ public class GetYaoChiAgentRequest extends Request {
         } 
 
         /**
-         * ExtraInfo.
+         * <p>The additional information in JSON string format. This parameter is optional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.putQueryParameter("ExtraInfo", extraInfo);
@@ -134,6 +137,7 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
+         * <p>The natural language description of the question.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +150,10 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID in UUID string format. This parameter is optional. If you do not specify this parameter, a new session is created. To maintain context across a conversation, use the same session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -155,7 +162,10 @@ public class GetYaoChiAgentRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The cloud service source that specifies which cloud service the question belongs to. This parameter is optional. Default value: yaochi.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yaochi</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

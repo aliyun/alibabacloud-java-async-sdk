@@ -106,7 +106,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>840F51F7-9C01-538D-94F6-AE712905****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -230,7 +249,13 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * GIpList.
+             * <p>The IP addresses in the whitelist template.</p>
+             * <blockquote>
+             * <p>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelists.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.1,192.168.100.0/24</p>
              */
             public Builder gIpList(String gIpList) {
                 this.gIpList = gIpList;
@@ -238,7 +263,18 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalIgName.
+             * <p>The name of the IP whitelist template. The name must meet the following requirements:</p>
+             * <ul>
+             * <li><p>Contains only lowercase letters, digits, and underscores (_).</p>
+             * </li>
+             * <li><p>Starts with a letter and ends with a letter or digit.</p>
+             * </li>
+             * <li><p>Contains 2 to 120 characters in length.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>saas_jump</p>
              */
             public Builder globalIgName(String globalIgName) {
                 this.globalIgName = globalIgName;
@@ -246,7 +282,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalSecurityGroupId.
+             * <p>The ID of the IP whitelist template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>g-v8kwereyd6u7kx****</p>
              */
             public Builder globalSecurityGroupId(String globalSecurityGroupId) {
                 this.globalSecurityGroupId = globalSecurityGroupId;
@@ -254,7 +293,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -321,7 +363,7 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * GlobalSecurityIPGroupRel.
+             * <p>The binding information of the cross-engine IP whitelist template.</p>
              */
             public Builder globalSecurityIPGroupRel(java.util.List<GlobalSecurityIPGroupRel> globalSecurityIPGroupRel) {
                 this.globalSecurityIPGroupRel = globalSecurityIPGroupRel;
@@ -329,7 +371,10 @@ public class ModifySecurityIPGroupRelationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze1jdv45i7l6****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

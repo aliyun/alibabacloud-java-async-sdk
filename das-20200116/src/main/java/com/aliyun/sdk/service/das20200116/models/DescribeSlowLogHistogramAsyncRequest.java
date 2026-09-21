@@ -118,6 +118,10 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the query. Specify a UNIX timestamp in milliseconds.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +134,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The list of query filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -139,6 +143,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
+         * <p>The database instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,7 +156,13 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p>For PolarDB for MySQL instances, specify the node ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>r-****-db-0</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -160,6 +171,7 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Specify a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +243,10 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -239,7 +254,10 @@ public class DescribeSlowLogHistogramAsyncRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder value(String value) {
                 this.value = value;

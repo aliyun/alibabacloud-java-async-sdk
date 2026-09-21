@@ -340,7 +340,10 @@ public class ChatResponseBody extends TeaModel {
         } 
 
         /**
-         * ActivityType.
+         * <p>The heartbeat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waiting_for_agent_thinking</p>
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
@@ -348,7 +351,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * AgentId.
+         * <p>The agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-7f9c2a81</p>
          */
         public Builder agentId(String agentId) {
             this.agentId = agentId;
@@ -356,7 +362,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>I see you have several PolarDB instances, and I will query them for you shortly</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -364,7 +373,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Delta.
+         * <p>Indicates whether the content is incremental.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hello</p>
          */
         public Builder delta(String delta) {
             this.delta = delta;
@@ -372,7 +384,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Kind.
+         * <p>The step type of STEP_STARTED, such as task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task</p>
          */
         public Builder kind(String kind) {
             this.kind = kind;
@@ -380,7 +395,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Label.
+         * <p>The display name of the sub-agent for STEP_STARTED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL Performance Diagnostics</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -388,7 +406,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * MessageId.
+         * <p>The message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>61820b594664275c4429****</p>
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -396,7 +417,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The extension key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>summary</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -404,7 +428,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * OriginatingToolCallId.
+         * <p>The original ID of the tool call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-xxxx</p>
          */
         public Builder originatingToolCallId(String originatingToolCallId) {
             this.originatingToolCallId = originatingToolCallId;
@@ -412,7 +439,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ParentAgentId.
+         * <p>The parent agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agent-3a6f1c92</p>
          */
         public Builder parentAgentId(String parentAgentId) {
             this.parentAgentId = parentAgentId;
@@ -420,7 +450,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ParentMessageId.
+         * <p>The parent message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>76bee207-31ee-4707-8851-6b9d4da033aa</p>
          */
         public Builder parentMessageId(String parentMessageId) {
             this.parentMessageId = parentMessageId;
@@ -428,7 +461,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The conversation role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>assistant</p>
          */
         public Builder role(String role) {
             this.role = role;
@@ -436,7 +472,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * RunId.
+         * <p>The run ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ed7cb7b1-ddc8-45d7-9ff3-b315726cb5f7</p>
          */
         public Builder runId(String runId) {
             this.runId = runId;
@@ -444,7 +483,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * StepName.
+         * <p>The execution step name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sub_agent_performance_diagnose_mysql</p>
          */
         public Builder stepName(String stepName) {
             this.stepName = stepName;
@@ -452,7 +494,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * StepStatus.
+         * <p>The step status of STEP_FINISHED, such as completed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>completed</p>
          */
         public Builder stepStatus(String stepStatus) {
             this.stepStatus = stepStatus;
@@ -460,7 +505,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * TaskTrackerId.
+         * <p>The callback utility class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>das_api</p>
          */
         public Builder taskTrackerId(String taskTrackerId) {
             this.taskTrackerId = taskTrackerId;
@@ -468,7 +516,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ThreadId.
+         * <p>The thread ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8e481be1-21d5-4a92-a2fb-fb54be0ab4f6</p>
          */
         public Builder threadId(String threadId) {
             this.threadId = threadId;
@@ -476,7 +527,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Timestamp.
+         * <p>The event timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1767225600000</p>
          */
         public Builder timestamp(Long timestamp) {
             this.timestamp = timestamp;
@@ -484,7 +538,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ToolCallError.
+         * <p>The error that occurred during tool invocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error</p>
          */
         public Builder toolCallError(String toolCallError) {
             this.toolCallError = toolCallError;
@@ -492,7 +549,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ToolCallId.
+         * <p>The tool invocation ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>call_edf9cdb69e0e4c9796a6a5a6</p>
          */
         public Builder toolCallId(String toolCallId) {
             this.toolCallId = toolCallId;
@@ -500,7 +560,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * ToolCallName.
+         * <p>The tool name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>das_api</p>
          */
         public Builder toolCallName(String toolCallName) {
             this.toolCallName = toolCallName;
@@ -508,7 +571,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEXT_MESSAGE_CONTENT</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -516,7 +582,10 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The extension value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;CharCount&quot;:393,&quot;End&quot;:1777428785996,&quot;RequestId&quot;:&quot;BE59AED5-D831-5811-BBAD-590B917B2089&quot;,&quot;SessionId&quot;:&quot;123e4567-e89b-12d3-a456-xxxxxxxxxxxx&quot;,&quot;Start&quot;:1777428707927}</p>
          */
         public Builder value(Object value) {
             this.value = value;

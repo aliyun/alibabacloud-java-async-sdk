@@ -106,7 +106,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,10 +150,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.</p>
+             * <p>The total cold storage data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>8585901</p>
@@ -299,7 +299,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The free quota for cold data storage. Unit: bytes.</p>
+             * <p>The free cold storage data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>5041450</p>
@@ -310,7 +310,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The free quota for hot data storage. Unit: bytes.</p>
+             * <p>The free hot storage data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>297245</p>
@@ -321,7 +321,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.</p>
+             * <p>The total hot storage data. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>1118042</p>
@@ -332,10 +332,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.</p>
+             * <p>The amount of data imported in the last day. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
-             * <p>23</p>
+             * <p>297245</p>
              */
             public Builder importSqlSize(Long importSqlSize) {
                 this.importSqlSize = importSqlSize;
@@ -343,7 +343,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The timestamp in UNIX timestamp format. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1712568564928</p>
@@ -354,7 +354,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSqlSize.
+             * <p>The total storage data (cold data + hot data).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9703943</p>
              */
             public Builder totalSqlSize(Long totalSqlSize) {
                 this.totalSqlSize = totalSqlSize;

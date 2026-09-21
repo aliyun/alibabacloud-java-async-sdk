@@ -147,7 +147,7 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         } 
 
         /**
-         * <p>The database account that has the permissions to terminate sessions.</p>
+         * <p>The database account that has the permission to terminate sessions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,13 +173,13 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * <p>The account whose sessions do not need to be terminated.</p>
+         * <p>The list of accounts whose sessions will not be terminated.</p>
          * <blockquote>
-         * <p> Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [&quot;Database account 1&quot;,&quot;Database account 2&quot;].</p>
+         * <p>The data is in JSONArray format, such as [\&quot;DatabaseAccount1\&quot;,\&quot;DatabaseAccount2\&quot;\]. Separate multiple database accounts with commas (,).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;db_user1&quot;,&quot;db_user2&quot;]</p>
+         * <p>[\&quot;db_user1\&quot;,\&quot;db_user2\&quot;]</p>
          */
         public Builder ignoredUsers(String ignoredUsers) {
             this.putQueryParameter("IgnoredUsers", ignoredUsers);
@@ -203,11 +203,13 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         /**
          * <p>Specifies whether to terminate all sessions.</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: Yes.</p>
+         * </li>
+         * <li><p><strong>false</strong>: No.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set this parameter to <strong>true</strong>, sessions of the accounts that are specified by <strong>IgnoredUsers</strong>, sessions of internal O&amp;M accounts of Alibaba Cloud, and <strong>Binlog Dump</strong> sessions are not terminated.</p>
+         * <p>When this parameter is set to <strong>true</strong>, sessions of accounts specified in the <strong>IgnoredUsers</strong> request parameter, sessions of Alibaba Cloud internal operations accounts, and <strong>Binlog Dump</strong> sessions are not terminated.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -223,7 +225,7 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set <strong>KillAllSessions</strong> to <strong>true</strong>, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</p>
+         * <p>For PolarDB for MySQL instances, provide the node ID. If no node ID is provided and the <strong>KillAllSessions</strong> request parameter is set to <strong>true</strong> (terminate all sessions), the system traverses all nodes of the PolarDB for MySQL instance and terminates ongoing sessions on each node.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,9 +238,9 @@ public class CreateKillInstanceSessionTaskRequest extends Request {
         }
 
         /**
-         * <p>The IDs of sessions that need to be terminated.</p>
+         * <p>The list of session IDs to be terminated.</p>
          * <blockquote>
-         * <p> Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [&quot;Session ID1&quot;,&quot;Session ID2&quot;]. If <strong>KillAllSessions</strong> is set to <strong>true</strong>, this parameter does not take effect.</p>
+         * <p>The data is in JSONArray format, such as [SessionID1,SessionID2\]. Separate multiple session IDs with commas (,). If the <strong>KillAllSessions</strong> request parameter is set to <strong>true</strong> (terminate all sessions), this list is ignored.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

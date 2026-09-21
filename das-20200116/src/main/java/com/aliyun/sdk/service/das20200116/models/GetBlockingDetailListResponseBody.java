@@ -127,7 +127,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -389,7 +391,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
              * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
-             * <p>school</p>
+             * <p>testdb1</p>
              */
             public Builder dataBase(String dataBase) {
                 this.dataBase = dataBase;
@@ -411,7 +413,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
              * <p>The username that is used for the logon.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cheney603</p>
+             * <p>Testuser</p>
              */
             public Builder loginId(String loginId) {
                 this.loginId = loginId;
@@ -422,7 +424,7 @@ public class GetBlockingDetailListResponseBody extends TeaModel {
              * <p>The hash value of the SQL statement.</p>
              * 
              * <strong>example:</strong>
-             * <p>6977DD06CD9CAFF2</p>
+             * <p>DC08B955CAD25E7B</p>
              */
             public Builder queryHash(String queryHash) {
                 this.queryHash = queryHash;

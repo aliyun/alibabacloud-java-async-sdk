@@ -118,6 +118,10 @@ public class GetDeadlockHistogramRequest extends Request {
         } 
 
         /**
+         * <p>The end of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
+         * <blockquote>
+         * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +134,7 @@ public class GetDeadlockHistogramRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +147,13 @@ public class GetDeadlockHistogramRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p>For PolarDB for MySQL instances, you must specify the node ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp16v3824rt73****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -151,6 +162,13 @@ public class GetDeadlockHistogramRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. The format is a UNIX timestamp in milliseconds.</p>
+         * <blockquote>
+         * <p>The start time can be at most 7 days earlier than the end time.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +181,10 @@ public class GetDeadlockHistogramRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The analysis status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

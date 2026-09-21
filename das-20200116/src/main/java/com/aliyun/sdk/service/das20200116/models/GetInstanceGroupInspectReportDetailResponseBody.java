@@ -106,7 +106,10 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +125,13 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned for the request.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +139,10 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,14 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request is successful.</li>
+         * <li>false: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -204,7 +223,10 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ReportDetail.
+             * <p>The content of the operations report, which mainly includes the report date and diagnostic details of managed instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;### Summary\n\nReport date: 2025-12-10  \nComparison period: [previous day] → 2025-12-10 The rest is omitted&quot;</p>
              */
             public Builder reportDetail(String reportDetail) {
                 this.reportDetail = reportDetail;
@@ -212,7 +234,10 @@ public class GetInstanceGroupInspectReportDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13f52040-5a6e-42c3-bb84-051f5d6d****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;

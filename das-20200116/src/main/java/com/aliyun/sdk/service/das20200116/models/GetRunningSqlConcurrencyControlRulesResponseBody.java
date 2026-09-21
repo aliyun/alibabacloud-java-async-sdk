@@ -127,7 +127,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * <li><p><strong>false</strong></p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,13 +329,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The duration within which the SQL throttling rule takes effect. Unit: seconds.</p>
-             * <blockquote>
-             * <p>The throttling rule takes effect only within this duration.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>600</p>
+             * ConcurrencyControlTime.
              */
             public Builder concurrencyControlTime(Long concurrencyControlTime) {
                 this.concurrencyControlTime = concurrencyControlTime;
@@ -341,10 +337,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-2ze1jdv45i7l6****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -352,10 +345,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the throttling rule that is applied to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>16</p>
+             * ItemId.
              */
             public Builder itemId(Long itemId) {
                 this.itemId = itemId;
@@ -363,10 +353,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The hash value of the SQL keywords. The hash value is calculated based on the SQL keywords that are contained in the SQL statements to which the throttling rule is applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>b0b8aceeb43baea87b219c81767b****</p>
+             * KeywordsHash.
              */
             public Builder keywordsHash(String keywordsHash) {
                 this.keywordsHash = keywordsHash;
@@ -374,13 +361,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of concurrent SQL statements. The value is a positive integer.</p>
-             * <blockquote>
-             * <p>If the number of concurrent SQL statements that contain the specified keywords reaches this upper limit, the throttling rule is triggered.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * MaxConcurrency.
              */
             public Builder maxConcurrency(String maxConcurrency) {
                 this.maxConcurrency = maxConcurrency;
@@ -388,13 +369,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keywords contained in the SQL statements to which the throttling rule was applied.</p>
-             * <blockquote>
-             * <p>SQL keywords are separated by tildes (~). If the number of concurrent SQL statements that contain all the specified SQL keywords reaches the specified upper limit, the throttling rule is triggered.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>call<del>open</del>api<del>test</del>4<del>from</del>POP</p>
+             * SqlKeywords.
              */
             public Builder sqlKeywords(String sqlKeywords) {
                 this.sqlKeywords = sqlKeywords;
@@ -402,15 +377,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SQL statements. Valid values:</p>
-             * <ul>
-             * <li><strong>SELECT</strong></li>
-             * <li><strong>UPDATE</strong></li>
-             * <li><strong>DELETE</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SELECT</p>
+             * SqlType.
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -418,10 +385,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the throttling rule started to take effect. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1608888296000</p>
+             * StartTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -429,10 +393,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the throttling rule. The value of <strong>Open</strong> indicates that the throttling rule is in effect.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Open</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -440,10 +401,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud account ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testxxx</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -564,7 +522,7 @@ public class GetRunningSqlConcurrencyControlRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned data.</p>
+             * List.
              */
             public Builder list(List list) {
                 this.list = list;

@@ -127,7 +127,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,8 +152,10 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,10 +303,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of bytes that are occupied by the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * Bytes.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -312,10 +311,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127</p>
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -323,10 +319,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -334,10 +327,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hashtable</p>
+             * Encoding.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -345,10 +335,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1596256542547</p>
+             * ExpirationTimeMillis.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -356,10 +343,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>task_*****</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -367,10 +351,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data node on the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -378,10 +359,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hash</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -554,10 +532,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details about the large keys.</p>
-             * <blockquote>
-             * <p>The sub-parameters of this parameter and the content of the sub-parameters are not returned. To query the detailed information about the cache analysis tasks, call the <a href="https://help.aliyun.com/document_detail/443012.html">DescribeCacheAnalysisJob</a> operation.</p>
-             * </blockquote>
+             * BigKeys.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -565,10 +540,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-bp18ff4a195d****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -576,10 +548,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cache analysis task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sf79-sd99-sa37-****</p>
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -589,7 +558,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             /**
              * <p>The returned message.</p>
              * <blockquote>
-             * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+             * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -601,10 +570,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data node on the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -612,16 +578,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cache analysis task. Valid values:</p>
-             * <ul>
-             * <li><strong>BACKUP</strong>: The data is being backed up.</li>
-             * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
-             * <li><strong>FINISHED</strong>: The data is analyzed.</li>
-             * <li><strong>FAILED</strong>: An error occurred.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>BACKUP</p>
+             * TaskState.
              */
             public Builder taskState(String taskState) {
                 this.taskState = taskState;
@@ -792,7 +749,7 @@ public class DescribeCacheAnalysisJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data node on the instance.</p>
+             * List.
              */
             public Builder list(List list) {
                 this.list = list;

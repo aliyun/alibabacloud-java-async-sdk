@@ -106,10 +106,10 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code.</p>
+         * <p>The status code returned.</p>
          * 
          * <strong>example:</strong>
-         * <p>403</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,7 +117,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,9 +125,9 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. Otherwise, an error message is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -152,12 +152,14 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>false</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -431,10 +433,12 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the cold data storage is enabled. Valid values:</p>
+             * <p>Indicates whether the cold data storage is enabled.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -446,7 +450,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days for which the SQL Explorer and Audit data is stored in cold storage. The value is calculated by using the following formula: Value of ColdRetention = Value of Retention - Value of HotRetention.``</p>
+             * <p>The retention period of the cold data. Unit: day. This value is calculated by using the following formula: <code>Retention - HotRetention</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>23</p>
@@ -468,15 +472,22 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collector version. Valid values:</p>
+             * <p>The version of the database collector. Valid values:</p>
              * <ul>
-             * <li><strong>MYSQL_V0</strong></li>
-             * <li><strong>MYSQL_V1</strong></li>
-             * <li><strong>MYSQL_V2</strong></li>
-             * <li><strong>MYSQL_V3</strong></li>
-             * <li><strong>PG_V1</strong></li>
-             * <li><strong>rdspg_v1</strong></li>
-             * <li><strong>polarpg_v1</strong></li>
+             * <li><p><strong>MYSQL_V0</strong>: MySQL V0</p>
+             * </li>
+             * <li><p><strong>MYSQL_V1</strong>: MySQL V1</p>
+             * </li>
+             * <li><p><strong>MYSQL_V2</strong>: MySQL V2</p>
+             * </li>
+             * <li><p><strong>MYSQL_V3</strong>: MySQL V3</p>
+             * </li>
+             * <li><p><strong>PG_V1</strong>: PostgreSQL V1</p>
+             * </li>
+             * <li><p><strong>rdspg_v1</strong>: ApsaraDB RDS for PostgreSQL V1</p>
+             * </li>
+             * <li><p><strong>polarpg_v1</strong>: PolarDB for PostgreSQL V1</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -488,10 +499,12 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the hot data storage is enabled. Valid values:</p>
+             * <p>Indicates whether the hot data storage is enabled.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -503,7 +516,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days for which the SQL Explorer and Audit data is stored in hot storage.</p>
+             * <p>The retention period of the hot data. Unit: day.</p>
              * 
              * <strong>example:</strong>
              * <p>7</p>
@@ -536,10 +549,12 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
+             * <p>Indicates whether SQL Explorer is enabled.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -551,7 +566,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when SQL Explorer was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1683712800000</p>
@@ -562,7 +577,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The expiration time of DAS Enterprise Edition. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1715335200000</p>
@@ -573,7 +588,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total storage duration of the SQL Explorer and Audit data. Unit: day.</p>
+             * <p>The total retention period of data. Unit: day.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -584,10 +599,12 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether DAS Enterprise Edition is enabled. Valid values:</p>
+             * <p>Indicates whether DAS Enterprise Edition is enabled.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong>: Enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -599,7 +616,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SqlLogSource.
+             * <p>The source of the audit log.</p>
              */
             public Builder sqlLogSource(String sqlLogSource) {
                 this.sqlLogSource = sqlLogSource;
@@ -607,11 +624,14 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of data migration. Valid values:</p>
+             * <p>The data migration state. Valid values:</p>
              * <ul>
-             * <li><strong>FINISH</strong>: The historical data is migrated.</li>
-             * <li><strong>RUNNING</strong>: The historical data is being migrated.</li>
-             * <li><strong>FAILURE</strong>: The historical data fails to be migrated.</li>
+             * <li><p><strong>FINISH</strong>: The historical data is migrated.</p>
+             * </li>
+             * <li><p><strong>RUNNING</strong>: The historical data is being migrated.</p>
+             * </li>
+             * <li><p><strong>FAILURE</strong>: The historical data fails to be migrated.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -634,14 +654,20 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latest version of DAS Enterprise Edition that supports the database instance. Valid values:</p>
+             * <p>The latest supported version of DAS Enterprise Edition. Valid values:</p>
              * <ul>
-             * <li><strong>SQL_LOG_V0</strong>: DAS Enterprise Edition V0.</li>
-             * <li><strong>SQL_LOG_V1</strong>: DAS Enterprise Edition V1.</li>
-             * <li><strong>SQL_LOG_V2</strong>: DAS Enterprise Edition V2.</li>
-             * <li><strong>SQL_LOG_V3</strong>: DAS Enterprise Edition V3.</li>
-             * <li><strong>SQL_LOG_NOT_ENABLE</strong>: DAS Enterprise Edition is not enabled.</li>
-             * <li><strong>SQL_LOG_NOT_SUPPORT</strong>: DAS Enterprise Edition is not supported.</li>
+             * <li><p><strong>SQL_LOG_V0</strong>: DAS Enterprise Edition V0</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V1</strong>: DAS Enterprise Edition V1</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V2</strong>: DAS Enterprise Edition V2</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V3</strong>: DAS Enterprise Edition V3</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_NOT_ENABLE</strong>: DAS Enterprise Edition is not enabled.</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_NOT_SUPPORT</strong>: DAS Enterprise Edition is not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -653,14 +679,20 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:</p>
+             * <p>The current version of DAS Enterprise Edition. Valid values:</p>
              * <ul>
-             * <li><strong>SQL_LOG_V0</strong>: DAS Enterprise Edition V0.</li>
-             * <li><strong>SQL_LOG_V1</strong>: DAS Enterprise Edition V1.</li>
-             * <li><strong>SQL_LOG_V2</strong>: DAS Enterprise Edition V2.</li>
-             * <li><strong>SQL_LOG_V3</strong>: DAS Enterprise Edition V3.</li>
-             * <li><strong>SQL_LOG_NOT_ENABLE</strong>: DAS Enterprise Edition is not enabled.</li>
-             * <li><strong>SQL_LOG_NOT_SUPPORT</strong>: DAS Enterprise Edition is not supported.</li>
+             * <li><p><strong>SQL_LOG_V0</strong>: DAS Enterprise Edition V0</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V1</strong>: DAS Enterprise Edition V1</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V2</strong>: DAS Enterprise Edition V2</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_V3</strong>: DAS Enterprise Edition V3</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_NOT_ENABLE</strong>: DAS Enterprise Edition is not enabled.</p>
+             * </li>
+             * <li><p><strong>SQL_LOG_NOT_SUPPORT</strong>: DAS Enterprise Edition is not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

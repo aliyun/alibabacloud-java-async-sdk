@@ -189,7 +189,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         /**
          * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time must be later than the start time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,10 +229,14 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         /**
          * <p>The urgency level of the events. If you specify this parameter, the MinLevel parameter does not take effect. Valid values:</p>
          * <ul>
-         * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
-         * <li><strong>Optimization</strong>: events that need to be optimized.</li>
-         * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
-         * <li><strong>Critical</strong>: critical events.</li>
+         * <li><p><strong>Notice</strong>: events for which the system sends notifications.</p>
+         * </li>
+         * <li><p><strong>Optimization</strong>: events that need to be optimized.</p>
+         * </li>
+         * <li><p><strong>Warn</strong>: events for which the system sends warnings.</p>
+         * </li>
+         * <li><p><strong>Critical</strong>: critical events.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,10 +251,14 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         /**
          * <p>The minimum urgency level of the events. Valid values:</p>
          * <ul>
-         * <li><strong>Notice</strong>: events for which the system sends notifications.</li>
-         * <li><strong>Optimization</strong>: events that need to be optimized.</li>
-         * <li><strong>Warn</strong>: events for which the system sends warnings.</li>
-         * <li><strong>Critical</strong>: critical events.</li>
+         * <li><p><strong>Notice</strong>: events for which the system sends notifications.</p>
+         * </li>
+         * <li><p><strong>Optimization</strong>: events that need to be optimized.</p>
+         * </li>
+         * <li><p><strong>Warn</strong>: events for which the system sends warnings.</p>
+         * </li>
+         * <li><p><strong>Critical</strong>: critical events.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +273,7 @@ public class GetAutonomousNotifyEventsInRangeRequest extends Request {
         /**
          * <p>The ID of the node in a PolarDB for MySQL cluster. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the node ID returned by the DBNodeId response parameter.</p>
          * <blockquote>
-         * <p> You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
+         * <p>You must specify the node ID if your database instance is a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

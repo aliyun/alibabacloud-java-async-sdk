@@ -159,7 +159,7 @@ public class CreateSqlLogTaskRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The end time of the task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The filter conditions.</p>
+         * <p>The list of filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -181,7 +181,7 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pc-2ze8g2am97624****</p>
@@ -193,10 +193,10 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test01</p>
+         * <p>SQL audit export 1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -207,11 +207,11 @@ public class CreateSqlLogTaskRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</p>
+         * <p>This parameter is applicable only to cluster instances. You can specify this parameter to query the batch task of a specific node. If you do not specify this parameter, the batch task of the primary node is returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>pi-uf6k5f6g3912i0dqz</p>
+         * <p>pi-uf6k5f6g3912i****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -220,10 +220,12 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</p>
+         * <p>The node information of the PolarDB-X 2.0 database instance.</p>
          * <ul>
-         * <li><strong>polarx_cn</strong>: compute node</li>
-         * <li><strong>polarx_dn</strong>: data node</li>
+         * <li><p><strong>polarx_cn</strong>: compute node.</p>
+         * </li>
+         * <li><p><strong>polarx_dn</strong>: data node.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,7 +238,7 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</p>
+         * <p>The start time of the task. Specify the value as a UNIX timestamp. Unit: milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -249,11 +251,13 @@ public class CreateSqlLogTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The task type.</p>
          * <ul>
-         * <li><strong>Export</strong></li>
-         * <li><strong>Query</strong></li>
-         * <li><strong>Insight</strong></li>
+         * <li><strong>Export</strong>: export task.<blockquote>
+         * <p>For the filter parameters and values supported by <strong>Export</strong>, see <strong>Request parameters description</strong>.</p>
+         * </blockquote>
+         * </li>
+         * <li><strong>Query</strong>: query task.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +331,7 @@ public class CreateSqlLogTaskRequest extends Request {
             /**
              * <p>The name of the filter parameter.</p>
              * <blockquote>
-             * <p> For more information about the supported filter parameters and their valid values, see the following <strong>supplement about the Key parameter</strong>.</p>
+             * <p>For the supported filter parameters and values, see <strong>Request parameters description</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

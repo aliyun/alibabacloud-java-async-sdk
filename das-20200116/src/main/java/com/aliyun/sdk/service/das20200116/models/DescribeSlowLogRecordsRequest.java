@@ -174,7 +174,14 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * Asc.
+         * <p>Specifies whether to sort the results in ascending order. Default value: <strong>true</strong>.</p>
+         * <ul>
+         * <li><strong>true</strong>: Sort in ascending order.</li>
+         * <li><strong>false</strong>: Sort in descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder asc(Boolean asc) {
             this.putQueryParameter("Asc", asc);
@@ -183,6 +190,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The end time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +203,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * <p>The list of filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -204,6 +212,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +225,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-d9j9fe7wq7t9i****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -225,7 +237,48 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * <ul>
+         * <li><p><strong>Common to all engines</strong> </p>
+         * <ul>
+         * <li>QueryTimeSeconds: query duration (seconds).</li>
+         * <li>Timestamp: timestamp.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>SQL-based engines (MySQL / PolarDB for MySQL / PostgreSQL / PolarDB for PostgreSQL / PolarDB for Oracle / PolarDB-X DN)</strong></p>
+         * <ul>
+         * <li>LockTimeSeconds: lock time (seconds).</li>
+         * <li>RowsExamined: rows examined.</li>
+         * <li>RowsSent: rows returned.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>MongoDB</strong></p>
+         * <ul>
+         * <li>KeysExamined: number of indexes scanned.</li>
+         * <li>DocExamined: number of documents scanned.</li>
+         * <li>ReturnNum: rows returned.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>SQL Server</strong></p>
+         * <ul>
+         * <li>CPUTimeSeconds: CPU time.</li>
+         * <li>IOWrites: number of I/O writes.</li>
+         * <li>LastRowsCountAffected: last rows affected.</li>
+         * <li>LogicalIOReads: logical I/O reads.</li>
+         * <li>PhysicalIOReads: physical I/O reads.</li>
+         * <li>RowsCountAffected: rows affected.</li>
+         * </ul>
+         * </li>
+         * <li><p><strong>PolarDB-X CN</strong></p>
+         * <ul>
+         * <li>RowsSent: rows returned or updated.</li>
+         * <li>Frows: rows fetched.</li>
+         * <li>Scnt: number of physical SQL statements.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>QueryTimeSeconds</p>
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -234,7 +287,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Pages start from page 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -243,7 +299,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -252,6 +311,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
+         * <p>The start time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -323,7 +383,13 @@ public class DescribeSlowLogRecordsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The filter parameter.</p>
+             * <blockquote>
+             * <p>For more information, refer to the supplementary description.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -331,7 +397,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the filter parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder value(String value) {
                 this.value = value;

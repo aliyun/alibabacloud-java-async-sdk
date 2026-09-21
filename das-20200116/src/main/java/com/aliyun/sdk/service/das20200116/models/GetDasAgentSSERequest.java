@@ -102,7 +102,10 @@ public class GetDasAgentSSERequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>Optional. By default, the default agent is used. You can also specify an agent that was generated after enabling the DAS Agent service or an agent that you manually created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-472T0DxtmjIxxxxx</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -111,7 +114,10 @@ public class GetDasAgentSSERequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Deprecated parameter. The instance ID is passed through the Query field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,6 +126,7 @@ public class GetDasAgentSSERequest extends Request {
         }
 
         /**
+         * <p>The natural language description for the query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +139,10 @@ public class GetDasAgentSSERequest extends Request {
         }
 
         /**
-         * SessionId.
+         * <p>Optional. The session ID in UUID string format. If not specified, a new session is created. To maintain context across conversations, use the same session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

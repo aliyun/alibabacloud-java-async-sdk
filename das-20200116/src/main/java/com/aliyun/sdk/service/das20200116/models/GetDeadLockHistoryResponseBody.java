@@ -119,7 +119,10 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The returned status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,54 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned as a JSON string.</p>
+         * <ul>
+         * <li><p>total: The total number of deadlocks.</p>
+         * </li>
+         * <li><p>list: The list of deadlocks.</p>
+         * <ul>
+         * <li><p>accountId: The user ID.</p>
+         * </li>
+         * <li><p>textId: The text ID of the deadlock.</p>
+         * </li>
+         * <li><p>gmtModified: The time when the diagnostics were generated.</p>
+         * </li>
+         * <li><p>lockTime: The time when the deadlock occurred.</p>
+         * </li>
+         * <li><p>gmtCreate: The time when the diagnostics were created.</p>
+         * </li>
+         * <li><p>nodeId: The node ID.</p>
+         * </li>
+         * <li><p>uuid: The instance ID.</p>
+         * </li>
+         * </ul>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;total&quot;: 2,
+         *     &quot;list&quot;: [
+         *         {
+         *             &quot;accountId&quot;: &quot;108************&quot;,
+         *             &quot;textId&quot;: &quot;35303d12d52d29ba73bb85fa2d5b****&quot;,
+         *             &quot;gmtModified&quot;: 1732712680000,
+         *             &quot;lockTime&quot;: 1732687047000,
+         *             &quot;gmtCreate&quot;: 1732712680000,
+         *             &quot;nodeId&quot;: &quot;pi-8****************&quot;,
+         *             &quot;uuid&quot;: &quot;pc-8v**************&quot;
+         *         },
+         *         {
+         *             &quot;accountId&quot;: &quot;108************&quot;,
+         *             &quot;textId&quot;: &quot;50a24bdcc5fe7e03f92a55ae7574****&quot;,
+         *             &quot;gmtModified&quot;: 1732626448000,
+         *             &quot;lockTime&quot;: 1722500305000,
+         *             &quot;gmtCreate&quot;: 1732626448000,
+         *             &quot;nodeId&quot;: &quot;pi-8****************&quot;,
+         *             &quot;uuid&quot;: &quot;pc-8v**************&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -135,7 +185,13 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * <blockquote>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +199,10 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +210,16 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: The request was successful.</p>
+         * </li>
+         * <li><p><strong>false</strong>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(String success) {
             this.success = success;
@@ -159,7 +227,10 @@ public class GetDeadLockHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * Synchro.
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder synchro(String synchro) {
             this.synchro = synchro;

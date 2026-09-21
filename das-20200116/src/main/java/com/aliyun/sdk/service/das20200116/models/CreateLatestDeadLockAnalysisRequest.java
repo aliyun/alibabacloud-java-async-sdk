@@ -74,6 +74,7 @@ public class CreateLatestDeadLockAnalysisRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,13 @@ public class CreateLatestDeadLockAnalysisRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p>For PolarDB for MySQL instances, you must specify the node ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp16v3824rt73****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);

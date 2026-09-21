@@ -143,7 +143,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         } 
 
         /**
-         * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the query. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1608888296000</p>
@@ -155,7 +155,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The filter parameters.</p>
+         * <p>The list of query filter conditions.</p>
          */
         public Builder filters(java.util.List<Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -164,7 +164,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>r-bp1nti25tc7bq5****</p>
@@ -178,11 +178,11 @@ public class DescribeSqlLogTasksRequest extends Request {
         /**
          * <p>The node ID.</p>
          * <blockquote>
-         * <p> This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.</p>
+         * <p>This parameter is applicable only to Cluster Edition instances. You can specify a node to query its batch tasks. If you do not specify this parameter, the batch tasks of the primary node are returned by default.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>pi-bp1o58x3ib7e6z496</p>
+         * <p>pi-bp1o58x3ib7e6****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -191,7 +191,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The page number for the paging query. Pages start from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -203,7 +203,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * <p>The maximum number of records per page. Maximum value: 100. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -215,7 +215,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the query. Specify a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1596177993000</p>
@@ -286,13 +286,13 @@ public class DescribeSqlLogTasksRequest extends Request {
             } 
 
             /**
-             * <p>The name of the filter parameter.</p>
+             * <p>The filter parameter.</p>
              * <blockquote>
-             * <p> For more information about the filter parameters, see the <strong>Valid values of Key</strong> section of this topic.</p>
+             * <p>For supported filter parameters and their values, refer to <strong>Supplementary description of request parameters</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>delimiter</p>
+             * <p>keyWords</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -303,7 +303,7 @@ public class DescribeSqlLogTasksRequest extends Request {
              * <p>The value of the filter parameter.</p>
              * 
              * <strong>example:</strong>
-             * <p>,</p>
+             * <p>select</p>
              */
             public Builder value(String value) {
                 this.value = value;

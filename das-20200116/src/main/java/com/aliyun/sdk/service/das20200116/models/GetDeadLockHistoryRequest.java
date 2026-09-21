@@ -146,6 +146,11 @@ public class GetDeadLockHistoryRequest extends Request {
         } 
 
         /**
+         * <p>The end time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is a Long value. To prevent precision loss during serialization and deserialization, make sure that the value does not exceed 9007199254740991.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +163,7 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +176,13 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * <p>The node ID.</p>
+         * <blockquote>
+         * <p>Specify the node ID for a PolarDB for MySQL instance.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pi-bp16v3824rt73****</p>
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -179,7 +191,10 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +203,10 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. The maximum value is <strong>100</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +215,20 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
-         * Source.
+         * <p>The source of the task:</p>
+         * <ul>
+         * <li><p><strong>MANUAL</strong> or unspecified: queries tasks for recent deadlock analysis.</p>
+         * </li>
+         * <li><p><strong>AUTO</strong>: queries tasks for full deadlock analysis.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>If you set this parameter to AUTO to query tasks for full deadlock analysis, the start time can be a maximum of seven days earlier than the end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -206,6 +237,11 @@ public class GetDeadLockHistoryRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>This parameter is a Long value. To prevent precision loss during serialization and deserialization, make sure that the value does not exceed 9007199254740991.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,10 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
         } 
 
         /**
-         * AgentId.
+         * <p>The ID of the agent that the user purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ag-472T0DxtmjIxxxxx</p>
          */
         public Builder agentId(String agentId) {
             this.putQueryParameter("AgentId", agentId);
@@ -97,6 +100,7 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
         }
 
         /**
+         * <p>The ID of the operations report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +113,10 @@ public class GetInstanceGroupInspectReportDetailRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * <p>The type of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>daily</p>
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);

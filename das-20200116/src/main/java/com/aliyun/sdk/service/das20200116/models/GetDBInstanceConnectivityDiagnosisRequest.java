@@ -92,7 +92,7 @@ public class GetDBInstanceConnectivityDiagnosisRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>47.110.180.62</p>
+         * <p>47.100.XX.XX</p>
          */
         public Builder srcIp(String srcIp) {
             this.putQueryParameter("SrcIp", srcIp);

@@ -118,7 +118,7 @@ public class DescribeTopHotKeysRequest extends Request {
         } 
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,17 +130,17 @@ public class DescribeTopHotKeysRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end of the query time range, specified as a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
          * <li><p>The end time must be later than the start time.</p>
          * </li>
-         * <li><p>Only data within the last four days can be queried.</p>
+         * <li><p>You can query data within the last four days.</p>
          * </li>
-         * <li><p>The maximum interval between the <strong>start time</strong> and the** end time** is 3 hours.</p>
+         * <li><p>The maximum time interval between <strong>StartTime</strong> and <strong>EndTime</strong> is three hours.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class DescribeTopHotKeysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraDB for Redis instance.</p>
+         * <p>The ID of the Redis instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class DescribeTopHotKeysRequest extends Request {
         }
 
         /**
-         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+         * <p>The ID of the data shard of the Redis instance.</p>
          * 
          * <strong>example:</strong>
          * <p>r-****-db-0</p>
@@ -178,7 +178,7 @@ public class DescribeTopHotKeysRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start of the query time range, specified as a UNIX timestamp in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

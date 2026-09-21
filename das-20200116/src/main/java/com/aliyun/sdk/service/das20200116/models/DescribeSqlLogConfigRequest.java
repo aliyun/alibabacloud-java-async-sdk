@@ -60,7 +60,7 @@ public class DescribeSqlLogConfigRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the database instance.</p>
+         * <p>The database instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

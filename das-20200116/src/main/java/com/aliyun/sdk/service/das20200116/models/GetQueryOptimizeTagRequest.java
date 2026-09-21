@@ -92,9 +92,9 @@ public class GetQueryOptimizeTagRequest extends Request {
         /**
          * <p>The database engine. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong>: ApsaraDB RDS for MySQL</li>
+         * <li><strong>MySQL</strong>: RDS MySQL</li>
          * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
-         * <li><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</li>
+         * <li><strong>PostgreSQL</strong>: RDS PostgreSQL</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,11 +121,12 @@ public class GetQueryOptimizeTagRequest extends Request {
         }
 
         /**
-         * <p>The SQL template ID. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
+         * <p>The SQL template ID.
+         * You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>29d9fef63e347d39c3436658a5fe5f2b</p>
+         * <p>29d9fef63e347d39c3436658a5fe****</p>
          */
         public Builder sqlId(String sqlId) {
             this.putQueryParameter("SqlId", sqlId);

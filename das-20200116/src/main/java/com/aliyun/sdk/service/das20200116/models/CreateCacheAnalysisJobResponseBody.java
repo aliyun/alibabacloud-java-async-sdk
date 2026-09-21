@@ -106,7 +106,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,7 +117,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The detailed information.</p>
+         * <p>The details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -127,7 +127,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         /**
          * <p>The returned message.</p>
          * <blockquote>
-         * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -150,9 +150,9 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
          * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
@@ -301,10 +301,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of bytes that are occupied by the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12345</p>
+             * Bytes.
              */
             public Builder bytes(Long bytes) {
                 this.bytes = bytes;
@@ -312,10 +309,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of elements in the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>127</p>
+             * Count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -323,10 +317,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Db.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -334,10 +325,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hashtable</p>
+             * Encoding.
              */
             public Builder encoding(String encoding) {
                 this.encoding = encoding;
@@ -345,10 +333,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1596256542547</p>
+             * ExpirationTimeMillis.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -356,10 +341,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>task_x****</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -367,10 +349,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data node on the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>r-x****-db-0</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -378,10 +357,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data type of the ApsaraDB for Redis instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hash</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -554,7 +530,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of elements in the key.</p>
+             * BigKeys.
              */
             public Builder bigKeys(BigKeys bigKeys) {
                 this.bigKeys = bigKeys;
@@ -573,9 +549,9 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cache analysis task.</p>
+             * <p>The ID of query cache analysis task.</p>
              * <blockquote>
-             * <p> This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</p>
+             * <p>You can use this parameter to query query cache analysis task. Because creating a cache analysis task takes some time, the analysis result is not immediately returned when you call this operation. Use this parameter together with the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis result.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -589,7 +565,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             /**
              * <p>The returned message.</p>
              * <blockquote>
-             * <p> If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+             * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -601,7 +577,7 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the data node on the instance.</p>
+             * <p>The ID of the data node in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>r-x****-db-0</p>
@@ -612,11 +588,11 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cache analysis task. Valid values:</p>
+             * <p>The status of the cache analysis task. Valid values:</p>
              * <ul>
-             * <li><strong>BACKUP</strong>: The data is being backed up.</li>
-             * <li><strong>ANALYZING</strong>: The data is being analyzed.</li>
-             * <li><strong>FINISHED</strong>: The data is analyzed.</li>
+             * <li><strong>BACKUP</strong>: The system is performing a backup.</li>
+             * <li><strong>ANALYZING</strong>: The system is analyzing the backup file.</li>
+             * <li><strong>FINISHED</strong>: The analysis is complete.</li>
              * <li><strong>FAILED</strong>: An error occurred.</li>
              * </ul>
              * 

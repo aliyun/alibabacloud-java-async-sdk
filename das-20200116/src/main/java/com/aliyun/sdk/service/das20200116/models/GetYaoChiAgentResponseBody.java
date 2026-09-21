@@ -171,7 +171,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The response content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -179,7 +182,7 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * FunctionCall.
+         * <p>The tool calling invoke list.</p>
          */
         public Builder functionCall(java.util.List<FunctionCall> functionCall) {
             this.functionCall = functionCall;
@@ -187,7 +190,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ParentId.
+         * <p>The ParentId field. This field exists only when the message is output by a sub-agent, and the value is the sub-agent ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder parentId(String parentId) {
             this.parentId = parentId;
@@ -195,7 +201,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Product.
+         * <p>The cloud service type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb</p>
          */
         public Builder product(String product) {
             this.product = product;
@@ -203,7 +212,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * QueryId.
+         * <p>The query ID. This value is the same as the QueryId request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
          */
         public Builder queryId(String queryId) {
             this.queryId = queryId;
@@ -211,7 +223,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * ReasoningContent.
+         * <p>The reasoning content of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder reasoningContent(String reasoningContent) {
             this.reasoningContent = reasoningContent;
@@ -219,7 +234,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7172BECE-588A-5961-8126-C216E16B****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -227,7 +245,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID. This value is the same as the SessionId request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -235,7 +256,7 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * SubAgentCall.
+         * <p>The list of sub-agent call information.</p>
          */
         public Builder subAgentCall(java.util.List<SubAgentCall> subAgentCall) {
             this.subAgentCall = subAgentCall;
@@ -243,7 +264,7 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
         }
 
         /**
-         * UiFunctionCall.
+         * <p>The card tool calling invoke list.</p>
          */
         public Builder uiFunctionCall(java.util.List<UiFunctionCall> uiFunctionCall) {
             this.uiFunctionCall = uiFunctionCall;
@@ -335,7 +356,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Arguments.
+             * <p>The parameters of the called tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;arg&quot;: &quot;xxx&quot;}</p>
              */
             public Builder arguments(String arguments) {
                 this.arguments = arguments;
@@ -343,7 +367,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -351,7 +378,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the called tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sqlReview</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -359,7 +389,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The tool calling invoke status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -439,7 +472,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The sub-agent status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -447,7 +483,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SubAgentId.
+             * <p>The sub-agent ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder subAgentId(String subAgentId) {
                 this.subAgentId = subAgentId;
@@ -455,7 +494,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * SubAgentName.
+             * <p>The sub-agent name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XX Agent</p>
              */
             public Builder subAgentName(String subAgentName) {
                 this.subAgentName = subAgentName;
@@ -522,7 +564,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * ArgsText.
+             * <p>The parameters of the card tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;arg&quot;: &quot;xxx&quot;}</p>
              */
             public Builder argsText(String argsText) {
                 this.argsText = argsText;
@@ -530,7 +575,10 @@ public class GetYaoChiAgentResponseBody extends TeaModel {
             }
 
             /**
-             * ToolName.
+             * <p>The name of the card tool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>card</p>
              */
             public Builder toolName(String toolName) {
                 this.toolName = toolName;
