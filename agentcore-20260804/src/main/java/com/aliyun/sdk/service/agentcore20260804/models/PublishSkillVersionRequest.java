@@ -166,10 +166,14 @@ public class PublishSkillVersionRequest extends Request {
      * <p>PublishSkillVersionRequest</p>
      */
     public static class PublishSkillVersionRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("commitMsg")
+        private String commitMsg;
+
         @com.aliyun.core.annotation.NameInMap("updateLatestLabel")
         private Boolean updateLatestLabel;
 
         private PublishSkillVersionRequestBody(Builder builder) {
+            this.commitMsg = builder.commitMsg;
             this.updateLatestLabel = builder.updateLatestLabel;
         }
 
@@ -182,6 +186,13 @@ public class PublishSkillVersionRequest extends Request {
         }
 
         /**
+         * @return commitMsg
+         */
+        public String getCommitMsg() {
+            return this.commitMsg;
+        }
+
+        /**
          * @return updateLatestLabel
          */
         public Boolean getUpdateLatestLabel() {
@@ -189,14 +200,27 @@ public class PublishSkillVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private String commitMsg; 
             private Boolean updateLatestLabel; 
 
             private Builder() {
             } 
 
             private Builder(PublishSkillVersionRequestBody model) {
+                this.commitMsg = model.commitMsg;
                 this.updateLatestLabel = model.updateLatestLabel;
             } 
+
+            /**
+             * <p>The commit message recorded on the official version produced by this publish operation. Takes effect in HEAD draft mode. If left empty, the draft message is used. Ignored in version Draft mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First official version</p>
+             */
+            public Builder commitMsg(String commitMsg) {
+                this.commitMsg = commitMsg;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to update the latest label.</p>

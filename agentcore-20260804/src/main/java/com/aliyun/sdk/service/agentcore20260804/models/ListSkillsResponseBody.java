@@ -155,6 +155,9 @@ public class ListSkillsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("downloadCount")
         private Long downloadCount;
 
+        @com.aliyun.core.annotation.NameInMap("draftMode")
+        private String draftMode;
+
         @com.aliyun.core.annotation.NameInMap("editingVersion")
         private String editingVersion;
 
@@ -195,6 +198,7 @@ public class ListSkillsResponseBody extends TeaModel {
             this.bizTags = builder.bizTags;
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
+            this.draftMode = builder.draftMode;
             this.editingVersion = builder.editingVersion;
             this.enable = builder.enable;
             this.from = builder.from;
@@ -236,6 +240,13 @@ public class ListSkillsResponseBody extends TeaModel {
          */
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        /**
+         * @return draftMode
+         */
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         /**
@@ -326,6 +337,7 @@ public class ListSkillsResponseBody extends TeaModel {
             private String bizTags; 
             private String description; 
             private Long downloadCount; 
+            private String draftMode; 
             private String editingVersion; 
             private Boolean enable; 
             private String from; 
@@ -346,6 +358,7 @@ public class ListSkillsResponseBody extends TeaModel {
                 this.bizTags = model.bizTags;
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
+                this.draftMode = model.draftMode;
                 this.editingVersion = model.editingVersion;
                 this.enable = model.enable;
                 this.from = model.from;
@@ -390,6 +403,14 @@ public class ListSkillsResponseBody extends TeaModel {
              */
             public Builder downloadCount(Long downloadCount) {
                 this.downloadCount = downloadCount;
+                return this;
+            }
+
+            /**
+             * draftMode.
+             */
+            public Builder draftMode(String draftMode) {
+                this.draftMode = draftMode;
                 return this;
             }
 

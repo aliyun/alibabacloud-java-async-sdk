@@ -104,6 +104,9 @@ public class GetSkillDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("commitMsg")
         private String commitMsg;
 
+        @com.aliyun.core.annotation.NameInMap("contentMd5")
+        private String contentMd5;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
@@ -128,6 +131,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         private Versions(Builder builder) {
             this.author = builder.author;
             this.commitMsg = builder.commitMsg;
+            this.contentMd5 = builder.contentMd5;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
@@ -157,6 +161,13 @@ public class GetSkillDetailResponseBody extends TeaModel {
          */
         public String getCommitMsg() {
             return this.commitMsg;
+        }
+
+        /**
+         * @return contentMd5
+         */
+        public String getContentMd5() {
+            return this.contentMd5;
         }
 
         /**
@@ -211,6 +222,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String author; 
             private String commitMsg; 
+            private String contentMd5; 
             private Long createTime; 
             private String description; 
             private Long downloadCount; 
@@ -225,6 +237,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             private Builder(Versions model) {
                 this.author = model.author;
                 this.commitMsg = model.commitMsg;
+                this.contentMd5 = model.contentMd5;
                 this.createTime = model.createTime;
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
@@ -257,6 +270,17 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The MD5 checksum of the Skill content package for this version, used to verify content consistency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9e107d9d372bb6826bd81d3542a419d6</p>
+             */
+            public Builder contentMd5(String contentMd5) {
+                this.contentMd5 = contentMd5;
+                return this;
+            }
+
+            /**
              * <p>The creation time. This value is a UNIX timestamp in milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -279,7 +303,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download count.</p>
+             * <p>The number of downloads.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -356,6 +380,9 @@ public class GetSkillDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("downloadCount")
         private Long downloadCount;
 
+        @com.aliyun.core.annotation.NameInMap("draftMode")
+        private String draftMode;
+
         @com.aliyun.core.annotation.NameInMap("editingVersion")
         private String editingVersion;
 
@@ -399,6 +426,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             this.bizTags = builder.bizTags;
             this.description = builder.description;
             this.downloadCount = builder.downloadCount;
+            this.draftMode = builder.draftMode;
             this.editingVersion = builder.editingVersion;
             this.enable = builder.enable;
             this.from = builder.from;
@@ -441,6 +469,13 @@ public class GetSkillDetailResponseBody extends TeaModel {
          */
         public Long getDownloadCount() {
             return this.downloadCount;
+        }
+
+        /**
+         * @return draftMode
+         */
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         /**
@@ -538,6 +573,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             private String bizTags; 
             private String description; 
             private Long downloadCount; 
+            private String draftMode; 
             private String editingVersion; 
             private Boolean enable; 
             private String from; 
@@ -559,6 +595,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
                 this.bizTags = model.bizTags;
                 this.description = model.description;
                 this.downloadCount = model.downloadCount;
+                this.draftMode = model.draftMode;
                 this.editingVersion = model.editingVersion;
                 this.enable = model.enable;
                 this.from = model.from;
@@ -575,7 +612,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The business tag JSON array string.</p>
+             * <p>The business label JSON array string.</p>
              * 
              * <strong>example:</strong>
              * <p>Sample property value</p>
@@ -608,7 +645,18 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version currently being edited.</p>
+             * <p>The draft pattern. HEAD indicates that the Skill has a persistent draft. VERSIONED indicates that each edit creates a draft with a version number. The server determines the pattern, and the invoker uses it for routing what to do next.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEAD</p>
+             */
+            public Builder draftMode(String draftMode) {
+                this.draftMode = draftMode;
+                return this;
+            }
+
+            /**
+             * <p>The version being edited.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -679,7 +727,7 @@ public class GetSkillDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version currently under review.</p>
+             * <p>The version under review.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

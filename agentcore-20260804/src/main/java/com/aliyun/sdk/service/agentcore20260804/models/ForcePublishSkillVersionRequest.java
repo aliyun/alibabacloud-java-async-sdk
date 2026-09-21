@@ -166,10 +166,14 @@ public class ForcePublishSkillVersionRequest extends Request {
      * <p>ForcePublishSkillVersionRequest</p>
      */
     public static class ForcePublishSkillVersionRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("commitMsg")
+        private String commitMsg;
+
         @com.aliyun.core.annotation.NameInMap("updateLatestLabel")
         private Boolean updateLatestLabel;
 
         private ForcePublishSkillVersionRequestBody(Builder builder) {
+            this.commitMsg = builder.commitMsg;
             this.updateLatestLabel = builder.updateLatestLabel;
         }
 
@@ -182,6 +186,13 @@ public class ForcePublishSkillVersionRequest extends Request {
         }
 
         /**
+         * @return commitMsg
+         */
+        public String getCommitMsg() {
+            return this.commitMsg;
+        }
+
+        /**
          * @return updateLatestLabel
          */
         public Boolean getUpdateLatestLabel() {
@@ -189,14 +200,27 @@ public class ForcePublishSkillVersionRequest extends Request {
         }
 
         public static final class Builder {
+            private String commitMsg; 
             private Boolean updateLatestLabel; 
 
             private Builder() {
             } 
 
             private Builder(ForcePublishSkillVersionRequestBody model) {
+                this.commitMsg = model.commitMsg;
                 this.updateLatestLabel = model.updateLatestLabel;
             } 
+
+            /**
+             * <p>The commit message recorded on the release version produced by this publish operation. Takes effect in HEAD draft mode. If left empty, the draft message is used. Ignored in version Draft mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>First release version</p>
+             */
+            public Builder commitMsg(String commitMsg) {
+                this.commitMsg = commitMsg;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to update the latest label.</p>

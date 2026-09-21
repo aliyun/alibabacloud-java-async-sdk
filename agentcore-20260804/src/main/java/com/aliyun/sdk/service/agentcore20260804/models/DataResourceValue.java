@@ -17,23 +17,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataResourceValue</p>
  */
 public class DataResourceValue extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("name")
-    private String name;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
-
     @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
     @com.aliyun.core.annotation.NameInMap("metadata")
     private java.util.Map<String, ?> metadata;
 
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     private DataResourceValue(Builder builder) {
-        this.name = builder.name;
-        this.type = builder.type;
         this.content = builder.content;
         this.metadata = builder.metadata;
+        this.name = builder.name;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -46,20 +46,6 @@ public class DataResourceValue extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return this.name;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
     }
 
     /**
@@ -76,21 +62,54 @@ public class DataResourceValue extends TeaModel {
         return this.metadata;
     }
 
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder {
-        private String name; 
-        private String type; 
         private String content; 
         private java.util.Map<String, ?> metadata; 
+        private String name; 
+        private String type; 
 
         private Builder() {
         } 
 
         private Builder(DataResourceValue model) {
-            this.name = model.name;
-            this.type = model.type;
             this.content = model.content;
             this.metadata = model.metadata;
+            this.name = model.name;
+            this.type = model.type;
         } 
+
+        /**
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample content</p>
+         */
+        public Builder content(String content) {
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * <p>The metadata.</p>
+         */
+        public Builder metadata(java.util.Map<String, ?> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
 
         /**
          * <p>The name.</p>
@@ -111,25 +130,6 @@ public class DataResourceValue extends TeaModel {
          */
         public Builder type(String type) {
             this.type = type;
-            return this;
-        }
-
-        /**
-         * <p>The content.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Sample content</p>
-         */
-        public Builder content(String content) {
-            this.content = content;
-            return this;
-        }
-
-        /**
-         * <p>The metadata.</p>
-         */
-        public Builder metadata(java.util.Map<String, ?> metadata) {
-            this.metadata = metadata;
             return this;
         }
 

@@ -254,7 +254,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</p>
      * 
      * @param request the request parameters of DeleteSkill  DeleteSkillRequest
@@ -333,8 +333,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
-     * <p>Skips the regular review process and forcibly publishes the specified Skill version.</p>
+     * <h2>Operation description</h2>
+     * <p>Skips the regular review process and forcibly publishes a specified Skill version.</p>
      * 
      * @param request the request parameters of ForcePublishSkillVersion  ForcePublishSkillVersionRequest
      * @return ForcePublishSkillVersionResponse
@@ -540,6 +540,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>The workspace determines the account, region, and shared role. The resource ARN is constructed based on the specified fileSystemId and accessPointId. The server parameter is used to generate the policy name. This operation does not query NAS or check resource status. The response contains only the authorization URL for the target NAS policy. After completing RAM authorization, call the verification operation.</p>
+     * 
+     * @param request the request parameters of GetWorkspaceAgenticFsMountRamAuthorizeUrl  GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest
+     * @return GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse
+     */
+    CompletableFuture<GetWorkspaceAgenticFsMountRamAuthorizeUrlResponse> getWorkspaceAgenticFsMountRamAuthorizeUrl(GetWorkspaceAgenticFsMountRamAuthorizeUrlRequest request);
+
+    /**
+     * <b>description</b> :
      * <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
      * 
      * @param request the request parameters of GetWorkspacePlugin  GetWorkspacePluginRequest
@@ -577,7 +586,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</p>
+     * <p>Queries AgentSpec resources in a specified workspace by using paging, and supports name-based search, sorting, and filtering by owner, visibility scope, and business labels.</p>
      * 
      * @param request the request parameters of ListAgentSpecs  ListAgentSpecsRequest
      * @return ListAgentSpecsResponse
@@ -725,6 +734,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceEndpointsResponse> listServiceEndpoints(ListServiceEndpointsRequest request);
 
     /**
+     * @param request the request parameters of ListSkillReferences  ListSkillReferencesRequest
+     * @return ListSkillReferencesResponse
+     */
+    CompletableFuture<ListSkillReferencesResponse> listSkillReferences(ListSkillReferencesRequest request);
+
+    /**
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
@@ -757,7 +772,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</p>
      * 
      * @param request the request parameters of OfflineSkill  OfflineSkillRequest
@@ -777,7 +792,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</p>
      * 
      * @param request the request parameters of PrecheckSkillUploadViaOss  PrecheckSkillUploadViaOssRequest
@@ -788,7 +803,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Publishes a specified Skill version to change its state to published.</p>
+     * <p>Publishes a specified Skill version to transition it to the published state.</p>
      * 
      * @param request the request parameters of PublishSkillVersion  PublishSkillVersionRequest
      * @return PublishSkillVersionResponse
@@ -946,7 +961,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Updates the version labels and their mappings for a specified Skill.</p>
      * 
      * @param request the request parameters of UpdateSkillLabels  UpdateSkillLabelsRequest
@@ -1022,6 +1037,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return VerifyWorkspaceAcrRamAuthorizationResponse
      */
     CompletableFuture<VerifyWorkspaceAcrRamAuthorizationResponse> verifyWorkspaceAcrRamAuthorization(VerifyWorkspaceAcrRamAuthorizationRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Determines the shared role and target access point based on the workspace and server, checks whether the role has a mounted policy with the expected name and a type of Custom, and returns AUTHORIZED or UNAUTHORIZED. Consistent with OSS/ACR, this operation does not verify the policy body, role trust, or actual mount read/write permissions. If the upstream query fails, an error is returned.</p>
+     * 
+     * @param request the request parameters of VerifyWorkspaceAgenticFsMountRamAuthorization  VerifyWorkspaceAgenticFsMountRamAuthorizationRequest
+     * @return VerifyWorkspaceAgenticFsMountRamAuthorizationResponse
+     */
+    CompletableFuture<VerifyWorkspaceAgenticFsMountRamAuthorizationResponse> verifyWorkspaceAgenticFsMountRamAuthorization(VerifyWorkspaceAgenticFsMountRamAuthorizationRequest request);
 
     /**
      * <b>description</b> :

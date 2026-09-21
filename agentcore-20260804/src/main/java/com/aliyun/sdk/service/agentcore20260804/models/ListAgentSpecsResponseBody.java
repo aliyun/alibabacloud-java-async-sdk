@@ -154,12 +154,105 @@ public class ListAgentSpecsResponseBody extends TeaModel {
      *
      * <p>ListAgentSpecsResponseBody</p>
      */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The version selector type. Valid values:</p>
+             * <ul>
+             * <li>LABEL: selects by label.</li>
+             * <li>VERSION: selects by specific version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAgentSpecsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentSpecsResponseBody</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
+            this.sourceType = builder.sourceType;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -177,14 +270,32 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
+            private String sourceType; 
+            private VersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
                 this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -195,6 +306,29 @@ public class ListAgentSpecsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The Skill source type. Valid values:</p>
+             * <ul>
+             * <li>REFERENCE: references the AI Registry.</li>
+             * <li>STATIC: statically bundled with the package.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * <p>The referenced version selector. If omitted, the default value is LABEL/latest.</p>
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -447,7 +581,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version currently being edited.</p>
+             * <p>The version that is currently being edited.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -515,7 +649,7 @@ public class ListAgentSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version currently under review.</p>
+             * <p>The version that is currently under review.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>

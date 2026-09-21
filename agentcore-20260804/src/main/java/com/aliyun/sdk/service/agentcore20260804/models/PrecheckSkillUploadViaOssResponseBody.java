@@ -67,7 +67,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned data.</p>
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -98,6 +98,9 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
      * <p>PrecheckSkillUploadViaOssResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("draftMode")
+        private String draftMode;
+
         @com.aliyun.core.annotation.NameInMap("editingVersion")
         private String editingVersion;
 
@@ -106,6 +109,12 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("exists")
         private Boolean exists;
+
+        @com.aliyun.core.annotation.NameInMap("headRevision")
+        private String headRevision;
+
+        @com.aliyun.core.annotation.NameInMap("headStatus")
+        private String headStatus;
 
         @com.aliyun.core.annotation.NameInMap("maxPublishedVersion")
         private String maxPublishedVersion;
@@ -135,9 +144,12 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         private String workspaceId;
 
         private Data(Builder builder) {
+            this.draftMode = builder.draftMode;
             this.editingVersion = builder.editingVersion;
             this.entryPath = builder.entryPath;
             this.exists = builder.exists;
+            this.headRevision = builder.headRevision;
+            this.headStatus = builder.headStatus;
             this.maxPublishedVersion = builder.maxPublishedVersion;
             this.owner = builder.owner;
             this.parsedVersion = builder.parsedVersion;
@@ -155,6 +167,13 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return draftMode
+         */
+        public String getDraftMode() {
+            return this.draftMode;
         }
 
         /**
@@ -176,6 +195,20 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
          */
         public Boolean getExists() {
             return this.exists;
+        }
+
+        /**
+         * @return headRevision
+         */
+        public String getHeadRevision() {
+            return this.headRevision;
+        }
+
+        /**
+         * @return headStatus
+         */
+        public String getHeadStatus() {
+            return this.headStatus;
         }
 
         /**
@@ -242,9 +275,12 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String draftMode; 
             private String editingVersion; 
             private String entryPath; 
             private Boolean exists; 
+            private String headRevision; 
+            private String headStatus; 
             private String maxPublishedVersion; 
             private String owner; 
             private String parsedVersion; 
@@ -259,9 +295,12 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.draftMode = model.draftMode;
                 this.editingVersion = model.editingVersion;
                 this.entryPath = model.entryPath;
                 this.exists = model.exists;
+                this.headRevision = model.headRevision;
+                this.headStatus = model.headStatus;
                 this.maxPublishedVersion = model.maxPublishedVersion;
                 this.owner = model.owner;
                 this.parsedVersion = model.parsedVersion;
@@ -272,6 +311,17 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
                 this.targetVersion = model.targetVersion;
                 this.workspaceId = model.workspaceId;
             } 
+
+            /**
+             * <p>The draft mode: HEAD or VERSIONED, determined by the server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HEAD</p>
+             */
+            public Builder draftMode(String draftMode) {
+                this.draftMode = draftMode;
+                return this;
+            }
 
             /**
              * <p>The version currently being edited.</p>
@@ -300,6 +350,28 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
              */
             public Builder exists(Boolean exists) {
                 this.exists = exists;
+                return this;
+            }
+
+            /**
+             * <p>The content revision identifier of the persistent draft, used to determine whether the local cache has expired. Returned only in HEAD draft mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rev-1a2b3c4d</p>
+             */
+            public Builder headRevision(String headRevision) {
+                this.headRevision = headRevision;
+                return this;
+            }
+
+            /**
+             * <p>The status of the persistent draft: draft, reviewing, or reviewed. Returned only in HEAD draft mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>draft</p>
+             */
+            public Builder headStatus(String headStatus) {
+                this.headStatus = headStatus;
                 return this;
             }
 
@@ -337,7 +409,7 @@ public class PrecheckSkillUploadViaOssResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pre-check result code.</p>
+             * <p>The dry run result code.</p>
              * 
              * <strong>example:</strong>
              * <p>VALIDATION_FAILED</p>

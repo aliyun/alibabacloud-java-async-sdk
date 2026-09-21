@@ -199,7 +199,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The AgentSpec name used as a search keyword. Use this parameter together with the search parameter.</p>
+         * <p>The AgentSpec name used as a search keyword. This parameter is used together with the search parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>my-worker</p>
@@ -223,7 +223,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The field by which to sort results. Set this parameter to download_count to sort by download count. By default, results are sorted by update time.</p>
+         * <p>The field by which to sort the results. Set the value to download_count to sort by download count. By default, results are sorted by update time.</p>
          * 
          * <strong>example:</strong>
          * <p>download_count</p>
@@ -235,7 +235,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The owner used to filter results.</p>
+         * <p>The owner used to filter the results.</p>
          * 
          * <strong>example:</strong>
          * <p>user1</p>
@@ -271,7 +271,7 @@ public class ListAgentSpecsRequest extends Request {
         }
 
         /**
-         * <p>The visibility scope used to filter results. Valid values:</p>
+         * <p>The visibility scope used to filter the results. Valid values:</p>
          * <ul>
          * <li>PUBLIC</li>
          * <li>PRIVATE</li>

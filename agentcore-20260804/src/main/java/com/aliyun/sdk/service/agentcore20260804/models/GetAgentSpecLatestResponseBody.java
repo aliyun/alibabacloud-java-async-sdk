@@ -154,12 +154,95 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
      *
      * <p>GetAgentSpecLatestResponseBody</p>
      */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAgentSpecLatestResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentSpecLatestResponseBody</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
+            this.sourceType = builder.sourceType;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -177,14 +260,32 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
+            private String sourceType; 
+            private VersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
                 this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -195,6 +296,22 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * versionSelector.
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 

@@ -138,7 +138,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code. A value of 200 indicates success.</p>
+         * <p>The HTTP status code. The value 200 indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -187,6 +187,331 @@ public class GetManagedAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedAgentResponseBody</p>
+     */
+    public static class AgenticFsMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("readOnly")
+        private Boolean readOnly;
+
+        @com.aliyun.core.annotation.NameInMap("server")
+        private String server;
+
+        private AgenticFsMounts(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.path = builder.path;
+            this.readOnly = builder.readOnly;
+            this.server = builder.server;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgenticFsMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        /**
+         * @return server
+         */
+        public String getServer() {
+            return this.server;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private String path; 
+            private Boolean readOnly; 
+            private String server; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgenticFsMounts model) {
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.readOnly = model.readOnly;
+                this.server = model.server;
+            } 
+
+            /**
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. Each mount item is validated as required by the backend. Mount targets must not be duplicated or have parent-child overlaps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/agenticfs/data</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * <p>The non-empty relative directory that exists under the AccessPoint. Each mount item is validated as required by the backend. Root directory, absolute paths, or parent directory segments are not allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace/data</p>
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to mount as read-only. Defaults to false if omitted. This is not a RAM role read-only policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            /**
+             * <p>The AccessPoint domain name. Each mount item is validated as required by the backend. The value does not include protocol, port, or path. Obtain the value from the DomainName field in the NAS ListAccessPoints response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
+             */
+            public Builder server(String server) {
+                this.server = server;
+                return this;
+            }
+
+            public AgenticFsMounts build() {
+                return new AgenticFsMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedAgentResponseBody</p>
+     */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedAgentResponseBody</p>
+     */
+    public static class ConfiguredSkills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
+        private ConfiguredSkills(Builder builder) {
+            this.name = builder.name;
+            this.sourceType = builder.sourceType;
+            this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfiguredSkills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String sourceType; 
+            private String version; 
+            private VersionSelector versionSelector; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfiguredSkills model) {
+                this.name = model.name;
+                this.sourceType = model.sourceType;
+                this.version = model.version;
+                this.versionSelector = model.versionSelector;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web-search</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            /**
+             * versionSelector.
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
+                return this;
+            }
+
+            public ConfiguredSkills build() {
+                return new ConfiguredSkills(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link GetManagedAgentResponseBody} extends {@link TeaModel}
@@ -540,7 +865,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The runtime harness configuration.</p>
+             * <p>The runtime framework configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -548,7 +873,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime harness type.</p>
+             * <p>The runtime framework type.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -683,7 +1008,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the quota is enabled. Not returned if no quota is configured.</p>
+             * <p>Indicates whether the quota is enabled. This field is not returned if no quota is configured.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -694,7 +1019,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The quota limit type. Currently only token is supported.</p>
+             * <p>The quota limit type. Currently, only token is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -705,7 +1030,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the quota has been exceeded in the current period. Read-only, returned by the backend.</p>
+             * <p>Indicates whether the quota has been exceeded in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -727,7 +1052,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The gateway quota rule status. Read-only, returned by the backend.</p>
+             * <p>The gateway quota rule status. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>ACTIVE</p>
@@ -749,7 +1074,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of tokens consumed in the current period. Read-only, returned by the backend.</p>
+             * <p>The number of tokens consumed in the current period. This field is read-only and returned by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>12345</p>
@@ -854,7 +1179,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The model token quota configuration and usage status for the current period. Empty if no quota is configured.</p>
+             * <p>The model token quota configuration and quota usage status for the current period. This field is empty if no quota is configured.</p>
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -1136,7 +1461,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The OSS bucket name. Required for each mount entry, validated by the backend.</p>
+             * <p>The OSS bucket name. Each mount item is validated as required by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1147,7 +1472,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The absolute mount path in the container. Required for each mount entry, validated by the backend.</p>
+             * <p>The absolute mount path in the container. Each mount item is validated as required by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1158,7 +1483,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+             * <p>The relative object prefix within the bucket. If not specified, the entire bucket is mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets</p>
@@ -1169,7 +1494,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to mount as read-only. Default value: false.</p>
+             * <p>Specifies whether to mount as read-only. Defaults to false if not specified.</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1336,7 +1661,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Specifies whether auto-scaling is enabled. Required when hpa is present, validated by the backend.</p>
+             * <p>Specifies whether to enable auto scaling. This field is required when hpa is present, as validated by the backend.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1344,7 +1669,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of active sessions per sandbox. Required when hpa is present, validated by the backend.</p>
+             * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is specified.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1355,7 +1680,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of sandboxes. Required when HPA is enabled and must be no less than the minimum value.</p>
+             * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and must be no less than the minimum value.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1366,7 +1691,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of sandboxes. Required when HPA is enabled.</p>
+             * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1377,7 +1702,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session reclamation time after inactivity, in seconds. Required when hpa is present, validated by the backend.</p>
+             * <p>The time-to-live (TTL) of a session after inactivity, in seconds. This parameter is required by backend validation when hpa is specified.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1448,7 +1773,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP header name used for session affinity. Takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The name of the HTTP header used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1554,7 +1879,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sandbox auto-scaling and session configuration.</p>
+             * <p>The sandbox auto scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -1583,17 +1908,119 @@ public class GetManagedAgentResponseBody extends TeaModel {
      *
      * <p>GetManagedAgentResponseBody</p>
      */
+    public static class SkillsVersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private SkillsVersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SkillsVersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SkillsVersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The session policy type.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the environment variable.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxxx</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SkillsVersionSelector build() {
+                return new SkillsVersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetManagedAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetManagedAgentResponseBody</p>
+     */
     public static class Skills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appliedVersion")
+        private String appliedVersion;
+
+        @com.aliyun.core.annotation.NameInMap("fromTemplate")
+        private Boolean fromTemplate;
+
         @com.aliyun.core.annotation.NameInMap("name")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("resolvedVersion")
+        private String resolvedVersion;
+
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
 
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private SkillsVersionSelector versionSelector;
+
         private Skills(Builder builder) {
+            this.appliedVersion = builder.appliedVersion;
+            this.fromTemplate = builder.fromTemplate;
             this.name = builder.name;
+            this.resolvedVersion = builder.resolvedVersion;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -1605,10 +2032,38 @@ public class GetManagedAgentResponseBody extends TeaModel {
         }
 
         /**
+         * @return appliedVersion
+         */
+        public String getAppliedVersion() {
+            return this.appliedVersion;
+        }
+
+        /**
+         * @return fromTemplate
+         */
+        public Boolean getFromTemplate() {
+            return this.fromTemplate;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return resolvedVersion
+         */
+        public String getResolvedVersion() {
+            return this.resolvedVersion;
+        }
+
+        /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
         }
 
         /**
@@ -1618,27 +2073,75 @@ public class GetManagedAgentResponseBody extends TeaModel {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public SkillsVersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
+            private String appliedVersion; 
+            private Boolean fromTemplate; 
             private String name; 
+            private String resolvedVersion; 
+            private String sourceType; 
             private String version; 
+            private SkillsVersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
+                this.appliedVersion = model.appliedVersion;
+                this.fromTemplate = model.fromTemplate;
                 this.name = model.name;
+                this.resolvedVersion = model.resolvedVersion;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
+             * appliedVersion.
+             */
+            public Builder appliedVersion(String appliedVersion) {
+                this.appliedVersion = appliedVersion;
+                return this;
+            }
+
+            /**
+             * fromTemplate.
+             */
+            public Builder fromTemplate(Boolean fromTemplate) {
+                this.fromTemplate = fromTemplate;
+                return this;
+            }
+
+            /**
              * <p>The skill name.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>code-analysis</p>
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * resolvedVersion.
+             */
+            public Builder resolvedVersion(String resolvedVersion) {
+                this.resolvedVersion = resolvedVersion;
+                return this;
+            }
+
+            /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
                 return this;
             }
 
@@ -1650,6 +2153,14 @@ public class GetManagedAgentResponseBody extends TeaModel {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * versionSelector.
+             */
+            public Builder versionSelector(SkillsVersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -1715,11 +2226,11 @@ public class GetManagedAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instruction for the sub-agent.</p>
+             * <p>The sub-agent instruction.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Review the code</p>
+             * <p>Please review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1757,7 +2268,6 @@ public class GetManagedAgentResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("version")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private AiRegistry(Builder builder) {
@@ -1813,7 +2323,6 @@ public class GetManagedAgentResponseBody extends TeaModel {
 
             /**
              * <p>The version of the template in the AI registry.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1979,6 +2488,12 @@ public class GetManagedAgentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agentId")
         private String agentId;
 
+        @com.aliyun.core.annotation.NameInMap("agenticFsMounts")
+        private java.util.List<AgenticFsMounts> agenticFsMounts;
+
+        @com.aliyun.core.annotation.NameInMap("configuredSkills")
+        private java.util.List<ConfiguredSkills> configuredSkills;
+
         @com.aliyun.core.annotation.NameInMap("createMode")
         private String createMode;
 
@@ -2050,6 +2565,8 @@ public class GetManagedAgentResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.agentId = builder.agentId;
+            this.agenticFsMounts = builder.agenticFsMounts;
+            this.configuredSkills = builder.configuredSkills;
             this.createMode = builder.createMode;
             this.createdAt = builder.createdAt;
             this.deployType = builder.deployType;
@@ -2088,6 +2605,20 @@ public class GetManagedAgentResponseBody extends TeaModel {
          */
         public String getAgentId() {
             return this.agentId;
+        }
+
+        /**
+         * @return agenticFsMounts
+         */
+        public java.util.List<AgenticFsMounts> getAgenticFsMounts() {
+            return this.agenticFsMounts;
+        }
+
+        /**
+         * @return configuredSkills
+         */
+        public java.util.List<ConfiguredSkills> getConfiguredSkills() {
+            return this.configuredSkills;
         }
 
         /**
@@ -2253,6 +2784,8 @@ public class GetManagedAgentResponseBody extends TeaModel {
 
         public static final class Builder {
             private String agentId; 
+            private java.util.List<AgenticFsMounts> agenticFsMounts; 
+            private java.util.List<ConfiguredSkills> configuredSkills; 
             private String createMode; 
             private String createdAt; 
             private String deployType; 
@@ -2282,6 +2815,8 @@ public class GetManagedAgentResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.agentId = model.agentId;
+                this.agenticFsMounts = model.agenticFsMounts;
+                this.configuredSkills = model.configuredSkills;
                 this.createMode = model.createMode;
                 this.createdAt = model.createdAt;
                 this.deployType = model.deployType;
@@ -2315,6 +2850,22 @@ public class GetManagedAgentResponseBody extends TeaModel {
              */
             public Builder agentId(String agentId) {
                 this.agentId = agentId;
+                return this;
+            }
+
+            /**
+             * <p>The AgenticFS additional mount list. The total number of items combined with ossMounts cannot exceed 10.</p>
+             */
+            public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
+                this.agenticFsMounts = agenticFsMounts;
+                return this;
+            }
+
+            /**
+             * <p>仅包含用户追加或覆盖的 Skill，不包含模板继承项。资源模型读取此字段以保留更新语义；创建和更新仍使用请求中的 skills。</p>
+             */
+            public Builder configuredSkills(java.util.List<ConfiguredSkills> configuredSkills) {
+                this.configuredSkills = configuredSkills;
                 return this;
             }
 
@@ -2371,7 +2922,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent runtime harness.</p>
+             * <p>The agent runtime framework.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2439,7 +2990,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+             * <p>The OSS mount list. A maximum of 10 items are supported.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
@@ -2466,7 +3017,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance counts of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), and FAILED (runtime failure). Only phases that actually occur are returned. Missing keys should be treated as 0. This field is a dynamic map, and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
+             * <p>The instance count of the managed agent grouped by sandbox phase. Current keys: PENDING (being created or initialized), RUNNING (running), HIBERNATING (entering hibernation), HIBERNATED (hibernated), RESUMING (resuming), TERMINATING (being terminated), FAILED (runtime failure). Only phases that actually occur are returned. Missing keys are treated as 0. This field is a dynamic map and new keys may be added in the future. You can use FAILED &gt; 0 to determine whether abnormal instances exist.</p>
              */
             public Builder sandboxPhaseCounts(java.util.Map<String, Long> sandboxPhaseCounts) {
                 this.sandboxPhaseCounts = sandboxPhaseCounts;
@@ -2517,7 +3068,7 @@ public class GetManagedAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the agent was last updated, in RFC 3339 format.</p>
+             * <p>The update time in RFC 3339 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-01-01T00:00:00Z</p>

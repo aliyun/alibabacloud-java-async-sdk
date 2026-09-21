@@ -205,7 +205,7 @@ public class GetSkillVersionDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource mapping (key is the resource name).</p>
+             * <p>The resource mapping in which the key is the resource name.</p>
              */
             public Builder resource(java.util.Map<String, DataResourceValue> resource) {
                 this.resource = resource;

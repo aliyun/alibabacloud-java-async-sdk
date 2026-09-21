@@ -135,6 +135,135 @@ public class CreateManagedAgentRequest extends Request {
      *
      * <p>CreateManagedAgentRequest</p>
      */
+    public static class AgenticFsMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mountPath")
+        private String mountPath;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("readOnly")
+        private Boolean readOnly;
+
+        @com.aliyun.core.annotation.NameInMap("server")
+        private String server;
+
+        private AgenticFsMounts(Builder builder) {
+            this.mountPath = builder.mountPath;
+            this.path = builder.path;
+            this.readOnly = builder.readOnly;
+            this.server = builder.server;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgenticFsMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        /**
+         * @return server
+         */
+        public String getServer() {
+            return this.server;
+        }
+
+        public static final class Builder {
+            private String mountPath; 
+            private String path; 
+            private Boolean readOnly; 
+            private String server; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgenticFsMounts model) {
+                this.mountPath = model.mountPath;
+                this.path = model.path;
+                this.readOnly = model.readOnly;
+                this.server = model.server;
+            } 
+
+            /**
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is validated as required by the backend for each mount entry. Mount targets must not be duplicated or have parent-child overlaps.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/mnt/agenticfs/data</p>
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * <p>A non-empty relative directory that exists under the AccessPoint. This field is validated as required by the backend for each mount entry. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspace/data</p>
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to mount in read-only mode. Default value: false. This is not a RAM role read-only policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            /**
+             * <p>The AccessPoint domain name. This field is validated as required by the backend for each mount entry. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
+             */
+            public Builder server(String server) {
+                this.server = server;
+                return this;
+            }
+
+            public AgenticFsMounts build() {
+                return new AgenticFsMounts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
     public static class CredentialReferences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("credentialId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -482,7 +611,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The harness configuration.</p>
+             * <p>The runtime harness configuration.</p>
              */
             public Builder configuration(Configuration configuration) {
                 this.configuration = configuration;
@@ -490,7 +619,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The harness type.</p>
+             * <p>The runtime harness type.</p>
              * 
              * <strong>example:</strong>
              * <p>qodercli</p>
@@ -586,7 +715,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the token quota is disabled and existing quota rules are deleted.</p>
+             * <p>Specifies whether to enable the token quota. Default value: true. Set to false to disable and delete existing quota rules.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -597,7 +726,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. This parameter is required by backend validation when the quota is enabled. Fixed value: token.</p>
+             * <p>The quota limit type. This field is validated as required by the backend when the quota is enabled. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -608,7 +737,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota statistical period. This parameter is required by backend validation when the quota is enabled. Valid values:</p>
+             * <p>The statistical period of the quota. This field is validated as required by the backend when the quota is enabled. Valid values:</p>
              * <ul>
              * <li>day: daily.</li>
              * <li>month: monthly.</li>
@@ -623,7 +752,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed within a single period. This parameter is required by backend validation when the quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens that can be consumed within a single period. This field is validated as required by the backend when the quota is enabled. The value must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -1012,7 +1141,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name. This parameter is required by backend validation for each mount entry.</p>
+             * <p>The OSS bucket name. This field is validated as required by the backend for each mount entry.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1023,7 +1152,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The absolute mount path in the container. This parameter is required by backend validation for each mount entry.</p>
+             * <p>The absolute mount path in the container. This field is validated as required by the backend for each mount entry.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1034,7 +1163,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
+             * <p>The relative object prefix within the bucket. If not specified, the entire bucket is mounted.</p>
              * 
              * <strong>example:</strong>
              * <p>datasets</p>
@@ -1100,7 +1229,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The compute specification.</p>
+             * <p>The compute class.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1212,7 +1341,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto scaling. This parameter is required by backend validation when hpa is present.</p>
+             * <p>Specifies whether to enable auto-scaling. This field is validated as required by the backend when hpa is present.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1220,7 +1349,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of active sessions per sandbox. This parameter is required by backend validation when hpa is present.</p>
+             * <p>The maximum number of active sessions per sandbox. This field is validated as required by the backend when hpa is present.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1231,7 +1360,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and the value must be no less than the minimum value.</p>
+             * <p>The maximum number of sandboxes. Required when HPA is enabled. The value must be greater than or equal to the minimum value.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1242,7 +1371,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The minimum number of sandboxes. This parameter is required when HPA is enabled.</p>
+             * <p>The minimum number of sandboxes. Required when HPA is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1253,7 +1382,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The time in seconds before an inactive session is reclaimed. This parameter is required by backend validation when hpa is present.</p>
+             * <p>The time-to-live (TTL) for a session after inactivity, in seconds. This field is validated as required by the backend when hpa is present.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1430,7 +1559,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The sandbox auto scaling and session configuration.</p>
+             * <p>The sandbox auto-scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -1459,17 +1588,108 @@ public class CreateManagedAgentRequest extends Request {
      *
      * <p>CreateManagedAgentRequest</p>
      */
+    public static class VersionSelector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private VersionSelector(Builder builder) {
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VersionSelector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String type; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionSelector model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The session policy type.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DISABLED</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The value of the environment variable.</p>
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-xxxx</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VersionSelector build() {
+                return new VersionSelector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
     public static class Skills extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("sourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
+        @com.aliyun.core.annotation.NameInMap("versionSelector")
+        private VersionSelector versionSelector;
+
         private Skills(Builder builder) {
             this.name = builder.name;
+            this.sourceType = builder.sourceType;
             this.version = builder.version;
+            this.versionSelector = builder.versionSelector;
         }
 
         public static Builder builder() {
@@ -1488,22 +1708,40 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
             return this.version;
         }
 
+        /**
+         * @return versionSelector
+         */
+        public VersionSelector getVersionSelector() {
+            return this.versionSelector;
+        }
+
         public static final class Builder {
             private String name; 
+            private String sourceType; 
             private String version; 
+            private VersionSelector versionSelector; 
 
             private Builder() {
             } 
 
             private Builder(Skills model) {
                 this.name = model.name;
+                this.sourceType = model.sourceType;
                 this.version = model.version;
+                this.versionSelector = model.versionSelector;
             } 
 
             /**
@@ -1519,6 +1757,14 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
+             * sourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
              * <p>The skill version.</p>
              * 
              * <strong>example:</strong>
@@ -1526,6 +1772,14 @@ public class CreateManagedAgentRequest extends Request {
              */
             public Builder version(String version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * versionSelector.
+             */
+            public Builder versionSelector(VersionSelector versionSelector) {
+                this.versionSelector = versionSelector;
                 return this;
             }
 
@@ -1633,7 +1887,6 @@ public class CreateManagedAgentRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("version")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private AiRegistry(Builder builder) {
@@ -1689,7 +1942,6 @@ public class CreateManagedAgentRequest extends Request {
 
             /**
              * <p>The version of the template in the AI registry.</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1852,6 +2104,9 @@ public class CreateManagedAgentRequest extends Request {
      * <p>CreateManagedAgentRequest</p>
      */
     public static class CreateManagedAgentRequestBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agenticFsMounts")
+        private java.util.List<AgenticFsMounts> agenticFsMounts;
+
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
@@ -1895,6 +2150,7 @@ public class CreateManagedAgentRequest extends Request {
         private java.util.List<Tools> tools;
 
         private CreateManagedAgentRequestBody(Builder builder) {
+            this.agenticFsMounts = builder.agenticFsMounts;
             this.description = builder.description;
             this.environment = builder.environment;
             this.harness = builder.harness;
@@ -1916,6 +2172,13 @@ public class CreateManagedAgentRequest extends Request {
 
         public static CreateManagedAgentRequestBody create() {
             return builder().build();
+        }
+
+        /**
+         * @return agenticFsMounts
+         */
+        public java.util.List<AgenticFsMounts> getAgenticFsMounts() {
+            return this.agenticFsMounts;
         }
 
         /**
@@ -2010,6 +2273,7 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List<AgenticFsMounts> agenticFsMounts; 
             private String description; 
             private Environment environment; 
             private Harness harness; 
@@ -2028,6 +2292,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             private Builder(CreateManagedAgentRequestBody model) {
+                this.agenticFsMounts = model.agenticFsMounts;
                 this.description = model.description;
                 this.environment = model.environment;
                 this.harness = model.harness;
@@ -2042,6 +2307,14 @@ public class CreateManagedAgentRequest extends Request {
                 this.template = model.template;
                 this.tools = model.tools;
             } 
+
+            /**
+             * <p>Omit or set to [] during creation to indicate no AFS mounts. Set to null to reject. The total number of AFS and OSS mounts cannot exceed 10.</p>
+             */
+            public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
+                this.agenticFsMounts = agenticFsMounts;
+                return this;
+            }
 
             /**
              * <p>The description of the managed agent.</p>
@@ -2063,7 +2336,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The agent harness.</p>
+             * <p>The agent runtime harness.</p>
              */
             public Builder harness(Harness harness) {
                 this.harness = harness;
@@ -2111,7 +2384,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 entries are supported.</p>
+             * <p>The OSS mount list. A maximum of 10 entries are allowed.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;
