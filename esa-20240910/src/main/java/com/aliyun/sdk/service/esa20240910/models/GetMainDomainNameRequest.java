@@ -60,7 +60,7 @@ public class GetMainDomainNameRequest extends Request {
         } 
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -160,7 +160,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         } 
 
         /**
-         * <p>Response page.</p>
+         * <p>The response page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,7 +173,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>Response code.</p>
+         * <p>The response code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,10 +186,10 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <p>The rule content. Conditional expressions are used to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>true: Match all incoming requests.</li>
-         * <li>Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,10 +202,10 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -230,7 +230,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateCustomResponseCodeRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

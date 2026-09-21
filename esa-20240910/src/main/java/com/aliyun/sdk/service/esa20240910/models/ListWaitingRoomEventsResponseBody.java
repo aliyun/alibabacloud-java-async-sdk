@@ -402,8 +402,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether session renewal is disabled. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li><p>on</p>
+             * </li>
+             * <li><p>off</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -417,8 +419,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The event status. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li><p>on</p>
+             * </li>
+             * <li><p>off</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -443,8 +447,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether JOSN response is enabled. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li><p>on</p>
+             * </li>
+             * <li><p>off</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -458,9 +464,12 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The language of the waiting room page. This parameter is returned when the waiting room type is set to default. Valid values:</p>
              * <ul>
-             * <li>enus: English.</li>
-             * <li>zhcn: Simplified Chinese.</li>
-             * <li>zhhk: Traditional Chinese.</li>
+             * <li><p>enus: English.</p>
+             * </li>
+             * <li><p>zhcn: Simplified Chinese.</p>
+             * </li>
+             * <li><p>zhhk: Traditional Chinese.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,6 +482,9 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
 
             /**
              * <p>The custom event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test event</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -493,8 +505,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether pre-queuing is enabled. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li><p>on</p>
+             * </li>
+             * <li><p>off</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -519,10 +533,14 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The queuing method. Valid values:</p>
              * <ul>
-             * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
-             * <li>fifo: Users gain access to the origin in order of arrival.</li>
-             * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
-             * <li>reject-all: Users are blocked from reaching the origin.</li>
+             * <li><p>random: Users gain access to the origin randomly, regardless of the arrival time.</p>
+             * </li>
+             * <li><p>fifo: Users gain access to the origin in order of arrival.</p>
+             * </li>
+             * <li><p>passthrough: Users pass through the waiting room and go straight to the origin.</p>
+             * </li>
+             * <li><p>reject-all: Users are blocked from reaching the origin.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -536,9 +554,12 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
              * <ul>
-             * <li>200</li>
-             * <li>202</li>
-             * <li>429</li>
+             * <li><p>200</p>
+             * </li>
+             * <li><p>202</p>
+             * </li>
+             * <li><p>429</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -552,8 +573,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>Indicates whether random queuing is enabled. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li><p>on</p>
+             * </li>
+             * <li><p>off</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -622,8 +645,10 @@ public class ListWaitingRoomEventsResponseBody extends TeaModel {
             /**
              * <p>The type of the waiting room. Valid values:</p>
              * <ul>
-             * <li>default</li>
-             * <li>custom</li>
+             * <li><p>default</p>
+             * </li>
+             * <li><p>custom</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

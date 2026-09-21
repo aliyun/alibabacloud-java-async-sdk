@@ -93,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token for the next query. If NextToken is empty, all information has been displayed on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAYwsxxxxxxx</p>
@@ -115,7 +115,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The resource tags.</p>
          */
         public Builder tagResources(java.util.List<TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -123,10 +123,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
-         * <p>16</p>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The resource ID.</p>
+             * <p>The resource ID. Enter a site ID or a DNS record ID.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -229,7 +229,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type.</p>
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>site: site</li>
+             * <li>record: DNS record.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>site</p>

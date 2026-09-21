@@ -119,7 +119,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         } 
 
         /**
-         * <p>List of HTTP request header modification configurations.</p>
+         * <p>The list of HTTP request header modification configurations.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Page size, default <strong>500</strong>, with a range of <strong>1~500</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1 to 500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>
@@ -160,7 +160,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -266,7 +266,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             } 
 
             /**
-             * <p>The name of the request header.</p>
+             * <p>The request header name.</p>
              * 
              * <strong>example:</strong>
              * <p>headerName</p>
@@ -277,11 +277,11 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The operation type. The value range is as follows:</p>
+             * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li>add: Add.</li>
-             * <li>del: Delete.</li>
-             * <li>modify: Modify.</li>
+             * <li>add: adds a header.</li>
+             * <li>del: deletes a header.</li>
+             * <li>modify: modifies a header.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -293,7 +293,14 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * Type.
+             * <p>The value type. Valid values:</p>
+             * <ul>
+             * <li>static: static pattern.</li>
+             * <li>dynamic: dynamic schema.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -301,7 +308,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>The value of the request header.</p>
+             * <p>The request header value.</p>
              * 
              * <strong>example:</strong>
              * <p>headerValue</p>
@@ -449,7 +456,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             } 
 
             /**
-             * <p>Configuration ID.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>35281609698****</p>
@@ -460,10 +467,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Configuration type. Possible values:</p>
+             * <p>The configuration type. Valid values:</p>
              * <ul>
-             * <li>global: Global configuration;</li>
-             * <li>rule: Rule configuration;</li>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -475,7 +482,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Modify request headers, supporting add, delete, and modify operations.</p>
+             * <p>The request header modifications, which support add, delete, and modify operations.</p>
              */
             public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
                 this.requestHeaderModification = requestHeaderModification;
@@ -483,10 +490,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
              * <ul>
-             * <li>Match all incoming requests: Set the value to true</li>
-             * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match all incoming requests: Set the value to true.</li>
+             * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -498,10 +505,10 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+             * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
              * <ul>
-             * <li>on: Enable.</li>
-             * <li>off: Disable.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -513,7 +520,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+             * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -524,7 +531,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+             * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -535,7 +542,7 @@ public class ListHttpRequestHeaderModificationRulesResponseBody extends TeaModel
             }
 
             /**
-             * <p>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, defaulting to version 0.</p>
+             * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

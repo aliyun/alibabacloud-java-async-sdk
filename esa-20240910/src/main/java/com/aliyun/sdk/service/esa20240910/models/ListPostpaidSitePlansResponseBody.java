@@ -119,7 +119,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -127,7 +130,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -135,7 +141,7 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         }
 
         /**
-         * PlanInfo.
+         * <p>The pay-as-you-go plan details.</p>
          */
         public Builder planInfo(java.util.List<PlanInfo> planInfo) {
             this.planInfo = planInfo;
@@ -143,7 +149,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8CD541DB-CD83-5D0C-BE94-21B794074249</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -303,7 +318,13 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             } 
 
             /**
-             * BillingMethod.
+             * <p>The billable methods of the plan. Valid values:</p>
+             * <ul>
+             * <li>dps_month95: monthly 95th percentile billing method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dps_month95</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -311,7 +332,14 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * BillingMode.
+             * <p>The payment type. Valid values:</p>
+             * <ul>
+             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder billingMode(String billingMode) {
                 this.billingMode = billingMode;
@@ -319,7 +347,15 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * Coverages.
+             * <p>The acceleration regions to which sites can be added under the plan. Multiple values are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li>domestic: the Chinese mainland.</li>
+             * <li>overseas: global (excluding the Chinese mainland).</li>
+             * <li>global: global (including the Chinese mainland).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder coverages(String coverages) {
                 this.coverages = coverages;
@@ -327,7 +363,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * PlanName.
+             * <p>The name of the plan, which serves as a unique identifier in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -335,7 +374,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * PlanNameCn.
+             * <p>The plan description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试版套餐</p>
              */
             public Builder planNameCn(String planNameCn) {
                 this.planNameCn = planNameCn;
@@ -343,7 +385,14 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * PlanType.
+             * <p>The plan type of the plan instance. Valid values:</p>
+             * <ul>
+             * <li>normal: fixed edition plan.</li>
+             * <li>enterprise: enterprise edition plan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -351,7 +400,14 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * SaleStatus.
+             * <p>The sale status of the plan. Valid values for enterprise edition plans:</p>
+             * <ul>
+             * <li>saled: sold.</li>
+             * <li>upgrading: specification change in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>saled</p>
              */
             public Builder saleStatus(String saleStatus) {
                 this.saleStatus = saleStatus;
@@ -359,7 +415,10 @@ public class ListPostpaidSitePlansResponseBody extends TeaModel {
             }
 
             /**
-             * SiteQuota.
+             * <p>The site quantity quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteQuota(String siteQuota) {
                 this.siteQuota = siteQuota;

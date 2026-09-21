@@ -64,7 +64,7 @@ public class DeleteScheduledPreloadJobRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DeleteScheduledPreloadJob</p>
+         * <p>665d3af3621bccf3fe29e1a4</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

@@ -130,10 +130,10 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * <p>The name matching strategy when querying by name:</p>
+         * <p>The name matching strategy when querying by name. Valid values:</p>
          * <ul>
-         * <li>fuzzy: Fuzzy match;</li>
-         * <li>exact: Exact match, equivalent to an equality query.</li>
+         * <li>fuzzy: fuzzy match.</li>
+         * <li>exact: exact match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The name of the load balancer, which can be used to query by name.</p>
+         * <p>The load balancing name. You can query by name.</p>
          * 
          * <strong>example:</strong>
          * <p>lb.example.com</p>
@@ -158,7 +158,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. Currently, only sorting by id is supported. &quot;id&quot; indicates ascending order by id, and &quot;-id&quot; indicates descending order by id. The id size is positively correlated with the creation time. If not provided, it defaults to descending order by id.</p>
+         * <p>The sort field. Currently, only sorting by ID is supported. id indicates ascending order by ID, and -id indicates descending order by ID. The ID value is positively correlated with the creation time. If this parameter is not specified, the default sort order is descending by ID.</p>
          * 
          * <strong>example:</strong>
          * <p>id</p>
@@ -170,7 +170,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The page number for paginated queries.</p>
+         * <p>The page number settings for the paging query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -182,7 +182,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The page size for paginated queries, with a value range of 1-500.</p>
+         * <p>The number of entries per page for the paging query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -194,7 +194,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

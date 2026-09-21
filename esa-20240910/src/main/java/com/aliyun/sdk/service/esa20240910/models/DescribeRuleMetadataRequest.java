@@ -60,6 +60,7 @@ public class DescribeRuleMetadataRequest extends Request {
         } 
 
         /**
+         * <p>The name of the metadata.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

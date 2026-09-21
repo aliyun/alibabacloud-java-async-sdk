@@ -129,7 +129,10 @@ public class ListAsyncTasksRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +141,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of tasks to display per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +153,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * <p>The resource ID to which the task belongs, such as a site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4080****3752512</p>
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -156,7 +165,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>site</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -165,7 +177,15 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>The current status of the task. Valid values:</p>
+         * <ul>
+         * <li>in_progress: in progress.</li>
+         * <li>success: completed.</li>
+         * <li>fail: failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -174,7 +194,10 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. For example, the task type for applying for a free certificate is free_cert.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>free_cert</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

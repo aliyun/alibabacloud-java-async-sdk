@@ -67,7 +67,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of match fields.</p>
+         * <p>The list of matching fields.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
             this.fields = fields;
@@ -75,7 +75,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -144,7 +144,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of match fields for a single expression.</p>
+             * <p>The list of matching fields for a single expression.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -152,7 +152,7 @@ public class BatchGetExpressionFieldsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the expression, corresponding to the ID in the input parameters.</p>
+             * <p>The ID of the expression, which corresponds to the ID in the request parameters.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -142,7 +142,7 @@ public class UploadSiteOriginClientCertificateRequest extends Request {
         }
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

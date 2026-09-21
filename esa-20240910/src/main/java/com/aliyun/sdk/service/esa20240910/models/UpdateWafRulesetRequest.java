@@ -102,7 +102,7 @@ public class UpdateWafRulesetRequest extends Request {
         } 
 
         /**
-         * <p>ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> interface.</p>
+         * <p>The WAF ruleset ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -127,7 +127,7 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>Site version.</p>
+         * <p>The version number of the site configuration. For a site with configuration version management enabled, this parameter specifies the version to update. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -139,7 +139,7 @@ public class UpdateWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The target status to change for the ruleset.</p>
+         * <p>The target status of the ruleset.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>

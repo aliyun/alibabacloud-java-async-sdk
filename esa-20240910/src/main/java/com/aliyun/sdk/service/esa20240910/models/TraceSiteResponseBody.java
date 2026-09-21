@@ -93,7 +93,10 @@ public class TraceSiteResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9574AFDC-ABF1-5068-AAE3-6958CEBD8740</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,10 @@ public class TraceSiteResponseBody extends TeaModel {
         }
 
         /**
-         * StatusCode.
+         * <p>The HTTP status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
@@ -109,7 +115,10 @@ public class TraceSiteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +126,7 @@ public class TraceSiteResponseBody extends TeaModel {
         }
 
         /**
-         * Trace.
+         * <p>The trace information of the call chain.</p>
          */
         public Builder trace(java.util.List<Trace> trace) {
             this.trace = trace;
@@ -352,7 +361,10 @@ public class TraceSiteResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action to perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -360,7 +372,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The configuration type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rule</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -368,7 +383,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * DdosLevelDomestic.
+             * <p>The mitigation capability (China).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn300</p>
              */
             public Builder ddosLevelDomestic(String ddosLevelDomestic) {
                 this.ddosLevelDomestic = ddosLevelDomestic;
@@ -376,7 +394,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * DdosLevelOversea.
+             * <p>The mitigation capability (global, excluding China).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>unlimit</p>
              */
             public Builder ddosLevelOversea(String ddosLevelOversea) {
                 this.ddosLevelOversea = ddosLevelOversea;
@@ -384,7 +405,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * EnvName.
+             * <p>The environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Production</p>
              */
             public Builder envName(String envName) {
                 this.envName = envName;
@@ -392,7 +416,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The rule expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(ip.geoip.country eq \&quot;CN\&quot;)</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -400,7 +427,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The mitigation capability.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>week</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -408,7 +438,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * <p>The load balancer domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ib.test.example.com</p>
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;
@@ -416,7 +449,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * OriginPoolName.
+             * <p>The name of the origin pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21212.origin-pool.example.com</p>
              */
             public Builder originPoolName(String originPoolName) {
                 this.originPoolName = originPoolName;
@@ -424,7 +460,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineId.
+             * <p>The routine ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.1097011697834102</p>
              */
             public Builder routineId(String routineId) {
                 this.routineId = routineId;
@@ -432,7 +471,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The security rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1297141</p>
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -440,7 +482,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the matched rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cache_test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -448,7 +493,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
@@ -456,7 +504,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The security-related rule type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>l4_ddos</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -464,7 +515,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value specified in the IP access rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -544,7 +598,10 @@ public class TraceSiteResponseBody extends TeaModel {
             } 
 
             /**
-             * Matched.
+             * <p>Indicates whether the module is matched. Valid values: true and false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder matched(Boolean matched) {
                 this.matched = matched;
@@ -552,7 +609,10 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * StepModuleName.
+             * <p>The feature module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SecRules</p>
              */
             public Builder stepModuleName(String stepModuleName) {
                 this.stepModuleName = stepModuleName;
@@ -560,7 +620,7 @@ public class TraceSiteResponseBody extends TeaModel {
             }
 
             /**
-             * Trace.
+             * <p>The matching results of rules in the feature module.</p>
              */
             public Builder trace(java.util.List<TraceTrace> trace) {
                 this.trace = trace;

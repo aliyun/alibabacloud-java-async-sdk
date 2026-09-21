@@ -74,7 +74,10 @@ public class GenerateTraceDiagnoseRequest extends Request {
         } 
 
         /**
-         * Source.
+         * <p>The source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ai</p>
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -83,6 +86,7 @@ public class GenerateTraceDiagnoseRequest extends Request {
         }
 
         /**
+         * <p>The URL to diagnose.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

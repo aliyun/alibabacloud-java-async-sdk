@@ -80,7 +80,7 @@ public class GetUploadTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error message returned when the file upload task failed.</p>
+         * <p>The error message returned when the file upload task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>invalid url</p>
@@ -102,13 +102,13 @@ public class GetUploadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task status.</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>INIT</strong>: The task is being initialized.</li>
+         * <li><strong>init</strong>: The task is being initialized.</li>
          * <li><strong>activacted</strong>: The task is activated.</li>
          * <li><strong>running</strong>: The task is running.</li>
-         * <li><strong>success</strong>: The task is successful.</li>
-         * <li><strong>partial</strong>: The task is partially successful.</li>
+         * <li><strong>success</strong>: The task succeeded.</li>
+         * <li><strong>partial</strong>: The task partially succeeded.</li>
          * <li><strong>fail</strong>: The task failed.</li>
          * </ul>
          * 

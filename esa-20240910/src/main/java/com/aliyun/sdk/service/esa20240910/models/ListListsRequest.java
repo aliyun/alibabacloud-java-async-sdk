@@ -87,7 +87,7 @@ public class ListListsRequest extends Request {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -99,7 +99,7 @@ public class ListListsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class ListListsRequest extends Request {
         }
 
         /**
-         * <p>The query arguments in the JSON format, which contain filter conditions.</p>
+         * <p>The query parameters passed in JSON format, which contain various filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>ListLists</p>
@@ -261,7 +261,7 @@ public class ListListsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to sort the returned data in descending order.</p>
+             * <p>Specifies whether to sort the results in descending order.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -272,7 +272,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The list description for fuzzy search.</p>
+             * <p>The value used to fuzzy match list descriptions.</p>
              * 
              * <strong>example:</strong>
              * <p>a custom list</p>
@@ -283,7 +283,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The list ID for fuzzy search.</p>
+             * <p>The value used to fuzzy match list IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>40000001</p>
@@ -294,7 +294,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The list content for fuzzy search.</p>
+             * <p>The value used to fuzzy match list content.</p>
              * 
              * <strong>example:</strong>
              * <p>10.1.1.1</p>
@@ -305,7 +305,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The type of the custom list.</p>
+             * <p>The kind of the custom list.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -316,7 +316,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The list name and content for fuzzy search.</p>
+             * <p>The value used to fuzzy match both list content and list names simultaneously.</p>
              * 
              * <strong>example:</strong>
              * <p>10.1.1.1</p>
@@ -327,7 +327,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The list name for fuzzy search.</p>
+             * <p>The value used to fuzzy match list names.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -338,7 +338,7 @@ public class ListListsRequest extends Request {
             }
 
             /**
-             * <p>The column by which you want to sort the returned data.</p>
+             * <p>The column by which to sort the results.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>

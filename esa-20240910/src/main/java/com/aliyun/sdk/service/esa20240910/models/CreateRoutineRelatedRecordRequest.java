@@ -90,11 +90,11 @@ public class CreateRoutineRelatedRecordRequest extends Request {
         } 
 
         /**
-         * <p>The routine name.</p>
+         * <p>The name of the Edge Routine function.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CreateRoutineRelatedRecord</p>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -116,7 +116,7 @@ public class CreateRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D4030CD2-0D9D-5E92-B358-421AE58307C6</p>
@@ -133,7 +139,7 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleInfos.
+         * <p>A list of rule details.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -141,7 +147,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +294,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action to perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -293,7 +305,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultAction.
+             * <p>The default action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder defaultAction(String defaultAction) {
                 this.defaultAction = defaultAction;
@@ -301,7 +316,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRuleId.
+             * <p>The ID of the protection rule used for log records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100010</p>
              */
             public Builder logRuleId(Integer logRuleId) {
                 this.logRuleId = logRuleId;
@@ -309,7 +327,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDesc.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The HTTP request\&quot;s Accept header contains invalid features#1</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -317,7 +338,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the HTTP DDoS protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20203578</p>
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -325,7 +349,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIdInfo.
+             * <p>The short name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>global_01_s</p>
              */
             public Builder ruleIdInfo(String ruleIdInfo) {
                 this.ruleIdInfo = ruleIdInfo;
@@ -333,7 +360,10 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Illegal request。</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -341,7 +371,16 @@ public class DescribeHttpDDoSAttackRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><p><strong>on</strong>: The rule is enabled.</p>
+             * </li>
+             * <li><p><strong>off</strong>: The rule is disabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

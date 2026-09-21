@@ -67,7 +67,10 @@ public class CreateRoutineBuildConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateRoutineBuildConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineBuildConfigurationId.
+         * <p>The ER build configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3472165674357056</p>
          */
         public Builder routineBuildConfigurationId(Long routineBuildConfigurationId) {
             this.routineBuildConfigurationId = routineBuildConfigurationId;

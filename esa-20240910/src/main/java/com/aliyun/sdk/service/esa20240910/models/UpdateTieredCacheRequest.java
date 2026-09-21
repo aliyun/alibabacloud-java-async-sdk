@@ -75,12 +75,12 @@ public class UpdateTieredCacheRequest extends Request {
         } 
 
         /**
-         * <p>The tiered cache architecture mode. Valid values:</p>
+         * <p>The multi-level cache architecture mode. Valid values:</p>
          * <ul>
-         * <li>edge: edge tiered cache.</li>
-         * <li>edge_smart: edge tiered cache + smart tiered cache.</li>
-         * <li>edge_regional: edge tiered cache + regional tiered cache.</li>
-         * <li>edge_regional_smart: edge tiered cache + regional tiered cache + smart tiered cache.</li>
+         * <li>edge: edge cache layer.</li>
+         * <li>edge_smart: edge cache layer + smart cache layer.</li>
+         * <li>edge_regional: edge cache layer + regional cache layer.</li>
+         * <li>edge_regional_smart: edge cache layer + regional cache layer + smart cache layer.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -94,7 +94,7 @@ public class UpdateTieredCacheRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

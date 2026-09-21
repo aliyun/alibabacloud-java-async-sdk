@@ -119,7 +119,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceUsage.
+         * <p>The instance usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder instanceUsage(Long instanceUsage) {
             this.instanceUsage = instanceUsage;
@@ -127,7 +130,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +141,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +152,7 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -154,7 +163,7 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * Rulesets.
+         * <p>A list of WAF ruleset objects.</p>
          */
         public Builder rulesets(java.util.List<Rulesets> rulesets) {
             this.rulesets = rulesets;
@@ -162,7 +171,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records after filtering.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -280,7 +292,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The WAF ruleset description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,7 +303,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The WAF ruleset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -296,7 +314,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The WAF ruleset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -304,7 +325,28 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The WAF rule execution phase. Possible values:</p>
+             * <ul>
+             * <li><p><code>http_whitelist</code>: Whitelist rule</p>
+             * </li>
+             * <li><p><code>http_custom</code>: Custom rule</p>
+             * </li>
+             * <li><p><code>http_managed</code>: Managed rule</p>
+             * </li>
+             * <li><p><code>http_anti_scan</code>: Scan protection rule</p>
+             * </li>
+             * <li><p><code>http_ratelimit</code>: Rate limit rule</p>
+             * </li>
+             * <li><p><code>ip_access_rule</code>: IP access rule</p>
+             * </li>
+             * <li><p><code>http_bot</code>: Bot rule</p>
+             * </li>
+             * <li><p><code>http_security_level_rule</code>: Security rule</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -312,7 +354,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The WAF ruleset position.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -320,7 +365,10 @@ public class ListUserWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The WAF ruleset status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

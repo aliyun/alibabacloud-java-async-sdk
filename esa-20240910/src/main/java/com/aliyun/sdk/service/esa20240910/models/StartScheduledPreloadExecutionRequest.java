@@ -60,11 +60,11 @@ public class StartScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the prefetch plan.</p>
+         * <p>The prefetch plan ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>StartScheduledPreloadExecution</p>
+         * <p>665d3b48621bccf3fe29e1a7</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

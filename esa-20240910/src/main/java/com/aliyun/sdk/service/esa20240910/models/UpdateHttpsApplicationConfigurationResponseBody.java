@@ -54,7 +54,7 @@ public class UpdateHttpsApplicationConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35C66C7B-671H-4297-9187-2C4477247A78</p>

@@ -119,7 +119,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceInfo.
+         * <p>The list of instance information.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -127,7 +127,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A123425345</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -238,7 +253,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * SiteId.
+             * <p>The site ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;
@@ -246,7 +264,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteName.
+             * <p>The site name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder siteName(String siteName) {
                 this.siteName = siteName;
@@ -254,7 +275,16 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteStatus.
+             * <p>The site status. Valid values:</p>
+             * <ul>
+             * <li>pending: The site is pending configuration.</li>
+             * <li>active: The site is activated.</li>
+             * <li>offline: The site is offline.</li>
+             * <li>moved: The site has been superseded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder siteStatus(String siteStatus) {
                 this.siteStatus = siteStatus;
@@ -477,7 +507,13 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BillingMethod.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li>dps_month95: Monthly 95th Percentile.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBSCRIBE</p>
              */
             public Builder billingMethod(String billingMethod) {
                 this.billingMethod = billingMethod;
@@ -485,7 +521,13 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BillingMode.
+             * <p>The billing mode. Valid values:</p>
+             * <ul>
+             * <li>POSTPAY: Pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTPAY</p>
              */
             public Builder billingMode(String billingMode) {
                 this.billingMode = billingMode;
@@ -493,7 +535,15 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Coverages.
+             * <p>The acceleration regions to which the instance can bindable sites. Multiple values are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li>domestic: The Chinese mainland.</li>
+             * <li>overseas: Global (excluding the Chinese mainland).</li>
+             * <li>global: Global (including the Chinese mainland).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>domestic</p>
              */
             public Builder coverages(String coverages) {
                 this.coverages = coverages;
@@ -501,7 +551,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-19T11:15:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -509,7 +562,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedUpdateTime.
+             * <p>The scheduled specification change time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-19T11:15:20Z</p>
              */
             public Builder expectedUpdateTime(String expectedUpdateTime) {
                 this.expectedUpdateTime = expectedUpdateTime;
@@ -517,7 +573,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-xcdn-96wblslz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -533,7 +592,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanName.
+             * <p>The English name of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>basic</p>
              */
             public Builder planName(String planName) {
                 this.planName = planName;
@@ -541,7 +603,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanNameCn.
+             * <p>The Chinese name of the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-plan</p>
              */
             public Builder planNameCn(String planNameCn) {
                 this.planNameCn = planNameCn;
@@ -549,7 +614,14 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanType.
+             * <p>The plan type of the instance. Valid values:</p>
+             * <ul>
+             * <li>normal: Fixed edition plan.</li>
+             * <li>enterprise: Enterprise edition plan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder planType(String planType) {
                 this.planType = planType;
@@ -565,7 +637,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteQuota.
+             * <p>The site quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder siteQuota(String siteQuota) {
                 this.siteQuota = siteQuota;
@@ -573,7 +648,7 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Sites.
+             * <p>The list of sites.</p>
              */
             public Builder sites(java.util.List<Sites> sites) {
                 this.sites = sites;
@@ -581,7 +656,10 @@ public class ListPostpaidRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

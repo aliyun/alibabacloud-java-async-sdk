@@ -60,6 +60,7 @@ public class ListRoutineBuildConfigurationsRequest extends Request {
         } 
 
         /**
+         * <p>The list of ER routine names, separated by commas.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

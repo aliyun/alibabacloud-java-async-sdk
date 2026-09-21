@@ -93,8 +93,8 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The end of the time range during which data was queried.</p>
-         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The time must be in UTC.</p>
+         * <p>The end time for the data query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-19T15:59:59Z</p>
@@ -116,7 +116,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The create time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The start time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-06T16:00:00Z</p>
@@ -127,7 +127,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The objects that are returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder urlDetailData(java.util.List<UrlDetailData> urlDetailData) {
             this.urlDetailData = urlDetailData;
@@ -284,7 +284,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Measures the maximum layout mutation score for every unexpected layout change that occurs throughout the life of the page.</p>
+             * <p>The metric that measures the largest burst of layout shift scores for every unexpected layout shift that occurs throughout the entire lifecycle of a page.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -295,7 +295,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The platform of the device.</p>
+             * <p>The device platform.</p>
              * 
              * <strong>example:</strong>
              * <p>PC</p>
@@ -306,7 +306,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The country or region to which the IP address belongs.</p>
+             * <p>The country.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -317,7 +317,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Measures the time between when the page is loaded and when any part of the page&quot;s content is rendered on the screen. Unit: ms.</p>
+             * <p>The time from when the page starts loading to when any part of the page content is rendered on the screen. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -328,7 +328,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Measures the time between when the user first interacts with the page and when the browser is actually able to start processing an event handler in response to that interaction. Unit: ms.</p>
+             * <p>The time from when a user first interacts with a page to when the browser is actually able to begin processing event handlers in response to that interaction. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -339,7 +339,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Measures the responsiveness of the page, or how long it takes for the page to respond to user input visibly. Unit: ms.</p>
+             * <p>The responsiveness of a page, specifically how long it takes for the page to visibly respond to user input. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -350,7 +350,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Reports the rendering time of the largest image or text block visible in the viewport. Unit: ms.</p>
+             * <p>The render time of the largest image or text block visible within the viewport. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -361,7 +361,7 @@ public class DescribeUrlObservationDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This metric measures the time between when a resource initiates a request and when the first byte of the response starts to arrive. Unit: ms.</p>
+             * <p>The time from when a resource request is initiated to when the first byte of the response begins to arrive. Unit: ms.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>

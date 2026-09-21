@@ -105,7 +105,10 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
         } 
 
         /**
-         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
+         * <blockquote>
+         * <p>Notice: 1) Your account must have an ESA plan with the Edge Container feature enabled. 2) Call CreateEdgeContainerApp first to create an application and obtain the AppId. 3) Complete call chain example: CreateEdgeContainerApp → ListEdgeContainerApps → CreateEdgeContainerAppVersion.</notice></p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +121,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The container group to be deployed for this version, which contains information about images.<br>The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</p>
+         * <p>The container group to be deployed for this version, including specific image information. The image information consists of the image address, startup command, parameters, environment variables, and probe rules. Multiple images are supported in a JSON array structure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,14 +133,14 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
          *             &quot;Command&quot;: &quot;/bin/sh&quot;,
          *             &quot;Args&quot;: &quot;-c hello&quot;,
          *             &quot;ProbeType&quot;: &quot;tcpSocket&quot;,
-         *             &quot;ProbeContent&quot;: &quot;{&quot;Port&quot;:8080}&quot;
+         *             &quot;ProbeContent&quot;: &quot;{\&quot;Port\&quot;:8080}&quot;
          *       },
          *       {
          *             &quot;Name&quot;: &quot;container2&quot;,
          *             &quot;Image&quot;: &quot;image2&quot;,
          *             &quot;Spec&quot;: &quot;2C4G&quot;,
          *             &quot;ProbeType&quot;: &quot;httpGet&quot;,
-         *             &quot;ProbeContent&quot;: &quot;{&quot;Path&quot;:&quot;/&quot;,&quot;Port&quot;:80,&quot;InitialDelaySeconds&quot;:10}&quot;
+         *             &quot;ProbeContent&quot;: &quot;{\&quot;Path\&quot;:\&quot;/\&quot;,\&quot;Port\&quot;:80,\&quot;InitialDelaySeconds\&quot;:10}&quot;
          *       }
          * ]</p>
          */
@@ -149,7 +152,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The version name, which must be 6 to 128 characters in length.</p>
+         * <p>The version name. The name must be <strong>6 to 128</strong> characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +165,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The description of the version.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test app</p>
@@ -324,7 +327,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             } 
 
             /**
-             * <p>The domain name of the Container Registry image.</p>
+             * <p>The ACR image domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>1500.***.net</p>
@@ -335,7 +338,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Container Registry instance.</p>
+             * <p>The ACR instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>xcdn-9axbo****</p>
@@ -346,7 +349,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the image is an enterprise-level Container Registry image.</p>
+             * <p>Specifies whether the image is an enterprise-level image.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -357,7 +360,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The regions in which the Container Registry instance resides.</p>
+             * <p>The region list of the ACR instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai</p>
@@ -368,7 +371,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The ID of the image repository.</p>
+             * <p>The repository ID of the image.</p>
              * 
              * <strong>example:</strong>
              * <p>crr-h1ghghu60ct****</p>
@@ -379,7 +382,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The name of the image repository.</p>
+             * <p>The image repository name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_71</p>
@@ -390,7 +393,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The namespace of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>safeline</p>
@@ -401,7 +404,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The tag of the Container Registry image.</p>
+             * <p>The ACR image tag.</p>
              * 
              * <strong>example:</strong>
              * <p>3.40.2</p>
@@ -412,7 +415,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The URL of the Container Registry image tag.</p>
+             * <p>The ACR image tag URL.</p>
              */
             public Builder tagUrl(String tagUrl) {
                 this.tagUrl = tagUrl;
@@ -596,7 +599,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             } 
 
             /**
-             * <p>The command of the exec type probe.</p>
+             * <p>The probe command for exec-type probes.</p>
              * 
              * <strong>example:</strong>
              * <p>echo ok</p>
@@ -607,7 +610,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive failed health checks required for a container to be considered as unhealthy.</p>
+             * <p>The number of consecutive failed health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -618,7 +621,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The domain name that is used for health checks.</p>
+             * <p>The domain name for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.rewrite.com">www.rewrite.com</a></p>
@@ -629,10 +632,10 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The request headers that are included in the container health check request.</p>
+             * <p>The HTTP request headers.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;Content-Type&quot;:&quot;application/json&quot;}]</p>
+             * <p>[{\&quot;Content-Type\&quot;:\&quot;application/json\&quot;}]</p>
              */
             public Builder httpHeaders(String httpHeaders) {
                 this.httpHeaders = httpHeaders;
@@ -640,10 +643,10 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The latency for container probe initialization.</p>
+             * <p>The initial delay time for the container probe. Unit: seconds. For example, 5 indicates that the initial delay time is set to 5 seconds.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>5</p>
              */
             public Builder initialDelaySeconds(Integer initialDelaySeconds) {
                 this.initialDelaySeconds = initialDelaySeconds;
@@ -651,7 +654,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The health check path.</p>
+             * <p>The path for the container health check.</p>
              * 
              * <strong>example:</strong>
              * <p>/</p>
@@ -662,7 +665,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The interval between container health checks.</p>
+             * <p>The interval for the container health check. Unit: seconds. For example, 5 indicates that the health check interval is set to 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -673,7 +676,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The health check port.</p>
+             * <p>The port for the container health check.</p>
              * 
              * <strong>example:</strong>
              * <p>9991</p>
@@ -684,7 +687,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The protocol that the container health check request uses.</p>
+             * <p>The request protocol for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>http</p>
@@ -695,7 +698,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The number of consecutive successful health checks required for a container to be considered as healthy.</p>
+             * <p>The number of consecutive successful health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -706,7 +709,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The timeout period of the container health check.</p>
+             * <p>The timeout period for the container health check. Unit: seconds. For example, 5 indicates that the timeout period is set to 5 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -926,7 +929,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             } 
 
             /**
-             * <p>The information about the Container Registry image.</p>
+             * <p>The ACR image information.</p>
              */
             public Builder ACRImageInfo(ACRImageInfo ACRImageInfo) {
                 this.ACRImageInfo = ACRImageInfo;
@@ -934,7 +937,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The arguments that are passed to the container startup command. Separate the parameters with spaces.</p>
+             * <p>The startup parameters. Separate multiple parameters with spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>-a</p>
@@ -945,7 +948,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The command that is used to start the container. Separate the arguments with spaces.</p>
+             * <p>The startup command. Separate multiple commands with spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>nginx</p>
@@ -956,7 +959,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The environment variables. Separate the environment variables with commas (,).</p>
+             * <p>The environment variables. Format: key1=val1,key2=val2.</p>
              * 
              * <strong>example:</strong>
              * <p>VITE_APP_TITLE=My App</p>
@@ -967,7 +970,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The address of the image.</p>
+             * <p>The image address.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -979,7 +982,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the image is a Container Registry image.</p>
+             * <p>Specifies whether the image is an Alibaba Cloud Container Registry (ACR) image.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -991,7 +994,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The name of the container. The name must be unique in the same container group.</p>
+             * <p>The container name. The name must be unique within the same container group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1003,7 +1006,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The command that is run before the container is started. Separate the arguments with spaces.</p>
+             * <p>The command to execute before the container starts. Separate multiple commands with spaces. This command is executed before the service starts and is typically used for initialization operations.</p>
              * 
              * <strong>example:</strong>
              * <p>sh poststart.sh &quot;echo hello world&quot;</p>
@@ -1014,7 +1017,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The command that is run before the container is stopped. Separate the arguments with spaces.</p>
+             * <p>The command to execute before the container stops. Separate multiple commands with spaces. This command is executed before the service exits and is typically used for cleanup operations before exit.</p>
              * 
              * <strong>example:</strong>
              * <p>sh prestop.sh &quot;echo hello world&quot;</p>
@@ -1025,8 +1028,11 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The content of the container health probe.</p>
+             * <p>The container health probe content.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>For specific fields, refer to the official Kubernetes readiness probe definition</p>
              */
             public Builder probeContent(ProbeContent probeContent) {
                 this.probeContent = probeContent;
@@ -1034,11 +1040,11 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The type of the probe. Valid values:</p>
+             * <p>The probe type. Valid values:</p>
              * <ul>
-             * <li>exec: the command type.</li>
-             * <li>tcpSocket: the TCP probe type.</li>
-             * <li>httpGet: the HTTP access type.</li>
+             * <li><strong>exec</strong>: Command-based.</li>
+             * <li><strong>tcpSocket</strong>: TCP detection-based.</li>
+             * <li><strong>httpGet</strong>: HTTP access-based.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -1051,7 +1057,7 @@ public class CreateEdgeContainerAppVersionRequest extends Request {
             }
 
             /**
-             * <p>The compute specification of the container. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
+             * <p>The container specifications. Specifies the computing specifications. Valid values: 1C2G, 2C4G, 2C8G, 4C8G, 4C16G, 8C16G, and 8C32G.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

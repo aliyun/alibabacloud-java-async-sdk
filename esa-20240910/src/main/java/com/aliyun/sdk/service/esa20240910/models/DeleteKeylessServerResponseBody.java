@@ -93,7 +93,7 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Keyless server ID。</p>
+         * <p>The keyless server ID.</p>
          * 
          * <strong>example:</strong>
          * <p>baba39055622c008b90285a8838e****</p>
@@ -104,7 +104,10 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +115,10 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -120,7 +126,10 @@ public class DeleteKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

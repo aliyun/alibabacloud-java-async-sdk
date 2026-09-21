@@ -67,7 +67,7 @@ public class UpdateOriginPoolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Source address pool ID.</p>
+         * <p>The origin address pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1038520525196928</p>

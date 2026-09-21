@@ -117,7 +117,10 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Quota30Day.
+         * <p>The total quota at 30-day granularity. A value of 0 indicates that this quota is not configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200000</p>
          */
         public Builder quota30Day(String quota30Day) {
             this.quota30Day = quota30Day;
@@ -136,7 +139,7 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The quota usage.</p>
+         * <p>The used quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -147,7 +150,10 @@ public class GetPurgeQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Usage30Day.
+         * <p>The used quota at 30-day granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder usage30Day(String usage30Day) {
             this.usage30Day = usage30Day;

@@ -67,7 +67,7 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceModel.
+         * <p>The pricing information.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -75,7 +75,10 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40423A7F-A83D-1E24-B80E-86DD25790759</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +325,15 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li>JPY: Japanese Yen.</li>
+             * <li>USD: US Dollar.</li>
+             * <li>CNY: Chinese Yuan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -330,7 +341,10 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -338,7 +352,10 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esa-cr-9tuv*********</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -346,7 +363,10 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The final order price, which is the actual transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -362,7 +382,10 @@ public class DescribeCacheReservePriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPrice.
+             * <p>The original order price. Original order price = actual transaction price + discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPrice(Float totalPrice) {
                 this.totalPrice = totalPrice;

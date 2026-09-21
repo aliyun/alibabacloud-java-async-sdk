@@ -88,7 +88,7 @@ public class ListRoutineRoutesRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -100,7 +100,7 @@ public class ListRoutineRoutesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -112,7 +112,7 @@ public class ListRoutineRoutesRequest extends Request {
         }
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

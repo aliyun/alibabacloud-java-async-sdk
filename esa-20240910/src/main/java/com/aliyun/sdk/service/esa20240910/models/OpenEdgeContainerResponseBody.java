@@ -54,7 +54,10 @@ public class OpenEdgeContainerResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54B1C88C-9BB7-568F-9D02-DFBE6F44624D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

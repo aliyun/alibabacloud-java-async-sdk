@@ -73,7 +73,7 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID, which can be obtained by calling the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation.</p>
+         * <p>The instance ID. You can call the <a href="~~ListUserRatePlanInstances~~">ListUserRatePlanInstances</a> operation to obtain the instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xcdn-91fknmb80f0g***</p>
@@ -85,7 +85,10 @@ public class DescribeRatePlanInstanceStatusRequest extends Request {
         }
 
         /**
-         * ResourceOwner.
+         * <p>The resource owner account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1700594193617909</p>
          */
         public Builder resourceOwner(Long resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);

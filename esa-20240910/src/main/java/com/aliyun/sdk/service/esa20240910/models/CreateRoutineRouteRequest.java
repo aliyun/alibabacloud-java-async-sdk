@@ -176,10 +176,10 @@ public class CreateRoutineRouteRequest extends Request {
         } 
 
         /**
-         * <p>Bypass mode Valid values:</p>
+         * <p>The bypass mode. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled</li>
+         * <li>off: disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,10 +192,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+         * <p>The back-to-origin on exception switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request falls back to the origin server. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -208,10 +208,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The routing switch. Valid values:</p>
+         * <p>The route switch. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled</li>
+         * <li>off: disabled</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -225,7 +225,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The route name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The edge function name.</p>
+         * <p>The Edge Routine name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -251,11 +251,11 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The content of the rule.</p>
+         * <p>The rule content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -264,7 +264,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>The rule execution order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -276,7 +276,7 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +289,10 @@ public class CreateRoutineRouteRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * <p>The Edge Routine timeout period. Valid values: 5 to 60. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeout(String timeout) {
             this.putQueryParameter("Timeout", timeout);

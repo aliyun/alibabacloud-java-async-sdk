@@ -119,7 +119,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cache reserve instances.</p>
+         * <p>The list of cache reserve instances.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -127,7 +127,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size, default <strong>500</strong>, range: <strong>1~500</strong>.</p>
+         * <p>The number of entries per page. Default value: <strong>500</strong>. Valid values: <strong>1</strong> to <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -149,7 +149,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>65C66B7B-671A-8297-9187-2R5477247B76</p>
@@ -160,7 +160,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -171,7 +171,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -318,7 +318,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Cache reserve capacity. Unit: GB.</p>
+             * <p>The capacity of the cache reserve instance. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>512000</p>
@@ -329,7 +329,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cache reserve usage region.</p>
+             * <p>The region where the cache reserve instance is deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>HK</p>
@@ -340,7 +340,14 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * <p>The billing type. Valid values:</p>
+             * <ul>
+             * <li>PREPAY: subscription.</li>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PREPAY</p>
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -348,7 +355,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance purchase time.</p>
+             * <p>The creation time of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-12T05:41:51Z</p>
@@ -359,7 +366,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Duration of the instance purchase, unit: months.</p>
+             * <p>The subscription duration of the instance. Unit: months.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -370,7 +377,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance expiration time.</p>
+             * <p>The time when the instance expires.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-10-05T16:00:00Z</p>
@@ -381,7 +388,7 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance ID.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-xcdn-96wblslz****</p>
@@ -392,12 +399,12 @@ public class ListCacheReserveInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cache reserve instance. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>online</strong>: The instance is in service.</li>
-             * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
+             * <li><strong>online</strong>: The instance is running normally.</li>
+             * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
              * <li><strong>disable</strong>: The instance has been released.</li>
-             * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
+             * <li><strong>overdue</strong>: The instance is stopped due to an overdue payment.</li>
              * </ul>
              * 
              * <strong>example:</strong>

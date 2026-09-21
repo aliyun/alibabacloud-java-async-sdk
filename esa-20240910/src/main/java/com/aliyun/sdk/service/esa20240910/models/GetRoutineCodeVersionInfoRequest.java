@@ -75,6 +75,7 @@ public class GetRoutineCodeVersionInfoRequest extends Request {
         } 
 
         /**
+         * <p>The code version number to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class GetRoutineCodeVersionInfoRequest extends Request {
         }
 
         /**
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

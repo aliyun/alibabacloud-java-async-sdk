@@ -119,7 +119,10 @@ public class ListRoutineEnvironmentVariablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -127,7 +130,7 @@ public class ListRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variable dictionary.</p>
          */
         public Builder environmentVariables(java.util.Map<String, EnvironmentVariablesValue> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -135,7 +138,10 @@ public class ListRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +149,10 @@ public class ListRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +171,10 @@ public class ListRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

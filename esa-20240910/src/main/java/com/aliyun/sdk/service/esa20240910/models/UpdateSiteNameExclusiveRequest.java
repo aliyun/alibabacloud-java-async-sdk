@@ -75,10 +75,10 @@ public class UpdateSiteNameExclusiveRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable site hold. Valid values:</p>
+         * <p>The feature switch. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -92,7 +92,7 @@ public class UpdateSiteNameExclusiveRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

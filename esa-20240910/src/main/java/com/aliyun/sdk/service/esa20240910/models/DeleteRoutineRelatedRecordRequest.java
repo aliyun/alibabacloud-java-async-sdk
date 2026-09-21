@@ -105,11 +105,11 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         } 
 
         /**
-         * <p>The routine name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DeleteRoutineRelatedRecord</p>
+         * <p>test-xxx</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -144,7 +144,7 @@ public class DeleteRoutineRelatedRecordRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

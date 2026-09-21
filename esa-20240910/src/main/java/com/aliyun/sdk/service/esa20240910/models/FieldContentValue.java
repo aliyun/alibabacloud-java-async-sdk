@@ -232,6 +232,9 @@ public class FieldContentValue extends TeaModel {
 
             /**
              * <p>The description of the field in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IP</p>
              */
             public Builder descriptionCn(String descriptionCn) {
                 this.descriptionCn = descriptionCn;

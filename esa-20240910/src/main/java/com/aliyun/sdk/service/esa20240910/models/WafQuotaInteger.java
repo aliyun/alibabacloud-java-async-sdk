@@ -106,7 +106,10 @@ public class WafQuotaInteger extends TeaModel {
         } 
 
         /**
-         * Equal.
+         * <p>The equal to value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder equal(Integer equal) {
             this.equal = equal;
@@ -114,7 +117,10 @@ public class WafQuotaInteger extends TeaModel {
         }
 
         /**
-         * GreaterThan.
+         * <p>The greater than value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder greaterThan(Integer greaterThan) {
             this.greaterThan = greaterThan;
@@ -122,7 +128,10 @@ public class WafQuotaInteger extends TeaModel {
         }
 
         /**
-         * GreaterThanOrEqual.
+         * <p>The greater than or equal to value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder greaterThanOrEqual(Integer greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
@@ -130,7 +139,10 @@ public class WafQuotaInteger extends TeaModel {
         }
 
         /**
-         * LessThan.
+         * <p>The less than value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lessThan(Integer lessThan) {
             this.lessThan = lessThan;
@@ -138,7 +150,10 @@ public class WafQuotaInteger extends TeaModel {
         }
 
         /**
-         * LessThanOrEqual.
+         * <p>The less than or equal to value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder lessThanOrEqual(Integer lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;

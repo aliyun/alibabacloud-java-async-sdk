@@ -93,10 +93,12 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         } 
 
         /**
-         * <p>The mode of smart HTTP DDoS protection. Valid values:</p>
+         * <p>The protection mode for HTTP DDoS intelligent protection. Valid values:</p>
          * <ul>
-         * <li><strong>observe</strong>: alert.</li>
-         * <li><strong>defense</strong>: block.</li>
+         * <li><p><strong>observe</strong>: Observe</p>
+         * </li>
+         * <li><p><strong>defense</strong>: Defense</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,12 +110,16 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         }
 
         /**
-         * <p>The level of smart HTTP DDoS protection. Valid values:</p>
+         * <p>The protection level for HTTP DDoS intelligent protection. Valid values:</p>
          * <ul>
-         * <li><strong>level0</strong>: very loose.</li>
-         * <li><strong>level30</strong>: loose.</li>
-         * <li><strong>level60</strong>: normal.</li>
-         * <li><strong>level90</strong>: strict.</li>
+         * <li><p><strong>level0</strong>: Very Loose</p>
+         * </li>
+         * <li><p><strong>level30</strong>: Loose</p>
+         * </li>
+         * <li><p><strong>level60</strong>: Normal</p>
+         * </li>
+         * <li><p><strong>level90</strong>: Strict</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,7 +142,7 @@ public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody extends Tea
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>

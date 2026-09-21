@@ -103,6 +103,7 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +128,10 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acl</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -133,6 +140,7 @@ public class DescribeHttpDDoSIntelligentAclRulesRequest extends Request {
         }
 
         /**
+         * <p>The site ID. To obtain the site ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

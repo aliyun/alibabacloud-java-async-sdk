@@ -103,6 +103,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends Request {
         } 
 
         /**
+         * <p>The current page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +128,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends Request {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cc</p>
          */
         public Builder ruleType(String ruleType) {
             this.putQueryParameter("RuleType", ruleType);
@@ -133,6 +140,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesRequest extends Request {
         }
 
         /**
+         * <p>The site ID. Obtain this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

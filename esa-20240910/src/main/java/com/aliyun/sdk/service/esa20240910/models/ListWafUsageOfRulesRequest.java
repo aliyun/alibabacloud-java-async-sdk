@@ -87,7 +87,11 @@ public class ListWafUsageOfRulesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The WAF instance ID.</p>
+         * <p>If this parameter is left empty, the API returns an empty result. We recommend that you always specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-b0wdsrlba3nk</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +100,11 @@ public class ListWafUsageOfRulesRequest extends Request {
         }
 
         /**
-         * <p>Name of the WAF operation phase.</p>
+         * <p>The phase in which the WAF rule runs. This parameter is required.</p>
+         * <p>Common values: http_custom, http_ratelimit, http_anti_scan, http_bot, http_managed, http_whitelist, and http_threat_intelligence.</p>
+         * <blockquote>
+         * <p>Note: This parameter is required on the server side. If this parameter is not specified, the API returns InvalidParameter (400).</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>
@@ -108,7 +116,7 @@ public class ListWafUsageOfRulesRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

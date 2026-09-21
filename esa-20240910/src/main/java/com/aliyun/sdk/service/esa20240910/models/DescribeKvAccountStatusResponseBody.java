@@ -78,10 +78,10 @@ public class DescribeKvAccountStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether Edge KV is activated for the Alibaba Cloud account.</p>
+         * <p>The account status.</p>
          * <ul>
-         * <li><strong>online</strong></li>
-         * <li><strong>offline</strong></li>
+         * <li><strong>online</strong>: Enabled.</li>
+         * <li><strong>offline</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

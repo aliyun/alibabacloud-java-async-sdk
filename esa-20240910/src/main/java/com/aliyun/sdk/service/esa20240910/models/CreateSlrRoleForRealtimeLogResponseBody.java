@@ -54,10 +54,7 @@ public class CreateSlrRoleForRealtimeLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

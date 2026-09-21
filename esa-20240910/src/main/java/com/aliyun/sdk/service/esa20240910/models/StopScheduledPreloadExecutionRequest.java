@@ -60,11 +60,11 @@ public class StopScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the prefetch plan.</p>
+         * <p>The prefetch plan ID, obtained from the SuccessExecutions[].Id field returned by CreateScheduledPreloadExecutions. Before calling this operation, create a prefetch job by calling CreateScheduledPreloadJob, and then create an execution plan by calling CreateScheduledPreloadExecutions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>StopScheduledPreloadExecution</p>
+         * <p>66599bd7397885b43804901c</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

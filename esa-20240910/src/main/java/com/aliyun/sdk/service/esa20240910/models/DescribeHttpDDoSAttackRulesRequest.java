@@ -89,6 +89,7 @@ public class DescribeHttpDDoSAttackRulesRequest extends Request {
         } 
 
         /**
+         * <p>The current page number. Default value: 1. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,10 @@ public class DescribeHttpDDoSAttackRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -110,6 +114,7 @@ public class DescribeHttpDDoSAttackRulesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -114,7 +117,7 @@ public class ListTraceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * List.
+         * <p>The returned list information.</p>
          */
         public Builder list(java.util.List<List> list) {
             this.list = list;
@@ -122,7 +125,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number, starting from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +136,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: any integer from 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -138,7 +147,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4E09C5D7-E1CF-4CAA-A45E-8727F4C8FD70</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -360,7 +372,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * Aliuid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1077********7468</p>
              */
             public Builder aliuid(String aliuid) {
                 this.aliuid = aliuid;
@@ -368,7 +383,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ClientAddr.
+             * <p>The IP address of the local DNS server.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder clientAddr(String clientAddr) {
                 this.clientAddr = clientAddr;
@@ -376,7 +394,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The client IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx.xx.xx.xx</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -384,7 +405,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the report was created. Format: yyyy-MM-dd HH:mm:ss. Time zone: UTC+8.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-12-10 15:11:47</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -392,7 +416,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseId.
+             * <p>The diagnose ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f2a18ad5</p>
              */
             public Builder diagnoseId(String diagnoseId) {
                 this.diagnoseId = diagnoseId;
@@ -400,7 +427,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DiagnoseUrl.
+             * <p>The diagnose URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx">http://cdn.dns-detect.alicdn.com/diagnose/xxxxxx</a></p>
              */
             public Builder diagnoseUrl(String diagnoseUrl) {
                 this.diagnoseUrl = diagnoseUrl;
@@ -408,7 +438,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name to be diagnosed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">http://www.example.com</a></p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -416,7 +449,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669285111</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -424,7 +460,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDiagnoseTimes.
+             * <p>The remaining number of available diagnostic attempts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder remainDiagnoseTimes(Long remainDiagnoseTimes) {
                 this.remainDiagnoseTimes = remainDiagnoseTimes;
@@ -432,7 +471,17 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * <p>The report generation status. Valid values:</p>
+             * <ul>
+             * <li>0: Succeeded.</li>
+             * <li>1: Failed.</li>
+             * <li>2: Timed out.</li>
+             * <li>3: Running.</li>
+             * <li>4: Waiting.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -440,7 +489,14 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the diagnose URL. Valid values:</p>
+             * <ul>
+             * <li>1: Active.</li>
+             * <li>0: Expired.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -448,7 +504,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000xxxxxxxxxxxxxxxxxxxxxxxxxxxx475e</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -456,7 +515,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TimeConsuming.
+             * <p>The time consumed to generate the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder timeConsuming(Long timeConsuming) {
                 this.timeConsuming = timeConsuming;
@@ -464,7 +526,10 @@ public class ListTraceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * <p>The trace ID of the diagnostic task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000xxxxxxxxxxxxxxxxxxxxxx25941e</p>
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;

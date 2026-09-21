@@ -93,7 +93,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The plan ID.</p>
+         * <p>The plan\&quot;s instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>esa-site-agknce3n****</p>
@@ -104,7 +104,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of files uploaded for schema verification in the plan instance of the website.</p>
+         * <p>The total count of API schema files uploaded to the plan instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -115,7 +115,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>952ea16b-1f05-4a76-bb32-420282d8****</p>
@@ -126,7 +126,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Usage details for websites.</p>
+         * <p>The usage details for each site.</p>
          */
         public Builder usages(java.util.List<Usages> usages) {
             this.usages = usages;
@@ -205,7 +205,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The website ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>40000449</p>
@@ -216,7 +216,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -227,7 +227,7 @@ public class GetApiSchemaUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of files uploaded for the website.</p>
+             * <p>The number of API schema files uploaded for this site.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

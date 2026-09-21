@@ -60,6 +60,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The security instance ID. The value must be a DDoS security instance ID in the format of esa-ddos-<em>. You can obtain the ID by calling the ListDDoSInstances operation. Site instance IDs in the format of esa-site-</em> are not supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

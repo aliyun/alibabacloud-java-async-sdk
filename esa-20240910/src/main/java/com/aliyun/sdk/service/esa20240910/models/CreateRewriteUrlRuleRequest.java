@@ -198,7 +198,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Query string rewrite type. Value range:</p>
+         * <p>The query string rewrite type. Valid values:</p>
          * <ul>
          * <li>static: static mode.</li>
          * <li>dynamic: dynamic mode.</li>
@@ -214,7 +214,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>URI rewrite type. Value range:</p>
+         * <p>The URI rewrite type. Valid values:</p>
          * <ul>
          * <li>static: static mode.</li>
          * <li>dynamic: dynamic mode.</li>
@@ -230,10 +230,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses conditional expressions to match user requests. This parameter does not need to be set when adding global configurations. There are two usage scenarios:</p>
          * <ul>
-         * <li>Match all incoming requests: set the value to true</li>
-         * <li>Match specific requests: set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,10 +246,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+         * <p>The rule switch. This parameter does not need to be set when adding global configurations. Valid values:</p>
          * <ul>
-         * <li>on: enable.</li>
-         * <li>off: disable.</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter does not need to be set when adding global configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -274,7 +274,10 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -283,7 +286,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,7 +299,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -308,7 +311,7 @@ public class CreateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>The target URI after rewriting.</p>
+         * <p>The destination URI after rewriting.</p>
          * 
          * <strong>example:</strong>
          * <p>/image/example.jpg</p>

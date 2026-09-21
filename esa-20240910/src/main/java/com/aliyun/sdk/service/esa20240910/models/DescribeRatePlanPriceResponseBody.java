@@ -67,7 +67,7 @@ public class DescribeRatePlanPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceModel.
+         * <p>The pricing information.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -75,7 +75,7 @@ public class DescribeRatePlanPriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>50423A7F-A83D-1E24-B80E-86DD25790759</p>

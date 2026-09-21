@@ -132,7 +132,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -140,7 +140,11 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for the returned data.</p>
+         * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -148,7 +152,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The data granularity. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(Long interval) {
             this.interval = interval;
@@ -156,7 +163,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>93652946-2687-5428-8254-533B1E6A***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +174,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * SamplingRate.
+         * <p>The sampling rate. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder samplingRate(Float samplingRate) {
             this.samplingRate = samplingRate;
@@ -172,7 +185,11 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -180,7 +197,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
         }
 
         /**
-         * SummarizedData.
+         * <p>The summarized data.</p>
          */
         public Builder summarizedData(java.util.List<SummarizedData> summarizedData) {
             this.summarizedData = summarizedData;
@@ -246,7 +263,11 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * TimeStamp.
+             * <p>The start time of the time slice.</p>
+             * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-08T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -254,7 +275,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -347,7 +371,7 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DetailData.
+             * <p>The returned data.</p>
              */
             public Builder detailData(java.util.List<DetailData> detailData) {
                 this.detailData = detailData;
@@ -355,7 +379,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionName.
+             * <p>The query dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionName(String dimensionName) {
                 this.dimensionName = dimensionName;
@@ -363,7 +390,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValue.
+             * <p>The dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -371,7 +401,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Requests</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -477,7 +510,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AggMethod.
+             * <p>The aggregation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sum</p>
              */
             public Builder aggMethod(String aggMethod) {
                 this.aggMethod = aggMethod;
@@ -485,7 +521,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionName.
+             * <p>The summarized dimension name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionName(String dimensionName) {
                 this.dimensionName = dimensionName;
@@ -493,7 +532,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionValue.
+             * <p>The summarized dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -501,7 +543,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The summarized metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Requests</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -509,7 +554,10 @@ public class DescribeSiteWafTimeSeriesDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The aggregated value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder value(Object value) {
                 this.value = value;

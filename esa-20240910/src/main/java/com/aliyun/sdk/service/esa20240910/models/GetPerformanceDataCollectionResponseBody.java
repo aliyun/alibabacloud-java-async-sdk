@@ -67,7 +67,14 @@ public class GetPerformanceDataCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Indicates whether quality data collection is enabled. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -75,7 +82,7 @@ public class GetPerformanceDataCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>

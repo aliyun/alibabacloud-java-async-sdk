@@ -93,7 +93,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
@@ -104,7 +104,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of free certificate application details.</p>
+         * <p>The list of free certificate application details.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -112,7 +112,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -123,7 +123,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of certificates applied for, which is the same as the number of input domains.</p>
+         * <p>The number of certificates applied for, which is the same as the number of input domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -205,7 +205,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Certificate domain.</p>
+             * <p>The certificate domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>*.example.com</p>
@@ -216,7 +216,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate ID.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30000478</p>
@@ -227,7 +227,7 @@ public class ApplyCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the certificate application.</p>
+             * <p>The certificate application status.</p>
              * 
              * <strong>example:</strong>
              * <p>Applying</p>

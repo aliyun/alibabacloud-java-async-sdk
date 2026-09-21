@@ -75,16 +75,17 @@ public class UpdateSiteCoverageRequest extends Request {
         } 
 
         /**
-         * <p>The desired service location. Valid values:</p>
+         * <p>The target acceleration region. Valid values:</p>
          * <ul>
-         * <li><strong>domestic</strong>: the Chinese mainland</li>
-         * <li><strong>global</strong>: global</li>
-         * <li><strong>overseas</strong>: outside the Chinese mainland</li>
+         * <li><strong>domestic</strong>: the Chinese mainland only.</li>
+         * <li><strong>global</strong>: global.</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
          * </ul>
+         * <p>&lt;props=&quot;china&quot;&gt;If the value is domestic or global, the site corresponding to SiteId must have a valid Chinese Internet Content Provider (ICP) filing.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>global</p>
+         * <p>overseas</p>
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -93,7 +94,7 @@ public class UpdateSiteCoverageRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

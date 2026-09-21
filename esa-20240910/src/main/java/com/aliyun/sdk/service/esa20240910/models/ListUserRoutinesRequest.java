@@ -87,10 +87,10 @@ public class ListUserRoutinesRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the returned page. Default value: 1. Valid values: 1 to 10.</p>
+         * <p>The page number. Default value: 1. Maximum value: 10.</p>
          * 
          * <strong>example:</strong>
-         * <p>ListUserRoutines</p>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -111,7 +111,7 @@ public class ListUserRoutinesRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search.</p>
+         * <p>The keyword for fuzzy match.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>

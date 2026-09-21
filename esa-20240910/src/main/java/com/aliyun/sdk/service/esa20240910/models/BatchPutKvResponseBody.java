@@ -80,7 +80,7 @@ public class BatchPutKvResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The keys that failed to be written.</p>
+         * <p>The list of keys that failed to be written.</p>
          */
         public Builder failKeys(java.util.List<String> failKeys) {
             this.failKeys = failKeys;
@@ -99,7 +99,7 @@ public class BatchPutKvResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The keys that were written.</p>
+         * <p>The list of keys that were successfully written.</p>
          */
         public Builder successKeys(java.util.List<String> successKeys) {
             this.successKeys = successKeys;

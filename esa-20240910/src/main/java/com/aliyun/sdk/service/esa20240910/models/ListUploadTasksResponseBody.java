@@ -67,7 +67,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-A198-72F8FD6D****</p>
@@ -78,7 +78,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The file upload tasks.</p>
+         * <p>The list of file upload tasks.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -209,7 +209,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-26T01:56:15Z</p>
@@ -220,7 +220,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned when the file upload task failed.</p>
+             * <p>The error message returned when the file upload task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>invalid url</p>
@@ -231,12 +231,12 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code. Multiple error codes are separated by commas (,).</p>
+             * <p>The error code. Multiple error codes are separated by commas. Valid values:</p>
              * <ul>
-             * <li><strong>InvalidUrl</strong>: The URL format is incorrect.</li>
-             * <li><strong>InvalidDomain</strong>: The domain ownership fails to be verified.</li>
-             * <li><strong>QuotaExcess</strong>: The quota limit has been reached.</li>
-             * <li><strong>OtherErrors</strong>: Other errors.</li>
+             * <li><strong>InvalidUrl</strong>: The URL format is invalid.</li>
+             * <li><strong>InvalidDomain</strong>: The domain name ownership verification failed.</li>
+             * <li><strong>QuotaExcess</strong>: The quota limit is exceeded.</li>
+             * <li><strong>OtherErrors</strong>: Other errors occurred.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class ListUploadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
              * <li><strong>Complete</strong>: The task is complete.</li>
              * <li><strong>Refreshing</strong>: The task is in progress.</li>
@@ -266,10 +266,10 @@ public class ListUploadTasksResponseBody extends TeaModel {
             /**
              * <p>The task type. Valid values:</p>
              * <ul>
-             * <li><strong>file</strong>: purges the cache by file URL.</li>
-             * <li><strong>preload</strong>: prefetches files.</li>
-             * <li><strong>directory</strong>: purges the cache by directory.</li>
-             * <li><strong>ignoreparams</strong>: purges the cache by URL with specified parameters ignored.</li>
+             * <li><strong>file</strong>: URL file purge.</li>
+             * <li><strong>preload</strong>: resource prefetch.</li>
+             * <li><strong>directory</strong>: directory purge.</li>
+             * <li><strong>ignoreparams</strong>: purge with parameters ignored.</li>
              * </ul>
              * 
              * <strong>example:</strong>

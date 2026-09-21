@@ -76,7 +76,7 @@ public class ListESAIPInfoResponseBody extends TeaModel {
 
         /**
          * <p>The request ID.</p>
-         * <p>Example D03F9502-6653-127C-8A5F-0647197*****</p>
+         * <p>Example D03F9502-6653-127C-8A5F-0647197\<em>\</em>\<em>\</em>\*</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -147,8 +147,10 @@ public class ListESAIPInfoResponseBody extends TeaModel {
             /**
              * <p>Whether the IP address in the parameter belongs to ESA POPs.</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><p><strong>true</strong></p>
+             * </li>
+             * <li><p><strong>false</strong></p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

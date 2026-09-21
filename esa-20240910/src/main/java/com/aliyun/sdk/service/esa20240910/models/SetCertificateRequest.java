@@ -188,7 +188,7 @@ public class SetCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The certificate ID on Certificate Management Service.</p>
+         * <p>The cloud certificate ID. This parameter is required when Type is set to cas.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -200,7 +200,7 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The certificate content.</p>
+         * <p>The certificate content. This parameter is required when Type is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -212,10 +212,10 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The certificate ID on ESA.</p>
+         * <p>The certificate ID. Free certificates created by calling the ApplyCertificate operation are not supported. Certificate IDs of the cas and upload types are supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>30001303</p>
+         * <p>babae7c40fef412d887688b91c9e****</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -224,7 +224,10 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * KeyServerId.
+         * <p>The keyless server ID. This parameter takes effect only when Type is set to keyless.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1233112****</p>
          */
         public Builder keyServerId(String keyServerId) {
             this.putQueryParameter("KeyServerId", keyServerId);
@@ -233,7 +236,7 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The certificate name.</p>
+         * <p>The certificate name. This parameter is required when Type is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>yourCertName</p>
@@ -245,7 +248,7 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The private key of the certificate.</p>
+         * <p>The certificate private key. This parameter is required when Type is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -257,7 +260,13 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The region.</p>
+         * <p>The region. This parameter is required when Type is set to cas. Valid values:</p>
+         * <ul>
+         * <li><p>Alibaba Cloud China Website accounts: cn-hangzhou.</p>
+         * </li>
+         * <li><p>Alibaba Cloud International Website accounts: ap-southeast-1.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -278,7 +287,7 @@ public class SetCertificateRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,8 +302,12 @@ public class SetCertificateRequest extends Request {
         /**
          * <p>The certificate type. Valid values:</p>
          * <ul>
-         * <li>cas: a certificate purchased by using Certificate Management Service.</li>
-         * <li>upload: a custom certificate that you upload.</li>
+         * <li><p><strong>cas</strong>: a certificate from SSL Certificates Service.</p>
+         * </li>
+         * <li><p><strong>upload</strong>: a custom uploaded certificate.</p>
+         * </li>
+         * <li><p><strong>keyless</strong>: a keyless certificate.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -93,7 +93,10 @@ public class GetEdgeContainerResponseBody extends TeaModel {
         } 
 
         /**
-         * BillingMode.
+         * <p>The billing mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container_95</p>
          */
         public Builder billingMode(String billingMode) {
             this.billingMode = billingMode;
@@ -101,7 +104,10 @@ public class GetEdgeContainerResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The plan instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-cn-jea67jfbs0x</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -109,7 +115,10 @@ public class GetEdgeContainerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9BEB8659-9CDE-5F2C-83E9-50F55277E844</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class GetEdgeContainerResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The plan instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;

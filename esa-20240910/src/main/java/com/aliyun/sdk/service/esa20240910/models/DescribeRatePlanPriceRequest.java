@@ -88,7 +88,10 @@ public class DescribeRatePlanPriceRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * <p>The number of plans.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
@@ -97,7 +100,10 @@ public class DescribeRatePlanPriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The purchase duration, in months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -106,7 +112,10 @@ public class DescribeRatePlanPriceRequest extends Request {
         }
 
         /**
-         * PlanName.
+         * <p>The plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder planName(String planName) {
             this.putQueryParameter("PlanName", planName);

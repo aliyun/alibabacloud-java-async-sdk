@@ -67,7 +67,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6abd807e-ed2a-44de-ac54-ac38a62472e6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineBuildConfigurations.
+         * <p>The list of ER build configurations.</p>
          */
         public Builder routineBuildConfigurations(java.util.List<RoutineBuildConfigurations> routineBuildConfigurations) {
             this.routineBuildConfigurations = routineBuildConfigurations;
@@ -154,7 +157,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time, in ISO 8601 format (UTC), formatted as yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-10T02:18:55Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -162,7 +168,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineName.
+             * <p>The ER routine name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwa-test</p>
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;
@@ -170,7 +179,18 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the build task. Valid values:</p>
+             * <ul>
+             * <li>int: Init.</li>
+             * <li>pending: Pending.</li>
+             * <li>building: Building.</li>
+             * <li>succeed: Succeeded.</li>
+             * <li>failed: Failed.</li>
+             * <li>canceled: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>building</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -276,7 +296,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * GitAccountName.
+             * <p>The Git account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder gitAccountName(String gitAccountName) {
                 this.gitAccountName = gitAccountName;
@@ -284,7 +307,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * GitPlatform.
+             * <p>The Git platform. Valid values: github, gitee, and upload.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>github</p>
              */
             public Builder gitPlatform(String gitPlatform) {
                 this.gitPlatform = gitPlatform;
@@ -292,7 +318,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionBranch.
+             * <p>The production branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder productionBranch(String productionBranch) {
                 this.productionBranch = productionBranch;
@@ -300,7 +329,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Repository.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example-test</p>
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -308,7 +340,10 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineName.
+             * <p>The ER routine name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwa-test</p>
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;
@@ -375,7 +410,7 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * LatestRoutineBuildTask.
+             * <p>The latest ER build task information.</p>
              */
             public Builder latestRoutineBuildTask(LatestRoutineBuildTask latestRoutineBuildTask) {
                 this.latestRoutineBuildTask = latestRoutineBuildTask;
@@ -383,7 +418,7 @@ public class ListRoutineBuildConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineBuildConfiguration.
+             * <p>The ER build configuration information.</p>
              */
             public Builder routineBuildConfiguration(RoutineBuildConfiguration routineBuildConfiguration) {
                 this.routineBuildConfiguration = routineBuildConfiguration;

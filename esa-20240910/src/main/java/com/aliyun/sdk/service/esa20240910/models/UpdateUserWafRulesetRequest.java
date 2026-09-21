@@ -173,7 +173,10 @@ public class UpdateUserWafRulesetRequest extends Request {
         } 
 
         /**
-         * Description.
+         * <p>The description of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -182,7 +185,10 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Expression.
+         * <p>The expression of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src == 1.1.1.1</p>
          */
         public Builder expression(String expression) {
             this.putBodyParameter("Expression", expression);
@@ -191,6 +197,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
+         * <p>The WAF ruleset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +210,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +223,10 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -224,7 +235,10 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Position.
+         * <p>The position of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder position(Long position) {
             this.putBodyParameter("Position", position);
@@ -233,7 +247,16 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Rules.
+         * <p>A list of rule configurations in the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;Id&quot;: 20000001,
+         *     &quot;Name&quot;: &quot;rule1&quot;,
+         *     &quot;Expression&quot;: &quot;ip.src eq 1.1.1.1&quot;,
+         *     &quot;Action&quot;: &quot;deny&quot;
+         *   }</p>
          */
         public Builder rules(java.util.List<WafRuleConfig> rules) {
             String rulesShrink = shrink(rules, "Rules", "json");
@@ -243,7 +266,7 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Shared.
+         * <p>The shared configuration of the WAF ruleset.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             String sharedShrink = shrink(shared, "Shared", "json");
@@ -253,7 +276,10 @@ public class UpdateUserWafRulesetRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);

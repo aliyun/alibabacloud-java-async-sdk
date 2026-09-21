@@ -132,7 +132,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Number of WAF rule sets used by the instance in this WAF operation phase.</p>
+         * <p>The number of WAF rulesets used by the instance in this WAF execution phase.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -143,7 +143,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,7 +165,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -176,7 +176,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of rule set information, containing detailed information about the rule sets.</p>
+         * <p>The list of rulesets, including detailed information about each ruleset.</p>
          */
         public Builder rulesets(java.util.List<Rulesets> rulesets) {
             this.rulesets = rulesets;
@@ -184,7 +184,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of WAF rule sets used by the site in this WAF operation phase.</p>
+         * <p>The number of WAF rulesets used by the site in this WAF execution phase.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -195,7 +195,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of filtered records.</p>
+         * <p>The total number of records after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -342,7 +342,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of match objects.</p>
+             * <p>The list of match objects.</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -350,7 +350,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>ID of the WAF rule set.</p>
+             * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
              * 
              * <strong>example:</strong>
              * <p>10000001</p>
@@ -361,7 +361,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Name of the rule set.</p>
+             * <p>The ruleset name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -372,7 +372,17 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>WAF operation phase.</p>
+             * <p>The WAF rule execution phase. Valid values:</p>
+             * <ul>
+             * <li>http_whitelist: whitelist rules</li>
+             * <li>http_custom: custom rules</li>
+             * <li>http_managed: managed rules</li>
+             * <li>http_anti_scan: scan protection rules</li>
+             * <li>http_ratelimit: frequency control rules</li>
+             * <li>ip_access_rule: IP access rules</li>
+             * <li>http_bot: advanced mode bots</li>
+             * <li>http_security_level_rule: security rules</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>http_bot</p>
@@ -383,7 +393,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Status of the rule set.</p>
+             * <p>The ruleset status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -394,7 +404,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Protection target type in http_bot.</p>
+             * <p>The protection target type in http_bot.</p>
              * 
              * <strong>example:</strong>
              * <p>web</p>
@@ -405,7 +415,7 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of rule types.</p>
+             * <p>The list of rule types.</p>
              */
             public Builder types(java.util.List<String> types) {
                 this.types = types;
@@ -413,7 +423,9 @@ public class ListWafRulesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Last modification time of the rule set.</p>
+             * <p>The last modification time of the ruleset.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-01T00:00:00Z</p>

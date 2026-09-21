@@ -133,7 +133,11 @@ public class UpdateEnvironmentRequest extends Request {
         } 
 
         /**
+         * <p>The environment name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认环境</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -142,7 +146,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * NewName.
+         * <p>The new environment name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>环境A</p>
          */
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
@@ -151,7 +158,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether the environment is read-only.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder readOnly(Boolean readOnly) {
             this.putQueryParameter("ReadOnly", readOnly);
@@ -160,7 +171,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>The Wireshark rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;duduko5.top&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -169,7 +184,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33993121955****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -178,7 +197,10 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The new site version number. Only the environment with the highest priority can be modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

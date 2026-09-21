@@ -67,7 +67,7 @@ public class QuotaPageContentTypesValue extends TeaModel {
         } 
 
         /**
-         * <p>The switch for the Content-Type type in custom response pages.</p>
+         * <p>Indicates whether the corresponding Content-Type for custom response pages is enabled.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -75,7 +75,7 @@ public class QuotaPageContentTypesValue extends TeaModel {
         }
 
         /**
-         * <p>The content length quota for the Content-Type in custom response pages.</p>
+         * <p>The content length quota for the corresponding Content-Type in custom response pages.</p>
          */
         public Builder contentLength(WafQuotaInteger contentLength) {
             this.contentLength = contentLength;

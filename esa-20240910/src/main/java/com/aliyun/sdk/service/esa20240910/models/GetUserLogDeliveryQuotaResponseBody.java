@@ -80,12 +80,12 @@ public class GetUserLogDeliveryQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The log category. Valid values:</p>
+         * <p>The log type of real-time Mitigation Logs. Valid values:</p>
          * <ul>
-         * <li>dcdn_log_access_l1 (default): access logs.</li>
-         * <li>dcdn_log_er: Edge Routine logs.</li>
-         * <li>dcdn_log_waf: firewall logs.</li>
-         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine logs.</li>
+         * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+         * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class GetUserLogDeliveryQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining quota.</p>
+         * <p>The remaining available quota.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

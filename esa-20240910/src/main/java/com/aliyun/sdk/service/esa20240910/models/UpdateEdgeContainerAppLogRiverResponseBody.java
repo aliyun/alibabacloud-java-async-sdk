@@ -80,7 +80,7 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The log path of the container.</p>
+         * <p>The log file of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/hello.log</p>
@@ -102,7 +102,7 @@ public class UpdateEdgeContainerAppLogRiverResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the standard output of the container is collected.</p>
+         * <p>Specifies whether to enable standard output collection for the container.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

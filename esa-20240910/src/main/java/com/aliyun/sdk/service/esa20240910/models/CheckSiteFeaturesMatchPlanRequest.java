@@ -75,6 +75,7 @@ public class CheckSiteFeaturesMatchPlanRequest extends Request {
         } 
 
         /**
+         * <p>The target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class CheckSiteFeaturesMatchPlanRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

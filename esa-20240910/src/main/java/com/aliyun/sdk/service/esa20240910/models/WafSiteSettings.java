@@ -145,7 +145,7 @@ public class WafSiteSettings extends TeaModel {
         } 
 
         /**
-         * AddBotProtectionHeaders.
+         * <p>The bot protection headers.</p>
          */
         public Builder addBotProtectionHeaders(AddBotProtectionHeaders addBotProtectionHeaders) {
             this.addBotProtectionHeaders = addBotProtectionHeaders;
@@ -153,7 +153,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * AddSecurityHeaders.
+         * <p>The security headers.</p>
          */
         public Builder addSecurityHeaders(AddSecurityHeaders addSecurityHeaders) {
             this.addSecurityHeaders = addSecurityHeaders;
@@ -161,7 +161,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * BandwidthAbuseProtection.
+         * <p>The bandwidth abuse protection.</p>
          */
         public Builder bandwidthAbuseProtection(BandwidthAbuseProtection bandwidthAbuseProtection) {
             this.bandwidthAbuseProtection = bandwidthAbuseProtection;
@@ -169,7 +169,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * BotManagement.
+         * <p>The bot management.</p>
          */
         public Builder botManagement(BotManagement botManagement) {
             this.botManagement = botManagement;
@@ -177,7 +177,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * ClientIpIdentifier.
+         * <p>The client IP identification.</p>
          */
         public Builder clientIpIdentifier(ClientIpIdentifier clientIpIdentifier) {
             this.clientIpIdentifier = clientIpIdentifier;
@@ -185,7 +185,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * DisableSecurityModule.
+         * <p>The disable security module configuration.</p>
          */
         public Builder disableSecurityModule(DisableSecurityModule disableSecurityModule) {
             this.disableSecurityModule = disableSecurityModule;
@@ -193,7 +193,13 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * RequestBodyInspection.
+         * <p>The request body inspection configuration. Controls the deep packet inspection behavior of WAF for HTTP request bodies. After this feature is enabled, content-based matching rules such as SQL injection and XSS detection take effect on request bodies.</p>
+         * <p>This configuration can contain the following fields:</p>
+         * <ul>
+         * <li><code>Id</code>: The unique identifier of the built-in inspection rule.</li>
+         * <li><code>SizeLimit</code>: The maximum size of the request body to inspect.</li>
+         * <li><code>Action</code>: The action to take when the request body exceeds the size limit.</li>
+         * </ul>
          */
         public Builder requestBodyInspection(RequestBodyInspection requestBodyInspection) {
             this.requestBodyInspection = requestBodyInspection;
@@ -201,7 +207,7 @@ public class WafSiteSettings extends TeaModel {
         }
 
         /**
-         * SecurityLevel.
+         * <p>The security level.</p>
          */
         public Builder securityLevel(SecurityLevel securityLevel) {
             this.securityLevel = securityLevel;
@@ -254,7 +260,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>The switch.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -308,7 +314,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>The switch.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -388,7 +394,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action of the bandwidth abuse protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -396,7 +405,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the bandwidth abuse protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -404,7 +416,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The switch status of the bandwidth abuse protection rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -471,7 +486,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>captcha</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -479,7 +497,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -533,7 +554,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>The switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -587,7 +611,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>The switch.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -654,7 +678,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -662,7 +689,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000002</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -729,7 +759,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bypass</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -737,7 +770,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000003</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -843,7 +879,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * DefiniteBots.
+             * <p>The definite bots.</p>
              */
             public Builder definiteBots(DefiniteBots definiteBots) {
                 this.definiteBots = definiteBots;
@@ -851,7 +887,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * EffectOnStatic.
+             * <p>Specifies whether the rule applies to static resource requests.</p>
              */
             public Builder effectOnStatic(EffectOnStatic effectOnStatic) {
                 this.effectOnStatic = effectOnStatic;
@@ -859,7 +895,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * JSDetection.
+             * <p>The JavaScript detection.</p>
              */
             public Builder JSDetection(JSDetection JSDetection) {
                 this.JSDetection = JSDetection;
@@ -867,7 +903,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * LikelyBots.
+             * <p>The likely bots.</p>
              */
             public Builder likelyBots(LikelyBots likelyBots) {
                 this.likelyBots = likelyBots;
@@ -875,7 +911,7 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * VerifiedBots.
+             * <p>The verified bots.</p>
              */
             public Builder verifiedBots(VerifiedBots verifiedBots) {
                 this.verifiedBots = verifiedBots;
@@ -942,7 +978,7 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Headers.
+             * <p>The specified headers.</p>
              */
             public Builder headers(java.util.List<String> headers) {
                 this.headers = headers;
@@ -950,7 +986,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The identification mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>headers</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1004,7 +1043,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Status.
+             * <p>The status switch for disabling the security module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1084,7 +1126,17 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action to take when the request body size exceeds <code>SizeLimit</code>.</p>
+             * <p>Common values (the complete enumeration is subject to the server-side configuration):</p>
+             * <ul>
+             * <li><code>allow</code>: Allow directly without performing deep packet inspection on the excess portion.</li>
+             * </ul>
+             * <blockquote>
+             * <p>The complete enum is subject to the WAF server-side configuration.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>allow</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1092,7 +1144,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1100,7 +1155,17 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * SizeLimit.
+             * <p>The maximum size of the request body to inspect, in bytes.</p>
+             * <ul>
+             * <li>When the request body is less than or equal to this value, the entire content is subject to WAF matching.</li>
+             * <li>When the request body exceeds this value, the action specified in the <code>Action</code> field is taken (for example, inspect only the first N bytes, reject, or allow directly).</li>
+             * </ul>
+             * <blockquote>
+             * <p>The specific value range and default value are subject to the WAF server-side configuration.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>16KB</p>
              */
             public Builder sizeLimit(String sizeLimit) {
                 this.sizeLimit = sizeLimit;
@@ -1167,7 +1232,10 @@ public class WafSiteSettings extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The request body inspection rule ID (unique identifier of the built-in rule). When request body inspection is enabled, the server uses this ID to associate the matching logic of the built-in inspection rule. The ID value is subject to the WAF built-in rule list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1175,7 +1243,10 @@ public class WafSiteSettings extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The security level value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder value(String value) {
                 this.value = value;

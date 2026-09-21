@@ -119,7 +119,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The list of ER build tasks.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -127,7 +127,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * <p>The page number, which is the same as the PageIndex request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Long pageIndex) {
             this.pageIndex = pageIndex;
@@ -135,7 +138,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPage(Long totalPage) {
             this.totalPage = totalPage;
@@ -511,7 +526,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetsDirectory.
+             * <p>The static assets directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/usr</p>
              */
             public Builder assetsDirectory(String assetsDirectory) {
                 this.assetsDirectory = assetsDirectory;
@@ -519,7 +537,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * Branch.
+             * <p>The branch used for the build.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder branch(String branch) {
                 this.branch = branch;
@@ -527,7 +548,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * BuildCommand.
+             * <p>The build command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>npm run build</p>
              */
             public Builder buildCommand(String buildCommand) {
                 this.buildCommand = buildCommand;
@@ -535,7 +559,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * CommitId.
+             * <p>The ID of the commit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c08057f590f8d5be56fcae1e082128254a708f94</p>
              */
             public Builder commitId(String commitId) {
                 this.commitId = commitId;
@@ -543,7 +570,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * CommitMessage.
+             * <p>The commit message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Add static files.</p>
              */
             public Builder commitMessage(String commitMessage) {
                 this.commitMessage = commitMessage;
@@ -551,7 +581,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-26T02:19:34Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -559,7 +592,7 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentVariables.
+             * <p>The environment variables.</p>
              */
             public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
                 this.environmentVariables = environmentVariables;
@@ -567,7 +600,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * GitAccountId.
+             * <p>The Git account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162124764031208</p>
              */
             public Builder gitAccountId(Long gitAccountId) {
                 this.gitAccountId = gitAccountId;
@@ -575,7 +611,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * GitAccountName.
+             * <p>The Git account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwa</p>
              */
             public Builder gitAccountName(String gitAccountName) {
                 this.gitAccountName = gitAccountName;
@@ -583,7 +622,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallCommand.
+             * <p>The install command.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>npm install</p>
              */
             public Builder installCommand(String installCommand) {
                 this.installCommand = installCommand;
@@ -591,7 +633,14 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * IsPrivate.
+             * <p>Indicates whether the repository is private. Valid values:</p>
+             * <ul>
+             * <li>true: The repository is private.</li>
+             * <li>false: The repository is not private.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPrivate(Boolean isPrivate) {
                 this.isPrivate = isPrivate;
@@ -599,7 +648,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeVersion.
+             * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22.x</p>
              */
             public Builder nodeVersion(String nodeVersion) {
                 this.nodeVersion = nodeVersion;
@@ -607,7 +659,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The Yunxiao pipeline ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3850166</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -615,7 +670,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineRunId.
+             * <p>The Yunxiao build task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70</p>
              */
             public Builder pipelineRunId(Long pipelineRunId) {
                 this.pipelineRunId = pipelineRunId;
@@ -623,7 +681,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * ProductionBranch.
+             * <p>The production branch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>main</p>
              */
             public Builder productionBranch(String productionBranch) {
                 this.productionBranch = productionBranch;
@@ -631,7 +692,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * Repository.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rwa-test</p>
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -639,7 +703,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * RootDirectory.
+             * <p>The root directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/admin</p>
              */
             public Builder rootDirectory(String rootDirectory) {
                 this.rootDirectory = rootDirectory;
@@ -647,7 +714,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineBuildId.
+             * <p>The ER build task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4133325046294912</p>
              */
             public Builder routineBuildId(Long routineBuildId) {
                 this.routineBuildId = routineBuildId;
@@ -655,7 +725,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineEntry.
+             * <p>The ER entry file path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/home</p>
              */
             public Builder routineEntry(String routineEntry) {
                 this.routineEntry = routineEntry;
@@ -663,7 +736,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * RoutineName.
+             * <p>The ER name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-routine</p>
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;
@@ -671,7 +747,18 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the build task. Valid values:</p>
+             * <ul>
+             * <li>int: initialization</li>
+             * <li>pending: preparing</li>
+             * <li>building: building</li>
+             * <li>succeed: build succeeded</li>
+             * <li>failed: build failed</li>
+             * <li>canceled: canceled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -679,7 +766,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -687,7 +777,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The modification time, in the ISO 8601 format in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-20T00:44:23Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -695,7 +788,10 @@ public class ListRoutineBuildsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1427812834792318</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

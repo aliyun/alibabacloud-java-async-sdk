@@ -87,7 +87,16 @@ public class DescribeCacheReservePriceRequest extends Request {
         } 
 
         /**
-         * CrRegion.
+         * <p>The cache reserve region.</p>
+         * <ul>
+         * <li><p>HK: Hong Kong (China)</p>
+         * </li>
+         * <li><p>CN: the Chinese mainland.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>HK</p>
          */
         public Builder crRegion(String crRegion) {
             this.putQueryParameter("CrRegion", crRegion);
@@ -96,7 +105,10 @@ public class DescribeCacheReservePriceRequest extends Request {
         }
 
         /**
-         * Period.
+         * <p>The purchase period. Unit: months.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -105,7 +117,10 @@ public class DescribeCacheReservePriceRequest extends Request {
         }
 
         /**
-         * QuotaGb.
+         * <p>The cache reserve specification. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>512000</p>
          */
         public Builder quotaGb(Long quotaGb) {
             this.putQueryParameter("QuotaGb", quotaGb);

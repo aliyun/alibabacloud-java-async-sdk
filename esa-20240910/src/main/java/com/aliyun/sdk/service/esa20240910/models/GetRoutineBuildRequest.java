@@ -60,6 +60,7 @@ public class GetRoutineBuildRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the ER build task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

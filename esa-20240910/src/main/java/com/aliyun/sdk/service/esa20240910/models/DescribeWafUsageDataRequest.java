@@ -129,7 +129,13 @@ public class DescribeWafUsageDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T23:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -138,7 +144,19 @@ public class DescribeWafUsageDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity for the query data, in seconds.</p>
+         * <p>The valid values vary based on the time range specified by <strong>StartTime</strong> and <strong>EndTime</strong>:</p>
+         * <ul>
+         * <li><p>Less than 3 days: Valid values are <strong>300</strong>, <strong>3600</strong>, and <strong>86400</strong>. Default value: <strong>300</strong>.</p>
+         * </li>
+         * <li><p>3 to 31 days (exclusive of 31 days): Valid values are <strong>3600</strong> and <strong>86400</strong>. Default value: <strong>3600</strong>.</p>
+         * </li>
+         * <li><p>31 days or more: The only valid value is <strong>86400</strong>. Default value: <strong>86400</strong>.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -147,7 +165,10 @@ public class DescribeWafUsageDataRequest extends Request {
         }
 
         /**
-         * RecordName.
+         * <p>The domain record name. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the domain record name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.example.com</p>
          */
         public Builder recordName(String recordName) {
             this.putQueryParameter("RecordName", recordName);
@@ -156,7 +177,10 @@ public class DescribeWafUsageDataRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -165,7 +189,13 @@ public class DescribeWafUsageDataRequest extends Request {
         }
 
         /**
-         * SplitBy.
+         * <p>The grouping key. You can set this parameter to <strong>domain</strong>.</p>
+         * <ul>
+         * <li><strong>domain</strong>: groups the data by domain name.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>domain</p>
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -174,7 +204,10 @@ public class DescribeWafUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

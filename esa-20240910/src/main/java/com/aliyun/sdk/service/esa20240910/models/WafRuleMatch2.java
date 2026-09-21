@@ -132,7 +132,7 @@ public class WafRuleMatch2 extends TeaModel {
         } 
 
         /**
-         * ConvertToLower.
+         * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
          */
         public Builder convertToLower(Boolean convertToLower) {
             this.convertToLower = convertToLower;
@@ -140,7 +140,7 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * Criteria.
+         * <p>The details of logical databases.</p>
          */
         public Builder criteria(java.util.List<Criteria> criteria) {
             this.criteria = criteria;
@@ -148,7 +148,10 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * Logic.
+         * <p>The logical judgment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder logic(String logic) {
             this.logic = logic;
@@ -156,7 +159,10 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * MatchOperator.
+         * <p>The matching operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
          */
         public Builder matchOperator(String matchOperator) {
             this.matchOperator = matchOperator;
@@ -164,7 +170,10 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * MatchType.
+         * <p>The matching type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
          */
         public Builder matchType(String matchType) {
             this.matchType = matchType;
@@ -172,7 +181,10 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * MatchValue.
+         * <p>The value of the matching condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder matchValue(Object matchValue) {
             this.matchValue = matchValue;
@@ -180,7 +192,7 @@ public class WafRuleMatch2 extends TeaModel {
         }
 
         /**
-         * Negate.
+         * <p>Converts a value or condition to its opposite.</p>
          */
         public Builder negate(Boolean negate) {
             this.negate = negate;
@@ -285,7 +297,7 @@ public class WafRuleMatch2 extends TeaModel {
             } 
 
             /**
-             * ConvertToLower.
+             * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
              */
             public Builder convertToLower(Boolean convertToLower) {
                 this.convertToLower = convertToLower;
@@ -293,7 +305,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchOperator.
+             * <p>The matching operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder matchOperator(String matchOperator) {
                 this.matchOperator = matchOperator;
@@ -301,7 +316,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -309,7 +327,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchValue.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder matchValue(Object matchValue) {
                 this.matchValue = matchValue;
@@ -317,7 +338,7 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Negate.
+             * <p>Converts a value or condition to its opposite.</p>
              */
             public Builder negate(Boolean negate) {
                 this.negate = negate;
@@ -449,7 +470,7 @@ public class WafRuleMatch2 extends TeaModel {
             } 
 
             /**
-             * ConvertToLower.
+             * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
              */
             public Builder convertToLower(Boolean convertToLower) {
                 this.convertToLower = convertToLower;
@@ -457,7 +478,7 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Criteria.
+             * <p>The details of logical databases.</p>
              */
             public Builder criteria(java.util.List<CriteriaCriteria> criteria) {
                 this.criteria = criteria;
@@ -465,7 +486,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>The logical judgment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -473,7 +497,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchOperator.
+             * <p>The matching operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder matchOperator(String matchOperator) {
                 this.matchOperator = matchOperator;
@@ -481,7 +508,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -489,7 +519,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchValue.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder matchValue(Object matchValue) {
                 this.matchValue = matchValue;
@@ -497,7 +530,7 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Negate.
+             * <p>Converts a value or condition to its opposite.</p>
              */
             public Builder negate(Boolean negate) {
                 this.negate = negate;
@@ -629,7 +662,7 @@ public class WafRuleMatch2 extends TeaModel {
             } 
 
             /**
-             * ConvertToLower.
+             * <p>Transforms input to lowercase to ensure case-insensitivity.</p>
              */
             public Builder convertToLower(Boolean convertToLower) {
                 this.convertToLower = convertToLower;
@@ -637,7 +670,7 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Criteria.
+             * <p>The details of logical databases.</p>
              */
             public Builder criteria(java.util.List<WafRuleMatch2CriteriaCriteria> criteria) {
                 this.criteria = criteria;
@@ -645,7 +678,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>The logical judgment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -653,7 +689,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchOperator.
+             * <p>The matching operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
              */
             public Builder matchOperator(String matchOperator) {
                 this.matchOperator = matchOperator;
@@ -661,7 +700,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The matching type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -669,7 +711,10 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * MatchValue.
+             * <p>The value of the matching condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder matchValue(Object matchValue) {
                 this.matchValue = matchValue;
@@ -677,7 +722,7 @@ public class WafRuleMatch2 extends TeaModel {
             }
 
             /**
-             * Negate.
+             * <p>Converts a value or condition to its opposite.</p>
              */
             public Builder negate(Boolean negate) {
                 this.negate = negate;

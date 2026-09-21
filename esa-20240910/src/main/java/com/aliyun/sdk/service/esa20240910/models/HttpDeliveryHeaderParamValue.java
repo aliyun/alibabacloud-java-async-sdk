@@ -54,10 +54,13 @@ public class HttpDeliveryHeaderParamValue extends TeaModel {
         } 
 
         /**
-         * <p>The static variable.</p>
+         * <p>The value of the custom HTTP delivery request header.</p>
+         * <blockquote>
+         * <p>Key-map. The value can be a static value, a dynamic function, or a dynamic value.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>alicdn</p>
+         * <p>x-auth: sk-***</p>
          */
         public Builder staticValue(String staticValue) {
             this.staticValue = staticValue;

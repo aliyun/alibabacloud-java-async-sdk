@@ -87,10 +87,10 @@ public class SubmitUploadTaskRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to refresh resources in the corresponding directory if the requested content is different from that on the origin server. Default value: false. This parameter takes effect for a purge task.</p>
+         * <p>Specifies whether to purge resources in the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false. This parameter is valid only for purge tasks.</p>
          * <ul>
-         * <li><strong>true</strong>: purges all resources in the directory.</li>
-         * <li><strong>false</strong>: refresh the changed resources in the directory.</li>
+         * <li><strong>true</strong>: Purges all resources in the corresponding directory.</li>
+         * <li><strong>false</strong>: Purges only the changed resources in the corresponding directory.</li>
          * </ul>
          */
         public Builder force(Boolean force) {
@@ -100,7 +100,7 @@ public class SubmitUploadTaskRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -112,7 +112,7 @@ public class SubmitUploadTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file upload task, which is generated when you call <a href="~~UploadTask~~">UploadTask</a>.</p>
+         * <p>The file upload task ID, which is generated when you call the <a href="~~UploadTask~~">UploadTask</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1593805857882113</p>

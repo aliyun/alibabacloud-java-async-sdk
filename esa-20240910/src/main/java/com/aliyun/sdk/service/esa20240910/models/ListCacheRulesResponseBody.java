@@ -119,7 +119,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response body configuration.</p>
+         * <p>The configuration list in the response body.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -160,7 +160,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -171,7 +171,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -604,10 +604,14 @@ public class ListCacheRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Enable caching on specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
+             * <ul>
+             * <li>Enables caching on specified ports.</li>
+             * <li>Valid values: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, and 2096.</li>
+             * <li>Multiple ports are separated by commas (,).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>2082</p>
+             * <p>8880,2052,2086</p>
              */
             public Builder additionalCacheablePorts(String additionalCacheablePorts) {
                 this.additionalCacheablePorts = additionalCacheablePorts;
@@ -615,11 +619,11 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Browser cache mode. Possible values:</p>
+             * <p>The browser cache mode. Valid values:</p>
              * <ul>
-             * <li>no_cache: Do not cache.</li>
-             * <li>follow_origin: Follow origin cache policy.</li>
-             * <li>override_origin: Override origin cache policy.</li>
+             * <li>no_cache: does not cache.</li>
+             * <li>follow_origin: follows the origin cache policy.</li>
+             * <li>override_origin: overrides the origin cache policy.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -631,7 +635,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Browser cache expiration time, in seconds.</p>
+             * <p>The browser cache expiration time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -642,10 +646,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Set bypass cache mode. Possible values:</p>
+             * <p>The bypass cache mode. Valid values:</p>
              * <ul>
-             * <li>cache_all: Cache all requests.</li>
-             * <li>bypass_all: Bypass cache for all requests.</li>
+             * <li>cache_all: caches all requests.</li>
+             * <li>bypass_all: bypasses cache for all requests.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -657,10 +661,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cache deception defense. Used to defend against web cache deception attacks; only verified cache content will be cached. Value range:</p>
+             * <p>The cache deception armor. Protects against web cache deception attacks by caching only content that passes validation. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -672,10 +676,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cache reserve eligibility. This is used to control whether user requests bypass the cache reserve node when returning to the origin. The value range is as follows:</p>
+             * <p>The cache reserve eligibility. Controls whether user requests bypass the cache reserve node during back-to-origin. Valid values:</p>
              * <ul>
-             * <li>bypass_cache_reserve: Requests bypass the cache reserve.</li>
-             * <li>eligible_for_cache_reserve: Eligible for cache reserve.</li>
+             * <li>bypass_cache_reserve: requests bypass cache reserve.</li>
+             * <li>eligible_for_cache_reserve: requests are eligible for cache reserve.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -687,10 +691,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>When generating the cache key, check if the cookie exists. If it does, add the cookie name (case-insensitive) to the cache key. Multiple cookie names are supported, separated by spaces.</p>
+             * <p>When generating cache keys, checks whether the specified cookies exist. If a cookie exists, its name (case-insensitive) is added to the cache key. Multiple cookie names are separated by spaces. Cookie names support the following character types:</p>
+             * <ul>
+             * <li>Symbols: ! # $ % &amp; \&quot; * + - . ^ _ ` | ~</li>
+             * <li>Digits: 0-9</li>
+             * <li>Letters: lowercase a-z.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cookiename</p>
+             * <p>cookiename1 cookiename2</p>
              */
             public Builder checkPresenceCookie(String checkPresenceCookie) {
                 this.checkPresenceCookie = checkPresenceCookie;
@@ -698,10 +707,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>When generating the cache key, check if the header exists. If it does, add the header name (case-insensitive) to the cache key. Multiple header names are supported, separated by spaces.</p>
+             * <p>When generating cache keys, checks whether the specified headers exist. If a header exists, its name (case-insensitive) is added to the cache key. Multiple header names are separated by spaces. Header names support the following character types:</p>
+             * <ul>
+             * <li>Symbols: ! # $ % &amp; \&quot; * + - . ^ _ ` | ~</li>
+             * <li>Digits: 0-9</li>
+             * <li>Letters: lowercase a-z.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>headername</p>
+             * <p>headername1 headername2</p>
              */
             public Builder checkPresenceHeader(String checkPresenceHeader) {
                 this.checkPresenceHeader = checkPresenceHeader;
@@ -709,7 +723,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration ID.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>395386449776640</p>
@@ -720,10 +734,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
+             * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: Query global configuration.</li>
-             * <li>rule: Query rule-based configuration.</li>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,12 +749,13 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Edge cache mode. The value range is as follows:</p>
+             * <p>The edge cache mode. Valid values:</p>
              * <ul>
-             * <li>follow_origin: Follow the origin server&quot;s cache policy (if it exists), otherwise use the default cache policy.</li>
-             * <li>no_cache: Do not cache.</li>
-             * <li>override_origin: Override the origin server&quot;s cache policy.</li>
-             * <li>follow_origin_bypass: Follow the origin server&quot;s cache policy (if it exists), otherwise do not cache.</li>
+             * <li>follow_origin: follows the origin cache policy if present. Otherwise, uses the default cache policy.</li>
+             * <li>no_cache: does not cache.</li>
+             * <li>override_origin: overrides the origin cache policy.</li>
+             * <li>follow_origin_bypass: follows the origin cache policy if present. Otherwise, does not cache.</li>
+             * <li>follow_origin_override: follows the origin cache policy if present. Otherwise, uses a custom cache TTL.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -752,7 +767,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Edge cache expiration time, in seconds.</p>
+             * <p>The edge cache expiration time, in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -763,10 +778,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Edge cache expiration time, in seconds.</p>
+             * <p>The status code cache expiration time, in seconds.</p>
+             * <ul>
+             * <li>You can set the cache expiration time for specific status codes. For example, 404=10 indicates that the 404 status code is cached for 10 seconds.</li>
+             * <li>You can set the cache expiration time for 4xx or 5xx series status codes. For example, 4xx=10 indicates that all 4xx status codes are cached for 10 seconds.</li>
+             * <li>You can set the cache expiration time for multiple status codes. Separate multiple status codes with commas (,).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>300</p>
+             * <p>5xx=0,404=10</p>
              */
             public Builder edgeStatusCodeCacheTtl(String edgeStatusCodeCacheTtl) {
                 this.edgeStatusCodeCacheTtl = edgeStatusCodeCacheTtl;
@@ -774,10 +794,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Include the specified cookie names and their values when generating the cache key. Multiple values are supported, separated by spaces.</p>
+             * <p>The specified cookie names (case-insensitive) and their values to include when generating cache keys. Multiple values are separated by spaces. Cookie names support the following character types:</p>
+             * <ul>
+             * <li>Symbols: ! # $ % &amp; \&quot; * + - . ^ _ ` | ~</li>
+             * <li>Digits: 0-9</li>
+             * <li>Letters: lowercase a-z.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cookie_exapmle</p>
+             * <p>cookiename1 cookiename2</p>
              */
             public Builder includeCookie(String includeCookie) {
                 this.includeCookie = includeCookie;
@@ -785,10 +810,15 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Include the specified header names and their values when generating the cache key. Multiple values are supported, separated by spaces.</p>
+             * <p>The specified header names (case-insensitive) and their values to include when generating cache keys. Multiple values are separated by spaces. Header names support the following character types:</p>
+             * <ul>
+             * <li>Symbols: ! # $ % &amp; \&quot; * + - . ^ _ ` | ~</li>
+             * <li>Digits: 0-9</li>
+             * <li>Letters: lowercase a-z.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>headername1 headername2</p>
              */
             public Builder includeHeader(String includeHeader) {
                 this.includeHeader = includeHeader;
@@ -796,7 +826,14 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PostBodyCacheKey.
+             * <p>The cache key handling mode for POST caching. The following two modes are supported:</p>
+             * <ul>
+             * <li>md5: calculates the MD5 hash of the body content and adds the MD5 value to the cache key.</li>
+             * <li>ignore: ignores the body content in the cache key.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ignore</p>
              */
             public Builder postBodyCacheKey(String postBodyCacheKey) {
                 this.postBodyCacheKey = postBodyCacheKey;
@@ -804,7 +841,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PostBodySizeLimit.
+             * <p>The body size limit for POST caching. The value is a number in KB. Valid values: 1 to 8. If this parameter is left empty, the default value of 8 KB takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder postBodySizeLimit(String postBodySizeLimit) {
                 this.postBodySizeLimit = postBodySizeLimit;
@@ -812,7 +852,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PostCache.
+             * <p>Specifies whether to enable POST caching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder postCache(String postCache) {
                 this.postCache = postCache;
@@ -820,7 +863,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The query strings to be reserved or excluded. Multiple values are supported, separated by spaces.</p>
+             * <p>The query strings to retain or remove when generating cache keys. Multiple values are separated by spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -831,12 +874,12 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The processing mode for query strings when generating the cache key. The value range is as follows:</p>
+             * <p>The query string handling mode when generating cache keys. Valid values:</p>
              * <ul>
-             * <li>ignore_all: Ignore all query strings.</li>
-             * <li>exclude_query_string: Exclude specified query strings.</li>
-             * <li>reserve_all: Default, reserve all query strings.</li>
-             * <li>include_query_string: Include specified query strings.</li>
+             * <li>ignore_all: ignores all query strings.</li>
+             * <li>exclude_query_string: removes specified query strings.</li>
+             * <li>reserve_all: retains all query strings. This is the default value.</li>
+             * <li>include_query_string: retains specified query strings.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -848,14 +891,14 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when you add a global configuration. Two scenarios are supported:</p>
              * <ul>
-             * <li>Match all incoming requests: Set the value to true</li>
-             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match all incoming requests: set the value to true.</li>
+             * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>(http.host eq &quot;video.example.com&quot;)</p>
+             * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -863,10 +906,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+             * <p>The rule switch. You do not need to set this parameter when you add a global configuration. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -878,7 +921,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+             * <p>The rule name. You do not need to set this parameter when you add a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -889,7 +932,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+             * <p>The rule execution order. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -900,10 +943,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Serve stale cache. When enabled, the node can still respond to user requests with expired cached files even when the origin server is unavailable. Value range:</p>
+             * <p>Specifies whether to serve stale cache. When enabled, edge nodes can respond to user requests with cached expired files when the origin server is unavailable. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -915,7 +958,7 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+             * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -926,10 +969,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Query string sorting. The value range is as follows:</p>
+             * <p>Specifies whether to sort query strings. Valid values:</p>
              * <ul>
-             * <li>on: Enable.</li>
-             * <li>off: Disable.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -941,10 +984,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Include the client device type when generating the cache key. The value range is as follows:</p>
+             * <p>Specifies whether to include the type of the client when generating cache keys. Valid values:</p>
              * <ul>
-             * <li>on: Enable.</li>
-             * <li>off: Disable.</li>
+             * <li>on: enabled.</li>
+             * <li>off: shutdown.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -956,10 +999,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Include the client&quot;s geographic location when generating the cache key. The value range is as follows:</p>
+             * <p>Specifies whether to include the client geographic location when generating cache keys. Valid values:</p>
              * <ul>
-             * <li>on: Enable.</li>
-             * <li>off: Disable.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -971,10 +1014,10 @@ public class ListCacheRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Include the client&quot;s language type when generating the cache key. The value range is as follows:</p>
+             * <p>Specifies whether to include the client language type when generating cache keys. Valid values:</p>
              * <ul>
-             * <li>on: Enable.</li>
-             * <li>off: Disable.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

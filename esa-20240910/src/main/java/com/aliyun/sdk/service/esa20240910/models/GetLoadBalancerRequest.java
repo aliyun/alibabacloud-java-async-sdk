@@ -75,7 +75,7 @@ public class GetLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the load balancer, used to uniquely identify the load balancer to be queried. This ID is returned directly when the load balancer is created, or it can be obtained through the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> interface for querying all load balancers under a site.</p>
+         * <p>The load balancer ID, which uniquely identifies the load balancer to query. This ID is returned when the load balancer is created. You can also call the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> operation to obtain all load balancers under a site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

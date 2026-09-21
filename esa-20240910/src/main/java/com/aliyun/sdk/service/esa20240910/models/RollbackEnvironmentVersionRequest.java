@@ -75,7 +75,11 @@ public class RollbackEnvironmentVersionRequest extends Request {
         } 
 
         /**
+         * <p>The environment name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认环境</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -84,7 +88,11 @@ public class RollbackEnvironmentVersionRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33862229675****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

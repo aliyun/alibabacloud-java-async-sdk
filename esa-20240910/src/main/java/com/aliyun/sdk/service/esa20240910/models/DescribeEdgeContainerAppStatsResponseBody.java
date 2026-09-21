@@ -158,7 +158,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Average CPU limit ratio</p>
+         * <p>The average CPU usage as a percentage of the limit.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -169,7 +169,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average number of CPU cores</p>
+         * <p>Average CPU core usage, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -180,7 +180,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average read IO</p>
+         * <p>The average read IO.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -191,7 +191,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average write IO</p>
+         * <p>The average write IO.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -202,7 +202,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average memory usage</p>
+         * <p>The average memory usage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1</p>
@@ -213,7 +213,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average memory limit proportion</p>
+         * <p>The average memory usage as a percentage of the limit.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +224,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Average PodReady rate</p>
+         * <p>The average pod ready rate.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -235,7 +235,7 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
         }
 
         /**
-         * Points.
+         * <p>The time and value of each data point for the chart.</p>
          */
         public Builder points(java.util.List<Points> points) {
             this.points = points;
@@ -390,7 +390,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             } 
 
             /**
-             * ContainerCpuUsageSecondsQuotaRate.
+             * <p>The CPU usage as a percentage of the limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder containerCpuUsageSecondsQuotaRate(Double containerCpuUsageSecondsQuotaRate) {
                 this.containerCpuUsageSecondsQuotaRate = containerCpuUsageSecondsQuotaRate;
@@ -398,7 +401,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerCpuUsageSecondsTotal.
+             * <p>The number of CPU cores.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder containerCpuUsageSecondsTotal(Double containerCpuUsageSecondsTotal) {
                 this.containerCpuUsageSecondsTotal = containerCpuUsageSecondsTotal;
@@ -406,7 +412,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerFsReadsBytesAvg.
+             * <p>The read IO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder containerFsReadsBytesAvg(Double containerFsReadsBytesAvg) {
                 this.containerFsReadsBytesAvg = containerFsReadsBytesAvg;
@@ -414,7 +423,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerFsWritesBytesAvg.
+             * <p>The write IO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder containerFsWritesBytesAvg(Double containerFsWritesBytesAvg) {
                 this.containerFsWritesBytesAvg = containerFsWritesBytesAvg;
@@ -422,7 +434,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerMemoryRss.
+             * <p>The memory usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder containerMemoryRss(Double containerMemoryRss) {
                 this.containerMemoryRss = containerMemoryRss;
@@ -430,7 +445,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * ContainerMemoryRssQuotaRate.
+             * <p>The memory usage as a percentage of the limit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder containerMemoryRssQuotaRate(Double containerMemoryRssQuotaRate) {
                 this.containerMemoryRssQuotaRate = containerMemoryRssQuotaRate;
@@ -438,7 +456,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * PodReadyRate.
+             * <p>The pod ready rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder podReadyRate(Double podReadyRate) {
                 this.podReadyRate = podReadyRate;
@@ -446,7 +467,10 @@ public class DescribeEdgeContainerAppStatsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time of the data point. The format is yyyy-MM-ddTHH:mm:ssZ in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-18T15:04:05Z</p>
              */
             public Builder time(String time) {
                 this.time = time;

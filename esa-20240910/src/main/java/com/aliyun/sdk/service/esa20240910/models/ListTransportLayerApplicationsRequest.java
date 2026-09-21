@@ -116,12 +116,12 @@ public class ListTransportLayerApplicationsRequest extends Request {
         } 
 
         /**
-         * <p>Query type for the transport layer application host record, supporting the following 4 types, with exact query as the default.</p>
+         * <p>The query type for the host record of Layer 4 applications. The following four types are supported, and the default is exact match.</p>
          * <ul>
-         * <li>fuzzy: Fuzzy query.</li>
-         * <li>exact: Exact query.</li>
-         * <li>prefix: Prefix match query.</li>
-         * <li>suffix: Suffix match query.</li>
+         * <li>fuzzy: Fuzzy match.</li>
+         * <li>exact: Exact match.</li>
+         * <li>prefix: Prefix match.</li>
+         * <li>suffix: Suffix match.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Page number set for pagination. Starting value: 1. Default value: 1.</p>
+         * <p>The page number for paginated queries. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +146,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Page size. The maximum value is 500.</p>
+         * <p>The number of entries per page for paginated queries. Valid values: 1-500.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -158,7 +158,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Host record of the transport layer application.</p>
+         * <p>The host record of the Layer 4 application.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -170,7 +170,7 @@ public class ListTransportLayerApplicationsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>Site ID. You can obtain it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

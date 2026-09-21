@@ -327,10 +327,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         } 
 
         /**
-         * <p>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</p>
+         * <p>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</p>
          * 
          * <strong>example:</strong>
-         * <p>html-yets-maqi1111</p>
+         * <p>SGVsbG8gd29ybGQ=</p>
          */
         public Builder customPageHtml(String customPageHtml) {
             this.putQueryParameter("CustomPageHtml", customPageHtml);
@@ -353,8 +353,8 @@ public class UpdateWaitingRoomEventRequest extends Request {
         /**
          * <p>Specifies whether to disable session renewal. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,10 +367,12 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the waiting room event. Valid values:</p>
+         * <p>The enabling status. Valid values:</p>
          * <ul>
-         * <li><code>on</code></li>
-         * <li><code>off</code></li>
+         * <li><p><strong>on</strong>: Enables the waiting room event.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disables the waiting room event.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -383,7 +385,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The end time of the event. This value is a UNIX timestamp.</p>
+         * <p>The timestamp of the event end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1719849600</p>
@@ -397,8 +399,8 @@ public class UpdateWaitingRoomEventRequest extends Request {
         /**
          * <p>Specifies whether to enable JSON response. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -411,11 +413,11 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The default language. Valid values:</p>
+         * <p>The default language setting. Valid values:</p>
          * <ul>
-         * <li><code>enus</code>: English.</li>
-         * <li><code>zhcn</code>: Simplified Chinese.</li>
-         * <li><code>zhhk</code>: Traditional Chinese.</li>
+         * <li><strong>enus</strong>: English.</li>
+         * <li><strong>zhcn</strong>: Simplified Chinese.</li>
+         * <li><strong>zhhk</strong>: Traditional Chinese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -429,6 +431,9 @@ public class UpdateWaitingRoomEventRequest extends Request {
 
         /**
          * <p>The name of the waiting room event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test event</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -437,7 +442,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of new users per minute.</p>
+         * <p>The number of new users per minute.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -449,10 +454,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable pre-queuing.</p>
+         * <p>Specifies whether to enable pre-queuing. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -465,7 +470,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The start time for pre-queuing.</p>
+         * <p>The timestamp of the pre-queuing start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1719763200</p>
@@ -479,10 +484,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         /**
          * <p>The queuing method. Valid values:</p>
          * <ul>
-         * <li>random: Users gain access to the origin randomly, regardless of the arrival time.</li>
-         * <li>fifo: Users gain access to the origin in order of arrival.</li>
-         * <li>passthrough: Users pass through the waiting room and go straight to the origin.</li>
-         * <li>reject-all: All requests are blocked from accessing the origin.</li>
+         * <li><strong>random</strong>: random.</li>
+         * <li><strong>fifo</strong>: first-in-first-out.</li>
+         * <li><strong>passthrough</strong>: passthrough.</li>
+         * <li><strong>reject-all</strong>: reject all.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -495,11 +500,11 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The HTTP status code to return while a user is in the queue. Valid values:</p>
+         * <p>The waiting room status code. Valid values:</p>
          * <ul>
-         * <li>200</li>
-         * <li>202</li>
-         * <li>429</li>
+         * <li><strong>200</strong></li>
+         * <li><strong>202</strong></li>
+         * <li><strong>429</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,10 +517,10 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable random queuing.</p>
+         * <p>Specifies whether to enable random pre-queuing. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -528,7 +533,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum duration for which a session remains valid after a user leaves the origin. Unit: minutes.</p>
+         * <p>The user session duration, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -540,7 +545,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -553,7 +558,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The start time of the event. This value is a UNIX timestamp.</p>
+         * <p>The timestamp of the event start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1719763200</p>
@@ -565,7 +570,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of active users.</p>
+         * <p>The total number of active users.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -577,7 +582,7 @@ public class UpdateWaitingRoomEventRequest extends Request {
         }
 
         /**
-         * <p>The ID of the waiting room event, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
+         * <p>The waiting room event ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850279.html">ListWaitingRoomEvents</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -592,8 +597,8 @@ public class UpdateWaitingRoomEventRequest extends Request {
         /**
          * <p>The type of the waiting room. Valid values:</p>
          * <ul>
-         * <li>default</li>
-         * <li>custom</li>
+         * <li><strong>default</strong>: default type.</li>
+         * <li><strong>custom</strong>: custom type.</li>
          * </ul>
          * 
          * <strong>example:</strong>

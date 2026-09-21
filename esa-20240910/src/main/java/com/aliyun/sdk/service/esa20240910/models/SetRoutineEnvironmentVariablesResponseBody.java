@@ -78,7 +78,10 @@ public class SetRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * SetKeys.
+         * <p>The list of environment variable keys that were set successfully.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;key1&quot;,&quot;key2&quot;]</p>
          */
         public Builder setKeys(java.util.List<String> setKeys) {
             this.setKeys = setKeys;

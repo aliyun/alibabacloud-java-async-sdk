@@ -106,7 +106,7 @@ public class GetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The domain names to associate.</p>
+         * <p>The associated hostnames.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;
@@ -114,7 +114,7 @@ public class GetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the client certificate.</p>
+         * <p>The certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>babaabcd****</p>
@@ -136,7 +136,7 @@ public class GetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -147,7 +147,7 @@ public class GetOriginClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

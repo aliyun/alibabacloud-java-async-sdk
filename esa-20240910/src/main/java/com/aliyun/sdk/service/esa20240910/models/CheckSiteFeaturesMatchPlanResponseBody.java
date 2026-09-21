@@ -80,7 +80,10 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * IsPassed.
+         * <p>Indicates whether the features of the current site are compatible with the target instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isPassed(Boolean isPassed) {
             this.isPassed = isPassed;
@@ -88,7 +91,10 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65705631-908C-5D24-997C-17E0397721C8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
         }
 
         /**
-         * UnPassedSiteQuotas.
+         * <p>The information about site quotas that do not meet the requirements.</p>
          */
         public Builder unPassedSiteQuotas(java.util.List<UnPassedSiteQuotas> unPassedSiteQuotas) {
             this.unPassedSiteQuotas = unPassedSiteQuotas;
@@ -175,7 +181,10 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentQuotaValue.
+             * <p>The quota value of the current site.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder currentQuotaValue(String currentQuotaValue) {
                 this.currentQuotaValue = currentQuotaValue;
@@ -183,7 +192,10 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
             }
 
             /**
-             * DestQuotaValue.
+             * <p>The quota value of the target instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder destQuotaValue(String destQuotaValue) {
                 this.destQuotaValue = destQuotaValue;
@@ -191,7 +203,10 @@ public class CheckSiteFeaturesMatchPlanResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaName.
+             * <p>The quota name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cache_reserve</p>
              */
             public Builder quotaName(String quotaName) {
                 this.quotaName = quotaName;

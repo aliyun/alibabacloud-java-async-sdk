@@ -275,7 +275,10 @@ public class WafRuleConfig extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The operation to perform after the WAF rule is matched.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -283,7 +286,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Actions.
+         * <p>The extended action configurations.</p>
          */
         public Builder actions(Actions actions) {
             this.actions = actions;
@@ -291,7 +294,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * AppPackage.
+         * <p>The configuration of secondary package detection.</p>
          */
         public Builder appPackage(AppPackage appPackage) {
             this.appPackage = appPackage;
@@ -299,7 +302,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * AppSdk.
+         * <p>The SDK configuration for apps.</p>
          */
         public Builder appSdk(AppSdk appSdk) {
             this.appSdk = appSdk;
@@ -307,7 +310,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Expression.
+         * <p>The match expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src eq 1.1.1.1</p>
          */
         public Builder expression(String expression) {
             this.expression = expression;
@@ -315,7 +321,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the WAF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000001</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -323,7 +332,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * ManagedGroupId.
+         * <p>The ID of the managed rule group, which is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30000001</p>
          */
         public Builder managedGroupId(Long managedGroupId) {
             this.managedGroupId = managedGroupId;
@@ -331,7 +343,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * ManagedList.
+         * <p>The managed list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>intelligence_crawler</p>
          */
         public Builder managedList(String managedList) {
             this.managedList = managedList;
@@ -339,7 +354,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * ManagedRulesets.
+         * <p>The managed rulesets.</p>
          */
         public Builder managedRulesets(java.util.List<ManagedRulesets> managedRulesets) {
             this.managedRulesets = managedRulesets;
@@ -347,7 +362,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the WAF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -355,7 +373,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Notes.
+         * <p>The remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example notes</p>
          */
         public Builder notes(String notes) {
             this.notes = notes;
@@ -363,7 +384,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * RateLimit.
+         * <p>The configuration of the rate limiting rule.</p>
          */
         public Builder rateLimit(RateLimit rateLimit) {
             this.rateLimit = rateLimit;
@@ -371,7 +392,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * SecurityLevel.
+         * <p>The security level.</p>
          */
         public Builder securityLevel(SecurityLevel securityLevel) {
             this.securityLevel = securityLevel;
@@ -379,7 +400,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Sigchl.
+         * <p>The token verification configurations.</p>
          */
         public Builder sigchl(java.util.List<String> sigchl) {
             this.sigchl = sigchl;
@@ -387,7 +408,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the WAF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -395,7 +419,7 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Timer.
+         * <p>The timer.</p>
          */
         public Builder timer(WafTimer timer) {
             this.timer = timer;
@@ -403,7 +427,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The name of the WAF rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -411,7 +438,10 @@ public class WafRuleConfig extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>Defines whether the IP can access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.1</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -516,7 +546,7 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * CustomRules.
+             * <p>The IDs of custom rules.</p>
              */
             public Builder customRules(java.util.List<Long> customRules) {
                 this.customRules = customRules;
@@ -524,7 +554,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * RegularRules.
+             * <p>The IDs of managed rules.</p>
              */
             public Builder regularRules(java.util.List<Long> regularRules) {
                 this.regularRules = regularRules;
@@ -532,7 +562,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * RegularTypes.
+             * <p>The types of managed rules.</p>
              */
             public Builder regularTypes(java.util.List<String> regularTypes) {
                 this.regularTypes = regularTypes;
@@ -540,7 +570,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Skip.
+             * <p>The skip scope applied when requests match conditions defined in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>part</p>
              */
             public Builder skip(String skip) {
                 this.skip = skip;
@@ -548,7 +581,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The skipped rule categories when requests match conditions defined in the whitelist rule.</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -615,7 +648,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The custom response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -623,7 +659,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -690,7 +729,7 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Bypass.
+             * <p>The skip configuration specified by the whitelist rule.</p>
              */
             public Builder bypass(Bypass bypass) {
                 this.bypass = bypass;
@@ -698,7 +737,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Response.
+             * <p>The custom error page.</p>
              */
             public Builder response(ActionsResponse response) {
                 this.response = response;
@@ -765,7 +804,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The valid package name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -773,7 +815,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Sign.
+             * <p>The valid package signature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sign</p>
              */
             public Builder sign(String sign) {
                 this.sign = sign;
@@ -827,7 +872,7 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * PackageSigns.
+             * <p>The package signatures.</p>
              */
             public Builder packageSigns(java.util.List<PackageSigns> packageSigns) {
                 this.packageSigns = packageSigns;
@@ -894,7 +939,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sign</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -902,7 +950,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The field value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>examplesignvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -982,7 +1033,7 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * CustomSign.
+             * <p>The custom signature field.</p>
              */
             public Builder customSign(CustomSign customSign) {
                 this.customSign = customSign;
@@ -990,7 +1041,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * CustomSignStatus.
+             * <p>Indicates whether to configure the custom signature field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder customSignStatus(String customSignStatus) {
                 this.customSignStatus = customSignStatus;
@@ -998,7 +1052,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * FeatureAbnormal.
+             * <p>The app anomalies.</p>
              */
             public Builder featureAbnormal(java.util.List<String> featureAbnormal) {
                 this.featureAbnormal = featureAbnormal;
@@ -1078,7 +1132,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action performed on requests that match the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1086,7 +1143,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1094,7 +1154,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the managed rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1213,7 +1276,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -1221,7 +1287,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * AttackType.
+             * <p>The attack type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder attackType(Integer attackType) {
                 this.attackType = attackType;
@@ -1229,7 +1298,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * ManagedRules.
+             * <p>The managed rules.</p>
              */
             public Builder managedRules(java.util.List<ManagedRules> managedRules) {
                 this.managedRules = managedRules;
@@ -1237,7 +1306,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * NumberEnabled.
+             * <p>The number of enabled rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder numberEnabled(Integer numberEnabled) {
                 this.numberEnabled = numberEnabled;
@@ -1245,7 +1317,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder numberTotal(Integer numberTotal) {
                 this.numberTotal = numberTotal;
@@ -1253,7 +1328,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * ProtectionLevel.
+             * <p>The protection level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder protectionLevel(Integer protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -1333,7 +1411,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>404</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1341,7 +1422,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The maximum number of times that the status code is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -1349,7 +1433,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Ratio.
+             * <p>The percentage of the occurrences of the status code to total status codes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -1455,7 +1542,10 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * DistinctManagedRules.
+             * <p>The maximum number of managed rules that are triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder distinctManagedRules(Integer distinctManagedRules) {
                 this.distinctManagedRules = distinctManagedRules;
@@ -1463,7 +1553,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * ManagedRulesBlocked.
+             * <p>The maximum number of times that the managed rule is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder managedRulesBlocked(Integer managedRulesBlocked) {
                 this.managedRulesBlocked = managedRulesBlocked;
@@ -1471,7 +1564,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Request.
+             * <p>The request threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder request(Integer request) {
                 this.request = request;
@@ -1479,7 +1575,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * ResponseStatus.
+             * <p>The configuration of the status code threshold.</p>
              */
             public Builder responseStatus(ResponseStatus responseStatus) {
                 this.responseStatus = responseStatus;
@@ -1487,7 +1583,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Traffic.
+             * <p>The traffic threshold, which is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10Gb</p>
              */
             public Builder traffic(String traffic) {
                 this.traffic = traffic;
@@ -1593,7 +1692,7 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Characteristics.
+             * <p>The statistical objects to which the rule applies.</p>
              */
             public Builder characteristics(WafRatelimitCharacteristics characteristics) {
                 this.characteristics = characteristics;
@@ -1601,7 +1700,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The statistical interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -1609,7 +1711,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * OnHit.
+             * <p>Indicates whether to apply the rule to requests that hit the cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onHit(Boolean onHit) {
                 this.onHit = onHit;
@@ -1617,7 +1722,10 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * TTL.
+             * <p>The timeout period for creating the stack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder TTL(Integer TTL) {
                 this.TTL = TTL;
@@ -1625,7 +1733,7 @@ public class WafRuleConfig extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The thresholds.</p>
              */
             public Builder threshold(Threshold threshold) {
                 this.threshold = threshold;
@@ -1679,7 +1787,18 @@ public class WafRuleConfig extends TeaModel {
             } 
 
             /**
-             * Value.
+             * <p>Valid value:</p>
+             * <ul>
+             * <li>off</li>
+             * <li>essentially_off</li>
+             * <li>low</li>
+             * <li>medium</li>
+             * <li>high</li>
+             * <li>under_attack</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>low</p>
              */
             public Builder value(String value) {
                 this.value = value;

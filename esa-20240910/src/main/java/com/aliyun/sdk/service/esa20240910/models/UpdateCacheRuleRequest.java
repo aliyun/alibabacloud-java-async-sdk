@@ -453,10 +453,17 @@ public class UpdateCacheRuleRequest extends Request {
         } 
 
         /**
-         * <p>Enable caching on specified ports. Value range: 8880, 2052, 2082, 2086, 2095, 2053, 2083, 2087, 2096.</p>
+         * <ul>
+         * <li><p>Enables caching on the specified ports.</p>
+         * </li>
+         * <li><p>Valid values: <code>8880</code>, <code>2052</code>, <code>2082</code>, <code>2086</code>, <code>2095</code>, <code>2053</code>, <code>2083</code>, <code>2087</code>, <code>2096</code></p>
+         * </li>
+         * <li><p>Separate multiple ports with commas.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>8880</p>
+         * <p>8880,2052,2086</p>
          */
         public Builder additionalCacheablePorts(String additionalCacheablePorts) {
             this.putQueryParameter("AdditionalCacheablePorts", additionalCacheablePorts);
@@ -465,11 +472,14 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Browser cache mode. Value range:</p>
+         * <p>The browser cache mode. Valid values:</p>
          * <ul>
-         * <li>no_cache: Do not cache.</li>
-         * <li>follow_origin: Follow origin cache policy.</li>
-         * <li>override_origin: Override origin cache policy.</li>
+         * <li><p><code>no_cache</code>: Does not cache content in the browser.</p>
+         * </li>
+         * <li><p><code>follow_origin</code>: Follows the caching policy of the origin server.</p>
+         * </li>
+         * <li><p><code>override_origin</code>: Overrides the caching policy of the origin server.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -482,7 +492,7 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Browser cache expiration time, in seconds.</p>
+         * <p>The browser cache TTL (Time to Live), in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -494,10 +504,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Set bypass cache mode. Value range:</p>
+         * <p>The cache bypass mode. Valid values:</p>
          * <ul>
-         * <li>cache_all: Cache all requests.</li>
-         * <li>bypass_all: Bypass cache for all requests.</li>
+         * <li><p><code>cache_all</code>: Caches all requests.</p>
+         * </li>
+         * <li><p><code>bypass_all</code>: Bypasses the cache for all requests.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,10 +522,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Cache deception defense. Used to defend against web cache deception attacks; only the cache content that passes the validation will be cached. Value range:</p>
+         * <p>Defends against Web Cache Deception attacks by caching only validated content. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables the feature.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables the feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -526,10 +540,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Cache retention eligibility. Used to control whether user requests bypass the cache retention node when returning to the origin. Value range:</p>
+         * <p>Controls whether requests bypass the cache reserve node during an origin-pull. Valid values:</p>
          * <ul>
-         * <li>bypass_cache_reserve: Requests bypass cache retention.</li>
-         * <li>eligible_for_cache_reserve: Eligible for cache retention.</li>
+         * <li><p><code>bypass_cache_reserve</code>: The request bypasses the cache reserve.</p>
+         * </li>
+         * <li><p><code>eligible_for_cache_reserve</code>: The request is eligible for cache reserve.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -542,10 +558,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Check if the cookie exists when generating cache keys, and if it does, add the cookie name (case-insensitive) to the cache key. Supports multiple cookie names, separated by spaces.</p>
+         * <p>The cookies to check for. If a specified cookie is present in the request, its name (case-insensitive) is added to the cache key. Separate multiple cookies with spaces. Cookie names can contain the following characters:</p>
+         * <ul>
+         * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+         * </li>
+         * <li><p>Digits: 0-9</p>
+         * </li>
+         * <li><p>Lowercase letters: a-z</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cookiename</p>
+         * <p>cookiename1 cookiename2</p>
          */
         public Builder checkPresenceCookie(String checkPresenceCookie) {
             this.putQueryParameter("CheckPresenceCookie", checkPresenceCookie);
@@ -554,10 +578,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Check if the header exists when generating cache keys, and if it does, add the header name (case-insensitive) to the cache key. Supports multiple header names, separated by spaces.</p>
+         * <p>The headers to check for. If a specified header is present in the request, its name (case-insensitive) is added to the cache key. Separate multiple headers with spaces. Header names can contain the following characters:</p>
+         * <ul>
+         * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+         * </li>
+         * <li><p>Digits: 0-9</p>
+         * </li>
+         * <li><p>Lowercase letters: a-z</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>headername</p>
+         * <p>headername1 headername2</p>
          */
         public Builder checkPresenceHeader(String checkPresenceHeader) {
             this.putQueryParameter("CheckPresenceHeader", checkPresenceHeader);
@@ -566,7 +598,7 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -579,12 +611,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Edge cache mode. Value range:</p>
+         * <p>The cache mode for the edge node. Valid values:</p>
          * <ul>
-         * <li>follow_origin: Follow origin cache policy (if exists), otherwise use the default cache policy.</li>
-         * <li>no_cache: Do not cache.</li>
-         * <li>override_origin: Override origin cache policy.</li>
-         * <li>follow_origin_bypass: Follow origin cache policy (if exists), otherwise do not cache.</li>
+         * <li><p><code>follow_origin</code>: Follows the origin server\&quot;s caching policy. If the origin server has no policy, the default policy is used.</p>
+         * </li>
+         * <li><p><code>no_cache</code>: Does not cache content.</p>
+         * </li>
+         * <li><p><code>override_origin</code>: Overrides the caching policy of the origin server.</p>
+         * </li>
+         * <li><p><code>follow_origin_bypass</code>: Follows the caching policy of the origin server, if one exists. Otherwise, content is not cached.</p>
+         * </li>
+         * <li><p><code>follow_origin_override</code>: Follows the caching policy of the origin server, if one exists. Otherwise, a custom cache TTL is used.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -597,7 +635,7 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Edge cache expiration time, in seconds.</p>
+         * <p>The edge node cache TTL (Time to Live), in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -609,10 +647,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Status code cache expiration time, in seconds.</p>
+         * <p>The cache TTL for specific status codes, in seconds.</p>
+         * <ul>
+         * <li><p>You can set the cache TTL for a specific status code. For example, <code>404=10</code> caches responses with a 404 status code for 10 seconds.</p>
+         * </li>
+         * <li><p>You can set the cache TTL for <code>4xx</code> and <code>5xx</code> status code ranges. For example, <code>4xx=10</code> caches all responses with a <code>4xx</code> status code for 10 seconds.</p>
+         * </li>
+         * <li><p>Separate multiple status code settings with commas.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>300</p>
+         * <p>5xx=0,404=10</p>
          */
         public Builder edgeStatusCodeCacheTtl(String edgeStatusCodeCacheTtl) {
             this.putQueryParameter("EdgeStatusCodeCacheTtl", edgeStatusCodeCacheTtl);
@@ -621,10 +667,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Include the specified cookie names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+         * <p>The cookies to include in the cache key. Both the cookie names (case-insensitive) and their values are used. Separate multiple cookies with spaces. Cookie names can contain the following characters:</p>
+         * <ul>
+         * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+         * </li>
+         * <li><p>Digits: 0-9</p>
+         * </li>
+         * <li><p>Lowercase letters: a-z</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cookiename</p>
+         * <p>cookiename1 cookiename2</p>
          */
         public Builder includeCookie(String includeCookie) {
             this.putQueryParameter("IncludeCookie", includeCookie);
@@ -633,10 +687,18 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Include the specified header names and their values when generating cache keys, supporting multiple values separated by spaces.</p>
+         * <p>The headers to include in the cache key. Both the header names (case-insensitive) and their values are used. Separate multiple headers with spaces. Header names can contain the following characters:</p>
+         * <ul>
+         * <li><p>Symbols: ! # $ % &amp; \&quot; \* + - . ^ _ | \~</p>
+         * </li>
+         * <li><p>Digits: 0-9</p>
+         * </li>
+         * <li><p>Lowercase letters: a-z</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>headername</p>
+         * <p>headername1 headername2</p>
          */
         public Builder includeHeader(String includeHeader) {
             this.putQueryParameter("IncludeHeader", includeHeader);
@@ -645,7 +707,16 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * PostBodyCacheKey.
+         * <p>Controls how the request body is used to generate the cache key for POST requests. Valid values:</p>
+         * <ul>
+         * <li><p><code>md5</code>: Calculates the MD5 hash of the request body and includes the hash in the cache key.</p>
+         * </li>
+         * <li><p><code>ignore</code>: Ignores the request body when generating the cache key.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ignore</p>
          */
         public Builder postBodyCacheKey(String postBodyCacheKey) {
             this.putQueryParameter("PostBodyCacheKey", postBodyCacheKey);
@@ -654,7 +725,10 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * PostBodySizeLimit.
+         * <p>The maximum size of a request body for POST caching, in KB. The value must be an integer from 1 to 8. If you leave this parameter empty, the default value of 8 KB is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder postBodySizeLimit(String postBodySizeLimit) {
             this.putQueryParameter("PostBodySizeLimit", postBodySizeLimit);
@@ -663,7 +737,10 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * PostCache.
+         * <p>Controls whether to cache responses to POST requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder postCache(String postCache) {
             this.putQueryParameter("PostCache", postCache);
@@ -672,10 +749,10 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Query strings to be retained or excluded, supporting multiple values separated by spaces.</p>
+         * <p>The query string parameters to include in or exclude from the cache key. Separate multiple parameters with spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>example</p>
+         * <p>example1 example2</p>
          */
         public Builder queryString(String queryString) {
             this.putQueryParameter("QueryString", queryString);
@@ -684,12 +761,16 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>The processing mode of query strings when generating cache keys. Values:</p>
+         * <p>Controls how query strings are used to generate a cache key. Valid values:</p>
          * <ul>
-         * <li>ignore_all: Ignore all.</li>
-         * <li>exclude_query_string: Exclude specified query strings.</li>
-         * <li>reserve_all: Default, reserve all.</li>
-         * <li>include_query_string: Include specified query strings.</li>
+         * <li><p><code>ignore_all</code>: Ignores all query strings.</p>
+         * </li>
+         * <li><p><code>exclude_query_string</code>: Removes specified query strings.</p>
+         * </li>
+         * <li><p><code>reserve_all</code>: Retains all query strings. This is the default value.</p>
+         * </li>
+         * <li><p><code>include_query_string</code>: Retains only specified query strings.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -702,14 +783,16 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>A conditional expression that matches user requests. This parameter is optional for a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+         * </li>
+         * <li><p>To match specific requests, set the value to a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -718,10 +801,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+         * <p>Controls whether the rule is enabled. This parameter is optional for a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables the rule.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables the rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -734,7 +819,7 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The name of the rule. This parameter is optional for a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -746,7 +831,10 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -755,10 +843,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Serve stale cache. When enabled, the node can still use the expired cached files to respond to user requests even if the origin server is unavailable. Value range:</p>
+         * <p>Controls whether to serve stale content. If enabled, an edge node can serve expired content from its cache if the origin server is unavailable. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables this feature.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables this feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -771,7 +861,7 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The ID of the site. To get this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -784,10 +874,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Query string sorting. Value range:</p>
+         * <p>Controls whether to sort query string parameters when generating a cache key. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables sorting.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables sorting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -800,10 +892,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>When generating cache keys, include the client device type. Value range: </p>
+         * <p>Controls whether to include the client device type in the cache key. Valid values:</p>
          * <ul>
-         * <li>on: enabled. </li>
-         * <li>off: disabled.</li>
+         * <li><p><code>on</code>: Enables this feature.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables this feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -816,10 +910,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Include the client&quot;s geographical location when generating the cache key. Value range:</p>
+         * <p>Controls whether to include the client\&quot;s geographic location in the cache key. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables this feature.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables this feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -832,10 +928,12 @@ public class UpdateCacheRuleRequest extends Request {
         }
 
         /**
-         * <p>Include the client&quot;s language type when generating the cache key. Value range:</p>
+         * <p>Controls whether to include the client\&quot;s language in the cache key. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables this feature.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables this feature.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

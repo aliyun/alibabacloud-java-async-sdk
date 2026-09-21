@@ -159,7 +159,7 @@ public class DescribePurgeTasksRequest extends Request {
         } 
 
         /**
-         * <p>The content to purge. Exact match is supported.</p>
+         * <p>The query content. Exact match is used.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
@@ -171,9 +171,9 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time must be later than the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 100000.</p>
+         * <p>The page number to return. Valid values: <strong>1 to 100000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +198,7 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: any integer from <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -210,7 +210,10 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <blockquote>
+         * <p>Notice: You must always specify SiteId. An error is reported if SiteId is not specified.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -222,7 +225,7 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-16T05:33:00Z</p>
@@ -234,11 +237,11 @@ public class DescribePurgeTasksRequest extends Request {
         }
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The task execution status. Valid values:</p>
          * <ul>
-         * <li><strong>Complete</strong>: The task is complete.</li>
-         * <li><strong>Refreshing</strong>: The task is in progress.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Complete</strong>: completed.</li>
+         * <li><strong>Refreshing</strong>: refreshing.</li>
+         * <li><strong>Failed</strong>: refresh failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,12 +256,12 @@ public class DescribePurgeTasksRequest extends Request {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>file</strong> (default): purges the cache by file.</li>
-         * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-         * <li><strong>directory</strong>: purges the cache by directory.</li>
-         * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
-         * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-         * <li><strong>purgeall</strong>: purges all cache.</li>
+         * <li><strong>file</strong> (default): file refresh.</li>
+         * <li><strong>cachetag</strong>: cache tag refresh.</li>
+         * <li><strong>directory</strong>: directory refresh.</li>
+         * <li><strong>ignoreParams</strong>: ignore parameters refresh.</li>
+         * <li><strong>hostname</strong>: hostname refresh.</li>
+         * <li><strong>purgeall</strong>: purge all cache under the site.</li>
          * </ul>
          * 
          * <strong>example:</strong>

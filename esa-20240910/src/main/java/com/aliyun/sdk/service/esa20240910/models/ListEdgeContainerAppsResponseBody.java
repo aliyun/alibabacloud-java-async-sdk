@@ -106,7 +106,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried applications.</p>
+         * <p>The list of applications.</p>
          */
         public Builder apps(java.util.List<Apps> apps) {
             this.apps = apps;
@@ -114,7 +114,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>. Valid values: 1 to 65535.</p>
+         * <p>The page number. Default value: <strong>1</strong>. Valid values: <strong>1 to 65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 500.</p>
+         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -320,7 +320,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of consecutive failed health checks for an application to be considered unhealthy.</p>
+             * <p>The number of consecutive failed health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -331,7 +331,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is used for health checks.</p>
+             * <p>The domain name used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -342,7 +342,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of health check status codes that indicate successful health checks.</p>
+             * <p>The range of HTTP status codes that indicate a successful health check.</p>
              * 
              * <strong>example:</strong>
              * <p>http_2XX</p>
@@ -364,7 +364,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method used for health checks.</p>
+             * <p>The method used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>GET</p>
@@ -375,7 +375,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health check port.</p>
+             * <p>The Health Check Port used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>8080</p>
@@ -386,7 +386,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consecutive successful health checks for an application to be considered healthy.</p>
+             * <p>The number of consecutive successful health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -397,7 +397,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timeout period of health checks. Unit: seconds.</p>
+             * <p>The timeout period of the health check. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -408,10 +408,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of health checks. Valid values:</p>
+             * <p>The health check type. Valid values:</p>
              * <ul>
-             * <li>l7</li>
-             * <li>l4</li>
+             * <li><strong>l7</strong>: Layer 7 health check.</li>
+             * <li><strong>l4</strong>: Layer 4 health check.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -423,7 +423,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health check URL.</p>
+             * <p>The URI path used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>/health_check</p>
@@ -660,7 +660,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the version was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-01T16:16:27.418298794+08:00</p>
@@ -671,7 +671,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name associated with the application.</p>
+             * <p>The domain name bound to the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -682,10 +682,10 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the gateway. Valid values:</p>
+             * <p>The gateway type. Valid values:</p>
              * <ul>
-             * <li>l7: Layer 7 gateway.</li>
-             * <li>l4: Layer 4 gateway.</li>
+             * <li><strong>l7</strong>: Layer 7 gateway.</li>
+             * <li><strong>l4</strong>: Layer 4 gateway.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -697,7 +697,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about health checks.</p>
+             * <p>The health check information.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -716,7 +716,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the application creation task in percentage.</p>
+             * <p>The creation progress percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -749,7 +749,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server port. Valid values: 1 to 65535.</p>
+             * <p>The server port number. Valid values: <strong>1 to 65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -762,9 +762,9 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             /**
              * <p>The status of the application. Valid values:</p>
              * <ul>
-             * <li>creating: The application is being created.</li>
-             * <li>failed: The application failed to be created.</li>
-             * <li>created: The application is created.</li>
+             * <li><strong>creating</strong>: being created.</li>
+             * <li><strong>failed</strong>: creation failed.</li>
+             * <li><strong>created</strong>: created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -776,7 +776,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+             * <p>The backend port, which is also the service port of the application. Valid values: <strong>1 to 65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -787,7 +787,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * <p>The last modification time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-11-15T12:11:02Z</p>
@@ -798,7 +798,7 @@ public class ListEdgeContainerAppsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of versions of the application.</p>
+             * <p>The number of application versions.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

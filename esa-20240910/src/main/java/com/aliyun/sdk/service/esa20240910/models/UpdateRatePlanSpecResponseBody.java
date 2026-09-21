@@ -80,7 +80,10 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xcdn-as23ds***</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -88,7 +91,10 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2223332122***</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -96,7 +102,7 @@ public class UpdateRatePlanSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30423A7F-A83D-1E24-B80E-86DD25790758</p>

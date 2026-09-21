@@ -355,7 +355,7 @@ public class UpdateOriginRuleRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rewrite the DNS resolution record of the origin request.</p>
+         * <p>Overrides the DNS record for the origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>test.example.com</p>
@@ -380,7 +380,16 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Follow302Enable.
+         * <p>Indicates whether to follow 302 redirects for origin requests. Valid values:</p>
+         * <ul>
+         * <li><p><code>on</code>: Follows 302 redirects.</p>
+         * </li>
+         * <li><p><code>off</code>: Does not follow 302 redirects.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302Enable(String follow302Enable) {
             this.putQueryParameter("Follow302Enable", follow302Enable);
@@ -389,7 +398,10 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Follow302MaxTries.
+         * <p>The maximum number of 302 redirects to follow. The value must be an integer from 1 to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder follow302MaxTries(String follow302MaxTries) {
             this.putQueryParameter("Follow302MaxTries", follow302MaxTries);
@@ -398,7 +410,16 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Follow302RetainArgs.
+         * <p>Indicates whether to retain the original request parameters when following a 302 redirect. Valid values:</p>
+         * <ul>
+         * <li><p><code>on</code>: Retains the parameters.</p>
+         * </li>
+         * <li><p><code>off</code>: Does not retain the parameters.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302RetainArgs(String follow302RetainArgs) {
             this.putQueryParameter("Follow302RetainArgs", follow302RetainArgs);
@@ -407,7 +428,16 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Follow302RetainHeader.
+         * <p>Indicates whether to retain the original request headers when following a 302 redirect. Valid values:</p>
+         * <ul>
+         * <li><p><code>on</code>: Retains the headers.</p>
+         * </li>
+         * <li><p><code>off</code>: Does not retain the headers.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder follow302RetainHeader(String follow302RetainHeader) {
             this.putQueryParameter("Follow302RetainHeader", follow302RetainHeader);
@@ -416,7 +446,10 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Follow302TargetHost.
+         * <p>The <code>Host</code> header for the redirected origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test.com</p>
          */
         public Builder follow302TargetHost(String follow302TargetHost) {
             this.putQueryParameter("Follow302TargetHost", follow302TargetHost);
@@ -425,7 +458,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>The HOST carried in the origin request.</p>
+         * <p>The <code>Host</code> header for the origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -437,7 +470,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Port of the origin server when using HTTP protocol for origin pull.</p>
+         * <p>The origin server port for HTTP requests.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -449,7 +482,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Port of the origin server when using HTTPS protocol for origin pull.</p>
+         * <p>The origin server port for HTTPS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>4433</p>
@@ -461,10 +494,12 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>mTLS switch. Valid values:</p>
+         * <p>Indicates whether to enable mutual TLS (mTLS) for origin requests. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables mTLS.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables mTLS.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +512,10 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * OriginReadTimeout.
+         * <p>The read timeout period for the origin server, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder originReadTimeout(String originReadTimeout) {
             this.putQueryParameter("OriginReadTimeout", originReadTimeout);
@@ -486,11 +524,14 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Protocol used for the origin request. Valid values:</p>
+         * <p>The protocol for origin requests. Valid values:</p>
          * <ul>
-         * <li>http: Use HTTP protocol for origin pull.</li>
-         * <li>https: Use HTTPS protocol for origin pull.</li>
-         * <li>follow: Follow the client&quot;s protocol for origin pull.</li>
+         * <li><p><code>http</code>: The origin request uses HTTP.</p>
+         * </li>
+         * <li><p><code>https</code>: The origin request uses HTTPS.</p>
+         * </li>
+         * <li><p><code>follow</code>: The origin request uses the same protocol as the client request.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -503,7 +544,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>SNI carried in the origin request.</p>
+         * <p>The Server Name Indication (SNI) for the origin request.</p>
          * 
          * <strong>example:</strong>
          * <p>origin.example.com</p>
@@ -515,10 +556,12 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Origin certificate verification switch. Valid values:</p>
+         * <p>Indicates whether to enable origin certificate verification. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables verification.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables verification.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -531,11 +574,14 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Use range chunking for origin pull file download. Valid values:</p>
+         * <p>Indicates whether to use range requests when fetching files from the origin server. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
-         * <li>force: Force.</li>
+         * <li><p><code>on</code>: Enables range requests.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables range requests.</p>
+         * </li>
+         * <li><p><code>force</code>: Enforces range requests.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -548,7 +594,20 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * RangeChunkSize.
+         * <p>The size of each chunk for range requests. Valid values:</p>
+         * <ul>
+         * <li><p>512KB</p>
+         * </li>
+         * <li><p>1MB</p>
+         * </li>
+         * <li><p>2MB</p>
+         * </li>
+         * <li><p>4MB</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1MB</p>
          */
         public Builder rangeChunkSize(String rangeChunkSize) {
             this.putQueryParameter("RangeChunkSize", rangeChunkSize);
@@ -557,14 +616,16 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which is a conditional expression that matches user requests. This parameter is not required when you add a global configuration.</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+         * </li>
+         * <li><p>To match specific requests, set the value to a custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -573,10 +634,12 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
+         * <p>Indicates whether the rule is enabled. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enables the rule.</p>
+         * </li>
+         * <li><p><code>off</code>: Disables the rule.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -589,7 +652,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -601,7 +664,10 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The execution priority of the rule. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -610,7 +676,7 @@ public class UpdateOriginRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

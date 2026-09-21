@@ -80,7 +80,10 @@ public class CreateUserWafRulesetResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>665d3af3621bccf3fe29e1a4</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -88,7 +91,10 @@ public class CreateUserWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15C66C7B-671A-4297-9187-2C4477247A74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class CreateUserWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * RuleIds.
+         * <p>The list of rule IDs in the WAF ruleset.</p>
          */
         public Builder ruleIds(java.util.List<Long> ruleIds) {
             this.ruleIds = ruleIds;

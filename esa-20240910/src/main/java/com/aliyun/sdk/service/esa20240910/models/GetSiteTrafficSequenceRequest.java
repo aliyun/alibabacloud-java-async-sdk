@@ -74,6 +74,7 @@ public class GetSiteTrafficSequenceRequest extends Request {
         } 
 
         /**
+         * <p>The site ID. You can obtain the site ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetSiteTrafficSequenceRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site. After version management is enabled for the site, you can specify a site version number to obtain the traffic sequence information of the corresponding version. The default version is 0. If version management is not enabled for the site, you do not need to specify this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

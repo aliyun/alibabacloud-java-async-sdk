@@ -144,7 +144,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         } 
 
         /**
-         * <p>The configuration ID.</p>
+         * <p>Configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>436490043994112</p>
@@ -156,10 +156,10 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The configuration type to query. Valid values:</p>
+         * <p>Configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li>global: global configurations.</li>
-         * <li>rule: rule configurations.</li>
+         * <li>global: queries global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>Page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -184,7 +184,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * <p>Number of entries per page. Maximum value: 500. Default value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -196,7 +196,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The rule name.</p>
+         * <p>Rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -208,7 +208,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +221,7 @@ public class ListCustomResponseCodeRulesRequest extends Request {
         }
 
         /**
-         * <p>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

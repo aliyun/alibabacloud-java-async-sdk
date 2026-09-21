@@ -67,7 +67,10 @@ public class GetWaitingRoomPreviewPageResponseBody extends TeaModel {
         } 
 
         /**
-         * PageUrl.
+         * <p>The waiting room preview page URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://waitingroom.myalicdn.com/testxxxx">http://waitingroom.myalicdn.com/testxxxx</a></p>
          */
         public Builder pageUrl(String pageUrl) {
             this.pageUrl = pageUrl;
@@ -75,7 +78,10 @@ public class GetWaitingRoomPreviewPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

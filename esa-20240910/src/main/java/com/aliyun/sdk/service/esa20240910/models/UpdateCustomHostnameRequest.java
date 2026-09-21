@@ -158,7 +158,7 @@ public class UpdateCustomHostnameRequest extends Request {
         } 
 
         /**
-         * <p>云盾证书ID，使用云盾证书时必填</p>
+         * <p>The ID of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -170,7 +170,11 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>云盾证书所在地域，使用云盾证书时必填</p>
+         * <p>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas. Valid values:</p>
+         * <ul>
+         * <li>Chinese mainland accounts: cn-hangzhou.</li>
+         * <li>International accounts: ap-southeast-1.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -182,7 +186,12 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书类型，SSL 开启时必填</p>
+         * <p>The certificate type. This parameter is required when SslFlag is set to on. Valid values:</p>
+         * <ul>
+         * <li><strong>free</strong>: free certificate.</li>
+         * <li><strong>upload</strong>: uploaded certificate.</li>
+         * <li><strong>cas</strong>: SSL Certificates Service certificate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cas</p>
@@ -194,7 +203,7 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书公钥，使用上传证书时必填</p>
+         * <p>The certificate content. This parameter is required when CertType is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -206,6 +215,7 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
+         * <p>The ID of the SaaS domain name. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +228,7 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书私钥，使用上传证书时必填</p>
+         * <p>The certificate private key. This parameter is required when CertType is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -230,7 +240,7 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>绑定的源站记录ID</p>
+         * <p>The ID of the record to bind. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -242,7 +252,11 @@ public class UpdateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>SSL开关</p>
+         * <p>The SSL switch. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enables SSL.</li>
+         * <li><strong>off</strong>: Disables SSL.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>on</p>

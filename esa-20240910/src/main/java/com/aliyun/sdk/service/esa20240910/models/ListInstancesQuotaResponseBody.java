@@ -93,7 +93,10 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * QuotaName.
+         * <p>The quota name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>siteCount</p>
          */
         public Builder quotaName(String quotaName) {
             this.quotaName = quotaName;
@@ -101,7 +104,17 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaValueType.
+         * <p>The threshold type of the quota. Valid values:</p>
+         * <ul>
+         * <li><strong>value</strong>: Enumeration type. The enumeration range of quota values.</li>
+         * <li><strong>bool</strong>: Boolean type. Indicates whether the quota is available.</li>
+         * <li><strong>num</strong>: Numeric type. The upper limit of the quota usage.</li>
+         * <li><strong>range</strong>: Range type. The value range of the quota.</li>
+         * <li><strong>custom</strong>: Custom type. Other types beyond the four threshold types above.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>bool</p>
          */
         public Builder quotaValueType(String quotaValueType) {
             this.quotaValueType = quotaValueType;
@@ -109,7 +122,7 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaValues.
+         * <p>The list of quota values.</p>
          */
         public Builder quotaValues(java.util.List<QuotaValues> quotaValues) {
             this.quotaValues = quotaValues;
@@ -117,7 +130,10 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156A6B-677B1A-4297B7-9187B7-2B44792</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -183,7 +199,10 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esa-site-blea5hv7m0ow</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -191,7 +210,10 @@ public class ListInstancesQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaValue.
+             * <p>The quota value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder quotaValue(String quotaValue) {
                 this.quotaValue = quotaValue;

@@ -74,11 +74,14 @@ public class CheckSiteProjectNameRequest extends Request {
         } 
 
         /**
-         * <p>The name of the real-time log delivery task.</p>
+         * <p>The real-time log project name.</p>
+         * <blockquote>
+         * <p>Allowed character set (hyphens only, no underscores), length range, and naming rule examples (such as \&quot;ali-dcdn-log-56\&quot;)</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>user_log</p>
+         * <p>ali-dcdn-log-56</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -87,7 +90,7 @@ public class CheckSiteProjectNameRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12312312213212</p>

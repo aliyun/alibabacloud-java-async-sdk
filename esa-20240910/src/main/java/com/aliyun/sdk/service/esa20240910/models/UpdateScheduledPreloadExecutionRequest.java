@@ -116,7 +116,7 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         } 
 
         /**
-         * <p>The end time of the prefetch plan.</p>
+         * <p>The end time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-31T18:10:48.849+08:00</p>
@@ -128,11 +128,11 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the prefetch plan.</p>
+         * <p>The prefetch plan ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>UpdateScheduledPreloadExecution</p>
+         * <p>66599bd7397885b43804901c</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -141,7 +141,7 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * <p>The time interval between each batch execution. Unit: seconds.</p>
+         * <p>The execution interval between each batch of the scheduled prefetch plan, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -153,7 +153,7 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * <p>The number of URLs prefetched in each batch.</p>
+         * <p>The number of URLs to prefetch per batch.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class UpdateScheduledPreloadExecutionRequest extends Request {
         }
 
         /**
-         * <p>The start time of the prefetch plan.</p>
+         * <p>The start time of the scheduled prefetch plan, in ISO 8601 format (such as 2024-01-01T00:00:00+Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-31T17:10:48.849+08:00</p>

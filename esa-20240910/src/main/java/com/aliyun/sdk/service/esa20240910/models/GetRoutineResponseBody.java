@@ -119,7 +119,7 @@ public class GetRoutineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the routine was created.</p>
+         * <p>The time when the Edge Routine was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-11T01:23:21Z</p>
@@ -130,7 +130,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default record name to access.</p>
+         * <p>The default access record.</p>
          * 
          * <strong>example:</strong>
          * <p>routine1.example.com</p>
@@ -141,7 +141,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the routine.</p>
+         * <p>The description of the Edge Routine.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
@@ -152,7 +152,7 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the environments.</p>
+         * <p>The list of environment context.</p>
          */
         public Builder envs(java.util.List<Envs> envs) {
             this.envs = envs;
@@ -160,7 +160,10 @@ public class GetRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * HasAssets.
+         * <p>Indicates whether the Routine has the Assets tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasAssets(Boolean hasAssets) {
             this.hasAssets = hasAssets;
@@ -263,7 +266,10 @@ public class GetRoutineResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeVersion.
+             * <p>The code version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1746583193971399525</p>
              */
             public Builder codeVersion(String codeVersion) {
                 this.codeVersion = codeVersion;
@@ -271,10 +277,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the routine was created.</p>
+             * <p>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2024-03-11T01:23:21Z</p>
+             * <p>2025-07-23T09:01:40Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -282,10 +288,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the routine.</p>
+             * <p>The description of the code version.</p>
              * 
              * <strong>example:</strong>
-             * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
+             * <p>code version 1.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +299,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * <p>The canary release percentage of the code version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder percentage(Long percentage) {
                 this.percentage = percentage;
@@ -386,7 +395,7 @@ public class GetRoutineResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeVersions.
+             * <p>The list of deployed code version numbers.</p>
              */
             public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
                 this.codeVersions = codeVersions;
@@ -394,7 +403,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the deployment was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-11T09:21:36Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -402,7 +414,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * DeployId.
+             * <p>The deployment record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>589267</p>
              */
             public Builder deployId(String deployId) {
                 this.deployId = deployId;
@@ -410,7 +425,10 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * Strategy.
+             * <p>The deployment strategy. Default value: percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>percentage</p>
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
@@ -477,7 +495,7 @@ public class GetRoutineResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeDeploy.
+             * <p>The percentage-based canary release deployment information.</p>
              */
             public Builder codeDeploy(CodeDeploy codeDeploy) {
                 this.codeDeploy = codeDeploy;
@@ -485,7 +503,7 @@ public class GetRoutineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment type.</p>
+             * <p>The environment name.</p>
              * 
              * <strong>example:</strong>
              * <p>production</p>

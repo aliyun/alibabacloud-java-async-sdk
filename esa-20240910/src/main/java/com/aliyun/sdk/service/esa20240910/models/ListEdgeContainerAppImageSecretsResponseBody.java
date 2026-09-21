@@ -67,7 +67,7 @@ public class ListEdgeContainerAppImageSecretsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>List of image secrets.</p>
+         * <p>The list of image secrets.</p>
          */
         public Builder imageSecretList(java.util.List<ImageSecretList> imageSecretList) {
             this.imageSecretList = imageSecretList;
@@ -75,7 +75,7 @@ public class ListEdgeContainerAppImageSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3558df77-8a7a-4060-a900-2d7949403836</p>
@@ -157,7 +157,7 @@ public class ListEdgeContainerAppImageSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Name of the image secret.</p>
+             * <p>The name of the image secret.</p>
              * 
              * <strong>example:</strong>
              * <p>reg-123****</p>
@@ -168,7 +168,7 @@ public class ListEdgeContainerAppImageSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Registry address.</p>
+             * <p>The image repository address.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
@@ -179,7 +179,7 @@ public class ListEdgeContainerAppImageSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Username for the image repository</p>
+             * <p>The username of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>admin</p>

@@ -144,7 +144,10 @@ public class TraceSiteRequest extends Request {
         } 
 
         /**
-         * Body.
+         * <p>The HTTP request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;PlainText&quot;:&quot;bc58c54211db&quot;}</p>
          */
         public Builder body(TraceSiteRequestBody body) {
             String bodyShrink = shrink(body, "Body", "json");
@@ -154,7 +157,7 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
-         * Context.
+         * <p>The environment context. This parameter is optional.</p>
          */
         public Builder context(Context context) {
             String contextShrink = shrink(context, "Context", "json");
@@ -164,7 +167,10 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
-         * Cookies.
+         * <p>The cookie parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder cookies(java.util.List<Cookies> cookies) {
             String cookiesShrink = shrink(cookies, "Cookies", "json");
@@ -174,7 +180,10 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
-         * Headers.
+         * <p>The request headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[]</p>
          */
         public Builder headers(java.util.List<Headers> headers) {
             String headersShrink = shrink(headers, "Headers", "json");
@@ -184,7 +193,10 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
-         * Method.
+         * <p>The HTTP method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         public Builder method(String method) {
             this.putBodyParameter("Method", method);
@@ -193,7 +205,10 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * <p>The HTTP protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP/1.1</p>
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -202,6 +217,7 @@ public class TraceSiteRequest extends Request {
         }
 
         /**
+         * <p>The URL of the request.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -273,7 +289,10 @@ public class TraceSiteRequest extends Request {
             } 
 
             /**
-             * Json.
+             * <p>The content in JSON format. If both JSON format content and plain text content are specified, the JSON format content takes precedence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;request_id&quot;,&quot;3f809c32&quot;}</p>
              */
             public Builder json(Object json) {
                 this.json = json;
@@ -281,7 +300,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * PlainText.
+             * <p>The plain text content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bc58c54211db</p>
              */
             public Builder plainText(String plainText) {
                 this.plainText = plainText;
@@ -361,7 +383,10 @@ public class TraceSiteRequest extends Request {
             } 
 
             /**
-             * CountryCode.
+             * <p>The country/region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -369,7 +394,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * IspCode.
+             * <p>The Internet service provider (ISP) code. This parameter is valid only when the country or region is the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100025</p>
              */
             public Builder ispCode(String ispCode) {
                 this.ispCode = ispCode;
@@ -377,7 +405,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * RegionCode.
+             * <p>The region or province code. This parameter is valid only when the country or region is the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN-BJ</p>
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -444,7 +475,7 @@ public class TraceSiteRequest extends Request {
             } 
 
             /**
-             * GeoLocation.
+             * <p>The simulated geolocation information.</p>
              */
             public Builder geoLocation(GeoLocation geoLocation) {
                 this.geoLocation = geoLocation;
@@ -452,7 +483,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * SkipChallenge.
+             * <p>Specifies whether to skip the security challenge test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder skipChallenge(Boolean skipChallenge) {
                 this.skipChallenge = skipChallenge;
@@ -519,7 +553,10 @@ public class TraceSiteRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The cookie name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sessionId</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -527,7 +564,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The cookie value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f9ca1f7d-15bb-4c60-ad99-71b8e3e4985b</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -594,7 +634,10 @@ public class TraceSiteRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The HTTP request header name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>User-Agent</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -602,7 +645,10 @@ public class TraceSiteRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The HTTP request header value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trace-test</p>
              */
             public Builder value(String value) {
                 this.value = value;

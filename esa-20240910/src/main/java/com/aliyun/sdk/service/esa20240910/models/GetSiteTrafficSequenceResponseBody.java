@@ -67,7 +67,7 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -78,7 +78,7 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficSequences.
+         * <p>The traffic sequences of the site.</p>
          */
         public Builder trafficSequences(java.util.List<TrafficSequences> trafficSequences) {
             this.trafficSequences = trafficSequences;
@@ -144,7 +144,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480339095269376</p>
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -152,7 +155,14 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * ConfigType.
+             * <p>The configuration type. Valid values:</p>
+             * <ul>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>global</p>
              */
             public Builder configType(String configType) {
                 this.configType = configType;
@@ -233,6 +243,7 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The list of configurations for the site feature associated with the traffic sequence.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configs(java.util.List<Configs> configs) {
@@ -241,7 +252,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>The feature name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redirect_rules</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -249,7 +263,14 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * HasConfig.
+             * <p>Indicates whether the site has a corresponding configuration. Valid values:</p>
+             * <ul>
+             * <li>true: The site has a corresponding configuration.</li>
+             * <li>false: The site does not have a corresponding configuration.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasConfig(Boolean hasConfig) {
                 this.hasConfig = hasConfig;
@@ -355,7 +376,7 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             } 
 
             /**
-             * FunctionList.
+             * <p>The list of site features associated with the traffic sequence.</p>
              */
             public Builder functionList(java.util.List<FunctionList> functionList) {
                 this.functionList = functionList;
@@ -363,7 +384,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * Order.
+             * <p>The order of the current sequence in the entire traffic sequence.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder order(String order) {
                 this.order = order;
@@ -371,7 +395,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * Router.
+             * <p>The traffic sequence routing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/safe/ddos/basic</p>
              */
             public Builder router(String router) {
                 this.router = router;
@@ -379,7 +406,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceCode.
+             * <p>The sequence code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddos</p>
              */
             public Builder sequenceCode(String sequenceCode) {
                 this.sequenceCode = sequenceCode;
@@ -387,7 +417,10 @@ public class GetSiteTrafficSequenceResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceName.
+             * <p>The sequence name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DDOS</p>
              */
             public Builder sequenceName(String sequenceName) {
                 this.sequenceName = sequenceName;

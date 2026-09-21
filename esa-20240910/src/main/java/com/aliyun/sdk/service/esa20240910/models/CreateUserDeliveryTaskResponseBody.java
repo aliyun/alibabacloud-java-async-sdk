@@ -95,8 +95,8 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         /**
          * <p>The data center. Valid values:</p>
          * <ul>
-         * <li>cn: the Chinese mainland.</li>
-         * <li>sg: outside the Chinese mainland.</li>
+         * <li><strong>cn</strong>: the Chinese mainland.</li>
+         * <li><strong>sg</strong>: global (excluding the Chinese mainland).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the delivery task.</p>
+         * <p>The task status.</p>
          * 
          * <strong>example:</strong>
          * <p>online</p>
@@ -130,7 +130,7 @@ public class CreateUserDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>er-http</p>

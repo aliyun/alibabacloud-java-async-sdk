@@ -67,7 +67,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * Ruleset.
+         * <p>The WAF ruleset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder ruleset(Ruleset ruleset) {
             this.ruleset = ruleset;
@@ -297,7 +303,16 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The action of the rule. Valid values:</p>
+             * <ul>
+             * <li>deny: Block.</li>
+             * <li>monitor: Monitor.</li>
+             * <li>js: JavaScript Challenge.</li>
+             * <li>captcha: Slider challenge.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -305,7 +320,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * CharacteristicsFields.
+             * <p>The list of statistics fields for the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;http.host&quot;]</p>
              */
             public Builder characteristicsFields(java.util.List<String> characteristicsFields) {
                 this.characteristicsFields = characteristicsFields;
@@ -313,7 +331,15 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The configuration of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;Id&quot;: 20000001,
+             *   &quot;Name&quot;: &quot;rule1&quot;,
+             *   &quot;Expression&quot;: &quot;ip.src eq 1.1.1.1&quot;,
+             *   &quot;Action&quot;: &quot;deny&quot;
+             * }</p>
              */
             public Builder config(WafRuleConfig config) {
                 this.config = config;
@@ -321,7 +347,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Fields.
+             * <p>The list of match fields for the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ip.src&quot;]</p>
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -329,7 +358,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The WAF rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -337,7 +369,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +380,17 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The phase in which the WAF rule runs. Valid values:</p>
+             * <ul>
+             * <li>http_whitelist: whitelist rule</li>
+             * <li>http_custom: custom rule</li>
+             * <li>http_managed: managed rule</li>
+             * <li>http_anti_scan: scan protection rule</li>
+             * <li>http_ratelimit: frequency control rule</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -353,7 +398,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -361,7 +409,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * RulesetId.
+             * <p>The WAF ruleset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder rulesetId(Long rulesetId) {
                 this.rulesetId = rulesetId;
@@ -369,7 +420,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Skip.
+             * <p>The skip mode of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder skip(String skip) {
                 this.skip = skip;
@@ -377,7 +431,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -385,7 +442,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of phases to skip for the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;http_custom&quot;]</p>
              */
             public Builder tags(java.util.List<String> tags) {
                 this.tags = tags;
@@ -393,7 +453,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the WAF rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>http_ratelimit</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -401,7 +464,12 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the WAF rule was last updated.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>Example: 2025-07-07T15:00:00Z</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-07T15:00:00Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -559,7 +627,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -567,7 +638,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * <p>The expression of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src == 1.1.1.1</p>
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -575,7 +649,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The WAF ruleset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -583,7 +660,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -591,7 +671,17 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Phase.
+             * <p>The phase in which the WAF rule runs. Valid values:</p>
+             * <ul>
+             * <li>http_whitelist: whitelist rule</li>
+             * <li>http_custom: custom rule</li>
+             * <li>http_managed: managed rule</li>
+             * <li>http_anti_scan: scan protection rule</li>
+             * <li>http_ratelimit: frequency control rule</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>http_custom</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -599,7 +689,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * <p>The position of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder position(Long position) {
                 this.position = position;
@@ -607,7 +700,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The list of rule configurations in the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{}]</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -615,7 +711,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Shared.
+             * <p>The shared configuration of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder shared(WafBatchRuleShared shared) {
                 this.shared = shared;
@@ -623,7 +722,10 @@ public class GetUserWafRulesetResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the WAF ruleset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;

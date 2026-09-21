@@ -74,7 +74,7 @@ public class CreateKvNamespaceRequest extends Request {
         } 
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The description of the KV namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test namespace.</p>
@@ -86,7 +86,7 @@ public class CreateKvNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The name of the KV namespace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

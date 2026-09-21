@@ -93,7 +93,10 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-b09z4sk9pbls</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -101,7 +104,23 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PlanName.
+         * <p>The plan name.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;</p>
+         * <ul>
+         * <li>Free Edition: entranceplan</li>
+         * <li>Basic: basic</li>
+         * <li>Standard: medium</li>
+         * <li>Premium Edition: high</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>Entrance: entranceplan_intl</li>
+         * <li>Pro: basicplan_intl</li>
+         * <li>Premium: vipplan_intl</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder planName(String planName) {
             this.planName = planName;
@@ -109,7 +128,10 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * QuotaValue.
+         * <p>The quota value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44640</p>
          */
         public Builder quotaValue(String quotaValue) {
             this.quotaValue = quotaValue;
@@ -117,7 +139,10 @@ public class GetUserMaxPlanQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C6599BB6-525D-5CFF-86BC-24068E6FB3EE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

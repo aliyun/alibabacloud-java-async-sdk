@@ -80,7 +80,7 @@ public class DeleteRoutineEnvironmentVariablesResponseBody extends TeaModel {
         } 
 
         /**
-         * DeletedKeys.
+         * <p>The list of environment variable keys that were deleted successfully.</p>
          */
         public Builder deletedKeys(java.util.List<String> deletedKeys) {
             this.deletedKeys = deletedKeys;
@@ -88,7 +88,7 @@ public class DeleteRoutineEnvironmentVariablesResponseBody extends TeaModel {
         }
 
         /**
-         * FailedKeys.
+         * <p>The list of environment variable keys that failed to be deleted.</p>
          */
         public Builder failedKeys(java.util.List<String> failedKeys) {
             this.failedKeys = failedKeys;

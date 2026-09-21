@@ -115,7 +115,10 @@ public class CreateEdgeContainerAppRecordRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
+         * <blockquote>
+         * <p>Notice: Although this parameter is marked as optional in the schema, it is required when you call this operation. If you do not specify this parameter, an InternalError(400) error is returned. Call the ListSites operation to obtain a valid SiteId.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5407498413****</p>

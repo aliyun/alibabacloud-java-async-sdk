@@ -106,7 +106,7 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         } 
 
         /**
-         * Hostnames.
+         * <p>The list of domain names to associate.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;
@@ -114,10 +114,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the client CA certificate.</p>
+         * <p>The client CA certificate ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
+         * <p>babab9db65ee5efcca9f3d41d4b50d**</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -136,10 +136,10 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123</p>
+         * <p>123456789****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -147,7 +147,7 @@ public class SetClientCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

@@ -67,7 +67,7 @@ public class CreateRewriteUrlRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39237781679****</p>
@@ -78,7 +78,7 @@ public class CreateRewriteUrlRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>

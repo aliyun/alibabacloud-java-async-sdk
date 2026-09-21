@@ -54,7 +54,7 @@ public class UpdateTransportLayerApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9e5448c7-edaf-49aa-9887-0fcd0832306c</p>

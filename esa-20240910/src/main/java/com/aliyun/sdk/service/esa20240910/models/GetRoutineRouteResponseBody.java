@@ -210,10 +210,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Bypass mode. Valid values:</p>
+         * <p>The bypass mode. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,9 +236,9 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration type to query. Valid values:</p>
+         * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li>global: global configurations.</li>
+         * <li>global: queries global configurations.</li>
          * <li>rule: queries rule configurations.</li>
          * </ul>
          * 
@@ -251,10 +251,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+         * <p>The back-to-origin on exception switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -266,10 +266,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration mode. Valid values: Valid values:</p>
+         * <p>The configuration mode. Valid values:</p>
          * <ul>
-         * <li>simple</li>
-         * <li>custom</li>
+         * <li>simple: simple mode.</li>
+         * <li>custom: custom mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,10 +292,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The routing switch. Valid values:</p>
+         * <p>The route switch. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: enabled.</li>
+         * <li>off: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -318,7 +318,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The function name.</p>
+         * <p>The Edge Routine name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-routine1</p>
@@ -332,7 +332,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
          * <p>The rule content.</p>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -340,7 +340,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The order in which the rule is executed.</p>
+         * <p>The rule execution order.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -351,7 +351,7 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version number of the website.</p>
+         * <p>The version number of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -362,7 +362,10 @@ public class GetRoutineRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Timeout.
+         * <p>The Edge Routine timeout period. Valid values: 5 to 60. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeout(String timeout) {
             this.timeout = timeout;

@@ -89,7 +89,12 @@ public class DescribeDDoSEventMaxRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>The date is in ISO 8601 format. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. The maximum time span between the start time and end time is 31 days.</p>
+         * <p>If you do not set this parameter, the current time is used as the end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-10T02:10:10Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -98,6 +103,7 @@ public class DescribeDDoSEventMaxRequest extends Request {
         }
 
         /**
+         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +116,8 @@ public class DescribeDDoSEventMaxRequest extends Request {
         }
 
         /**
-         * <p>A short description of struct</p>
+         * <p>The beginning of the time range to query.</p>
+         * <p>The date is in ISO 8601 format. The time is displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -127,7 +127,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Current page number.</p>
+         * <p>Current page number, same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -474,10 +474,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Alt-Svc feature switch, default is off. Value range: </p>
+             * <p>Alt-Svc feature switch. Disabled by default. Valid values:</p>
              * <ul>
-             * <li>on: enabled. </li>
-             * <li>off: disabled.</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -489,7 +489,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Alt-Svc header includes the clear parameter, default is off. Values:</p>
+             * <p>Whether the Alt-Svc header includes the clear parameter. Disabled by default. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -504,7 +504,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of Alt-Svc in seconds, default is 86400 seconds.</p>
+             * <p>Alt-Svc validity period in seconds. Default value: 86400 seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>86400</p>
@@ -515,7 +515,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether the Alt-Svc header includes the persist parameter, default is off. Values:</p>
+             * <p>Whether the Alt-Svc header includes the persist parameter. Disabled by default. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -541,10 +541,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
+             * <p>Configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: Query global configuration.</li>
-             * <li>rule: Query rule-based configuration.</li>
+             * <li>global: Query global configurations.</li>
+             * <li>rule: Query rule configurations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -556,7 +556,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether HSTS is enabled, default is off. Value range:</p>
+             * <p>Whether to enable HSTS. Disabled by default. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -571,7 +571,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to include subdomains in HSTS, default is off. Value range:</p>
+             * <p>Whether to include subdomains in HSTS. Disabled by default. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -586,7 +586,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of HSTS in seconds.</p>
+             * <p>HSTS expiration time in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -597,7 +597,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether HSTS preloading is enabled, default is off. Value range:</p>
+             * <p>Whether to enable HSTS preload. Disabled by default. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -612,10 +612,12 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable forced HTTPS, default is disabled. Possible values:</p>
+             * <p>Whether to enable forced HTTPS. Disabled by default. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li><p>on: Enabled.</p>
+             * </li>
+             * <li><p>off: Disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -627,7 +629,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Forced HTTPS redirect status code. Possible values:</p>
+             * <p>Forced HTTPS redirect status code. Valid values:</p>
              * <ul>
              * <li>301</li>
              * <li>302</li>
@@ -644,7 +646,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsNoSniDeny.
+             * <p>Whether to enable denial of TLS handshake requests without SNI. Disabled by default. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder httpsNoSniDeny(String httpsNoSniDeny) {
                 this.httpsNoSniDeny = httpsNoSniDeny;
@@ -652,7 +661,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsSniVerify.
+             * <p>Whether to enable SNI verification. Disabled by default. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder httpsSniVerify(String httpsSniVerify) {
                 this.httpsSniVerify = httpsSniVerify;
@@ -660,7 +676,10 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsSniWhitelist.
+             * <p>Specifies the list of allowed SNI whitelist entries, separated by spaces.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc edf</p>
              */
             public Builder httpsSniWhitelist(String httpsSniWhitelist) {
                 this.httpsSniWhitelist = httpsSniWhitelist;
@@ -668,14 +687,14 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding a global configuration. There are two usage scenarios:</p>
              * <ul>
              * <li>Match all incoming requests: Set the value to true.</li>
-             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match specified requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>(http.host eq &quot;video.example.com&quot;)</p>
+             * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -683,7 +702,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+             * <p>Rule switch. This parameter does not need to be set when adding a global configuration. Valid values:</p>
              * <ul>
              * <li>on: Enabled.</li>
              * <li>off: Disabled.</li>
@@ -698,7 +717,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+             * <p>Rule name. This parameter does not need to be set when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -709,7 +728,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+             * <p>Rule execution order. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -720,7 +739,7 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the site version for which the configuration is effective, default is version 0.</p>
+             * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: version 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -67,7 +67,7 @@ public class ListAWSRegionInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * Regions.
+         * <p>The region information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -144,7 +144,10 @@ public class ListAWSRegionInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The region code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>us-east-2</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -152,7 +155,10 @@ public class ListAWSRegionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>US East (Ohio)</p>
              */
             public Builder name(String name) {
                 this.name = name;

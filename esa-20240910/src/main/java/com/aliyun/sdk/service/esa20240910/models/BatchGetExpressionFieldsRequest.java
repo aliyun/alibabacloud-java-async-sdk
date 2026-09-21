@@ -129,7 +129,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
         } 
 
         /**
-         * <p>List of expressions.</p>
+         * <p>The list of expressions.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -142,7 +142,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The plan instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-bitkull7uubk</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -151,7 +154,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * Kind.
+         * <p>The type of the expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wireshark</p>
          */
         public Builder kind(String kind) {
             this.putBodyParameter("Kind", kind);
@@ -160,7 +166,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * <p>WAF Phase</p>
+         * <p>The WAF phase.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -172,7 +178,10 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * PlanNameEn.
+         * <p>The plan name (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder planNameEn(String planNameEn) {
             this.putQueryParameter("PlanNameEn", planNameEn);
@@ -181,7 +190,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
         }
 
         /**
-         * <p>Site ID</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -252,7 +261,7 @@ public class BatchGetExpressionFieldsRequest extends Request {
             } 
 
             /**
-             * <p>Content of the expression.</p>
+             * <p>The content of the expression.</p>
              * 
              * <strong>example:</strong>
              * <p>ip.src eq 1.1.1.1</p>

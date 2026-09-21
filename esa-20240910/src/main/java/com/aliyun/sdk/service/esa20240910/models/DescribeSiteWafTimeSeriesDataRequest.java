@@ -116,7 +116,14 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -125,6 +132,7 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
         }
 
         /**
+         * <p>The query metrics.</p>
          * <p>This parameter is required.</p>
          */
         public Builder fields(java.util.List<Fields> fields) {
@@ -135,7 +143,11 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the queried data. Unit: seconds.</p>
+         * <p>Based on the maximum time span of a single query, this parameter supports the values 60 (1 minute), 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the <strong>supported query time granularity</strong> section above.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -144,7 +156,11 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
+         * <p>If this parameter is left empty, user-level data is queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11089268296****</p>
          */
         public Builder siteId(String siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -153,7 +169,11 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -221,7 +241,7 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
             } 
 
             /**
-             * Dimension.
+             * <p>The query dimensions.</p>
              */
             public Builder dimension(java.util.List<String> dimension) {
                 this.dimension = dimension;
@@ -229,7 +249,13 @@ public class DescribeSiteWafTimeSeriesDataRequest extends Request {
             }
 
             /**
-             * FieldName.
+             * <p>The metric name.</p>
+             * <blockquote>
+             * <p>For specific dimensions, see <a href="https://help.aliyun.com/document_detail/2878520.html">Data analytics field description</a>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Requests</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;

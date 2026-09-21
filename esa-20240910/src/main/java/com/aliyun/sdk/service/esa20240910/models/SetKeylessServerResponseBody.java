@@ -104,7 +104,10 @@ public class SetKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,7 +115,10 @@ public class SetKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -120,7 +126,10 @@ public class SetKeylessServerResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

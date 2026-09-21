@@ -186,17 +186,17 @@ public class ListWafManagedRulesRequest extends Request {
         } 
 
         /**
-         * <p>Attack type of the vulnerability protection event. Values:</p>
+         * <p>The attack type of the vulnerability prevention event. Valid values:</p>
          * <ul>
          * <li>SQL injection</li>
-         * <li>Cross-site scripting</li>
-         * <li>Code execution</li>
+         * <li>cross-site scripting (XSS)</li>
+         * <li>code execute</li>
          * <li>CRLF</li>
-         * <li>Local file inclusion</li>
-         * <li>Remote file inclusion</li>
-         * <li>Webshell</li>
-         * <li>Cross-site request forgery</li>
-         * <li>Other</li>
+         * <li>local file inclusion (LFI)</li>
+         * <li>remote file inclusion (RFI)</li>
+         * <li>webshell</li>
+         * <li>cross-site request forgery</li>
+         * <li>Others</li>
          * <li>SEMA</li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -211,7 +211,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>ID of the WAF rule.</p>
+         * <p>The ID of the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -223,7 +223,10 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The WAF instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-awmmx25y2igw</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -232,7 +235,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>Language type, which will be used to return the response. Value range:</p>
+         * <p>The language type. The response is returned in the specified language. Valid values:</p>
          * <ul>
          * <li><strong>en</strong>: English.</li>
          * <li><strong>zh</strong>: Chinese.</li>
@@ -248,7 +251,8 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * ManagedRuleset.
+         * <p>The managed ruleset configuration in JSON string format.</p>
+         * <p>Contains the AttackType, ProtectionLevel, Action, and ManagedRules subfields. When ProtectionLevel is set to -1 (custom mode), specify the status and action for each rule through the ManagedRules array.</p>
          */
         public Builder managedRuleset(ManagedRuleset managedRuleset) {
             String managedRulesetShrink = shrink(managedRuleset, "ManagedRuleset", "json");
@@ -258,7 +262,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>Query page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -270,7 +274,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>Query page size.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -282,7 +286,12 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * ProtectionLevel.
+         * <p>The currently saved protection level, which represents the existing configuration state in the database.</p>
+         * <p>Valid values: -1 (custom mode), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
+         * <p>Difference from ManagedRuleset.ProtectionLevel: this parameter indicates the currently effective configuration, while ManagedRuleset.ProtectionLevel indicates the target value being passed in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder protectionLevel(Integer protectionLevel) {
             this.putQueryParameter("ProtectionLevel", protectionLevel);
@@ -291,7 +300,10 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>Query conditions.</p>
+         * <p>The query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Status\&quot;:\&quot;\&quot;,\&quot;ProtectionLevels\&quot;:[2,1],\&quot;Action\&quot;:\&quot;\&quot;,\&quot;IdNameLike\&quot;:\&quot;\&quot;}</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -301,7 +313,7 @@ public class ListWafManagedRulesRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -385,7 +397,11 @@ public class ListWafManagedRulesRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The action for a single rule. This parameter takes effect only in custom mode (ProtectionLevel = -1).</p>
+             * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>js</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -393,10 +409,10 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>ID of the WAF rule.</p>
+             * <p>The unique ID of a single managed rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>10000001</p>
+             * <p>20611349</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -404,7 +420,15 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The rule enabled status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -497,7 +521,11 @@ public class ListWafManagedRulesRequest extends Request {
             } 
 
             /**
-             * Action.
+             * <p>The unified action when ProtectionLevel is greater than 0. This parameter cannot be empty in this case.</p>
+             * <p>Common valid values: monitor, deny, js, captcha. The actual available values depend on the instance quota.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>monitor</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -505,20 +533,8 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>Attack type of the vulnerability protection event. Values:</p>
-             * <ul>
-             * <li>SQL injection</li>
-             * <li>Cross-site scripting</li>
-             * <li>Code execution</li>
-             * <li>CRLF</li>
-             * <li>Local file inclusion</li>
-             * <li>Remote file inclusion</li>
-             * <li>Webshell</li>
-             * <li>Cross-site request forgery</li>
-             * <li>Other</li>
-             * <li>SEMA</li>
-             * </ul>
-             * <p>This parameter is required.</p>
+             * <p>The attack type encoding. The value cannot be 0.</p>
+             * <p>Example values: 11 (SQL injection), 12 (XSS), 13 (code execute), 14 (CRLF), 15 (local file inclusion (LFI)), 16 (remote file inclusion (RFI)), 17 (WebShell), 22 (command injection), 26 (SSRF), 27 (path traversal), 28 (protocol violation), 31 (scanner behavior).</p>
              * 
              * <strong>example:</strong>
              * <p>11</p>
@@ -529,7 +545,8 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * ManagedRules.
+             * <p>The rule configuration list in custom mode. This parameter is used only when ProtectionLevel is set to -1.</p>
+             * <p>Each element contains Id, Status, and Action, which are used to specify the enabled status and action for each managed rule.</p>
              */
             public Builder managedRules(java.util.List<ManagedRules> managedRules) {
                 this.managedRules = managedRules;
@@ -537,7 +554,12 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * ProtectionLevel.
+             * <p>The protection level within the ruleset.</p>
+             * <p>Valid values: -1 (custom mode, specify each rule through ManagedRules), 1 (loose), 2 (medium), 3 (strict), 4 (super strict).</p>
+             * <p>When the value is -1, ManagedRules cannot be empty. When the value is greater than 0, Action cannot be empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder protectionLevel(Integer protectionLevel) {
                 this.protectionLevel = protectionLevel;
@@ -630,7 +652,7 @@ public class ListWafManagedRulesRequest extends Request {
             } 
 
             /**
-             * <p>Action.</p>
+             * <p>The action.</p>
              * 
              * <strong>example:</strong>
              * <p>deny</p>
@@ -641,7 +663,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>Fuzzy search for rule ID or rule name.</p>
+             * <p>Fuzzy match by rule ID or rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -652,7 +674,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>List of rule protection levels.</p>
+             * <p>The list of rule protection levels.</p>
              */
             public Builder protectionLevels(java.util.List<Integer> protectionLevels) {
                 this.protectionLevels = protectionLevels;
@@ -660,7 +682,7 @@ public class ListWafManagedRulesRequest extends Request {
             }
 
             /**
-             * <p>Status.</p>
+             * <p>The status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

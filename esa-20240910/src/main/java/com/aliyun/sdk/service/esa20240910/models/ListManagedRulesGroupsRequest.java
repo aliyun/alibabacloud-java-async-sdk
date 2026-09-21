@@ -73,7 +73,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         } 
 
         /**
-         * <p>Page number, used to specify the page number for pagination queries.</p>
+         * <p>The page number for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ListManagedRulesGroupsRequest extends Request {
         }
 
         /**
-         * <p>Page size, used to specify the number of items per page for pagination queries.</p>
+         * <p>The number of entries per page for the paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

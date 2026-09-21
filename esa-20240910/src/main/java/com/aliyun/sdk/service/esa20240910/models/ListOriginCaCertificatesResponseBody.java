@@ -132,7 +132,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Page number, default is 1 if not provided.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the certificates.</p>
+         * <p>The result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -173,7 +173,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -184,7 +184,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -433,7 +433,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Common Name of the certificate.</p>
+             * <p>The common name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -444,7 +444,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was created.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-24 07:48:51</p>
@@ -477,7 +477,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * <p>The certification authority.</p>
              * 
              * <strong>example:</strong>
              * <p>GlobalSign nv-sa</p>
@@ -499,7 +499,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -510,10 +510,10 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate takes effect.</p>
+             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-11-26T16:00:00Z</p>
+             * <p>2023-11-26 16:00:00</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -521,7 +521,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public-key algorithm of the certificate.</p>
+             * <p>The public key algorithm of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>RSA</p>
@@ -543,7 +543,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the certificate.</p>
+             * <p>The certificate serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -577,9 +577,6 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
 
             /**
              * <p>The certificate type.</p>
-             * <ul>
-             * <li>upload: custom certificate that you upload</li>
-             * </ul>
              * 
              * <strong>example:</strong>
              * <p>upload</p>
@@ -590,7 +587,7 @@ public class ListOriginCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was updated.</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-20 06:18:42</p>

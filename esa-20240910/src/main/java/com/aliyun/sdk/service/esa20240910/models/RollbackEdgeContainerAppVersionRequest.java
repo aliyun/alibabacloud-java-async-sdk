@@ -131,7 +131,10 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * Percentage.
+         * <p>The deployment percentage for the target version after the rollback. Valid values: <strong>1 to 100</strong>. Default value: <strong>0</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder percentage(Integer percentage) {
             this.putQueryParameter("Percentage", percentage);
@@ -140,7 +143,7 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The remarks.</p>
+         * <p>Additional information about the rollback.</p>
          * 
          * <strong>example:</strong>
          * <p>test rollback app</p>
@@ -152,7 +155,10 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * UsedPercent.
+         * <p>Specifies whether to use percentage rollback.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder usedPercent(Boolean usedPercent) {
             this.putQueryParameter("UsedPercent", usedPercent);
@@ -161,7 +167,7 @@ public class RollbackEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of version that you want to roll back.</p>
+         * <p>The ID of the version to roll back to.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

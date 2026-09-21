@@ -54,7 +54,7 @@ public class DeleteRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>

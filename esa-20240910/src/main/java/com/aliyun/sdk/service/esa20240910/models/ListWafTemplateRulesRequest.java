@@ -101,7 +101,10 @@ public class ListWafTemplateRulesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-aud6ftk57ym8</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -110,7 +113,7 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * <p>WAF operation phase, used to filter template rules for a specific phase.</p>
+         * <p>The WAF running phase for filtering template rules.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -122,7 +125,7 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * <p>Query parameters, used to filter template rules based on conditions such as rule type.</p>
+         * <p>The query parameters for filtering template rules by criteria such as the rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>http_anti_scan</p>
@@ -135,7 +138,7 @@ public class ListWafTemplateRulesRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,7 +209,7 @@ public class ListWafTemplateRulesRequest extends Request {
             } 
 
             /**
-             * Kinds.
+             * <p>A list of template kinds.</p>
              */
             public Builder kinds(java.util.List<String> kinds) {
                 this.kinds = kinds;
@@ -214,7 +217,7 @@ public class ListWafTemplateRulesRequest extends Request {
             }
 
             /**
-             * <p>Rule type.</p>
+             * <p>The rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>http_directory_traversal</p>

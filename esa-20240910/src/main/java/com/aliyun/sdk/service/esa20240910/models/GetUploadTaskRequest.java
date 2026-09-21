@@ -73,7 +73,10 @@ public class GetUploadTaskRequest extends Request {
         } 
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is required when querying an upload task..</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -85,7 +88,10 @@ public class GetUploadTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</p>
+         * <p>The file upload task ID, which is assigned when you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</p>
+         * <blockquote>
+         * <p>Notice: This parameter is required and must be a valid task ID returned by the UploadFile operation. If this parameter is not provided or the specified ID does not exist, an InvalidParameters (400) error is returned..</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>159253299357****</p>

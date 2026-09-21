@@ -78,7 +78,7 @@ public class GetSiteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried website information.</p>
+         * <p>The details of the site.</p>
          */
         public Builder siteModel(SiteModel siteModel) {
             this.siteModel = siteModel;
@@ -352,10 +352,12 @@ public class GetSiteResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The DNS setup option for the website. Valid values:</p>
+             * <p>The access type of the site. Valid values:</p>
              * <ul>
-             * <li><strong>NS</strong></li>
-             * <li><strong>CNAME</strong></li>
+             * <li><p><strong>NS</strong>: Access via NS.</p>
+             * </li>
+             * <li><p><strong>CNAME</strong>: Access via CNAME.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -367,7 +369,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CNAME of the website domain. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</p>
+             * <p>For sites onboarded via CNAME, use this suffix to configure the CNAME record.</p>
              * 
              * <strong>example:</strong>
              * <p>example.cname.com</p>
@@ -378,11 +380,14 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service location. Valid values:</p>
+             * <p>The acceleration region. Valid values:</p>
              * <ul>
-             * <li><strong>domestic</strong>: the Chinese mainland.</li>
-             * <li><strong>global</strong>: global.</li>
-             * <li><strong>overseas</strong>: outside the Chinese mainland.</li>
+             * <li><p><strong>domestic</strong>: Chinese mainland only</p>
+             * </li>
+             * <li><p><strong>global</strong>: Global</p>
+             * </li>
+             * <li><p><strong>overseas</strong>: Global (excluding the Chinese mainland)</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -394,7 +399,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the WEBsite was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * <p>The time (in UTC) when the site was created, formatted in ISO 8601 (<code>yyyy-MM-ddTHH:mm:ssZ</code>).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-24T02:01:11Z</p>
@@ -405,7 +410,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan ID.</p>
+             * <p>The ID of the plan instance.</p>
              * 
              * <strong>example:</strong>
              * <p>cas-merge-q6h0bv</p>
@@ -416,7 +421,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The nameservers assigned to the website domain. They are separated by commas (,).</p>
+             * <p>A comma-separated list of name servers assigned to the site.</p>
              * 
              * <strong>example:</strong>
              * <p>male1-1.ialicdn.com,female1-1.ialicdn.com</p>
@@ -427,7 +432,22 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineReason.
+             * <p>The reason the site is offline. This parameter appears only when <code>Status</code> is <code>offline</code>. Valid values:</p>
+             * <ul>
+             * <li><p><strong>expiration_arrears</strong>: The subscription plan has expired or the account has overdue payments.</p>
+             * </li>
+             * <li><p><strong>internally_disabled</strong>: The site was disabled by the system.</p>
+             * </li>
+             * <li><p><strong>missing_icp</strong>: The domain is missing an ICP license.</p>
+             * </li>
+             * <li><p><strong>content_violation</strong>: The site violated content policies.</p>
+             * </li>
+             * <li><p><strong>proactively_disabled</strong>: The site was disabled either by you or by a usage limit that you configured.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>expiration_ arrears</p>
              */
             public Builder offlineReason(String offlineReason) {
                 this.offlineReason = offlineReason;
@@ -435,7 +455,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan name.</p>
+             * <p>The name of the plan.</p>
              * 
              * <strong>example:</strong>
              * <p>plan-168777532****</p>
@@ -446,7 +466,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification of the plan associated with the website.</p>
+             * <p>The name of the plan specification.</p>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -457,7 +477,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of your Alibaba Cloud resource group.</p>
+             * <p>The ID of the resource group.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aek26g6i6se****</p>
@@ -468,7 +488,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website ID.</p>
+             * <p>The ID of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567890123</p>
@@ -479,7 +499,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The name of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -490,12 +510,16 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website status. Valid values:</p>
+             * <p>The status of the site. Valid values:</p>
              * <ul>
-             * <li><strong>pending</strong>: The website is to be configured.</li>
-             * <li><strong>active</strong>: The website is active.</li>
-             * <li><strong>offline</strong>: The website is suspended.</li>
-             * <li><strong>moved</strong>: The website has been added and verified by another Alibaba Cloud account.</li>
+             * <li><p><strong>pending</strong>: The site is pending configuration.</p>
+             * </li>
+             * <li><p><strong>active</strong>: The site is active.</p>
+             * </li>
+             * <li><p><strong>offline</strong>: The site is offline.</p>
+             * </li>
+             * <li><p><strong>moved</strong>: The site has been superseded.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -507,7 +531,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the website.</p>
+             * <p>The tags of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;tag1&quot;:&quot;value1&quot;}</p>
@@ -518,7 +542,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the WEBsite was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</p>
+             * <p>The time (in UTC) when the site was last updated, formatted in ISO 8601 (<code>yyyy-MM-ddTHH:mm:ssZ</code>).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-24T02:01:11Z</p>
@@ -529,7 +553,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about custom nameservers of the website domain. The key is a custom nameserver name, and the value is the IP address of the custom nameserver. Multiple IP addresses are separated by commas (,).</p>
+             * <p>Each key is a custom name server, and its value is a comma-separated list of the server\&quot;s IP addresses.</p>
              */
             public Builder vanityNSList(java.util.Map<String, String> vanityNSList) {
                 this.vanityNSList = vanityNSList;
@@ -537,7 +561,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code that is used to verify the website domain ownership. As part of the verification TXT record, this parameter is returned for websites that use CNAME setup.</p>
+             * <p>For sites onboarded via CNAME, you must configure this code as a TXT record.</p>
              * 
              * <strong>example:</strong>
              * <p>verify_d516cb3740f81f0cef77d162edd1****</p>
@@ -548,7 +572,7 @@ public class GetSiteResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of version management. If true is returned, version management is enabled for the website.</p>
+             * <p>If <code>true</code>, version management is enabled for the site.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

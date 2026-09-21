@@ -107,7 +107,7 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The description of the KV namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>this is a test namespace.</p>
@@ -118,7 +118,7 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The name of the KV namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>test_namespace</p>
@@ -129,7 +129,7 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The ID of the KV namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>657717877171818496</p>
@@ -151,12 +151,16 @@ public class CreateKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the namespace. Valid values:</p>
+         * <p>The status of the KV namespace. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: working as expected.</li>
-         * <li><strong>delete</strong>: pending deletion.</li>
-         * <li><strong>deleting</strong>: being deleted.</li>
-         * <li><strong>deleted</strong>: deleted.</li>
+         * <li><p><strong>online</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>delete</strong>: Pending deletion.</p>
+         * </li>
+         * <li><p><strong>deleting</strong>: Being deleted.</p>
+         * </li>
+         * <li><p><strong>deleted</strong>: Deleted.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

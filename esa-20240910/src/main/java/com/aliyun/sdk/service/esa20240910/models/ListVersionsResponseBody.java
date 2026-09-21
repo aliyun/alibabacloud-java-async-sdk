@@ -67,7 +67,10 @@ public class ListVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7EBEC214-805D-5FE9-AEED-258FE0F8850F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersionList.
+         * <p>The version list of the site.</p>
          */
         public Builder siteVersionList(java.util.List<SiteVersionList> siteVersionList) {
             this.siteVersionList = siteVersionList;
@@ -219,7 +222,10 @@ public class ListVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-15T17:41:27+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>站点A使用多个环境。</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -235,7 +244,7 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentNameList.
+             * <p>The environment list of the site version. The version may have no environment or one or more environments configured, such as the default environment or environment 2.</p>
              */
             public Builder environmentNameList(java.util.List<String> environmentNameList) {
                 this.environmentNameList = environmentNameList;
@@ -243,7 +252,10 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSiteVersion.
+             * <p>The parent version of the site version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parentSiteVersion(Integer parentSiteVersion) {
                 this.parentSiteVersion = parentSiteVersion;
@@ -251,7 +263,10 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the version is read-only. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -259,7 +274,10 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The site version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
@@ -267,7 +285,18 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><p><strong>online</strong>: active.</p>
+             * </li>
+             * <li><p><strong>configuring</strong>: being configured.</p>
+             * </li>
+             * <li><p><strong>configure_faild</strong>: configuration failed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +304,10 @@ public class ListVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-15T17:41:27+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

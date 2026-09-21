@@ -67,7 +67,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         } 
 
         /**
-         * EnvironmentList.
+         * <p>The list of environments.</p>
          */
         public Builder environmentList(java.util.List<EnvironmentList> environmentList) {
             this.environmentList = environmentList;
@@ -75,7 +75,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -232,7 +235,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-08-15T08:15:30Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -240,7 +246,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentName.
+             * <p>The environment name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yichao-test-yctest</p>
              */
             public Builder environmentName(String environmentName) {
                 this.environmentName = environmentName;
@@ -248,7 +257,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the default environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -256,7 +268,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PreSiteVersion.
+             * <p>The previous version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder preSiteVersion(Integer preSiteVersion) {
                 this.preSiteVersion = preSiteVersion;
@@ -264,7 +279,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -272,7 +290,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnly.
+             * <p>Indicates whether the environment is read-only.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -280,7 +301,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Rule.
+             * <p>The environment rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>(&quot;ip&quot; eq &quot;1.1.1.1&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -288,7 +312,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * SiteVersion.
+             * <p>The site version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder siteVersion(Integer siteVersion) {
                 this.siteVersion = siteVersion;
@@ -296,7 +323,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-15T08:16:04Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

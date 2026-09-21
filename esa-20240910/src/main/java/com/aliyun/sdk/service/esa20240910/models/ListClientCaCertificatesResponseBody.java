@@ -132,7 +132,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +165,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried client CA certificates.</p>
+         * <p>The list of client CA certificates.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -173,7 +173,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -184,7 +184,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -433,7 +433,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Common Name of the certificate.</p>
+             * <p>The common name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -444,7 +444,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was created.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-06-24 07:48:51</p>
@@ -455,7 +455,10 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * FingerprintSha256.
+             * <p>The SHA-256 fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456a****</p>
              */
             public Builder fingerprintSha256(String fingerprintSha256) {
                 this.fingerprintSha256 = fingerprintSha256;
@@ -474,7 +477,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CA that issued the certificate.</p>
+             * <p>The authority that issued the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>GlobalSign nv-sa</p>
@@ -496,7 +499,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -507,7 +510,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate takes effect.</p>
+             * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31 02:08:00</p>
@@ -518,7 +521,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public-key algorithm of the certificate.</p>
+             * <p>The public key algorithm of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>RSA</p>
@@ -540,7 +543,10 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * <p>The certificate sequence number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>babab022c5e9b27bf9c64d7f4b16****</p>
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -581,7 +587,7 @@ public class ListClientCaCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was updated.</p>
+             * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-20 06:18:42</p>

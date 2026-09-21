@@ -158,7 +158,10 @@ public class ListSiteFunctionsRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * <p>The configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -167,7 +170,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
          */
         public Builder configType(String configType) {
             this.putQueryParameter("ConfigType", configType);
@@ -176,7 +182,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * FunctionName.
+         * <p>The function name of the feature.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CacheRules</p>
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
@@ -185,7 +194,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -194,7 +206,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -203,7 +218,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name. Filters the rule that matches the specified name. This parameter takes effect only when FunctionName is specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -212,10 +230,11 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ListSiteFunctions</p>
+         * <p>340035003106221</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -224,7 +243,10 @@ public class ListSiteFunctionsRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

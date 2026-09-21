@@ -75,7 +75,7 @@ public class GetPurgeQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,14 +88,14 @@ public class GetPurgeQuotaRequest extends Request {
         }
 
         /**
-         * <p>The type of the purge task. Valid values:</p>
+         * <p>The refresh task type. Valid values:</p>
          * <ul>
-         * <li><strong>file</strong> (default): purges the cache by file.</li>
-         * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-         * <li><strong>directory</strong>: purges the cache by directory.</li>
-         * <li><strong>ignoreParams</strong>: purges the cache by URL with specific parameters ignored.</li>
-         * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-         * <li><strong>purgeall</strong>: purges all cache.</li>
+         * <li><strong>file</strong> (default): file refresh.</li>
+         * <li><strong>cachetag</strong>: cache tag refresh.</li>
+         * <li><strong>directory</strong>: directory refresh.</li>
+         * <li><strong>ignoreParams</strong>: parameter-stripped refresh.</li>
+         * <li><strong>hostname</strong>: hostname refresh.</li>
+         * <li><strong>purgeall</strong>: refreshes all cached content under the site.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

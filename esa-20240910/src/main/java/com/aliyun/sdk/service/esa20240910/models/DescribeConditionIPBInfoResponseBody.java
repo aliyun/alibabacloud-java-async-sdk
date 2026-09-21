@@ -67,7 +67,7 @@ public class DescribeConditionIPBInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Datas.
+         * <p>The data details.</p>
          */
         public Builder datas(java.util.List<Datas> datas) {
             this.datas = datas;
@@ -75,7 +75,7 @@ public class DescribeConditionIPBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -131,7 +131,10 @@ public class DescribeConditionIPBInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Value.
+             * <p>The returned data details, including the name of the country, ISP, or region and the corresponding identifier code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{\&quot;text\&quot;:\&quot;安徽\&quot;,\&quot;value\&quot;:\&quot;340000\&quot;},{\&quot;text\&quot;:\&quot;北京\&quot;,\&quot;value\&quot;:\&quot;110000\&quot;},{\&quot;text\&quot;:\&quot;重庆\&quot;,\&quot;value\&quot;:\&quot;500000\&quot;}]</p>
              */
             public Builder value(String value) {
                 this.value = value;

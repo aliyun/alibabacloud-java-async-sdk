@@ -129,7 +129,7 @@ public class ListCacheReserveInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -141,7 +141,7 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Page number.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>Page size. Range: <strong>1~500</strong>, default is <strong>500</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -165,10 +165,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The criterion by which you want to sort the queried instances. Valid values:</p>
+         * <p>The sort field. Valid values:</p>
          * <ul>
-         * <li><strong>ExpireTime</strong></li>
-         * <li><strong>CreateTime</strong></li>
+         * <li><strong>ExpireTime</strong>: sorts by expiration time.</li>
+         * <li><strong>CreateTime</strong>: sorts by creation time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,10 +181,10 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The order by which you want to sort the queried instances. Valid values:</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><strong>asc</strong></li>
-         * <li><strong>desc</strong></li>
+         * <li><strong>asc</strong>: ascending order.</li>
+         * <li><strong>desc</strong>: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,12 +197,12 @@ public class ListCacheReserveInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the cache reserve instance. Valid values:</p>
+         * <p>The instance status of the cache reserve instance. Valid values:</p>
          * <ul>
-         * <li><strong>online</strong>: The instance is in service.</li>
-         * <li><strong>offline</strong>: The instance has expired within an allowable period. In this state, it is unavailable.</li>
+         * <li><strong>online</strong>: Normal service status.</li>
+         * <li><strong>offline</strong>: The instance expires but has not exceeded the retention period and is unavailable.</li>
          * <li><strong>disable</strong>: The instance has been released.</li>
-         * <li><strong>overdue</strong>: The instance has been stopped due to overdue payments.</li>
+         * <li><strong>overdue</strong>: The instance is stopped due to an overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

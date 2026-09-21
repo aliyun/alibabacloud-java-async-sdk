@@ -93,7 +93,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
         } 
 
         /**
-         * EndTime.
+         * <p>The end of the time range for the returned data. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T23:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -101,7 +104,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +115,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-08-10T00:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -117,7 +126,7 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageData.
+         * <p>The returned data.</p>
          */
         public Builder usageData(java.util.List<UsageData> usageData) {
             this.usageData = usageData;
@@ -222,7 +231,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessCount.
+             * <p>The number of requests with normal access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder accessCount(Long accessCount) {
                 this.accessCount = accessCount;
@@ -230,7 +242,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * BlockCount.
+             * <p>The number of blocked requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder blockCount(Long blockCount) {
                 this.blockCount = blockCount;
@@ -238,7 +253,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * ObserveCount.
+             * <p>The number of observed requests.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder observeCount(Long observeCount) {
                 this.observeCount = observeCount;
@@ -246,7 +264,10 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The domain record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -254,7 +275,11 @@ public class DescribeWafUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The beginning of the time interval.</p>
+             * <p>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-10T00:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

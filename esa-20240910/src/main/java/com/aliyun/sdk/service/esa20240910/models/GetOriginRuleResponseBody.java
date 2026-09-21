@@ -609,7 +609,7 @@ public class GetOriginRuleResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;

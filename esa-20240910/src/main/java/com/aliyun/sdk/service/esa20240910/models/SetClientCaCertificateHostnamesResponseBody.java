@@ -106,7 +106,7 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
         } 
 
         /**
-         * Hostnames.
+         * <p>A list of bound hostnames.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;
@@ -114,7 +114,10 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The client CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaabcd****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -122,7 +125,10 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +136,10 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -138,7 +147,10 @@ public class SetClientCaCertificateHostnamesResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

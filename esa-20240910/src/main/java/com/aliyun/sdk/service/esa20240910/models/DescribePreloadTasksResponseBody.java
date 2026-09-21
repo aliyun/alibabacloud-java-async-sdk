@@ -117,7 +117,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page size.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -139,7 +139,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The task list.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -147,7 +147,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>83</p>
@@ -268,7 +268,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The prefetched content.</p>
+             * <p>The prefetch object.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
@@ -279,7 +279,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-28 14:28:57</p>
@@ -290,11 +290,11 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned upon a prefetch task failure. Valid values:</p>
+             * <p>The error description returned when the prefetch fails. Valid values:</p>
              * <ul>
-             * <li><strong>Internal Error</strong></li>
-             * <li><strong>Origin Timeout</strong></li>
-             * <li><strong>Origin Return StatusCode 5XX</strong></li>
+             * <li><strong>Internal Error</strong>: An internal error occurred.</li>
+             * <li><strong>Origin Timeout</strong>: The origin server response timed out.</li>
+             * <li><strong>Origin Return StatusCode 5XX</strong>: The origin server returned a 5xx error code.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task, in percentage.</p>
+             * <p>The task completion progress percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -317,11 +317,11 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>Complete</strong>: The task is complete.</li>
-             * <li><strong>Refreshing</strong>: The task is in progress.</li>
-             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><strong>Complete</strong>: Complete.</li>
+             * <li><strong>Refreshing</strong>: Prefetching.</li>
+             * <li><strong>Failed</strong>: Prefetch failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class DescribePreloadTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the queried task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1597854579687428</p>

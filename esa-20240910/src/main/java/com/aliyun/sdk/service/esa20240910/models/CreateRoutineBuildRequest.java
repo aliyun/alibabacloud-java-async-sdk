@@ -88,7 +88,10 @@ public class CreateRoutineBuildRequest extends Request {
         } 
 
         /**
-         * ArtifactUrl.
+         * <p>The OSS object URL. This parameter is required in upload mode but is not required in git mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://bucket.oss-.aliyuncs.com/key">https://bucket.oss-.aliyuncs.com/key</a></p>
          */
         public Builder artifactUrl(String artifactUrl) {
             this.putQueryParameter("ArtifactUrl", artifactUrl);
@@ -97,7 +100,10 @@ public class CreateRoutineBuildRequest extends Request {
         }
 
         /**
-         * Branch.
+         * <p>The name of the branch to build. This parameter is not required in upload mode but is required in git mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder branch(String branch) {
             this.putQueryParameter("Branch", branch);
@@ -106,6 +112,7 @@ public class CreateRoutineBuildRequest extends Request {
         }
 
         /**
+         * <p>The ER name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

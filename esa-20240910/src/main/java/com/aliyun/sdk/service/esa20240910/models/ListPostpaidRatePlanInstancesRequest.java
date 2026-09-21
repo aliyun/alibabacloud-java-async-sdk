@@ -171,7 +171,16 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         } 
 
         /**
-         * CheckRemainingSiteQuota.
+         * <p>Specifies whether to check for remaining site quota. Valid values:</p>
+         * <ul>
+         * <li><p>true: Queries instances that have remaining site quota.</p>
+         * </li>
+         * <li><p>false: Does not filter by this condition.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder checkRemainingSiteQuota(String checkRemainingSiteQuota) {
             this.putQueryParameter("CheckRemainingSiteQuota", checkRemainingSiteQuota);
@@ -180,7 +189,10 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID. Use this parameter to query a specific instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sp-dps-xxxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +201,10 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for paging queries. The value must be greater than or equal to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +213,10 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for paging queries. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +234,13 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field by which to sort results. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: sorted by creation time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -225,7 +249,16 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li><p>asc: ascending order</p>
+         * </li>
+         * <li><p>desc: descending order</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -234,7 +267,18 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status. Valid values:</p>
+         * <ul>
+         * <li><p>online: Normal.</p>
+         * </li>
+         * <li><p>overdue: Overdue payment.</p>
+         * </li>
+         * <li><p>disable: Released.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -243,7 +287,10 @@ public class ListPostpaidRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * UnrelatedType.
+         * <p>Specifies whether the instance has purchased additional bot or DDoS protection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bot</p>
          */
         public Builder unrelatedType(String unrelatedType) {
             this.putQueryParameter("UnrelatedType", unrelatedType);

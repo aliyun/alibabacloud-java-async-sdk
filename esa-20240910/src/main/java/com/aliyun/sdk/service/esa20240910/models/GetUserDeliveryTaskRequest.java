@@ -60,7 +60,7 @@ public class GetUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

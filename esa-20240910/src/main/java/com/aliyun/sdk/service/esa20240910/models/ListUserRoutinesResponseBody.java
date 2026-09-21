@@ -132,7 +132,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -154,7 +154,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of functions supported by the billing plan.</p>
+         * <p>The Routine quota for the current plan.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -176,7 +176,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The functions.</p>
+         * <p>The list of Routines.</p>
          */
         public Builder routines(java.util.List<Routines> routines) {
             this.routines = routines;
@@ -184,7 +184,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total count.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -195,7 +195,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of functions that were already created.</p>
+         * <p>The number of Routines already created.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -303,7 +303,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the function was created.</p>
+             * <p>The time when the Edge Routine was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-11T01:23:02.883361712Z</p>
@@ -314,7 +314,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default record name to access.</p>
+             * <p>The default access record associated with the Routine.</p>
              * 
              * <strong>example:</strong>
              * <p>serverless-test-2.154edaf6.er.aliyun-esa.net</p>
@@ -325,7 +325,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function description.</p>
+             * <p>The Routine description.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg==</p>
@@ -336,7 +336,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to include the Assets file tag.</p>
+             * <p>Indicates whether the Routine contains asset files.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -347,7 +347,7 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function name.</p>
+             * <p>The Routine name.</p>
              * 
              * <strong>example:</strong>
              * <p>hello</p>

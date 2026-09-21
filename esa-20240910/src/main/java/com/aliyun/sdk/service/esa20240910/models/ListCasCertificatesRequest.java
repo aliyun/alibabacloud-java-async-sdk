@@ -101,7 +101,10 @@ public class ListCasCertificatesRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -110,7 +113,10 @@ public class ListCasCertificatesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size. Valid values: any integer from 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -119,7 +125,10 @@ public class ListCasCertificatesRequest extends Request {
         }
 
         /**
-         * SearchKeyword.
+         * <p>The certificate name for fuzzy match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder searchKeyword(String searchKeyword) {
             this.putQueryParameter("SearchKeyword", searchKeyword);

@@ -89,7 +89,7 @@ public class PublishRoutineCodeVersionRequest extends Request {
         } 
 
         /**
-         * <p>The code version to be released.</p>
+         * <p>The version number of the code to publish.</p>
          * 
          * <strong>example:</strong>
          * <p>1710120201067203242</p>
@@ -114,11 +114,11 @@ public class PublishRoutineCodeVersionRequest extends Request {
         }
 
         /**
-         * <p>The routine name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>PublishRoutineCodeVersion</p>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -132,7 +132,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -140,7 +143,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -148,7 +154,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,7 +165,7 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result array.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -164,7 +173,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>54362329990032</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -172,7 +184,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;
@@ -180,7 +195,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -350,7 +368,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             } 
 
             /**
-             * CaCertificate.
+             * <p>The CA certificate used to verify the Keyless server certificate. This parameter takes effect only when Verify is set to true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----****</p>
              */
             public Builder caCertificate(String caCertificate) {
                 this.caCertificate = caCertificate;
@@ -358,7 +379,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * ClientCertificate.
+             * <p>The client certificate. This parameter must be used together with the client private key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----****</p>
              */
             public Builder clientCertificate(String clientCertificate) {
                 this.clientCertificate = clientCertificate;
@@ -366,7 +390,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * ClientPrivateKey.
+             * <p>The client private key. This parameter must be used together with the client certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
              */
             public Builder clientPrivateKey(String clientPrivateKey) {
                 this.clientPrivateKey = clientPrivateKey;
@@ -374,7 +401,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T20:33:31+08:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -382,7 +412,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * <p>The Keyless server hostname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -401,7 +434,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The Keyless server name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -409,7 +445,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The Keyless server port. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>443</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -417,7 +456,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time. The time follows the format YYYY-MM-DDTHH:MM:SS+08:00 in the UTC/GMT time zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-18T20:33:31+08:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -425,7 +467,10 @@ public class ListKeylessServersResponseBody extends TeaModel {
             }
 
             /**
-             * Verify.
+             * <p>Indicates whether to verify the Keyless server certificate. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder verify(Boolean verify) {
                 this.verify = verify;

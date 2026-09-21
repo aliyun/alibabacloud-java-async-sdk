@@ -74,6 +74,7 @@ public class GetAutomaticFrequencyControlConfigRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the site. If versioning is enabled, use this parameter to specify the site version. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

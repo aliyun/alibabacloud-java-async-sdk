@@ -78,7 +78,7 @@ public class DeleteEdgeContainerAppResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the deletion is successful.</p>
+         * <p>The deletion status.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>

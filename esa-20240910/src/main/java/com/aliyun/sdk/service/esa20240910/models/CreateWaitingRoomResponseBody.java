@@ -78,7 +78,10 @@ public class CreateWaitingRoomResponseBody extends TeaModel {
         }
 
         /**
-         * WaitingRoomId.
+         * <p>The waiting room ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8527e8405ac25bfb7fb7ca0d12b0ed83</p>
          */
         public Builder waitingRoomId(String waitingRoomId) {
             this.waitingRoomId = waitingRoomId;

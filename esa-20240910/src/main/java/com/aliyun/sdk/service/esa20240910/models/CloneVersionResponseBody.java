@@ -80,7 +80,10 @@ public class CloneVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * CloneVersion.
+         * <p>The version number of the cloned version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cloneVersion(Integer cloneVersion) {
             this.cloneVersion = cloneVersion;
@@ -88,7 +91,10 @@ public class CloneVersionResponseBody extends TeaModel {
         }
 
         /**
-         * OriginVersion.
+         * <p>The version number that was cloned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder originVersion(Integer originVersion) {
             this.originVersion = originVersion;
@@ -96,7 +102,10 @@ public class CloneVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

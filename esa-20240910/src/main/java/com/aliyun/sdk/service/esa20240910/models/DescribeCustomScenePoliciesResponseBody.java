@@ -119,7 +119,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The scenario-specific policies.</p>
+         * <p>The configurations of custom scene policies.</p>
          */
         public Builder dataModule(java.util.List<DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -138,7 +138,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy quota.</p>
+         * <p>The maximum number of policies that you can create.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -318,8 +318,8 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the policy expires.</p>
-             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The end time of the policy.</p>
+             * <p>The time is in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-06T16:00:00Z</p>
@@ -330,7 +330,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the scenario-specific policy.</p>
+             * <p>The name of the custom scene policy.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -341,7 +341,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of websites that are associated with the policy.</p>
+             * <p>A list of associated site IDs.</p>
+             * <blockquote>
+             * <p>This field is deprecated. We recommend that you use the <code>SiteIds</code> field instead.</p>
+             * </blockquote>
              */
             public Builder objects(java.util.List<String> objects) {
                 this.objects = objects;
@@ -360,7 +363,10 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteIds.
+             * <p>A comma-separated list of site IDs associated with the policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456****,123457****</p>
              */
             public Builder siteIds(String siteIds) {
                 this.siteIds = siteIds;
@@ -368,8 +374,8 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy takes effect.</p>
-             * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The start time of the policy.</p>
+             * <p>The time is in UTC and follows the ISO 8601 standard. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-04T16:00:00Z</p>
@@ -380,12 +386,16 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the policy. Valid values:</p>
+             * <p>The effective status of the policy. Valid values:</p>
              * <ul>
-             * <li><strong>Disabled</strong></li>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Expired</strong></li>
+             * <li><p><strong>disabled</strong>: The policy is disabled.</p>
+             * </li>
+             * <li><p><strong>pending</strong>: The policy is waiting to take effect.</p>
+             * </li>
+             * <li><p><strong>running</strong>: The policy is in effect.</p>
+             * </li>
+             * <li><p><strong>expired</strong>: The policy has expired.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -397,9 +407,9 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the policy template. Valid value:</p>
+             * <p>The template name. Valid value:</p>
              * <ul>
-             * <li><strong>promotion</strong>: major events.</li>
+             * <li><strong>promotion</strong>: A major event.</li>
              * </ul>
              * 
              * <strong>example:</strong>

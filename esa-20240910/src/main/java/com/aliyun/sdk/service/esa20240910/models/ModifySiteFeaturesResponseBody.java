@@ -67,7 +67,10 @@ public class ModifySiteFeaturesResponseBody extends TeaModel {
         } 
 
         /**
-         * FailedFeatures.
+         * <p>The site feature information that failed to be cleared.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>loadbalance</p>
          */
         public Builder failedFeatures(String failedFeatures) {
             this.failedFeatures = failedFeatures;
@@ -75,7 +78,10 @@ public class ModifySiteFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

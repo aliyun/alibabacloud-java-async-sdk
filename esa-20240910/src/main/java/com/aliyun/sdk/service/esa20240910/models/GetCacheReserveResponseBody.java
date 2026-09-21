@@ -80,7 +80,7 @@ public class GetCacheReserveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the cache reserve instance.</p>
+         * <p>The cache reserve instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cr_hk_123456789</p>
@@ -91,10 +91,10 @@ public class GetCacheReserveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether cache reserve is enabled. Valid values:</p>
+         * <p>The switch status. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: Enabled.</li>
+         * <li><strong>off</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

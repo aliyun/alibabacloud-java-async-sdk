@@ -111,7 +111,7 @@ public class ListPagesRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>The query parameters passed in JSON format, which contain various filter conditions.</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -180,7 +180,14 @@ public class ListPagesRequest extends Request {
             } 
 
             /**
-             * ContentType.
+             * <p>The Content-Type field in the HTTP header. Example values:</p>
+             * <ul>
+             * <li>text/html</li>
+             * <li>application/json</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>application/json</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -188,7 +195,10 @@ public class ListPagesRequest extends Request {
             }
 
             /**
-             * NameDescriptionLike.
+             * <p>The fuzzy match string for the name or description of a custom page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder nameDescriptionLike(String nameDescriptionLike) {
                 this.nameDescriptionLike = nameDescriptionLike;

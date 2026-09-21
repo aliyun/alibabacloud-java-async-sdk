@@ -54,10 +54,13 @@ public class HttpDeliveryQueryParamValue extends TeaModel {
         } 
 
         /**
-         * <p>The static variable.</p>
+         * <p>The value of the custom HTTP delivery query string parameter.</p>
+         * <blockquote>
+         * <p>Key-map. The value can be a static value, a dynamic function, or a dynamic value.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>alicdn</p>
+         * <p>auth_token: sk-***</p>
          */
         public Builder staticValue(String staticValue) {
             this.staticValue = staticValue;

@@ -177,6 +177,11 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
 
         /**
          * <p>The application ID.</p>
+         * <blockquote>
+         * <ol>
+         * <li>Obtain the AppId by calling CreateEdgeContainerApp. 2) Obtain the VersionId by calling CreateEdgeContainerAppVersion (which requires the AppId). 3) The complete call chain is CreateEdgeContainerApp → CreateEdgeContainerAppVersion → PublishEdgeContainerAppVersion.</li>
+         * </ol>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +194,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</p>
+         * <p>Specifies whether to perform a full release. This parameter takes effect only when PublishType is set to region.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,7 +206,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The release percentage. Valid values: 1 to 100. Default value: 100.</p>
+         * <p>The publishing percentage. Valid values: <strong>1 to 100</strong>. Default value: <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -213,10 +218,10 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The environment to which you want to release the version. Valid values:</p>
+         * <p>The publishing environment. Valid values:</p>
          * <ul>
-         * <li>prod: the production environment.</li>
-         * <li>staging: the staging environment.</li>
+         * <li><strong>prod</strong>: production environment.</li>
+         * <li><strong>staging</strong>: staging environment.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -230,12 +235,14 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>Specifies how the version is released. Valid values:</p>
+         * <p>The publishing type. Valid values:</p>
          * <ul>
-         * <li>percentage: releases the version by percentage.</li>
-         * <li>region: releases the version by region.</li>
+         * <li><p><strong>percentage</strong>: Publish by percentage.</p>
+         * </li>
+         * <li><p><strong>region</strong>: Publish by region.</p>
+         * </li>
          * </ul>
-         * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
+         * <p>If this parameter is not specified, percentage-based publishing is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>percentage</p>
@@ -247,7 +254,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The regions to which the version is released.</p>
+         * <p>The list of publishing regions.</p>
          */
         public Builder regions(java.util.List<String> regions) {
             String regionsShrink = shrink(regions, "Regions", "json");
@@ -257,7 +264,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The remarks. This parameter is empty by default.</p>
+         * <p>The remarks. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>test publish app</p>
@@ -269,7 +276,7 @@ public class PublishEdgeContainerAppVersionRequest extends Request {
         }
 
         /**
-         * <p>The time when the application version starts to be released. If you do not specify this parameter, the current time is used by default.</p>
+         * <p>The time when the publishing starts. If this parameter is not specified, the current time is used by default.</p>
          * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          * 
          * <strong>example:</strong>

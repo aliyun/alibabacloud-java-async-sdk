@@ -119,6 +119,15 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         } 
 
         /**
+         * <p>The action to take on requests that trigger the control. Valid values:</p>
+         * <ul>
+         * <li><p><strong>observe</strong>: Monitors the requests.</p>
+         * </li>
+         * <li><p><strong>deny</strong>: Blocks the requests.</p>
+         * </li>
+         * <li><p><strong>js</strong>: Issues a JS challenge.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,6 +140,13 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable automatic frequency control. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: Enables automatic frequency control.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disables automatic frequency control.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +159,15 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
+         * <p>The protection level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>loose</strong>: Loose protection.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: Normal protection.</p>
+         * </li>
+         * <li><p><strong>strict</strong>: Strict protection.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +180,7 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
+         * <p>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +193,10 @@ public class SetAutomaticFrequencyControlConfigRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version of the site. For a site with version management enabled, this parameter specifies the version to which the configuration applies. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

@@ -340,7 +340,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         } 
 
         /**
-         * AssetsDirectory.
+         * <p>The static resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/user</p>
          */
         public Builder assetsDirectory(String assetsDirectory) {
             this.assetsDirectory = assetsDirectory;
@@ -348,7 +351,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * Branch.
+         * <p>The branch used for the build.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder branch(String branch) {
             this.branch = branch;
@@ -356,7 +362,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * BuildCommand.
+         * <p>The build command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm run build</p>
          */
         public Builder buildCommand(String buildCommand) {
             this.buildCommand = buildCommand;
@@ -364,7 +373,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * CommitId.
+         * <p>The commit ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9bf55641a1a608b9e7297d3fe51e39baa4b68ba0</p>
          */
         public Builder commitId(String commitId) {
             this.commitId = commitId;
@@ -372,7 +384,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * CommitMessage.
+         * <p>The commit message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Add configuration file.</p>
          */
         public Builder commitMessage(String commitMessage) {
             this.commitMessage = commitMessage;
@@ -380,7 +395,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-02-28T09:03:42Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -388,7 +406,7 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variables.</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -396,7 +414,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * GitAccountId.
+         * <p>The Git account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4580717755793600</p>
          */
         public Builder gitAccountId(Long gitAccountId) {
             this.gitAccountId = gitAccountId;
@@ -404,7 +425,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The ID of the ER build task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>164557372123356</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -412,7 +436,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * InstallCommand.
+         * <p>The install command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm install</p>
          */
         public Builder installCommand(String installCommand) {
             this.installCommand = installCommand;
@@ -420,7 +447,14 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * IsPrivate.
+         * <p>Indicates whether the repository is private. Valid values:</p>
+         * <ul>
+         * <li>true: The repository is private.</li>
+         * <li>false: The repository is not private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPrivate(Boolean isPrivate) {
             this.isPrivate = isPrivate;
@@ -428,7 +462,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * NodeVersion.
+         * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22.x</p>
          */
         public Builder nodeVersion(String nodeVersion) {
             this.nodeVersion = nodeVersion;
@@ -436,7 +473,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * PipelineId.
+         * <p>The pipeline ID in Yunxiao.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4371588</p>
          */
         public Builder pipelineId(Long pipelineId) {
             this.pipelineId = pipelineId;
@@ -444,7 +484,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * PipelineRunId.
+         * <p>The build task ID in Yunxiao.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder pipelineRunId(Long pipelineRunId) {
             this.pipelineRunId = pipelineRunId;
@@ -452,7 +495,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * ProductionBranch.
+         * <p>The production branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder productionBranch(String productionBranch) {
             this.productionBranch = productionBranch;
@@ -460,7 +506,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * Repository.
+         * <p>The repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-test</p>
          */
         public Builder repository(String repository) {
             this.repository = repository;
@@ -468,7 +517,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C3CC8AF-7C4C-5841-BDAE-B295FD9AE913</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -476,7 +528,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RootDirectory.
+         * <p>The root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/admin</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = rootDirectory;
@@ -484,7 +539,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineEntry.
+         * <p>The ER entry file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder routineEntry(String routineEntry) {
             this.routineEntry = routineEntry;
@@ -492,7 +550,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineName.
+         * <p>The ER name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine</p>
          */
         public Builder routineName(String routineName) {
             this.routineName = routineName;
@@ -500,7 +561,18 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the build task. Valid values:</p>
+         * <ul>
+         * <li>int: init</li>
+         * <li>pending: preparing</li>
+         * <li>building: building</li>
+         * <li>succeed: build succeeded</li>
+         * <li>failed: build failed</li>
+         * <li>canceled: canceled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>succeed</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -508,7 +580,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -516,7 +591,10 @@ public class GetRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The modification time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-07-20T09:59:28+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

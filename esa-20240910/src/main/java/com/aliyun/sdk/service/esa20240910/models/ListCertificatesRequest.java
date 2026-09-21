@@ -130,7 +130,7 @@ public class ListCertificatesRequest extends Request {
         } 
 
         /**
-         * <p>The keyword that is used for the search.</p>
+         * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
          * <p>example</p>
@@ -142,7 +142,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number of the data to return.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -154,7 +154,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -166,7 +166,7 @@ public class ListCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class ListCertificatesRequest extends Request {
          * <p>Specifies whether to return only valid certificates.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         public Builder validOnly(Boolean validOnly) {
             this.putQueryParameter("ValidOnly", validOnly);

@@ -86,11 +86,11 @@ public class GetRoutineStagingCodeUploadInfoRequest extends Request {
         }
 
         /**
-         * <p>The routine name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>GetRoutineStagingCodeUploadInfo</p>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

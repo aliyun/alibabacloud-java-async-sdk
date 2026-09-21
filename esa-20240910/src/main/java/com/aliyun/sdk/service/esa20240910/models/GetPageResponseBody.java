@@ -162,7 +162,7 @@ public class GetPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
+         * <p>The Base64-encoded response page content corresponding to the Content-Type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class GetPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the custom error page.</p>
+         * <p>The description of the custom response page.</p>
          * 
          * <strong>example:</strong>
          * <p>a custom deny page</p>
@@ -197,7 +197,7 @@ public class GetPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+         * <p>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>50000001</p>
@@ -242,7 +242,7 @@ public class GetPageResponseBody extends TeaModel {
         }
 
         /**
-         * SiteIds.
+         * <p>The list of associated site IDs.</p>
          */
         public Builder siteIds(java.util.List<Long> siteIds) {
             this.siteIds = siteIds;
@@ -250,7 +250,9 @@ public class GetPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the custom error page was last modified.</p>
+         * <p>The last modification time of the custom response page.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

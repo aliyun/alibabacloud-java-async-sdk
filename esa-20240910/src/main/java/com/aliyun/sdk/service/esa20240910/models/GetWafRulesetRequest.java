@@ -87,7 +87,7 @@ public class GetWafRulesetRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the WAF ruleset, which can be obtained by calling the ListWafRulesets interface.</p>
+         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -99,7 +99,17 @@ public class GetWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The WAF operation phase, specifying the phase of the ruleset to query.</p>
+         * <p>The WAF rule execution phase. Valid values:</p>
+         * <ul>
+         * <li>http_whitelist: whitelist rules</li>
+         * <li>http_custom: custom rules</li>
+         * <li>http_managed: managed rules</li>
+         * <li>http_anti_scan: scan protection rules</li>
+         * <li>http_ratelimit: rate limiting rules</li>
+         * <li>ip_access_rule: IP access rules</li>
+         * <li>http_bot: advanced mode bots</li>
+         * <li>http_security_level_rule: security rules</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -111,7 +121,7 @@ public class GetWafRulesetRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

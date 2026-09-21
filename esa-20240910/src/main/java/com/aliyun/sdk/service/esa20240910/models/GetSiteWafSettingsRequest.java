@@ -87,7 +87,7 @@ public class GetSiteWafSettingsRequest extends Request {
         } 
 
         /**
-         * <p>Specifies the configuration path. If not provided, all configurations will be retrieved.</p>
+         * <p>The configuration path. If this parameter is not specified, all configurations are retrieved.</p>
          * 
          * <strong>example:</strong>
          * <p>bot_management</p>
@@ -99,7 +99,7 @@ public class GetSiteWafSettingsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>The site ID. You can obtain the site ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -111,7 +111,7 @@ public class GetSiteWafSettingsRequest extends Request {
         }
 
         /**
-         * <p>Site version.</p>
+         * <p>The site version.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

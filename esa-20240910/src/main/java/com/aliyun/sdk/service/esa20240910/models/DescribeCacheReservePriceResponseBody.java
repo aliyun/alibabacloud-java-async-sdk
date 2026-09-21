@@ -67,7 +67,7 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceModel.
+         * <p>The price information.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -75,7 +75,7 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2430E05E-1340-5773-B5E1-B743929F46F2</p>
@@ -312,7 +312,18 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li><p>JPY: Japanese Yen.</p>
+             * </li>
+             * <li><p>USD: US Dollar.</p>
+             * </li>
+             * <li><p>CNY: Chinese Yuan.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -320,7 +331,10 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -328,7 +342,10 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The final order price, which is the actual transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -344,7 +361,10 @@ public class DescribeCacheReservePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPrice.
+             * <p>The original order price. Original order price = actual transaction price + discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPrice(Float totalPrice) {
                 this.totalPrice = totalPrice;

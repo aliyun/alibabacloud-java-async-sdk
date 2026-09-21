@@ -75,7 +75,7 @@ public class GetEdgeContainerLogsRequest extends Request {
         } 
 
         /**
-         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetEdgeContainerLogsRequest extends Request {
         }
 
         /**
-         * <p>The number of log entries to output.</p>
+         * <p>The number of log lines to output.&gt;Notice: Valid values: 1 to 5000. If the value exceeds the upper limit, an error is returned.</notice>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

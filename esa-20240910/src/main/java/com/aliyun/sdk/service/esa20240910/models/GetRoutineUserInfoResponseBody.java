@@ -80,10 +80,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,7 +88,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The routines.</p>
+         * Routines.
          */
         public Builder routines(java.util.List<Routines> routines) {
             this.routines = routines;
@@ -99,7 +96,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subdomains.</p>
+         * Subdomains.
          */
         public Builder subdomains(java.util.List<String> subdomains) {
             this.subdomains = subdomains;
@@ -178,10 +175,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the routine was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-03-11T01:23:02.883361712Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -189,10 +183,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routine description, which is Base64-encoded.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ZWRpdCByb3V0aW5lIGNvbmZpZyBkZXNjcmlwdGlvbg</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -200,10 +191,7 @@ public class GetRoutineUserInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routine name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-routine1</p>
+             * RoutineName.
              */
             public Builder routineName(String routineName) {
                 this.routineName = routineName;

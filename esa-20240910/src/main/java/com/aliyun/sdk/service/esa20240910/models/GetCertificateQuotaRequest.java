@@ -75,7 +75,7 @@ public class GetCertificateQuotaRequest extends Request {
         } 
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetCertificateQuotaRequest extends Request {
         }
 
         /**
-         * <p>Certificate Quota type.</p>
+         * <p>The certificate quota type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -145,7 +145,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> API.</p>
+         * <p>Configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867483.html">ListHttpRequestHeaderModificationRules</a> operation to obtain the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Modify request headers, supporting add, delete, and modify operations.</p>
+         * <p>Modify request headers. Three operation methods are supported: add, delete, and modify.</p>
          */
         public Builder requestHeaderModification(java.util.List<RequestHeaderModification> requestHeaderModification) {
             String requestHeaderModificationShrink = shrink(requestHeaderModification, "RequestHeaderModification", "json");
@@ -168,10 +168,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>Rule content. Use conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
          * <ul>
-         * <li>To match all incoming requests: Set the value to true</li>
-         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>Rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enable.</li>
          * <li>off: Disable.</li>
@@ -212,7 +212,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>Rule execution order. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -221,7 +224,7 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</p>
+         * <p>Site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,10 +336,10 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
-             * <p>Operation method. Possible values:</p>
+             * <p>Operation method. Valid values:</p>
              * <ul>
              * <li>add: Add.</li>
-             * <li>del: Delete</li>
+             * <li>del: Delete.</li>
              * <li>modify: Modify.</li>
              * </ul>
              * <p>This parameter is required.</p>
@@ -350,7 +353,14 @@ public class UpdateHttpRequestHeaderModificationRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>Value type. Valid values:</p>
+             * <ul>
+             * <li>static: Static mode.</li>
+             * <li>dynamic: Dynamic mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;

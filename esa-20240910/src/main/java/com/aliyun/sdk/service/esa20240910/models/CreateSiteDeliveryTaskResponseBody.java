@@ -95,8 +95,9 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         /**
          * <p>The data center. Valid values:</p>
          * <ul>
-         * <li>cn: the Chinese mainland.</li>
-         * <li>oversea: outside the Chinese mainland.</li>
+         * <li><strong>cn</strong>: the Chinese mainland.</li>
+         * <li><strong>oversea</strong>: outside the Chinese mainland.</li>
+         * <li><strong>global</strong>: global.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +120,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.<a href="~~2850189~~"></a></p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -130,7 +131,7 @@ public class CreateSiteDeliveryTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>er-oss</p>

@@ -75,6 +75,7 @@ public class ModifyInstanceFeaturesRequest extends Request {
         } 
 
         /**
+         * <p>The plan instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class ModifyInstanceFeaturesRequest extends Request {
         }
 
         /**
+         * <p>The list of site feature configurations.</p>
          * <p>This parameter is required.</p>
          */
         public Builder siteFeatures(java.util.List<SiteFeatures> siteFeatures) {
@@ -156,7 +158,10 @@ public class ModifyInstanceFeaturesRequest extends Request {
             } 
 
             /**
-             * Features.
+             * <p>The site feature configurations to modify.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>network_optimization|smart_routing,loadbalance</p>
              */
             public Builder features(String features) {
                 this.features = features;
@@ -164,7 +169,10 @@ public class ModifyInstanceFeaturesRequest extends Request {
             }
 
             /**
-             * SiteId.
+             * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>151097616427232</p>
              */
             public Builder siteId(Long siteId) {
                 this.siteId = siteId;

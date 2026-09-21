@@ -175,7 +175,10 @@ public class SetKeylessServerRequest extends Request {
         } 
 
         /**
-         * CaCertificate.
+         * <p>The CA certificate used to verify the server certificate of the Keyless server. This parameter takes effect only when Verify is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----****</p>
          */
         public Builder caCertificate(String caCertificate) {
             this.putBodyParameter("CaCertificate", caCertificate);
@@ -184,7 +187,10 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
-         * ClientCertificate.
+         * <p>The client certificate. This parameter must be specified together with the client private key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----****</p>
          */
         public Builder clientCertificate(String clientCertificate) {
             this.putBodyParameter("ClientCertificate", clientCertificate);
@@ -193,7 +199,10 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
-         * ClientPrivateKey.
+         * <p>The client private key. This parameter must be specified together with the client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN RSA PRIVATE KEY-----****</p>
          */
         public Builder clientPrivateKey(String clientPrivateKey) {
             this.putBodyParameter("ClientPrivateKey", clientPrivateKey);
@@ -202,6 +211,7 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
+         * <p>The hostname of the Keyless server. The value can be a domain name or an IP address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +236,7 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
+         * <p>The name of the Keyless server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +249,7 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
+         * <p>The port of the Keyless server.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,6 +262,7 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +275,10 @@ public class SetKeylessServerRequest extends Request {
         }
 
         /**
-         * Verify.
+         * <p>Specifies whether to verify the server certificate of the Keyless server. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder verify(Boolean verify) {
             this.putBodyParameter("Verify", verify);

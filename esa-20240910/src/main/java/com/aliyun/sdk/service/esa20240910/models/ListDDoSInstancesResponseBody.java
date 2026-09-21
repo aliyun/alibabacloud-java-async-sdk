@@ -119,7 +119,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceInfo.
+         * <p>The instance details.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -127,7 +127,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,7 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9F1DC265-BF10-5C9C-B607-760265C5F365</p>
@@ -154,7 +160,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -162,7 +171,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -293,7 +305,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The purchase time of the instance. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-01T07:59:07Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -301,7 +316,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DDoSBurstableDomesticProtection.
+             * <p>The specifications of the DDoS instance in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_300</p>
              */
             public Builder dDoSBurstableDomesticProtection(String dDoSBurstableDomesticProtection) {
                 this.dDoSBurstableDomesticProtection = dDoSBurstableDomesticProtection;
@@ -309,7 +327,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DDoSBurstableOverseasProtection.
+             * <p>The specifications of the DDoS instance outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>overseas_300</p>
              */
             public Builder dDoSBurstableOverseasProtection(String dDoSBurstableOverseasProtection) {
                 this.dDoSBurstableOverseasProtection = dDoSBurstableOverseasProtection;
@@ -317,7 +338,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-ddddxxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -325,7 +349,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveReleaseTime.
+             * <p>The scheduled release time. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-25T16:00:00Z</p>
              */
             public Builder reserveReleaseTime(String reserveReleaseTime) {
                 this.reserveReleaseTime = reserveReleaseTime;
@@ -333,7 +360,10 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteInstanceId.
+             * <p>The ID of the associated site plan instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esa-site-b0s6kmx0r0n4</p>
              */
             public Builder siteInstanceId(String siteInstanceId) {
                 this.siteInstanceId = siteInstanceId;
@@ -341,7 +371,16 @@ public class ListDDoSInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: The instance is running normally.</li>
+             * <li><strong>offline</strong>: The instance has expired but is not overdue, and is unavailable.</li>
+             * <li><strong>disable</strong>: The instance has been released.</li>
+             * <li><strong>overdue</strong>: The instance is suspended due to overdue payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

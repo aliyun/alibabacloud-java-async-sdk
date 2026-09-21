@@ -67,7 +67,7 @@ public class ListRoutineCanaryAreasResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The regions for canary release.</p>
+         * CanaryAreas.
          */
         public Builder canaryAreas(java.util.List<String> canaryAreas) {
             this.canaryAreas = canaryAreas;
@@ -75,10 +75,7 @@ public class ListRoutineCanaryAreasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

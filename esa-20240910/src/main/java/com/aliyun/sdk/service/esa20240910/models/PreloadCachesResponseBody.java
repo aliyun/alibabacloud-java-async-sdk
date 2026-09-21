@@ -78,7 +78,7 @@ public class PreloadCachesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The prefetch task ID.</p>
+         * <p>The task ID. A task ID is returned when you create a prefetch task.</p>
          * 
          * <strong>example:</strong>
          * <p>16401427840</p>

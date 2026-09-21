@@ -171,7 +171,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * ConfigId.
+         * <p>Configuration ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>352816096987136</p>
          */
         public Builder configId(Long configId) {
             this.configId = configId;
@@ -179,7 +182,16 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigType.
+         * <p>The configuration type. Valid values:</p>
+         * <ul>
+         * <li><p>global: Global configuration.</p>
+         * </li>
+         * <li><p>rule: Rule configuration.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder configType(String configType) {
             this.configType = configType;
@@ -187,7 +199,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PageId.
+         * <p>The response page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder pageId(String pageId) {
             this.pageId = pageId;
@@ -195,7 +210,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +221,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ReturnCode.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder returnCode(String returnCode) {
             this.returnCode = returnCode;
@@ -211,7 +232,16 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>The rule content. Use conditional expressions to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</p>
+         * <ul>
+         * <li><p>Match all incoming requests: Set the value to true.</p>
+         * </li>
+         * <li><p>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>(http.host eq &quot;video.example.com&quot;)</p>
          */
         public Builder rule(String rule) {
             this.rule = rule;
@@ -219,7 +249,16 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleEnable.
+         * <p>The rule switch. Do not set this parameter when adding a global configuration. Valid values:</p>
+         * <ul>
+         * <li><p>on: Enable.</p>
+         * </li>
+         * <li><p>off: Disable.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder ruleEnable(String ruleEnable) {
             this.ruleEnable = ruleEnable;
@@ -227,7 +266,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleName.
+         * <p>The rule name. Do not set this parameter when adding a global configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule_example</p>
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -235,7 +277,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Sequence.
+         * <p>The rule execution order. A smaller value indicates higher execution priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.sequence = sequence;
@@ -243,7 +288,10 @@ public class GetCustomResponseCodeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site configuration. For sites with version control enabled, use this parameter to specify the site version where the configuration takes effect. The default is version 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;

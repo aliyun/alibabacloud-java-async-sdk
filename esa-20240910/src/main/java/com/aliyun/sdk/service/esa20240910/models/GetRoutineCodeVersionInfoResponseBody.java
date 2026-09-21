@@ -158,7 +158,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * BuildId.
+         * <p>The build ID of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26035169</p>
          */
         public Builder buildId(Long buildId) {
             this.buildId = buildId;
@@ -166,7 +169,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeDescription.
+         * <p>The description of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>code desc version unstable</p>
          */
         public Builder codeDescription(String codeDescription) {
             this.codeDescription = codeDescription;
@@ -174,7 +180,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CodeVersion.
+         * <p>The code version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710120201067203242</p>
          */
         public Builder codeVersion(String codeVersion) {
             this.codeVersion = codeVersion;
@@ -182,7 +191,7 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ConfOptions.
+         * <p>The list of configuration items for the code version.</p>
          */
         public Builder confOptions(ConfOptions confOptions) {
             this.confOptions = confOptions;
@@ -190,7 +199,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the code version was created. The time follows the RFC 3339 standard in the UTC time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-08-04T01:54:19Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -198,7 +210,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExtraInfo.
+         * <p>The extra information of the code version. The value is in JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder extraInfo(String extraInfo) {
             this.extraInfo = extraInfo;
@@ -206,7 +221,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HasAssets.
+         * <p>Indicates whether the code version contains Assets files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder hasAssets(Boolean hasAssets) {
             this.hasAssets = hasAssets;
@@ -214,7 +232,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +243,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the code version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Available</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -275,7 +299,10 @@ public class GetRoutineCodeVersionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * NotFoundStrategy.
+             * <p>The NotFoundStrategy configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SinglePageApplication</p>
              */
             public Builder notFoundStrategy(String notFoundStrategy) {
                 this.notFoundStrategy = notFoundStrategy;

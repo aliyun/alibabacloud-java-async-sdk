@@ -154,7 +154,7 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1</p>
@@ -165,7 +165,7 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the container group.</p>
+         * <p>The pod name.</p>
          * 
          * <strong>example:</strong>
          * <p>1775b9e0-8463-457e-89e8-fb7b6d125b2e</p>
@@ -198,7 +198,7 @@ public class GetEdgeContainerTerminalResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the shared token.</p>
+         * <p>The sharing token information.</p>
          * 
          * <strong>example:</strong>
          * <p>af22f4-xxxxx-xxxx-xxxx-xxxx</p>

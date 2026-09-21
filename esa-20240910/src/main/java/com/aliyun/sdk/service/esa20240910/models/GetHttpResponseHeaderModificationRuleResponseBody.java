@@ -158,7 +158,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         } 
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35281609698****</p>
@@ -169,10 +169,12 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Configuration type, with the following values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li>global: Global configuration.</li>
-         * <li>rule: Rule-based configuration.</li>
+         * <li><p><code>global</code>: global configuration.</p>
+         * </li>
+         * <li><p><code>rule</code>: rule configuration.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,7 +186,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EDBD3EB3-97DA-5465-AEF5-8DCA5DC5E395</p>
@@ -195,7 +197,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Modify response headers, supporting add, delete, and modify operations.</p>
+         * <p>A list of modifications to apply to the response header.</p>
          */
         public Builder responseHeaderModification(java.util.List<ResponseHeaderModification> responseHeaderModification) {
             this.responseHeaderModification = responseHeaderModification;
@@ -203,10 +205,12 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, a conditional expression used to match user requests. This parameter applies only to rule configurations. The expression can be:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li><p><code>true</code>: Matches all incoming requests.</p>
+         * </li>
+         * <li><p>A custom expression, such as <code>(http.host eq &quot;video.example.com&quot;)</code>: Matches specific requests.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,10 +222,12 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values are:</p>
+         * <p>The rule switch. This parameter applies only to rule configurations. Valid values:</p>
          * <ul>
-         * <li>on: Enabled.</li>
-         * <li>off: Disabled.</li>
+         * <li><p><code>on</code>: The rule is enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: The rule is disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,7 +239,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter applies only to rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -244,7 +250,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,7 +261,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
         }
 
         /**
-         * <p>The version number of the site configuration. For sites that have enabled configuration version management, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version of the site configuration. If configuration versioning is enabled for the site, this parameter specifies the version to which this configuration applies. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -350,7 +356,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>Response header name.</p>
+             * <p>The response header name.</p>
              * 
              * <strong>example:</strong>
              * <p>headerName</p>
@@ -361,11 +367,14 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Operation method. Possible values are:</p>
+             * <p>The operation. Valid values:</p>
              * <ul>
-             * <li>add: Add.</li>
-             * <li>del: Delete</li>
-             * <li>modify: Modify.</li>
+             * <li><p><code>add</code>: Adds a header.</p>
+             * </li>
+             * <li><p><code>del</code>: Deletes a header.</p>
+             * </li>
+             * <li><p><code>modify</code>: Modifies a header.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -377,7 +386,16 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
             }
 
             /**
-             * Type.
+             * <p>The value type. Valid values:</p>
+             * <ul>
+             * <li><p><code>static</code>: static mode.</p>
+             * </li>
+             * <li><p><code>dynamic</code>: dynamic mode.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>static</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -385,7 +403,7 @@ public class GetHttpResponseHeaderModificationRuleResponseBody extends TeaModel 
             }
 
             /**
-             * <p>Response header value.</p>
+             * <p>The response header value.</p>
              * 
              * <strong>example:</strong>
              * <p>headerValue</p>

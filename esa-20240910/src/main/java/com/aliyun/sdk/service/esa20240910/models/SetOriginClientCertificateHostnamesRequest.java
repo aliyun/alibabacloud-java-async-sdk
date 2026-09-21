@@ -90,7 +90,7 @@ public class SetOriginClientCertificateHostnamesRequest extends Request {
         } 
 
         /**
-         * <p>The domain names to associate.</p>
+         * <p>The hostnames to associate with the certificate.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
@@ -101,7 +101,7 @@ public class SetOriginClientCertificateHostnamesRequest extends Request {
         }
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The ID of the certificate.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class SetOriginClientCertificateHostnamesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The ID of the site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

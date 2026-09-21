@@ -172,7 +172,14 @@ public class CreateImageTransformRequest extends Request {
         } 
 
         /**
-         * AutoAvif.
+         * <p>Specifies whether to enable adaptive AVIF. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder autoAvif(String autoAvif) {
             this.putQueryParameter("AutoAvif", autoAvif);
@@ -181,7 +188,14 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * AutoWebp.
+         * <p>Specifies whether to enable adaptive WebP. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder autoWebp(String autoWebp) {
             this.putQueryParameter("AutoWebp", autoWebp);
@@ -190,7 +204,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether image transformation is enabled. Possible values:</p>
+         * <p>Specifies whether to enable image transformation. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -206,14 +220,14 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>To match all incoming requests: Set the value to true</li>
-         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
+         * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -222,7 +236,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>Specifies whether to enable the rule. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
          * <li>on: Enabled.</li>
          * <li>off: Disabled.</li>
@@ -238,7 +252,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -250,7 +264,10 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -259,7 +276,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -272,7 +289,7 @@ public class CreateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

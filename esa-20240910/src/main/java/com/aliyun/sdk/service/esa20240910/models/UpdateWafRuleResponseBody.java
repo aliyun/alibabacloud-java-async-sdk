@@ -67,7 +67,7 @@ public class UpdateWafRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</p>
+         * <p>The ID of the WAF rule.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -78,7 +78,7 @@ public class UpdateWafRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>

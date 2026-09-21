@@ -60,6 +60,7 @@ public class GetPerformanceDataCollectionRequest extends Request {
         } 
 
         /**
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -144,7 +144,7 @@ public class ListImageTransformsRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
+         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation to obtain the configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>352816096987136</p>
@@ -156,12 +156,12 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Configuration type, which can be used to query global or rule configurations. Possible values:</p>
+         * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li>global: Query global configuration;</li>
-         * <li>rule: Query rule configuration;</li>
+         * <li>global: queries global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
          * </ul>
-         * <p>This parameter is optional. If not provided, it will not distinguish between global and rule configurations.</p>
+         * <p>This parameter is optional. If not specified, both global and rule configurations are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -173,7 +173,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Page number. The default value is 1 if not provided.</p>
+         * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page. The maximum value is 500, and the default value is 500 if not provided.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -209,7 +209,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Site ID. Can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListImageTransformsRequest extends Request {
         }
 
         /**
-         * <p>Site version number. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is version 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

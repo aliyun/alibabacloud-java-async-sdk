@@ -54,7 +54,10 @@ public class WafQuotaString extends TeaModel {
         } 
 
         /**
-         * Regexp.
+         * <p>The regular expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>^\d+$</p>
          */
         public Builder regexp(String regexp) {
             this.regexp = regexp;

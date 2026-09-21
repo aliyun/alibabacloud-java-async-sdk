@@ -105,6 +105,7 @@ public class UpdateDDoSSpecRequest extends Request {
         } 
 
         /**
+         * <p>The billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class UpdateDDoSSpecRequest extends Request {
         }
 
         /**
+         * <p>The instance specification for Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class UpdateDDoSSpecRequest extends Request {
         }
 
         /**
+         * <p>The instance specification for regions outside Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class UpdateDDoSSpecRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call the ListDDoSInstances operation to query the list of DDoS instances.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

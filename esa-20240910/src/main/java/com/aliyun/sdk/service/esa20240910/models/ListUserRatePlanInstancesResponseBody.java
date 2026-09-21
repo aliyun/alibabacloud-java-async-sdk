@@ -119,7 +119,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried plans.</p>
+         * <p>The plan instances that match the specified conditions under the user.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -127,7 +127,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number, same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>68</p>
@@ -171,7 +171,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,7 +253,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The website ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456****</p>
@@ -264,7 +264,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -275,12 +275,12 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website status. Valid values:</p>
+             * <p>The site status. Valid values:</p>
              * <ul>
-             * <li>pending: The website is to be configured.</li>
-             * <li>active: The website is active.</li>
-             * <li>offline: The website is suspended.</li>
-             * <li>moved: The website has been added and verified by another Alibaba Cloud account.</li>
+             * <li><strong>pending</strong>: The site is pending configuration.</li>
+             * <li><strong>active</strong>: The site is activated.</li>
+             * <li><strong>offline</strong>: The site is offline.</li>
+             * <li><strong>moved</strong>: The site has been superseded.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -717,8 +717,8 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             /**
              * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>PREPAY: subscription.</li>
-             * <li>POSTPAY: pay-as-you-go.</li>
+             * <li><strong>PREPAY</strong>: Subscription.</li>
+             * <li><strong>POSTPAY</strong>: Pay-as-you-go.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -730,7 +730,16 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BotInstanceLevel.
+             * <p>If empty, the plan does not include a bot protection instance. If a value is returned, the plan includes a bot protection instance. Valid values:</p>
+             * <ul>
+             * <li><p>enterprise_bot: Web edition.</p>
+             * </li>
+             * <li><p>enterprise_bot_with_app: App edition.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise_bot</p>
              */
             public Builder botInstanceLevel(String botInstanceLevel) {
                 this.botInstanceLevel = botInstanceLevel;
@@ -738,7 +747,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * BotRequest.
+             * <p>The prepaid bot protection requests included in the plan (in units of 10,000).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder botRequest(String botRequest) {
                 this.botRequest = botRequest;
@@ -746,11 +758,11 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service locations for the websites that can be associated with the plan. Multiple values are separated by commas (,). Valid values:</p>
+             * <p>The acceleration coverage areas for sites that can be bound to this plan instance. Multiple values are separated by commas (,). Valid values:</p>
              * <ul>
-             * <li>domestic: the Chinese mainland.</li>
-             * <li>overseas: outside the Chinese mainland.</li>
-             * <li>global: global.</li>
+             * <li><strong>domestic</strong>: China or the Chinese mainland.</li>
+             * <li><strong>overseas</strong>: Global (excluding China or the Chinese mainland).</li>
+             * <li><strong>global</strong>: Global (including China or the Chinese mainland).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -762,10 +774,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the plan was purchased.</p>
+             * <p>The purchase time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
-             * <p>YYYY-MM-DDThh:mm:ssZ</p>
+             * <p>2026-04-19T11:15:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -773,7 +785,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CrossborderTraffic.
+             * <p>The prepaid China network acceleration traffic (GB) included in the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder crossborderTraffic(String crossborderTraffic) {
                 this.crossborderTraffic = crossborderTraffic;
@@ -781,7 +796,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DdosBurstableDomesticProtection.
+             * <p>The Anti-DDoS instance specification for the Chinese mainland included in the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn_300</p>
              */
             public Builder ddosBurstableDomesticProtection(String ddosBurstableDomesticProtection) {
                 this.ddosBurstableDomesticProtection = ddosBurstableDomesticProtection;
@@ -789,7 +807,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DdosBurstableOverseasProtection.
+             * <p>The Anti-DDoS instance specification outside the Chinese mainland included in the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>overseas_300</p>
              */
             public Builder ddosBurstableOverseasProtection(String ddosBurstableOverseasProtection) {
                 this.ddosBurstableOverseasProtection = ddosBurstableOverseasProtection;
@@ -797,7 +818,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DdosInstanceLevel.
+             * <p>If empty, the plan does not include an Anti-DDoS instance. If a value is returned, the plan includes an Anti-DDoS instance. The value is <code>esa_ddos_instance</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esa_ddos_instance</p>
              */
             public Builder ddosInstanceLevel(String ddosInstanceLevel) {
                 this.ddosInstanceLevel = ddosInstanceLevel;
@@ -805,7 +829,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration of the plan. Unit: month.</p>
+             * <p>The subscription duration of the plan instance. Unit: months.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -816,7 +840,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeRoutineRquest.
+             * <p>The prepaid Edge Routine (ER) requests included in the plan (in units of 10,000).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder edgeRoutineRquest(String edgeRoutineRquest) {
                 this.edgeRoutineRquest = edgeRoutineRquest;
@@ -824,7 +851,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EdgeWafRequest.
+             * <p>The prepaid WAF requests included in the plan (in units of 10,000).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder edgeWafRequest(String edgeWafRequest) {
                 this.edgeWafRequest = edgeWafRequest;
@@ -832,10 +862,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the plan expires.</p>
+             * <p>The expiration time of the plan instance. The time is in ISO 8601 format and displayed in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
-             * <p>YYYY-MM-DDThh:mm:ssZ</p>
+             * <p>2026-04-19T11:15:20Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -843,7 +873,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan ID.</p>
+             * <p>The plan instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-xcdn-96wblslz****</p>
@@ -854,7 +884,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Layer4Traffic.
+             * <p>The prepaid Layer 4 proxy traffic (GB) included in the plan - Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder layer4Traffic(String layer4Traffic) {
                 this.layer4Traffic = layer4Traffic;
@@ -862,7 +895,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Layer4TrafficIntl.
+             * <p>The prepaid Layer 4 proxy traffic (GB) included in the plan - outside the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder layer4TrafficIntl(String layer4TrafficIntl) {
                 this.layer4TrafficIntl = layer4TrafficIntl;
@@ -878,7 +914,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan name.</p>
+             * <p>The plan name associated with the plan instance.</p>
              * 
              * <strong>example:</strong>
              * <p>basic</p>
@@ -889,7 +925,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PlanTraffic.
+             * <p>The prepaid Layer 7 acceleration traffic (GB) included in the plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder planTraffic(String planTraffic) {
                 this.planTraffic = planTraffic;
@@ -897,10 +936,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan type. Valid values:</p>
+             * <p>The plan type associated with the plan instance. Valid values:</p>
              * <ul>
-             * <li>normal</li>
-             * <li>enterprise</li>
+             * <li><strong>normal</strong>: Fixed edition plan.</li>
+             * <li><strong>enterprise</strong>: Enterprise edition plan.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -912,7 +951,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalDuration.
+             * <p>The auto-renewal cycle. Unit: months.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder renewalDuration(Long renewalDuration) {
                 this.renewalDuration = renewalDuration;
@@ -920,7 +962,15 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalStatus.
+             * <p>The auto-renewal status. Valid values:</p>
+             * <ul>
+             * <li>nomal: Normal.</li>
+             * <li>auto_renewal: Auto-renewal enabled.</li>
+             * <li>not_renewal: Auto-renewal disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>nomal</p>
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;
@@ -944,7 +994,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of websites that can be associated with the plan.</p>
+             * <p>The site quota for the plan instance.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -955,7 +1005,7 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The websites that have been associated with the plan.</p>
+             * <p>The list of sites bound to the current plan instance.</p>
              */
             public Builder sites(java.util.List<Sites> sites) {
                 this.sites = sites;
@@ -963,7 +1013,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SmartRoutingRequest.
+             * <p>The prepaid smart routing requests included in the plan (in units of 10,000).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder smartRoutingRequest(String smartRoutingRequest) {
                 this.smartRoutingRequest = smartRoutingRequest;
@@ -971,7 +1024,10 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StaticRequest.
+             * <p>The prepaid HTTP requests included in the plan (in units of 10,000).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder staticRequest(String staticRequest) {
                 this.staticRequest = staticRequest;
@@ -979,11 +1035,11 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The plan status. Valid values:</p>
+             * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li>online: The plan is in service.</li>
-             * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
-             * <li>disable: The plan is released.</li>
+             * <li><strong>online</strong>: Normal service status.</li>
+             * <li><strong>offline</strong>: Expired but not overdue, in an inactive state.</li>
+             * <li><strong>disable</strong>: Released.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -995,7 +1051,18 @@ public class ListUserRatePlanInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeType.
+             * <p>The plan subscription type. Valid values:</p>
+             * <ul>
+             * <li>Free Edition (Chinese mainland): entranceplan</li>
+             * <li>Free Edition (International): entranceplan_intl</li>
+             * <li>Basic Edition: basicplan</li>
+             * <li>Standard Edition: standardplan</li>
+             * <li>Premium Edition: advancedplan</li>
+             * <li>Enterprise Edition: enterpriseplan</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>basicplan</p>
              */
             public Builder subscribeType(String subscribeType) {
                 this.subscribeType = subscribeType;

@@ -187,7 +187,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> interface.</p>
+         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> operation to obtain the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,10 +212,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Query string rewrite type. Value range:</p>
+         * <p>The query character string rewrite type. Valid values:</p>
          * <ul>
-         * <li>static: Static mode.</li>
-         * <li>dynamic: Dynamic mode.</li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic pattern.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -228,10 +228,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>URI rewrite type. Value range:</p>
+         * <p>The path rewrite type. Valid values:</p>
          * <ul>
-         * <li>static: Static mode.</li>
-         * <li>dynamic: Dynamic mode.</li>
+         * <li>static: static pattern.</li>
+         * <li>dynamic: dynamic pattern.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,10 +244,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content. A conditional expression is used to match user requests. This parameter is not required when you add a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,10 +260,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+         * <p>The rule switch. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>example=123</p>
@@ -288,7 +288,10 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -297,7 +300,7 @@ public class UpdateRewriteUrlRuleRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

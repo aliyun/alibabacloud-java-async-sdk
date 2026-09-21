@@ -100,7 +100,10 @@ public class CommitRoutineStagingCodeRequest extends Request {
         }
 
         /**
-         * DeployEnv.
+         * <p>The deployment environment. The environment variable configuration of the specified environment is used. If you do not specify this parameter, environment variables are not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>production</p>
          */
         public Builder deployEnv(String deployEnv) {
             this.putBodyParameter("DeployEnv", deployEnv);
@@ -109,11 +112,11 @@ public class CommitRoutineStagingCodeRequest extends Request {
         }
 
         /**
-         * <p>The routine name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>CommitRoutineStagingCode</p>
+         * <p>test-routine1</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

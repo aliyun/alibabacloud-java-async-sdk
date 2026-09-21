@@ -131,12 +131,12 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         } 
 
         /**
-         * <p>The log category. Valid values:</p>
+         * <p>The real-time log type. Valid values:</p>
          * <ul>
-         * <li>dcdn_log_access_l1 (default): access logs.</li>
-         * <li>dcdn_log_er: Edge Routine logs.</li>
-         * <li>dcdn_log_waf: firewall logs.</li>
-         * <li>dcdn_log_ipa: TCP/UDP proxy logs.</li>
+         * <li><strong>dcdn_log_access_l1 (default)</strong>: access logs.</li>
+         * <li><strong>dcdn_log_er</strong>: Edge Routine function logs.</li>
+         * <li><strong>dcdn_log_waf</strong>: security protection logs.</li>
+         * <li><strong>dcdn_log_ipa</strong>: Layer 4 acceleration logs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * Details.
+         * <p>The list of ER PODs to configure.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx,xxx</p>
          */
         public Builder details(String details) {
             this.putBodyParameter("Details", details);
@@ -158,7 +161,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The discard rate. Default value: 0.</p>
+         * <p>The discard rate. If not specified, the default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -170,7 +173,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The log fields that you want to include in logs to be delivered. Separate the log fields with commas (,).</p>
+         * <p>The selected fields, separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +186,13 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * FilterVer.
+         * <p>The version of the filter rule.</p>
+         * <blockquote>
+         * <p>Compatible with legacy filter rules. The default value is v1. Newly created tasks use v2.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v2</p>
          */
         public Builder filterVer(String filterVer) {
             this.putBodyParameter("FilterVer", filterVer);
@@ -192,7 +201,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the delivery task.</p>
+         * <p>The task name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

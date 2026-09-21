@@ -96,10 +96,7 @@ public class CheckAssumeSlrRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>34DCBC8A-<strong><strong>-</strong></strong>-****-6DAA11D7DDBD</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -117,7 +117,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried certificates.</p>
+         * <p>The result array.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -125,7 +125,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID,</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -136,7 +136,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -147,7 +147,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of records that you specified.</p>
+         * <p>The total number of entries, which is the same as the number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -437,7 +437,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The certificate ID on Certificate Management Service.</p>
+             * <p>The cloud certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30000137</p>
@@ -448,7 +448,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Common Name of the certificate.</p>
+             * <p>The common name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -459,7 +459,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-28 06:17:11</p>
@@ -481,7 +481,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the certificate.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>babab022c5e9b27bf9c64d7f4b1667f4</p>
@@ -492,7 +492,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * <p>The certificate issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>GlobalSign nv-sa</p>
@@ -503,7 +503,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Common Name of the certificate issuer.</p>
+             * <p>The common name of the certificate issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>GlobalSign Organization Validation CA - SHA256 - G3</p>
@@ -514,7 +514,10 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * KeyServerId.
+             * <p>The Keyless server ID. This parameter is valid only when Type is set to keyless.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baba39055622c008b90285a8838e****</p>
              */
             public Builder keyServerId(String keyServerId) {
                 this.keyServerId = keyServerId;
@@ -533,7 +536,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-02-28 06:17:11</p>
@@ -544,7 +547,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate takes effect.</p>
+             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-28 06:17:11</p>
@@ -566,7 +569,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region where the certificate is stored.</p>
+             * <p>The certificate store area.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -588,7 +591,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the certificate.</p>
+             * <p>The certificate serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>baba39055622c008b90285a8838ed09a</p>
@@ -610,7 +613,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the certificate.</p>
+             * <p>The certificate status.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -621,7 +624,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the SSL certificate. Valid values:</p>
+             * <p>The certificate type.</p>
              * 
              * <strong>example:</strong>
              * <p>free</p>
@@ -632,7 +635,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-02-28 06:17:11</p>
@@ -741,7 +744,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of certificates that are being requested.</p>
+             * <p>The number of certificates being applied for.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -752,7 +755,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificates that match the specified records.</p>
+             * <p>The list of certificates that match the record.</p>
              */
             public Builder certificates(java.util.List<Certificates> certificates) {
                 this.certificates = certificates;
@@ -760,7 +763,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of certificates that match the specified records.</p>
+             * <p>The number of certificates that match the record.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -771,7 +774,7 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the record.</p>
+             * <p>The record name.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -782,7 +785,13 @@ public class ListCertificatesByRecordResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate configuration status. Possible values: none; configured; applying; failed.</p>
+             * <p>The certificate configuration status of the record. Valid values:</p>
+             * <ul>
+             * <li>none: Not configured.</li>
+             * <li>configured: Configured.</li>
+             * <li>applying: Being applied for.</li>
+             * <li>failed: Application failed.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>none</p>

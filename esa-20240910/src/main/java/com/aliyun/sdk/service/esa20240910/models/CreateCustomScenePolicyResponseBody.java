@@ -145,8 +145,8 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the policy expires.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The policy end time.</p>
+         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-07T18:00:00Z</p>
@@ -168,7 +168,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of websites associated.</p>
+         * <p>A list of associated site IDs.</p>
+         * <blockquote>
+         * <p>This field is deprecated. Read the value from the <code>SiteIds</code> field instead.</p>
+         * </blockquote>
          */
         public Builder objects(java.util.List<String> objects) {
             this.objects = objects;
@@ -198,7 +201,10 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SiteIds.
+         * <p>The associated site IDs, separated by commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7096621098****, 7096621099****</p>
          */
         public Builder siteIds(String siteIds) {
             this.siteIds = siteIds;
@@ -206,8 +212,8 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the policy takes effect.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The policy start time.</p>
+         * <p>The time must be in UTC and in ISO 8601 format: <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-07T17:00:00Z</p>
@@ -218,7 +224,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the policy template.</p>
+         * <p>The template name.</p>
          * 
          * <strong>example:</strong>
          * <p>promotion</p>

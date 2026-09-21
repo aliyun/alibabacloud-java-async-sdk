@@ -67,7 +67,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned quota information.</p>
+         * <p>The returned quota information.</p>
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
@@ -75,7 +75,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -144,7 +144,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * Enable.
+             * <p>Indicates whether CAPTCHA rules are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -152,7 +152,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * NumberTotal.
+             * <p>The total quantity quota for CAPTCHA rules.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -258,7 +258,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the custom list is enabled.</p>
+             * <p>Indicates whether custom lists are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -266,7 +266,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An object containing quota information for each type of item in the custom list.</p>
+             * <p>The object that contains quota information for each item type in custom lists.</p>
              */
             public Builder items(java.util.Map<String, QuotaListItemsValue> items) {
                 this.items = items;
@@ -274,7 +274,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number quota allowed per custom list.</p>
+             * <p>The quantity quota for items in each custom list.</p>
              */
             public Builder numberItemsPerList(WafQuotaInteger numberItemsPerList) {
                 this.numberItemsPerList = numberItemsPerList;
@@ -282,7 +282,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota allowed for items in all custom lists.</p>
+             * <p>The total quantity quota for items across all custom lists.</p>
              */
             public Builder numberItemsTotal(WafQuotaInteger numberItemsTotal) {
                 this.numberItemsTotal = numberItemsTotal;
@@ -290,7 +290,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota allowed for custom lists.</p>
+             * <p>The total quantity quota for custom lists.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -357,7 +357,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the WAF managed rules group is enabled.</p>
+             * <p>Indicates whether WAF managed rule groups are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -365,7 +365,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota allowed for the WAF managed rules group.</p>
+             * <p>The total quantity quota for WAF managed rule groups.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -445,7 +445,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An object containing quota information for each Content-Type in custom response pages.</p>
+             * <p>The object that contains quota information for each Content-Type in custom response pages.</p>
              */
             public Builder contentTypes(java.util.Map<String, QuotaPageContentTypesValue> contentTypes) {
                 this.contentTypes = contentTypes;
@@ -453,7 +453,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the custom response page is enabled.</p>
+             * <p>Indicates whether custom response pages are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -461,7 +461,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota allowed for custom response pages.</p>
+             * <p>The total quantity quota for custom response pages.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -528,7 +528,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the scene protection feature is enabled.</p>
+             * <p>Indicates whether the scenario-specific protection feature is enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -536,7 +536,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota for scene protection rules.</p>
+             * <p>The total quantity quota for scenario-specific protection rules.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -603,7 +603,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the scene protection feature is enabled.</p>
+             * <p>Indicates whether slider CAPTCHA pages are enabled.</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -611,7 +611,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number quota for scene protection rules.</p>
+             * <p>The quantity quota for slider CAPTCHA pages.</p>
              */
             public Builder numberTotal(WafQuotaInteger numberTotal) {
                 this.numberTotal = numberTotal;
@@ -730,7 +730,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * Captcha.
+             * <p>The quota information for CAPTCHA rules.</p>
              */
             public Builder captcha(Captcha captcha) {
                 this.captcha = captcha;
@@ -738,7 +738,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota information related to custom lists.</p>
+             * <p>The quota information for custom lists.</p>
              */
             public Builder list(List list) {
                 this.list = list;
@@ -746,7 +746,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota information related to the WAF managed rules group.</p>
+             * <p>The quota information for WAF managed rule groups.</p>
              */
             public Builder managedRulesGroup(ManagedRulesGroup managedRulesGroup) {
                 this.managedRulesGroup = managedRulesGroup;
@@ -754,7 +754,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota information related to custom response pages.</p>
+             * <p>The quota information for custom response pages.</p>
              */
             public Builder page(Page page) {
                 this.page = page;
@@ -762,7 +762,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Quota information related to scene protection.</p>
+             * <p>The quota information for scenario-specific protection rules.</p>
              */
             public Builder scenePolicy(ScenePolicy scenePolicy) {
                 this.scenePolicy = scenePolicy;
@@ -770,7 +770,7 @@ public class GetWafQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * SliderCaptchaPage.
+             * <p>The quota information for slider CAPTCHA pages.</p>
              */
             public Builder sliderCaptchaPage(SliderCaptchaPage sliderCaptchaPage) {
                 this.sliderCaptchaPage = sliderCaptchaPage;

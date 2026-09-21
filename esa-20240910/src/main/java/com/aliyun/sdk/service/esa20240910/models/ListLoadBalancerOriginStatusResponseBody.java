@@ -229,7 +229,7 @@ public class ListLoadBalancerOriginStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The origin pool to which the source belongs, under this load balancer. Only &quot;default_pool&quot; (default address pool) will be displayed; other types will return an empty string.</p>
+             * <p>The origin pool to which the source belongs, under this load balancer. Only \&quot;default_pool\&quot; (default address pool) will be displayed; other types will return an empty string.</p>
              * 
              * <strong>example:</strong>
              * <p>default_pool</p>

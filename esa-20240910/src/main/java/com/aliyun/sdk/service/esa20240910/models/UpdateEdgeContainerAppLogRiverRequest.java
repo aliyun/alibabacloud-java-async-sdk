@@ -87,7 +87,10 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         } 
 
         /**
-         * <p>The application ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2852396.html">ListEdgeContainerApps</a> operation.</p>
+         * <p>The application ID. You can call the <a href="https://help.aliyun.com/document_detail/2852396.html">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
+         * <blockquote>
+         * <p>Notice: The AppId is in the format of the app- prefix followed by a numeric suffix, with a total length of 20 to 64 characters (example: app-8806886***83794688). Call ListEdgeContainerApps to obtain an existing AppId, or call CreateEdgeContainerApp to create an application first.</notice>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>app-88068867578379****</p>
@@ -99,7 +102,7 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         }
 
         /**
-         * <p>The log path of the container.</p>
+         * <p>The log file of the container.</p>
          * 
          * <strong>example:</strong>
          * <p>/root/hello.log</p>
@@ -111,7 +114,7 @@ public class UpdateEdgeContainerAppLogRiverRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to collect the standard output of the container.</p>
+         * <p>Specifies whether to enable standard output collection for the container.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

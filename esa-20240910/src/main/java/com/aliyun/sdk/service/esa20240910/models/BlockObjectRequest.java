@@ -116,7 +116,7 @@ public class BlockObjectRequest extends Request {
         }
 
         /**
-         * <p>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</p>
+         * <p>The effective period of the block, in seconds. Specify this parameter when the type is block.</p>
          * 
          * <strong>example:</strong>
          * <p>864000</p>
@@ -128,11 +128,11 @@ public class BlockObjectRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>BlockObject</p>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -143,8 +143,8 @@ public class BlockObjectRequest extends Request {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><strong>block</strong></li>
-         * <li><strong>unblock</strong></li>
+         * <li><strong>block</strong>: Block.</li>
+         * <li><strong>unblock</strong>: Unblock.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

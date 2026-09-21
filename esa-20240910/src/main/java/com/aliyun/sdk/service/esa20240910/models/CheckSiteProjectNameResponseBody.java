@@ -93,10 +93,10 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the task name is valid. Valid values:</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Can be added.</li>
+         * <li><strong>false</strong>: Cannot be added.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CheckSiteProjectNameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the real-time log delivery task.</p>
+         * <p>The real-time log project name.</p>
          * 
          * <strong>example:</strong>
          * <p>dcdn_waf_userAccount_log</p>

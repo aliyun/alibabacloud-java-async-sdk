@@ -129,7 +129,7 @@ public class ListWafRulesetsRequest extends Request {
         } 
 
         /**
-         * <p>Page number, specifying the current page number for paginated queries.</p>
+         * <p>The page number. Specifies the current page number for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>Page size, specifying the number of records per page for paginated queries.</p>
+         * <p>The page size. Specifies the number of records per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -153,7 +153,17 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>WAF operation phase, specifying the rule set phase to query.</p>
+         * <p>The WAF rule execution phase. Valid values:</p>
+         * <ul>
+         * <li>http_whitelist: whitelist rules</li>
+         * <li>http_custom: custom rules</li>
+         * <li>http_managed: managed rules</li>
+         * <li>http_anti_scan: scan protection rules</li>
+         * <li>http_ratelimit: frequency control rules</li>
+         * <li>ip_access_rule: IP access rules</li>
+         * <li>http_bot: advanced mode bots</li>
+         * <li>http_security_level_rule: security rules</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -165,7 +175,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>Query parameters, passed in JSON format, containing various filtering conditions.</p>
+         * <p>The query parameters, passed in JSON format, including various filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>http_bot</p>
@@ -178,7 +188,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +200,7 @@ public class ListWafRulesetsRequest extends Request {
         }
 
         /**
-         * <p>Site version.</p>
+         * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -287,7 +297,7 @@ public class ListWafRulesetsRequest extends Request {
             } 
 
             /**
-             * <p>Fuzzy search for rule set ID, rule set name, rule ID, and rule name.</p>
+             * <p>The fuzzy match string for the ruleset ID, ruleset name, rule ID, or rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -298,7 +308,7 @@ public class ListWafRulesetsRequest extends Request {
             }
 
             /**
-             * <p>Whether to sort in descending order.</p>
+             * <p>Specifies whether to sort the results in descending order.</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -306,7 +316,7 @@ public class ListWafRulesetsRequest extends Request {
             }
 
             /**
-             * <p>Fuzzy search for rule set name.</p>
+             * <p>The fuzzy match string for the ruleset name.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -317,7 +327,7 @@ public class ListWafRulesetsRequest extends Request {
             }
 
             /**
-             * <p>Specify the column to sort by.</p>
+             * <p>The column by which to sort the results.</p>
              * 
              * <strong>example:</strong>
              * <p>id</p>

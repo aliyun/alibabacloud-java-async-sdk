@@ -119,7 +119,7 @@ public class ListPagesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -141,7 +141,7 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The custom error pages. Each element in the array contains error page-specific information.</p>
+         * <p>The array of custom response pages. Each object in the array contains the details of a page.</p>
          */
         public Builder pages(java.util.List<Pages> pages) {
             this.pages = pages;
@@ -160,7 +160,7 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of custom error pages after filtering.</p>
+         * <p>The number of custom response pages after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,7 +171,7 @@ public class ListPagesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of custom error pages that you created.</p>
+         * <p>The number of custom response pages created by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -240,7 +240,10 @@ public class ListPagesResponseBody extends TeaModel {
             } 
 
             /**
-             * Reasons.
+             * <p>The list of rejection reasons.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[]</p>
              */
             public Builder reasons(java.util.List<String> reasons) {
                 this.reasons = reasons;
@@ -248,7 +251,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The moderation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -396,7 +402,7 @@ public class ListPagesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</p>
+             * <p>The Base64-encoded response page content corresponding to the Content-Type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -420,7 +426,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the custom error page.</p>
+             * <p>The description of the custom response page.</p>
              * 
              * <strong>example:</strong>
              * <p>a custom deny page</p>
@@ -431,7 +437,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom error page.<a href="~~2850223~~"></a></p>
+             * <p>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>50000001</p>
@@ -442,7 +448,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the custom error page.</p>
+             * <p>The type of the custom response page.</p>
              * 
              * <strong>example:</strong>
              * <p>custom</p>
@@ -453,7 +459,10 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * Moderation.
+             * <p>The content moderation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder moderation(Moderation moderation) {
                 this.moderation = moderation;
@@ -461,7 +470,7 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the custom error page.</p>
+             * <p>The name of the custom response page.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -472,7 +481,9 @@ public class ListPagesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the custom error page was last modified.</p>
+             * <p>The last modification time of the custom response page.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-01T00:00:00Z</p>

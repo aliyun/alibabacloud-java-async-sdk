@@ -60,10 +60,11 @@ public class GetWaitingRoomPreviewPageRequest extends Request {
         } 
 
         /**
+         * <p>The custom waiting room page content. This parameter is required when the waiting room type is custom. The content must be URL-encoded.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>GetWaitingRoomPreviewPage</p>
+         * <p>Hello%20world!</p>
          */
         public Builder customPageHtml(String customPageHtml) {
             this.putQueryParameter("CustomPageHtml", customPageHtml);

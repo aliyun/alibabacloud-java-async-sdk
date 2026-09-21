@@ -93,7 +93,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The configuration list of the phased release version number.</p>
+         * <p>The list of percentage-based canary release code version configurations.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -123,7 +123,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The phased release policy. The constant string is &quot;percentage&quot;.</p>
+         * <p>The canary release strategy. Fixed value: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>percentage</p>
@@ -192,7 +192,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the code.</p>
+             * <p>The code version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1723599747213377175</p>
@@ -203,7 +203,7 @@ public class CreateRoutineCodeDeploymentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phased release ratio.</p>
+             * <p>The canary release percentage for the code version.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>

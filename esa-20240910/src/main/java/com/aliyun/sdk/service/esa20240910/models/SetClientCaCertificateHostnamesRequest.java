@@ -89,6 +89,7 @@ public class SetClientCaCertificateHostnamesRequest extends Request {
         } 
 
         /**
+         * <p>A list of hostnames.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
@@ -99,7 +100,10 @@ public class SetClientCaCertificateHostnamesRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The client CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaabcd****</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -108,6 +112,7 @@ public class SetClientCaCertificateHostnamesRequest extends Request {
         }
 
         /**
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

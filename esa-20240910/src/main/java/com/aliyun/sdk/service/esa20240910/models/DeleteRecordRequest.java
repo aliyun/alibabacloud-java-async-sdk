@@ -74,7 +74,7 @@ public class DeleteRecordRequest extends Request {
         } 
 
         /**
-         * <p>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</p>
+         * <p>The ID of the DNS record. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

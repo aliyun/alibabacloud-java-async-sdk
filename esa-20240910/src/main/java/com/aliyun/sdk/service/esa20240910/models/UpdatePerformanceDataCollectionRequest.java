@@ -75,6 +75,11 @@ public class UpdatePerformanceDataCollectionRequest extends Request {
         } 
 
         /**
+         * <p>Specifies whether to enable quality data collection. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +92,7 @@ public class UpdatePerformanceDataCollectionRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can obtain the ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -89,6 +89,7 @@ public class UpdateSiteInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The target instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class UpdateSiteInstanceRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

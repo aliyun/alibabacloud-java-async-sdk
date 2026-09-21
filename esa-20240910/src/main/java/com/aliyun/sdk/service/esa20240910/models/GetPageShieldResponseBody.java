@@ -93,7 +93,14 @@ public class GetPageShieldResponseBody extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>The switch status. Valid values:</p>
+         * <ul>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -101,7 +108,10 @@ public class GetPageShieldResponseBody extends TeaModel {
         }
 
         /**
-         * ReportUri.
+         * <p>The report URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/test</p>
          */
         public Builder reportUri(String reportUri) {
             this.reportUri = reportUri;
@@ -109,7 +119,10 @@ public class GetPageShieldResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class GetPageShieldResponseBody extends TeaModel {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.siteVersion = siteVersion;

@@ -67,7 +67,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -78,7 +78,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of returned template rules.</p>
+         * <p>A list of template rules.</p>
          */
         public Builder rules(java.util.List<Rules> rules) {
             this.rules = rules;
@@ -183,7 +183,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Rule configuration.</p>
+             * <p>The rule configuration.</p>
              */
             public Builder config(WafRuleConfig config) {
                 this.config = config;
@@ -191,7 +191,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name.</p>
+             * <p>The rule name.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP Directory Traversal Rule [Template]</p>
@@ -202,7 +202,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>WAF operation phase.</p>
+             * <p>The WAF running phase.</p>
              * 
              * <strong>example:</strong>
              * <p>http_anti_scan</p>
@@ -213,7 +213,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule status.</p>
+             * <p>The rule status.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>
@@ -224,7 +224,7 @@ public class ListWafTemplateRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule type.</p>
+             * <p>The rule type.</p>
              * 
              * <strong>example:</strong>
              * <p>http_directory_traversal</p>

@@ -88,7 +88,10 @@ public class UpdateCacheReserveRequest extends Request {
         } 
 
         /**
-         * CacheReserveInstanceId.
+         * <p>The cache reserve instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cr_hk_123456789</p>
          */
         public Builder cacheReserveInstanceId(String cacheReserveInstanceId) {
             this.putQueryParameter("CacheReserveInstanceId", cacheReserveInstanceId);
@@ -97,7 +100,14 @@ public class UpdateCacheReserveRequest extends Request {
         }
 
         /**
-         * Enable.
+         * <p>The switch. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.putQueryParameter("Enable", enable);
@@ -106,6 +116,7 @@ public class UpdateCacheReserveRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

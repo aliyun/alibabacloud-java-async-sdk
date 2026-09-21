@@ -93,7 +93,7 @@ public class CreateSiteResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The nameservers assigned by ESA. The values are separated by commas (,). This parameter is returned if you set AccessType to NS. In this case, you must change the nameservers of your domain to the assigned ones. Then, you can verify the domain ownership and activate your website.</p>
+         * <p>The list of NS records assigned to the site, separated by commas (,). This field has a value when the access type of the site is NS. You must change the DNS servers of the site to these NS records. Then you can verify the site ownership and activate the site.</p>
          * 
          * <strong>example:</strong>
          * <p>ns1.example.com,ns2.example.com</p>
@@ -115,7 +115,7 @@ public class CreateSiteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -126,7 +126,7 @@ public class CreateSiteResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The verification code for the website. If you set AccessType to CNAME, you need to add a TXT record whose hostname is <strong>_esaauth.[websiteDomainName]</strong> and record value is the value of VerifyCode to the DNS records of your domain. ****Then, you can verify the domain ownership and activate your website.</p>
+         * <p>The verification code of the site. When the access type of the site is CNAME, you must add a TXT record to the DNS server of the site with the record name <strong>_esaauth.[site name]</strong> and the record value set to the <strong>verification code</strong>. Then you can verify the site ownership and activate the site.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_aah9dioasmov****</p>

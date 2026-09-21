@@ -145,6 +145,7 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         } 
 
         /**
+         * <p>Basic information about the application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,13 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time to retrieve data. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <blockquote>
+         * <p>The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-02T16:04:05Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -166,6 +173,7 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
+         * <p>The metric fields.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +186,10 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * Isp.
+         * <p>The Internet Service Provider (ISP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>telecom,unicom,mobile</p>
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -187,7 +198,10 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * Locate.
+         * <p>The region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>huizhou</p>
          */
         public Builder locate(String locate) {
             this.putQueryParameter("Locate", locate);
@@ -196,7 +210,10 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-09-02T15:04:05Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -205,7 +222,7 @@ public class DescribeEdgeContainerAppStatsRequest extends Request {
         }
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>t-xxxx</p>

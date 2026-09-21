@@ -117,6 +117,12 @@ public class ListRoutineEnvironmentVariablesRequest extends Request {
         } 
 
         /**
+         * <p>The environment name.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>production</code>: production environment</li>
+         * <li><code>staging</code>: staging environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +135,10 @@ public class ListRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>The keyword used to perform a case-insensitive fuzzy search on environment variable keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LOG</p>
          */
         public Builder keyWord(String keyWord) {
             this.putBodyParameter("KeyWord", keyWord);
@@ -138,6 +147,7 @@ public class ListRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +160,10 @@ public class ListRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -159,7 +172,10 @@ public class ListRoutineEnvironmentVariablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);

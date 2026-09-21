@@ -91,7 +91,10 @@ public class DescribeDDoSOverseasAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of attacks supported by the plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -99,7 +102,10 @@ public class DescribeDDoSOverseasAttackCountResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCount.
+         * <p>The number of attacks that have been used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder usedCount(Integer usedCount) {
             this.usedCount = usedCount;

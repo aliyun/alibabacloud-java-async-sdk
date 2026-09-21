@@ -129,7 +129,10 @@ public class ListRoutineBuildsRequest extends Request {
         } 
 
         /**
-         * PageIndex.
+         * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -138,7 +141,10 @@ public class ListRoutineBuildsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +153,10 @@ public class ListRoutineBuildsRequest extends Request {
         }
 
         /**
-         * RoutineName.
+         * <p>The ER name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine</p>
          */
         public Builder routineName(String routineName) {
             this.putQueryParameter("RoutineName", routineName);
@@ -156,7 +165,14 @@ public class ListRoutineBuildsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The field used for sorting. By default, results are sorted by purchase time. Valid values:</p>
+         * <ul>
+         * <li>CreateTime: purchase time.</li>
+         * <li>ExpireTime: expiration time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -165,7 +181,14 @@ public class ListRoutineBuildsRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -174,7 +197,18 @@ public class ListRoutineBuildsRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the build task. Valid values:</p>
+         * <ul>
+         * <li>int: initialization</li>
+         * <li>pending: preparing</li>
+         * <li>building: building</li>
+         * <li>succeed: build succeeded</li>
+         * <li>failed: build failed</li>
+         * <li>canceled: canceled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>canceled</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

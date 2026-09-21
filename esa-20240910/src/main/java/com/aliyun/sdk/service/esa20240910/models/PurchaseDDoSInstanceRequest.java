@@ -105,6 +105,7 @@ public class PurchaseDDoSInstanceRequest extends Request {
         } 
 
         /**
+         * <p>The billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +118,7 @@ public class PurchaseDDoSInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance specifications for the Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +131,7 @@ public class PurchaseDDoSInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance specifications for outside China.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +144,7 @@ public class PurchaseDDoSInstanceRequest extends Request {
         }
 
         /**
+         * <p>The site instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -78,7 +78,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the website log files.</p>
+         * <p>The site log information.</p>
          */
         public Builder siteLogDetails(java.util.List<SiteLogDetails> siteLogDetails) {
             this.siteLogDetails = siteLogDetails;
@@ -184,6 +184,9 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
 
             /**
              * <p>The end time.</p>
+             * <blockquote>
+             * <p>Date format example: yyyy-MM-ddTHH:mm:ssZ</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2022-11-06T17:00:00Z</p>
@@ -194,7 +197,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the log file.</p>
+             * <p>The log name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com_2022_11_07_000000_020000.gz.xxxxxx</p>
@@ -207,7 +210,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             /**
              * <p>The log path.</p>
              * <blockquote>
-             * <p> Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</p>
+             * <p>Note the Expires field (expiration timestamp) in the LogPath response parameter. After the expiration time, the log download link becomes invalid and must be obtained again.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -219,7 +222,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the log file. Unit: bytes.</p>
+             * <p>The log size, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>438304768</p>
@@ -230,7 +233,10 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The create time.</p>
+             * <p>The start time.</p>
+             * <blockquote>
+             * <p>Date format example: yyyy-MM-ddTHH:mm:ssZ</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>2022-11-06T16:00:00Z</p>
@@ -313,7 +319,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number returned.</p>
+             * <p>The page number of the returned data.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -444,7 +450,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of entries returned on the current page.</p>
+             * <p>The total number of entries returned on this page.</p>
              * 
              * <strong>example:</strong>
              * <p>300</p>
@@ -455,7 +461,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the website log files.</p>
+             * <p>The site log package information.</p>
              */
             public Builder logInfos(java.util.List<LogInfos> logInfos) {
                 this.logInfos = logInfos;
@@ -463,7 +469,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pagination information.</p>
+             * <p>The pagination information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;
@@ -471,7 +477,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123456***</p>
@@ -482,7 +488,7 @@ public class DescribeSiteLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>

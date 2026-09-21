@@ -139,7 +139,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The tasks.</p>
+         * <p>The task list.</p>
          */
         public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
@@ -147,7 +147,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -281,7 +281,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The purged content.</p>
+             * <p>The refresh object.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></p>
@@ -292,7 +292,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created.</p>
+             * <p>The creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-26T01:56:15Z</p>
@@ -303,7 +303,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error description returned when the purge task failed.</p>
+             * <p>The error description returned when the refresh task fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Internal Error</p>
@@ -314,7 +314,7 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the task, in percentage.</p>
+             * <p>The task completion progress in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100%</p>
@@ -325,11 +325,14 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task status.</p>
+             * <p>The status. Valid values:</p>
              * <ul>
-             * <li><strong>Complete</strong>: The task is complete.</li>
-             * <li><strong>Refreshing</strong>: The task is in progress.</li>
-             * <li><strong>Failed</strong>: The task failed.</li>
+             * <li><p><strong>Complete</strong>: completed.</p>
+             * </li>
+             * <li><p><strong>Refreshing</strong>: refreshing.</p>
+             * </li>
+             * <li><p><strong>Failed</strong>: refresh failed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -352,14 +355,14 @@ public class DescribePurgeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the purge task. Valid values:</p>
+             * <p>The refresh task type. Valid values:</p>
              * <ul>
-             * <li><strong>file</strong> (default): purges the cache by file.</li>
-             * <li><strong>cachetag</strong>: purges the cache by cache tag.</li>
-             * <li><strong>directory</strong>: purges the cache by directory.</li>
-             * <li><strong>ignoreParams</strong>: purges the cache by URL with specified parameters ignored.</li>
-             * <li><strong>hostname</strong>: purges the cache by hostname.</li>
-             * <li><strong>purgeall</strong>: purges all cache.</li>
+             * <li><strong>file</strong> (default): file refresh.</li>
+             * <li><strong>cachetag</strong>: cache tag refresh.</li>
+             * <li><strong>directory</strong>: directory refresh.</li>
+             * <li><strong>ignoreParams</strong>: ignore parameters refresh.</li>
+             * <li><strong>hostname</strong>: hostname refresh.</li>
+             * <li><strong>purgeall</strong>: purge all cache under the site.</li>
              * </ul>
              * 
              * <strong>example:</strong>

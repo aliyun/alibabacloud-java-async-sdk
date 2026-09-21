@@ -75,7 +75,7 @@ public class BatchPutKvRequest extends Request {
         } 
 
         /**
-         * <p>The key-value pairs that you want to configure at a time. The total size can be up to 2 MB (2 × 1000 × 1000).</p>
+         * <p>The list of key-value pairs to batch set. The total size cannot exceed 2 MB (2\*1000\*1000).</p>
          * <p>This parameter is required.</p>
          */
         public Builder kvList(java.util.List<KvList> kvList) {
@@ -86,7 +86,7 @@ public class BatchPutKvRequest extends Request {
         }
 
         /**
-         * <p>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</p>
+         * <p>The name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class BatchPutKvRequest extends Request {
             } 
 
             /**
-             * <p>The time when the key-value pair expires, which cannot be earlier than the current time. The value is a timestamp in seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
+             * <p>The expiration time as a UNIX timestamp in seconds. The value cannot be earlier than the current time. If both Expiration and ExpirationTtl are specified, ExpirationTtl takes precedence.</p>
              * 
              * <strong>example:</strong>
              * <p>1690081381</p>
@@ -197,7 +197,7 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * <p>The relative expiration time. Unit: seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</p>
+             * <p>The expiration time as a relative time in seconds. If both Expiration and ExpirationTtl are specified, ExpirationTtl takes precedence.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -208,7 +208,7 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * <p>The key name. The name can be up to 512 characters in length and cannot contain spaces or backslashes (\).</p>
+             * <p>The key name to set. The key name can be up to 512 characters in length and cannot contain spaces or backslashes (/).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -220,7 +220,7 @@ public class BatchPutKvRequest extends Request {
             }
 
             /**
-             * <p>The key content.</p>
+             * <p>The value of the key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

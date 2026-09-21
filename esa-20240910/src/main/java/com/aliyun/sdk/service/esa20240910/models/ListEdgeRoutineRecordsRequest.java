@@ -116,7 +116,7 @@ public class ListEdgeRoutineRecordsRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * <p>The page number for a paged query. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -128,7 +128,7 @@ public class ListEdgeRoutineRecordsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: <strong>500</strong>.</p>
+         * <p>The number of records per page for a paged query. Valid values: 1 to 500. Default value: <strong>500</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -140,12 +140,12 @@ public class ListEdgeRoutineRecordsRequest extends Request {
         }
 
         /**
-         * <p>The match mode to filter the record names.</p>
+         * <p>The matching mode used to filter by record name. Valid values:</p>
          * <ul>
          * <li><strong>fuzzy</strong>: fuzzy match.</li>
-         * <li><strong>prefix</strong>: match by prefix.</li>
-         * <li><strong>suffix</strong>: match by suffix.</li>
-         * <li><strong>exact</strong> (default): exact match .</li>
+         * <li><strong>prefix</strong>: prefix match.</li>
+         * <li><strong>suffix</strong>: suffix match.</li>
+         * <li><strong>exact</strong>: exact match (default).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListEdgeRoutineRecordsRequest extends Request {
         }
 
         /**
-         * <p>The record name.</p>
+         * <p>Filters by the specified record name.</p>
          * 
          * <strong>example:</strong>
          * <p>a.example.com</p>
@@ -170,7 +170,7 @@ public class ListEdgeRoutineRecordsRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

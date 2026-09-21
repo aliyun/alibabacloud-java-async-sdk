@@ -173,7 +173,10 @@ public class UpdateImageTransformRequest extends Request {
         } 
 
         /**
-         * AutoAvif.
+         * <p>The adaptive AVIF setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder autoAvif(String autoAvif) {
             this.putQueryParameter("AutoAvif", autoAvif);
@@ -182,7 +185,10 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * AutoWebp.
+         * <p>The adaptive WebP setting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder autoWebp(String autoWebp) {
             this.putQueryParameter("AutoWebp", autoWebp);
@@ -191,7 +197,7 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> interface.</p>
+         * <p>The configuration ID. You can call the <a href="https://help.aliyun.com/document_detail/2869056.html">ListImageTransforms</a> operation to obtain the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,10 +210,10 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to enable image transformation. Possible values:</p>
+         * <p>Specifies whether to enable image transformation. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,14 +226,14 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule content, used to match user requests with conditional expressions. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
          * <ul>
-         * <li>To match all incoming requests: Set the value to true.</li>
-         * <li>To match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
+         * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -236,10 +242,10 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Possible values:</p>
+         * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -252,7 +258,7 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -264,7 +270,10 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The execution order of the rule. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -273,7 +282,7 @@ public class UpdateImageTransformRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

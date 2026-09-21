@@ -93,7 +93,10 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * BatchConfigUsage.
+         * <p>The number of rules or rule sets for the specified phase under instance-level batch configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder batchConfigUsage(Long batchConfigUsage) {
             this.batchConfigUsage = batchConfigUsage;
@@ -101,7 +104,10 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceUsage.
+         * <p>The total number of rules or rule sets for the instance under the specified phase, including both site-level and instance-level rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder instanceUsage(Long instanceUsage) {
             this.instanceUsage = instanceUsage;
@@ -109,7 +115,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -120,7 +126,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of site usage.</p>
+         * <p>The list of site usage.</p>
          */
         public Builder sites(java.util.List<Sites> sites) {
             this.sites = sites;
@@ -199,7 +205,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Site ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -210,7 +216,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -221,7 +227,7 @@ public class ListWafUsageOfRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Usage of WAF rules/WAF rule sets.</p>
+             * <p>The number of WAF rules or WAF rule sets that have been used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

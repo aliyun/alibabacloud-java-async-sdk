@@ -145,7 +145,7 @@ public class DescribePreloadTasksRequest extends Request {
         } 
 
         /**
-         * <p>The content to prefetch. Exact match is supported.</p>
+         * <p>The query content. Exact match is used.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://a.com/1.jpg?b=2">http://a.com/1.jpg?b=2</a></p>
@@ -157,9 +157,9 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time. The date is in ISO 8601 format and uses UTC+0 time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time must be later than the start time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -184,7 +184,7 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 50.</p>
+         * <p>The page size. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>. Valid values: any integer from <strong>1</strong> to <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -196,7 +196,7 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -208,7 +208,7 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * <p>The start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time. The date is in ISO 8601 format and uses UTC+0 time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-22T17:00:00Z</p>
@@ -220,11 +220,11 @@ public class DescribePreloadTasksRequest extends Request {
         }
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The task execution status. Valid values:</p>
          * <ul>
-         * <li><strong>Complete</strong>: The task is complete.</li>
-         * <li><strong>Refreshing</strong>: The task is running.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
+         * <li><strong>Complte</strong>: Complete.</li>
+         * <li><strong>Refreshing</strong>: Prefetching.</li>
+         * <li><strong>Failed</strong>: Prefetch failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

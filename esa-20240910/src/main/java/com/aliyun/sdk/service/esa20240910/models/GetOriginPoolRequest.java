@@ -75,7 +75,7 @@ public class GetOriginPoolRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
+         * <p>The origin pool ID. To get it, call <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class GetOriginPoolRequest extends Request {
         }
 
         /**
-         * <p>The ID of the site, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. To get it, call <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,10 @@ public class UpgradeEnvironmentVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

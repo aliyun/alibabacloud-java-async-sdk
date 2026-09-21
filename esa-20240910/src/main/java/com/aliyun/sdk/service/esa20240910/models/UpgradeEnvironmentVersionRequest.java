@@ -75,7 +75,11 @@ public class UpgradeEnvironmentVersionRequest extends Request {
         } 
 
         /**
+         * <p>The environment name. The version of this environment is upgraded and deployed to the environment with the next priority level.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认环境</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -84,7 +88,11 @@ public class UpgradeEnvironmentVersionRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1245678****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

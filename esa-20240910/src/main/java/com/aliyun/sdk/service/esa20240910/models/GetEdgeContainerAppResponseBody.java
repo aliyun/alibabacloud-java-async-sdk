@@ -67,7 +67,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The basic information about the application.</p>
+         * <p>The basic application information.</p>
          */
         public Builder app(App app) {
             this.app = app;
@@ -248,7 +248,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of consecutive failed health checks required for an application to be considered as unhealthy.</p>
+             * <p>The number of consecutive failed health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -259,7 +259,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is used for health checks.</p>
+             * <p>The domain name used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -270,7 +270,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of health check status codes that indicate successful health checks.</p>
+             * <p>The range of HTTP status codes that indicate a successful health check.</p>
              * 
              * <strong>example:</strong>
              * <p>http_2xx</p>
@@ -292,7 +292,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP method that the health check request uses.</p>
+             * <p>The method used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>HEAD</p>
@@ -303,7 +303,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health check port.</p>
+             * <p>The Health Check Port of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -314,7 +314,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of consecutive successful health checks required for an application to be considered as healthy.</p>
+             * <p>The number of consecutive successful health checks required.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -338,8 +338,8 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             /**
              * <p>The health check type. Valid values:</p>
              * <ul>
-             * <li>l7</li>
-             * <li>l4</li>
+             * <li><strong>l7</strong>: Layer 7 gateway.</li>
+             * <li><strong>l4</strong>: Layer 4 gateway.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -351,7 +351,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The health check URL.</p>
+             * <p>The path used for the health check.</p>
              * 
              * <strong>example:</strong>
              * <p>/health_check</p>
@@ -575,7 +575,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
+             * <p>The creation time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-07-25T05:58:05Z</p>
@@ -586,7 +586,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name that is associated with the application. If no domain name is associated with the application, the value is an empty string.</p>
+             * <p>The domain name bound to the application. If no domain name is bound, an empty string is returned.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.1feel.cn">www.1feel.cn</a></p>
@@ -597,10 +597,10 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the gateway. Valid values:</p>
+             * <p>The gateway type. Valid values:</p>
              * <ul>
-             * <li>l7: Layer 7 gateway.</li>
-             * <li>l4: Layer 4 gateway.</li>
+             * <li><strong>l7</strong>: Layer 7 gateway.</li>
+             * <li><strong>l4</strong>: Layer 4 gateway.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -612,7 +612,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about health checks.</p>
+             * <p>The health check information.</p>
              */
             public Builder healthCheck(HealthCheck healthCheck) {
                 this.healthCheck = healthCheck;
@@ -631,7 +631,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether QUIC is enabled.</p>
+             * <p>Indicates whether QUIC support is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -642,7 +642,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks about the application.</p>
+             * <p>The remarks of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>test app</p>
@@ -653,7 +653,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The server port. Valid values: 1 to 65535.</p>
+             * <p>The service port number. Valid values: <strong>1 to 65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -666,9 +666,9 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             /**
              * <p>The status of the application. Valid values:</p>
              * <ul>
-             * <li>creating: The application is being created.</li>
-             * <li>failed: The application failed to be created.</li>
-             * <li>created: The application is created.</li>
+             * <li><strong>creating</strong>: Being created.</li>
+             * <li><strong>failed</strong>: Creation failed.</li>
+             * <li><strong>created</strong>: Created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -680,7 +680,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+             * <p>The backend port, which is also the service port of the application. Valid values: <strong>1 to 65535</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -691,7 +691,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+             * <p>The last modification time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-26T02:35:58Z</p>
@@ -702,7 +702,7 @@ public class GetEdgeContainerAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of versions of the application.</p>
+             * <p>The number of application versions.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

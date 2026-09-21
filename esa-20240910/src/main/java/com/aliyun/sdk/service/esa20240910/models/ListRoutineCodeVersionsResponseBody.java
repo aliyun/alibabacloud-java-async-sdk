@@ -106,7 +106,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code versions of the routine.</p>
+         * <p>The list of Edge Routine code versions.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
             this.codeVersions = codeVersions;
@@ -114,7 +114,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: 1.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -147,7 +147,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of code versions returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -203,7 +203,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Code version configuration items NotFoundStrategy.</p>
+             * <p>The NotFoundStrategy configuration item of the code version.</p>
              * 
              * <strong>example:</strong>
              * <p>SinglePageApplication</p>
@@ -364,7 +364,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the code version build.</p>
+             * <p>The build ID of the code version.</p>
              * 
              * <strong>example:</strong>
              * <p>25801233</p>
@@ -386,7 +386,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the code.</p>
+             * <p>The code version number.</p>
              * 
              * <strong>example:</strong>
              * <p>1723599747213377175</p>
@@ -397,7 +397,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Code version configuration items.</p>
+             * <p>The configuration items of the code version.</p>
              */
             public Builder confOptions(ConfOptions confOptions) {
                 this.confOptions = confOptions;
@@ -405,7 +405,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the code version was created.</p>
+             * <p>The time when the code version was created, in RFC 3339 format in the UTC time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-04-16T09:42:47Z</p>
@@ -416,7 +416,14 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployEnv.
+             * <p>The deployment environment. Valid values:</p>
+             * <ul>
+             * <li><strong>staging</strong>: staging environment.</li>
+             * <li><strong>production</strong>: production environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>staging</p>
              */
             public Builder deployEnv(String deployEnv) {
                 this.deployEnv = deployEnv;
@@ -424,10 +431,10 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Additional information about the code version.</p>
+             * <p>The additional information about the code version.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;approver&quot;:[&quot;348678&quot;,&quot;111133&quot;,&quot;411544&quot;]}</p>
+             * <p>{\&quot;approver\&quot;:[\&quot;348678\&quot;,\&quot;111133\&quot;,\&quot;411544\&quot;]}</p>
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -435,7 +442,7 @@ public class ListRoutineCodeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * HasEnvVars.
+             * <p>Indicates whether environment variables exist.</p>
              */
             public Builder hasEnvVars(Boolean hasEnvVars) {
                 this.hasEnvVars = hasEnvVars;

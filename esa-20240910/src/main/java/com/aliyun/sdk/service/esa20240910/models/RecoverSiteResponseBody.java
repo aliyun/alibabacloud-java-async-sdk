@@ -236,7 +236,16 @@ public class RecoverSiteResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessType.
+         * <p>The access type. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NS</strong>: access through NS hosting.</p>
+         * </li>
+         * <li><p><strong>CNAME</strong>: access through CNAME.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NS</p>
          */
         public Builder accessType(String accessType) {
             this.accessType = accessType;
@@ -244,7 +253,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * CnameZone.
+         * <p>The CNAME suffix of the site. For sites that are accessed through CNAME, this field indicates the CNAME suffix that needs to be configured for records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gf-test.hkrt.cn</p>
          */
         public Builder cnameZone(String cnameZone) {
             this.cnameZone = cnameZone;
@@ -252,7 +264,15 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * Coverage.
+         * <p>The acceleration region of the site. Valid values:</p>
+         * <ul>
+         * <li><strong>domestic</strong>: the Chinese mainland only.</li>
+         * <li><strong>global</strong>: global.</li>
+         * <li><strong>overseas</strong>: global (excluding the Chinese mainland).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>global</p>
          */
         public Builder coverage(String coverage) {
             this.coverage = coverage;
@@ -260,7 +280,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-03-11T01:23:21Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -268,7 +291,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The plan instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-9vjienwn****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -276,7 +302,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * NameServerList.
+         * <p>The list of name servers assigned to the site, separated by commas (,). When the site uses NS access, this field contains values. You need to change the DNS servers of the site to these name servers. Then you can verify the site ownership and activate the site.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1.example.com,ns2.example.com</p>
          */
         public Builder nameServerList(String nameServerList) {
             this.nameServerList = nameServerList;
@@ -284,7 +313,17 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * OfflineReason.
+         * <p>The reason why the site was deactivated. Valid values:</p>
+         * <ul>
+         * <li><strong>expiration_arrears</strong>: The subscription plan expired or the account has an overdue payment.</li>
+         * <li><strong>internally_disabled</strong>: The site was disabled by the system.</li>
+         * <li><strong>missing_icp</strong>: The domain name does not have an ICP filing.</li>
+         * <li><strong>content_violation</strong>: Content violation.</li>
+         * <li><strong>proactively_disabled</strong>: You proactively disabled the site or the site was disabled because the usage cap you configured was reached.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>expiration_ arrears</p>
          */
         public Builder offlineReason(String offlineReason) {
             this.offlineReason = offlineReason;
@@ -292,7 +331,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * PlanName.
+         * <p>The plan name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>basic</p>
          */
         public Builder planName(String planName) {
             this.planName = planName;
@@ -300,7 +342,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,7 +353,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-axxxxxx</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -316,7 +364,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -324,7 +375,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;
@@ -332,7 +386,16 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The site status. Valid values:</p>
+         * <ul>
+         * <li><strong>pending</strong>: The site is pending configuration.</li>
+         * <li><strong>active</strong>: The site is activated.</li>
+         * <li><strong>offline</strong>: The site is offline.</li>
+         * <li><strong>moved</strong>: The site has been replaced.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -340,7 +403,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-13T02:13:28Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -348,7 +414,10 @@ public class RecoverSiteResponseBody extends TeaModel {
         }
 
         /**
-         * VerifyCode.
+         * <p>The site ownership verification code. When the site is accessed through CNAME, this is the TXT verification code that needs to be configured.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_d516cb3740f81f0cef77d162edd1****</p>
          */
         public Builder verifyCode(String verifyCode) {
             this.verifyCode = verifyCode;

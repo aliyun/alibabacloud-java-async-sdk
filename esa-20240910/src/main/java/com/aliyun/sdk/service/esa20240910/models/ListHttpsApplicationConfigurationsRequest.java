@@ -156,12 +156,12 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Configuration type, which can be used to query global or rule-based configurations. Possible values:</p>
+         * <p>Configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
          * <ul>
-         * <li>global: Query global configuration.</li>
-         * <li>rule: Query rule-based configuration.</li>
+         * <li>global: Query global configurations.</li>
+         * <li>rule: Query rule configurations.</li>
          * </ul>
-         * <p>This parameter is optional. If not provided, it will not distinguish between global and rule-based configurations.</p>
+         * <p>This parameter is optional. If not specified, no distinction is made between global and rule configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -173,7 +173,7 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Page number, default is 1 if not provided.</p>
+         * <p>The page number for paginated queries. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page, maximum is 500, default is 500 if not provided.</p>
+         * <p>The number of entries per page for paginated queries. Valid values: 1-500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Rule name, which can be used to find the rule with the specified name.</p>
+         * <p>Rule name. You can query the rule whose name matches the specified value.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -209,7 +209,7 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>Site ID. You can obtain it by calling the <a href="~~ListSites~~">ListSites</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListHttpsApplicationConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration is effective, default is version 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: version 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

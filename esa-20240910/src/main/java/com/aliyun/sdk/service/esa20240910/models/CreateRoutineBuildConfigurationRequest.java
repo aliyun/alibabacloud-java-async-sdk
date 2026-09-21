@@ -264,7 +264,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         } 
 
         /**
-         * AssetsDirectory.
+         * <p>The static resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/user</p>
          */
         public Builder assetsDirectory(String assetsDirectory) {
             this.putQueryParameter("AssetsDirectory", assetsDirectory);
@@ -273,7 +276,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * BuildBranches.
+         * <p>The branches that trigger a build. Set this parameter to * for all branches. To specify multiple branches, separate branch names with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>feature/test,hotfix/test</p>
          */
         public Builder buildBranches(String buildBranches) {
             this.putQueryParameter("BuildBranches", buildBranches);
@@ -282,7 +288,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * BuildCommand.
+         * <p>The build command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm run build</p>
          */
         public Builder buildCommand(String buildCommand) {
             this.putQueryParameter("BuildCommand", buildCommand);
@@ -291,7 +300,7 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variables.</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             String environmentVariablesShrink = shrink(environmentVariables, "EnvironmentVariables", "json");
@@ -301,7 +310,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * GitAccountId.
+         * <p>The Git account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3472021274759488</p>
          */
         public Builder gitAccountId(Long gitAccountId) {
             this.putQueryParameter("GitAccountId", gitAccountId);
@@ -310,7 +322,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * GitPlatform.
+         * <p>The Git platform. Valid values: github, gitee, and upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>github</p>
          */
         public Builder gitPlatform(String gitPlatform) {
             this.putQueryParameter("GitPlatform", gitPlatform);
@@ -319,7 +334,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * InstallCommand.
+         * <p>The install command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm install</p>
          */
         public Builder installCommand(String installCommand) {
             this.putQueryParameter("InstallCommand", installCommand);
@@ -328,7 +346,14 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * IsPrivate.
+         * <p>Specifies whether the repository is private. Valid values:</p>
+         * <ul>
+         * <li>true: The repository is private.</li>
+         * <li>false: The repository is not private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPrivate(Boolean isPrivate) {
             this.putQueryParameter("IsPrivate", isPrivate);
@@ -337,6 +362,7 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,7 +375,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * ProductionBranch.
+         * <p>The production branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder productionBranch(String productionBranch) {
             this.putQueryParameter("ProductionBranch", productionBranch);
@@ -358,7 +387,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * Repository.
+         * <p>The repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>webdeck</p>
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);
@@ -367,7 +399,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * RootDirectory.
+         * <p>The root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/admin</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);
@@ -376,7 +411,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * RoutineEntry.
+         * <p>The ER entry file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder routineEntry(String routineEntry) {
             this.putQueryParameter("RoutineEntry", routineEntry);
@@ -385,6 +423,7 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ER name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -397,7 +436,10 @@ public class CreateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * <p>The build template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>react-router</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

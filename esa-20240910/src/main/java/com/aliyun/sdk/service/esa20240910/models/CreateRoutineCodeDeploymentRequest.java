@@ -105,7 +105,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         } 
 
         /**
-         * <p>The configuration list of phased release version numbers. A maximum of two versions are supported, and the sum of the total proportions is equal to 100.</p>
+         * <p>The list of percentage-based canary release version configurations. A maximum of two versions are supported, and the total percentage must equal 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder codeVersions(java.util.List<CodeVersions> codeVersions) {
@@ -116,7 +116,11 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The name of the environment. Only supports test environment <code>staging</code> or production environment <code>production</code>.</p>
+         * <p>The environment name.<br>Valid values:</p>
+         * <ul>
+         * <li><code>staging</code>: staging environment </li>
+         * <li><code>production</code>: production environment</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +133,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the Edge Function Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +146,10 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
         }
 
         /**
-         * <p>The deployment policy. Valid value: percentage.</p>
+         * <p>The deployment strategy.<br>Valid values:</p>
+         * <ul>
+         * <li><code>percentage</code>: percentage mode</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +223,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
             } 
 
             /**
-             * <p>The version of the code.</p>
+             * <p>The code version number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -228,7 +235,7 @@ public class CreateRoutineCodeDeploymentRequest extends Request {
             }
 
             /**
-             * <p>The phased release ratio of the code version. Valid values: 1 to 100.</p>
+             * <p>The canary release percentage for the code version. Valid values: 1 to 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -177,9 +177,6 @@ public class CreateRoutineWithAssetsCodeVersionRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

@@ -93,7 +93,18 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionType.
+         * <p>The action taken on requests that trigger the control. Valid values:</p>
+         * <ul>
+         * <li><p><strong>observe</strong>: Requests are monitored.</p>
+         * </li>
+         * <li><p><strong>deny</strong>: Requests are blocked.</p>
+         * </li>
+         * <li><p><strong>js</strong>: JS challenges are issued.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>js</p>
          */
         public Builder actionType(String actionType) {
             this.actionType = actionType;
@@ -101,7 +112,16 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * <p>Indicates whether automatic frequency control is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -109,7 +129,18 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The protection level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>loose</strong>: Loose protection.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: Normal protection.</p>
+         * </li>
+         * <li><p><strong>strict</strong>: Strict protection.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder level(String level) {
             this.level = level;
@@ -117,7 +148,7 @@ public class SetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F32C57AA-7BF8-49AE-A2CC-9F42390F5A19</p>

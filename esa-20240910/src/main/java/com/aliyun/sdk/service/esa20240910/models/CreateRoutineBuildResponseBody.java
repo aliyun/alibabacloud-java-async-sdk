@@ -80,7 +80,10 @@ public class CreateRoutineBuildResponseBody extends TeaModel {
         } 
 
         /**
-         * PipeLineRunId.
+         * <p>The build ID in Apsara Devops.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pipeLineRunId(Long pipeLineRunId) {
             this.pipeLineRunId = pipeLineRunId;
@@ -88,7 +91,10 @@ public class CreateRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class CreateRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineBuildId.
+         * <p>The ER build task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159782040838348</p>
          */
         public Builder routineBuildId(Long routineBuildId) {
             this.routineBuildId = routineBuildId;

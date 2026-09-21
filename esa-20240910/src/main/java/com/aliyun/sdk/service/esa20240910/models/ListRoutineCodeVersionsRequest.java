@@ -102,11 +102,11 @@ public class ListRoutineCodeVersionsRequest extends Request {
         } 
 
         /**
-         * <p>The function name.</p>
+         * <p>The name of the Edge Routine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ListRoutineCodeVersions</p>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -115,7 +115,7 @@ public class ListRoutineCodeVersionsRequest extends Request {
         }
 
         /**
-         * <p>The page number of the returned page. Default value: 1. Valid values: 1 and 2.</p>
+         * <p>The page number. Default value: 1. Maximum value: 2.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -139,7 +139,7 @@ public class ListRoutineCodeVersionsRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for fuzzy search.</p>
+         * <p>The keyword for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>hello</p>

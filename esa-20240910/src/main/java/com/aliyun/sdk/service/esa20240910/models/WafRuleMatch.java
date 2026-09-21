@@ -38,6 +38,9 @@ public class WafRuleMatch extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Negate")
     private Boolean negate;
 
+    @com.aliyun.core.annotation.NameInMap("Parent")
+    private String parent;
+
     private WafRuleMatch(Builder builder) {
         this.convertToLower = builder.convertToLower;
         this.criteria = builder.criteria;
@@ -46,6 +49,7 @@ public class WafRuleMatch extends TeaModel {
         this.matchType = builder.matchType;
         this.matchValue = builder.matchValue;
         this.negate = builder.negate;
+        this.parent = builder.parent;
     }
 
     public static Builder builder() {
@@ -109,6 +113,13 @@ public class WafRuleMatch extends TeaModel {
         return this.negate;
     }
 
+    /**
+     * @return parent
+     */
+    public String getParent() {
+        return this.parent;
+    }
+
     public static final class Builder {
         private Boolean convertToLower; 
         private java.util.List<WafRuleMatch> criteria; 
@@ -117,6 +128,7 @@ public class WafRuleMatch extends TeaModel {
         private String matchType; 
         private Object matchValue; 
         private Boolean negate; 
+        private String parent; 
 
         private Builder() {
         } 
@@ -129,10 +141,11 @@ public class WafRuleMatch extends TeaModel {
             this.matchType = model.matchType;
             this.matchValue = model.matchValue;
             this.negate = model.negate;
+            this.parent = model.parent;
         } 
 
         /**
-         * ConvertToLower.
+         * <p>The case-insensitive value setting.</p>
          */
         public Builder convertToLower(Boolean convertToLower) {
             this.convertToLower = convertToLower;
@@ -140,7 +153,7 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * Criteria.
+         * <p>The logic list.</p>
          */
         public Builder criteria(java.util.List<WafRuleMatch> criteria) {
             this.criteria = criteria;
@@ -148,7 +161,10 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * Logic.
+         * <p>The logical relationship.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder logic(String logic) {
             this.logic = logic;
@@ -156,7 +172,10 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * MatchOperator.
+         * <p>The match operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eq</p>
          */
         public Builder matchOperator(String matchOperator) {
             this.matchOperator = matchOperator;
@@ -164,7 +183,10 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * MatchType.
+         * <p>The match field.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
          */
         public Builder matchType(String matchType) {
             this.matchType = matchType;
@@ -172,7 +194,10 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * MatchValue.
+         * <p>The match value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.1.1.1</p>
          */
         public Builder matchValue(Object matchValue) {
             this.matchValue = matchValue;
@@ -180,10 +205,21 @@ public class WafRuleMatch extends TeaModel {
         }
 
         /**
-         * Negate.
+         * <p>The negation of the match result.</p>
          */
         public Builder negate(Boolean negate) {
             this.negate = negate;
+            return this;
+        }
+
+        /**
+         * <p>The primary row key of the parent group. This is used for two-level drop-down positioning of enumeration subkey fields. For example, the Parent of ali.websdk.umid is ali.websdk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali.websdk</p>
+         */
+        public Builder parent(String parent) {
+            this.parent = parent;
             return this;
         }
 

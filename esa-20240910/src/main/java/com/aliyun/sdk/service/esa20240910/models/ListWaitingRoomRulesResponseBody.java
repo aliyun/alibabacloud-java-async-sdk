@@ -173,11 +173,11 @@ public class ListWaitingRoomRulesResponseBody extends TeaModel {
              * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configuration. There are two usage scenarios:</p>
              * <ul>
              * <li>Match all incoming requests: set the value to true</li>
-             * <li>Match specific requests: set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match specific requests: set the value to a custom expression, e.g., (http.host eq \&quot;video.example.com\&quot;)</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>(http.request.uri.path.file_name eq &quot;jpg&quot;)</p>
+             * <p>(http.request.uri.path.file_name eq \&quot;jpg\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;

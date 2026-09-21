@@ -119,7 +119,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned configurations.</p>
+         * <p>The configuration information.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>83</p>
@@ -171,7 +171,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -396,10 +396,10 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Bypass mode. Valid values:</p>
+             * <p>The bypass mode. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -422,9 +422,9 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration type to query. Valid values:</p>
+             * <p>The configuration type. You can use this parameter to query global configurations or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: global configurations.</li>
+             * <li>global: queries global configurations.</li>
              * <li>rule: queries rule configurations.</li>
              * </ul>
              * 
@@ -437,10 +437,10 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The exception origin switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</p>
+             * <p>The fallback-to-origin switch. After this switch is enabled, requests are sent to the origin server if the function encounters an exception such as CPU usage exceeding the limit. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -454,8 +454,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The configuration mode. Valid values:</p>
              * <ul>
-             * <li>simple: Simple mode.</li>
-             * <li>custom: Custom mode.</li>
+             * <li>simple: simple mode.</li>
+             * <li>custom: custom mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -469,8 +469,8 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             /**
              * <p>The route switch. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -493,7 +493,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The routine name.</p>
+             * <p>The name of the Edge Routine.</p>
              * 
              * <strong>example:</strong>
              * <p>test-routine1</p>
@@ -507,7 +507,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
              * <p>The rule content.</p>
              * 
              * <strong>example:</strong>
-             * <p>(http.host eq &quot;video.example.com&quot;)</p>
+             * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -515,7 +515,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order in which the rule is executed.</p>
+             * <p>The rule execution order.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -526,7 +526,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>554889455535696</p>
@@ -537,7 +537,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The website name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>test.com</p>
@@ -548,7 +548,7 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the website configurations.</p>
+             * <p>The version number of the site configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -559,7 +559,10 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The ER timeout period. Valid values: 5 to 60. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;

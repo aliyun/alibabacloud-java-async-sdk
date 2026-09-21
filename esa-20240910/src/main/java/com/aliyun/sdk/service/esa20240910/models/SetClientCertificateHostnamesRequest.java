@@ -89,7 +89,7 @@ public class SetClientCertificateHostnamesRequest extends Request {
         } 
 
         /**
-         * <p>The domain names to associate.</p>
+         * <p>The list of domain names to associate.</p>
          * <p>This parameter is required.</p>
          */
         public Builder hostnames(java.util.List<String> hostnames) {
@@ -100,10 +100,10 @@ public class SetClientCertificateHostnamesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the client CA certificate.</p>
+         * <p>The client CA certificate ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>babab9db65ee5efcca9f3d41d4b50d66</p>
+         * <p>babab9db65ee5efcca9f3d41d4b50d**</p>
          */
         public Builder id(String id) {
             this.putBodyParameter("Id", id);
@@ -112,11 +112,11 @@ public class SetClientCertificateHostnamesRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890123</p>
+         * <p>123456789****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

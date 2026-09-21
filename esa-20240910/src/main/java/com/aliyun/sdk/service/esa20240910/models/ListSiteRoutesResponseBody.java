@@ -119,7 +119,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned configurations.</p>
+         * <p>The configuration list in the response.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -171,7 +171,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -372,8 +372,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             /**
              * <p>The bypass mode. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -396,10 +396,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration type to query. Valid values:</p>
+             * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: global configurations.</li>
-             * <li>rule: queries rule configurations.</li>
+             * <li>global: Queries global configurations.</li>
+             * <li>rule: Queries rule configurations.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -411,7 +411,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Fallback.
+             * <p>The CDN fallback. Valid values:</p>
+             * <ul>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>on</p>
              */
             public Builder fallback(String fallback) {
                 this.fallback = fallback;
@@ -419,10 +426,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration mode. Specifies whether to check the image used by the instance supports hot migration. Valid values:</p>
+             * <p>The configuration mode. Valid values:</p>
              * <ul>
-             * <li>simple: Simple Mode</li>
-             * <li>custom: Custom Mode</li>
+             * <li>simple: Simple mode.</li>
+             * <li>custom: Custom mode.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -436,8 +443,8 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             /**
              * <p>The route switch. Valid values:</p>
              * <ul>
-             * <li>on</li>
-             * <li>off</li>
+             * <li>on: Enabled.</li>
+             * <li>off: Disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -460,7 +467,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The function name.</p>
+             * <p>The Edge Routine name.</p>
              * 
              * <strong>example:</strong>
              * <p>test-routine1</p>
@@ -474,7 +481,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
              * <p>The rule content.</p>
              * 
              * <strong>example:</strong>
-             * <p>(http.host eq &quot;video.example.com&quot;)</p>
+             * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -482,7 +489,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order in which the rule is executed.</p>
+             * <p>The execution order of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -493,7 +500,7 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number of the website.</p>
+             * <p>The version number of the site.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -504,7 +511,10 @@ public class ListSiteRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The Edge Routine timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;

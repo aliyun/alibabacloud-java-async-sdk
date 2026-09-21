@@ -144,7 +144,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         } 
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3528160969****</p>
@@ -156,12 +156,12 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</p>
+         * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
          * <ul>
-         * <li>global: Query global configuration.</li>
-         * <li>rule: Query rule-based configuration.</li>
+         * <li>global: queries global configurations.</li>
+         * <li>rule: queries rule configurations.</li>
          * </ul>
-         * <p>This parameter is optional; if not provided, it does not distinguish between global and rule-based configurations.</p>
+         * <p>This parameter is optional. If you do not specify this parameter, both global and rule configurations are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -173,7 +173,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Page number, defaulting to 1 if not provided.</p>
+         * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -185,7 +185,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page, with a maximum of 500. Defaults to 500 if not provided.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -197,7 +197,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Rule name, which can be used to find the rule with the specified name.</p>
+         * <p>The rule name. You can use this parameter to query the rule that matches the specified name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -209,7 +209,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +222,7 @@ public class ListNetworkOptimizationsRequest extends Request {
         }
 
         /**
-         * <p>Site version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

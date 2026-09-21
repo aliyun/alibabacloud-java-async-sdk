@@ -142,12 +142,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * <p>The configuration type. You can use this parameter to query global configurations or feature configurations. This parameter takes effect only if the functionName parameter is passed.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>global</li>
-         * <li>rule</li>
-         * </ul>
+         * <p>The configuration type. You can use this parameter to query global or feature configurations. This parameter takes effect only when functionName is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>global</p>
@@ -159,7 +154,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number for a paged query. The value must be greater than or equal to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +166,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Maximum value: 500. Default value: 500.</p>
+         * <p>The number of entries per page for a paged query. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -183,7 +178,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * <p>The rule name. This parameter takes effect only when parameter functionName is specified.</p>
+         * <p>The route name. You can use this parameter to query the rule whose name matches the specified value. This parameter takes effect only when functionName is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>test_route</p>
@@ -195,7 +190,7 @@ public class ListSiteRoutesRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

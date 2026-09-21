@@ -59,7 +59,10 @@ public class GetRoutineBuildConfigurationRequest extends Request {
         } 
 
         /**
-         * RoutineName.
+         * <p>The ER name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-routine</p>
          */
         public Builder routineName(String routineName) {
             this.putQueryParameter("RoutineName", routineName);

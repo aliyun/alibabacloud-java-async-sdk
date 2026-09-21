@@ -106,7 +106,7 @@ public class ListKvsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The key-value pairs.</p>
+         * <p>The list of key-value pairs retrieved in this traversal.</p>
          */
         public Builder keys(java.util.List<Keys> keys) {
             this.keys = keys;
@@ -114,7 +114,7 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -125,7 +125,7 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -147,7 +147,7 @@ public class ListKvsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -216,7 +216,7 @@ public class ListKvsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key name.</p>
+             * <p>The name of the key.</p>
              * 
              * <strong>example:</strong>
              * <p>Key1</p>
@@ -227,7 +227,7 @@ public class ListKvsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the key was last updated.</p>
+             * <p>The update time of the key in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</p>
              * 
              * <strong>example:</strong>
              * <p>2021-12-13T07:46:03Z</p>

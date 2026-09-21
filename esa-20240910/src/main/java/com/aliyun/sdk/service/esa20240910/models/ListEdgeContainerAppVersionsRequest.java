@@ -144,7 +144,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         } 
 
         /**
-         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * <p>The application ID. You can call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation to obtain the application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,11 +157,11 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. Valid values:</p>
+         * <p>The sort field. Valid values:</p>
          * <ul>
-         * <li>Name: the version name.</li>
-         * <li>CreateTime: the time when the version was created.</li>
-         * <li>UpdateTime: the time when the version was last modified.</li>
+         * <li><strong>Name</strong>: the version name.</li>
+         * <li><strong>CreateTime</strong>: the version creation time.</li>
+         * <li><strong>ModifyTime</strong>: the version modification time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -174,14 +174,16 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The order in which you want to sort the query results. Valid values:</p>
+         * <p>The sort direction. Valid values:</p>
          * <ul>
-         * <li>ASC: in ascending order.</li>
-         * <li>DESC: in descending order.</li>
+         * <li><p><strong>Asc</strong>: ascending order.</p>
+         * </li>
+         * <li><p><strong>Desc</strong>: descending order.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>DESC</p>
+         * <p>Desc</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -190,7 +192,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: 1 to 65535.</p>
+         * <p>The page number. Valid values: any integer from <strong>1</strong> to <strong>65535</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -202,7 +204,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         * <p>The page size. Valid values: any integer from <strong>1</strong> to <strong>100</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,7 +216,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The keyword used for the search.</p>
+         * <p>The query parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>ver-100568263967926****</p>
@@ -226,7 +228,7 @@ public class ListEdgeContainerAppVersionsRequest extends Request {
         }
 
         /**
-         * <p>The parameter used for fuzzy search. Valid values: VersionId and Name.</p>
+         * <p>The type for fuzzy match. Supported values: VersionId and Name.</p>
          * 
          * <strong>example:</strong>
          * <p>VersionId</p>

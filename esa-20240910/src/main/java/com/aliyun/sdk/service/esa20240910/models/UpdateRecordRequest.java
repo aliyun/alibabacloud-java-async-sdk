@@ -225,7 +225,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The business scenario of the record for acceleration. Leave the parameter empty if your record is not proxied. Valid values:</p>
+         * <p>The business scenario for record acceleration. This parameter is not required for records without acceleration enabled. Valid values:</p>
          * <ul>
          * <li><strong>video_image</strong>: video and image.</li>
          * <li><strong>api</strong>: API.</li>
@@ -242,7 +242,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The comments of the record.</p>
+         * <p>The comment for the record.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a remark.</p>
@@ -254,7 +254,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The DNS record information. The format of this field varies based on the record type. For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">Add DNS records</a>.</p>
+         * <p>The DNS information of the record. The content varies depending on the record type. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">documentation</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,10 +270,10 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The origin host policy. This policy takes effect when the record type is CNAME. You can set the policy in two modes:</p>
+         * <p>The back-to-origin HOST policy. This parameter takes effect when the record type is CNAME. Settings the HOST policy for back-to-origin requests. Valid values:</p>
          * <ul>
-         * <li><strong>follow_hostname</strong>: match the requested domain name.</li>
-         * <li><strong>follow_origin_domain</strong>: match the origin&quot;s domain name.</li>
+         * <li><strong>follow_hostname</strong>: follows the host record.</li>
+         * <li><strong>follow_origin_domain</strong>: follows the Origin Domain Name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,10 +304,10 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</p>
+         * <p>Specifies whether to enable proxy acceleration for the record. Only CNAME records and A/AAAA records support proxy acceleration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enable proxy acceleration.</li>
+         * <li><strong>false</strong>: Disable proxy acceleration.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The record ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a>.</p>
+         * <p>The ID of the record. You can call <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> to obtain the record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,15 +333,15 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The type of the origin for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
+         * <p>The origin server type of the CNAME record. This parameter is required when you add a CNAME record. Valid values:</p>
          * <ul>
-         * <li><strong>OSS</strong> : OSS origin.</li>
-         * <li><strong>S3</strong> : S3 origin.</li>
-         * <li><strong>LB</strong>: Load Balancer origin.</li>
-         * <li><strong>OP</strong>: origin in an origin pool.</li>
-         * <li><strong>Domain</strong>: common domain name.</li>
+         * <li><strong>OSS</strong>: OSS origin server.</li>
+         * <li><strong>S3</strong>: S3 origin server.</li>
+         * <li><strong>LB</strong>: load balancing origin server.</li>
+         * <li><strong>OP</strong>: IPAM pool origin server.</li>
+         * <li><strong>Domain</strong>: standard domain name origin server.</li>
          * </ul>
-         * <p>If you leave the parameter empty or set its value as null, the default is Domain, which is common domain name.</p>
+         * <p>If this parameter is not specified or is left empty, the default value is Domain, which indicates a standard domain name origin server type.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -353,7 +353,7 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * <p>The TTL of the record. Unit: seconds. The range is 30 to 86,400, or 1. If the value is 1, the TTL of the record is determined by the system.</p>
+         * <p>The time-to-live (TTL) of the record, in seconds. Valid values: <strong>30 to 86400</strong>, or 1. A value of 1 indicates that the TTL of the record is automatically determined.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -365,7 +365,10 @@ public class UpdateRecordRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The DNS type of the record, such as A/AAAA, CNAME, or TXT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A/AAAA</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -472,7 +475,7 @@ public class UpdateRecordRequest extends Request {
             } 
 
             /**
-             * <p>The access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
+             * <p>The AccessKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin authentication type is private cross-account read, or when the origin server type is S3 and the origin authentication type is private read.</p>
              * 
              * <strong>example:</strong>
              * <p>VIxuvJSA2S03f******kp208dy5w7</p>
@@ -483,11 +486,11 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The authentication type of the origin server. Different origins support different authentication types. The type of origin refers to the SourceType parameter in this operation. If the type of origin is OSS or S3, you must specify the authentication type of the origin. Valid values:</p>
+             * <p>The origin authentication type. Different origin server types support different authentication types. The origin server type refers to the SourceType parameter in this operation. When the origin server type is OSS or S3, you must specify the origin authentication type. Valid values:</p>
              * <ul>
-             * <li><strong>public</strong>: public read. Select this value when the origin type is OSS or S3 and the origin access is public read.</li>
-             * <li><strong>private</strong>: private read. Select this value when the origin type is S3 and the origin access is private read.</li>
-             * <li><strong>private_same_account</strong>: private read under the same account. Select this value when the origin type is OSS, the origins belong to the same Alibaba Cloud account, and the origins have private read access.</li>
+             * <li><strong>public</strong>: public read. Select this value when the origin server type is OSS or S3 and the origin server allows public read access.</li>
+             * <li><strong>private</strong>: private read. Select this value when the origin server type is S3 and the origin server allows only private read access.</li>
+             * <li><strong>private_same_account</strong>: private same-account read. Select this value when the origin server type is OSS, the origin server is under the same Alibaba Cloud account, and the origin server allows only private read access.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -499,12 +502,14 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The version of the signature algorithm. This parameter is required when the origin type is S3 and AuthType is private. The following two types are supported:</p>
+             * <p>The signature algorithm version. This parameter is required when the origin server type is S3 and the origin authentication type is private read. Valid values:</p>
              * <ul>
-             * <li><strong>v2</strong></li>
-             * <li><strong>v4</strong></li>
+             * <li><p><strong>v2</strong></p>
+             * </li>
+             * <li><p><strong>v4</strong></p>
+             * </li>
              * </ul>
-             * <p>If you leave this parameter empty, the default value v4 is used.</p>
+             * <p>Default value: v4.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>
@@ -515,7 +520,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The secret access key of the account to which the origin server belongs. This parameter is required when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</p>
+             * <p>The SecretKey of the account to which the origin server belongs. This parameter is required when the origin server type is OSS and the origin authentication type is private cross-account read, or when the origin server type is S3 and the origin authentication type is private read.</p>
              * 
              * <strong>example:</strong>
              * <p>u0Nkg5gBK*******QF5wvKMM504JUHt</p>
@@ -526,7 +531,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The region of the origin. If the origin type is S3, you must specify this value. You can get the region information from the official website of S3.</p>
+             * <p>The region to which the origin server belongs. This parameter is required when the origin server type is S3. Obtain the region from the official S3 website.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -752,7 +757,7 @@ public class UpdateRecordRequest extends Request {
             } 
 
             /**
-             * <p>The encryption algorithm used for the record, specified within the range from 0 to 255. This parameter is required when you add CERT or SSHFP records.</p>
+             * <p>The encryption algorithm used by the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add CERT or SSHFP records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -763,7 +768,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The public key of the certificate. This parameter is required when you add CERT, SMIMEA, or TLSA records.</p>
+             * <p>The public key certificate information of the record. This parameter is required when you add CERT, SMIMEA, or TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>dGVzdGFkYWxrcw==</p>
@@ -774,7 +779,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The public key fingerprint of the record. This parameter is required when you add a SSHFP record.</p>
+             * <p>The public key fingerprint value of the record. This parameter is required when you add SSHFP records.</p>
              * 
              * <strong>example:</strong>
              * <p>abcdef1234567890</p>
@@ -785,7 +790,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The flag bit of the record. The Flag for a CAA record indicates its priority and how it is processed, specified within the range of 0 to 255. This parameter is required when you add a CAA record.</p>
+             * <p>The flag of the record. The Flag of a CAA record indicates its priority and processing method. Valid values: <strong>0 to 255</strong>. This parameter is required when you add CAA records.</p>
              * 
              * <strong>example:</strong>
              * <p>128</p>
@@ -796,7 +801,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The public key identification for the record, specified within the range of 0 to 65,535. This parameter is required when you add a CAA record.</p>
+             * <p>The public key identifier of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add CERT records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -807,7 +812,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The algorithm policy used to match or validate the certificate, specified within the range 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * <p>The algorithm policy used by the record for matching or verifying certificates. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -818,7 +823,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The port of the record, specified within the range of 0 to 65,535. This parameter is required when you add an SRV record.</p>
+             * <p>The port of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add SRV records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -829,7 +834,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The priority of the record, specified within the range of 0 to 65,535. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, and URI records.</p>
+             * <p>The priority of the record. Valid values: <strong>0 to 65535</strong>. A smaller value indicates a higher priority. This parameter is required when you add MX, SRV, or URI records.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -840,7 +845,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The type of certificate or public key, specified within the range of 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * <p>The type of certificate or public key used by the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -851,7 +856,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The label of the record. The Tag of a CAA record indicate its specific type and usage. This parameter is required when you add a CAA record.</p>
+             * <p>The tag of the record. The Tag of a CAA record indicates its specific type and purpose. This parameter is required when you add CAA records.</p>
              * 
              * <strong>example:</strong>
              * <p>issue</p>
@@ -862,7 +867,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records). This parameter is required when you add CERT or SSHFP records.</p>
+             * <p>The certificate type of the record (for CERT records) or the public key type (for SSHFP records). This parameter is required when you add CERT or SSHFP records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -873,7 +878,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The usage identifier of the record, specified within the range of 0 to 255. This parameter is required when you add SMIMEA or TLSA records.</p>
+             * <p>The usage identifier of the record. Valid values: <strong>0 to 255</strong>. This parameter is required when you add SMIMEA or TLSA records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -884,16 +889,16 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The record value or part of the record content. This parameter is required when you add A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. It has different meanings based on different types of records:</p>
+             * <p>The record value or partial content. This parameter is required when you add A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI records. The meaning varies depending on the record type:</p>
              * <ul>
-             * <li><strong>A/AAAA</strong>: the IP address(es). Separate multiple IPs with commas (,). You must have at least one IPv4 address.</li>
-             * <li><strong>CNAME</strong>: the target domain name.</li>
-             * <li><strong>NS</strong>: the name servers for the domain name.</li>
-             * <li><strong>MX</strong>: a valid domain name of the target mail server.</li>
-             * <li><strong>TXT</strong>: a valid text string.</li>
-             * <li><strong>CAA</strong>: a valid domain name of the certificate authority.</li>
-             * <li><strong>SRV</strong>: a valid domain name of the target host.</li>
-             * <li><strong>URI</strong>: a valid URI string.</li>
+             * <li><strong>A/AAAA</strong>: The IP address to which the record points. Separate multiple IP addresses with commas (,). At least one IPv4 address is required.</li>
+             * <li><strong>CNAME</strong>: The target domain name to which the record points.</li>
+             * <li><strong>NS</strong>: The name server for the specified domain name.</li>
+             * <li><strong>MX</strong>: A valid target mail server domain name.</li>
+             * <li><strong>TXT</strong>: A valid text string.</li>
+             * <li><strong>CAA</strong>: A valid certification authority domain name.</li>
+             * <li><strong>SRV</strong>: A valid target host domain name.</li>
+             * <li><strong>URI</strong>: A valid URI string.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -905,7 +910,7 @@ public class UpdateRecordRequest extends Request {
             }
 
             /**
-             * <p>The weight of the record, specified within the range of 0 to 65,535. This parameter is required when you add SRV or URI records.</p>
+             * <p>The weight of the record. Valid values: <strong>0 to 65535</strong>. This parameter is required when you add SRV or URI records.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>

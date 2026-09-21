@@ -54,7 +54,7 @@ public class UpdateWaitingRoomRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID, used for tracking the progress of request processing.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9bfe9d95-7bf6-469d-a628-ed7bc9f25073</p>

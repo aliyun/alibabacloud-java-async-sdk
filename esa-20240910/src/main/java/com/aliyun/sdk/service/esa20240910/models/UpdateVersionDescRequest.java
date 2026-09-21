@@ -90,7 +90,11 @@ public class UpdateVersionDescRequest extends Request {
         } 
 
         /**
+         * <p>The description of the version.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>更新版本。</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -99,10 +103,11 @@ public class UpdateVersionDescRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>UpdateVersionDesc</p>
+         * <p>134567****</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -111,7 +116,11 @@ public class UpdateVersionDescRequest extends Request {
         }
 
         /**
+         * <p>The version number to be updated.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

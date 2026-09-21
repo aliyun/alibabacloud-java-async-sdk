@@ -59,7 +59,7 @@ public class GetListRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the custom list, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
+         * <p>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>40000001</p>

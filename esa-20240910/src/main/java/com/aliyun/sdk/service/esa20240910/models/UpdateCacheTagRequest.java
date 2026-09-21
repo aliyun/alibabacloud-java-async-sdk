@@ -104,8 +104,10 @@ public class UpdateCacheTagRequest extends Request {
         /**
          * <p>Specifies whether to ignore case sensitivity. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li><p>on</p>
+         * </li>
+         * <li><p>off</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

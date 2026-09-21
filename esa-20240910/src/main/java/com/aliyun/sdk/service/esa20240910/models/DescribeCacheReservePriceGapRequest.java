@@ -73,7 +73,10 @@ public class DescribeCacheReservePriceGapRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-cr-9tuv*********</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class DescribeCacheReservePriceGapRequest extends Request {
         }
 
         /**
-         * TargetQuotaGb.
+         * <p>The requested cache size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder targetQuotaGb(Long targetQuotaGb) {
             this.putQueryParameter("TargetQuotaGb", targetQuotaGb);

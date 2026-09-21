@@ -116,6 +116,7 @@ public class ListUserWafRulesetsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,10 @@ public class ListUserWafRulesetsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +141,10 @@ public class ListUserWafRulesetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries to return on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +153,28 @@ public class ListUserWafRulesetsRequest extends Request {
         }
 
         /**
-         * Phase.
+         * <p>Specifies the execution phase of the WAF rule.</p>
+         * <ul>
+         * <li><p><code>http_whitelist</code>: whitelist rule</p>
+         * </li>
+         * <li><p><code>http_custom</code>: custom rule</p>
+         * </li>
+         * <li><p><code>http_managed</code>: managed rule</p>
+         * </li>
+         * <li><p><code>http_anti_scan</code>: anti-scan rule</p>
+         * </li>
+         * <li><p><code>http_ratelimit</code>: rate limit rule</p>
+         * </li>
+         * <li><p><code>ip_access_rule</code>: IP access rule</p>
+         * </li>
+         * <li><p><code>http_bot</code>: advanced mode bot</p>
+         * </li>
+         * <li><p><code>http_security_level_rule</code>: security rule</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>http_custom</p>
          */
         public Builder phase(String phase) {
             this.putQueryParameter("Phase", phase);
@@ -155,7 +183,7 @@ public class ListUserWafRulesetsRequest extends Request {
         }
 
         /**
-         * QueryArgs.
+         * <p>Parameters for filtering and sorting the results.</p>
          */
         public Builder queryArgs(QueryArgs queryArgs) {
             String queryArgsShrink = shrink(queryArgs, "QueryArgs", "json");
@@ -237,7 +265,7 @@ public class ListUserWafRulesetsRequest extends Request {
             } 
 
             /**
-             * Desc.
+             * <p>Specifies whether to sort results in descending order.</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -245,7 +273,10 @@ public class ListUserWafRulesetsRequest extends Request {
             }
 
             /**
-             * NameLike.
+             * <p>A string for a fuzzy search of ruleset names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example</p>
              */
             public Builder nameLike(String nameLike) {
                 this.nameLike = nameLike;
@@ -253,7 +284,10 @@ public class ListUserWafRulesetsRequest extends Request {
             }
 
             /**
-             * OrderBy.
+             * <p>The field by which to sort results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder orderBy(String orderBy) {
                 this.orderBy = orderBy;

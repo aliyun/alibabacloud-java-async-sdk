@@ -67,7 +67,15 @@ public class EnvironmentVariablesValue extends TeaModel {
         } 
 
         /**
-         * Type.
+         * <p>The environment variable type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>plain_text</code>: plain text</li>
+         * <li><code>secret_text</code>: encrypted text</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>plain_text</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -75,7 +83,10 @@ public class EnvironmentVariablesValue extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The environment variable value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

@@ -75,6 +75,7 @@ public class UpdateBotSpecRequest extends Request {
         } 
 
         /**
+         * <p>The bot instance specifications.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class UpdateBotSpecRequest extends Request {
         }
 
         /**
+         * <p>The bot instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

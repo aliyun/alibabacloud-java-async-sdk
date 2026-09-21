@@ -74,6 +74,7 @@ public class GetPageShieldRequest extends Request {
         } 
 
         /**
+         * <p>The site ID. You can obtain the ID by calling <a href="~~ListSites~~">ListSites</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class GetPageShieldRequest extends Request {
         }
 
         /**
-         * SiteVersion.
+         * <p>The version number of the site. For sites with version management enabled, you can use this parameter to specify the site version on which the configuration takes effect. The default value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder siteVersion(Integer siteVersion) {
             this.putQueryParameter("SiteVersion", siteVersion);

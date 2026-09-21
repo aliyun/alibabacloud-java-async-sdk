@@ -67,7 +67,7 @@ public class GetEdgeContainerLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The logs.</p>
+         * <p>The log list.</p>
          */
         public Builder items(java.util.List<String> items) {
             this.items = items;

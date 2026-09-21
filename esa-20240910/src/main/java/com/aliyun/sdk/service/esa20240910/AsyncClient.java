@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ActivateClientCertificateResponse> activateClientCertificate(ActivateClientCertificateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites for enabling site version management:</p>
+     * <ol>
+     * <li>The site plan must include the version management quota item <code>version_management_available</code>, and its value must be <code>true</code>.</li>
+     * </ol>
+     * 
      * @param request the request parameters of ActivateVersionManagement  ActivateVersionManagementRequest
      * @return ActivateVersionManagementResponse
      */
@@ -51,8 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to create or update multiple DNS records at a time. It is suitable for managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. The operation allows you to configure the priority, flag, tag, and weight for DNS records. In addition, for specific types of records, such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are also supported.
-     * Successful and failed records along with error messages are listed in the response.</p>
+     * <p>This API operation allows you to create or update multiple DNS records at a time. It is suitable for scenarios that require managing a large number of DNS configurations. Supported record types include but are not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. Detailed configuration items are provided to meet specific requirements, such as Priority, Flag, Tag, and Weight. In addition, for specific record types such as CERT, SSHFP, SMIMEA, and TLSA, advanced settings such as certificate information and encryption algorithms are supported.
+     * Successfully and unsuccessfully processed records are listed separately in the response, so that you can identify which records are processed, which records failed, and the failure reasons.</p>
      * 
      * @param request the request parameters of BatchCreateRecords  BatchCreateRecordsRequest
      * @return BatchCreateRecordsResponse
@@ -156,6 +162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCompressionRuleResponse> createCompressionRule(CreateCompressionRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Internet Content Provider (ICP) filing.</li>
+     * <li>Each user can invoke this operation up to 100 times per hour.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateCustomHostname  CreateCustomHostnameRequest
      * @return CreateCustomHostnameResponse
      */
@@ -234,6 +246,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateHttpsApplicationConfigurationResponse> createHttpsApplicationConfiguration(CreateHttpsApplicationConfigurationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>A site supports only one global configuration (without Rule-related parameters). To exceed this limit, you must provide the RuleName, Rule, and RuleEnable parameters to create a rule-based configuration.</p>
+     * 
      * @param request the request parameters of CreateHttpsBasicConfiguration  CreateHttpsBasicConfigurationRequest
      * @return CreateHttpsBasicConfigurationResponse
      */
@@ -259,7 +274,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Through this API, users can configure load balancing services according to their business needs, including but not limited to adaptive routing, weighted round-robin, rule matching, health checks, and more, to achieve effective traffic management and optimization.</p>
+     * <p>Creates a load balancing service based on your business requirements. You can configure settings such as adaptive routing, weighted polling, rule matching, and health checks to effectively manage and optimize traffic.
+     * Only Enterprise plans support the load balancing service. To use this feature, contact Alibaba Cloud sales to apply for an Enterprise plan.</p>
      * 
      * @param request the request parameters of CreateLoadBalancer  CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -267,6 +283,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLoadBalancerResponse> createLoadBalancer(CreateLoadBalancerRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The site plan must be Standard Edition or higher to use the WebSocket feature. When calling this API, you must provide at least one feature configuration parameter. Providing only SiteId returns an error.</p>
+     * 
      * @param request the request parameters of CreateNetworkOptimization  CreateNetworkOptimizationRequest
      * @return CreateNetworkOptimizationResponse
      */
@@ -274,7 +293,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Multiple origins can be added under the origin address, supporting domain names, IPs, OSS, S3, and other types of origins. It supports authentication for OSS and S3 type origins.</p>
+     * <p>You can add multiple origins to an origin pool, such as a domain name, IP, OSS, or S3. Back-to-origin authentication is available for OSS and S3 origins.</p>
      * 
      * @param request the request parameters of CreateOriginPool  CreateOriginPoolRequest
      * @return CreateOriginPoolResponse
@@ -337,10 +356,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Request description</h2>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>When you create a version for deployment, you can set the environment name <code>Env</code> parameter only to the test environment <code>staging</code> or the production environment <code>production</code>.</li>
-     * <li><code>CodeVersions</code> parameter supports up to two versions of a phased release, and the sum of the proportions of these versions must be equal to 100%.</li>
+     * <li>When creating a Routine code version deployment, the <code>Env</code> parameter only supports <code>staging</code> for the staging environment or <code>production</code> for the production environment.</li>
+     * <li>The <code>CodeVersions</code> parameter supports a maximum of two versions for canary release, and the total percentage of these versions must equal 100%.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateRoutineCodeDeployment  CreateRoutineCodeDeploymentRequest
@@ -380,9 +399,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Make sure that you have an available plan before you add a website.</p>
      * <ul>
-     * <li>Make sure that your website domain name has an ICP filing if the location you want to specify covers the Chinese mainland.</li>
+     * <li>Before creating a site, you must have an active plan instance.</li>
+     * <li>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid Chinese Internet Content Provider (ICP) filing.</li>
+     * <li>Each user can invoke this operation up to 100 times per hour.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateSite  CreateSiteRequest
@@ -404,6 +424,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSiteCustomLogResponse> createSiteCustomLog(CreateSiteCustomLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The site plan associated with SiteId must support real-time log delivery (such as the Standard plan). Call GetSiteLogDeliveryQuota to perform a pre-check, or verify the plan level by checking the PlanName field returned by ListSites.</p>
+     * 
      * @param request the request parameters of CreateSiteDeliveryTask  CreateSiteDeliveryTaskRequest
      * @return CreateSiteDeliveryTaskResponse
      */
@@ -416,6 +439,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSlrRoleForRealtimeLogResponse> createSlrRoleForRealtimeLog(CreateSlrRoleForRealtimeLogRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The selected site must be activated. After you create a site, call the VerifySite operation to verify the site. A site that passes verification is automatically activated, which means the Passed response parameter is set to true.</p>
+     * 
      * @param request the request parameters of CreateTransportLayerApplication  CreateTransportLayerApplicationRequest
      * @return CreateTransportLayerApplicationResponse
      */
@@ -429,18 +455,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</p>
+     * <p>This operation allows you to create a delivery node for specific log data. Multiple delivery destinations and detailed configuration options are supported, including but not limited to Simple Log Service (SLS), HTTP services, Alibaba Cloud Object Storage Service (OSS), S3-compatible storage, and Kafka MSMQ. You can customize the node name, select log fields, specify a data center, set the discard rate, select a delivery type, and configure the corresponding delivery details based on the selected type.</p>
      * <ul>
-     * <li><strong>Field filtering</strong>: Use the <code>FieldName</code> parameter to specify log fields to deliver.</li>
-     * <li><strong>Filtering rules</strong>: Use the <code>FilterRules</code> parameter to pre-process and filter log data.</li>
-     * <li><strong>Diverse delivery destinations</strong>: Logs can be delivered to different destinations. Configuration parameters vary with delivery destinations.</li>
+     * <li><strong>Field selection</strong>: Use <code>FieldName</code> to specify the log fields to deliver.</li>
+     * <li><strong>Filter rules</strong>: Use <code>FilterRules</code> to implement pre-processing and filtering of log data.</li>
+     * <li><strong>Diverse delivery</strong>: Supports SLS, HTTP(S), Alibaba Cloud OSS, S3-compatible storage, and Kafka delivery methods, each with its own specific configuration parameters.</li>
      * </ul>
-     * <h2><a href="#"></a>Precautions</h2>
+     * <h2>Before you begin</h2>
      * <ul>
-     * <li>Make sure that you have sufficient permissions to perform delivery tasks.</li>
-     * <li>If you enable encryption or authentication, properly configure corresponding parameters.</li>
-     * <li>Verify the syntax of <code>FilterRules</code> to make sure that filtering logic works as expected.</li>
-     * <li>Specify advanced settings such as the number of retries and timeout period based on your needs to have optimal delivery efficiency and stability.</li>
+     * <li>Ensure that the provided credentials (such as AccessKey and SecretKey) have sufficient permissions to perform the delivery operation.</li>
+     * <li>When you select a delivery method that requires encryption or authentication, correctly configure the related security parameters.</li>
+     * <li>Verify the syntax of <code>FilterRules</code> to ensure that the filtering logic meets your expectations.</li>
+     * <li>Adjust advanced parameters such as the maximum number of retries and timeout period as needed to optimize delivery efficiency and stability.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateUserDeliveryTask  CreateUserDeliveryTaskRequest
@@ -450,16 +476,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>This API operation allows you to create a WAF ruleset for a specified instance.</li>
+     * <li>InstanceId is a required parameter that specifies the instance for which you want to create the ruleset.</li>
+     * <li>The Phase parameter defines the phase in which the ruleset is applied, such as custom rules or rate limiting.</li>
+     * <li>Name and Expression are required parameters that specify the ruleset name and the match expression.</li>
+     * <li>The optional Description parameter provides a text description of the ruleset function or purpose.</li>
+     * <li>Status controls whether the ruleset takes effect immediately (<code>on</code>) or is disabled (<code>off</code>).</li>
+     * <li>Use the Rules parameter to configure a detailed list of rules. Each rule contains properties such as name, position, expression, and action.</li>
+     * <li>A successful response returns the unique identifier Id of the newly created ruleset and the RuleIds list of all associated rule IDs.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateUserWafRuleset  CreateUserWafRulesetRequest
@@ -492,12 +518,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWaitingRoomResponse> createWaitingRoom(CreateWaitingRoomRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</p>
+     * 
      * @param request the request parameters of CreateWaitingRoomEvent  CreateWaitingRoomEventRequest
      * @return CreateWaitingRoomEventResponse
      */
     CompletableFuture<CreateWaitingRoomEventResponse> createWaitingRoomEvent(CreateWaitingRoomEventRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Your site plan must be Enterprise Edition or higher to use this feature, and the site plan must support this feature.</p>
+     * 
      * @param request the request parameters of CreateWaitingRoomRule  CreateWaitingRoomRuleRequest
      * @return CreateWaitingRoomRuleResponse
      */
@@ -505,7 +537,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can disable version management only when the default environment and version 0 exist.</p>
+     * <p>Version management must be enabled through the ActivateVersionManagement operation (the site VersionManagement status is true). Version management can be disabled only when only version 0 and the default environment exist.</p>
      * 
      * @param request the request parameters of DeactivateVersionManagement  DeactivateVersionManagementRequest
      * @return DeactivateVersionManagementResponse
@@ -750,6 +782,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteRoutineCodeVersionResponse> deleteRoutineCodeVersion(DeleteRoutineCodeVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>When you create a Routine code version for deployment, the environment name <code>Env</code> supports only the staging environment <code>staging</code> or the production environment <code>production</code>.</li>
+     * <li>The <code>CodeVersions</code> parameter supports canary release of up to two versions, and the total proportion of these versions must equal 100%.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DeleteRoutineEnvironmentVariables  DeleteRoutineEnvironmentVariablesRequest
      * @return DeleteRoutineEnvironmentVariablesResponse
      */
@@ -811,11 +850,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>*****&gt; </p>
+     * <p>This operation allows you to delete an existing task delivery configuration based on the specified <strong>task name</strong> and <strong>Alibaba Cloud UID</strong>. Before proceeding, verify that the provided information is accurate to avoid disrupting the processing of related logs or data.
+     * <strong>Note:</strong></p>
      * <ul>
-     * <li>Deleted tasks cannot be restored. Proceed with caution.</li>
-     * <li>To call this operation, you must have an account that has the required permissions.</li>
-     * <li>The returned <code>RequestId</code> value can be used to track the request processing progress and troubleshoot issues.</li>
+     * <li>The deletion operation is irreversible. Proceed with caution.</li>
+     * <li>Only accounts with the required permissions can call this operation.</li>
+     * <li>You can use the returned <code>RequestId</code> to track the request progress and troubleshoot issues.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteUserDeliveryTask  DeleteUserDeliveryTaskRequest
@@ -825,9 +865,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Request Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><code>InstanceId</code> and <code>Id</code> are required parameters, specifying the WAF instance ID to be operated on and the specific ruleset ID, respectively.</li>
+     * <li>The <code>InstanceId</code> and <code>Id</code> parameters are required. These parameters specify the ID of the WAF instance and the ID of the ruleset to delete.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteUserWafRuleset  DeleteUserWafRulesetRequest
@@ -1011,7 +1051,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can query the status of an instance after you purchase a plan for the instance.</p>
+     * <p>You can query the instance status of a plan only after you purchase and create the plan instance.</p>
      * 
      * @param request the request parameters of DescribeRatePlanInstanceStatus  DescribeRatePlanInstanceStatusRequest
      * @return DescribeRatePlanInstanceStatusResponse
@@ -1019,12 +1059,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRatePlanInstanceStatusResponse> describeRatePlanInstanceStatus(DescribeRatePlanInstanceStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The purchase period is measured in months.</p>
+     * 
      * @param request the request parameters of DescribeRatePlanPrice  DescribeRatePlanPriceRequest
      * @return DescribeRatePlanPriceResponse
      */
     CompletableFuture<DescribeRatePlanPriceResponse> describeRatePlanPrice(DescribeRatePlanPriceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The plan name and plan code can be obtained from the <a href="~~DescribeRatePlanPrice~~">DescribeRatePlanPrice</a> operation.</p>
+     * 
      * @param request the request parameters of DescribeRatePlanPriceGap  DescribeRatePlanPriceGapRequest
      * @return DescribeRatePlanPriceGapResponse
      */
@@ -1038,11 +1084,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify StartTime or EndTime, the log data generated in the last 24 hours is queried. If you specify StartTime and EndTime, the log data generated within the specified time range is queried.</p>
      * <ul>
-     * <li>The log data is collected every hour.</li>
-     * <li>You can call this operation up to 50 times per second per account.</li>
-     * <li>You can query only logs in the last month. The time range cannot exceed 31 days.</li>
+     * <li>If you do not specify StartTime and EndTime, log data from the past 24 hours is returned by default. If you specify StartTime and EndTime, logs are queried based on the specified time range.</li>
+     * <li>The time granularity for querying data is one hour.</li>
+     * <li>The maximum number of times that each user can call this operation per second: 50.</li>
+     * <li>Only log records from the last month can be queried (the time span between the start time and the current time cannot exceed 31 days).</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSiteLogs  DescribeSiteLogsRequest
@@ -1053,16 +1099,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>If you do not specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the past 24 hours; if you specify <code>StartTime</code> and <code>EndTime</code>, the API returns data for the specified time period.</li>
-     * <li>The API returns different time granularities based on the span between <code>StartTime</code> and <code>EndTime</code>.<ul>
-     * <li>For a span of 3 hours or less, it returns 1-minute granularity data.</li>
-     * <li>For a span greater than 3 hours but no more than 12 hours, it returns 5-minute granularity data.</li>
-     * <li>For a span greater than 12 hours but no more than 1 day, it returns 15-minute granularity data.</li>
-     * <li>For a span greater than 1 day but no more than 10 days, it returns hourly granularity data.</li>
-     * <li>For a span greater than 10 days but no more than 31 days, it returns daily granularity data.</li>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity of returned data varies based on the time span between StartTime and EndTime.<ul>
+     * <li>Less than or equal to 3 hours: returns data at 1-minute granularity.</li>
+     * <li>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</li>
+     * <li>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</li>
+     * <li>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</li>
+     * <li>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</li>
      * </ul>
      * </li>
-     * <li>Due to the high number of accesses during the query period, the data analysis may be sampled.</li>
+     * <li>Due to the large number of access requests during the query time range, data analytics results may involve sampling.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSiteTimeSeriesData  DescribeSiteTimeSeriesDataRequest
@@ -1072,7 +1118,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the previous 24 hours. If you specify both parameters, the request returns the data collected within the specified time range.</p>
+     * <ul>
+     * <li>If you do not specify StartTime and EndTime, data from the last 24 hours is returned. If you specify StartTime and EndTime, data for the specified time range is returned.</li>
+     * <li>Due to a large number of visits during the queried time range, the data analytics results may be sampled.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeSiteTopData  DescribeSiteTopDataRequest
      * @return DescribeSiteTopDataResponse
@@ -1080,18 +1129,43 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSiteTopDataResponse> describeSiteTopData(DescribeSiteTopDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity of the returned data varies based on the time span between StartTime and EndTime.<ul>
+     * <li>Less than or equal to 3 hours: returns data at 1-minute granularity.</li>
+     * <li>Greater than 3 hours and less than or equal to 12 hours: returns data at 5-minute granularity.</li>
+     * <li>Greater than 12 hours and less than or equal to 1 day: returns data at 15-minute granularity.</li>
+     * <li>Greater than 1 day and less than or equal to 10 days: returns data at 1-hour granularity.</li>
+     * <li>Greater than 10 days and less than or equal to 31 days: returns data at 1-day granularity.</li>
+     * </ul>
+     * </li>
+     * <li>Because the number of access requests during the query period may be large, the data analytics results may be based on sampling.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSiteWafTimeSeriesData  DescribeSiteWafTimeSeriesDataRequest
      * @return DescribeSiteWafTimeSeriesDataResponse
      */
     CompletableFuture<DescribeSiteWafTimeSeriesDataResponse> describeSiteWafTimeSeriesData(DescribeSiteWafTimeSeriesDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you do not specify StartTime or EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>Because of the high number of access requests during the query time range, data analytics may involve sampling.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeSiteWafTopData  DescribeSiteWafTopDataRequest
      * @return DescribeSiteWafTopDataResponse
      */
     CompletableFuture<DescribeSiteWafTopDataResponse> describeSiteWafTopData(DescribeSiteWafTopDataRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: Make sure that you have activated the Layer 4 acceleration service before calling this operation.1. Call GenerateTraceDiagnose to obtain a diagnostic link. 2. Open the link in a browser to complete client diagnostics. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this operation to retrieve the report.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeTraceDiagnoseReport  DescribeTraceDiagnoseReportRequest
      * @return DescribeTraceDiagnoseReportResponse
      */
@@ -1099,7 +1173,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you do not specify the StartTime or EndTime parameter, this operation returns the data collected within the last 24 hours. If you specify both parameters, this operation returns the data collected within the specified time range.</p>
+     * <p>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</p>
      * 
      * @param request the request parameters of DescribeUrlObservationData  DescribeUrlObservationDataRequest
      * @return DescribeUrlObservationDataResponse
@@ -1113,6 +1187,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserResourcePackageResponse> describeUserResourcePackage(DescribeUserResourcePackageRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Maximum storage duration: 93 days.</p>
+     * <ul>
+     * <li>Maximum query time range: 31 days.</li>
+     * <li>Default time range: 24 hours.
+     * All times are expressed in UTC+0.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeWafUsageData  DescribeWafUsageDataRequest
      * @return DescribeWafUsageDataResponse
      */
@@ -1305,6 +1387,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEdgeContainerAppResourceStatusResponse> getEdgeContainerAppResourceStatus(GetEdgeContainerAppResourceStatusRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must first activate the edge container service by calling OpenEdgeContainer, and then confirm that an available application exists by calling ListEdgeContainerApps or create an application by calling CreateEdgeContainerApp.</p>
+     * 
      * @param request the request parameters of GetEdgeContainerAppStatus  GetEdgeContainerAppStatusRequest
      * @return GetEdgeContainerAppStatusResponse
      */
@@ -1438,7 +1523,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This API allows users to query the configuration details of a specific load balancer by providing necessary authentication information and resource identifiers, including but not limited to name, session persistence strategy, routing policy, etc.</p>
+     * <p>This API allows you to query the configuration details of a specific load balancer by providing the required authentication information and resource identity. The details include but are not limited to the name, session persistence policy, and load balancing policy.</p>
      * 
      * @param request the request parameters of GetLoadBalancer  GetLoadBalancerRequest
      * @return GetLoadBalancerResponse
@@ -1459,7 +1544,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation when you use Edge Routine.</p>
+     * <p>Used with the Edge Routine (ER) feature to automatically match an active site.</p>
      * 
      * @param request the request parameters of GetMatchSite  GetMatchSiteRequest
      * @return GetMatchSiteResponse
@@ -1593,6 +1678,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRoutineCodeVersionResponse> getRoutineCodeVersion(GetRoutineCodeVersionRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>By calling this API operation, you can retrieve detailed information about a specific code version of a Routine, including but not limited to the version status, creation time, and whether the version contains Assets resource files. You must specify the Routine name and the code version number as request parameters.</p>
+     * 
      * @param request the request parameters of GetRoutineCodeVersionInfo  GetRoutineCodeVersionInfoRequest
      * @return GetRoutineCodeVersionInfoResponse
      */
@@ -1606,9 +1695,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Every time the code of a routine is released to the staging environment, a version number is generated. Such code is for tests only.</p>
      * <ul>
-     * <li>A routine can retain a maximum of 10 code versions. If the number of versions reaches the limit, you must call the DeleteRoutineCodeRevision operation to delete unwanted versions.</li>
+     * <li>Each upload of test code for an Edge Routine generates a version number, which occupies one CodeRev code version slot. This is used for testing purposes only.</li>
+     * <li>An Edge Routine can retain a maximum of 10 version numbers. After the limit is exceeded, manually call DeleteRoutineCodeRevision to delete unused versions.</li>
      * </ul>
      * 
      * @param request the request parameters of GetRoutineStagingCodeUploadInfo  GetRoutineStagingCodeUploadInfoRequest
@@ -1673,14 +1762,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the remaining quota for delivering a specific category of real-time logs in a website within an Alibaba Cloud account. This is essential for monitoring and managing your log delivery capacity to ensure that logs can be delivered to the destination and prevent data loss or latency caused by insufficient quota.
-     * <strong>Take note of the following parameters:</strong></p>
+     * <p>You can call this operation to query the remaining quota of the real-time log delivery service for a specific site and business type under a specified Alibaba Cloud account. This is important for monitoring and managing your log delivery capacity to ensure that logs can be smoothly pushed to the destination storage and to prevent data loss or delays caused by insufficient quota.
+     * <strong>Parameter notes:</strong></p>
      * <ul>
-     * <li>``</li>
-     * <li><code>BusinessType</code> is required. You must specify a log category to obtain the corresponding quota information.</li>
-     * <li><code>SiteId</code> specifies the ID of a website, which must be a valid integer that corresponds to a website that you configured on Alibaba Cloud.
+     * <li><code>BusinessType</code> is required. Specify the business type to obtain the corresponding quota information.</li>
+     * <li><code>SiteId</code> must be a valid site ID in integer format and must correspond to the site configured in Alibaba Cloud.
      * <strong>Response:</strong></li>
-     * <li>If a request is successful, the system returns the remaining log delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), website ID (<code>SiteId</code>), and log category (<code>BusinessType</code>). You can confirm and record the returned data.</li>
+     * <li>A successful response returns the delivery quota (<code>FreeQuota</code>), request ID (<code>RequestId</code>), site ID (<code>SiteId</code>), and business type (<code>BusinessType</code>) for confirmation and logging purposes.</li>
      * </ul>
      * 
      * @param request the request parameters of GetSiteLogDeliveryQuota  GetSiteLogDeliveryQuotaRequest
@@ -1701,6 +1789,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSiteOriginClientCertificateResponse> getSiteOriginClientCertificate(GetSiteOriginClientCertificateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API applies only to sites that use NS mode.</p>
+     * 
      * @param request the request parameters of GetSitePause  GetSitePauseRequest
      * @return GetSitePauseResponse
      */
@@ -1738,10 +1829,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This API operation queries the details of a delivery task, including the task name, discard rate, region, log category, status, delivery destination, configuration, and filtering rules.****</p>
      * <ul>
-     * <li>You can call this operation to query detailed information about a log delivery task to analyze log processing efficiency or troubleshoot delivery problems.****</li>
-     * <li>****````</li>
+     * <li><strong>Features</strong>: This operation retrieves the detailed delivery information of a specified task under an Alibaba Cloud account, including the task name, discard rate, region, business type, status, delivery type and configuration, and filter rules.</li>
+     * <li><strong>Scenarios</strong>: Use this operation when you need to understand or check the log processing and delivery configuration of a specific task for analyzing processing efficiency or troubleshooting issues.</li>
      * </ul>
      * 
      * @param request the request parameters of GetUserDeliveryTask  GetUserDeliveryTaskRequest
@@ -1751,7 +1841,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to query the remaining real-time log delivery quota of each log category in your Alibaba Cloud account. You must provide your Alibaba Cloud account ID (aliUid) and log category (BusinessType). The system then returns the remaining quota of the log category to help you track the usage.</p>
+     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</p>
      * 
      * @param request the request parameters of GetUserLogDeliveryQuota  GetUserLogDeliveryQuotaRequest
      * @return GetUserLogDeliveryQuotaResponse
@@ -1759,12 +1849,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserLogDeliveryQuotaResponse> getUserLogDeliveryQuota(GetUserLogDeliveryQuotaRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation allows you to query the real-time log delivery quota for different business types in your Alibaba Cloud account. You must provide your Alibaba Cloud user ID (aliUid) and the business type (BusinessType). The system returns the remaining quota for the specified business type, helping you understand the current quota usage.</p>
+     * 
      * @param request the request parameters of GetUserMaxPlanQuota  GetUserMaxPlanQuotaRequest
      * @return GetUserMaxPlanQuotaResponse
      */
     CompletableFuture<GetUserMaxPlanQuotaResponse> getUserMaxPlanQuota(GetUserMaxPlanQuotaRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>By calling the <code>GetUserWafRuleset</code> operation, you can retrieve information about a specific Web Application Firewall (WAF) ruleset based on the instance ID and ruleset ID. The returned information includes but is not limited to the position, name, description, status, and specific rules of the ruleset. Make sure that you correctly specify the required parameters to avoid request failures.</p>
+     * 
      * @param request the request parameters of GetUserWafRuleset  GetUserWafRulesetRequest
      * @return GetUserWafRulesetResponse
      */
@@ -1904,7 +2001,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This interface is used to check whether the vs_addr parameter in the vipInfo collection is vip.</p>
+     * <p>Checks whether vs_addr values in the vipInfo collection are VIPs.</p>
      * 
      * @param request the request parameters of ListESAIPInfo  ListESAIPInfoRequest
      * @return ListESAIPInfoResponse
@@ -1950,7 +2047,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> You can call this operation 100 times per second.</p>
+     * <p>API call frequency: 100 calls per second.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListEdgeRoutineRecords  ListEdgeRoutineRecordsRequest
@@ -2059,7 +2156,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When creating a load balancer \&quot;based on country/region scheduling\&quot; strategy through OpenAPI, use the code of primary or secondary regions to represent traffic from this geographical area.</p>
+     * <p>When you create a country/region-based scheduling policy for a load balancing instance by calling an OpenAPI operation, use the primary or secondary region code from the lookup table to represent traffic originating from the corresponding geographic region.</p>
      * 
      * @param request the request parameters of ListLoadBalancerRegions  ListLoadBalancerRegionsRequest
      * @return ListLoadBalancerRegionsResponse
@@ -2115,12 +2212,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPagesResponse> listPages(ListPagesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the list of pay-as-you-go plan instances under your account. You can filter and sort results by multiple conditions.</p>
+     * 
      * @param request the request parameters of ListPostpaidRatePlanInstances  ListPostpaidRatePlanInstancesRequest
      * @return ListPostpaidRatePlanInstancesResponse
      */
     CompletableFuture<ListPostpaidRatePlanInstancesResponse> listPostpaidRatePlanInstances(ListPostpaidRatePlanInstancesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>By specifying the AliUid of a user and the service region (China site or international site), the API returns all pay-as-you-go site plans applicable to the user, including plan names, billing methods, and pricing information.</p>
+     * 
      * @param request the request parameters of ListPostpaidSitePlans  ListPostpaidSitePlansRequest
      * @return ListPostpaidSitePlansResponse
      */
@@ -2134,7 +2237,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The DNS records related to Edge Container, Edge Routine, and TCP/UDP proxy are not returned in this operation.</p>
+     * <p>DNS records corresponding to edge containers, edge functions, and Layer 4 acceleration will not be returned by this API.</p>
      * 
      * @param request the request parameters of ListRecords  ListRecordsRequest
      * @return ListRecordsResponse
@@ -2173,9 +2276,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation to query the code versions of a specific function. Paged query and fuzzy search are supported. You can configure <code>Name</code> to specify the name of a function.
-     * Specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries returned in a request, and use <code>SearchKeyWord</code> to specify a keyword for fuzzy search.
-     * The response includes the number, description, and creation time of each code version.</p>
+     * <p>Queries the code version list of a specified Edge Routine program. This operation supports paging and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy matching against code version descriptions.
+     * The response includes detailed information about each code version, such as the revision number, description, and creation time.</p>
      * 
      * @param request the request parameters of ListRoutineCodeVersions  ListRoutineCodeVersionsRequest
      * @return ListRoutineCodeVersionsResponse
@@ -2183,6 +2285,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRoutineCodeVersionsResponse> listRoutineCodeVersions(ListRoutineCodeVersionsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This operation allows you to perform a paged query of all Edge Routines (Routines) created under your account, and provides the Routine quota and usage for your current plan. You can specify the paging parameters <code>PageNumber</code> and <code>PageSize</code> to control the number of returned results, and use <code>SearchKeyWord</code> to perform a fuzzy search to filter specific Routine names.</p>
+     * 
      * @param request the request parameters of ListRoutineEnvironmentVariables  ListRoutineEnvironmentVariablesRequest
      * @return ListRoutineEnvironmentVariablesResponse
      */
@@ -2190,7 +2295,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query the routes associated with a function. You can specify paged query parameters to obtain the specified number of routes or specify a keyword for fuzzy search to filter specific routes.</p>
+     * <p>Queries the list of related records for a specified edge routine. You can use pagination parameters to retrieve partial results, or use fuzzy keywords to filter specific record entries.</p>
      * 
      * @param request the request parameters of ListRoutineRelatedRecords  ListRoutineRelatedRecordsRequest
      * @return ListRoutineRelatedRecordsResponse
@@ -2289,7 +2394,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to perform a paged query to query all functions created in your account, the maximum number of functions supported by the billing plan that you use, and the number of functions already created. You can specify <code>PageNumber</code> and <code>PageSize</code> to control the number of entries to be returned in the response and specify <code>SearchKeyWord</code> to perform a fuzzy search to filter specific routine names.</p>
+     * <p>This operation allows you to perform a paged query for all Edge Routines created under your account. It also returns the Edge Routine quota for your current plan and the number of Edge Routines already in use. You can specify the PageNumber and PageSize paging parameters to control the number of results returned, and use SearchKeyWord to perform a fuzzy search to filter Routine names.</p>
      * 
      * @param request the request parameters of ListUserRoutines  ListUserRoutinesRequest
      * @return ListUserRoutinesResponse
@@ -2297,6 +2402,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserRoutinesResponse> listUserRoutines(ListUserRoutinesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request</h2>
+     * <ul>
+     * <li><code>InstanceId</code> is a required parameter that specifies the WAF instance to query.</li>
+     * <li>The <code>Phase</code> parameter filters rule sets by WAF processing phase, such as custom rules and rate limiting rules.</li>
+     * <li>Use <code>NameLike</code> in <code>QueryArgs</code> to perform a fuzzy search on rule set names.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters control pagination and default to 1 and 20, respectively.</li>
+     * <li>The response includes the request ID, current plan usage, the total record count, and a list of rule set details.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListUserWafRulesets  ListUserWafRulesetsRequest
      * @return ListUserWafRulesetsResponse
      */
@@ -2352,7 +2467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query details of all waiting room events related to a waiting room in a website.</p>
+     * <p>Use this operation to query details of all waiting room events related to a waiting room in a website.</p>
      * 
      * @param request the request parameters of ListWaitingRoomEvents  ListWaitingRoomEventsRequest
      * @return ListWaitingRoomEventsResponse
@@ -2370,7 +2485,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to query detailed configurations about all waiting rooms in a website, including the status, name, and queuing rules of each waiting room.</p>
+     * <p>This API allows you to query the configuration details of all waiting rooms for a specified site, including the enabled status, name, and queuing rules.</p>
      * 
      * @param request the request parameters of ListWaitingRooms  ListWaitingRoomsRequest
      * @return ListWaitingRoomsResponse
@@ -2408,6 +2523,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PreloadCachesResponse> preloadCaches(PreloadCachesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Prerequisites: 1) Activate the edge container service (by calling the OpenEdgeContainer operation or using the console). 2) Create an application (by calling CreateEdgeContainerApp to obtain the AppId). 3) Create an application version (by calling CreateEdgeContainerAppVersion to obtain the VersionId).</p>
+     * 
      * @param request the request parameters of PublishEdgeContainerAppVersion  PublishEdgeContainerAppVersionRequest
      * @return PublishEdgeContainerAppVersionResponse
      */
@@ -2440,8 +2558,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>The package name and code can be obtained from the DescribeRatePlanPrice interface.</li>
-     * <li>If the acceleration area is not overseas, the site must have successfully completed the filing process.</li>
+     * <li>You can obtain the plan name and plan code by calling the DescribeRatePlanPrice operation.</li>
+     * <li>If the acceleration region is not set to overseas, the site must have a valid Internet Content Provider (ICP) filing.</li>
      * </ol>
      * 
      * @param request the request parameters of PurchaseRatePlan  PurchaseRatePlanRequest
@@ -2576,6 +2694,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetOriginClientCertificateHostnamesResponse> setOriginClientCertificateHostnames(SetOriginClientCertificateHostnamesRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>If you do not specify StartTime and EndTime, this operation returns data from the past 24 hours. If you specify StartTime and EndTime, this operation returns data for the specified time range.</li>
+     * <li>The time granularity of returned data varies based on the time range specified by StartTime and EndTime.<ul>
+     * <li>If the time range is less than or equal to 3 hours, data is returned at a 1-minute granularity.</li>
+     * <li>If the time range is greater than 3 hours and less than or equal to 1 day, data is returned at a 5-minute granularity.</li>
+     * <li>If the time range is greater than 1 day and less than or equal to 10 days, data is returned at an hourly granularity.</li>
+     * <li>If the time range is greater than 10 days and less than or equal to 31 days, data is returned at a daily granularity.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * @param request the request parameters of SetRoutineEnvironmentVariables  SetRoutineEnvironmentVariablesRequest
      * @return SetRoutineEnvironmentVariablesResponse
      */
@@ -2618,6 +2748,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Notice: Before you use this operation, make sure that the site is connected to the ESA platform and enabled.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of TraceSite  TraceSiteRequest
      * @return TraceSiteResponse
      */
@@ -2672,12 +2807,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCompressionRuleResponse> updateCompressionRule(UpdateCompressionRuleRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can only modify the priority of a rule configuration. You cannot modify global configurations.</p>
+     * 
      * @param request the request parameters of UpdateConfigSequence  UpdateConfigSequenceRequest
      * @return UpdateConfigSequenceResponse
      */
     CompletableFuture<UpdateConfigSequenceResponse> updateConfigSequence(UpdateConfigSequenceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The site plan must be Enterprise Edition or higher to enable China mainland network access optimization.</p>
+     * 
      * @param request the request parameters of UpdateCrossBorderOptimization  UpdateCrossBorderOptimizationRequest
      * @return UpdateCrossBorderOptimizationResponse
      */
@@ -2702,6 +2843,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCustomScenePolicyResponse> updateCustomScenePolicy(UpdateCustomScenePolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>Call <code>PurchaseDDoSInstance</code> to purchase a DDoS instance. A newly purchased DDoS instance can only be associated with a pay-as-you-go plan instance.</li>
+     * <li>Call <code>ListDDoSInstances</code> to query the list of DDoS instances.</li>
+     * <li>Specification changes are not allowed within 31 days of purchase.</li>
+     * <li>You can change specifications once per calendar month (from the 1st to the 31st of each month).</li>
+     * <li>After a successful specification change, billing starts immediately on the same day based on the new instance specifications.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDDoSSpec  UpdateDDoSSpecRequest
      * @return UpdateDDoSSpecResponse
      */
@@ -2793,7 +2943,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Through this interface, you can modify multiple configurations of the load balancer, including but not limited to the name of the load balancer, whether to enable acceleration, session persistence strategy, and various advanced settings related to traffic routing.&gt;Notice: Changes to certain parameters may affect the stability of existing services, please operate with caution.</p>
+     * <p>This operation modifies multiple configurations for a load balancer, including its name, acceleration status, session persistence policy, and advanced traffic routing settings.&gt;Notice: Changes to certain parameters might affect the stability of existing services. Proceed with caution.</p>
      * 
      * @param request the request parameters of UpdateLoadBalancer  UpdateLoadBalancerRequest
      * @return UpdateLoadBalancerResponse
@@ -2856,14 +3006,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation allows you to update multiple types of DNS records, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI. You can modify the record content by providing the necessary fields such as Value, Priority, and Flag. For origins added in CNAME records such as OSS and S3, the API enables you to configure authentication details to ensure secure access.</p>
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>This API operation allows you to update a DNS record, including but not limited to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI record types. You can modify the record content by specifying the corresponding record value, priority, flag, and other fields. For CNAME origin servers that require authentication, such as OSS and S3, this API operation also supports configuring origin authentication information to ensure secure access.</p>
+     * <h3>Before you begin</h3>
      * <ul>
-     * <li>The record value (Value) must match the record type. For example, the CNAME record should correspond to the target domain name.</li>
-     * <li>You must specify a priority (Priority) for some record types, such as MX and SRV.</li>
-     * <li>You must specify specific fields such as Flag and Tag for CAA records.</li>
-     * <li>When you update security records such as CERT and SSHFP, you must accurately set fields such as Type and Algorithm.</li>
-     * <li>If your origin type is OSS or S3, configure the authentication details in AuthConf based on the permissions.</li>
+     * <li>The record value (Value) must match the record type. For example, a CNAME record must correspond to a target domain name.</li>
+     * <li>Certain record types, such as MX and SRV, require a priority (Priority) value.</li>
+     * <li>CAA records require specific fields such as Flag and Tag.</li>
+     * <li>When updating security records such as CERT and SSHFP, accurately set the Type, Algorithm, and other fields.</li>
+     * <li>When using OSS or S3 as the origin server, configure the authentication details in AuthConf based on the permission settings.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateRecord  UpdateRecordRequest
@@ -2963,12 +3113,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSiteNameExclusiveResponse> updateSiteNameExclusive(UpdateSiteNameExclusiveRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation can be called only for sites that use the NS access mode.</p>
+     * 
      * @param request the request parameters of UpdateSitePause  UpdateSitePauseRequest
      * @return UpdateSitePauseResponse
      */
     CompletableFuture<UpdateSitePauseResponse> updateSitePause(UpdateSitePauseRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The site plan must be Enterprise Edition or higher to use the custom NS feature.</p>
+     * 
      * @param request the request parameters of UpdateSiteVanityNS  UpdateSiteVanityNSRequest
      * @return UpdateSiteVanityNSResponse
      */
@@ -2981,6 +3137,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTieredCacheResponse> updateTieredCache(UpdateTieredCacheRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>If ListTransportLayerApplications returns an empty Layer 4 acceleration application list, use CreateTransportLayerApplication to create a Layer 4 acceleration application, and then use this API to modify the configurations of the Layer 4 acceleration application.
+     * When creating a Layer 4 acceleration application, the selected site must be an activated site. After creating a site, call the VerifySite API to verify it. A site that passes verification is automatically activated, indicated by the response parameter Passed=true.</p>
+     * 
      * @param request the request parameters of UpdateTransportLayerApplication  UpdateTransportLayerApplicationRequest
      * @return UpdateTransportLayerApplicationResponse
      */
@@ -2993,6 +3153,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateUrlObservationResponse> updateUrlObservation(UpdateUrlObservationRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, you must have successfully created a task with the target TaskName by using CreateUserDeliveryTask. Only then can you use this operation to update the delivery task configuration.</p>
+     * 
      * @param request the request parameters of UpdateUserDeliveryTask  UpdateUserDeliveryTaskRequest
      * @return UpdateUserDeliveryTaskResponse
      */
@@ -3001,7 +3164,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a></h2>
-     * <p>You can call this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
+     * <p>Use this operation to enable or disable a delivery task by using TaskName and Method. The response includes the most recent status and operation result details of the task.</p>
      * 
      * @param request the request parameters of UpdateUserDeliveryTaskStatus  UpdateUserDeliveryTaskStatusRequest
      * @return UpdateUserDeliveryTaskStatusResponse
@@ -3010,16 +3173,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>请求说明</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>本API允许用户为指定实例创建新的WAF（Web Application Firewall）规则集。</li>
-     * <li><code>InstanceId</code> 是必需参数，指定了要为其创建规则集的具体实例。</li>
-     * <li><code>Phase</code> 参数定义了规则集的应用阶段，例如自定义规则、频次控制等。</li>
-     * <li><code>Name</code> 和 <code>Expression</code> 是必填项，分别代表规则集的名字和具体的匹配表达式。</li>
-     * <li>可选参数 <code>Description</code> 提供了对规则集功能或用途的文字描述。</li>
-     * <li><code>Status</code> 控制着规则集是否立即生效 (<code>on</code>) 或者处于关闭状态 (<code>off</code>)。</li>
-     * <li>通过 <code>Rules</code> 参数可以进一步配置更详细的规则列表，每个规则都包含名称、位置、表达式及动作等属性。</li>
-     * <li>成功响应将返回新创建规则集的唯一标识符 <code>Id</code> 以及所有关联规则的ID列表 <code>RuleIds</code>。</li>
+     * <li>This operation updates an existing WAF ruleset. You can modify the position, name, description, status, and expression of the ruleset.</li>
+     * <li>Include only the parameters that you want to modify. Omit parameters that you do not want to change.</li>
+     * <li>Note: Before you call this operation, ensure that the <code>InstanceId</code> and <code>Id</code> values are correct. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateUserWafRuleset  UpdateUserWafRulesetRequest
@@ -3065,7 +3223,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This interface allows you to modify the rule settings of a specific waiting room in a site, including the rule name, enable status, and rule content, etc.</p>
+     * <p>Modifies the rule settings of a specific waiting room for a site, including the rule name, enabled status, and rule content.</p>
      * 
      * @param request the request parameters of UpdateWaitingRoomRule  UpdateWaitingRoomRuleRequest
      * @return UpdateWaitingRoomRuleResponse
@@ -3085,6 +3243,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UploadClientCaCertificateResponse> uploadClientCaCertificate(UploadClientCaCertificateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can add multiple origin servers under a source address. Origin servers of the domain name, IP address, OSS, and S3 types are supported. Back-to-origin authentication is supported for OSS and S3 origin servers.</p>
+     * 
      * @param request the request parameters of UploadOriginCaCertificate  UploadOriginCaCertificateRequest
      * @return UploadOriginCaCertificateResponse
      */
@@ -3111,8 +3272,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>For a website connected by using NS setup, this operation verifies whether the nameservers of the website are the nameservers assigned by Alibaba Cloud.</li>
-     * <li>For a website connected by using CNAME setup, this operation verifies whether the website has a TXT record whose hostname is  _esaauth.[websiteDomainName] and record value is the value of VerifyCode to the DNS records of your domain. You can see the VerifyCode field in the site information.</li>
+     * <li>For sites connected through NS, verifies whether the current NS servers of the site are the NS servers assigned by Alibaba Cloud.</li>
+     * <li>For sites connected through CNAME, verifies whether the site has a TXT record with the name _esaauth.[site name] and the content set to the site verification code (see the VerifyCode field in the site information).</li>
      * </ol>
      * 
      * @param request the request parameters of VerifySite  VerifySiteRequest

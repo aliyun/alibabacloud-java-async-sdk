@@ -171,7 +171,10 @@ public class ListTraceTasksRequest extends Request {
         } 
 
         /**
-         * ClientIp.
+         * <p>The client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60.xx.xxx.38</p>
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -180,7 +183,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * DiagnoseId.
+         * <p>The diagnose ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f2xxx5</p>
          */
         public Builder diagnoseId(String diagnoseId) {
             this.putQueryParameter("DiagnoseId", diagnoseId);
@@ -189,7 +195,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name to be diagnosed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.example.com">http://www.example.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -198,7 +207,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time. Time zone: UTC/GMT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -207,7 +219,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -216,7 +231,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: any integer from 1 to 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -225,7 +243,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time. Time zone: UTC/GMT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2006-01-02T15:04:05Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -234,7 +255,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The diagnostic task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxxx-x-x-xxxxxxxxxxxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -243,7 +267,10 @@ public class ListTraceTasksRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The trace ID of the diagnostic task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>000000xxxxxxxxxxxxxxxxxxxxxx33427e</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

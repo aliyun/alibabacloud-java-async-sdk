@@ -119,7 +119,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Free certificate quota.</p>
+         * <p>The free certificate quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -130,7 +130,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Usage of free certificate quota.</p>
+         * <p>The free certificate quota usage.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -141,7 +141,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</p>
@@ -152,7 +152,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of sites.</p>
+         * <p>The number of sites.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -163,7 +163,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of site usage details.</p>
+         * <p>The list of site usage details.</p>
          */
         public Builder siteUsage(java.util.List<SiteUsage> siteUsage) {
             this.siteUsage = siteUsage;
@@ -171,7 +171,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Certificate Quota type.</p>
+         * <p>The certificate quota type.</p>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -253,7 +253,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Site ID.</p>
+             * <p>The site ID.</p>
              * 
              * <strong>example:</strong>
              * <p>165929521496928</p>
@@ -264,7 +264,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site name.</p>
+             * <p>The site name.</p>
              * 
              * <strong>example:</strong>
              * <p>example.com</p>
@@ -275,7 +275,7 @@ public class GetCertificateQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site usage.</p>
+             * <p>The site usage.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

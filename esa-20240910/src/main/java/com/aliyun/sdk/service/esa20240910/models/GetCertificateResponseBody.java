@@ -119,7 +119,7 @@ public class GetCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Certificate content.</p>
+         * <p>The certificate content.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -130,7 +130,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -149,7 +149,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890123</p>
@@ -160,7 +160,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Site name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -171,7 +171,7 @@ public class GetCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Certificate status.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -279,7 +279,7 @@ public class GetCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The DCV ID.</p>
+             * <p>DCV ID。</p>
              * 
              * <strong>example:</strong>
              * <p>bababf7cdd1546a2ad04c0def1f4c980</p>
@@ -290,7 +290,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</p>
+             * <p>The DCV name. For the DNS type, this is the TXT record name. For the HTTP type, this is the URL.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></p>
@@ -301,7 +301,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The verification status.</p>
+             * <p>The validation status.</p>
              * 
              * <strong>example:</strong>
              * <p>pending</p>
@@ -653,7 +653,7 @@ public class GetCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code returned for certificate application.</p>
+             * <p>The error code of the certificate application.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -664,7 +664,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message returned for certificate application.</p>
+             * <p>The error message of the certificate application.</p>
              * 
              * <strong>example:</strong>
              * <p>canceled</p>
@@ -675,7 +675,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cloud certificate ID.</p>
+             * <p>The cloud certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>30000478</p>
@@ -686,7 +686,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Common Name (CN) field of the certificate.</p>
+             * <p>The Common Name (CN) field of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -697,10 +697,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>The creation time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-05-12 02:00:53</p>
+             * <p>2026-07-01 07:25:23</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -716,7 +716,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SHA256 fingerprint of the certificate.</p>
+             * <p>The SHA-256 fingerprint of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</p>
@@ -727,7 +727,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate ID.</p>
+             * <p>The certificate ID.</p>
              * 
              * <strong>example:</strong>
              * <p>babaded901474b9693acf530e0fb1d95</p>
@@ -738,7 +738,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate issuer.</p>
+             * <p>The certificate issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>DigiCert</p>
@@ -749,7 +749,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate issuing authority.</p>
+             * <p>The certification authority.</p>
              * 
              * <strong>example:</strong>
              * <p>DigiCert Global Root CA</p>
@@ -760,7 +760,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * KeyServerId.
+             * <p>The Keyless server ID. This parameter is valid only when Type is set to keyless.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>baba39055622c008b90285a8838e****</p>
              */
             public Builder keyServerId(String keyServerId) {
                 this.keyServerId = keyServerId;
@@ -768,7 +771,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate name.</p>
+             * <p>The certificate name.</p>
              * 
              * <strong>example:</strong>
              * <p>yourCertName</p>
@@ -779,10 +782,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>End time of the certificate validity period.</p>
+             * <p>The end time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-11-26T16:00:00Z</p>
+             * <p>2026-09-29 06:26:46</p>
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -790,10 +793,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start time of the certificate validity period.</p>
+             * <p>The start time of the certificate validity period. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2023-11-26T16:00:00Z</p>
+             * <p>2026-07-01 06:26:47</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -801,7 +804,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate public key algorithm.</p>
+             * <p>The public key algorithm of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>ECDSA</p>
@@ -812,7 +815,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Region.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -823,7 +826,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subject Alternative Name (SAN) of the certificate.</p>
+             * <p>The Subject Alternative Name (SAN) of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></p>
@@ -834,7 +837,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Serial number of the certificate.</p>
+             * <p>The certificate serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>babaded901474b9693acf530e0fb1daa</p>
@@ -845,7 +848,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate signature algorithm.</p>
+             * <p>The signature algorithm of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>ECDSA-SHA1</p>
@@ -856,7 +859,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate status.</p>
+             * <p>The certificate status.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -867,7 +870,7 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Certificate type.</p>
+             * <p>The certificate type.</p>
              * 
              * <strong>example:</strong>
              * <p>free</p>
@@ -878,10 +881,10 @@ public class GetCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update time.</p>
+             * <p>The update time. The time is in the YYYY-MM-DD HH:MM:SS format in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
-             * <p>2022-09-22 05:33:13</p>
+             * <p>2026-07-01 07:25:23</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

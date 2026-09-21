@@ -67,7 +67,7 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceModel.
+         * <p>The price information.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -75,7 +75,10 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -309,7 +312,18 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li><p>JPY: Japanese Yen.</p>
+             * </li>
+             * <li><p>USD: US Dollar.</p>
+             * </li>
+             * <li><p>CNY: Chinese Yuan.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -317,7 +331,10 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -325,7 +342,10 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The final price of the order, which is the actual transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -341,7 +361,10 @@ public class DescribeDDoSPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPrice.
+             * <p>The original price of the order. Original price = actual transaction price + discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalPrice(Float totalPrice) {
                 this.totalPrice = totalPrice;

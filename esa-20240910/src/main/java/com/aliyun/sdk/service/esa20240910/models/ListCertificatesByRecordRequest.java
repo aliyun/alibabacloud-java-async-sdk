@@ -103,10 +103,10 @@ public class ListCertificatesByRecordRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to return the certificate details. 0 indicates that the certificate details are not returned. 1 indicates that the certificate details are returned.</p>
+         * <p>Specifies whether to return certificate details.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         public Builder detail(Boolean detail) {
             this.putQueryParameter("Detail", detail);
@@ -128,7 +128,7 @@ public class ListCertificatesByRecordRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to query the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,10 +141,10 @@ public class ListCertificatesByRecordRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return only valid certificates. 0 indicates that all matched certificates are returned. 1 indicates that only valid certificates are returned.</p>
+         * <p>Specifies whether to return only valid certificates.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>true</p>
          */
         public Builder validOnly(Boolean validOnly) {
             this.putQueryParameter("ValidOnly", validOnly);

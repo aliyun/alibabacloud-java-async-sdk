@@ -106,7 +106,7 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Certificates.
+         * <p>The certificate list.</p>
          */
         public Builder certificates(java.util.List<Certificates> certificates) {
             this.certificates = certificates;
@@ -114,7 +114,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +125,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +136,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -269,7 +281,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             } 
 
             /**
-             * CommonName.
+             * <p>The common name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -277,7 +292,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * <p>The certificate fingerprint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0151xxxx</p>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -285,7 +303,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The certificate ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000145</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -293,7 +314,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The certificate issuer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DigiCert</p>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -301,7 +325,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The certificate name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +336,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * <p>The expiration time of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708423200000</p>
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -317,7 +347,10 @@ public class ListCasCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region where the certificate resides. Supported values: <strong>cn-hangzhou</strong> and <strong>ap-southeast-1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder region(String region) {
                 this.region = region;

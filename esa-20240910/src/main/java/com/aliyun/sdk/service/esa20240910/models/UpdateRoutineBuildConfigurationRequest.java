@@ -249,7 +249,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         } 
 
         /**
-         * AssetsDirectory.
+         * <p>The static resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/user</p>
          */
         public Builder assetsDirectory(String assetsDirectory) {
             this.putQueryParameter("AssetsDirectory", assetsDirectory);
@@ -258,7 +261,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * BuildBranches.
+         * <p>The branches that trigger a build. Set this to * for all branches. To specify multiple branches, separate branch names with commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>int,abc</p>
          */
         public Builder buildBranches(String buildBranches) {
             this.putQueryParameter("BuildBranches", buildBranches);
@@ -267,7 +273,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * BuildCommand.
+         * <p>The build command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm run build</p>
          */
         public Builder buildCommand(String buildCommand) {
             this.putQueryParameter("BuildCommand", buildCommand);
@@ -276,7 +285,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * EnvironmentVariables.
+         * <p>The environment variables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder environmentVariables(java.util.Map<String, String> environmentVariables) {
             String environmentVariablesShrink = shrink(environmentVariables, "EnvironmentVariables", "json");
@@ -286,7 +298,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * GitAccountId.
+         * <p>The Git account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4580717755793600</p>
          */
         public Builder gitAccountId(Long gitAccountId) {
             this.putQueryParameter("GitAccountId", gitAccountId);
@@ -295,7 +310,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * GitPlatform.
+         * <p>The Git platform. Valid values: github, gitee, and upload.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>github</p>
          */
         public Builder gitPlatform(String gitPlatform) {
             this.putQueryParameter("GitPlatform", gitPlatform);
@@ -304,7 +322,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * InstallCommand.
+         * <p>The install command.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>npm install</p>
          */
         public Builder installCommand(String installCommand) {
             this.putQueryParameter("InstallCommand", installCommand);
@@ -313,7 +334,14 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * IsPrivate.
+         * <p>Specifies whether the repository is private. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The repository is private.</li>
+         * <li><code>false</code>: The repository is not private.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isPrivate(Boolean isPrivate) {
             this.putQueryParameter("IsPrivate", isPrivate);
@@ -322,7 +350,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * NodeVersion.
+         * <p>The Node.js version. Valid values: <code>22.x</code>, <code>20.x</code>, <code>18.x</code>, <code>16.x</code>, <code>14.x</code>, <code>12.x</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22.x</p>
          */
         public Builder nodeVersion(String nodeVersion) {
             this.putQueryParameter("NodeVersion", nodeVersion);
@@ -331,7 +362,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * ProductionBranch.
+         * <p>The production branch name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main</p>
          */
         public Builder productionBranch(String productionBranch) {
             this.putQueryParameter("ProductionBranch", productionBranch);
@@ -340,7 +374,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * Repository.
+         * <p>The repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-test</p>
          */
         public Builder repository(String repository) {
             this.putQueryParameter("Repository", repository);
@@ -349,7 +386,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * RootDirectory.
+         * <p>The root directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/root/admin</p>
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);
@@ -358,7 +398,10 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
-         * RoutineEntry.
+         * <p>The ER entry file path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/home</p>
          */
         public Builder routineEntry(String routineEntry) {
             this.putQueryParameter("RoutineEntry", routineEntry);
@@ -367,6 +410,7 @@ public class UpdateRoutineBuildConfigurationRequest extends Request {
         }
 
         /**
+         * <p>The ER name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

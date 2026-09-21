@@ -119,7 +119,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * AsyncTasks.
+         * <p>The task list.</p>
          */
         public Builder asyncTasks(java.util.List<AsyncTasks> asyncTasks) {
             this.asyncTasks = asyncTasks;
@@ -127,7 +127,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>1 to 500</strong>. Default value: <strong>20</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D2***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -342,7 +357,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-19 09:36:46</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -350,7 +368,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-09-19 09:37:04</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -358,7 +379,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4081****752512</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -366,7 +390,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4081****752512</p>
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;
@@ -374,7 +401,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceName.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.example.com">www.example.com</a></p>
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -382,7 +412,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>site</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -390,7 +423,7 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskDescription.
+             * <p>The task description.</p>
              */
             public Builder taskDescription(java.util.Map<String, String> taskDescription) {
                 this.taskDescription = taskDescription;
@@ -398,7 +431,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskKey.
+             * <p>The custom identifier that is set to associate with this task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>linke-quality-sign</p>
              */
             public Builder taskKey(String taskKey) {
                 this.taskKey = taskKey;
@@ -406,7 +442,15 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The current status of the task. Valid values:</p>
+             * <ul>
+             * <li>in_progress: in progress.</li>
+             * <li>success: completed.</li>
+             * <li>fail: failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -414,7 +458,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>free_cert</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -422,7 +469,10 @@ public class ListAsyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1077***12880</p>
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

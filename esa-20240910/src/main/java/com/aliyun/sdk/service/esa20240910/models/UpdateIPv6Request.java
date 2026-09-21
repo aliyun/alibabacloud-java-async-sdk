@@ -89,10 +89,10 @@ public class UpdateIPv6Request extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable IPv6. Valid values:</p>
+         * <p>The switch. Valid values:</p>
          * <ul>
-         * <li><strong>on</strong></li>
-         * <li><strong>off</strong></li>
+         * <li><strong>on</strong>: enabled.</li>
+         * <li><strong>off</strong>: disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -106,7 +106,14 @@ public class UpdateIPv6Request extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region in which IPv6 is enabled. Default value: x.x.</p>
+         * <ul>
+         * <li>x.x: global.</li>
+         * <li>cn.cn: Chinese mainland.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>x.x</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -115,7 +122,7 @@ public class UpdateIPv6Request extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The website ID, which can be obtained by calling <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

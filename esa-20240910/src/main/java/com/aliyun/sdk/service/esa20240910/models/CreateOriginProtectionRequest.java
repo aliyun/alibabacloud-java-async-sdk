@@ -74,7 +74,14 @@ public class CreateOriginProtectionRequest extends Request {
         } 
 
         /**
-         * AutoConfirmIPList.
+         * <p>Specifies whether to automatically enable the latest back-to-origin IP addresses list. Valid values:</p>
+         * <ul>
+         * <li>off: Do not automatically enable.</li>
+         * <li>on: Automatically enable.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder autoConfirmIPList(String autoConfirmIPList) {
             this.putQueryParameter("AutoConfirmIPList", autoConfirmIPList);
@@ -83,7 +90,7 @@ public class CreateOriginProtectionRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation. The plan associated with the site must support the origin protection feature.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

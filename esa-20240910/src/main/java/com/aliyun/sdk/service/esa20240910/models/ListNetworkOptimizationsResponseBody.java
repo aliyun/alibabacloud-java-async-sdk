@@ -119,7 +119,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response body configurations.</p>
+         * <p>The configurations returned in the response body.</p>
          */
         public Builder configs(java.util.List<Configs> configs) {
             this.configs = configs;
@@ -127,7 +127,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current page number.</p>
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</p>
@@ -160,7 +160,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -171,7 +171,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -370,7 +370,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Configuration ID.</p>
+             * <p>The configuration ID.</p>
              * 
              * <strong>example:</strong>
              * <p>395386449776640</p>
@@ -381,10 +381,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Configuration type, which can be used to query global or rule-based configurations. The value range is as follows:</p>
+             * <p>The configuration type. You can use this parameter to query global or rule configurations. Valid values:</p>
              * <ul>
-             * <li>global: Query global configuration.</li>
-             * <li>rule: Query rule-based configuration.</li>
+             * <li>global: global configuration.</li>
+             * <li>rule: rule configuration.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable GRPC, default is off. The value range is:</p>
+             * <p>Specifies whether to enable gRPC. This feature is disabled by default. Valid values:</p>
              * <ul>
              * <li>on: enabled.</li>
              * <li>off: disabled.</li>
@@ -411,10 +411,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable HTTP2 origin, defaulting to off. The value range is as follows:</p>
+             * <p>Specifies whether to enable HTTP/2 back-to-origin. This feature is disabled by default. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,14 +426,14 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+             * <p>The rule content, which uses conditional expressions to match user requests. You do not need to set this parameter when adding a global configuration. Two scenarios are supported:</p>
              * <ul>
-             * <li>Match all incoming requests: Set the value to true</li>
-             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match all incoming requests: set the value to true.</li>
+             * <li>Match specified requests: set the value to a custom expression, such as (http.host eq \&quot;video.example.com\&quot;).</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>(http.host eq &quot;video.example.com&quot;)</p>
+             * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
              */
             public Builder rule(String rule) {
                 this.rule = rule;
@@ -441,10 +441,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule switch. This parameter is not required when adding a global configuration. The value range is as follows:</p>
+             * <p>The rule switch. You do not need to set this parameter when adding a global configuration. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -456,7 +456,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+             * <p>The rule name. You do not need to set this parameter when adding a global configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>rule_example</p>
@@ -467,7 +467,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Rule execution order. The smaller the value, the higher the priority.</p>
+             * <p>The rule execution order. A smaller value indicates a higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -478,7 +478,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Site configuration version number. For sites with version management enabled, this parameter can specify the site version for which the configuration takes effect, defaulting to version 0.</p>
+             * <p>The version number of the site configuration. For sites with configuration version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -489,10 +489,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable smart routing service, defaulting to off. The value range is as follows:</p>
+             * <p>Specifies whether to enable the smart routing service. This feature is disabled by default. Valid values:</p>
              * <ul>
-             * <li>on: Enabled.</li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -504,7 +504,7 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Maximum file size for upload, in MB. The value range is 100 to 500.</p>
+             * <p>The maximum upload file size, in MB. Valid values: 100 to 500.</p>
              * 
              * <strong>example:</strong>
              * <p>500</p>
@@ -515,10 +515,10 @@ public class ListNetworkOptimizationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether to enable Websocket, enabled by default. Value range: </p>
+             * <p>Specifies whether to enable WebSocket. This feature is enabled by default. Valid values:</p>
              * <ul>
-             * <li>on: Enabled. </li>
-             * <li>off: Disabled.</li>
+             * <li>on: enabled.</li>
+             * <li>off: disabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>

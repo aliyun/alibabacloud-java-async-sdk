@@ -67,7 +67,7 @@ public class GetWafFilterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned match conditions.</p>
+         * <p>The matching engine configuration information returned.</p>
          */
         public Builder filter(Filter filter) {
             this.filter = filter;
@@ -170,7 +170,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error message when the validation fails.</p>
+             * <p>The error message returned when validation fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Enter a valid expression</p>
@@ -181,7 +181,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the value.</p>
+             * <p>The length limit of the value.</p>
              */
             public Builder length(WafQuotaInteger length) {
                 this.length = length;
@@ -189,7 +189,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The regular expression pattern of the value, which is used to validate strings.</p>
+             * <p>The regular expression pattern for the value, used for string validation.</p>
              * 
              * <strong>example:</strong>
              * <p>^example$</p>
@@ -200,7 +200,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The range of the value, which is used to validate numbers.</p>
+             * <p>The numeric range of the value, used for number validation.</p>
              */
             public Builder range(WafQuotaInteger range) {
                 this.range = range;
@@ -371,7 +371,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A custom attribute. For example, this parameter can specify whether the value is case-sensitive.</p>
+             * <p>The configurable attributes, such as whether the match is case-sensitive.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -382,7 +382,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * <p>Indicates whether the current plan supports this match operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -390,12 +393,12 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the value input box. Valid values:</p>
+             * <p>The type of the value input field. Valid values:</p>
              * <ul>
-             * <li>select:single</li>
-             * <li>select:multi</li>
-             * <li>input:single</li>
-             * <li>input:multi</li>
+             * <li>select:single: single-select input field</li>
+             * <li>select:multi: multi-select input field</li>
+             * <li>input:single: single input field</li>
+             * <li>input:multi: multi input field</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -407,7 +410,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * MinPlan.
+             * <p>The minimum plan that supports this match operator, displayed when the current plan does not support it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder minPlan(String minPlan) {
                 this.minPlan = minPlan;
@@ -415,7 +421,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the match result is inverted.</p>
+             * <p>Indicates whether the match result is negated.</p>
              */
             public Builder negative(Boolean negative) {
                 this.negative = negative;
@@ -423,7 +429,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The displayed matching characters.</p>
+             * <p>The display label of the match operator.</p>
              * 
              * <strong>example:</strong>
              * <p>Does not equal</p>
@@ -434,7 +440,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The matching characters in the system.</p>
+             * <p>The parameter of the match operator used internally by the system.</p>
              * 
              * <strong>example:</strong>
              * <p>eq</p>
@@ -445,7 +451,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tip on how to enter a valid value that is required by the rules.</p>
+             * <p>The input hint that helps users provide valid values required by the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>e.g. image/jpeg</p>
@@ -458,10 +464,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             /**
              * <p>The type of the value. Valid values:</p>
              * <ul>
-             * <li>integer</li>
-             * <li>integer_slice</li>
-             * <li>string</li>
-             * <li>string_slice</li>
+             * <li>integer: integer</li>
+             * <li>integer_slice: integer array</li>
+             * <li>string: string</li>
+             * <li>string_slice: string array</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -473,7 +479,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validator, which defines the validation rules for a value.</p>
+             * <p>The validator object that defines the validation rules for values.</p>
              */
             public Builder validator(Validator validator) {
                 this.validator = validator;
@@ -540,7 +546,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label of the data.</p>
+             * <p>The display label of the available data.</p>
              * 
              * <strong>example:</strong>
              * <p>China</p>
@@ -551,7 +557,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the data.</p>
+             * <p>The parameter value of the available data.</p>
              * 
              * <strong>example:</strong>
              * <p>CN</p>
@@ -621,7 +627,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The data. This parameter is available only when the value of the Kind parameter is data.</p>
+             * <p>The list of available data when the selector kind is data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -629,7 +635,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of selector. Valid values: data and others.</p>
+             * <p>The kind of the selector, such as whether it is used for selecting data items or other purposes.</p>
              * 
              * <strong>example:</strong>
              * <p>data</p>
@@ -641,6 +647,561 @@ public class GetWafFilterResponseBody extends TeaModel {
 
             public Selector build() {
                 return new Selector(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWafFilterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWafFilterResponseBody</p>
+     */
+    public static class LogicsValidator extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
+        private String errMsg;
+
+        @com.aliyun.core.annotation.NameInMap("Length")
+        private WafQuotaInteger length;
+
+        @com.aliyun.core.annotation.NameInMap("Pattern")
+        private String pattern;
+
+        @com.aliyun.core.annotation.NameInMap("Range")
+        private WafQuotaInteger range;
+
+        private LogicsValidator(Builder builder) {
+            this.errMsg = builder.errMsg;
+            this.length = builder.length;
+            this.pattern = builder.pattern;
+            this.range = builder.range;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogicsValidator create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errMsg
+         */
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        /**
+         * @return length
+         */
+        public WafQuotaInteger getLength() {
+            return this.length;
+        }
+
+        /**
+         * @return pattern
+         */
+        public String getPattern() {
+            return this.pattern;
+        }
+
+        /**
+         * @return range
+         */
+        public WafQuotaInteger getRange() {
+            return this.range;
+        }
+
+        public static final class Builder {
+            private String errMsg; 
+            private WafQuotaInteger length; 
+            private String pattern; 
+            private WafQuotaInteger range; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogicsValidator model) {
+                this.errMsg = model.errMsg;
+                this.length = model.length;
+                this.pattern = model.pattern;
+                this.range = model.range;
+            } 
+
+            /**
+             * <p>The error message returned when validation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Enter a valid expression</p>
+             */
+            public Builder errMsg(String errMsg) {
+                this.errMsg = errMsg;
+                return this;
+            }
+
+            /**
+             * <p>The length limit of the value.</p>
+             */
+            public Builder length(WafQuotaInteger length) {
+                this.length = length;
+                return this;
+            }
+
+            /**
+             * <p>The regular expression pattern for the value, used for string validation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>^example$</p>
+             */
+            public Builder pattern(String pattern) {
+                this.pattern = pattern;
+                return this;
+            }
+
+            /**
+             * <p>The numeric range of the value, used for number validation.</p>
+             */
+            public Builder range(WafQuotaInteger range) {
+                this.range = range;
+                return this;
+            }
+
+            public LogicsValidator build() {
+                return new LogicsValidator(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWafFilterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWafFilterResponseBody</p>
+     */
+    public static class SubsLogics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Attributes")
+        private Integer attributes;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("Kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("MinPlan")
+        private String minPlan;
+
+        @com.aliyun.core.annotation.NameInMap("Negative")
+        private Boolean negative;
+
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private String operator;
+
+        @com.aliyun.core.annotation.NameInMap("Symbol")
+        private String symbol;
+
+        @com.aliyun.core.annotation.NameInMap("Tip")
+        private String tip;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Validator")
+        private LogicsValidator validator;
+
+        private SubsLogics(Builder builder) {
+            this.attributes = builder.attributes;
+            this.enable = builder.enable;
+            this.kind = builder.kind;
+            this.minPlan = builder.minPlan;
+            this.negative = builder.negative;
+            this.operator = builder.operator;
+            this.symbol = builder.symbol;
+            this.tip = builder.tip;
+            this.type = builder.type;
+            this.validator = builder.validator;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubsLogics create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attributes
+         */
+        public Integer getAttributes() {
+            return this.attributes;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return minPlan
+         */
+        public String getMinPlan() {
+            return this.minPlan;
+        }
+
+        /**
+         * @return negative
+         */
+        public Boolean getNegative() {
+            return this.negative;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return symbol
+         */
+        public String getSymbol() {
+            return this.symbol;
+        }
+
+        /**
+         * @return tip
+         */
+        public String getTip() {
+            return this.tip;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return validator
+         */
+        public LogicsValidator getValidator() {
+            return this.validator;
+        }
+
+        public static final class Builder {
+            private Integer attributes; 
+            private Boolean enable; 
+            private String kind; 
+            private String minPlan; 
+            private Boolean negative; 
+            private String operator; 
+            private String symbol; 
+            private String tip; 
+            private String type; 
+            private LogicsValidator validator; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubsLogics model) {
+                this.attributes = model.attributes;
+                this.enable = model.enable;
+                this.kind = model.kind;
+                this.minPlan = model.minPlan;
+                this.negative = model.negative;
+                this.operator = model.operator;
+                this.symbol = model.symbol;
+                this.tip = model.tip;
+                this.type = model.type;
+                this.validator = model.validator;
+            } 
+
+            /**
+             * <p>The field attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder attributes(Integer attributes) {
+                this.attributes = attributes;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the current plan supports this match operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * <p>The type of the value input field. Valid values:</p>
+             * <ul>
+             * <li>select:single: single-select input field</li>
+             * <li>select:multi: multi-select input field</li>
+             * <li>input:single: single input field</li>
+             * <li>input:multi: multi input field</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>select:single</p>
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * <p>The minimum plan that supports this match operator, displayed when the current plan does not support it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder minPlan(String minPlan) {
+                this.minPlan = minPlan;
+                return this;
+            }
+
+            /**
+             * <p>Indicates whether the match result is negated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder negative(Boolean negative) {
+                this.negative = negative;
+                return this;
+            }
+
+            /**
+             * <p>The display label of the match operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * <p>The parameter of the match operator used internally by the system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eq</p>
+             */
+            public Builder symbol(String symbol) {
+                this.symbol = symbol;
+                return this;
+            }
+
+            /**
+             * <p>The input hint that helps users provide valid values required by the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e.g. image/jpeg</p>
+             */
+            public Builder tip(String tip) {
+                this.tip = tip;
+                return this;
+            }
+
+            /**
+             * <p>The type of the value. Valid values:</p>
+             * <ul>
+             * <li>integer: integer</li>
+             * <li>integer_slice: integer array</li>
+             * <li>string: string</li>
+             * <li>string_slice: string array</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>The validator object that defines the validation rules for values.</p>
+             */
+            public Builder validator(LogicsValidator validator) {
+                this.validator = validator;
+                return this;
+            }
+
+            public SubsLogics build() {
+                return new SubsLogics(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetWafFilterResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetWafFilterResponseBody</p>
+     */
+    public static class Subs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("Logics")
+        private java.util.List<SubsLogics> logics;
+
+        @com.aliyun.core.annotation.NameInMap("MinPlan")
+        private String minPlan;
+
+        private Subs(Builder builder) {
+            this.enable = builder.enable;
+            this.key = builder.key;
+            this.label = builder.label;
+            this.logics = builder.logics;
+            this.minPlan = builder.minPlan;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Subs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return logics
+         */
+        public java.util.List<SubsLogics> getLogics() {
+            return this.logics;
+        }
+
+        /**
+         * @return minPlan
+         */
+        public String getMinPlan() {
+            return this.minPlan;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+            private String key; 
+            private String label; 
+            private java.util.List<SubsLogics> logics; 
+            private String minPlan; 
+
+            private Builder() {
+            } 
+
+            private Builder(Subs model) {
+                this.enable = model.enable;
+                this.key = model.key;
+                this.label = model.label;
+                this.logics = model.logics;
+                this.minPlan = model.minPlan;
+            } 
+
+            /**
+             * <p>Indicates whether the current plan supports this match object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * <p>The parameter of the sub-item match object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali.websdk.umid</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The display label of the sub-item match object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Web UMID</p>
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * <p>The list of logical operator properties applicable to the sub-item (same structure as the parent Logics).</p>
+             */
+            public Builder logics(java.util.List<SubsLogics> logics) {
+                this.logics = logics;
+                return this;
+            }
+
+            /**
+             * <p>The minimum plan that supports this match object, displayed when the current plan does not support it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
+             */
+            public Builder minPlan(String minPlan) {
+                this.minPlan = minPlan;
+                return this;
+            }
+
+            public Subs build() {
+                return new Subs(this);
             } 
 
         } 
@@ -677,6 +1238,9 @@ public class GetWafFilterResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubTip")
         private String subTip;
 
+        @com.aliyun.core.annotation.NameInMap("Subs")
+        private java.util.List<Subs> subs;
+
         private Fields(Builder builder) {
             this.enable = builder.enable;
             this.key = builder.key;
@@ -686,6 +1250,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             this.selector = builder.selector;
             this.sub = builder.sub;
             this.subTip = builder.subTip;
+            this.subs = builder.subs;
         }
 
         public static Builder builder() {
@@ -752,6 +1317,13 @@ public class GetWafFilterResponseBody extends TeaModel {
             return this.subTip;
         }
 
+        /**
+         * @return subs
+         */
+        public java.util.List<Subs> getSubs() {
+            return this.subs;
+        }
+
         public static final class Builder {
             private Boolean enable; 
             private String key; 
@@ -761,6 +1333,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             private Selector selector; 
             private Boolean sub; 
             private String subTip; 
+            private java.util.List<Subs> subs; 
 
             private Builder() {
             } 
@@ -774,10 +1347,14 @@ public class GetWafFilterResponseBody extends TeaModel {
                 this.selector = model.selector;
                 this.sub = model.sub;
                 this.subTip = model.subTip;
+                this.subs = model.subs;
             } 
 
             /**
-             * Enable.
+             * <p>Indicates whether the current plan supports this match object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -785,7 +1362,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The field for matched objects in the system.</p>
+             * <p>The parameter of the match object used internally by the system.</p>
              * 
              * <strong>example:</strong>
              * <p>http.request.headers</p>
@@ -796,7 +1373,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of the matched object.</p>
+             * <p>The display label of the match object.</p>
              * 
              * <strong>example:</strong>
              * <p>Header</p>
@@ -807,7 +1384,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical conditions.</p>
+             * <p>The list of logical operator properties that define the logical conditions used for matching.</p>
              */
             public Builder logics(java.util.List<Logics> logics) {
                 this.logics = logics;
@@ -815,7 +1392,10 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * MinPlan.
+             * <p>The minimum plan that supports this match object, displayed when the current plan does not support it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder minPlan(String minPlan) {
                 this.minPlan = minPlan;
@@ -823,7 +1403,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The selector, which defines how to select a matched object.</p>
+             * <p>The selector object that defines how to select the match object.</p>
              */
             public Builder selector(Selector selector) {
                 this.selector = selector;
@@ -831,7 +1411,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the matched object contains a subfield.</p>
+             * <p>Indicates whether the match object contains subfields.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -842,13 +1422,21 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tip on how to enter a subfield.</p>
+             * <p>The hint provided to users about how to enter subfields.</p>
              * 
              * <strong>example:</strong>
              * <p>e.g. Content-Type</p>
              */
             public Builder subTip(String subTip) {
                 this.subTip = subTip;
+                return this;
+            }
+
+            /**
+             * <p>The enumerated sub-item list (dropdown subfields for grouped fields such as ali.websdk). Top-level match objects populate this list. Sub-items that are flat fields can be used directly as the left-hand side of an expression.</p>
+             */
+            public Builder subs(java.util.List<Subs> subs) {
+                this.subs = subs;
                 return this;
             }
 
@@ -938,7 +1526,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The matched objects and related properties.</p>
+             * <p>The list that describes match objects and their properties.</p>
              */
             public Builder fields(java.util.List<Fields> fields) {
                 this.fields = fields;
@@ -946,7 +1534,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The WAF rule category.</p>
+             * <p>The phase in which WAF processes the request.</p>
              * 
              * <strong>example:</strong>
              * <p>http_bot</p>
@@ -957,7 +1545,7 @@ public class GetWafFilterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The condition for matching incoming requests.</p>
+             * <p>The target value of the matching engine.</p>
              * 
              * <strong>example:</strong>
              * <p>characteristics</p>

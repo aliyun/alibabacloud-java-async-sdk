@@ -106,7 +106,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -133,7 +139,7 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleInfos.
+         * <p>The list of rules.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -141,7 +147,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -272,7 +281,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Action.
+             * <p>The protection action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deny</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -280,7 +292,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition.
+             * <p>The rule trigger condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -288,7 +303,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRuleId.
+             * <p>The ID of the protection rule for log records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000030</p>
              */
             public Builder logRuleId(Long logRuleId) {
                 this.logRuleId = logRuleId;
@@ -296,7 +314,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PunishTime.
+             * <p>The action duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1800</p>
              */
             public Builder punishTime(Long punishTime) {
                 this.punishTime = punishTime;
@@ -304,7 +325,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RecordName.
+             * <p>The record name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -312,7 +336,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20569929</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -320,7 +347,10 @@ public class DescribeHttpDDoSIntelligentAclRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>smart_cc_***</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

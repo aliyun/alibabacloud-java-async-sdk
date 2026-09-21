@@ -103,10 +103,10 @@ public class UpdateOriginPoolRequest extends Request {
         } 
 
         /**
-         * <p>Whether the origin pool is enabled:</p>
+         * <p>Specifies whether the origin address pool is enabled. Valid values:</p>
          * <ul>
-         * <li>true: Enabled;</li>
-         * <li>false: Disabled.</li>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class UpdateOriginPoolRequest extends Request {
         }
 
         /**
-         * <p>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</p>
+         * <p>The origin address pool ID. You can call the <a href="~~ListOriginPools~~">ListOriginPools</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class UpdateOriginPoolRequest extends Request {
         }
 
         /**
-         * <p>Information about the origins added to the origin pool. Multiple origins are passed as an array.</p>
+         * <p>The origin server information added to the origin address pool. Use an array to pass multiple origin servers.</p>
          */
         public Builder origins(java.util.List<Origins> origins) {
             String originsShrink = shrink(origins, "Origins", "json");
@@ -142,7 +142,7 @@ public class UpdateOriginPoolRequest extends Request {
         }
 
         /**
-         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,12 +264,12 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The type of authentication.</p>
+             * <p>The authentication type. Valid values:</p>
              * <ul>
-             * <li>public: Public read/write, used when the origin is OSS or S3 and is set to public read/write;</li>
-             * <li>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</li>
-             * <li>private_cross_account: Private cross-account, used when the origin is OSS and the authentication type is private across accounts;</li>
-             * <li>private: Used when the origin is S3 and the authentication type is private.</li>
+             * <li>public: public read/write. Use this value when the origin server is OSS or S3 with public read/write access.</li>
+             * <li>private_same_account: private same-account. Use this value when the origin server is OSS with same-account private authentication.</li>
+             * <li>private_cross_account: private cross-account. Use this value when the origin server is OSS with cross-account private authentication.</li>
+             * <li>private: Use this value when the origin server is S3 with private authentication.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,7 +281,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The region of the origin required when the origin is AWS S3.</p>
+             * <p>The region of the origin server required when the origin server is AWS S3.</p>
              * 
              * <strong>example:</strong>
              * <p>us-east-1</p>
@@ -303,7 +303,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The signature version required when the origin is AWS S3.</p>
+             * <p>The signature version required when the origin server is AWS S3.</p>
              * 
              * <strong>example:</strong>
              * <p>v2</p>
@@ -451,7 +451,7 @@ public class UpdateOriginPoolRequest extends Request {
             } 
 
             /**
-             * <p>The address of the origin, e.g., <a href="http://www.example.com">www.example.com</a>.</p>
+             * <p>The addresses of the origin server, such as <a href="http://www.example.com">www.example.com</a>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -462,7 +462,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>Authentication information. When the origin is OSS or S3 and requires authentication, you need to pass the related configuration information for authentication.</p>
+             * <p>The authentication information. This parameter is required when the origin server is OSS, S3, or another origin server that requires authentication.</p>
              */
             public Builder authConf(AuthConf authConf) {
                 this.authConf = authConf;
@@ -470,10 +470,10 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>Whether the origin is enabled:</p>
+             * <p>Specifies whether the origin server is enabled. Valid values:</p>
              * <ul>
-             * <li>true: Enabled;</li>
-             * <li>false: Disabled.</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -485,7 +485,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The request header to be included when fetching from the origin, supporting only Host.</p>
+             * <p>The request header included in back-to-origin requests. Only Host is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -500,7 +500,16 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * IpVersionPolicy.
+             * <p>The IP protocol version used for back-to-origin requests. Valid values:</p>
+             * <ul>
+             * <li>round_robin: default policy. Randomly polls IPv4 or IPv6 origin servers.</li>
+             * <li>ipv4_first: preferentially uses IPv4 origin servers.</li>
+             * <li>ipv6_first: preferentially uses IPv6 origin servers.</li>
+             * <li>follow: preferentially follows the IP version used by the client.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>round_robin</p>
              */
             public Builder ipVersionPolicy(String ipVersionPolicy) {
                 this.ipVersionPolicy = ipVersionPolicy;
@@ -508,7 +517,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The name of the origin, which must be unique under one origin pool.</p>
+             * <p>The origin server name. The name must be unique within an origin address pool.</p>
              * 
              * <strong>example:</strong>
              * <p>origin1</p>
@@ -519,11 +528,11 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The type of the origin:</p>
+             * <p>The origin server type. Valid values:</p>
              * <ul>
-             * <li>ip_domain: IP or domain type origin;</li>
-             * <li>OSS: OSS address origin;</li>
-             * <li>S3: AWS S3 origin.</li>
+             * <li>ip_domain: an IP address or domain name-based origin server.</li>
+             * <li>OSS: an OSS address-based origin server.</li>
+             * <li>S3: an AWS S3 origin server.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -535,7 +544,7 @@ public class UpdateOriginPoolRequest extends Request {
             }
 
             /**
-             * <p>The weight, an integer between 0 and 100.</p>
+             * <p>The weight. The value is an integer from 0 to 100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

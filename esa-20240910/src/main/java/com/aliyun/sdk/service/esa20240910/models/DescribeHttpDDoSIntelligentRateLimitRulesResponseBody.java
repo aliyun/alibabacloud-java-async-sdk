@@ -106,7 +106,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -133,7 +139,7 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * RuleInfos.
+         * <p>The list of rules.</p>
          */
         public Builder ruleInfos(java.util.List<RuleInfos> ruleInfos) {
             this.ruleInfos = ruleInfos;
@@ -141,7 +147,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +307,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             } 
 
             /**
-             * Action.
+             * <p>The action to perform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>js</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -306,7 +318,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * Condition.
+             * <p>The conditions that trigger the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</p>
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -314,7 +329,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * LogRuleId.
+             * <p>The ID of the protection rule for log records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100030</p>
              */
             public Builder logRuleId(Long logRuleId) {
                 this.logRuleId = logRuleId;
@@ -322,7 +340,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * PunishTime.
+             * <p>The duration of the penalty in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400</p>
              */
             public Builder punishTime(Long punishTime) {
                 this.punishTime = punishTime;
@@ -330,7 +351,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * RateLimit.
+             * <p>The frequency information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;threshold&quot;:2000,&quot;interval&quot;:5,&quot;target&quot;:&quot;ip&quot;,&quot;ttl&quot;:600}</p>
              */
             public Builder rateLimit(String rateLimit) {
                 this.rateLimit = rateLimit;
@@ -338,7 +362,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * RecordName.
+             * <p>The name of the record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.example.com</p>
              */
             public Builder recordName(String recordName) {
                 this.recordName = recordName;
@@ -346,7 +373,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20110849</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -354,7 +384,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * RuleName.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>inner_cc_client_ip_ratelimit</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -362,7 +395,10 @@ public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody extends TeaMo
             }
 
             /**
-             * Statistics.
+             * <p>The statistics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;field&quot;:&quot;ip&quot;,&quot;mode&quot;:&quot;count&quot;}</p>
              */
             public Builder statistics(String statistics) {
                 this.statistics = statistics;

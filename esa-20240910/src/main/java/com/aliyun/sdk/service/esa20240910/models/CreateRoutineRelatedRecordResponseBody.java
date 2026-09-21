@@ -80,7 +80,10 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * RecordId.
+         * <p>The record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3227405728754048</p>
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -99,7 +102,7 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>The operation status, which indicates success or failure.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>

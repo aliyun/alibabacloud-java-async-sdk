@@ -80,7 +80,7 @@ public class GetKvDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The expiration time of the key. Unit: seconds.</p>
+         * <p>The expiration time of the key (relative time, in seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -91,7 +91,7 @@ public class GetKvDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The expiration time of the key. Unit: seconds.</p>
+         * <p>The expiration time of the key (relative time, in seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
@@ -102,7 +102,8 @@ public class GetKvDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The value of the key. The value of the root node.</p>
+         * <p>The value of the key.
+         * The value of the root node.</p>
          * 
          * <strong>example:</strong>
          * <p>test_value</p>

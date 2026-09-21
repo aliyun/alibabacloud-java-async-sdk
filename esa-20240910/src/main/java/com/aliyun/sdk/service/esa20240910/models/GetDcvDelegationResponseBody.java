@@ -93,7 +93,10 @@ public class GetDcvDelegationResponseBody extends TeaModel {
         } 
 
         /**
-         * DelegationDomain.
+         * <p>The DCV managed domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****.dcv.aliyun-esa.com</p>
          */
         public Builder delegationDomain(String delegationDomain) {
             this.delegationDomain = delegationDomain;
@@ -112,7 +115,10 @@ public class GetDcvDelegationResponseBody extends TeaModel {
         }
 
         /**
-         * SiteId.
+         * <p>The site ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****</p>
          */
         public Builder siteId(Long siteId) {
             this.siteId = siteId;
@@ -120,7 +126,10 @@ public class GetDcvDelegationResponseBody extends TeaModel {
         }
 
         /**
-         * SiteName.
+         * <p>The site name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder siteName(String siteName) {
             this.siteName = siteName;

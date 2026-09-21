@@ -149,7 +149,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -160,7 +160,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The site name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -171,7 +171,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the certificate.</p>
+         * <p>The certificate status.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -409,7 +409,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Common Name of the certificate.</p>
+             * <p>The common name of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -420,7 +420,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was created.</p>
+             * <p>The creation time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05 18:24:04</p>
@@ -453,7 +453,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * <p>The certificate issuer.</p>
              * 
              * <strong>example:</strong>
              * <p>GlobalSign nv-sa</p>
@@ -475,7 +475,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate expires.</p>
+             * <p>The end time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-31 02:08:00</p>
@@ -486,7 +486,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate takes effect.</p>
+             * <p>The start time of the certificate validity period. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31 02:08:00</p>
@@ -497,7 +497,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public-key algorithm of the certificate.</p>
+             * <p>The public key algorithm of the certificate.</p>
              * 
              * <strong>example:</strong>
              * <p>RSA</p>
@@ -519,7 +519,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the certificate.</p>
+             * <p>The certificate serial number.</p>
              * 
              * <strong>example:</strong>
              * <p>babaded901474b9693acf530e0fb1d**</p>
@@ -541,7 +541,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the certificate.</p>
+             * <p>The certificate status.</p>
              * 
              * <strong>example:</strong>
              * <p>OK</p>
@@ -563,7 +563,7 @@ public class GetOriginCaCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the certificate was updated.</p>
+             * <p>The update time. Format: YYYY-MM-DD HH:MM:SS, in the UTC/GMT time zone.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-03-05 18:24:04</p>

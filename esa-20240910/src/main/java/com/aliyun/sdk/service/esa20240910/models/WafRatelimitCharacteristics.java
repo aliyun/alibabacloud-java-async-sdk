@@ -80,7 +80,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
         } 
 
         /**
-         * Criteria.
+         * <p>A list of match criteria.</p>
          */
         public Builder criteria(java.util.List<Criteria> criteria) {
             this.criteria = criteria;
@@ -88,7 +88,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
         }
 
         /**
-         * Logic.
+         * <p>The logical relationship between the criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>and</p>
          */
         public Builder logic(String logic) {
             this.logic = logic;
@@ -96,7 +99,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
         }
 
         /**
-         * MatchType.
+         * <p>The field to match.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src</p>
          */
         public Builder matchType(String matchType) {
             this.matchType = matchType;
@@ -149,7 +155,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
             } 
 
             /**
-             * MatchType.
+             * <p>The field to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -229,7 +238,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
             } 
 
             /**
-             * Criteria.
+             * <p>A list of match criteria.</p>
              */
             public Builder criteria(java.util.List<CriteriaCriteria> criteria) {
                 this.criteria = criteria;
@@ -237,7 +246,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>The logical relationship between the criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -245,7 +257,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The field to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -325,7 +340,7 @@ public class WafRatelimitCharacteristics extends TeaModel {
             } 
 
             /**
-             * Criteria.
+             * <p>A list of match criteria.</p>
              */
             public Builder criteria(java.util.List<WafRatelimitCharacteristicsCriteriaCriteria> criteria) {
                 this.criteria = criteria;
@@ -333,7 +348,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
             }
 
             /**
-             * Logic.
+             * <p>The logical relationship between the criteria.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>and</p>
              */
             public Builder logic(String logic) {
                 this.logic = logic;
@@ -341,7 +359,10 @@ public class WafRatelimitCharacteristics extends TeaModel {
             }
 
             /**
-             * MatchType.
+             * <p>The field to match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ip.src</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;

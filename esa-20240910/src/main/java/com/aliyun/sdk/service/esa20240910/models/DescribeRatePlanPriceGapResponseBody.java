@@ -67,7 +67,7 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
         } 
 
         /**
-         * PriceModel.
+         * <p>The price information.</p>
          */
         public Builder priceModel(PriceModel priceModel) {
             this.priceModel = priceModel;
@@ -75,7 +75,7 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>40423A7F-A83D-1E24-B80E-86DD25790759</p>
@@ -338,7 +338,15 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li>JPY: Japanese Yen.</li>
+             * <li>USD: US Dollar.</li>
+             * <li>CNY: Chinese Yuan.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CNY</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -346,7 +354,10 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * <p>The discount amount of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -354,7 +365,10 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xcdn-91fknmb80f0g</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -362,7 +376,10 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The final order price, which is the actual transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder price(Float price) {
                 this.price = price;
@@ -378,7 +395,10 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPlanCode.
+             * <p>The target plan code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>entranceplan</p>
              */
             public Builder targetPlanCode(String targetPlanCode) {
                 this.targetPlanCode = targetPlanCode;
@@ -386,7 +406,10 @@ public class DescribeRatePlanPriceGapResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPrice.
+             * <p>The original order price. Original order price = actual transaction price + discount amount.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalPrice(Float totalPrice) {
                 this.totalPrice = totalPrice;

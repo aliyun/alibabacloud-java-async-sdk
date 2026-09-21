@@ -271,7 +271,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</p>
+         * <p>The custom cipher suite to use when <code>CiphersuiteGroup</code> is set to <code>custom</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</p>
@@ -283,11 +283,14 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Cipher suite group. Default is all cipher suites. Value range:</p>
+         * <p>The cipher suite group. Default value: <code>all</code>. Valid values:</p>
          * <ul>
-         * <li>all: All cipher suites.</li>
-         * <li>strict: Strong cipher suites.</li>
-         * <li>custom: Custom cipher suites.</li>
+         * <li><p><code>all</code>: All cipher suites.</p>
+         * </li>
+         * <li><p><code>strict</code>: strong cipher suites.</p>
+         * </li>
+         * <li><p><code>custom</code>: custom cipher suites.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +303,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Configuration ID.</p>
+         * <p>The configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -313,10 +316,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTP2. Default is enabled. Value range:</p>
+         * <p>Indicates whether HTTP/2 is enabled. Default value: <code>on</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -329,10 +334,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTP3. Default is enabled. Value range:</p>
+         * <p>Indicates whether HTTP/3 is enabled. Default value: <code>on</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -345,10 +352,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable HTTPS. Default is enabled. Value range:</p>
+         * <p>Indicates whether HTTPS is enabled. Default value: <code>on</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -361,10 +370,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable OCSP. Default is disabled. Value range:</p>
+         * <p>Indicates whether OCSP stapling is enabled. Default value: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,14 +388,16 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
+         * <p>The conditional expression used to match incoming requests. This parameter is not required when you add a global configuration. Use cases:</p>
          * <ul>
-         * <li>Match all incoming requests: Set the value to true</li>
-         * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+         * <li><p>To match all incoming requests, set the value to <code>true</code>.</p>
+         * </li>
+         * <li><p>To match specific requests, set the value to a custom expression, for example, <code>(http.host eq &quot;video.example.com&quot;)</code>.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>(http.host eq &quot;video.example.com&quot;)</p>
+         * <p>(http.host eq \&quot;video.example.com\&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -393,10 +406,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule switch. This parameter is not required when adding a global configuration. Value range:</p>
+         * <p>Indicates whether the rule is enabled. This parameter is not required when you add a global configuration. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -409,7 +424,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Rule name. This parameter is not required when adding a global configuration.</p>
+         * <p>The rule name. This parameter is not required when you add a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -421,7 +436,10 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * Sequence.
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sequence(Integer sequence) {
             this.putQueryParameter("Sequence", sequence);
@@ -430,7 +448,7 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -443,10 +461,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.0. Default is disabled. Value range:</p>
+         * <p>Indicates whether TLS 1.0 is enabled. Default value: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -459,10 +479,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.1. Default is disabled. Value range:</p>
+         * <p>Indicates whether TLS 1.1 is enabled. Default value: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -475,10 +497,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.2. Default is disabled. Value range:</p>
+         * <p>Indicates whether TLS 1.2 is enabled. Default value: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -491,10 +515,12 @@ public class UpdateHttpsBasicConfigurationRequest extends Request {
         }
 
         /**
-         * <p>Whether to enable TLS1.3. Default is disabled. Value range:</p>
+         * <p>Indicates whether TLS 1.3 is enabled. Default value: <code>off</code>. Valid values:</p>
          * <ul>
-         * <li>on: Enable.</li>
-         * <li>off: Disable.</li>
+         * <li><p><code>on</code>: Enabled.</p>
+         * </li>
+         * <li><p><code>off</code>: Disabled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

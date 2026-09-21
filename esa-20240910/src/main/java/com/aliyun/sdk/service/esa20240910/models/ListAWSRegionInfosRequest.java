@@ -59,7 +59,10 @@ public class ListAWSRegionInfosRequest extends Request {
         } 
 
         /**
-         * Name.
+         * <p>The name of the metadata to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

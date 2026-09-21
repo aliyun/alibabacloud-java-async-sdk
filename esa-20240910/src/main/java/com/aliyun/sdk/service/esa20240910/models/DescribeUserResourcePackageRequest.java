@@ -143,7 +143,10 @@ public class DescribeUserResourcePackageRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the resource plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong>_ResourcePack-cn-</strong></strong></p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +155,10 @@ public class DescribeUserResourcePackageRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +167,10 @@ public class DescribeUserResourcePackageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -179,7 +188,17 @@ public class DescribeUserResourcePackageRequest extends Request {
         }
 
         /**
-         * SortField.
+         * <p>The sorting field. Valid values:</p>
+         * <ul>
+         * <li>startTime: the effective period of the instance.</li>
+         * <li>endTime: the expiration time of the instance.</li>
+         * <li>StartTime: the effective period of the instance.</li>
+         * <li>EndTime: the expiration time of the instance.</li>
+         * <li>default: no sorting field.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>startTime</p>
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -188,7 +207,14 @@ public class DescribeUserResourcePackageRequest extends Request {
         }
 
         /**
-         * SortRule.
+         * <p>The sorting rule. Default value: desc. Valid values:</p>
+         * <ul>
+         * <li>asc</li>
+         * <li>desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder sortRule(String sortRule) {
             this.putQueryParameter("SortRule", sortRule);
@@ -197,7 +223,15 @@ public class DescribeUserResourcePackageRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the resource plan. Default value: valid. Valid values:</p>
+         * <ul>
+         * <li>valid: Valid.</li>
+         * <li>invalid: Invalid.</li>
+         * <li>exhaust: Exhausted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

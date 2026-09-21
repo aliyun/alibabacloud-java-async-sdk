@@ -158,10 +158,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the container is ready.</p>
+         * <p>Indicates whether the container status is ready. Valid values:</p>
          * <ul>
-         * <li>ok</li>
-         * <li>unready</li>
+         * <li><p><strong>ok</strong>: Ready.</p>
+         * </li>
+         * <li><p><strong>unready</strong>: Not ready.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,7 +175,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the container was created. The value is a timestamp.</p>
+         * <p>The creation time (UNIX timestamp).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-24T06:46:35Z</p>
@@ -184,10 +186,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The initialization status of the container.</p>
+         * <p>The container initialization status. Valid values:</p>
          * <ul>
-         * <li>ok</li>
-         * <li>unready</li>
+         * <li><p><strong>ok</strong>: Succeeded.</p>
+         * </li>
+         * <li><p><strong>unready</strong>: Not completed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,11 +203,17 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the container in the staging environment.</p>
+         * <p>The status of the container in the staging environment. Valid values:</p>
          * <ul>
-         * <li>NoContainer: created.</li>
+         * <li>NoContainer: no container.</li>
+         * <li>Pending: pending deployment.</li>
+         * <li>ContainerCreating: the container is being created.</li>
          * <li>Running: running.</li>
-         * <li>Failed: abnormal.</li>
+         * <li>Succeeded: completed.</li>
+         * <li>ImagePullBackOff: image pull failed.</li>
+         * <li>CrashLoopBackOff: abnormal container startup.</li>
+         * <li>Failed: failed.</li>
+         * <li>Unknown: unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,7 +225,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of container restart.</p>
+         * <p>The container restart status.</p>
          */
         public Builder podRestartState(PodRestartState podRestartState) {
             this.podRestartState = podRestartState;
@@ -223,10 +233,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether domain names are associated with the container.</p>
+         * <p>Indicates whether the container is ready to receive traffic. Valid values:</p>
          * <ul>
-         * <li>ok</li>
-         * <li>unready</li>
+         * <li><p><strong>ok</strong>: Ready.</p>
+         * </li>
+         * <li><p><strong>unready</strong>: Not ready.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -249,10 +261,12 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The scheduling status of the container.</p>
+         * <p>The container scheduling status. Valid values:</p>
          * <ul>
-         * <li>ok</li>
-         * <li>unready</li>
+         * <li><p><strong>ok</strong>: Succeeded.</p>
+         * </li>
+         * <li><p><strong>unready</strong>: Not completed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +278,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The virtual IP addresses.</p>
+         * <p>The list of VIPs.</p>
          */
         public Builder VIPs(java.util.List<String> VIPs) {
             this.VIPs = VIPs;
@@ -341,7 +355,7 @@ public class GetEdgeContainerStagingDeployStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that the container restarted.</p>
+             * <p>The number of restarts.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

@@ -75,11 +75,12 @@ public class UpdateSitePauseRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to temporarily pause ESA on the website. If you set this parameter to true, all requests to the domains in your DNS records go directly to your origin server. Valid values:</p>
+         * <p>Specifies whether to temporarily pause the proxy acceleration feature for the entire site. After the feature is paused, all DNS records directly return record values to the client. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: Pauses site acceleration.</li>
+         * <li>false: Resumes normal site acceleration.</li>
          * </ul>
+         * <p>When site acceleration is paused, only activated sites with NS access mode are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -92,7 +93,7 @@ public class UpdateSitePauseRequest extends Request {
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID. Check the Status field to confirm the site status and the AccessType field to confirm the access mode of the site.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

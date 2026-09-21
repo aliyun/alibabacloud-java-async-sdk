@@ -67,7 +67,7 @@ public class PublishRoutineCodeVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The code version.</p>
+         * <p>The code version number.</p>
          * 
          * <strong>example:</strong>
          * <p>1710120201067203242</p>

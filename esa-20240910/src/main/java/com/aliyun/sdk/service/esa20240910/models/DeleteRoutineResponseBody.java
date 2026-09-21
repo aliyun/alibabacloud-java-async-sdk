@@ -78,7 +78,7 @@ public class DeleteRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>The status of the operation, which indicates success or failure.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>

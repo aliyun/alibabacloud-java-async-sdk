@@ -106,7 +106,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB1A380B-09F0-41BB-A198-72F8FD6DA2FE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePackageInfos.
+         * <p>The array of ResourcePackageInfo objects.</p>
          */
         public Builder resourcePackageInfos(java.util.List<ResourcePackageInfos> resourcePackageInfos) {
             this.resourcePackageInfos = resourcePackageInfos;
@@ -138,7 +147,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>68</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -386,7 +398,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             } 
 
             /**
-             * CommodityCode.
+             * <p>The commodity code of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dcdnpaybag</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -394,7 +409,16 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacity.
+             * <p>The current remaining capacity of the instance.</p>
+             * <ul>
+             * <li><p>Unit for traffic plans: Byte.</p>
+             * </li>
+             * <li><p>Unit for request plans: count.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>53661095687</p>
              */
             public Builder currCapacity(String currCapacity) {
                 this.currCapacity = currCapacity;
@@ -402,7 +426,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityBaseUnit.
+             * <p>The base unit of the current remaining capacity of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Byte</p>
              */
             public Builder currCapacityBaseUnit(String currCapacityBaseUnit) {
                 this.currCapacityBaseUnit = currCapacityBaseUnit;
@@ -410,7 +437,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityShowUnit.
+             * <p>The display unit of the current remaining capacity of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder currCapacityShowUnit(String currCapacityShowUnit) {
                 this.currCapacityShowUnit = currCapacityShowUnit;
@@ -418,7 +448,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacityShowValue.
+             * <p>The display value of the current remaining capacity of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49.975789</p>
              */
             public Builder currCapacityShowValue(String currCapacityShowValue) {
                 this.currCapacityShowValue = currCapacityShowValue;
@@ -426,7 +459,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The name of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Transfer Plan in Asia Pacific 1</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -434,7 +470,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The expiration time in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-12-02T15:59:59Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -442,7 +481,16 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * <p>The total capacity of the resource plan.</p>
+             * <ul>
+             * <li><p>Unit for traffic plans: Byte.</p>
+             * </li>
+             * <li><p>Unit for request plans: count.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>107374182400</p>
              */
             public Builder initCapacity(String initCapacity) {
                 this.initCapacity = initCapacity;
@@ -450,7 +498,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityBaseUnit.
+             * <p>The base unit of the total capacity of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Byte</p>
              */
             public Builder initCapacityBaseUnit(String initCapacityBaseUnit) {
                 this.initCapacityBaseUnit = initCapacityBaseUnit;
@@ -458,7 +509,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityShowUnit.
+             * <p>The display unit of the total capacity of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GB</p>
              */
             public Builder initCapacityShowUnit(String initCapacityShowUnit) {
                 this.initCapacityShowUnit = initCapacityShowUnit;
@@ -466,7 +520,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacityShowValue.
+             * <p>The display value of the total capacity of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.000000</p>
              */
             public Builder initCapacityShowValue(String initCapacityShowValue) {
                 this.initCapacityShowValue = initCapacityShowValue;
@@ -474,7 +531,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><strong><strong>_ResourcePack-cn-</strong></strong></p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -482,7 +542,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -490,7 +553,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The effective period in UTC. Format: YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-20T16:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -498,7 +564,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource plan.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>valid</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -506,7 +575,10 @@ public class DescribeUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FPT_dcdnpaybag_deadlineAcc_****</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

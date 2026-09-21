@@ -145,7 +145,7 @@ public class ListWafRulesRequest extends Request {
         } 
 
         /**
-         * <p>Query page number, used for pagination.</p>
+         * <p>The page number for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +157,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>Query page size, used for pagination.</p>
+         * <p>The page size for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -169,10 +169,16 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>WAF rule type. Values:</p>
+         * <p>The WAF rule execution phase. Valid values:</p>
          * <ul>
-         * <li>http_anti_scan: Scan protection</li>
-         * <li>http_bot: Bots</li>
+         * <li>http_whitelist: whitelist rule</li>
+         * <li>http_custom: custom rule</li>
+         * <li>http_managed: managed rule</li>
+         * <li>http_anti_scan: scan protection rule</li>
+         * <li>http_ratelimit: frequency control rule</li>
+         * <li>ip_access_rule: IP access rule</li>
+         * <li>http_bot: advanced mode bots</li>
+         * <li>http_security_level_rule: security rule</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -186,7 +192,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>Query filter conditions.</p>
+         * <p>The query filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>http_custom</p>
@@ -199,7 +205,10 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * RulesetId.
+         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder rulesetId(Long rulesetId) {
             this.putQueryParameter("RulesetId", rulesetId);
@@ -208,7 +217,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +230,7 @@ public class ListWafRulesRequest extends Request {
         }
 
         /**
-         * <p>Site version.</p>
+         * <p>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the site version for which the configuration takes effect. The default value is 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -357,7 +366,7 @@ public class ListWafRulesRequest extends Request {
             } 
 
             /**
-             * <p>Fuzzy search for values in IP access control.</p>
+             * <p>The value in IP access control for fuzzy match.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.1</p>
@@ -368,7 +377,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Whether to reverse the sorting result.</p>
+             * <p>Specifies whether to reverse the sort order.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -379,7 +388,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Exact query for WAF rule ID.</p>
+             * <p>The WAF rule ID for exact match.</p>
              * 
              * <strong>example:</strong>
              * <p>20000001</p>
@@ -390,7 +399,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Fuzzy query for WAF rule ID or name.</p>
+             * <p>The WAF rule ID or name for fuzzy match.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -401,7 +410,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Fuzzy query for WAF rule name.</p>
+             * <p>The WAF rule name for fuzzy match.</p>
              * 
              * <strong>example:</strong>
              * <p>example</p>
@@ -412,7 +421,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Sort the returned list by the specified column.</p>
+             * <p>Sorts the returned list by a specified column.</p>
              * 
              * <strong>example:</strong>
              * <p>position</p>
@@ -423,7 +432,7 @@ public class ListWafRulesRequest extends Request {
             }
 
             /**
-             * <p>Exact query for WAF rule status.</p>
+             * <p>The WAF rule status for exact match.</p>
              * 
              * <strong>example:</strong>
              * <p>on</p>

@@ -74,7 +74,10 @@ public class GetClientCaCertificateHostnamesRequest extends Request {
         } 
 
         /**
-         * Id.
+         * <p>The client CA certificate ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>babaded901474b9693acf530e0fb****</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -83,6 +86,7 @@ public class GetClientCaCertificateHostnamesRequest extends Request {
         }
 
         /**
+         * <p>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -227,10 +227,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to query only the plans that have remaining quota for associating websites. Valid values:</p>
+         * <p>Specifies whether to filter plan instances that have remaining site quota. Valid values:</p>
          * <ul>
-         * <li>true: queries only the plans that have remaining quota for associating websites.</li>
-         * <li>false: queries all plans in your account.</li>
+         * <li><strong>true</strong>: Filters plan instances that have remaining site quota.</li>
+         * <li><strong>false</strong>: Queries all plan instances under the user.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The plan instance ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-xcdn-96wblslz****</p>
@@ -264,7 +264,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: <strong>1</strong> to <strong>100000</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number settings for paging. Default value: <strong>1</strong>. Valid values: <strong>1 to 100000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -276,7 +276,7 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries per page for paging. Valid values: 1 to 500.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -288,7 +288,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PlanNameEn.
+         * <p>The plan name (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder planNameEn(String planNameEn) {
             this.putQueryParameter("PlanNameEn", planNameEn);
@@ -297,7 +300,14 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * PlanType.
+         * <p>The plan type. Valid values:</p>
+         * <ul>
+         * <li>normal: fixed edition plan</li>
+         * <li>enterprise: enterprise edition plan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enterprise</p>
          */
         public Builder planType(String planType) {
             this.putQueryParameter("PlanType", planType);
@@ -306,7 +316,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * RemainingExpireDays.
+         * <p>Queries plan instances whose remaining validity period is within the specified number of days. The value must be a positive integer. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder remainingExpireDays(Integer remainingExpireDays) {
             this.putQueryParameter("RemainingExpireDays", remainingExpireDays);
@@ -324,10 +337,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</p>
+         * <p>The sort field. By default, results are sorted by purchase time. Valid values:</p>
          * <ul>
-         * <li>CreateTime: the time when the plans were purchased.</li>
-         * <li>ExpireTime: the time when the plans expire.</li>
+         * <li><strong>CreateTime</strong>: Purchase time.</li>
+         * <li><strong>ExpireTime</strong>: Expiration time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -340,10 +353,10 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The order in which you want to sort the query results. Default value: desc. Valid values:</p>
+         * <p>The sort order. Default value: desc. Valid values:</p>
          * <ul>
-         * <li>asc: in ascending order.</li>
-         * <li>desc: in descending order.</li>
+         * <li><strong>asc</strong>: Ascending order.</li>
+         * <li><strong>desc</strong>: Descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -356,12 +369,12 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * <p>The plan status. Valid values:</p>
+         * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>online: The plan is in service.</li>
-         * <li>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</li>
-         * <li>disable: The plan is released.</li>
-         * <li>overdue: The plan is stopped due to overdue payments.</li>
+         * <li><strong>online</strong>: Normal service status.</li>
+         * <li><strong>offline</strong>: Expired but not overdue, in an inactive state.</li>
+         * <li><strong>disable</strong>: Released.</li>
+         * <li><strong>overdue</strong>: Overdue payment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -374,7 +387,18 @@ public class ListUserRatePlanInstancesRequest extends Request {
         }
 
         /**
-         * SubscribeType.
+         * <p>The plan subscription type. Valid values:</p>
+         * <ul>
+         * <li>Free Edition (Chinese mainland): entranceplan</li>
+         * <li>Free Edition (International): entranceplan_intl</li>
+         * <li>Basic Edition: basicplan</li>
+         * <li>Standard Edition: standardplan</li>
+         * <li>Premium Edition: advancedplan</li>
+         * <li>Enterprise Edition: enterpriseplan</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>basicplan</p>
          */
         public Builder subscribeType(String subscribeType) {
             this.putQueryParameter("SubscribeType", subscribeType);

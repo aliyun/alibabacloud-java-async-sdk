@@ -93,7 +93,7 @@ public class DeleteOriginClientCertificateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The certificate ID.</p>
+         * <p>The ID of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>babaabcd****</p>
@@ -115,7 +115,7 @@ public class DeleteOriginClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The ID of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>
@@ -126,7 +126,7 @@ public class DeleteOriginClientCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The website name.</p>
+         * <p>The name of the site.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

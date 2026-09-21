@@ -148,7 +148,11 @@ public class AddUserBusinessFormRequest extends Request {
         } 
 
         /**
+         * <p>The company.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx有限公司</p>
          */
         public Builder company(String company) {
             this.putQueryParameter("Company", company);
@@ -157,7 +161,11 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
+         * <p>The email address.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxx@alibaba.com">xxxx@alibaba.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -166,8 +174,11 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
-         * <p>记录名称</p>
+         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158********</p>
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -176,8 +187,11 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
-         * <p>记录类型</p>
+         * <p>The job title.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>经理</p>
          */
         public Builder position(String position) {
             this.putQueryParameter("Position", position);
@@ -186,7 +200,10 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Additional remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请尽快联系我们</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -195,10 +212,11 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
+         * <p>The username.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>AddUserBusinessForm</p>
+         * <p>张三</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
@@ -207,7 +225,10 @@ public class AddUserBusinessFormRequest extends Request {
         }
 
         /**
-         * <p>业务场景</p>
+         * <p>The company website.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.com</p>
          */
         public Builder website(String website) {
             this.putQueryParameter("Website", website);

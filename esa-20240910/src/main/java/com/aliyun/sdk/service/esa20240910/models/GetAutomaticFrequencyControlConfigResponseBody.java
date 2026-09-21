@@ -145,7 +145,18 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * ActionType.
+         * <p>The action to perform. Valid values:</p>
+         * <ul>
+         * <li><p><strong>observe</strong>: Monitors requests.</p>
+         * </li>
+         * <li><p><strong>deny</strong>: Denies requests.</p>
+         * </li>
+         * <li><p><strong>js</strong>: Issues a JavaScript challenge.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>js</p>
          */
         public Builder actionType(String actionType) {
             this.actionType = actionType;
@@ -153,7 +164,16 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Enable.
+         * <p>Indicates whether automatic frequency control is enabled. Valid values:</p>
+         * <ul>
+         * <li><p><strong>on</strong>: Enabled.</p>
+         * </li>
+         * <li><p><strong>off</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder enable(String enable) {
             this.enable = enable;
@@ -161,7 +181,10 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Interval.
+         * <p>The statistics collection interval.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder interval(Integer interval) {
             this.interval = interval;
@@ -169,7 +192,18 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The protection level. Valid values:</p>
+         * <ul>
+         * <li><p><strong>loose</strong>: Loose.</p>
+         * </li>
+         * <li><p><strong>normal</strong>: Normal.</p>
+         * </li>
+         * <li><p><strong>strict</strong>: Strict.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>normal</p>
          */
         public Builder level(String level) {
             this.level = level;
@@ -177,7 +211,10 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PunishTime.
+         * <p>The duration of the penalty, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20000000</p>
          */
         public Builder punishTime(Integer punishTime) {
             this.punishTime = punishTime;
@@ -185,7 +222,10 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +233,10 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11957665</p>
          */
         public Builder ruleId(Long ruleId) {
             this.ruleId = ruleId;
@@ -201,7 +244,10 @@ public class GetAutomaticFrequencyControlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Threshold.
+         * <p>The threshold that triggers the action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder threshold(Integer threshold) {
             this.threshold = threshold;

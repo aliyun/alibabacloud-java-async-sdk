@@ -67,7 +67,7 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
         } 
 
         /**
-         * Datas.
+         * <p>The list of metadata.</p>
          */
         public Builder datas(java.util.List<Datas> datas) {
             this.datas = datas;
@@ -75,7 +75,10 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6947DF8-7AC0-50D0-BADA-177646ABB85A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
             } 
 
             /**
-             * Text.
+             * <p>The human-readable content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>北京市</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -149,7 +155,10 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN-BJ</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -229,7 +238,7 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
             } 
 
             /**
-             * Children.
+             * <p>The subset of metadata.</p>
              */
             public Builder children(java.util.List<Children> children) {
                 this.children = children;
@@ -237,7 +246,10 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The human-readable content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -245,7 +257,10 @@ public class DescribeRuleMetadataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CN</p>
              */
             public Builder value(String value) {
                 this.value = value;

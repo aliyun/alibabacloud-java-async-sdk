@@ -67,7 +67,7 @@ public class CreateOriginPoolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the newly created origin address pool.</p>
+         * <p>The origin pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>103852052519****</p>

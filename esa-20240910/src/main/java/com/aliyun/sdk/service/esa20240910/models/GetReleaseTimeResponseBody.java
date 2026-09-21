@@ -67,7 +67,10 @@ public class GetReleaseTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * ReleaseTime.
+         * <p>The scheduled release time. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-02T06:00:00Z</p>
          */
         public Builder releaseTime(String releaseTime) {
             this.releaseTime = releaseTime;
@@ -75,7 +78,10 @@ public class GetReleaseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6abd807e-ed2a-****-ac54-ac38a62472e6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

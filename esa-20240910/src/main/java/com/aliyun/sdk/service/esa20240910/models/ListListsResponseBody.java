@@ -132,7 +132,10 @@ public class ListListsResponseBody extends TeaModel {
         } 
 
         /**
-         * ItemsUsage.
+         * <p>The total item usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder itemsUsage(Long itemsUsage) {
             this.itemsUsage = itemsUsage;
@@ -140,7 +143,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array that contains list information, including list data after paging.</p>
+         * <p>The array of list information, which contains the paginated list data.</p>
          */
         public Builder lists(java.util.List<Lists> lists) {
             this.lists = lists;
@@ -148,7 +151,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +184,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of filtered lists.</p>
+         * <p>The total number of records after filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -192,7 +195,7 @@ public class ListListsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of created lists.</p>
+         * <p>The amount of usage consumed by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -325,7 +328,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the custom list.<a href="~~2850217~~"></a></p>
+             * <p>The ID of the custom list. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</p>
              * 
              * <strong>example:</strong>
              * <p>40000001</p>
@@ -336,7 +339,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list type.</p>
+             * <p>The kind of the list.</p>
              * 
              * <strong>example:</strong>
              * <p>ip</p>
@@ -347,7 +350,7 @@ public class ListListsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The length of the list information array, which indicates how many items the list contains.</p>
+             * <p>The length of the list content array, which indicates the number of items in the list.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -370,6 +373,8 @@ public class ListListsResponseBody extends TeaModel {
 
             /**
              * <p>The time when the list was last modified.</p>
+             * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+             * <p>Example: 2026-06-10T14:23:45Z</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-01T00:00:00Z</p>

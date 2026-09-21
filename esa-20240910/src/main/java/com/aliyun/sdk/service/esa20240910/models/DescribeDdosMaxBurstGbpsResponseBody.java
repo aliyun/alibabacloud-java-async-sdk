@@ -80,7 +80,10 @@ public class DescribeDdosMaxBurstGbpsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-a71k7bw19dz4</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -88,7 +91,10 @@ public class DescribeDdosMaxBurstGbpsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxBurstGbps.
+         * <p>The maximum protection bandwidth of the DDoS instance within mainland China, in Gbps.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder maxBurstGbps(String maxBurstGbps) {
             this.maxBurstGbps = maxBurstGbps;
@@ -96,7 +102,7 @@ public class DescribeDdosMaxBurstGbpsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>B5D71671-B074-5702-A0F5-B923920FDDD4</p>

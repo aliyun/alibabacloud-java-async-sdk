@@ -119,7 +119,7 @@ public class ListBotInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceInfo.
+         * <p>The instances that match the specified conditions under the current account.</p>
          */
         public Builder instanceInfo(java.util.List<InstanceInfo> instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -127,7 +127,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The current page number, which is the same as the PageNumber request parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -135,7 +138,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -143,7 +149,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>509FD5AF-AB5B-55A9-9568-38D98668E3AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +160,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -159,7 +171,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -277,7 +292,16 @@ public class ListBotInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BotInstanceLevel.
+             * <p>The Bot protection instance level. If this parameter is empty, the plan does not include a Bot protection instance. If a value is returned, the plan includes a Bot protection instance. Valid values:</p>
+             * <ul>
+             * <li><p>enterprise_bot: web edition.</p>
+             * </li>
+             * <li><p>enterprise_bot_with_app: app edition.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enterprise_bot</p>
              */
             public Builder botInstanceLevel(String botInstanceLevel) {
                 this.botInstanceLevel = botInstanceLevel;
@@ -285,7 +309,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was purchased. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-12T05:41:51Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -293,7 +320,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sp-xcdn-96wblslz****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +331,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveReleaseTime.
+             * <p>The scheduled release time. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-25T16:00:00Z</p>
              */
             public Builder reserveReleaseTime(String reserveReleaseTime) {
                 this.reserveReleaseTime = reserveReleaseTime;
@@ -309,7 +342,10 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SiteInstanceId.
+             * <p>The ID of the associated site plan instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>esa-site-b0s6kmx0r0n4</p>
              */
             public Builder siteInstanceId(String siteInstanceId) {
                 this.siteInstanceId = siteInstanceId;
@@ -317,7 +353,16 @@ public class ListBotInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The instance status. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: The instance is running normally.</li>
+             * <li><strong>offline</strong>: The instance has expired but has not exceeded the retention period and is unavailable.</li>
+             * <li><strong>disable</strong>: The instance has been released.</li>
+             * <li><strong>overdue</strong>: The instance has been stopped due to an overdue payment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;

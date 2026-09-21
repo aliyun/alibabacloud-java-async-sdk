@@ -119,7 +119,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Page number</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of records per page</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -141,7 +141,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of region information</p>
+         * <p>The list of region information.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -149,7 +149,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>81A5E222-24BF-17EF-9E80-A68D9B8F363D</p>
@@ -160,7 +160,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -171,7 +171,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -253,10 +253,10 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Secondary region Chinese full name</p>
+             * <p>The full name of the primary region in Chinese.</p>
              * 
              * <strong>example:</strong>
-             * <p>印度尼西亚</p>
+             * <p>Indonesia</p>
              */
             public Builder subRegionCnName(String subRegionCnName) {
                 this.subRegionCnName = subRegionCnName;
@@ -264,7 +264,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Secondary region code</p>
+             * <p>The secondary region code.</p>
              * 
              * <strong>example:</strong>
              * <p>ID</p>
@@ -275,7 +275,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Secondary region English full name</p>
+             * <p>The full name of the secondary region in English.</p>
              * 
              * <strong>example:</strong>
              * <p>Indonesia</p>
@@ -371,10 +371,10 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Primary region Chinese full name</p>
+             * <p>The full name of the primary region in Chinese.</p>
              * 
              * <strong>example:</strong>
-             * <p>东南亚</p>
+             * <p>South East Asia</p>
              */
             public Builder regionCnName(String regionCnName) {
                 this.regionCnName = regionCnName;
@@ -382,7 +382,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary region code</p>
+             * <p>The primary region code.</p>
              * 
              * <strong>example:</strong>
              * <p>SEAS</p>
@@ -393,7 +393,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Primary region English full name</p>
+             * <p>The full name of the primary region in English.</p>
              * 
              * <strong>example:</strong>
              * <p>South East Asia</p>
@@ -404,7 +404,7 @@ public class ListLoadBalancerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>List of secondary region information</p>
+             * <p>The list of secondary region information.</p>
              */
             public Builder subRegions(java.util.List<SubRegions> subRegions) {
                 this.subRegions = subRegions;

@@ -147,7 +147,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Ruleset ID.</p>
+         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>
@@ -158,7 +158,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Ruleset name.</p>
+         * <p>The ruleset name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +170,17 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The WAF operation phase applicable to the ruleset.</p>
+         * <p>The WAF rule execution phase. Valid values:</p>
+         * <ul>
+         * <li>http_whitelist: whitelist rules</li>
+         * <li>http_custom: custom rules</li>
+         * <li>http_managed: managed rules</li>
+         * <li>http_anti_scan: scan protection rules</li>
+         * <li>http_ratelimit: rate limiting rules</li>
+         * <li>ip_access_rule: IP access rules</li>
+         * <li>http_bot: advanced mode bots</li>
+         * <li>http_security_level_rule: security rules</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +192,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -193,7 +203,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of rule configurations in the ruleset.</p>
+         * <p>The list of rule configurations in the ruleset.</p>
          */
         public Builder rules(java.util.List<WafRuleConfig> rules) {
             this.rules = rules;
@@ -201,7 +211,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Shared configurations for the rules in the ruleset.</p>
+         * <p>The shared configuration of rules in the ruleset.</p>
          */
         public Builder shared(WafBatchRuleShared shared) {
             this.shared = shared;
@@ -209,7 +219,7 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Ruleset status.</p>
+         * <p>The ruleset status.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -220,7 +230,9 @@ public class GetWafRulesetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The last modified time of the ruleset.</p>
+         * <p>The last modification time of the ruleset.</p>
+         * <p>Format: RFC 3339 / ISO 8601, UTC time zone (ending with Z).</p>
+         * <p>Example: 2026-06-10T14:23:45Z</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T00:00:00Z</p>

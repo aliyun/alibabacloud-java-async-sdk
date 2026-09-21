@@ -101,7 +101,10 @@ public class DescribeRatePlanPriceGapRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The target plan name. You can obtain this value from the <a href="~~DescribeRatePlanPrice~~">DescribeRatePlanPrice</a> operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -110,7 +113,14 @@ public class DescribeRatePlanPriceGapRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * <p>The specification change type. Valid values:</p>
+         * <ul>
+         * <li>DOWNGRADE: downgrade.</li>
+         * <li>UPGRADE: upgrade.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UPGRADE</p>
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -119,7 +129,10 @@ public class DescribeRatePlanPriceGapRequest extends Request {
         }
 
         /**
-         * TargetPlanCode.
+         * <p>The code of the target plan for the specification change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standardplan</p>
          */
         public Builder targetPlanCode(String targetPlanCode) {
             this.putQueryParameter("TargetPlanCode", targetPlanCode);
@@ -128,7 +141,10 @@ public class DescribeRatePlanPriceGapRequest extends Request {
         }
 
         /**
-         * TargetPlanName.
+         * <p>The name of the target plan for the specification change.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>entranceplan</p>
          */
         public Builder targetPlanName(String targetPlanName) {
             this.putQueryParameter("TargetPlanName", targetPlanName);

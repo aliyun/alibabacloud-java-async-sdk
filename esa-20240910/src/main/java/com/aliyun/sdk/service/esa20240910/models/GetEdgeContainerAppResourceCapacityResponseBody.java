@@ -67,7 +67,7 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried region.</p>
+         * <p>The available regions.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -157,7 +157,8 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Supported ISPs are as follows. The parameter is left empty for regions outside the Chinese mainland. ISP:</p>
+             * <p>The following Internet service providers (ISPs) are supported. This field is not returned for regions outside the Chinese mainland.
+             * ISPs:</p>
              * <ul>
              * <li>China Mobile: cmcc</li>
              * <li>China Telecom: chinanet</li>
@@ -183,33 +184,33 @@ public class GetEdgeContainerAppResourceCapacityResponseBody extends TeaModel {
              * <li>Southwest China: xinan</li>
              * <li>Northeast China: dongbei</li>
              * </ul>
-             * <p>Special Administrative Regions and Overseas:</p>
+             * <p>Special administrative regions and overseas:</p>
              * <ul>
-             * <li>Taiwan, China: tw</li>
-             * <li>Macau, China: mo</li>
-             * <li>Hong Kong, China: hk</li>
+             * <li>Taiwan (China): tw</li>
+             * <li>Macao (China): mo</li>
+             * <li>Hong Kong (China): hk</li>
              * <li>Japan: jp</li>
              * <li>United States: us</li>
              * <li>Thailand: th</li>
-             * <li>Korea: kr</li>
+             * <li>South Korea: kr</li>
              * <li>Russia: ru</li>
              * <li>Singapore: sg</li>
              * <li>France: fr</li>
              * <li>Spain: es</li>
              * <li>Italy: it</li>
              * <li>Sweden: se</li>
-             * <li>UAE: ae</li>
+             * <li>United Arab Emirates: ae</li>
              * <li>Indonesia: id</li>
              * <li>Chile: cl</li>
              * <li>Philippines: ph</li>
              * <li>Malaysia: my</li>
              * <li>Vietnam: vn</li>
-             * <li>Argentina: AR</li>
+             * <li>Argentina: ar</li>
              * <li>Australia: au</li>
              * <li>Brazil: br</li>
              * <li>Colombia: co</li>
              * <li>Germany: de</li>
-             * <li>UK: GB</li>
+             * <li>United Kingdom: gb</li>
              * <li>Peru: pe</li>
              * <li>Saudi Arabia: sa</li>
              * <li>Netherlands: nl</li>

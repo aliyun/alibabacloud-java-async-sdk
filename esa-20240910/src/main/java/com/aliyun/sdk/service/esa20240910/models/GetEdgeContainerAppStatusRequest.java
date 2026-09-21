@@ -74,7 +74,7 @@ public class GetEdgeContainerAppStatusRequest extends Request {
         } 
 
         /**
-         * <p>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</p>
+         * <p>The application ID. You can call <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> to obtain the application ID. Before calling this operation, you must first activate the edge container service by calling OpenEdgeContainer, and then confirm that an available application exists by calling ListEdgeContainerApps or create an application by calling CreateEdgeContainerApp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class GetEdgeContainerAppStatusRequest extends Request {
         }
 
         /**
-         * <p>The release environment. Valid values: prod and staging.</p>
+         * <p>The publishing environment. Valid values: prod and staging.</p>
          * 
          * <strong>example:</strong>
          * <p>staging</p>

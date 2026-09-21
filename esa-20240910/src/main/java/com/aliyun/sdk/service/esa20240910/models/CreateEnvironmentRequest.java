@@ -105,7 +105,11 @@ public class CreateEnvironmentRequest extends Request {
         } 
 
         /**
+         * <p>The environment name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NPDcP1</p>
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -114,7 +118,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>The name of the environment with the next priority.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认环境</p>
          */
         public Builder nextEnvironmentName(String nextEnvironmentName) {
             this.putQueryParameter("NextEnvironmentName", nextEnvironmentName);
@@ -123,7 +131,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>The environment rule.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(&quot;ip&quot; eq &quot;1.1.1.1&quot;)</p>
          */
         public Builder rule(String rule) {
             this.putQueryParameter("Rule", rule);
@@ -132,7 +144,11 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
+         * <p>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890123**</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);

@@ -117,7 +117,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         } 
 
         /**
-         * <p>The end time for querying the task creation time range. Specify the timestamp in milliseconds.</p>
+         * <p>The end of the time range to query based on task creation time. The value is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1717225277000</p>
@@ -129,7 +129,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The page number to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,11 +153,11 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The website ID.</p>
+         * <p>The site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ListScheduledPreloadJobs</p>
+         * <p>190007158391808</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -166,7 +166,7 @@ public class ListScheduledPreloadJobsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the task creation time range to query. Specify the timestamp in milliseconds.</p>
+         * <p>The start of the time range to query based on task creation time. The value is a millisecond-level timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1717225276000</p>

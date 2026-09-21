@@ -145,7 +145,10 @@ public class WafBatchRuleShared extends TeaModel {
         } 
 
         /**
-         * Action.
+         * <p>The action that you want WAF to perform on requests that match the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>deny</p>
          */
         public Builder action(String action) {
             this.action = action;
@@ -153,7 +156,7 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Actions.
+         * <p>The extended action configurations.</p>
          */
         public Builder actions(Actions actions) {
             this.actions = actions;
@@ -161,7 +164,10 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * CrossSiteId.
+         * <p>Specifies the cross-domain website ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000001</p>
          */
         public Builder crossSiteId(Long crossSiteId) {
             this.crossSiteId = crossSiteId;
@@ -169,7 +175,10 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Expression.
+         * <p>The expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip.src eq 1.1.1.1</p>
          */
         public Builder expression(String expression) {
             this.expression = expression;
@@ -177,7 +186,7 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Match.
+         * <p>The matching rule.</p>
          */
         public Builder match(WafRuleMatch2 match) {
             this.match = match;
@@ -185,7 +194,10 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Mode.
+         * <p>Web SDK integration method: automatic integration (automatic) or manual integration (manual).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>automatic</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -193,7 +205,10 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The ruleset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -201,7 +216,10 @@ public class WafBatchRuleShared extends TeaModel {
         }
 
         /**
-         * Target.
+         * <p>Protection type: web or app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder target(String target) {
             this.target = target;
@@ -267,7 +285,10 @@ public class WafBatchRuleShared extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The custom response code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>403</p>
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -275,7 +296,10 @@ public class WafBatchRuleShared extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the custom response page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50000001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -329,7 +353,7 @@ public class WafBatchRuleShared extends TeaModel {
             } 
 
             /**
-             * Response.
+             * <p>The custom response.</p>
              */
             public Builder response(ActionsResponse response) {
                 this.response = response;

@@ -54,7 +54,10 @@ public class UpdateUserWafRulesetResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

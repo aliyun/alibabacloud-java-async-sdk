@@ -175,7 +175,7 @@ public class CreateCustomHostnameRequest extends Request {
         } 
 
         /**
-         * <p>云盾证书ID，使用云盾证书时必填</p>
+         * <p>The SSL Certificates Service certificate ID. This parameter is required when CertType is set to cas.</p>
          * 
          * <strong>example:</strong>
          * <p>30000478</p>
@@ -187,7 +187,11 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>云盾证书所在地域，使用云盾证书时必填</p>
+         * <p>The region of the SSL Certificates Service certificate. This parameter is required when CertType is set to cas.</p>
+         * <ul>
+         * <li>For Chinese site accounts, set this parameter to cn-hangzhou.</li>
+         * <li>For international site accounts, set this parameter to ap-southeast-1.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -199,7 +203,12 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书类型，SSL 开启时必填</p>
+         * <p>The certificate type. This parameter is required when SslFlag is set to on. Valid values:</p>
+         * <ul>
+         * <li><strong>free</strong>: free certificate.</li>
+         * <li><strong>upload</strong>: uploaded certificate.</li>
+         * <li><strong>cas</strong>: SSL Certificates Service certificate.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>free</p>
@@ -211,7 +220,7 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书公钥，使用上传证书时必填</p>
+         * <p>The certificate content. This parameter is required when CertType is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN CERTIFICATE-----</p>
@@ -223,7 +232,7 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>自定义主机名</p>
+         * <p>The SaaS domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +245,7 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>证书私钥，使用上传证书时必填</p>
+         * <p>The private key of the certificate. This parameter is required when CertType is set to upload.</p>
          * 
          * <strong>example:</strong>
          * <p>-----BEGIN PRIVATE KEY-----</p>
@@ -248,7 +257,7 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>绑定的源站记录ID</p>
+         * <p>The ID of the record to bind. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +270,7 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>关联站点ID</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +283,11 @@ public class CreateCustomHostnameRequest extends Request {
         }
 
         /**
-         * <p>SSL开关</p>
+         * <p>Specifies whether to enable SSL. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>: Enable SSL.</li>
+         * <li><strong>off</strong>: Disable SSL.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

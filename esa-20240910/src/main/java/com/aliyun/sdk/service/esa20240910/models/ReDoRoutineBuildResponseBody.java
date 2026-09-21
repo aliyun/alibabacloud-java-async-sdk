@@ -80,7 +80,10 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
         } 
 
         /**
-         * PipeLineRunId.
+         * <p>The ID of the build task in Yunxiao.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>70</p>
          */
         public Builder pipeLineRunId(Long pipeLineRunId) {
             this.pipeLineRunId = pipeLineRunId;
@@ -88,7 +91,10 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class ReDoRoutineBuildResponseBody extends TeaModel {
         }
 
         /**
-         * RoutineBuildId.
+         * <p>The ID of the ER build task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>156773519472872</p>
          */
         public Builder routineBuildId(Long routineBuildId) {
             this.routineBuildId = routineBuildId;

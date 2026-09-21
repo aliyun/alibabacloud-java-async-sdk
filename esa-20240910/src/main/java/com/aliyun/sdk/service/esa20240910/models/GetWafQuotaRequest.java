@@ -59,12 +59,12 @@ public class GetWafQuotaRequest extends Request {
         } 
 
         /**
-         * <p>The path of the WAF quota, for example:</p>
+         * <p>The paths of WAF quotas. Valid values:</p>
          * <ul>
-         * <li>managed_rules_group: represents the quota for the WAF managed rules group</li>
-         * <li>list: represents the quota for custom lists</li>
-         * <li>page: represents the quota for custom response pages</li>
-         * <li>scene_policy: represents the quota for scenario protection</li>
+         * <li>managed_rules_group: the quota for WAF managed rule groups.</li>
+         * <li>list: the quota for custom lists.</li>
+         * <li>page: the quota for custom response pages.</li>
+         * <li>scene_policy: the quota for scenario-specific protection rules.</li>
          * </ul>
          * 
          * <strong>example:</strong>

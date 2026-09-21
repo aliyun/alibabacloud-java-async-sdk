@@ -80,7 +80,7 @@ public class BatchDeleteKvResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The keys that failed to be deleted.</p>
+         * <p>The list of keys that failed to be deleted.</p>
          */
         public Builder failKeys(java.util.List<String> failKeys) {
             this.failKeys = failKeys;
@@ -99,7 +99,7 @@ public class BatchDeleteKvResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The keys that are deleted.</p>
+         * <p>The list of keys that were successfully deleted.</p>
          */
         public Builder successKeys(java.util.List<String> successKeys) {
             this.successKeys = successKeys;

@@ -106,7 +106,7 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -114,7 +114,11 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for the returned data.</p>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-09T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +126,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>64041D4F-B615-5DEB-AC94-F01EE433****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +137,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         }
 
         /**
-         * SamplingRate.
+         * <p>The sampling rate. Unit: %.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder samplingRate(Float samplingRate) {
             this.samplingRate = samplingRate;
@@ -138,7 +148,11 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query.</p>
+         * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-08T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -204,7 +218,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DimensionValue.
+             * <p>The query dimension value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -212,7 +229,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -292,7 +312,7 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
             } 
 
             /**
-             * DetailData.
+             * <p>The returned data.</p>
              */
             public Builder detailData(java.util.List<DetailData> detailData) {
                 this.detailData = detailData;
@@ -300,7 +320,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
             }
 
             /**
-             * DimensionName.
+             * <p>The query dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder dimensionName(String dimensionName) {
                 this.dimensionName = dimensionName;
@@ -308,7 +331,10 @@ public class DescribeSiteWafTopDataResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The query metric value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Requests</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;

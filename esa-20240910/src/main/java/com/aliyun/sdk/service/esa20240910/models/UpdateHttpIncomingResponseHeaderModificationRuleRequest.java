@@ -145,7 +145,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         } 
 
         /**
-         * <p>The ID of the configuration. You can call the ListHttpIncomingResponseHeaderModificationRules operation to query the ID.</p>
+         * <p>The configuration ID. You can call the ListHttpIncomingResponseHeaderModificationRules operation to obtain the configuration ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>Modifies a response header. You can add, delete, or modify a request header.</p>
+         * <p>The response header modifications. Three operation types are supported: add, delete, and modify.</p>
          */
         public Builder responseHeaderModification(java.util.List<ResponseHeaderModification> responseHeaderModification) {
             String responseHeaderModificationShrink = shrink(responseHeaderModification, "ResponseHeaderModification", "json");
@@ -168,10 +168,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</p>
+         * <p>The rule content, which uses a conditional expression to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
          * <ul>
-         * <li>true: Match all incoming requests.</li>
-         * <li>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</li>
+         * <li>Match all incoming requests: Set the value to true.</li>
+         * <li>Match specified requests: Set the value to a custom expression, for example, (http.host eq \&quot;video.example.com\&quot;).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,10 +184,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</p>
+         * <p>The rule switch. This parameter is not required when adding a global configuration. Valid values:</p>
          * <ul>
-         * <li>on</li>
-         * <li>off</li>
+         * <li>on: Enabled.</li>
+         * <li>off: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>The rule name. You do not need to set this parameter when you add global configuration.</p>
+         * <p>The rule name. This parameter is not required when adding a global configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_example</p>
@@ -212,7 +212,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>The order in which the rule is executed. A smaller value gives priority to the rule.</p>
+         * <p>The rule execution order. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +224,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
+         * <p>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -324,7 +324,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
             } 
 
             /**
-             * <p>The name of the response header.</p>
+             * <p>The response header name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -336,11 +336,11 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
             }
 
             /**
-             * <p>The action. Valid values:</p>
+             * <p>The operation type. Valid values:</p>
              * <ul>
-             * <li>add: adds a response header.</li>
-             * <li>del: deletes a response header.</li>
-             * <li>modify: modifies a response header.</li>
+             * <li>add: Add.</li>
+             * <li>del: Delete.</li>
+             * <li>modify: Modify.</li>
              * </ul>
              * <p>This parameter is required.</p>
              * 
@@ -353,10 +353,10 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
             }
 
             /**
-             * <p>The value type of the column. Valid values:</p>
+             * <p>The value type. Valid values:</p>
              * <ul>
-             * <li>static</li>
-             * <li>dynamic</li>
+             * <li>static: Static pattern.</li>
+             * <li>dynamic: Dynamic schema.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -368,7 +368,7 @@ public class UpdateHttpIncomingResponseHeaderModificationRuleRequest extends Req
             }
 
             /**
-             * <p>The value of the response header.</p>
+             * <p>The response header value.</p>
              * 
              * <strong>example:</strong>
              * <p>headerValue</p>

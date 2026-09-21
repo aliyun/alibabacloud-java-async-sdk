@@ -87,7 +87,7 @@ public class PreloadCachesRequest extends Request {
         } 
 
         /**
-         * <p>The files to be prefetched.</p>
+         * <p>The objects to prefetch.</p>
          */
         public Builder content(java.util.List<String> content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -97,7 +97,7 @@ public class PreloadCachesRequest extends Request {
         }
 
         /**
-         * <p>By default, prefetch requests include the Accept-Encoding:gzip header. If you want a prefetch request to include other headers or implement multi-replica prefetch, you can specify a custom prefetch header by configuring the Headers parameter.</p>
+         * <p>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to customize the prefetch headers.</p>
          */
         public Builder headers(java.util.Map<String, String> headers) {
             String headersShrink = shrink(headers, "Headers", "json");
@@ -107,7 +107,7 @@ public class PreloadCachesRequest extends Request {
         }
 
         /**
-         * <p>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</p>
+         * <p>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789****</p>

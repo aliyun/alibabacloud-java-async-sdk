@@ -88,7 +88,7 @@ public class CreateRoutineRequest extends Request {
         } 
 
         /**
-         * <p>The routine description.</p>
+         * <p>The description of the Edge Routine.</p>
          * 
          * <strong>example:</strong>
          * <p>the description of this routine</p>
@@ -100,7 +100,10 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * HasAssets.
+         * <p>Specifies whether the Edge Routine contains asset files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder hasAssets(Boolean hasAssets) {
             this.putBodyParameter("HasAssets", hasAssets);
@@ -109,7 +112,7 @@ public class CreateRoutineRequest extends Request {
         }
 
         /**
-         * <p>The routine name, which must be unique in the same account.</p>
+         * <p>The name of the Edge Routine. The name must be unique within the same account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

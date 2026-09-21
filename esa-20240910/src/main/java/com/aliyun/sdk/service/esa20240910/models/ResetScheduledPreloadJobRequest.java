@@ -60,9 +60,12 @@ public class ResetScheduledPreloadJobRequest extends Request {
 
         /**
          * <p>The ID of the scheduled prefetch task.</p>
+         * <blockquote>
+         * <p>Notice: The ID of the scheduled prefetch task. This parameter is required. You can obtain the ID from the response of CreateScheduledPreloadJob after creating a task, or query the ID of an existing task by calling GetScheduledPreloadJob or ListScheduledPreloadJobs..</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>ResetScheduledPreloadJob</p>
+         * <p>665d3af3621bccf3fe29e1a4</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

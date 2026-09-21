@@ -90,6 +90,7 @@ public class DescribeDDoSPriceRequest extends Request {
         } 
 
         /**
+         * <p>The billing method.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,7 @@ public class DescribeDDoSPriceRequest extends Request {
         }
 
         /**
+         * <p>The specification of the instance in the Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +116,7 @@ public class DescribeDDoSPriceRequest extends Request {
         }
 
         /**
+         * <p>The specification of the instance outside the Chinese mainland.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

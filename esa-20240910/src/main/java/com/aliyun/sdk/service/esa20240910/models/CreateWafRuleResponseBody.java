@@ -80,7 +80,7 @@ public class CreateWafRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the WAF rule, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> API.</p>
+         * <p>The ID of the WAF rule. You can call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation to obtain the rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20000001</p>
@@ -91,7 +91,7 @@ public class CreateWafRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>36af3fcc-43d0-441c-86b1-428951dc8225</p>
@@ -102,7 +102,7 @@ public class CreateWafRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the WAF ruleset, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> interface.</p>
+         * <p>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain the ruleset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10000001</p>

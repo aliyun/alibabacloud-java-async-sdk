@@ -145,8 +145,8 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the policy expires.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The end time of the policy.</p>
+         * <p>The time is in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-03T19:00:00Z</p>
@@ -157,7 +157,7 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy name.</p>
+         * <p>The name of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -168,7 +168,10 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of websites associated.</p>
+         * <p>A list of associated site IDs.</p>
+         * <blockquote>
+         * <p>This parameter is deprecated. We recommend that you use the <code>SiteIds</code> parameter instead.</p>
+         * </blockquote>
          */
         public Builder objects(java.util.List<String> objects) {
             this.objects = objects;
@@ -176,7 +179,7 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,7 +201,10 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SiteIds.
+         * <p>The associated site IDs. Multiple IDs are separated by a comma (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456****,123457****</p>
          */
         public Builder siteIds(String siteIds) {
             this.siteIds = siteIds;
@@ -206,8 +212,8 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the policy takes effect.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The start time of the policy.</p>
+         * <p>The time is in UTC and in the ISO 8601 format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-03T16:00:00Z</p>
@@ -218,9 +224,9 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the policy template. Valid value:</p>
+         * <p>The name of the template. Valid value:</p>
          * <ul>
-         * <li><strong>promotion</strong>: major events.</li>
+         * <li><strong>promotion</strong>: major promotion</li>
          * </ul>
          * 
          * <strong>example:</strong>

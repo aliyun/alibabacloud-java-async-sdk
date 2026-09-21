@@ -60,6 +60,7 @@ public class DeleteRoutineBuildConfigurationRequest extends Request {
         } 
 
         /**
+         * <p>The ER name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status of the application.</p>
+         * <p>The object that describes the application status information.</p>
          */
         public Builder appStatus(AppStatus appStatus) {
             this.appStatus = appStatus;
@@ -367,7 +367,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The base version of the application.</p>
+             * <p>The baseline version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>ver-123123123123****</p>
@@ -378,12 +378,12 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment status of the application.</p>
+             * <p>The deployment status of the application. Valid values:</p>
              * <ul>
-             * <li><strong>undeploy</strong>: The application is not deployed.</li>
-             * <li><strong>deploying</strong>: The application is being deployed.</li>
-             * <li><strong>deployed</strong>: The application is deployed.</li>
-             * <li><strong>undeploying</strong>: The deployment is being canceled.</li>
+             * <li><strong>undeploy</strong>: Not deployed.</li>
+             * <li><strong>deploying</strong>: Being deployed.</li>
+             * <li><strong>deployed</strong>: Deployed.</li>
+             * <li><strong>undeploying</strong>: Being undeployed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -395,7 +395,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was deployed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The deployment time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25T05:58:05Z</p>
@@ -406,7 +406,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release version of the application.</p>
+             * <p>The deployed version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>ver-123123123123****</p>
@@ -417,7 +417,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expected release percentage of the application.</p>
+             * <p>The expected publishing percentage of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>50%</p>
@@ -428,7 +428,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to fully release the version. This parameter takes effect only when PublishType is set to region.</p>
+             * <p>Indicates whether the application is fully released. This field takes effect only when PublishType is set to region.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -439,10 +439,10 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment to which the application was released. Valid values:</p>
+             * <p>The publishing environment. Valid values:</p>
              * <ul>
-             * <li><strong>prod</strong>: the production environment.</li>
-             * <li><strong>staging</strong>: the staging environment.</li>
+             * <li><strong>prod</strong>: Production environment.</li>
+             * <li><strong>staging</strong>: Staging environment.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -454,7 +454,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release percentage of the application.</p>
+             * <p>The publishing percentage of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>50%</p>
@@ -465,12 +465,12 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release status of the application. Valid values:</p>
+             * <p>The publishing status of the application. Valid values:</p>
              * <ul>
-             * <li><strong>publishing</strong></li>
-             * <li><strong>published</strong></li>
-             * <li><strong>rollbacking</strong></li>
-             * <li><strong>rollbacked</strong></li>
+             * <li><strong>publishing</strong>: Being published.</li>
+             * <li><strong>published</strong>: Published.</li>
+             * <li><strong>rollbacking</strong>: Being rolled back.</li>
+             * <li><strong>rollbacked</strong>: Rolled back.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -482,7 +482,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was released. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The publishing time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25T05:58:05Z</p>
@@ -493,12 +493,14 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies how the version is released. Valid values:</p>
+             * <p>The publishing type. Valid values:</p>
              * <ul>
-             * <li>percentage: releases the version by percentage.</li>
-             * <li>region: releases the version by region.</li>
+             * <li><p><strong>percentage</strong>: Publish by percentage.</p>
+             * </li>
+             * <li><p><strong>region</strong>: Publish by region.</p>
+             * </li>
              * </ul>
-             * <p>If you do not specify this parameter, the version is released by percentage by default.</p>
+             * <p>If this parameter is not specified, the default value percentage is used.</p>
              * 
              * <strong>example:</strong>
              * <p>percentage</p>
@@ -509,7 +511,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The release version of the application.</p>
+             * <p>The publishing version of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>ver-123123123123****</p>
@@ -520,7 +522,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The regions to which the version is released.</p>
+             * Regions.
              */
             public Builder regions(Regions regions) {
                 this.regions = regions;
@@ -528,7 +530,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last rollback was performed.</p>
+             * <p>The most recent rollback time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25T05:58:05Z</p>
@@ -539,7 +541,7 @@ public class GetEdgeContainerAppStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application deployment was canceled. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+             * <p>The undeployment time of the application. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-07-25T05:58:05Z</p>

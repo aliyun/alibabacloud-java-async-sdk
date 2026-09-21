@@ -143,7 +143,10 @@ public class ListDDoSInstancesRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-ddos-b1e0l80ugfeo</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -152,7 +155,10 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number for a paged query. The value must be greater than or equal to 1. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +167,10 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page for a paged query. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +179,10 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * SiteInstanceId.
+         * <p>The instance ID of the associated site plan.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>esa-site-a71k7bw1adf</p>
          */
         public Builder siteInstanceId(String siteInstanceId) {
             this.putQueryParameter("SiteInstanceId", siteInstanceId);
@@ -179,7 +191,13 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * <p>The sort field. By default, results are sorted by purchase time. Valid values:</p>
+         * <ul>
+         * <li><strong>CreateTime</strong>: purchase time.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateTime</p>
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -188,7 +206,14 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>asc: ascending order.</li>
+         * <li>desc: descending order.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -197,7 +222,10 @@ public class ListDDoSInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The instance status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

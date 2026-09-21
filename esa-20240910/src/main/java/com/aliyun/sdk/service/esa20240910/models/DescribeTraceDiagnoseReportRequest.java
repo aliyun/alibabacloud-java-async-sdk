@@ -73,7 +73,10 @@ public class DescribeTraceDiagnoseReportRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * <p>The diagnostic task ID. You must specify at least one of TraceId and TaskId. If neither is specified, the API returns an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxxxxxx-x-x-xxxxxxxxxxxxxxx</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -82,7 +85,10 @@ public class DescribeTraceDiagnoseReportRequest extends Request {
         }
 
         /**
-         * TraceId.
+         * <p>The diagnostic trace ID. You must specify at least one of TraceId and TaskId. If neither is specified, the API returns an error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000xxxxxxxxxxxxxxxxxxxxxx75e</p>
          */
         public Builder traceId(String traceId) {
             this.putQueryParameter("TraceId", traceId);

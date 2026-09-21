@@ -67,7 +67,7 @@ public class GetEdgeContainerDeployRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The regions.</p>
+         * <p>The list of regions.</p>
          */
         public Builder regions(java.util.List<String> regions) {
             this.regions = regions;

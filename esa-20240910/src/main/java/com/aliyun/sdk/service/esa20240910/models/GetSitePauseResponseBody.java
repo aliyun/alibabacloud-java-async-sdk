@@ -67,10 +67,12 @@ public class GetSitePauseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether ESA is paused on the website. Valid values:</p>
+         * <p>Indicates whether site acceleration is paused. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The site\&quot;s acceleration is paused.</p>
+         * </li>
+         * <li><p>false: The site is accelerating normally.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
