@@ -43,6 +43,10 @@ public class ListEngineConfigsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    private String sceneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -58,6 +62,7 @@ public class ListEngineConfigsRequest extends Request {
         this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sceneId = builder.sceneId;
         this.status = builder.status;
         this.version = builder.version;
     }
@@ -118,6 +123,13 @@ public class ListEngineConfigsRequest extends Request {
     }
 
     /**
+     * @return sceneId
+     */
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -138,6 +150,7 @@ public class ListEngineConfigsRequest extends Request {
         private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String sceneId; 
         private String status; 
         private String version; 
 
@@ -153,6 +166,7 @@ public class ListEngineConfigsRequest extends Request {
             this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sceneId = request.sceneId;
             this.status = request.status;
             this.version = request.version;
         } 
@@ -167,13 +181,13 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The runtime environment.</p>
+         * <p>The runtime environment. Valid values:</p>
          * <ul>
-         * <li><p>Daily: daily environment.</p>
+         * <li><p>Daily: Daily environment.</p>
          * </li>
-         * <li><p>Pre: staging environment.</p>
+         * <li><p>Pre: Pre-release environment.</p>
          * </li>
-         * <li><p>Prod: production environment.</p>
+         * <li><p>Prod: Production environment.</p>
          * </li>
          * </ul>
          * 
@@ -224,7 +238,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -236,11 +250,23 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The status filter.</p>
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder sceneId(String sceneId) {
+            this.putQueryParameter("SceneId", sceneId);
+            this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * <p>The status filter. Valid values:</p>
          * <ul>
-         * <li><p>Released: released.</p>
+         * <li><p>Released: Released.</p>
          * </li>
-         * <li><p>Unreleased: not released.</p>
+         * <li><p>Unreleased: Not released.</p>
          * </li>
          * </ul>
          * 
@@ -254,7 +280,7 @@ public class ListEngineConfigsRequest extends Request {
         }
 
         /**
-         * <p>The version filter.</p>
+         * <p>The version filter. Valid values:</p>
          * <p>latest: the most recently updated version.</p>
          * 
          * <strong>example:</strong>

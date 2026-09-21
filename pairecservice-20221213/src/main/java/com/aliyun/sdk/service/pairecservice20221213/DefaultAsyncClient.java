@@ -3204,9 +3204,9 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <h2>Operation description</h2>
      * <ul>
-     * <li>This API is used to send conversation messages to the AI shopping guide and supports Server-Sent Events (SSE).</li>
-     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these values to obtain optimal responses.</li>
-     * <li>The <code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
+     * <li>This API operation sends conversation messages to the AI shopping assistant and supports Server-Sent Events (SSE).</li>
+     * <li><code>InstanceId</code>, <code>SessionId</code>, <code>SceneId</code>, <code>ServiceId</code>, <code>Environment</code>, <code>Uid</code>, and <code>Language</code> are required parameters. Ensure the accuracy of these parameters to get the best response.</li>
+     * <li><code>InputMessage</code> must contain at least one text-type message that describes the user\&quot;s request or question.</li>
      * <li>Based on the provided input, the system returns corresponding recommendation results or other relevant information.</li>
      * <li>Check the returned <code>StopReason</code> field to understand whether the session has ended and the reason.</li>
      * </ul>

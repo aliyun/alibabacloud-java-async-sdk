@@ -42,6 +42,10 @@ public class CreateEngineConfigRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    private String sceneId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -53,6 +57,7 @@ public class CreateEngineConfigRequest extends Request {
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
+        this.sceneId = builder.sceneId;
         this.type = builder.type;
     }
 
@@ -112,6 +117,13 @@ public class CreateEngineConfigRequest extends Request {
     }
 
     /**
+     * @return sceneId
+     */
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -125,6 +137,7 @@ public class CreateEngineConfigRequest extends Request {
         private String environment; 
         private String instanceId; 
         private String name; 
+        private String sceneId; 
         private String type; 
 
         private Builder() {
@@ -139,6 +152,7 @@ public class CreateEngineConfigRequest extends Request {
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.name = request.name;
+            this.sceneId = request.sceneId;
             this.type = request.type;
         } 
 
@@ -216,6 +230,15 @@ public class CreateEngineConfigRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * SceneId.
+         */
+        public Builder sceneId(String sceneId) {
+            this.putBodyParameter("SceneId", sceneId);
+            this.sceneId = sceneId;
             return this;
         }
 

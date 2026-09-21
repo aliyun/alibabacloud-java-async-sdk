@@ -39,6 +39,10 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
     private String pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    private String sceneId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -49,6 +53,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.sceneId = builder.sceneId;
         this.sortBy = builder.sortBy;
     }
 
@@ -101,6 +106,13 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
     }
 
     /**
+     * @return sceneId
+     */
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -113,6 +125,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         private String order; 
         private String pageNumber; 
         private String pageSize; 
+        private String sceneId; 
         private String sortBy; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.sceneId = request.sceneId;
             this.sortBy = request.sortBy;
         } 
 
@@ -139,7 +153,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The instance ID. For information about how to obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,12 +166,10 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The sort order.</p>
+         * <p>The sort order. Valid values:</p>
          * <ul>
-         * <li><p><code>ASC</code>: Ascending order.</p>
-         * </li>
-         * <li><p><code>DESC</code>: Descending order.</p>
-         * </li>
+         * <li>ASC: ascending order.</li>
+         * <li>DESC: descending order.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +182,7 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The page number. The value starts at 1. The default value is 1.</p>
+         * <p>The page number. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -194,12 +206,22 @@ public class ListFeatureConsistencyCheckJobConfigsRequest extends Request {
         }
 
         /**
-         * <p>The field to sort by.</p>
+         * <p>The scene ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder sceneId(String sceneId) {
+            this.putQueryParameter("SceneId", sceneId);
+            this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * <p>The field used to sort the results. Valid values:</p>
          * <ul>
-         * <li><p><code>GmtCreateTime</code>: Creation time.</p>
-         * </li>
-         * <li><p><code>GmtModifiedTime</code>: Modified time.</p>
-         * </li>
+         * <li>GmtCreateTime: sorts by creation time.</li>
+         * <li>GmtModifiedTime: sorts by update time.</li>
          * </ul>
          * 
          * <strong>example:</strong>

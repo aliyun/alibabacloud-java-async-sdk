@@ -234,7 +234,7 @@ public class ShoppingAssistantRequest extends Request {
         }
 
         /**
-         * <p>The contents.</p>
+         * <p>The content.</p>
          */
         public Builder contents(Contents contents) {
             this.putBodyParameter("Contents", contents);
@@ -258,7 +258,7 @@ public class ShoppingAssistantRequest extends Request {
          * <p><strong>The environment.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>Prod: productionPre: pre-release.</p>
+         * <p>Prod: ProductionPre: Pre-release</p>
          */
         public Builder environment(String environment) {
             this.putBodyParameter("Environment", environment);
@@ -315,7 +315,7 @@ public class ShoppingAssistantRequest extends Request {
          * <p><strong>The service ID.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>ServiceId.</p>
+         * <p>Service ID</p>
          */
         public Builder serviceId(String serviceId) {
             this.putBodyParameter("ServiceId", serviceId);
@@ -410,7 +410,7 @@ public class ShoppingAssistantRequest extends Request {
              * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</p>
+             * <p>Recommend some light-colored long-sleeve shirts for spring, budget under 300</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -491,7 +491,7 @@ public class ShoppingAssistantRequest extends Request {
              * <p>The message content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Recommend some light-colored long-sleeve shirts suitable for spring, budget under 300</p>
+             * <p>Recommend some light-colored long-sleeve shirts for spring, budget under 300</p>
              */
             public Builder text(String text) {
                 this.text = text;

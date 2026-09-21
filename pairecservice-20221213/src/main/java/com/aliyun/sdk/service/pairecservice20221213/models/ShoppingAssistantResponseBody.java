@@ -26,6 +26,9 @@ public class ShoppingAssistantResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ConversationId")
     private String conversationId;
 
+    @com.aliyun.core.annotation.NameInMap("EnableSuggestion")
+    private Boolean enableSuggestion;
+
     @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
@@ -48,6 +51,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         this.citation = builder.citation;
         this.content = builder.content;
         this.conversationId = builder.conversationId;
+        this.enableSuggestion = builder.enableSuggestion;
         this.errorCode = builder.errorCode;
         this.event = builder.event;
         this.requestId = builder.requestId;
@@ -87,6 +91,13 @@ public class ShoppingAssistantResponseBody extends TeaModel {
      */
     public String getConversationId() {
         return this.conversationId;
+    }
+
+    /**
+     * @return enableSuggestion
+     */
+    public Boolean getEnableSuggestion() {
+        return this.enableSuggestion;
     }
 
     /**
@@ -135,6 +146,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         private Citation citation; 
         private String content; 
         private String conversationId; 
+        private Boolean enableSuggestion; 
         private String errorCode; 
         private String event; 
         private String requestId; 
@@ -149,6 +161,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             this.citation = model.citation;
             this.content = model.content;
             this.conversationId = model.conversationId;
+            this.enableSuggestion = model.enableSuggestion;
             this.errorCode = model.errorCode;
             this.event = model.event;
             this.requestId = model.requestId;
@@ -166,10 +179,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned content.</p>
+         * <p>The response content.</p>
          * 
          * <strong>example:</strong>
-         * <p>Here are some light-colored long-sleeve shirts I picked for you:\n.</p>
+         * <p>Here are some light-colored long-sleeve shirts for you:\n</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -184,6 +197,14 @@ public class ShoppingAssistantResponseBody extends TeaModel {
          */
         public Builder conversationId(String conversationId) {
             this.conversationId = conversationId;
+            return this;
+        }
+
+        /**
+         * <p>Indicates whether suggestions are provided.</p>
+         */
+        public Builder enableSuggestion(Boolean enableSuggestion) {
+            this.enableSuggestion = enableSuggestion;
             return this;
         }
 
@@ -309,7 +330,7 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the <code>item</code>.</p>
+             * <p>The ID of the item.</p>
              * 
              * <strong>example:</strong>
              * <p>0005</p>
@@ -575,10 +596,10 @@ public class ShoppingAssistantResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned content.</p>
+             * <p>The response content.</p>
              * 
              * <strong>example:</strong>
-             * <p>Here are some light-colored long-sleeve shirts I picked for you:\\n.</p>
+             * <p>Here are some light-colored long-sleeve shirts for you:\\n</p>
              */
             public Builder content(String content) {
                 this.content = content;

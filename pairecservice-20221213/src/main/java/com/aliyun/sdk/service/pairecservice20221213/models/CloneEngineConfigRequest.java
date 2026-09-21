@@ -41,6 +41,10 @@ public class CloneEngineConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    private String sceneId;
+
     private CloneEngineConfigRequest(Builder builder) {
         super(builder);
         this.engineConfigId = builder.engineConfigId;
@@ -49,6 +53,7 @@ public class CloneEngineConfigRequest extends Request {
         this.description = builder.description;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
+        this.sceneId = builder.sceneId;
     }
 
     public static Builder builder() {
@@ -106,6 +111,13 @@ public class CloneEngineConfigRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return sceneId
+     */
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
     public static final class Builder extends Request.Builder<CloneEngineConfigRequest, Builder> {
         private String engineConfigId; 
         private String regionId; 
@@ -113,6 +125,7 @@ public class CloneEngineConfigRequest extends Request {
         private String description; 
         private String environment; 
         private String instanceId; 
+        private String sceneId; 
 
         private Builder() {
             super();
@@ -126,10 +139,11 @@ public class CloneEngineConfigRequest extends Request {
             this.description = request.description;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
+            this.sceneId = request.sceneId;
         } 
 
         /**
-         * <p>The engine configuration ID.</p>
+         * <p>The DPI engine configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -150,7 +164,7 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * <p>The content of the engine configuration.</p>
+         * <p>The content of the DPI engine configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -162,7 +176,10 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a clone config.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -171,13 +188,13 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * <p>The environment. Valid values:</p>
+         * <p>The runtime environment. Valid values:</p>
          * <ul>
-         * <li><p>Daily: The daily environment.</p>
+         * <li><p>Daily: daily environment.</p>
          * </li>
-         * <li><p>Pre: The pre-release environment.</p>
+         * <li><p>Pre: staging environment.</p>
          * </li>
-         * <li><p>Prod: The production environment.</p>
+         * <li><p>Prod: production environment.</p>
          * </li>
          * </ul>
          * 
@@ -191,7 +208,7 @@ public class CloneEngineConfigRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. To obtain an instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+         * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>pairec-cn-********</p>
@@ -199,6 +216,18 @@ public class CloneEngineConfigRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * <p>The scene.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        public Builder sceneId(String sceneId) {
+            this.putBodyParameter("SceneId", sceneId);
+            this.sceneId = sceneId;
             return this;
         }
 

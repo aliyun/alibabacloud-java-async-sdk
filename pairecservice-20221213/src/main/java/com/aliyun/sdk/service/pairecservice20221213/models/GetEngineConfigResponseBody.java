@@ -41,6 +41,9 @@ public class GetEngineConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    private String sceneId;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -56,6 +59,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
         this.gmtReleasedTime = builder.gmtReleasedTime;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.sceneId = builder.sceneId;
         this.status = builder.status;
         this.type = builder.type;
     }
@@ -129,6 +133,13 @@ public class GetEngineConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return sceneId
+     */
+    public String getSceneId() {
+        return this.sceneId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -151,6 +162,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
         private String gmtReleasedTime; 
         private String name; 
         private String requestId; 
+        private String sceneId; 
         private String status; 
         private String type; 
 
@@ -166,6 +178,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
             this.gmtReleasedTime = model.gmtReleasedTime;
             this.name = model.name;
             this.requestId = model.requestId;
+            this.sceneId = model.sceneId;
             this.status = model.status;
             this.type = model.type;
         } 
@@ -263,6 +276,14 @@ public class GetEngineConfigResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SceneId.
+         */
+        public Builder sceneId(String sceneId) {
+            this.sceneId = sceneId;
             return this;
         }
 
