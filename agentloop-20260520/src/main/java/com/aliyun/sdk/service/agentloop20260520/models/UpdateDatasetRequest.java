@@ -32,6 +32,10 @@ public class UpdateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("renames")
+    private java.util.List<Renames> renames;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("schema")
     private java.util.Map<String, IndexKey> schema;
 
@@ -44,6 +48,7 @@ public class UpdateDatasetRequest extends Request {
         this.agentSpace = builder.agentSpace;
         this.datasetName = builder.datasetName;
         this.description = builder.description;
+        this.renames = builder.renames;
         this.schema = builder.schema;
         this.clientToken = builder.clientToken;
     }
@@ -83,6 +88,13 @@ public class UpdateDatasetRequest extends Request {
     }
 
     /**
+     * @return renames
+     */
+    public java.util.List<Renames> getRenames() {
+        return this.renames;
+    }
+
+    /**
      * @return schema
      */
     public java.util.Map<String, IndexKey> getSchema() {
@@ -100,6 +112,7 @@ public class UpdateDatasetRequest extends Request {
         private String agentSpace; 
         private String datasetName; 
         private String description; 
+        private java.util.List<Renames> renames; 
         private java.util.Map<String, IndexKey> schema; 
         private String clientToken; 
 
@@ -112,6 +125,7 @@ public class UpdateDatasetRequest extends Request {
             this.agentSpace = request.agentSpace;
             this.datasetName = request.datasetName;
             this.description = request.description;
+            this.renames = request.renames;
             this.schema = request.schema;
             this.clientToken = request.clientToken;
         } 
@@ -155,6 +169,15 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The field renames for the dataset.</p>
+         */
+        public Builder renames(java.util.List<Renames> renames) {
+            this.putBodyParameter("renames", renames);
+            this.renames = renames;
+            return this;
+        }
+
+        /**
          * <p>The table schema of the dataset.</p>
          */
         public Builder schema(java.util.Map<String, IndexKey> schema) {
@@ -182,4 +205,85 @@ public class UpdateDatasetRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateDatasetRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateDatasetRequest</p>
+     */
+    public static class Renames extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("newName")
+        private String newName;
+
+        @com.aliyun.core.annotation.NameInMap("oldName")
+        private String oldName;
+
+        private Renames(Builder builder) {
+            this.newName = builder.newName;
+            this.oldName = builder.oldName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Renames create() {
+            return builder().build();
+        }
+
+        /**
+         * @return newName
+         */
+        public String getNewName() {
+            return this.newName;
+        }
+
+        /**
+         * @return oldName
+         */
+        public String getOldName() {
+            return this.oldName;
+        }
+
+        public static final class Builder {
+            private String newName; 
+            private String oldName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Renames model) {
+                this.newName = model.newName;
+                this.oldName = model.oldName;
+            } 
+
+            /**
+             * <p>The new field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t2</p>
+             */
+            public Builder newName(String newName) {
+                this.newName = newName;
+                return this;
+            }
+
+            /**
+             * <p>The original field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t1</p>
+             */
+            public Builder oldName(String oldName) {
+                this.oldName = oldName;
+                return this;
+            }
+
+            public Renames build() {
+                return new Renames(this);
+            } 
+
+        } 
+
+    }
 }
