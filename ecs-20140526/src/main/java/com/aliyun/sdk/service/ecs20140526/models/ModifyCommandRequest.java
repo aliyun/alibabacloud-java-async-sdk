@@ -239,7 +239,7 @@ public class ModifyCommandRequest extends Request {
 
         /**
          * <blockquote>
-         * <p>This parameter is deprecated and does not take effect.</p>
+         * <p>This parameter is deprecated and does not take effect even if specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -350,7 +350,7 @@ public class ModifyCommandRequest extends Request {
         }
 
         /**
-         * <p>The maximum timeout period for the command to run on ECS instances. Unit: seconds. If the command cannot be completed within the specified timeout period, the command process is forcefully terminated by canceling the PID of the command.</p>
+         * <p>The maximum timeout period for the command to run on ECS instances. Unit: seconds. If the command cannot be completed within the specified timeout period, the command times out. When a timeout occurs, the command process is forcefully terminated by canceling the PID of the command.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

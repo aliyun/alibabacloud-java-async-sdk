@@ -259,7 +259,7 @@ public class DisableActivationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the activation code was created. The time is displayed in ISO 8601 format in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-20T06:00:00Z</p>

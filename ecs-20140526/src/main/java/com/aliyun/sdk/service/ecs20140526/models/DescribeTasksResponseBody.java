@@ -119,7 +119,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number of the current page in a paged query.</p>
+         * <p>The page number of the current page in the paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

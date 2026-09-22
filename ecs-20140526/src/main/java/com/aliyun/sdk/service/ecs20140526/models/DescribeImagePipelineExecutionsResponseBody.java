@@ -114,7 +114,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of entries per page for paging.</p>
+         * <p>The maximum number of entries per page for paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -125,7 +125,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token returned in this call. For more information about how to use this token, see the operation description.</p>
+         * <p>The query token returned in this call. For more information about how to use this token, refer to the operation description.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>

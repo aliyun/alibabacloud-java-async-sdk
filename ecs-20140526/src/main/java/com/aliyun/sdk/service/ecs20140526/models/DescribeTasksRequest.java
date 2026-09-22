@@ -296,7 +296,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number of the results.</p>
+         * <p>The page number of the query results.</p>
          * <p>Minimum value: 1.</p>
          * <p>Default value: 1.</p>
          * 
@@ -381,7 +381,7 @@ public class DescribeTasksRequest extends Request {
          * <li>ImportImage: import an image.</li>
          * <li>ExportImage: export an image.</li>
          * <li>RedeployInstance: redeploy an ECS instance.</li>
-         * <li>ModifyDiskSpec: change the cloud disk type.</li>
+         * <li>ModifyDiskSpec: change the type of a cloud disk.</li>
          * <li>ArchiveSnapshot: archive a snapshot.</li>
          * </ul>
          * 

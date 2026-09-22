@@ -147,7 +147,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of scheduling tasks queried.</p>
+         * <p>The total number of queried scheduling tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

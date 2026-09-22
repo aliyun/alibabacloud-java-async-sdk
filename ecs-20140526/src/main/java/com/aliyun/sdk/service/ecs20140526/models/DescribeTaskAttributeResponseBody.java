@@ -210,7 +210,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the task was created.</p>
+         * <p>The time when the task was created. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-11-23T02:13Z</p>
@@ -232,7 +232,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the task was completed.</p>
+         * <p>The time when the task was completed. The time is displayed in ISO 8601 format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2015-11-23T02:19Z</p>

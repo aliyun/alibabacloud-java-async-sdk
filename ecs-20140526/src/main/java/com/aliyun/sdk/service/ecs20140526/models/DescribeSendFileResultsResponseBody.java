@@ -138,7 +138,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the query result.</p>
+         * <p>The page number of the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -171,7 +171,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of scripts.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

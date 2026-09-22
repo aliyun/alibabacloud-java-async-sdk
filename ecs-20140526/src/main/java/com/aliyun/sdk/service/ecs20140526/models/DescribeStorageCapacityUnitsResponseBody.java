@@ -117,7 +117,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page in the paging query.</p>
+         * <p>The number of entries per page in paging queries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

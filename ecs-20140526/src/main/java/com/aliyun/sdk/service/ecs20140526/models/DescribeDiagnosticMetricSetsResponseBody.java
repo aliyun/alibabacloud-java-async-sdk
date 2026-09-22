@@ -223,7 +223,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The description of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>远程连接问题诊断</p>
+             * <p>Remote connection diagnostics</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -253,7 +253,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
              * <p>The name of the diagnostic metric set.</p>
              * 
              * <strong>example:</strong>
-             * <p>远程连接问题诊断</p>
+             * <p>Remote connection diagnostics</p>
              */
             public Builder metricSetName(String metricSetName) {
                 this.metricSetName = metricSetName;

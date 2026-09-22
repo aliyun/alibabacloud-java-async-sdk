@@ -111,7 +111,7 @@ public class DescribeDiagnosticReportAttributesRequest extends Request {
         }
 
         /**
-         * <p>The diagnostic report ID.</p>
+         * <p>The ID of the diagnostic report.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

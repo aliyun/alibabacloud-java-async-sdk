@@ -149,7 +149,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page for paging.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

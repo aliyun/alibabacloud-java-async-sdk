@@ -297,7 +297,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * <p>The component version number in the major.minor.patch format. Each part must be a non-negative integer. You can also use the wildcard character (*) to replace one part for fuzzy matching.</p>
+         * <p>The component version number in the major.minor.patch format. Each part must be a non-negative integer. You can also use the wildcard character (\*) to replace one part for fuzzy matching.</p>
          * <blockquote>
          * <p>This parameter takes effect only when Name is specified.</p>
          * </blockquote>
@@ -349,7 +349,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call. You do not need to set this parameter for the first request.</p>
+         * <p>The pagination token. Set this parameter to the value of <code>NextToken</code> returned in the previous call to this operation. You do not need to set this parameter for the first request.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdDWBF2****</p>
@@ -408,7 +408,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+         * <p>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>

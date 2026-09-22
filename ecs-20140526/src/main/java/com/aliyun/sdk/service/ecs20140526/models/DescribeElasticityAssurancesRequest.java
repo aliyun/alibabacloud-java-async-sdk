@@ -303,7 +303,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of instances. Valid values: PostPaid. Only pay-as-you-go is supported.</p>
+         * <p>The billing method of the instance. Valid values: PostPaid. Only pay-as-you-go is supported.</p>
          * <p>Default value: PostPaid.</p>
          * 
          * <strong>example:</strong>
@@ -316,7 +316,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type. You can use the instance type to query only active elasticity assurance services. Released services can only be queried by using <code>PrivatePoolOptions.Ids</code>.</p>
+         * <p>The instance type. You can use the instance type to query only active elasticity assurances. Released elasticity assurances can be queried only by using <code>PrivatePoolOptions.Ids</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.c6.large</p>
@@ -342,7 +342,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The pagination token for the elasticity assurance service query. Obtain the value from the result of the previous request.</p>
+         * <p>The pagination token for the elasticity assurance query. Obtain the value from the result of the previous request.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -372,11 +372,11 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The type of the elasticity assurance service. Valid values:</p>
+         * <p>The type of the elasticity assurance. Valid values:</p>
          * <ul>
-         * <li><p>ElasticityAssurance: standard elasticity assurance (used when RecurrenceRules is not specified).</p>
+         * <li><p>ElasticityAssurance: standard elasticity assurance. This is the type when RecurrenceRules is not specified.</p>
          * </li>
-         * <li><p>TimeDivisionElasticityAssurance: time-division elasticity assurance (used when RecurrenceRules is specified).</p>
+         * <li><p>TimeDivisionElasticityAssurance: time-division elasticity assurance. This is the type when RecurrenceRules is specified.</p>
          * </li>
          * </ul>
          * 
@@ -404,7 +404,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region to which the elasticity assurance service belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
+         * <p>The ID of the region to which the elasticity assurance belongs. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1000.</p>
+         * <p>The ID of the resource group. When you use this parameter to filter resources, the resource count cannot exceed 1,000.</p>
          * <blockquote>
          * <p>Filtering by the default resource group is not supported.</p>
          * </blockquote>
@@ -450,16 +450,16 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the elasticity assurance service. Valid values:</p>
+         * <p>The status of the elasticity assurance. Valid values:</p>
          * <ul>
          * <li>All: all states.</li>
-         * <li>Deactived: pending activation (this state is in invitational preview).</li>
+         * <li>Deactived: to be activated. This state is in invitational preview.</li>
          * <li>Preparing: being prepared.</li>
-         * <li>Prepared: pending effectiveness.</li>
-         * <li>Active: active.</li>
+         * <li>Prepared: to take effect.</li>
+         * <li>Active: in effect.</li>
          * <li>Released: released.</li>
          * </ul>
-         * <p>If you do not specify this parameter, elasticity assurance services in all states except Pending and Released are queried.</p>
+         * <p>If you do not specify this parameter, elasticity assurances in all states except Pending and Released are queried.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>
@@ -471,7 +471,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The list of tag key-value pairs bound to the elasticity assurance service.</p>
+         * <p>The list of tag key-value pairs bound to the elasticity assurance.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -480,7 +480,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID in the region to which the elasticity assurance service belongs.</p>
+         * <p>The zone ID in the region to which the elasticity assurance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -538,7 +538,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             } 
 
             /**
-             * <p>The list of elasticity assurance service IDs. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
+             * <p>The list of elasticity assurance IDs. The value can be a JSON array that consists of up to 100 IDs. Separate multiple IDs with commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;eap-bp67acfmxazb4****&quot;, &quot;eap-bp67acfmxazb5****&quot;]</p>
@@ -609,7 +609,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
 
             /**
              * <p>The tag key. N indicates that you can set multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
-             * <p>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
+             * <p>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that have all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -620,7 +620,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             }
 
             /**
-             * <p>The tag value. N indicates that you can set multiple tag values for filtering. Valid values of N: 1 to 20.</p>
+             * <p>The tag value. N indicates that you can specify multiple tag keys for filtering. Valid values of N: 1 to 20.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
