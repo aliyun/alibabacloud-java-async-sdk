@@ -33,6 +33,10 @@ public class ExportCipStatsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -63,6 +67,7 @@ public class ExportCipStatsRequest extends Request {
         this.endDate = builder.endDate;
         this.exportType = builder.exportType;
         this.label = builder.label;
+        this.query = builder.query;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
         this.serviceCode = builder.serviceCode;
@@ -113,6 +118,13 @@ public class ExportCipStatsRequest extends Request {
     }
 
     /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -159,6 +171,7 @@ public class ExportCipStatsRequest extends Request {
         private String endDate; 
         private String exportType; 
         private String label; 
+        private String query; 
         private String regionId; 
         private String resourceType; 
         private String serviceCode; 
@@ -176,6 +189,7 @@ public class ExportCipStatsRequest extends Request {
             this.endDate = request.endDate;
             this.exportType = request.exportType;
             this.label = request.label;
+            this.query = request.query;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
             this.serviceCode = request.serviceCode;
@@ -215,8 +229,8 @@ public class ExportCipStatsRequest extends Request {
         /**
          * <p>The export type. Valid values:</p>
          * <ul>
-         * <li><strong>level</strong>: export by risk level.</li>
-         * <li><strong>label</strong>: export by label.</li>
+         * <li><strong>level</strong>: Export by risk level.</li>
+         * <li><strong>label</strong>: Export by label.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,6 +251,18 @@ public class ExportCipStatsRequest extends Request {
         public Builder label(String label) {
             this.putBodyParameter("Label", label);
             this.label = label;
+            return this;
+        }
+
+        /**
+         * <p>The query condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Classify&quot;:&quot;guard-scene&quot;}</p>
+         */
+        public Builder query(String query) {
+            this.putBodyParameter("Query", query);
+            this.query = query;
             return this;
         }
 
@@ -303,11 +329,11 @@ public class ExportCipStatsRequest extends Request {
         /**
          * <p>The type. Valid values:</p>
          * <ul>
-         * <li><strong>cip</strong>: Content Moderation invocation volume statistics.</li>
-         * <li><strong>risk_level</strong>: Content Moderation risk level statistics.</li>
-         * <li><strong>content_moderation</strong>: AI safety guardrail content compliance risk level and tag statistics.</li>
-         * <li><strong>sensitive_data</strong>: AI safety guardrail sensitive data risk level and tag statistics.</li>
-         * <li><strong>prompt_attack</strong>: AI safety guardrail prompt risk level and tag statistics.</li>
+         * <li><strong>cip</strong>: Content Moderation invoke volume statistics.</li>
+         * <li><strong>risk_level</strong>: Content Moderation security risk level statistics.</li>
+         * <li><strong>content_moderation</strong>: AI Safety Guardrail content compliance risk level and tag statistics.</li>
+         * <li><strong>sensitive_data</strong>: AI Safety Guardrail sensitive data risk level and tag statistics.</li>
+         * <li><strong>prompt_attack</strong>: AI Safety Guardrail prompt risk level and tag statistics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
