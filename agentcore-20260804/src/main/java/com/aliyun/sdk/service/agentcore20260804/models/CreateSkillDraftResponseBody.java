@@ -67,7 +67,7 @@ public class CreateSkillDraftResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response data.</p>
+         * <p>The returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>skill-1234567890abcdef</p>

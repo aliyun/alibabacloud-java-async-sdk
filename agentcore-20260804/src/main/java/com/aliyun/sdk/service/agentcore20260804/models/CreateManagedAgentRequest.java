@@ -111,7 +111,7 @@ public class CreateManagedAgentRequest extends Request {
         }
 
         /**
-         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current version.</p>
+         * <p>The reserved idempotency token. The backend does not provide idempotency guarantees in the current release.</p>
          * 
          * <strong>example:</strong>
          * <p>client-token-1</p>
@@ -208,7 +208,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is validated as required by the backend for each mount entry. Mount targets must not be duplicated or have parent-child overlaps.</p>
+             * <p>The subdirectory under /mnt/agenticfs/ in the container. Required for each mount item as validated by the backend. Mount targets must not be duplicated or have parent-child overlaps.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/agenticfs/data</p>
@@ -219,7 +219,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>A non-empty relative directory that exists under the AccessPoint. This field is validated as required by the backend for each mount entry. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+             * <p>The non-empty relative directory that exists under the AccessPoint. Required for each mount item as validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>workspace/data</p>
@@ -241,7 +241,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The AccessPoint domain name. This field is validated as required by the backend for each mount entry. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
+             * <p>The AccessPoint domain name. Required for each mount item as validated by the backend. Do not include the protocol, port, or path. Use the DomainName from the NAS ListAccessPoints response.</p>
              * 
              * <strong>example:</strong>
              * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -715,7 +715,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable the token quota. Default value: true. Set to false to disable and delete existing quota rules.</p>
+             * <p>Specifies whether to enable token quota. Default value: true. Set to false to disable and delete existing quota rules.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -726,7 +726,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The quota limit type. This field is validated as required by the backend when the quota is enabled. Fixed value: token.</p>
+             * <p>The quota limit type. Required when quota is enabled, as validated by the backend. Fixed value: token.</p>
              * 
              * <strong>example:</strong>
              * <p>token</p>
@@ -737,7 +737,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The statistical period of the quota. This field is validated as required by the backend when the quota is enabled. Valid values:</p>
+             * <p>The quota statistical period. Required when quota is enabled, as validated by the backend. Valid values:</p>
              * <ul>
              * <li>day: daily.</li>
              * <li>month: monthly.</li>
@@ -752,7 +752,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of tokens that can be consumed within a single period. This field is validated as required by the backend when the quota is enabled. The value must be greater than 0.</p>
+             * <p>The maximum number of tokens allowed within a single period. Required when quota is enabled, as validated by the backend. The value must be greater than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>
@@ -1141,7 +1141,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The OSS bucket name. This field is validated as required by the backend for each mount entry.</p>
+             * <p>The OSS bucket name. Required for each mount item as validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>bucket-001</p>
@@ -1152,7 +1152,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The absolute mount path in the container. This field is validated as required by the backend for each mount entry.</p>
+             * <p>The absolute mount path in the container. Required for each mount item as validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>/mnt/oss/datasets</p>
@@ -1341,7 +1341,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable auto-scaling. This field is validated as required by the backend when hpa is present.</p>
+             * <p>Specifies whether to enable auto scaling. Required when hpa is present, as validated by the backend.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -1349,7 +1349,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of active sessions per sandbox. This field is validated as required by the backend when hpa is present.</p>
+             * <p>The maximum number of active sessions per sandbox. Required when hpa is present, as validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -1360,7 +1360,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of sandboxes. Required when HPA is enabled. The value must be greater than or equal to the minimum value.</p>
+             * <p>The maximum number of sandboxes. Required when HPA is enabled and must be greater than or equal to the minimum value.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -1382,7 +1382,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The time-to-live (TTL) for a session after inactivity, in seconds. This field is validated as required by the backend when hpa is present.</p>
+             * <p>The time-to-live for an inactive session, in seconds. Required when hpa is present, as validated by the backend.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>
@@ -1453,7 +1453,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the HTTP header used for session affinity. This parameter takes effect when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
+             * <p>The name of the HTTP header used for session affinity. This parameter takes effect only when sessionPolicy.type is set to ISOLATED_HEADER_FIELD.</p>
              * 
              * <strong>example:</strong>
              * <p>X-Session-Id</p>
@@ -1559,7 +1559,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The sandbox auto-scaling and session configuration.</p>
+             * <p>The sandbox auto scaling and session configuration.</p>
              */
             public Builder hpa(Hpa hpa) {
                 this.hpa = hpa;
@@ -1635,11 +1635,14 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The session policy type.</p>
-             * <p>This parameter is required.</p>
+             * <p>The version selector type. Valid values:</p>
+             * <ul>
+             * <li>LABEL: select by label.</li>
+             * <li>VERSION: select by specific version.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>DISABLED</p>
+             * <p>LABEL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1647,11 +1650,10 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The value of the environment variable.</p>
-             * <p>This parameter is required.</p>
+             * <p>The selector value. When the type is LABEL, specify a label name such as latest. When the type is VERSION, specify a specific version number.</p>
              * 
              * <strong>example:</strong>
-             * <p>sk-xxxx</p>
+             * <p>latest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1757,7 +1759,14 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * sourceType.
+             * <p>The skill source type. Valid values:</p>
+             * <ul>
+             * <li>REFERENCE: referenced from AI Registry.</li>
+             * <li>STATIC: statically bundled with the package.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1776,7 +1785,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * versionSelector.
+             * <p>The version selector for the reference. Defaults to LABEL/latest if omitted. Currently supports LABEL/latest.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -1785,6 +1794,87 @@ public class CreateManagedAgentRequest extends Request {
 
             public Skills build() {
                 return new Skills(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateManagedAgentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateManagedAgentRequest</p>
+     */
+    public static class SubAgentsSkills extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private SubAgentsSkills(Builder builder) {
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubAgentsSkills create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubAgentsSkills model) {
+                this.name = model.name;
+                this.version = model.version;
+            } 
+
+            /**
+             * <p>The skill name used by the sub-agent. Declared as optional for compatibility, but the backend validates that each entry is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>web-search</p>
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The optional version number. If omitted, set to null, or left blank, the latest version is resolved.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0.0</p>
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public SubAgentsSkills build() {
+                return new SubAgentsSkills(this);
             } 
 
         } 
@@ -1805,9 +1895,13 @@ public class CreateManagedAgentRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("skills")
+        private java.util.List<SubAgentsSkills> skills;
+
         private SubAgents(Builder builder) {
             this.instruction = builder.instruction;
             this.name = builder.name;
+            this.skills = builder.skills;
         }
 
         public static Builder builder() {
@@ -1832,9 +1926,17 @@ public class CreateManagedAgentRequest extends Request {
             return this.name;
         }
 
+        /**
+         * @return skills
+         */
+        public java.util.List<SubAgentsSkills> getSkills() {
+            return this.skills;
+        }
+
         public static final class Builder {
             private String instruction; 
             private String name; 
+            private java.util.List<SubAgentsSkills> skills; 
 
             private Builder() {
             } 
@@ -1842,6 +1944,7 @@ public class CreateManagedAgentRequest extends Request {
             private Builder(SubAgents model) {
                 this.instruction = model.instruction;
                 this.name = model.name;
+                this.skills = model.skills;
             } 
 
             /**
@@ -1849,7 +1952,7 @@ public class CreateManagedAgentRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>Review the code</p>
+             * <p>Please review the code</p>
              */
             public Builder instruction(String instruction) {
                 this.instruction = instruction;
@@ -1865,6 +1968,14 @@ public class CreateManagedAgentRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>The skills exclusively used by this sub-agent. Skill names must be unique within the same sub-agent. If not specified or an empty array is passed, no skills are configured.</p>
+             */
+            public Builder skills(java.util.List<SubAgentsSkills> skills) {
+                this.skills = skills;
                 return this;
             }
 
@@ -1929,7 +2040,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The name of the template in the AI registry.</p>
+             * <p>The name of the template in AI Registry.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1941,7 +2052,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The version of the template in the AI registry.</p>
+             * <p>The version of the template in AI Registry.</p>
              * 
              * <strong>example:</strong>
              * <p>1.0.0</p>
@@ -1998,7 +2109,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>The AI registry template configuration.</p>
+             * <p>The AI Registry template configuration.</p>
              */
             public Builder aiRegistry(AiRegistry aiRegistry) {
                 this.aiRegistry = aiRegistry;
@@ -2309,7 +2420,7 @@ public class CreateManagedAgentRequest extends Request {
             } 
 
             /**
-             * <p>Omit or set to [] during creation to indicate no AFS mounts. Set to null to reject. The total number of AFS and OSS mounts cannot exceed 10.</p>
+             * <p>The AgenticFS mount list. Omit or set to [] to indicate no AFS mounts. Set to null to reject. The total number of AFS and OSS mounts cannot exceed 10.</p>
              */
             public Builder agenticFsMounts(java.util.List<AgenticFsMounts> agenticFsMounts) {
                 this.agenticFsMounts = agenticFsMounts;
@@ -2384,7 +2495,7 @@ public class CreateManagedAgentRequest extends Request {
             }
 
             /**
-             * <p>The OSS mount list. A maximum of 10 entries are allowed.</p>
+             * <p>The OSS mount list. A maximum of 10 items are allowed.</p>
              */
             public Builder ossMounts(java.util.List<OssMounts> ossMounts) {
                 this.ossMounts = ossMounts;

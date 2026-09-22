@@ -201,7 +201,14 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The version selector type. Valid values:</p>
+             * <ul>
+             * <li>LABEL: selects by label.</li>
+             * <li>VERSION: selects by specific version.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LABEL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -209,7 +216,10 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The selector value. If the type is LABEL, this value is a label name such as latest. If the type is VERSION, this value is a specific version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>latest</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -300,7 +310,14 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The Skill source type. Valid values:</p>
+             * <ul>
+             * <li>REFERENCE: references AI Registry.</li>
+             * <li>STATIC: statically bundled with the package.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>REFERENCE</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -308,7 +325,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * versionSelector.
+             * <p>The version selector for the reference. Defaults to LABEL/latest if omitted.</p>
              */
             public Builder versionSelector(VersionSelector versionSelector) {
                 this.versionSelector = versionSelector;
@@ -525,7 +542,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download count.</p>
+             * <p>The number of downloads.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -582,7 +599,7 @@ public class GetAgentSpecLatestResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of skill references.</p>
+             * <p>The list of Skill references.</p>
              */
             public Builder skills(java.util.List<Skills> skills) {
                 this.skills = skills;

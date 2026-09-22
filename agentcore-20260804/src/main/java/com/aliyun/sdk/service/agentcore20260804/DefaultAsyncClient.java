@@ -644,7 +644,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Deletes the draft version currently being edited for a specified Skill.</p>
      * 
      * @param request the request parameters of DeleteSkillDraft  DeleteSkillDraftRequest
@@ -766,7 +766,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Operation description</h2>
      * <p>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</p>
      * 
      * @param request the request parameters of DownloadSkillVersionViaOss  DownloadSkillVersionViaOssRequest
@@ -1794,7 +1794,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Operation description</h2>
-     * <p>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</p>
+     * <p>Performs a paged query of Skills in a specified workspace and returns basic Skill information, version status, and paging information.</p>
      * 
      * @param request the request parameters of ListSkills  ListSkillsRequest
      * @return ListSkillsResponse
@@ -1960,8 +1960,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>Converts a specified Skill version back into an editable draft for further modifications.</p>
+     * <h2>Request description</h2>
+     * <p>Converts a specified Skill version back to an editable draft so that you can continue to modify it.</p>
      * 
      * @param request the request parameters of RedraftSkillVersion  RedraftSkillVersionRequest
      * @return RedraftSkillVersionResponse
