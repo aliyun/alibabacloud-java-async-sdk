@@ -80,7 +80,10 @@ public class DLCatalog extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The description of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>init default catalog</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -88,7 +91,10 @@ public class DLCatalog extends TeaModel {
         }
 
         /**
-         * Location.
+         * <p>The storage path of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://xxxx</p>
          */
         public Builder location(String location) {
             this.location = location;
@@ -96,7 +102,10 @@ public class DLCatalog extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the data catalog.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hive</p>
          */
         public Builder name(String name) {
             this.name = name;

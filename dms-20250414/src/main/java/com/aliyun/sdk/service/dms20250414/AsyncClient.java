@@ -230,6 +230,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCustomAgentResponse> describeCustomAgent(DescribeCustomAgentRequest request);
 
     /**
+     * @param request the request parameters of DescribeCustomAgentMonitorMetrics  DescribeCustomAgentMonitorMetricsRequest
+     * @return DescribeCustomAgentMonitorMetricsResponse
+     */
+    CompletableFuture<DescribeCustomAgentMonitorMetricsResponse> describeCustomAgentMonitorMetrics(DescribeCustomAgentMonitorMetricsRequest request);
+
+    /**
      * @param request the request parameters of DescribeDataAgentMetrics  DescribeDataAgentMetricsRequest
      * @return DescribeDataAgentMetricsResponse
      */
@@ -453,6 +459,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCustomAgentResponse
      */
     CompletableFuture<ListCustomAgentResponse> listCustomAgent(ListCustomAgentRequest request);
+
+    /**
+     * @param request the request parameters of ListCustomAgentMonitorSessions  ListCustomAgentMonitorSessionsRequest
+     * @return ListCustomAgentMonitorSessionsResponse
+     */
+    CompletableFuture<ListCustomAgentMonitorSessionsResponse> listCustomAgentMonitorSessions(ListCustomAgentMonitorSessionsRequest request);
 
     /**
      * <b>description</b> :
