@@ -60,6 +60,10 @@ public class CreateNetworkChannelRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    private String securityGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetDBClusterId")
     private String targetDBClusterId;
 
@@ -87,6 +91,7 @@ public class CreateNetworkChannelRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.securityGroupId = builder.securityGroupId;
         this.targetDBClusterId = builder.targetDBClusterId;
         this.targetIp = builder.targetIp;
         this.targetPort = builder.targetPort;
@@ -177,6 +182,13 @@ public class CreateNetworkChannelRequest extends Request {
     }
 
     /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
      * @return targetDBClusterId
      */
     public String getTargetDBClusterId() {
@@ -215,6 +227,7 @@ public class CreateNetworkChannelRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String securityGroupId; 
         private String targetDBClusterId; 
         private String targetIp; 
         private String targetPort; 
@@ -236,6 +249,7 @@ public class CreateNetworkChannelRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.securityGroupId = request.securityGroupId;
             this.targetDBClusterId = request.targetDBClusterId;
             this.targetIp = request.targetIp;
             this.targetPort = request.targetPort;
@@ -349,6 +363,15 @@ public class CreateNetworkChannelRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putQueryParameter("SecurityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
             return this;
         }
 

@@ -104,6 +104,9 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
+        @com.aliyun.core.annotation.NameInMap("EniId")
+        private String eniId;
+
         @com.aliyun.core.annotation.NameInMap("Notes")
         private String notes;
 
@@ -128,6 +131,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         private ChannelInfos(Builder builder) {
             this.channelName = builder.channelName;
             this.DBClusterId = builder.DBClusterId;
+            this.eniId = builder.eniId;
             this.notes = builder.notes;
             this.regionId = builder.regionId;
             this.targetDBClusterId = builder.targetDBClusterId;
@@ -157,6 +161,13 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
          */
         public String getDBClusterId() {
             return this.DBClusterId;
+        }
+
+        /**
+         * @return eniId
+         */
+        public String getEniId() {
+            return this.eniId;
         }
 
         /**
@@ -211,6 +222,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
         public static final class Builder {
             private String channelName; 
             private String DBClusterId; 
+            private String eniId; 
             private String notes; 
             private String regionId; 
             private String targetDBClusterId; 
@@ -225,6 +237,7 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
             private Builder(ChannelInfos model) {
                 this.channelName = model.channelName;
                 this.DBClusterId = model.DBClusterId;
+                this.eniId = model.eniId;
                 this.notes = model.notes;
                 this.regionId = model.regionId;
                 this.targetDBClusterId = model.targetDBClusterId;
@@ -253,6 +266,14 @@ public class DescribeNetworkChannelResponseBody extends TeaModel {
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
+                return this;
+            }
+
+            /**
+             * EniId.
+             */
+            public Builder eniId(String eniId) {
+                this.eniId = eniId;
                 return this;
             }
 

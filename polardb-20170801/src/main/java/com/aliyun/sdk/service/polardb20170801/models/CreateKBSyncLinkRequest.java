@@ -316,7 +316,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The MCP Server address for DingTalk documents.</p>
+         * <p>The MCP Server endpoint for DingTalk documents.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></p>
@@ -341,7 +341,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The MCP Server address for DingTalk sheets.</p>
+         * <p>The MCP Server endpoint for DingTalk spreadsheets.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></p>
@@ -353,7 +353,7 @@ public class CreateKBSyncLinkRequest extends Request {
         }
 
         /**
-         * <p>The source directory address for synchronization.</p>
+         * <p>The directory address of the synchronization source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
