@@ -117,7 +117,7 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -128,7 +128,7 @@ public class AllocateCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the response struct.</p>
+         * <p>The metadata of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

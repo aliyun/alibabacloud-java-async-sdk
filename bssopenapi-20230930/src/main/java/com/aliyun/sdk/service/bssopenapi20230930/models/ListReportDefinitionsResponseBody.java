@@ -88,7 +88,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data list.</p>
+         * <p>The list of report definitions.</p>
          */
         public Builder reportDefinitions(java.util.List<ReportDefinitions> reportDefinitions) {
             this.reportDefinitions = reportDefinitions;
@@ -269,7 +269,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed.</p>
+             * <p>The start billing cycle for push. After the subscription is created, the system automatically pushes data from the start billing cycle to the current time. This parameter does not take effect for monthly bill PDF subscriptions, and historical data is not re-pushed. Data within the last year can be pushed at most.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05</p>
@@ -280,7 +280,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the OSS bucket that stores the files.</p>
+             * <p>The name of the OSS bucket for file storage.</p>
              * 
              * <strong>example:</strong>
              * <p>oss-bill</p>
@@ -291,7 +291,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the OSS bucket owner that stores the files. Specify this parameter when a Bid/Reseller subscription needs to push data to the OSS bucket of a sub-account. The specified account must be a sub-account of the calling account and must be granted the AliyunConsumeDump2OSSRole permission. Regular users do not need to specify this parameter. The calling account is used by default.</p>
+             * <p>The UID of the OSS owner that stores the files. If a Bid/Reseller subscription is used and data needs to be pushed to the OSS bucket of a sub-account, specify this parameter. The specified account must be a sub-account of the calling account, and the AliyunConsumeDump2OSSRole permission must be granted to this account. Regular users do not need to specify this parameter. The calling account is used by default.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567812345678</p>
@@ -313,7 +313,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription source name.</p>
+             * <p>The name of the subscription source.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -335,7 +335,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bill subscription task ID.</p>
+             * <p>The ID of the bill subscription task.</p>
              * 
              * <strong>example:</strong>
              * <p>123321</p>
@@ -348,9 +348,9 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             /**
              * <p>The subscription type. Valid values:</p>
              * <ul>
-             * <li>BillingItemDetailForBillingPeriod: billable item consumption details.</li>
+             * <li>BillingItemDetailForBillingPeriod: billing item consumption details.</li>
              * <li>InstanceDetailForBillingPeriod: instance consumption details.</li>
-             * <li>BillingItemDetailMonthly: billable item consumption summary by billing cycle.</li>
+             * <li>BillingItemDetailMonthly: billing item consumption summary by billing cycle.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -362,7 +362,7 @@ public class ListReportDefinitionsResponseBody extends TeaModel {
             }
 
             /**
-             * SelectedFields.
+             * <p>The fields specified by the user for the subscription.</p>
              */
             public Builder selectedFields(java.util.List<String> selectedFields) {
                 this.selectedFields = selectedFields;

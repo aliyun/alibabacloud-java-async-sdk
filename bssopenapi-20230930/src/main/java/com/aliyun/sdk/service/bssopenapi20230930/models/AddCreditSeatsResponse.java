@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeBudgetResponse} extends {@link TeaModel}
+ * {@link AddCreditSeatsResponse} extends {@link TeaModel}
  *
- * <p>DescribeBudgetResponse</p>
+ * <p>AddCreditSeatsResponse</p>
  */
-public class DescribeBudgetResponse extends Response {
+public class AddCreditSeatsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeBudgetResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeBudgetResponseBody body;
+    private AddCreditSeatsResponseBody body;
 
-    private DescribeBudgetResponse(BuilderImpl builder) {
+    private AddCreditSeatsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeBudgetResponse create() {
+    public static AddCreditSeatsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeBudgetResponse extends Response {
     /**
      * @return body
      */
-    public DescribeBudgetResponseBody getBody() {
+    public AddCreditSeatsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeBudgetResponse, Builder> {
+    public interface Builder extends Response.Builder<AddCreditSeatsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeBudgetResponseBody body);
+        Builder body(AddCreditSeatsResponseBody body);
 
         @Override
-        DescribeBudgetResponse build();
+        AddCreditSeatsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeBudgetResponse, Builder>
+            extends Response.BuilderImpl<AddCreditSeatsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeBudgetResponseBody body; 
+        private AddCreditSeatsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeBudgetResponse response) {
+        private BuilderImpl(AddCreditSeatsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeBudgetResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeBudgetResponseBody body) {
+        public Builder body(AddCreditSeatsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeBudgetResponse build() {
-            return new DescribeBudgetResponse(this);
+        public AddCreditSeatsResponse build() {
+            return new AddCreditSeatsResponse(this);
         } 
 
     } 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CheckBudgetNameExistsResponse} extends {@link TeaModel}
+ * {@link CreateCreditSeatResponse} extends {@link TeaModel}
  *
- * <p>CheckBudgetNameExistsResponse</p>
+ * <p>CreateCreditSeatResponse</p>
  */
-public class CheckBudgetNameExistsResponse extends Response {
+public class CreateCreditSeatResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CheckBudgetNameExistsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CheckBudgetNameExistsResponseBody body;
+    private CreateCreditSeatResponseBody body;
 
-    private CheckBudgetNameExistsResponse(BuilderImpl builder) {
+    private CreateCreditSeatResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CheckBudgetNameExistsResponse create() {
+    public static CreateCreditSeatResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CheckBudgetNameExistsResponse extends Response {
     /**
      * @return body
      */
-    public CheckBudgetNameExistsResponseBody getBody() {
+    public CreateCreditSeatResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CheckBudgetNameExistsResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateCreditSeatResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CheckBudgetNameExistsResponseBody body);
+        Builder body(CreateCreditSeatResponseBody body);
 
         @Override
-        CheckBudgetNameExistsResponse build();
+        CreateCreditSeatResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CheckBudgetNameExistsResponse, Builder>
+            extends Response.BuilderImpl<CreateCreditSeatResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CheckBudgetNameExistsResponseBody body; 
+        private CreateCreditSeatResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CheckBudgetNameExistsResponse response) {
+        private BuilderImpl(CreateCreditSeatResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CheckBudgetNameExistsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CheckBudgetNameExistsResponseBody body) {
+        public Builder body(CreateCreditSeatResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CheckBudgetNameExistsResponse build() {
-            return new CheckBudgetNameExistsResponse(this);
+        public CreateCreditSeatResponse build() {
+            return new CreateCreditSeatResponse(this);
         } 
 
     } 

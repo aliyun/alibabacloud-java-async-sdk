@@ -128,7 +128,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The maximum number of records per query.</p>
+         * <p>The maximum number of records to return in a single query.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -139,7 +139,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metadata of the response structure.</p>
+         * <p>The response metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -150,7 +150,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. An empty NextToken indicates that there are no more results.</p>
+         * <p>The token for the next query. If this parameter is empty, no more results exist.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -671,7 +671,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             } 
 
             /**
-             * AddStrategy.
+             * <p>The add strategy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO_ALLOCATE</p>
              */
             public Builder addStrategy(String addStrategy) {
                 this.addStrategy = addStrategy;
@@ -679,7 +682,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * AddStrategyName.
+             * <p>The Policy Name of the add policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>automatic allocation</p>
              */
             public Builder addStrategyName(String addStrategyName) {
                 this.addStrategyName = addStrategyName;
@@ -687,7 +693,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicablePeriodNum.
+             * <p>The number of refreshed billing cycles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder applicablePeriodNum(Long applicablePeriodNum) {
                 this.applicablePeriodNum = applicablePeriodNum;
@@ -695,7 +704,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The apportionment item code of the resource.</p>
+             * <p>The code of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -706,7 +715,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The apportionment item name of the resource.</p>
+             * <p>The name of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -731,7 +740,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
              * <p>The commodity name of the resource.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库</p>
+             * <p>ApsaraDB</p>
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -739,7 +748,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost center code.</p>
+             * <p>The code of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>code</p>
@@ -750,7 +759,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the cost center.</p>
+             * <p>The time when the cost center was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-18 12:12:25</p>
@@ -761,7 +770,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost center ID.</p>
+             * <p>The ID of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -772,7 +781,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cost center name.</p>
+             * <p>The name of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -783,7 +792,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the cost center.</p>
+             * <p>The time when the cost center was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-18 16:12:25</p>
@@ -794,7 +803,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * FinanceUnitRuleVersion.
+             * <p>The rule version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder financeUnitRuleVersion(Long financeUnitRuleVersion) {
                 this.financeUnitRuleVersion = financeUnitRuleVersion;
@@ -813,7 +825,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * MasterCommodityCode.
+             * <p>The associated commodity code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs</p>
              */
             public Builder masterCommodityCode(String masterCommodityCode) {
                 this.masterCommodityCode = masterCommodityCode;
@@ -821,7 +836,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * MasterInstanceId.
+             * <p>The associated instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-xxxxx</p>
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -829,7 +847,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The customer ID to which the cost center belongs.</p>
+             * <p>The ID of the customer to whom the cost center belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567812345678</p>
@@ -840,10 +858,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The customer name to which the cost center belongs.</p>
+             * <p>The name of the customer to whom the cost center belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>客户A</p>
+             * <p>CustomerA</p>
              */
             public Builder ownerAccountName(String ownerAccountName) {
                 this.ownerAccountName = ownerAccountName;
@@ -851,7 +869,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parent cost center ID.</p>
+             * <p>The ID of the parent cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -862,7 +880,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The product code, which is the same as the product code in Cost Center bills.</p>
+             * <p>The product code, which is the same as the product code in User Center bills.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -876,7 +894,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
              * <p>The product name.</p>
              * 
              * <strong>example:</strong>
-             * <p>云数据库</p>
+             * <p>ApsaraDB</p>
              */
             public Builder pipName(String pipName) {
                 this.pipName = pipName;
@@ -884,7 +902,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RecentBillingMonth.
+             * <p>The most recent billing cycle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202509</p>
              */
             public Builder recentBillingMonth(Long recentBillingMonth) {
                 this.recentBillingMonth = recentBillingMonth;
@@ -892,7 +913,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shanghai</p>
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -900,7 +924,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -911,7 +938,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
              * <p>The resource group to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认资源组</p>
+             * <p>Default resource group</p>
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -930,7 +957,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The custom alias of the resource.</p>
+             * <p>The custom nickname of the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>testResource</p>
@@ -943,8 +970,8 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             /**
              * <p>The resource source. Valid values:</p>
              * <ul>
-             * <li>AUTO_ALLOCATE: automatically allocated.</li>
-             * <li>MANUAL_ALLOCATE: manually allocated.</li>
+             * <li>AUTO_ALLOCATE: automatic allocation.</li>
+             * <li>MANUAL_ALLOCATE: manual allocation.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -978,7 +1005,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last update time of the cost center. This is a reserved field and is currently unavailable.</p>
+             * <p>The time when the cost center was last updated. This is a reserved field and is currently unavailable.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-05-18 16:12:25</p>
@@ -989,7 +1016,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner user ID of the resource.</p>
+             * <p>The user ID of the resource owner.</p>
              * 
              * <strong>example:</strong>
              * <p>1234567812345678</p>
@@ -1000,7 +1027,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The owner username of the resource.</p>
+             * <p>The username of the resource owner.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@test.aliyun.com">test@test.aliyun.com</a></p>
@@ -1011,7 +1038,7 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The root cost center ID.</p>
+             * <p>The ID of the root cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -1022,7 +1049,10 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
             }
 
             /**
-             * StartBillingMonth.
+             * <p>The billing cycle in which the rule takes effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202509</p>
              */
             public Builder startBillingMonth(Long startBillingMonth) {
                 this.startBillingMonth = startBillingMonth;

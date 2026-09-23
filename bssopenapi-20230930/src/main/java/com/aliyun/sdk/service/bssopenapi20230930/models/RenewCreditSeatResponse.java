@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeleteBudgetResponse} extends {@link TeaModel}
+ * {@link RenewCreditSeatResponse} extends {@link TeaModel}
  *
- * <p>DeleteBudgetResponse</p>
+ * <p>RenewCreditSeatResponse</p>
  */
-public class DeleteBudgetResponse extends Response {
+public class RenewCreditSeatResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DeleteBudgetResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteBudgetResponseBody body;
+    private RenewCreditSeatResponseBody body;
 
-    private DeleteBudgetResponse(BuilderImpl builder) {
+    private RenewCreditSeatResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteBudgetResponse create() {
+    public static RenewCreditSeatResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DeleteBudgetResponse extends Response {
     /**
      * @return body
      */
-    public DeleteBudgetResponseBody getBody() {
+    public RenewCreditSeatResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteBudgetResponse, Builder> {
+    public interface Builder extends Response.Builder<RenewCreditSeatResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteBudgetResponseBody body);
+        Builder body(RenewCreditSeatResponseBody body);
 
         @Override
-        DeleteBudgetResponse build();
+        RenewCreditSeatResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteBudgetResponse, Builder>
+            extends Response.BuilderImpl<RenewCreditSeatResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DeleteBudgetResponseBody body; 
+        private RenewCreditSeatResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteBudgetResponse response) {
+        private BuilderImpl(RenewCreditSeatResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DeleteBudgetResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteBudgetResponseBody body) {
+        public Builder body(RenewCreditSeatResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteBudgetResponse build() {
-            return new DeleteBudgetResponse(this);
+        public RenewCreditSeatResponse build() {
+            return new RenewCreditSeatResponse(this);
         } 
 
     } 

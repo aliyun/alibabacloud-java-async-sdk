@@ -169,7 +169,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>The enterprise and account list. If this parameter is empty, the current account is queried.</p>
+         * <p>The list of enterprise entities and accounts. If this parameter is left empty, the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -178,7 +178,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>Optional. Filter by instance ID.</p>
+         * <p>Optional. The instance IDs used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;instance_1&quot;,&quot;instance_2&quot;]</p>
@@ -190,7 +190,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>Optional. List of months in yyyyMM format.</p>
+         * <p>Optional. The list of months in the yyyyMM format.</p>
          * 
          * <strong>example:</strong>
          * <p>[202602,202603]</p>
@@ -202,7 +202,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>The primary marketplace ID. If this parameter is empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -226,7 +226,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>Optional. Filter by compensation status. Valid values: 0 and 1.</p>
+         * <p>Optional. The compensation statuses used for filtering. Valid values: 0 and 1.</p>
          */
         public Builder payStatuses(java.util.List<Integer> payStatuses) {
             this.putBodyParameter("PayStatuses", payStatuses);
@@ -235,7 +235,7 @@ public class QueryMonthlySlaListRequest extends Request {
         }
 
         /**
-         * <p>Optional. Filter by product code.</p>
+         * <p>Optional. The product codes used for filtering.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ecs&quot;,&quot;oss&quot;]</p>
@@ -306,7 +306,7 @@ public class QueryMonthlySlaListRequest extends Request {
             } 
 
             /**
-             * <p>The list of accounts to access. If this parameter is empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accounts to access. If this parameter is left empty, all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;

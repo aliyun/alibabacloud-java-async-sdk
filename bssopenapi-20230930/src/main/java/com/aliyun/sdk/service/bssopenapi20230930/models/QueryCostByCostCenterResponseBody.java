@@ -93,7 +93,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Cost center consumption amount details list</p>
+         * <p>The list of cost center consumption amount details.</p>
          */
         public Builder consumeAmountList(java.util.List<ConsumeAmountList> consumeAmountList) {
             this.consumeAmountList = consumeAmountList;
@@ -101,7 +101,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response structure metadata</p>
+         * <p>The response structure metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -112,7 +112,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -123,7 +123,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Sum of totalAllocatedAmount across all cost centers</p>
+         * <p>The sum of totalAllocatedAmount across all cost centers.</p>
          * 
          * <strong>example:</strong>
          * <p>130296.64</p>
@@ -322,7 +322,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Shared allocation amount</p>
+             * <p>The apportioned amount.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -333,7 +333,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cost center code</p>
+             * <p>The financial unit code.</p>
              * 
              * <strong>example:</strong>
              * <p>15945703968#</p>
@@ -344,7 +344,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cost center ID</p>
+             * <p>The financial unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>530658</p>
@@ -355,10 +355,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cost center name</p>
+             * <p>The financial unit name.</p>
              * 
              * <strong>example:</strong>
-             * <p>项目组A</p>
+             * <p>Project Team A</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -366,7 +366,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cost type amount</p>
+             * <p>The cost type amount.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -377,7 +377,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Level</p>
+             * <p>The level.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -388,7 +388,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account ID that owns the resource</p>
+             * <p>The account ID of the resource ownership.</p>
              * 
              * <strong>example:</strong>
              * <p>1857464601594004</p>
@@ -399,10 +399,10 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Account name that owns the resource</p>
+             * <p>The account name of the resource ownership.</p>
              * 
              * <strong>example:</strong>
-             * <p>研发团队测试账号</p>
+             * <p>R&amp;D Team Test Account</p>
              */
             public Builder ownerAccountName(String ownerAccountName) {
                 this.ownerAccountName = ownerAccountName;
@@ -410,7 +410,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Parent cost center ID</p>
+             * <p>The parent financial unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>637537</p>
@@ -421,7 +421,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Previous cost center ID</p>
+             * <p>The preceding financial unit ID.</p>
              * 
              * <strong>example:</strong>
              * <p>6375371</p>
@@ -432,7 +432,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Total (sum of cost type amount and shared allocation amount)</p>
+             * <p>The total amount (the sum of the cost type amount and the apportioned amount).</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -443,7 +443,7 @@ public class QueryCostByCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cost type amount percentage</p>
+             * <p>The percentage of the cost type amount.</p>
              * 
              * <strong>example:</strong>
              * <p>0.01</p>

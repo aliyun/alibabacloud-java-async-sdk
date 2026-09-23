@@ -80,7 +80,7 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the financial unit allocation rule.</p>
+         * <p>The ID of the cost center allocation rule.</p>
          * 
          * <strong>example:</strong>
          * <p>37404</p>
@@ -91,7 +91,7 @@ public class DeleteCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response metadata.</p>
+         * <p>The response struct metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>

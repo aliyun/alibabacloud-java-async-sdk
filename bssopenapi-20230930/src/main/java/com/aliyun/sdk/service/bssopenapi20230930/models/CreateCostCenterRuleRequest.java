@@ -87,7 +87,7 @@ public class CreateCostCenterRuleRequest extends Request {
         } 
 
         /**
-         * <p>Financial unit ID</p>
+         * <p>The financial unit ID.</p>
          * 
          * <strong>example:</strong>
          * <p>485938</p>
@@ -99,7 +99,7 @@ public class CreateCostCenterRuleRequest extends Request {
         }
 
         /**
-         * <p>Rule expression</p>
+         * <p>The rule expression.</p>
          */
         public Builder filterExpression(FilterExpression filterExpression) {
             String filterExpressionShrink = shrink(filterExpression, "FilterExpression", "json");
@@ -109,7 +109,7 @@ public class CreateCostCenterRuleRequest extends Request {
         }
 
         /**
-         * <p>First-level marketplace ID. If left empty, the ID of the marketplace to which the current user belongs is used by default.</p>
+         * <p>The level-1 marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2084210001</p>
@@ -206,7 +206,7 @@ public class CreateCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * <p>Condition filter key</p>
+             * <p>The filter condition key.</p>
              * 
              * <strong>example:</strong>
              * <p>TAG-test-xxx-key</p>
@@ -217,10 +217,10 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Condition filter key name (deprecated)</p>
+             * <p>The filter condition key name (deprecated).</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder codeName(String codeName) {
                 this.codeName = codeName;
@@ -228,7 +228,7 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Association relationship between code and value</p>
+             * <p>The association between the code and value.</p>
              * 
              * <strong>example:</strong>
              * <p>IN</p>
@@ -239,7 +239,7 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Condition filter value list</p>
+             * <p>The list of filter condition values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -345,7 +345,7 @@ public class CreateCostCenterRuleRequest extends Request {
             } 
 
             /**
-             * <p>Operation type</p>
+             * <p>The operation type.</p>
              * 
              * <strong>example:</strong>
              * <p>NARY</p>
@@ -356,7 +356,7 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Sub-condition filter</p>
+             * <p>The sub-condition filter.</p>
              */
             public Builder filterValues(FilterValues filterValues) {
                 this.filterValues = filterValues;
@@ -364,10 +364,10 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Filter condition (deprecated)</p>
+             * <p>The filter condition (deprecated).</p>
              * 
              * <strong>example:</strong>
-             * <p>无</p>
+             * <p>None</p>
              */
             public Builder operand(Object operand) {
                 this.operand = operand;
@@ -375,7 +375,7 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Condition expression</p>
+             * <p>The conditional expression.</p>
              */
             public Builder operands(java.util.List<?> operands) {
                 this.operands = operands;
@@ -383,7 +383,7 @@ public class CreateCostCenterRuleRequest extends Request {
             }
 
             /**
-             * <p>Relational expression</p>
+             * <p>The relational expression.</p>
              * 
              * <strong>example:</strong>
              * <p>AND</p>

@@ -115,7 +115,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
         } 
 
         /**
-         * <p>The list of sharing rules to create.</p>
+         * <p>The list of allocation rules to create.</p>
          */
         public Builder createShareRuleList(java.util.List<CreateShareRuleList> createShareRuleList) {
             String createShareRuleListShrink = shrink(createShareRuleList, "CreateShareRuleList", "json");
@@ -125,7 +125,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of sharing rules to modify.</p>
+         * <p>The list of allocation rules to update.</p>
          */
         public Builder modifyShareRuleList(java.util.List<ModifyShareRuleList> modifyShareRuleList) {
             String modifyShareRuleListShrink = shrink(modifyShareRuleList, "ModifyShareRuleList", "json");
@@ -135,7 +135,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * <p>The primary marketplace ID. If left empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The ID of the level-1 sales channel. If this parameter is left empty, the ID of the sales channel to which the current user belongs is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -147,7 +147,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * <p>The user ID of the cost center owner.</p>
+         * <p>The ID of the user who owns the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>1977800748053695</p>
@@ -159,7 +159,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
         }
 
         /**
-         * <p>The list of sharing rules to delete.</p>
+         * <p>The list of allocation rules to delete.</p>
          */
         public Builder removeShareRuleList(java.util.List<Long> removeShareRuleList) {
             String removeShareRuleListShrink = shrink(removeShareRuleList, "RemoveShareRuleList", "json");
@@ -268,7 +268,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of source cost centers.</p>
+             * <p>The list of source financial units.</p>
              */
             public Builder fromCostCenterList(java.util.List<Long> fromCostCenterList) {
                 this.fromCostCenterList = fromCostCenterList;
@@ -276,7 +276,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The list of sharing ratios.</p>
+             * <p>The list of allocation ratios.</p>
              */
             public Builder shareRatioList(java.util.List<Double> shareRatioList) {
                 this.shareRatioList = shareRatioList;
@@ -284,7 +284,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The name of the sharing rule.</p>
+             * <p>The name of the allocation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -295,7 +295,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the sharing rule.</p>
+             * <p>The type of the allocation rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The list of target cost centers.</p>
+             * <p>The list of destination financial units.</p>
              */
             public Builder toCostCenterList(java.util.List<Long> toCostCenterList) {
                 this.toCostCenterList = toCostCenterList;
@@ -428,7 +428,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of source cost centers.</p>
+             * <p>The list of source financial units.</p>
              */
             public Builder fromCostCenterList(java.util.List<Long> fromCostCenterList) {
                 this.fromCostCenterList = fromCostCenterList;
@@ -436,7 +436,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The list of sharing ratios.</p>
+             * <p>The list of allocation ratios.</p>
              */
             public Builder shareRatioList(java.util.List<Double> shareRatioList) {
                 this.shareRatioList = shareRatioList;
@@ -444,7 +444,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the sharing rule.</p>
+             * <p>The ID of the allocation rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -456,7 +456,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The name of the sharing rule.</p>
+             * <p>The name of the allocation rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -467,7 +467,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The type of the sharing rule.</p>
+             * <p>The type of the allocation rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -479,7 +479,7 @@ public class SaveCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The list of target cost centers.</p>
+             * <p>The list of destination financial units.</p>
              */
             public Builder toCostCenterList(java.util.List<Long> toCostCenterList) {
                 this.toCostCenterList = toCostCenterList;

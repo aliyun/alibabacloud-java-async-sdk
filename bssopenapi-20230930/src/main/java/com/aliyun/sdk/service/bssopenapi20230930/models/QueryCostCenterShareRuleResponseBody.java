@@ -138,7 +138,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response struct metadata.</p>
+         * <p>The metadata of the response structure.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -890,7 +890,7 @@ public class QueryCostCenterShareRuleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule information of the destination financial unit.</p>
+             * <p>The rule information of the target financial unit.</p>
              */
             public Builder toCostCenterShareRuleDetails(java.util.List<ToCostCenterShareRuleDetails> toCostCenterShareRuleDetails) {
                 this.toCostCenterShareRuleDetails = toCostCenterShareRuleDetails;

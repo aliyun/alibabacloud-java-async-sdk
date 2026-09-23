@@ -138,7 +138,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response struct metadata.</p>
+         * <p>The response metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -355,7 +355,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the damage record, used for targeted claims.</p>
+             * <p>The unique identifier of the damaged record, which is used to call the applyCoupon operation for targeted claim.</p>
              * 
              * <strong>example:</strong>
              * <p>9b7***9413</p>
@@ -377,7 +377,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The month in yyyyMM format.</p>
+             * <p>The month in the yyyyMM format.</p>
              * 
              * <strong>example:</strong>
              * <p>202603</p>
@@ -388,7 +388,7 @@ public class QueryMonthlySlaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monthly service fee.</p>
+             * <p>The monthly service charge.</p>
              * 
              * <strong>example:</strong>
              * <p>365.00</p>

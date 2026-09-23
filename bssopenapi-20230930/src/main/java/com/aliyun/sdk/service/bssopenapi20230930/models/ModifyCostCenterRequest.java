@@ -85,7 +85,7 @@ public class ModifyCostCenterRequest extends Request {
         }
 
         /**
-         * <p>The level-1 marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2684201000001</p>
@@ -172,7 +172,7 @@ public class ModifyCostCenterRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the cost center.</p>
+             * <p>The cost center ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class ModifyCostCenterRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>资源组</p>
+             * <p>ResourceGroup</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -196,7 +196,7 @@ public class ModifyCostCenterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the owner to which the cost center belongs.</p>
+             * <p>The ID of the user who owns the cost center.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

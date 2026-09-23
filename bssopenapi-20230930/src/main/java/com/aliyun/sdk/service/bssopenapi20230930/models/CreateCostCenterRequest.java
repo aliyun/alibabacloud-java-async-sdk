@@ -74,7 +74,7 @@ public class CreateCostCenterRequest extends Request {
         } 
 
         /**
-         * <p>Cost center entity list</p>
+         * <p>The list of cost center entities.</p>
          * <p>This parameter is required.</p>
          */
         public Builder costCenterEntityList(java.util.List<CostCenterEntityList> costCenterEntityList) {
@@ -85,7 +85,7 @@ public class CreateCostCenterRequest extends Request {
         }
 
         /**
-         * <p>Primary marketplace ID. If empty, the marketplace ID of the current user is used by default.</p>
+         * <p>The primary marketplace ID. If this parameter is left empty, the marketplace ID of the current user is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>2084210001</p>
@@ -172,11 +172,11 @@ public class CreateCostCenterRequest extends Request {
             } 
 
             /**
-             * <p>Cost center name (must be unique within the same account)</p>
+             * <p>The cost center name. The name must be unique within the same account.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>资源组</p>
+             * <p>ResourceGroup</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -184,7 +184,7 @@ public class CreateCostCenterRequest extends Request {
             }
 
             /**
-             * <p>Owner user ID of the new cost center</p>
+             * <p>The owner user ID of the new cost center.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class CreateCostCenterRequest extends Request {
             }
 
             /**
-             * <p>Parent cost center ID. A value of -1 indicates the root cost center.</p>
+             * <p>The parent cost center ID. A value of -1 indicates the root cost center.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

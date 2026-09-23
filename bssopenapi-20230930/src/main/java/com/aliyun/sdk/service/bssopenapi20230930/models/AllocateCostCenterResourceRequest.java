@@ -118,7 +118,7 @@ public class AllocateCostCenterResourceRequest extends Request {
         /**
          * <p>The ID of the source cost center. This parameter is required.</p>
          * <ul>
-         * <li>0 indicates that the cost center is unallocated.</li>
+         * <li>0 indicates the unallocated cost center.</li>
          * <li>A value greater than 0 indicates an allocated cost center ID.</li>
          * </ul>
          * 
@@ -169,8 +169,8 @@ public class AllocateCostCenterResourceRequest extends Request {
         /**
          * <p>The ID of the destination cost center. Valid values:</p>
          * <ul>
-         * <li>-1: moves the allocated resource to the unallocated state.</li>
-         * <li>A value greater than 0: allocates the resource to the specified cost center.</li>
+         * <li>-1: moves allocated resources back to the unallocated state.</li>
+         * <li>A value greater than 0: allocates resources to the specified cost center.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -427,7 +427,7 @@ public class AllocateCostCenterResourceRequest extends Request {
              * <p>The attached resource type of the attached-resource instance. This parameter is required only for attached-resource product instances.</p>
              * <ul>
              * <li>Currently, eight commodities support attached resources. The commodity codes are oss, dcdn, snapshot, vod, cdn, live, and cbwp.</li>
-             * <li>You can call the QueryCostUnitResource operation to obtain all billing instances (including attached-resource instances with their attached resources) under a specific cost center (including the unallocated cost center) of a user.</li>
+             * <li>You can call the QueryCostUnitResource operation to retrieve all billing instances (including attached-resource instances with their attached resource types) under a specific cost center (including the unallocated cost center) of a user.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -439,7 +439,7 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * <p>The attached resource name.</p>
+             * <p>The name of the attached resource.</p>
              * 
              * <strong>example:</strong>
              * <p>split-item-test1</p>
@@ -538,7 +538,7 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * <p>The resource source. Valid values:</p>
+             * <p>The source of the resource. Valid values:</p>
              * <ul>
              * <li>AUTO_ALLOCATE: automatic allocation.</li>
              * <li>MANUAL_ALLOCATE: manual allocation.</li>
@@ -597,7 +597,7 @@ public class AllocateCostCenterResourceRequest extends Request {
             }
 
             /**
-             * <p>The resource ownership username.</p>
+             * <p>The username of the resource ownership user.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>

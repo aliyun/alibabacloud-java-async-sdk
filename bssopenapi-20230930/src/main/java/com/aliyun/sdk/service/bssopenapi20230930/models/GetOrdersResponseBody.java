@@ -729,7 +729,7 @@ public class GetOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page. A maximum of 20 entries per page is recommended. A larger number may cause a timeout.</p>
+             * <p>The number of entries per page. A maximum of 20 entries per page is recommended. Excessive entries may cause a timeout.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

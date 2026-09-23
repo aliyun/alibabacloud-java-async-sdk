@@ -115,7 +115,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
         } 
 
         /**
-         * <p>The list of enterprises and accounts. If empty, the current account is queried.</p>
+         * <p>The list of enterprises and accounts. An empty value indicates that the current account is queried.</p>
          */
         public Builder ecIdAccountIds(java.util.List<EcIdAccountIds> ecIdAccountIds) {
             this.putQueryParameter("EcIdAccountIds", ecIdAccountIds);
@@ -232,7 +232,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
             } 
 
             /**
-             * <p>The list of accounts to access. If empty, all accounts under the current entity ID are selected.</p>
+             * <p>The list of accounts to access. An empty value indicates that all accounts under the current entity ID are selected.</p>
              */
             public Builder accountIds(java.util.List<Long> accountIds) {
                 this.accountIds = accountIds;
@@ -240,7 +240,7 @@ public class QueryCostCenterShareRuleRequest extends Request {
             }
 
             /**
-             * <p>The ID of the enterprise entity.</p>
+             * <p>The enterprise entity ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

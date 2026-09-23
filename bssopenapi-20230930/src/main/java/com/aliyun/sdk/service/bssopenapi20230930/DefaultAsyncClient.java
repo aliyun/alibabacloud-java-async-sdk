@@ -117,6 +117,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AddCreditSeats  AddCreditSeatsRequest
+     * @return AddCreditSeatsResponse
+     */
+    @Override
+    public CompletableFuture<AddCreditSeatsResponse> addCreditSeats(AddCreditSeatsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddCreditSeats").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddCreditSeatsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AddCreditSeatsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of AllocateCostCenterResource  AllocateCostCenterResourceRequest
      * @return AllocateCostCenterResourceResponse
      */
@@ -174,42 +192,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CheckBudgetNameExists  CheckBudgetNameExistsRequest
-     * @return CheckBudgetNameExistsResponse
-     */
-    @Override
-    public CompletableFuture<CheckBudgetNameExistsResponse> checkBudgetNameExists(CheckBudgetNameExistsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckBudgetNameExists").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckBudgetNameExistsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CheckBudgetNameExistsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of CreateBudget  CreateBudgetRequest
-     * @return CreateBudgetResponse
-     */
-    @Override
-    public CompletableFuture<CreateBudgetResponse> createBudget(CreateBudgetRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateBudget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateBudgetResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateBudgetResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * <b>description</b> :
      * <p>Creates one or more cost centers.</p>
      * 
@@ -243,6 +225,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateCostCenterRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateCreditSeat  CreateCreditSeatRequest
+     * @return CreateCreditSeatResponse
+     */
+    @Override
+    public CompletableFuture<CreateCreditSeatResponse> createCreditSeat(CreateCreditSeatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCreditSeat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCreditSeatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateCreditSeatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -304,19 +304,19 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When calling this operation, note the following:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>A user can subscribe to one type of bill file at a time.</li>
-     * <li>Except for monthly bill PDFs, after subscription, starting from the next day, the system pushes a bill file that contains full detailed data from the beginning of the current month to date. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
+     * <li>You can subscribe to one type of bill file at a time.</li>
+     * <li>Except for monthly bill PDFs, after you subscribe, the system pushes a bill file that contains full detailed data from the beginning of the current month to the present day starting from the next day. Before the 4th of each month, the system pushes the full bill file for the entire previous billing cycle.</li>
      * <li>Monthly bill PDFs are pushed before the 4th of each month for the previous month.</li>
-     * <li>Bill files generated on a daily basis may have latency. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. Pull the full file for the previous month at the beginning of each month.<blockquote>
-     * <p>Apply for permissions as described in the documentation: <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Bill subscription</a></p>
+     * <li>Bill files generated on a daily basis may be delayed. Delayed bills are pushed the day after they are generated and may include bills from before the previous day that were delayed until the previous day. We recommend that you pull the full file for the previous month at the beginning of each month.<blockquote>
+     * <p>Apply for permissions by following the instructions in <a href="https://www.alibabacloud.com/help/en/user-center/user-guide/billing-subscription">Billing subscription</a>.</p>
      * </blockquote>
      * </li>
-     * <li>This subscription is the same feature as Expenses and Costs - Bill Subscription. Subscriptions are shared between the two.</li>
-     * <li>When subscribing to a directory under a bucket, ensure the directory name complies with the naming conventions:<ul>
+     * <li>This subscription shares the same functionality as the Expenses and Costs - Billing Subscription feature. Subscriptions are synchronized between the two.</li>
+     * <li>When you subscribe to a directory under a bucket, make sure the directory name complies with the naming conventions:<ul>
      * <li>Emojis are not allowed. Use valid UTF-8 characters.</li>
-     * <li>/ is used to separate paths and can quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
+     * <li>Use / to separate paths and quickly create subdirectories. Do not start with / or \, and do not use consecutive / characters.</li>
      * <li>Subdirectories named .. are not allowed.</li>
      * <li>The total length must be 1 to 254 characters.</li>
      * </ul>
@@ -332,7 +332,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </li>
      * </ul>
      * </li>
-     * <li>Monthly bill PDF type files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format is the same.</li>
+     * <li>Monthly bill PDF files are in .pdf format. All other file types are .csv files. When the data volume is large, the system automatically splits the exported bill into multiple files and compresses them into one or more zip files. The zip file name format remains the same.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateReportDefinition  CreateReportDefinitionRequest
@@ -353,26 +353,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteBudget  DeleteBudgetRequest
-     * @return DeleteBudgetResponse
-     */
-    @Override
-    public CompletableFuture<DeleteBudgetResponse> deleteBudget(DeleteBudgetRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteBudget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteBudgetResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteBudgetResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This operation is in canary release and is available only to specific whitelisted users. Calling this operation too frequently may cause performance issues such as response timeouts.</p>
      * 
      * @param request the request parameters of DeleteCostCenter  DeleteCostCenterRequest
      * @return DeleteCostCenterResponse
@@ -393,7 +375,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API is in canary release and is only available to whitelisted users. Excessive calls may cause performance issues such as response timeouts.</p>
+     * <p>This API is in canary release and is available only to specific whitelisted users. Calling this API too frequently may cause performance issues such as response timeouts.</p>
      * 
      * @param request the request parameters of DeleteCostCenterRule  DeleteCostCenterRuleRequest
      * @return DeleteCostCenterRuleResponse
@@ -443,42 +425,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteReportDefinitionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeBudget  DescribeBudgetRequest
-     * @return DescribeBudgetResponse
-     */
-    @Override
-    public CompletableFuture<DescribeBudgetResponse> describeBudget(DescribeBudgetRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBudget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBudgetResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeBudgetResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of DescribeBudgets  DescribeBudgetsRequest
-     * @return DescribeBudgetsResponse
-     */
-    @Override
-    public CompletableFuture<DescribeBudgetsResponse> describeBudgets(DescribeBudgetsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeBudgets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeBudgetsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DescribeBudgetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -921,7 +867,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Modify one or more financial units</p>
+     * <p>Modifies one or more financial units.</p>
      * 
      * @param request the request parameters of ModifyCostCenterRule  ModifyCostCenterRuleRequest
      * @return ModifyCostCenterRuleResponse
@@ -960,7 +906,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query cost center expense overview results for a specified billing period</p>
+     * <p>Queries the cost overview results of a financial unit for a specified billing cycle.</p>
      * 
      * @param request the request parameters of QueryCostByCostCenter  QueryCostByCostCenterRequest
      * @return QueryCostByCostCenterResponse
@@ -981,7 +927,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries a parent financial unit and its child financial units.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
      * @return QueryCostCenterResponse
@@ -1020,7 +966,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Query parent cost center and its child cost centers.</p>
+     * <p>Queries a parent cost center and its child cost centers.</p>
      * 
      * @param request the request parameters of QueryCostCenterRule  QueryCostCenterRuleRequest
      * @return QueryCostCenterRuleResponse
@@ -1062,7 +1008,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Provides the SLA compensation details list for a user. Only data from the last two months is available.</p>
+     * <p>Queries the SLA compensation details list for a user. Only data from the last two months is available.</p>
      * 
      * @param request the request parameters of QueryMonthlySlaList  QueryMonthlySlaListRequest
      * @return QueryMonthlySlaListResponse
@@ -1076,6 +1022,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryMonthlySlaListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReduceCreditSeats  ReduceCreditSeatsRequest
+     * @return ReduceCreditSeatsResponse
+     */
+    @Override
+    public CompletableFuture<ReduceCreditSeatsResponse> reduceCreditSeats(ReduceCreditSeatsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReduceCreditSeats").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReduceCreditSeatsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReduceCreditSeatsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of RenewCreditSeat  RenewCreditSeatRequest
+     * @return RenewCreditSeatResponse
+     */
+    @Override
+    public CompletableFuture<RenewCreditSeatResponse> renewCreditSeat(RenewCreditSeatRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewCreditSeat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewCreditSeatResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewCreditSeatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1156,7 +1138,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ol>
-     * <li>Call QueryMonthlySlaList to obtain the claimable months and records.</li>
+     * <li>Call QueryMonthlySlaList to retrieve the claimable months and records.</li>
      * <li>Claim by month or by record.
      * Note: Only compensation for the last two months can be claimed. Historical compensation has been automatically issued.</li>
      * </ol>
@@ -1179,18 +1161,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateBudget  UpdateBudgetRequest
-     * @return UpdateBudgetResponse
+     * @param request the request parameters of UpgradeCreditSeat  UpgradeCreditSeatRequest
+     * @return UpgradeCreditSeatResponse
      */
     @Override
-    public CompletableFuture<UpdateBudgetResponse> updateBudget(UpdateBudgetRequest request) {
+    public CompletableFuture<UpgradeCreditSeatResponse> upgradeCreditSeat(UpgradeCreditSeatRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateBudget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateBudgetResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpgradeCreditSeat").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeCreditSeatResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<UpdateBudgetResponse> future = new CompletableFuture<>();
+            CompletableFuture<UpgradeCreditSeatResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

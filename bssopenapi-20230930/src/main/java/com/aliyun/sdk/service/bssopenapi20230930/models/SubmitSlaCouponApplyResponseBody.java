@@ -106,7 +106,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Response structure metadata.</p>
+         * <p>The response struct metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -117,7 +117,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Unique request identifier used to tag a request for troubleshooting.</p>
+         * <p>The unique request ID, which is used to identify a request and troubleshoot issues.</p>
          * 
          * <strong>example:</strong>
          * <p>79EE7556-0CFD-44EB-9CD6-B3B526E3A85F</p>
@@ -128,7 +128,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total claimed amount.</p>
+         * <p>The total claimed amount.</p>
          * 
          * <strong>example:</strong>
          * <p>6.4</p>
@@ -139,7 +139,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>End time.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>Mon Apr 27 00:00:00 CST 2026</p>
@@ -150,7 +150,7 @@ public class SubmitSlaCouponApplyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Start time.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>Tue Oct 27 13:15:58 CST 2026</p>

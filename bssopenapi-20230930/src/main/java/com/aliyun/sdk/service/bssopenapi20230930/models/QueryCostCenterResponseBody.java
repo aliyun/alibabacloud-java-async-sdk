@@ -119,7 +119,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of financial unit data.</p>
+         * <p>The list of cost center data.</p>
          */
         public Builder costCenterDtoList(java.util.List<CostCenterDtoList> costCenterDtoList) {
             this.costCenterDtoList = costCenterDtoList;
@@ -318,7 +318,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the financial unit.</p>
+             * <p>The code of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>15945703968#</p>
@@ -329,7 +329,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the financial unit.</p>
+             * <p>The ID of the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>485938</p>
@@ -340,10 +340,10 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the financial unit. The name must be unique within the same account.</p>
+             * <p>The name of the cost center. The name must be unique within the same account.</p>
              * 
              * <strong>example:</strong>
-             * <p>资源组</p>
+             * <p>ResourceGroup</p>
              */
             public Builder costCenterName(String costCenterName) {
                 this.costCenterName = costCenterName;
@@ -351,7 +351,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The level of the financial unit node.</p>
+             * <p>The level of the cost center node.</p>
              * 
              * <strong>example:</strong>
              * <p>loose</p>
@@ -362,7 +362,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user who owns the financial unit.</p>
+             * <p>The ID of the user who owns the cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>1314839403940987</p>
@@ -373,7 +373,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parent financial unit.</p>
+             * <p>The ID of the parent cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>-1</p>
@@ -384,7 +384,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the previous financial unit.</p>
+             * <p>The ID of the previous cost center.</p>
              * 
              * <strong>example:</strong>
              * <p>485996</p>
@@ -395,7 +395,7 @@ public class QueryCostCenterResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority of the cost center.</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;

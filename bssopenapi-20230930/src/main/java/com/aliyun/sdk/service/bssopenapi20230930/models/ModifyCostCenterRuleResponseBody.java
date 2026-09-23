@@ -80,7 +80,7 @@ public class ModifyCostCenterRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Financial unit allocation rule ID</p>
+         * <p>The allocation rule ID of the financial unit.</p>
          * 
          * <strong>example:</strong>
          * <p>5632</p>
@@ -91,7 +91,7 @@ public class ModifyCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Response metadata</p>
+         * <p>The response struct metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -102,7 +102,7 @@ public class ModifyCostCenterRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6000EE23-274B-4E07-A697-FF2E999520A4</p>
