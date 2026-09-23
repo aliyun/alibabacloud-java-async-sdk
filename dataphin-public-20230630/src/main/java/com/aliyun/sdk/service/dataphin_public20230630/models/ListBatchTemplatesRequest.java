@@ -140,7 +140,10 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The runtime environment. Default value: PROD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -149,7 +152,7 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -159,6 +162,7 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +184,7 @@ public class ListBatchTemplatesRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -264,7 +269,10 @@ public class ListBatchTemplatesRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The template name keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据处理模板</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -272,7 +280,10 @@ public class ListBatchTemplatesRequest extends Request {
             }
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -280,7 +291,10 @@ public class ListBatchTemplatesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

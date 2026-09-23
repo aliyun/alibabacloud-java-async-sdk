@@ -119,7 +119,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paginated result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -498,7 +510,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * BelongToBizEntityIdList.
+             * <p>The list of parent business process IDs. This parameter is valid only when the entity type is business process.</p>
              */
             public Builder belongToBizEntityIdList(java.util.List<Long> belongToBizEntityIdList) {
                 this.belongToBizEntityIdList = belongToBizEntityIdList;
@@ -506,7 +518,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The ID of the business unit to which the business process belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6798087749072704</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -514,7 +529,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * ChildBizEntityIdList.
+             * <p>The list of child business object IDs. This parameter is valid only when the entity type is business object.</p>
              */
             public Builder childBizEntityIdList(java.util.List<Long> childBizEntityIdList) {
                 this.childBizEntityIdList = childBizEntityIdList;
@@ -522,7 +537,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDomainId.
+             * <p>The ID of the data domain to which the business process belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20101011</p>
              */
             public Builder dataDomainId(Long dataDomainId) {
                 this.dataDomainId = dataDomainId;
@@ -530,7 +548,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -538,7 +559,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务活动测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -546,7 +570,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the business entity was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -554,7 +581,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the business entity was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -562,7 +592,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * HasChildBizEntity.
+             * <p>Indicates whether the entity is a child business object.</p>
              */
             public Builder hasChildBizEntity(Boolean hasChildBizEntity) {
                 this.hasChildBizEntity = hasChildBizEntity;
@@ -570,7 +600,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12121111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -578,7 +611,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The ID of the user who last modified the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -586,7 +622,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The name of the user who last modified the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -594,7 +633,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * LevelSubBizObject.
+             * <p>Indicates whether the entity is a sublevel of a hierarchy dimension.</p>
              */
             public Builder levelSubBizObject(Boolean levelSubBizObject) {
                 this.levelSubBizObject = levelSubBizObject;
@@ -602,7 +641,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_process_code_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -610,7 +652,16 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * <p>The online status of the business entity. Valid values: </p>
+             * <ul>
+             * <li>SUBMITTED: not online.</li>
+             * <li>APPROVING: pending approval.</li>
+             * <li>PUBLISHED: online.</li>
+             * <li>REJECT: failed to go online.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder onlineStatus(String onlineStatus) {
                 this.onlineStatus = onlineStatus;
@@ -618,7 +669,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The ID of the business entity owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -626,7 +680,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The ID of the business entity owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -634,7 +691,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * RefBizEntityIdList.
+             * <p>The list of associated central business entity IDs.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -642,7 +699,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * RefTableCount.
+             * <p>The number of associated logical tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refTableCount(Integer refTableCount) {
                 this.refTableCount = refTableCount;
@@ -650,7 +710,18 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the business entity. Valid values:</p>
+             * <ul>
+             * <li>DRAFT: draft or not online.</li>
+             * <li>SUBMITTING: being submitted.</li>
+             * <li>SUBMITTED: submitted.</li>
+             * <li>DEVELOPING: under development.</li>
+             * <li>PUBLISHING: being published.</li>
+             * <li>PUBLISHED: published.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -658,7 +729,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The subtype of the business entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -666,7 +740,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * SuffixBizEntityIdList.
+             * <p>The list of subsequent business process IDs. This parameter is valid only when the entity type is business process.</p>
              */
             public Builder suffixBizEntityIdList(java.util.List<Long> suffixBizEntityIdList) {
                 this.suffixBizEntityIdList = suffixBizEntityIdList;
@@ -674,7 +748,14 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the business entity. Valid values:</p>
+             * <ul>
+             * <li>BIZ_OBJECT: business object.</li>
+             * <li>BIZ_PROCESS: business process.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BIZ_OBJECT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -741,7 +822,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             } 
 
             /**
-             * BizEntityList.
+             * <p>The list of business entities.</p>
              */
             public Builder bizEntityList(java.util.List<BizEntityList> bizEntityList) {
                 this.bizEntityList = bizEntityList;
@@ -749,7 +830,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>66</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -106,7 +106,10 @@ public class DeleteRegisterLineageResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class DeleteRegisterLineageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class DeleteRegisterLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,7 @@ public class DeleteRegisterLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

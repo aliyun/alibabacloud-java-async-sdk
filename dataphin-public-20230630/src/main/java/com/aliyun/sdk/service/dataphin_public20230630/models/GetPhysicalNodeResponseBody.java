@@ -119,7 +119,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeInfo.
+         * <p>The node details.</p>
          */
         public Builder nodeInfo(NodeInfo nodeInfo) {
             this.nodeInfo = nodeInfo;
@@ -151,7 +160,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101312</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +251,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +321,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101312</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +332,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +402,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101312</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -383,7 +413,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -450,7 +483,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102132</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -458,7 +494,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -746,7 +785,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717343597000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -754,7 +796,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The node creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -762,7 +804,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression used to calculate the scheduling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 10 * * *</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -770,7 +815,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -778,7 +826,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceSchema.
+             * <p>The data source schema. This parameter takes effect only for data source types that require a schema, such as Oracle. If set to &quot;default&quot;, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
@@ -786,7 +837,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The node description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -794,7 +848,15 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The node source. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: code development.</li>
+             * <li>BLACK_BOX: modeling development.</li>
+             * <li>PIPELINE: pipeline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -802,7 +864,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_232132</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -810,7 +875,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The time of the last modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717343597000</p>
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -818,7 +886,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user who last modified the node.</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -826,7 +894,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>节点名称</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -834,7 +905,18 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The node subtype. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE_SQL</li>
+             * <li>HIVE_SQL</li>
+             * <li>SHELL</li>
+             * <li>PYTHON</li>
+             * <li>ONE_SERVICE_SQL</li>
+             * <li>DATABASE_SQL and others.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHELL</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -842,7 +924,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * OutputNameList.
+             * <p>The list of output names.</p>
              */
             public Builder outputNameList(java.util.List<String> outputNameList) {
                 this.outputNameList = outputNameList;
@@ -850,7 +932,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The node owner.</p>
              */
             public Builder owner(Owner owner) {
                 this.owner = owner;
@@ -858,7 +940,17 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The scheduling priority. Valid values:</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MIDDLE</p>
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -866,7 +958,7 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectInfo.
+             * <p>The project to which the node belongs.</p>
              */
             public Builder projectInfo(ProjectInfo projectInfo) {
                 this.projectInfo = projectInfo;
@@ -874,7 +966,18 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * <p>The scheduling cycle type. Valid values:</p>
+             * <ul>
+             * <li>MINUTELY</li>
+             * <li>HOURLY</li>
+             * <li>DAILY</li>
+             * <li>WEEKLY</li>
+             * <li>MONTHLY</li>
+             * <li>QUARTERLY.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -882,7 +985,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The scheduling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -890,7 +996,10 @@ public class GetPhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerConfig.
+             * <p>The trigger configuration, which is used to implement field-level dependencies on logical tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;expression&quot;:&quot;any_success&quot;}</p>
              */
             public Builder triggerConfig(String triggerConfig) {
                 this.triggerConfig = triggerConfig;

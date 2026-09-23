@@ -112,6 +112,7 @@ public class UpdateDataServiceAppGroupRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataServiceAppGroupRequest extends Request {
         }
 
         /**
+         * <p>The update command for the data service application group.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateDataServiceAppGroupRequest extends Request {
             } 
 
             /**
+             * <p>The group ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class UpdateDataServiceAppGroupRequest extends Request {
             }
 
             /**
+             * <p>The group name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

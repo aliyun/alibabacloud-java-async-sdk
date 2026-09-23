@@ -119,7 +119,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -579,7 +588,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ActualIdentifyRate.
+             * <p>The actual match rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder actualIdentifyRate(Double actualIdentifyRate) {
                 this.actualIdentifyRate = actualIdentifyRate;
@@ -587,7 +599,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -595,7 +610,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitDisplayName.
+             * <p>The display name of the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_abc</p>
              */
             public Builder bizUnitDisplayName(String bizUnitDisplayName) {
                 this.bizUnitDisplayName = bizUnitDisplayName;
@@ -603,7 +621,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The ID of the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -611,7 +632,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The name of the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -619,7 +643,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyAbbreviation.
+             * <p>The abbreviation of the classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classifyAbbreviation(String classifyAbbreviation) {
                 this.classifyAbbreviation = classifyAbbreviation;
@@ -627,7 +654,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyId.
+             * <p>The ID of the classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classifyId(Long classifyId) {
                 this.classifyId = classifyId;
@@ -635,7 +665,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyName.
+             * <p>The name of the classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classifyName(String classifyName) {
                 this.classifyName = classifyName;
@@ -643,7 +676,14 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyStatus.
+             * <p>The status of the classification. Valid values:</p>
+             * <ul>
+             * <li>ENABLE: Enabled.</li>
+             * <li>DISABLE: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder classifyStatus(String classifyStatus) {
                 this.classifyStatus = classifyStatus;
@@ -651,7 +691,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder datasourceId(Long datasourceId) {
                 this.datasourceId = datasourceId;
@@ -659,7 +702,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -667,7 +713,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldDescription.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fieldDescription(String fieldDescription) {
                 this.fieldDescription = fieldDescription;
@@ -675,7 +724,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldId.
+             * <p>The ID of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test.col1</p>
              */
             public Builder fieldId(String fieldId) {
                 this.fieldId = fieldId;
@@ -683,7 +735,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -691,7 +746,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the identification record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -699,7 +757,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IsBetterMatch.
+             * <p>Indicates whether this is a better match.</p>
              */
             public Builder isBetterMatch(Boolean isBetterMatch) {
                 this.isBetterMatch = isBetterMatch;
@@ -707,7 +765,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IsCustomIdentify.
+             * <p>Indicates whether a custom tagging rule is used.</p>
              */
             public Builder isCustomIdentify(Boolean isCustomIdentify) {
                 this.isCustomIdentify = isCustomIdentify;
@@ -715,7 +773,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IsLocked.
+             * <p>Indicates whether the record is locked.</p>
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -723,7 +781,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelAbbreviation.
+             * <p>The abbreviated name of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder levelAbbreviation(String levelAbbreviation) {
                 this.levelAbbreviation = levelAbbreviation;
@@ -731,7 +792,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelIndex.
+             * <p>The level index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelIndex(Long levelIndex) {
                 this.levelIndex = levelIndex;
@@ -739,7 +803,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * <p>The name of the level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;
@@ -747,7 +814,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDisplayName.
+             * <p>The display name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_abc</p>
              */
             public Builder projectDisplayName(String projectDisplayName) {
                 this.projectDisplayName = projectDisplayName;
@@ -755,7 +825,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -763,7 +836,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -771,7 +847,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableDescription.
+             * <p>The description of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableDescription(String tableDescription) {
                 this.tableDescription = tableDescription;
@@ -779,7 +858,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableEnv.
+             * <p>The table environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder tableEnv(String tableEnv) {
                 this.tableEnv = tableEnv;
@@ -787,7 +869,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * <p>The ID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -795,7 +880,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -803,7 +891,20 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * <p>The type of the table. Valid values:</p>
+             * <ul>
+             * <li>LOGIC_TABLE: logical table.</li>
+             * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
+             * <li>LOGIC_FACT_TABLE: logical fact table.</li>
+             * <li>LOGIC_SUM_TABLE: logical summary table.</li>
+             * <li>LOGIC_ODM_SOURCE: source table.</li>
+             * <li>LOGIC_LABEL_TABLE: logical label table.</li>
+             * <li>PHYSICAL_TABLE: physical table.</li>
+             * <li>REAL_TIME_LOGIC_TABLE: real-time configured logical table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LOGIC_TABLE</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -870,7 +971,7 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * IdentifyRecordList.
+             * <p>The list of identification records.</p>
              */
             public Builder identifyRecordList(java.util.List<IdentifyRecordList> identifyRecordList) {
                 this.identifyRecordList = identifyRecordList;
@@ -878,7 +979,10 @@ public class ListSecurityIdentifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

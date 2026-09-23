@@ -127,6 +127,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the user group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class UpdateUserGroupSwitchRequest extends Request {
         }
 
         /**
+         * <p>The user group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

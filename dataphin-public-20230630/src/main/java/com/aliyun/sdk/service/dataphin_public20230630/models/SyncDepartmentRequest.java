@@ -112,6 +112,7 @@ public class SyncDepartmentRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class SyncDepartmentRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder syncDepartmentCommand(SyncDepartmentCommand syncDepartmentCommand) {
@@ -217,6 +219,7 @@ public class SyncDepartmentRequest extends Request {
             } 
 
             /**
+             * <p>The department ID (unique identifier of the department).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -228,6 +231,7 @@ public class SyncDepartmentRequest extends Request {
             }
 
             /**
+             * <p>The display name of the department.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -239,7 +243,10 @@ public class SyncDepartmentRequest extends Request {
             }
 
             /**
-             * ParentDepartmentId.
+             * <p>The parent department ID (unique identifier of the parent department). Set to null if no parent department exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder parentDepartmentId(String parentDepartmentId) {
                 this.parentDepartmentId = parentDepartmentId;
@@ -294,6 +301,7 @@ public class SyncDepartmentRequest extends Request {
             } 
 
             /**
+             * <p>The department list (full organization tree).</p>
              * <p>This parameter is required.</p>
              */
             public Builder departmentList(java.util.List<DepartmentList> departmentList) {

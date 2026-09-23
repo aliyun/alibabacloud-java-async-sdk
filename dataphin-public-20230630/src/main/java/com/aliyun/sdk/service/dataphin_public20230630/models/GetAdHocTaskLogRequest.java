@@ -157,6 +157,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
+         * <p>The offset for querying logs. Increment the value based on the returned result. Set the initial value to 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -169,6 +170,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +205,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
+         * <p>The subtask ID. The value starts from 0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,6 +218,7 @@ public class GetAdHocTaskLogRequest extends Request {
         }
 
         /**
+         * <p>The task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

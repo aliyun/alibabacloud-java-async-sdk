@@ -119,7 +119,10 @@ public class GetUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * <p>The list of users.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;
@@ -446,7 +461,10 @@ public class GetUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -454,7 +472,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DingNumber.
+             * <p>The DingTalk number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123@dingding</p>
              */
             public Builder dingNumber(String dingNumber) {
                 this.dingNumber = dingNumber;
@@ -462,7 +483,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -470,7 +494,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayNameWithoutStatus.
+             * <p>The display name of the user without status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder displayNameWithoutStatus(String displayNameWithoutStatus) {
                 this.displayNameWithoutStatus = displayNameWithoutStatus;
@@ -478,7 +505,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EnableWhiteIp.
+             * <p>Indicates whether the IP whitelist is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableWhiteIp(String enableWhiteIp) {
                 this.enableWhiteIp = enableWhiteIp;
@@ -486,7 +516,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FeiShuRobot.
+             * <p>The Lark chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder feiShuRobot(String feiShuRobot) {
                 this.feiShuRobot = feiShuRobot;
@@ -494,7 +527,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717343597000</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -502,7 +538,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717343597000</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -510,7 +549,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1233121</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -518,7 +560,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Mail.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -526,7 +571,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1388888888</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -534,7 +582,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +593,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -550,7 +604,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the primary account to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231231</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -558,7 +615,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * RealName.
+             * <p>The real name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder realName(String realName) {
                 this.realName = realName;
@@ -566,7 +626,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * <p>The source ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -574,7 +637,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The source type of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -582,7 +648,10 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WeChatRobot.
+             * <p>The WeCom chatbot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder weChatRobot(String weChatRobot) {
                 this.weChatRobot = weChatRobot;
@@ -590,7 +659,12 @@ public class GetUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteIp.
+             * <p>The IP whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li></li>
+             * </ul>
              */
             public Builder whiteIp(String whiteIp) {
                 this.whiteIp = whiteIp;

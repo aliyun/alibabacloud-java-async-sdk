@@ -119,7 +119,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212131</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -246,7 +264,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +275,15 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The authorized account type. Valid values:</p>
+             * <ul>
+             * <li>PERSONAL: personal account.</li>
+             * <li>PRODUCE: production account.</li>
+             * <li>USER_GROUP: user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PERSONAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -321,7 +350,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712000000000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -329,7 +361,17 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The validity period type. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM: custom</li>
+             * <li>LONG_TERM: long-term validity</li>
+             * <li>DAYS_30: valid for 30 days</li>
+             * <li>DAYS_90: valid for 90 days</li>
+             * <li>DAYS_180: valid for 180 days</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -422,7 +464,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -430,7 +475,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier. Valid values:</p>
+             * <ul>
+             * <li>DEV: development.</li>
+             * <li>PROD: production.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -449,7 +501,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -542,7 +597,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -550,7 +608,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier. Valid values:</p>
+             * <ul>
+             * <li>DEV: development.</li>
+             * <li>PROD: production.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -558,10 +623,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id</p>
+             * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>121323</p>
+             * <p>1123131</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -569,7 +634,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -701,7 +769,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitInfo.
+             * <p>The business unit.</p>
              */
             public Builder bizUnitInfo(BizUnitInfo bizUnitInfo) {
                 this.bizUnitInfo = bizUnitInfo;
@@ -709,7 +777,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb1</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -717,7 +788,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The resource environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development.</li>
+             * <li>PROD: production.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -725,10 +803,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id</p>
+             * <p>The permission resource ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>121323</p>
+             * <p>a.tb1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -736,7 +814,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The permission resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tb1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -744,7 +825,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectInfo.
+             * <p>The project.</p>
              */
             public Builder projectInfo(ProjectInfo projectInfo) {
                 this.projectInfo = projectInfo;
@@ -752,7 +833,19 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li>PHYSICAL_TABLE: physical table.</li>
+             * <li>PHYSICAL_VIEW: physical view.</li>
+             * <li>LOGICAL_TABLE: fact logical table.</li>
+             * <li>LOGICAL_VIEW: fact logical view.</li>
+             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+             * <li>REALTIME_MIRROR_TABLE: real-time meta table.</li>
+             * <li>DATASOURCE: data source.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -832,10 +925,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Id</p>
+             * <p>The account ID. For a personal account, this is the Dataphin-side userId. For a production account, this is the UserId obtained through the GetProjectProduceUser operation. For a user group, this is the user group ID obtained through the ListUserGroup operation.</p>
              * 
              * <strong>example:</strong>
-             * <p>121323</p>
+             * <p>1212131</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -843,7 +936,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -851,7 +947,15 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The authorized account type. Valid values:</p>
+             * <ul>
+             * <li>PERSONAL: personal account.</li>
+             * <li>PRODUCE: production account.</li>
+             * <li>USER_GROUP: user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PERSONAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1009,7 +1113,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Account.
+             * <p>The operator.</p>
              */
             public Builder account(Account account) {
                 this.account = account;
@@ -1017,7 +1121,15 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * AuthScope.
+             * <p>The authorization scope of the table. Valid values:</p>
+             * <ul>
+             * <li>selectTable: specified table</li>
+             * <li>projectAllTable: all tables in the project</li>
+             * <li>bizUnitAllLogicTable: all logical tables in the business unit</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>selectTable</p>
              */
             public Builder authScope(String authScope) {
                 this.authScope = authScope;
@@ -1025,7 +1137,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperateId.
+             * <p>The operation ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123133</p>
              */
             public Builder operateId(Long operateId) {
                 this.operateId = operateId;
@@ -1033,7 +1148,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperateTime.
+             * <p>The operation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710012121000</p>
              */
             public Builder operateTime(Long operateTime) {
                 this.operateTime = operateTime;
@@ -1041,7 +1159,14 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperateType.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>APPLY: apply.</li>
+             * <li>GRANT: grant.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APPLY</p>
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -1049,7 +1174,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The validity period settings.</p>
              */
             public Builder period(Period period) {
                 this.period = period;
@@ -1057,7 +1182,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxTest</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1065,7 +1193,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInfo.
+             * <p>The permission resource.</p>
              */
             public Builder resourceInfo(ResourceInfo resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -1073,7 +1201,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * TargetAccount.
+             * <p>The authorized object.</p>
              */
             public Builder targetAccount(TargetAccount targetAccount) {
                 this.targetAccount = targetAccount;
@@ -1140,7 +1268,7 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The paged records.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1148,7 +1276,10 @@ public class ListResourcePermissionOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

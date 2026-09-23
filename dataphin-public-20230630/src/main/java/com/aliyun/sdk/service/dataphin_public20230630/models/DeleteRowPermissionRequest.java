@@ -112,6 +112,7 @@ public class DeleteRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteRowPermissionCommand(DeleteRowPermissionCommand deleteRowPermissionCommand) {
@@ -122,6 +123,7 @@ public class DeleteRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class DeleteRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The row-level permission ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -126,7 +126,14 @@ public class GetPhysicalNodeByOutputNameRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Environment identifier</p>
+         * <ul>
+         * <li>DEV: Development environment</li>
+         * <li>PROD (default): Production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class GetPhysicalNodeByOutputNameRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class GetPhysicalNodeByOutputNameRequest extends Request {
         }
 
         /**
+         * <p>Node output name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

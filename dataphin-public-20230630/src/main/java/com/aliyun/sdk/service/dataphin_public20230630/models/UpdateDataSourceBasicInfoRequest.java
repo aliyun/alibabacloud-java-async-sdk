@@ -112,6 +112,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
         }
 
         /**
+         * <p>The basic information to edit for the data source.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -218,6 +220,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
             } 
 
             /**
+             * <p>The data source description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
             }
 
             /**
+             * <p>The data source ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,7 +244,11 @@ public class UpdateDataSourceBasicInfoRequest extends Request {
             }
 
             /**
+             * <p>The data source name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;

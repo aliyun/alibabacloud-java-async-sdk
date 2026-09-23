@@ -145,7 +145,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -153,7 +156,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +167,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The page size. Valid values: 1 to 50. Default value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -169,7 +178,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +189,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>Indicates whether a token for the next query exists. If NextToken is empty, no more results are available. If NextToken is returned, the value indicates the token used to start the next query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAARbaCuN6hiD08qrLdwJ9Fh3adOhYj269roQctwr/Eik+</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -185,7 +200,7 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -204,7 +219,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -374,7 +392,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the cluster was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -382,7 +403,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012211</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -390,7 +414,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -398,7 +425,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Des.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder des(String des) {
                 this.des = des;
@@ -406,7 +436,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102311</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -414,7 +447,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user who last modified the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012211</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -422,7 +458,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierName.
+             * <p>The user who last modified the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John Doe</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -430,7 +469,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the cluster was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -438,7 +480,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,7 +491,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TypeVersion.
+             * <p>The cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDH6</p>
              */
             public Builder typeVersion(String typeVersion) {
                 this.typeVersion = typeVersion;
@@ -513,7 +561,7 @@ public class ListComputeClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterList.
+             * <p>The paged list of clusters.</p>
              */
             public Builder clusterList(java.util.List<ClusterList> clusterList) {
                 this.clusterList = clusterList;
@@ -521,7 +569,10 @@ public class ListComputeClustersResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -112,6 +112,7 @@ public class ListCatalogAssetsRequest extends Request {
         }
 
         /**
+         * <p>The query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listCatalogAssetsQuery(ListCatalogAssetsQuery listCatalogAssetsQuery) {
@@ -122,6 +123,7 @@ public class ListCatalogAssetsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListCatalogAssetsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -267,7 +272,17 @@ public class ListCatalogAssetsRequest extends Request {
             } 
 
             /**
-             * AssetType.
+             * <p>The asset type. Default value: TABLE. Valid values:</p>
+             * <ul>
+             * <li>TABLE: tables, including views and materialized views.</li>
+             * <li>INDEX: technical metrics.</li>
+             * <li>BIZ_INDEX: business metrics.</li>
+             * <li>API</li>
+             * <li>PAGE: dashboards.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -275,7 +290,10 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword. Used when queryMode is set to ASSET_SEARCH. Supports keyword matching against the asset full name, asset name, asset display name, and asset description. If not specified, all assets are returned by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -283,7 +301,10 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The asset name. Used when queryMode is set to EXACT_MATCH. If not specified, all assets are returned by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -291,7 +312,10 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -299,7 +323,10 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The page size. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -307,7 +334,14 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * QueryMode.
+             * <p>The query type. Determines whether to use name for exact match or keyword for fuzzy search. Default value: EXACT_MATCH. Valid values:</p>
+             * <ul>
+             * <li>EXACT_MATCH: exact match.</li>
+             * <li>ASSET_SEARCH: fuzzy search.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXACT_MATCH</p>
              */
             public Builder queryMode(String queryMode) {
                 this.queryMode = queryMode;
@@ -315,7 +349,7 @@ public class ListCatalogAssetsRequest extends Request {
             }
 
             /**
-             * ShelveDirectoryIds.
+             * <p>The list of folder IDs to which the assets belong. Multiple folders are matched with OR logic. Only the specified folders are matched, and subfolders are not included.</p>
              */
             public Builder shelveDirectoryIds(java.util.List<Long> shelveDirectoryIds) {
                 this.shelveDirectoryIds = shelveDirectoryIds;

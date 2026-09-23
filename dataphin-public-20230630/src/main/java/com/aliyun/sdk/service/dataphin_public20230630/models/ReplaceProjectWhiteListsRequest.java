@@ -127,6 +127,7 @@ public class ReplaceProjectWhiteListsRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class ReplaceProjectWhiteListsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class ReplaceProjectWhiteListsRequest extends Request {
         }
 
         /**
+         * <p>The edit command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder replaceCommand(ReplaceCommand replaceCommand) {
@@ -244,7 +247,10 @@ public class ReplaceProjectWhiteListsRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,6 +270,7 @@ public class ReplaceProjectWhiteListsRequest extends Request {
             }
 
             /**
+             * <p>The port.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -322,6 +329,7 @@ public class ReplaceProjectWhiteListsRequest extends Request {
             } 
 
             /**
+             * <p>The project whitelist.</p>
              * <p>This parameter is required.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {

@@ -119,7 +119,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend response exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityLevelInfo.
+         * <p>The data classification level details.</p>
          */
         public Builder securityLevelInfo(SecurityLevelInfo securityLevelInfo) {
             this.securityLevelInfo = securityLevelInfo;
@@ -162,7 +171,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +276,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             } 
 
             /**
-             * Abbreviation.
+             * <p>The abbreviated name of the data classification level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder abbreviation(String abbreviation) {
                 this.abbreviation = abbreviation;
@@ -275,7 +287,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the data classification level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -283,7 +298,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sensitivity level of the data classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -291,7 +309,10 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the data classification level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +320,7 @@ public class GetSecurityLevelResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedClassifyIdList.
+             * <p>The list of data categorization IDs associated with the current data classification level.</p>
              */
             public Builder relatedClassifyIdList(java.util.List<Long> relatedClassifyIdList) {
                 this.relatedClassifyIdList = relatedClassifyIdList;

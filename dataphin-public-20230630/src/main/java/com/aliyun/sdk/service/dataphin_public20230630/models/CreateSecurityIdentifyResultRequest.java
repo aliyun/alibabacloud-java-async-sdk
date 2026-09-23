@@ -112,6 +112,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
         }
 
         /**
+         * <p>The create request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,6 +300,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             } 
 
             /**
+             * <p>The classification ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -309,6 +312,11 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
+             * <p>The deduplication strategy. Valid values:</p>
+             * <ul>
+             * <li>COVER_ALL: overwrites all online tags.</li>
+             * <li>COVER_UNLOCKED: overwrites only unlocked online tags.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,7 +328,10 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
-             * DatasourceEnv.
+             * <p>The datasource environment identifier. This parameter is required only for datasource tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder datasourceEnv(String datasourceEnv) {
                 this.datasourceEnv = datasourceEnv;
@@ -328,7 +339,10 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
-             * DatasourceName.
+             * <p>The datasource name. This parameter is required only for datasource tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -336,7 +350,15 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
-             * Enable.
+             * <p>Specifies whether to enable the result. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.
+             * Default value: true.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -344,6 +366,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
+             * <p>The field name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -355,7 +378,10 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
-             * IsDatasourceTable.
+             * <p>Specifies whether the table is a datasource table. Default value: false (treated as a Dataphin table).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDatasourceTable(Boolean isDatasourceTable) {
                 this.isDatasourceTable = isDatasourceTable;
@@ -363,6 +389,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
+             * <p>The table catalog. For a datasource table, specify the database or schema name. For a Dataphin physical table, specify the project name in English. For a Dataphin logical table, specify the business unit name in English.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -374,6 +401,7 @@ public class CreateSecurityIdentifyResultRequest extends Request {
             }
 
             /**
+             * <p>The table name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

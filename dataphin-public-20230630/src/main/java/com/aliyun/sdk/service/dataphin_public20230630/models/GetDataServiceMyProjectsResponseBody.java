@@ -119,7 +119,10 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectList.
+         * <p>The list of data service projects.</p>
          */
         public Builder projectList(java.util.List<ProjectList> projectList) {
             this.projectList = projectList;
@@ -162,7 +171,7 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectId.
+             * <p>The data service project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102011</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -249,7 +261,10 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -257,7 +272,17 @@ public class GetDataServiceMyProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role. Valid values:</p>
+             * <ul>
+             * <li>1: super administrator</li>
+             * <li>2: developer</li>
+             * <li>3: application member</li>
+             * <li>4: service project administrator</li>
+             * <li>5: O&amp;M engineer.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder role(Integer role) {
                 this.role = role;

@@ -127,6 +127,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
+         * <p>Search conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -137,6 +138,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
         }
 
         /**
+         * <p>Data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -296,6 +299,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             } 
 
             /**
+             * <p>End time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +311,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>Search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -315,7 +322,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * OrderColumn.
+             * <p>Sort column. Valid values: CALL_COUNT (call count), ERROR_COUNT (error count), ERROR_RATE (error rate), AVG_RESPONSE_TIME (average response time), and OFFLINE_RATE (offline percentage). Default value: CALL_COUNT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CALL_COUNT</p>
              */
             public Builder orderColumn(String orderColumn) {
                 this.orderColumn = orderColumn;
@@ -323,7 +333,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>Sort order. Valid values: 1 (ascending) and 2 (descending). Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -331,7 +344,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>Page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -339,7 +355,10 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>Number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -347,6 +366,7 @@ public class ListDataServiceApiCallStatisticsRequest extends Request {
             }
 
             /**
+             * <p>Start time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

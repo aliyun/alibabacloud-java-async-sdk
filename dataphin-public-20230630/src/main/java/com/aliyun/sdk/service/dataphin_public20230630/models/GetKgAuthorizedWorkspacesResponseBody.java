@@ -119,7 +119,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the workspace role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WORKSPACE_ADMIN</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -236,7 +248,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the workspace role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Storage management</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -368,7 +383,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description of the knowledge graph workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -376,7 +394,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time of the knowledge graph workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-25 12:34:56</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -384,7 +405,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * LastPublishTime.
+             * <p>The latest publish time of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-25 12:34:56</p>
              */
             public Builder lastPublishTime(String lastPublishTime) {
                 this.lastPublishTime = lastPublishTime;
@@ -392,7 +416,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * LastPublishVersion.
+             * <p>The latest publish version number of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder lastPublishVersion(Integer lastPublishVersion) {
                 this.lastPublishVersion = lastPublishVersion;
@@ -400,7 +427,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the knowledge graph workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -408,7 +438,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * RoleList.
+             * <p>The list of roles assigned to the specified user in the workspace. This is an empty list if the user is not a member of the workspace.</p>
              */
             public Builder roleList(java.util.List<RoleList> roleList) {
                 this.roleList = roleList;
@@ -416,7 +446,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the knowledge graph workspace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc1011</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -483,7 +516,10 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             } 
 
             /**
-             * TotalCount.
+             * <p>The total number of knowledge graph workspaces that the user has permissions on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -491,7 +527,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceList.
+             * <p>The list of knowledge graph workspaces that the user has permissions on.</p>
              */
             public Builder workspaceList(java.util.List<WorkspaceList> workspaceList) {
                 this.workspaceList = workspaceList;

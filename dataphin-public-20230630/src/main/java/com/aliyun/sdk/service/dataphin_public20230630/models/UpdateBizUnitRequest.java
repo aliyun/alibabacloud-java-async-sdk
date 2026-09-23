@@ -112,6 +112,7 @@ public class UpdateBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The update request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -190,6 +192,7 @@ public class UpdateBizUnitRequest extends Request {
             } 
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -317,6 +320,7 @@ public class UpdateBizUnitRequest extends Request {
             } 
 
             /**
+             * <p>The domain architects.</p>
              * <p>This parameter is required.</p>
              */
             public Builder bizUnitAccountList(java.util.List<BizUnitAccountList> bizUnitAccountList) {
@@ -325,6 +329,7 @@ public class UpdateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The data domain ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -336,7 +341,10 @@ public class UpdateBizUnitRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -344,6 +352,7 @@ public class UpdateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The display name of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -355,6 +364,7 @@ public class UpdateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The preset icon. For more information, refer to the create data domain operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -366,6 +376,7 @@ public class UpdateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The data domain code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

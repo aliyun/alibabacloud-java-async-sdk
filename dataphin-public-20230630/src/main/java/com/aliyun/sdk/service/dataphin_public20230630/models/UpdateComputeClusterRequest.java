@@ -127,6 +127,7 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder clusterConfig(ClusterConfig clusterConfig) {
@@ -137,6 +138,7 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +151,7 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +164,10 @@ public class UpdateComputeClusterRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -242,7 +248,7 @@ public class UpdateComputeClusterRequest extends Request {
             } 
 
             /**
-             * <p>管控模式。CREATE_COMPUTE_SOURCE：有创建计算源权限即可使用；USER_DEFINE：仅白名单用户/用户组可用</p>
+             * <p>The control mode.</p>
              * 
              * <strong>example:</strong>
              * <p>CREATE_COMPUTE_SOURCE</p>
@@ -253,7 +259,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The list of whitelist user group IDs.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -261,7 +267,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of whitelist user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -330,6 +336,7 @@ public class UpdateComputeClusterRequest extends Request {
             } 
 
             /**
+             * <p>The configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,6 +348,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
+             * <p>The value of the configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -479,7 +487,7 @@ public class UpdateComputeClusterRequest extends Request {
             } 
 
             /**
-             * ClusterAdmins.
+             * <p>The list of cluster administrator IDs.</p>
              */
             public Builder clusterAdmins(java.util.List<String> clusterAdmins) {
                 this.clusterAdmins = clusterAdmins;
@@ -487,7 +495,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * ClusterSafetyControl.
+             * <p>The cluster security control configuration.</p>
              */
             public Builder clusterSafetyControl(ClusterSafetyControl clusterSafetyControl) {
                 this.clusterSafetyControl = clusterSafetyControl;
@@ -495,6 +503,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configList(java.util.List<ConfigList> configList) {
@@ -503,7 +512,10 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * Des.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder des(String des) {
                 this.des = des;
@@ -511,6 +523,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
+             * <p>The cluster name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -522,6 +535,7 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
+             * <p>The cluster type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -533,7 +547,10 @@ public class UpdateComputeClusterRequest extends Request {
             }
 
             /**
-             * TypeVersion.
+             * <p>The cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDH6</p>
              */
             public Builder typeVersion(String typeVersion) {
                 this.typeVersion = typeVersion;

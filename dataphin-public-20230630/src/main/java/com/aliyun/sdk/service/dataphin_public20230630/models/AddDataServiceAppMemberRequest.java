@@ -112,6 +112,7 @@ public class AddDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>The command to add a regular member to a data service application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -122,6 +123,7 @@ public class AddDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class AddDataServiceAppMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -204,6 +209,7 @@ public class AddDataServiceAppMemberRequest extends Request {
             } 
 
             /**
+             * <p>The authorization expiration time.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,7 @@ public class AddDataServiceAppMemberRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +294,7 @@ public class AddDataServiceAppMemberRequest extends Request {
             } 
 
             /**
+             * <p>The application ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -298,6 +306,7 @@ public class AddDataServiceAppMemberRequest extends Request {
             }
 
             /**
+             * <p>The list of members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {

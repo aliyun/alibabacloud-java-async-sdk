@@ -119,7 +119,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * ColumnDesc.
+             * <p>The description of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务ID</p>
              */
             public Builder columnDesc(String columnDesc) {
                 this.columnDesc = columnDesc;
@@ -246,7 +261,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnName.
+             * <p>The name of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -254,7 +272,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnType.
+             * <p>The type of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -360,7 +381,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * MappingColumnName.
+             * <p>The name of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_id</p>
              */
             public Builder mappingColumnName(String mappingColumnName) {
                 this.mappingColumnName = mappingColumnName;
@@ -368,7 +392,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The expression operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30008888</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -376,7 +403,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * SubConditions.
+             * <p>The sub-expressions.</p>
              */
             public Builder subConditions(java.util.List<?> subConditions) {
                 this.subConditions = subConditions;
@@ -384,7 +411,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The expression type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXPRESSION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -392,7 +422,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The operation values of the expression.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -446,7 +476,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the account bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30008888</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -513,7 +546,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The type of the account bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PERSONAL</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -521,7 +557,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Accounts.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -653,7 +689,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * Expressions.
+             * <p>The rule expressions.</p>
              */
             public Builder expressions(java.util.List<Expressions> expressions) {
                 this.expressions = expressions;
@@ -661,7 +697,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -669,7 +708,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * IsDelete.
+             * <p>Indicates whether the rule is deleted.</p>
              */
             public Builder isDelete(Boolean isDelete) {
                 this.isDelete = isDelete;
@@ -677,7 +716,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>管控ID 100以内数据</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -685,7 +727,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * ScopeType.
+             * <p>The scope type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT_COLUMN</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;
@@ -693,7 +738,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -701,7 +749,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * UserMappingList.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder userMappingList(java.util.List<UserMappingList> userMappingList) {
                 this.userMappingList = userMappingList;
@@ -781,7 +829,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * ColumnName.
+             * <p>The table field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_id</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -789,7 +840,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumnName.
+             * <p>The name of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>business_id</p>
              */
             public Builder mappingColumnName(String mappingColumnName) {
                 this.mappingColumnName = mappingColumnName;
@@ -797,7 +851,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The GUID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300199897.project_name.table_name</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -981,7 +1038,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30008888</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -989,7 +1049,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-08-23T08:01:44Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -997,7 +1060,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-12T02:16:45Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1005,7 +1071,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumns.
+             * <p>The mapping fields.</p>
              */
             public Builder mappingColumns(java.util.List<MappingColumns> mappingColumns) {
                 this.mappingColumns = mappingColumns;
@@ -1013,7 +1079,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30008888</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -1021,7 +1090,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * RowPermissionDesc.
+             * <p>The description of the row-level permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>管控业务数据</p>
              */
             public Builder rowPermissionDesc(String rowPermissionDesc) {
                 this.rowPermissionDesc = rowPermissionDesc;
@@ -1029,7 +1101,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * RowPermissionId.
+             * <p>The row-level permission ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30008888</p>
              */
             public Builder rowPermissionId(Long rowPermissionId) {
                 this.rowPermissionId = rowPermissionId;
@@ -1037,7 +1112,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * RowPermissionName.
+             * <p>The name of the row-level permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务管控</p>
              */
             public Builder rowPermissionName(String rowPermissionName) {
                 this.rowPermissionName = rowPermissionName;
@@ -1045,7 +1123,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * <p>The rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -1053,7 +1131,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>The related tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;
@@ -1061,7 +1139,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1128,7 +1209,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The query result.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1136,7 +1217,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

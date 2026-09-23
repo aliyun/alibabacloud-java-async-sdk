@@ -127,6 +127,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
         }
 
         /**
+         * <p>The JSON script command for creating a workflow.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -147,6 +149,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +162,10 @@ public class CreateWorkFlowByJsonRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -229,6 +235,12 @@ public class CreateWorkFlowByJsonRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: the development environment.</li>
+             * <li>PROD: the production environment.</li>
+             * </ul>
+             * <p>The current version supports only BASIC mode, so set this parameter to PROD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +252,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the workflow node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,7 +391,10 @@ public class CreateWorkFlowByJsonRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The node description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cooment</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -386,7 +402,10 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The folder to which the node belongs. If this parameter is left empty, the root folder is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -394,7 +413,10 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
-             * ScheduleConfig.
+             * <p>The schedule configuration (required for periodic nodes). The value is a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cronExpression&quot;:&quot;0 0 0 * * ?&quot;}</p>
              */
             public Builder scheduleConfig(String scheduleConfig) {
                 this.scheduleConfig = scheduleConfig;
@@ -402,7 +424,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
-             * Submit.
+             * <p>Specifies whether to submit the node. Default value: true.</p>
              */
             public Builder submit(Boolean submit) {
                 this.submit = submit;
@@ -410,6 +432,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
+             * <p>The node name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -421,6 +444,12 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
+             * <p>The node scheduling type. Valid values:</p>
+             * <ul>
+             * <li>1: periodic scheduling.</li>
+             * <li>3: manual scheduling.</li>
+             * <li>5: real-time node.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -432,6 +461,7 @@ public class CreateWorkFlowByJsonRequest extends Request {
             }
 
             /**
+             * <p>The workflow JSON.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

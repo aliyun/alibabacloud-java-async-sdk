@@ -98,6 +98,7 @@ public class ListResourcePermissionsRequest extends Request {
         }
 
         /**
+         * <p>The paged query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -108,6 +109,7 @@ public class ListResourcePermissionsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +210,7 @@ public class ListResourcePermissionsRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -219,6 +222,7 @@ public class ListResourcePermissionsRequest extends Request {
             }
 
             /**
+             * <p>The number of records per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -230,7 +234,10 @@ public class ListResourcePermissionsRequest extends Request {
             }
 
             /**
-             * SearchText.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxTest</p>
              */
             public Builder searchText(String searchText) {
                 this.searchText = searchText;
@@ -238,6 +245,11 @@ public class ListResourcePermissionsRequest extends Request {
             }
 
             /**
+             * <p>The tab type. Valid values:</p>
+             * <ul>
+             * <li>TABLE: table.</li>
+             * <li>DATASOURCE: datasource.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -140,6 +140,7 @@ public class ListComputeClustersRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -150,7 +151,10 @@ public class ListComputeClustersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of records to return in this response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -159,7 +163,10 @@ public class ListComputeClustersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token for the next page. An empty value indicates that no more results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fdccfa4f825bf506c591e285f1123403</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -168,6 +175,7 @@ public class ListComputeClustersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +188,10 @@ public class ListComputeClustersRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -276,7 +287,10 @@ public class ListComputeClustersRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The keyword for filtering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -284,6 +298,7 @@ public class ListComputeClustersRequest extends Request {
             }
 
             /**
+             * <p>The page number. The value must be greater than 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -295,6 +310,7 @@ public class ListComputeClustersRequest extends Request {
             }
 
             /**
+             * <p>The number of records per page. The value must be greater than 0.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -306,7 +322,7 @@ public class ListComputeClustersRequest extends Request {
             }
 
             /**
-             * TypeVersionList.
+             * <p>The list of cluster versions.</p>
              */
             public Builder typeVersionList(java.util.List<String> typeVersionList) {
                 this.typeVersionList = typeVersionList;

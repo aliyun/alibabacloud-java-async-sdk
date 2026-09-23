@@ -119,7 +119,10 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         }
 
         /**
-         * CreateResult.
+         * <p>The creation result.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -135,7 +138,10 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class CreateBasicProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +224,10 @@ public class CreateBasicProjectResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102111</p>
              */
             public Builder id(Long id) {
                 this.id = id;

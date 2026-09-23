@@ -141,7 +141,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query filter conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -151,6 +151,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +164,10 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -172,6 +176,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The relationship type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +189,7 @@ public class ListKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +287,10 @@ public class ListKgRelationRequest extends Request {
             } 
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -289,7 +298,10 @@ public class ListKgRelationRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -297,7 +309,10 @@ public class ListKgRelationRequest extends Request {
             }
 
             /**
-             * SourceEntityId.
+             * <p>The source entity record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1d4559a4db044158305e2d89bccf81f</p>
              */
             public Builder sourceEntityId(String sourceEntityId) {
                 this.sourceEntityId = sourceEntityId;
@@ -305,7 +320,10 @@ public class ListKgRelationRequest extends Request {
             }
 
             /**
-             * TargetEntityId.
+             * <p>The target entity record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e1d4559a4db044158305e2d89bccf82f</p>
              */
             public Builder targetEntityId(String targetEntityId) {
                 this.targetEntityId = targetEntityId;

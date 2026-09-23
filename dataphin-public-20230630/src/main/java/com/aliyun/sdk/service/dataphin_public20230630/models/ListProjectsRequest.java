@@ -112,6 +112,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +256,10 @@ public class ListProjectsRequest extends Request {
             } 
 
             /**
-             * Env.
+             * <p>The environment identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -262,7 +267,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for fuzzy match.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -270,7 +278,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The project mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -278,7 +289,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -286,7 +300,10 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -294,7 +311,7 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * TagList.
+             * <p>The project tags.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

@@ -112,6 +112,7 @@ public class CreateStandardMappingRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateStandardMappingRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +232,7 @@ public class CreateStandardMappingRequest extends Request {
             } 
 
             /**
+             * <p>The list of asset GUIDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder assetGuidList(java.util.List<String> assetGuidList) {
@@ -238,7 +241,15 @@ public class CreateStandardMappingRequest extends Request {
             }
 
             /**
-             * InvalidMappingRelationOperationType.
+             * <p>The processing policy for invalid mappings when importing mapping relationships. Valid values:</p>
+             * <ul>
+             * <li>SET_INVALID_TO_VALID: sets invalid mappings to valid mappings.</li>
+             * <li>KEEP_INVALID_AND_SKIP: retains invalid mappings and skips them.</li>
+             * </ul>
+             * <p>Default value: SET_INVALID_TO_VALID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SET_INVALID_TO_VALID</p>
              */
             public Builder invalidMappingRelationOperationType(String invalidMappingRelationOperationType) {
                 this.invalidMappingRelationOperationType = invalidMappingRelationOperationType;
@@ -246,7 +257,15 @@ public class CreateStandardMappingRequest extends Request {
             }
 
             /**
-             * RelationType.
+             * <p>The mapping relationship type. Valid values:</p>
+             * <ul>
+             * <li>VALID: valid mapping.</li>
+             * <li>INVALID: invalid mapping.</li>
+             * </ul>
+             * <p>Default value: VALID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -254,6 +273,7 @@ public class CreateStandardMappingRequest extends Request {
             }
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

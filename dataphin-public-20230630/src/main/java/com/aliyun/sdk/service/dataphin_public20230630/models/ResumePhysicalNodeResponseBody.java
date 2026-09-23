@@ -119,7 +119,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. A value of OK indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * NodeOperateResultList.
+         * <p>Results of the node resume scheduling operation.</p>
          */
         public Builder nodeOperateResultList(java.util.List<NodeOperateResultList> nodeOperateResultList) {
             this.nodeOperateResultList = nodeOperateResultList;
@@ -151,7 +160,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorMessage.
+             * <p>Error message returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -246,7 +264,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123456</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -254,7 +275,10 @@ public class ResumePhysicalNodeResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Operation result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

@@ -127,6 +127,7 @@ public class UpdateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +149,7 @@ public class UpdateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -158,6 +160,7 @@ public class UpdateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +234,7 @@ public class UpdateKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The property code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +246,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The property value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -328,6 +333,7 @@ public class UpdateKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The entity record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -339,6 +345,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The entity type code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,6 +357,7 @@ public class UpdateKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The entity record property list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {

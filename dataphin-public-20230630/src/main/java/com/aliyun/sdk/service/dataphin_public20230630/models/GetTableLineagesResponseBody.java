@@ -119,7 +119,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * TableLineageList.
+         * <p>The table lineage list.</p>
          */
         public Builder tableLineageList(java.util.List<TableLineageList> tableLineageList) {
             this.tableLineageList = tableLineageList;
@@ -436,7 +445,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * InputBizUnitId.
+             * <p>The ID of the business unit to which the input table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inputBizUnitId(Long inputBizUnitId) {
                 this.inputBizUnitId = inputBizUnitId;
@@ -444,7 +456,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputDataSourceId.
+             * <p>The ID of the data source to which the input table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder inputDataSourceId(Long inputDataSourceId) {
                 this.inputDataSourceId = inputDataSourceId;
@@ -452,7 +467,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputDataSourceType.
+             * <p>The type of the data source to which the input table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder inputDataSourceType(String inputDataSourceType) {
                 this.inputDataSourceType = inputDataSourceType;
@@ -460,7 +478,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputProjectId.
+             * <p>The ID of the project to which the input table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1233</p>
              */
             public Builder inputProjectId(Long inputProjectId) {
                 this.inputProjectId = inputProjectId;
@@ -468,7 +489,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableDeleted.
+             * <p>Indicates whether the input table has been deleted.</p>
              */
             public Builder inputTableDeleted(Boolean inputTableDeleted) {
                 this.inputTableDeleted = inputTableDeleted;
@@ -476,7 +497,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableEnv.
+             * <p>The environment to which the input table belongs. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder inputTableEnv(String inputTableEnv) {
                 this.inputTableEnv = inputTableEnv;
@@ -484,7 +508,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableGuid.
+             * <p>The GUID of the input table. Each asset has a unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123211</p>
              */
             public Builder inputTableGuid(String inputTableGuid) {
                 this.inputTableGuid = inputTableGuid;
@@ -492,7 +519,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableName.
+             * <p>The name of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input</p>
              */
             public Builder inputTableName(String inputTableName) {
                 this.inputTableName = inputTableName;
@@ -500,7 +530,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeEnv.
+             * <p>The environment to which the task belongs. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nodeEnv(String nodeEnv) {
                 this.nodeEnv = nodeEnv;
@@ -508,7 +541,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The task ID associated with the lineage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>110021</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -516,7 +552,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputBizUnitId.
+             * <p>The ID of the business unit to which the output table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outputBizUnitId(Long outputBizUnitId) {
                 this.outputBizUnitId = outputBizUnitId;
@@ -524,7 +563,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSourceId.
+             * <p>The ID of the data source to which the output table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outputDataSourceId(Long outputDataSourceId) {
                 this.outputDataSourceId = outputDataSourceId;
@@ -532,7 +574,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSourceType.
+             * <p>The type of the data source to which the output table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder outputDataSourceType(String outputDataSourceType) {
                 this.outputDataSourceType = outputDataSourceType;
@@ -540,7 +585,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputProjectId.
+             * <p>The ID of the project to which the output table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1233</p>
              */
             public Builder outputProjectId(Long outputProjectId) {
                 this.outputProjectId = outputProjectId;
@@ -548,7 +596,7 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableDeleted.
+             * <p>Indicates whether the output table has been deleted.</p>
              */
             public Builder outputTableDeleted(Boolean outputTableDeleted) {
                 this.outputTableDeleted = outputTableDeleted;
@@ -556,7 +604,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableEnv.
+             * <p>The environment to which the output table belongs. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder outputTableEnv(String outputTableEnv) {
                 this.outputTableEnv = outputTableEnv;
@@ -564,7 +615,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableGuid.
+             * <p>The GUID of the output table. Each asset has a unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2231</p>
              */
             public Builder outputTableGuid(String outputTableGuid) {
                 this.outputTableGuid = outputTableGuid;
@@ -572,7 +626,10 @@ public class GetTableLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableName.
+             * <p>The name of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_output</p>
              */
             public Builder outputTableName(String outputTableName) {
                 this.outputTableName = outputTableName;

@@ -127,6 +127,7 @@ public class PublishKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +149,7 @@ public class PublishKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The publish command and its details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder publishCommand(PublishCommand publishCommand) {
@@ -158,6 +160,7 @@ public class PublishKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +234,7 @@ public class PublishKgSchemaRequest extends Request {
             } 
 
             /**
+             * <p>The default value to backfill for the property.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +246,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
+             * <p>The property code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -342,6 +347,7 @@ public class PublishKgSchemaRequest extends Request {
             } 
 
             /**
+             * <p>The backfill property default value policy. This parameter takes effect only when PolicyType is set to BackFillDefault.</p>
              * <p>This parameter is required.</p>
              */
             public Builder backFillDefaultValuePolicy(BackFillDefaultValuePolicy backFillDefaultValuePolicy) {
@@ -350,6 +356,10 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
+             * <p>The policy type. Valid values:</p>
+             * <ul>
+             * <li>BackFillDefault: backfills default values when a property changes from optional to required.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -361,6 +371,11 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
+             * <p>The type to which the policy applies. Valid values:</p>
+             * <ul>
+             * <li>ENTITY: applies to entity types.</li>
+             * <li>RELATION: applies to relation types.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -372,6 +387,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
+             * <p>The code of the entity type or relation type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -443,7 +459,7 @@ public class PublishKgSchemaRequest extends Request {
             } 
 
             /**
-             * DataAdjustmentPolicies.
+             * <p>The data adjustment policies.</p>
              */
             public Builder dataAdjustmentPolicies(java.util.List<DataAdjustmentPolicies> dataAdjustmentPolicies) {
                 this.dataAdjustmentPolicies = dataAdjustmentPolicies;
@@ -451,6 +467,7 @@ public class PublishKgSchemaRequest extends Request {
             }
 
             /**
+             * <p>The description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

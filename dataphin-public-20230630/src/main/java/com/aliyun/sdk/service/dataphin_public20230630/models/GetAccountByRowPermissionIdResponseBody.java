@@ -119,7 +119,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the account bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300901111</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -233,7 +248,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the account bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John.</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -300,7 +318,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountType.
+             * <p>The type of the account bound to the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PERSONAL</p>
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -308,7 +329,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             }
 
             /**
-             * Accounts.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
                 this.accounts = accounts;
@@ -375,7 +396,10 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The row-level permission rule IDs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001235</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -383,7 +407,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserMappingList.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder userMappingList(java.util.List<UserMappingList> userMappingList) {
                 this.userMappingList = userMappingList;

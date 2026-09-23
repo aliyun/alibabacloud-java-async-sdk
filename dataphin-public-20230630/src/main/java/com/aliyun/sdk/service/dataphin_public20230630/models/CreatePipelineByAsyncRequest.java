@@ -127,6 +127,7 @@ public class CreatePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>Request context information</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class CreatePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>Create pipeline/workflow task configuration</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -147,6 +149,7 @@ public class CreatePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
+             * <p>Current operating environment env: DEV - indicates the development environment, PROD - indicates the production environment (for workflows, only PROD is currently supported)</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +244,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Project ID to which the integration pipeline/workflow task belongs</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,7 +355,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
-             * Directory.
+             * <p>Integration pipeline task node directory (defaults to the root directory). The directory must exist. If it does not exist, call the relevant API to create a directory of type offlinePipeline</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -358,7 +366,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * FileId.
+             * <p>Pipeline file ID. Leave empty for the first creation. When updating a pipeline task, at least one of pipelineId, fileId, or nodeId must be configured</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -366,7 +377,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>Pipeline task scheduling node ID. Leave empty for the first creation. When updating a pipeline task, at least one of pipelineId, fileId, or nodeId must be configured</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -374,6 +388,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Integration pipeline task name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -385,7 +400,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * PipelineId.
+             * <p>Pipeline task ID. Leave empty for the first creation. When updating a pipeline task, at least one of pipelineId, fileId, or nodeId must be configured</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -467,7 +485,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
-             * SendTo.
+             * <p>For conditional distribution components, set to true when the downstream connection condition is true, otherwise set to false. This is not applicable to workflow tasks.</p>
              */
             public Builder sendTo(Boolean sendTo) {
                 this.sendTo = sendTo;
@@ -475,6 +493,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Input step name, i.e., Steps[*].StepName</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -486,6 +505,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Output step name, i.e., Steps[*].StepName</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -599,7 +619,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
-             * IsDistribute.
+             * <p>Indicates the data distribution method when the current component has multiple downstream components: true - indicates that the data of the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. The default value is true. false - indicates that the data of the current component is sent in full to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records. This value is not applicable to workflow tasks.</p>
              */
             public Builder isDistribute(Boolean isDistribute) {
                 this.isDistribute = isDistribute;
@@ -607,6 +627,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Plugin ID. Each plugin/operator has a unique identifier. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should extend the component/operator configuration class to implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as a configuration created on the Dataphin page</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -618,6 +639,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Specific component configuration in JSON string format. Refer to the utility class: subclasses of com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (for workflow operators, use com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig) and their toJsonString methods. Developers should extend the component/operator configuration class to implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as a task configuration created on the Dataphin page</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -629,6 +651,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Step name. Step names must be unique within the same pipeline task</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -640,6 +663,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Component type: input - indicates an input component, output - indicates an output component, transform - indicates a transform component, process - indicates a flow control component. For workflow tasks, it indicates the operator type, for example: image - image, text - text. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should extend the component/operator configuration class to implement the corresponding component/operator configuration. Each component/operator configuration has the same structure as a configuration created on the Dataphin page</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -712,6 +736,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
+             * <p>DAG (Directed Acyclic Graph) link configuration: describes the connection relationships of all components</p>
              * <p>This parameter is required.</p>
              */
             public Builder hops(java.util.List<Hops> hops) {
@@ -720,6 +745,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Component/operator configuration: contains detailed configurations of all components/operators used</p>
              * <p>This parameter is required.</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
@@ -881,7 +907,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>Comment</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -889,7 +918,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>Integration pipeline configuration mode: PIPELINE - indicates pipeline mode (default), JSON - indicates script mode. This is not applicable to workflows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PIPELINE</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -897,6 +929,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Integration pipeline task basic information</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
@@ -905,6 +938,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Integration pipeline component/workflow operator configuration</p>
              * <p>This parameter is required.</p>
              */
             public Builder pipelineConfig(PipelineConfig pipelineConfig) {
@@ -913,7 +947,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * PipelineJson.
+             * <p>In script mode: integration pipeline configuration (in JSON string format). Workflow tasks do not support script mode</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pipelineJson(String pipelineJson) {
                 this.pipelineJson = pipelineJson;
@@ -921,7 +958,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * PipelineType.
+             * <p>Task type: 0 - indicates offline integration (default), 1 - indicates real-time integration, 14 - indicates a workflow task</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pipelineType(Integer pipelineType) {
                 this.pipelineType = pipelineType;
@@ -929,6 +969,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Scheduling configuration in JSON string format. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -940,7 +981,10 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * Settings.
+             * <p>Channel configuration in JSON string format. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -948,7 +992,7 @@ public class CreatePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * Submit.
+             * <p>Whether to submit. The default is to submit</p>
              */
             public Builder submit(Boolean submit) {
                 this.submit = submit;

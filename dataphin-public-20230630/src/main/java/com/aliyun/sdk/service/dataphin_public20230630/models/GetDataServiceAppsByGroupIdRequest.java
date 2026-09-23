@@ -127,6 +127,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         }
 
         /**
+         * <p>The application group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class GetDataServiceAppsByGroupIdRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

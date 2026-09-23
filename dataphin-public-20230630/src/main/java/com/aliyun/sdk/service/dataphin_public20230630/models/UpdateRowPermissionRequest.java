@@ -112,6 +112,7 @@ public class UpdateRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateRowPermissionCommand(UpdateRowPermissionCommand updateRowPermissionCommand) {
@@ -217,7 +219,10 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
-             * ColumnDesc.
+             * <p>The mapping column description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business ID.</p>
              */
             public Builder columnDesc(String columnDesc) {
                 this.columnDesc = columnDesc;
@@ -225,6 +230,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The mapping column name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -236,6 +242,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The mapping column type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -349,6 +356,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The mapping column name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,6 +368,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The expression operator.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -371,6 +380,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The sub-expressions.</p>
              * <p>This parameter is required.</p>
              */
             public Builder subConditions(java.util.List<?> subConditions) {
@@ -379,6 +389,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The expression type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -390,7 +401,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The expression operation values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -445,6 +456,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the account bound to the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -517,6 +529,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The type of the account bound to the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -528,6 +541,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The accounts bound to the rule.</p>
              * <p>This parameter is required.</p>
              */
             public Builder accounts(java.util.List<Accounts> accounts) {
@@ -650,6 +664,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The rule expressions.</p>
              * <p>This parameter is required.</p>
              */
             public Builder expressions(java.util.List<Expressions> expressions) {
@@ -658,7 +673,10 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * IsDelete.
+             * <p>Specifies whether to delete the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isDelete(Boolean isDelete) {
                 this.isDelete = isDelete;
@@ -666,7 +684,11 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The rule name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Control business ID greater than 100</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -674,6 +696,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The rule scope type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -685,7 +708,10 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The rule status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -693,7 +719,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * UserMappingList.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder userMappingList(java.util.List<UserMappingList> userMappingList) {
                 this.userMappingList = userMappingList;
@@ -776,6 +802,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The table column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -787,6 +814,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The mapping column name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -798,6 +826,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The GUID of the table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -923,6 +952,7 @@ public class UpdateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The mapping columns.</p>
              * <p>This parameter is required.</p>
              */
             public Builder mappingColumns(java.util.List<MappingColumns> mappingColumns) {
@@ -931,7 +961,10 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * RowPermissionDesc.
+             * <p>The row-level permission description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Control business data.</p>
              */
             public Builder rowPermissionDesc(String rowPermissionDesc) {
                 this.rowPermissionDesc = rowPermissionDesc;
@@ -939,6 +972,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The row-level permission ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -950,7 +984,11 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The row-level permission name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessControl.</p>
              */
             public Builder rowPermissionName(String rowPermissionName) {
                 this.rowPermissionName = rowPermissionName;
@@ -958,7 +996,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * Rules.
+             * <p>The rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -966,7 +1004,7 @@ public class UpdateRowPermissionRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>The related tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;

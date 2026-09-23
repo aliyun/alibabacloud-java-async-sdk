@@ -119,7 +119,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLogCodeResponse.
+         * <p>The operation log code response.</p>
          */
         public Builder operationLogCodeResponse(OperationLogCodeResponse operationLogCodeResponse) {
             this.operationLogCodeResponse = operationLogCodeResponse;
@@ -162,7 +171,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM test_table WHERE id = 1;</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -262,7 +274,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorId.
+             * <p>The operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder operatorId(Integer operatorId) {
                 this.operatorId = operatorId;
@@ -270,7 +285,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL查询节点</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -278,7 +296,10 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
             }
 
             /**
-             * SqlNum.
+             * <p>The number of SQL statements.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sqlNum(Integer sqlNum) {
                 this.sqlNum = sqlNum;

@@ -119,7 +119,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * DependencyList.
+         * <p>The dependency records.</p>
          */
         public Builder dependencyList(java.util.List<DependencyList> dependencyList) {
             this.dependencyList = dependencyList;
@@ -135,7 +138,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the dependency record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -262,7 +274,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the dependency record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jytest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +285,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the dependency record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -278,7 +296,10 @@ public class GetDataSourceDependenciesResponseBody extends TeaModel {
             }
 
             /**
-             * TypeCode.
+             * <p>The type code of the dependency record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pipeline</p>
              */
             public Builder typeCode(String typeCode) {
                 this.typeCode = typeCode;

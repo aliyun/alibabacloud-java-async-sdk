@@ -119,7 +119,10 @@ public class ListStandardsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details of the backend response error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>Paginated query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListStandardsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * ColumnName.
+             * <p>Column to check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -249,7 +261,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * IsCaseSensitive.
+             * <p>Whether case-sensitive.</p>
              */
             public Builder isCaseSensitive(Boolean isCaseSensitive) {
                 this.isCaseSensitive = isCaseSensitive;
@@ -257,7 +269,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Monitor type: METADATA for metadata monitoring, QUALITY for data quality monitoring.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>METADATA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -324,7 +339,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardId.
+             * <p>Standard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder standardId(Long standardId) {
                 this.standardId = standardId;
@@ -332,7 +350,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -399,7 +420,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeFrom.
+             * <p>Attribute source: SYSTEM for system attribute, CUSTOM for custom attribute, STANDARD for standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder attributeFrom(String attributeFrom) {
                 this.attributeFrom = attributeFrom;
@@ -407,7 +431,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardReference.
+             * <p>Corresponding standard, effective when attribute source is STANDARD.</p>
              */
             public Builder standardReference(StandardReference standardReference) {
                 this.standardReference = standardReference;
@@ -474,7 +498,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeFromInfo.
+             * <p>Attribute source.</p>
              */
             public Builder attributeFromInfo(AttributeFromInfo attributeFromInfo) {
                 this.attributeFromInfo = attributeFromInfo;
@@ -482,7 +506,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeId.
+             * <p>Attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder attributeId(Long attributeId) {
                 this.attributeId = attributeId;
@@ -549,7 +576,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Column.
+             * <p>Referenced lookup table column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -557,7 +587,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * LookupTableId.
+             * <p>Lookup table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder lookupTableId(Long lookupTableId) {
                 this.lookupTableId = lookupTableId;
@@ -650,7 +683,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Whether to include the maximum value.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -658,7 +691,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Whether to include the minimum value.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -666,7 +699,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>Maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -674,7 +710,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * <p>Minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -780,7 +819,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataphinAttributeType.
+             * <p>Value range, effective when value constraint is DATAPHIN_ATTRIBUTE: BIZ_UNIT for data business unit, PROJECT for project, USER for user, USER_GROUP for user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATAPHIN_ATTRIBUTE</p>
              */
             public Builder dataphinAttributeType(String dataphinAttributeType) {
                 this.dataphinAttributeType = dataphinAttributeType;
@@ -788,7 +830,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * LookupTableReference.
+             * <p>Value range, effective when value constraint is LOOKUP_TABLE.</p>
              */
             public Builder lookupTableReference(LookupTableReference lookupTableReference) {
                 this.lookupTableReference = lookupTableReference;
@@ -796,7 +838,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * MinMaxValueConfig.
+             * <p>Value range, effective when value constraint is MIN_MAX.</p>
              */
             public Builder minMaxValueConfig(MinMaxValueConfig minMaxValueConfig) {
                 this.minMaxValueConfig = minMaxValueConfig;
@@ -804,7 +846,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConstraint.
+             * <p>Value constraint: NONE for no constraint, LIST for obtaining from a list, LOOKUP_TABLE for lookup table, MIN_MAX for values between minimum and maximum, DATAPHIN_ATTRIBUTE for Dataphin system attribute, BUILT_IN_DATA_TYPES for built-in data types, BUILT_IN_DATA_CLASSIFICATION for built-in data classification, BUILT_IN_DATA_LEVEL for built-in data security level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NONE</p>
              */
             public Builder valueConstraint(String valueConstraint) {
                 this.valueConstraint = valueConstraint;
@@ -812,7 +857,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>Value range, effective when value constraint is LIST.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -918,7 +963,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>Data type of the attribute value: STRING for string, BIGINT for numeric type, DOUBLE for floating-point type, DATE for date accurate to day, DATETIME for date accurate to milliseconds, BOOLEAN for boolean.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -926,7 +974,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>Default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -934,7 +985,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Length.
+             * <p>Attribute value length. If empty or -1, the length is not limited. Typically, only string types limit the attribute value length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -942,7 +996,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Attribute value type: CUSTOMIZED for custom input, SINGLE_ENUM for single enumeration value, MULTIPLE_ENUMS for multiple enumeration values, RANGE for range value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMIZED</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -950,7 +1007,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueRange.
+             * <p>Value range.</p>
              */
             public Builder valueRange(ValueRange valueRange) {
                 this.valueRange = valueRange;
@@ -1121,7 +1178,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Attribute code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_attr</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1129,7 +1189,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1137,7 +1200,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableMonitorConfig.
+             * <p>Whether to enable monitor configuration.</p>
              */
             public Builder enableMonitorConfig(Boolean enableMonitorConfig) {
                 this.enableMonitorConfig = enableMonitorConfig;
@@ -1145,7 +1208,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1153,7 +1219,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorConfig.
+             * <p>Monitor configuration.</p>
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -1161,7 +1227,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attr1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1169,7 +1238,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * RefAttribute.
+             * <p>Referenced attribute information.</p>
              */
             public Builder refAttribute(RefAttribute refAttribute) {
                 this.refAttribute = refAttribute;
@@ -1177,7 +1246,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Whether it is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -1185,7 +1254,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Attribute type: BIZ_ATTRIBUTE for business attribute, TECH_ATTRIBUTE for technical attribute, MANAGEMENT_ATTRIBUTE for management attribute, QUALITY_ATTRIBUTE for quality attribute, MASTER_DATA_ATTRIBUTE for master data attribute, LIFECYCLE_ATTRIBUTE for lifecycle attribute, SECURITY_ATTRIBUTE for security attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIZ_ATTRIBUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1193,7 +1265,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConfig.
+             * <p>Value configuration.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -1260,7 +1332,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attribute.
+             * <p>Attribute details.</p>
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;
@@ -1268,7 +1340,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1335,7 +1410,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1343,7 +1421,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>User name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1423,7 +1504,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>End time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-30 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1431,7 +1515,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>Start time of the effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1439,7 +1526,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Effective time type: FOREVER for permanent, TIME_PERIOD for a time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TIME_PERIOD</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1506,7 +1596,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1514,7 +1607,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>User name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1581,7 +1677,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1589,7 +1688,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>User name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1682,7 +1784,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Standard set code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1690,7 +1795,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>Directory of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir1</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -1698,7 +1806,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Standard set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1706,7 +1817,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Standard set name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1812,7 +1926,10 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Standard template code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1820,7 +1937,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Standard template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1828,7 +1948,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Standard template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1836,7 +1959,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFrom.
+             * <p>Standard template source: CUSTOM for custom standard templates, SYSTEM for system built-in standard templates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder templateFrom(String templateFrom) {
                 this.templateFrom = templateFrom;
@@ -1844,7 +1970,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -2106,7 +2235,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeWithValueList.
+             * <p>Attribute value configuration list.</p>
              */
             public Builder attributeWithValueList(java.util.List<AttributeWithValueList> attributeWithValueList) {
                 this.attributeWithValueList = attributeWithValueList;
@@ -2114,7 +2243,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>Standard code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zz</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2122,7 +2254,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -2130,7 +2262,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2138,7 +2273,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTimeConfig.
+             * <p>Effective time configuration.</p>
              */
             public Builder effectiveTimeConfig(EffectiveTimeConfig effectiveTimeConfig) {
                 this.effectiveTimeConfig = effectiveTimeConfig;
@@ -2146,7 +2281,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * EnglishName.
+             * <p>Standard English name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder englishName(String englishName) {
                 this.englishName = englishName;
@@ -2154,7 +2292,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Standard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2162,7 +2303,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>Last modifier.</p>
              */
             public Builder lastModifier(LastModifier lastModifier) {
                 this.lastModifier = lastModifier;
@@ -2170,7 +2311,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -2178,7 +2322,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Standard name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2186,7 +2333,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Owner.</p>
              */
             public Builder owner(Owner owner) {
                 this.owner = owner;
@@ -2194,7 +2341,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Stage.
+             * <p>Stage of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder stage(String stage) {
                 this.stage = stage;
@@ -2202,7 +2352,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSet.
+             * <p>Standard set that the current standard depends on.</p>
              */
             public Builder standardSet(StandardSet standardSet) {
                 this.standardSet = standardSet;
@@ -2210,7 +2360,7 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardTemplate.
+             * <p>Standard template that the current standard depends on.</p>
              */
             public Builder standardTemplate(StandardTemplate standardTemplate) {
                 this.standardTemplate = standardTemplate;
@@ -2218,7 +2368,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>draft</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2226,7 +2379,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Standard type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zz</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2234,7 +2390,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -2301,7 +2460,7 @@ public class ListStandardsResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardList.
+             * <p>Standard list.</p>
              */
             public Builder standardList(java.util.List<StandardList> standardList) {
                 this.standardList = standardList;
@@ -2309,7 +2468,10 @@ public class ListStandardsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

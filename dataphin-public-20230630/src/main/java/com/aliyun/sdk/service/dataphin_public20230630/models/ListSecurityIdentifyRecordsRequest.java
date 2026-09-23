@@ -112,6 +112,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -296,7 +301,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             } 
 
             /**
-             * DatasourceEnv.
+             * <p>The data source environment identifier. This parameter is required only for data source tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder datasourceEnv(String datasourceEnv) {
                 this.datasourceEnv = datasourceEnv;
@@ -304,7 +312,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
-             * DatasourceName.
+             * <p>The data source name. This parameter is required only for data source tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -312,6 +323,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
+             * <p>The field name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -323,7 +335,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
-             * IsDatasourceTable.
+             * <p>Specifies whether the table is a data source table. Default value: false (treated as a Dataphin table).</p>
              */
             public Builder isDatasourceTable(Boolean isDatasourceTable) {
                 this.isDatasourceTable = isDatasourceTable;
@@ -331,7 +343,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword. The search scope is field names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -339,7 +354,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -347,7 +365,10 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -355,6 +376,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
+             * <p>The table catalog. For data source tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -366,6 +388,7 @@ public class ListSecurityIdentifyRecordsRequest extends Request {
             }
 
             /**
+             * <p>The table name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

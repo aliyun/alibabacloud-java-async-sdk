@@ -119,7 +119,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * QualityTemplateInfo.
+         * <p>The details of the template object.</p>
          */
         public Builder qualityTemplateInfo(QualityTemplateInfo qualityTemplateInfo) {
             this.qualityTemplateInfo = qualityTemplateInfo;
@@ -162,7 +171,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentType.
+             * <p>The control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>expression</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -249,7 +261,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,7 +272,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -545,7 +563,20 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Catalog.
+             * <p>The template category. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: consistency.</li>
+             * <li>EFFECTIVE: validity.</li>
+             * <li>TIMELINESE: timeliness.</li>
+             * <li>ACCURATE: accuracy.</li>
+             * <li>UNIQUENESS: uniqueness.</li>
+             * <li>COMPLETENESS: completeness.</li>
+             * <li>STABILITY: stability.</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSISTENT</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -553,7 +584,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogName.
+             * <p>The display name of the template category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>一致性</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -561,7 +595,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -569,7 +606,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -577,7 +617,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -585,7 +628,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -593,7 +639,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * FormPropertyList.
+             * <p>The key-value pairs of the rule configuration.</p>
              */
             public Builder formPropertyList(java.util.List<FormPropertyList> formPropertyList) {
                 this.formPropertyList = formPropertyList;
@@ -601,7 +647,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -609,7 +658,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsSystemTemplate.
+             * <p>Indicates whether the template is a system template.</p>
              */
             public Builder isSystemTemplate(Boolean isSystemTemplate) {
                 this.isSystemTemplate = isSystemTemplate;
@@ -617,7 +666,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -625,7 +677,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierName.
+             * <p>The name of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -633,7 +688,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -641,7 +699,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -649,7 +710,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -657,7 +721,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -665,7 +732,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAllDataSourceType.
+             * <p>Indicates whether all data source types are supported.</p>
              */
             public Builder supportAllDataSourceType(Boolean supportAllDataSourceType) {
                 this.supportAllDataSourceType = supportAllDataSourceType;
@@ -673,7 +740,7 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * SupportDataSourceTypeList.
+             * <p>The list of supported data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
              */
             public Builder supportDataSourceTypeList(java.util.List<String> supportDataSourceTypeList) {
                 this.supportDataSourceTypeList = supportDataSourceTypeList;
@@ -681,7 +748,43 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The templatetype. Valid values:</p>
+             * <ul>
+             * <li>FIELD_NULL_VALUE_VALIDATE: field null value check.</li>
+             * <li>FIELD_EMPTY_STRING_VALIDATE: field empty character string check.</li>
+             * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check.</li>
+             * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check.</li>
+             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check.</li>
+             * <li>FUNCTION_TIME_COMPARE: time function comparison.</li>
+             * <li>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison.</li>
+             * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison.</li>
+             * <li>FIELD_FORMAT_VALIDATE: field format check.</li>
+             * <li>FIELD_LENGTH_VALIDATE: field length check.</li>
+             * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check.</li>
+             * <li>CODE_TABLE_COMPARE: lookup table reference comparison.</li>
+             * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison.</li>
+             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison.</li>
+             * <li>TABLE_STABILITY_VALIDATE: table stability check.</li>
+             * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check.</li>
+             * <li>FIELD_STABILITY_VALIDATE: field stability check.</li>
+             * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check.</li>
+             * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check.</li>
+             * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check.</li>
+             * <li>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring.</li>
+             * <li>TABLE_SCHEMA_CHECK: table schema change monitoring.</li>
+             * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison.</li>
+             * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring.</li>
+             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FIELD_NULL_VALUE_VALIDATE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -689,7 +792,10 @@ public class GetQualityTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * <p>The display name of the templatetype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>字段空值校验</p>
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;

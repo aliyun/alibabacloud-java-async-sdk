@@ -111,7 +111,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * CreateCommand.
+         * <p>Request object</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
             String createCommandShrink = shrink(createCommand, "CreateCommand", "json");
@@ -121,6 +121,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,10 +204,11 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
+             * <p>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>k1</p>
+             * <p>jdbc.username</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -214,10 +216,11 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Configuration item value</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>v1</p>
+             * <p>username</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -326,7 +329,10 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
-             * CheckActivity.
+             * <p>Whether to check connectivity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkActivity(Boolean checkActivity) {
                 this.checkActivity = checkActivity;
@@ -334,6 +340,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>List of connection configuration items</p>
              * <p>This parameter is required.</p>
              */
             public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
@@ -342,7 +349,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasource for xxx in dev</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -350,6 +360,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Data source name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -361,6 +372,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Data source type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -431,7 +443,7 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
-             * <p>数据源创建结构体</p>
+             * <p>Development environment data source</p>
              */
             public Builder dataSourceCreate(DataSourceCreate dataSourceCreate) {
                 this.dataSourceCreate = dataSourceCreate;
@@ -439,7 +451,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * ProdDataSourceId.
+             * <p>Associated production environment data source ID. This parameter cannot be empty when only creating a development environment compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder prodDataSourceId(Long prodDataSourceId) {
                 this.prodDataSourceId = prodDataSourceId;
@@ -508,10 +523,11 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
+             * <p>Configuration item. For the key values required by different databases, see the supplementary description at the bottom of the document.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>k1</p>
+             * <p>jdbc.username</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -519,10 +535,11 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Configuration item value</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>v1</p>
+             * <p>username</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -631,7 +648,10 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
-             * CheckActivity.
+             * <p>Whether to check connectivity</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkActivity(Boolean checkActivity) {
                 this.checkActivity = checkActivity;
@@ -639,6 +659,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>List of connection configuration items</p>
              * <p>This parameter is required.</p>
              */
             public Builder configItemList(java.util.List<ProdDataSourceCreateConfigItemList> configItemList) {
@@ -647,7 +668,10 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>Data source description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasource for xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -655,6 +679,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Data source name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -666,6 +691,32 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
+             * <p>Data source type:</p>
+             * <ul>
+             * <li>MAX_COMPUTE</li>
+             * <li>HDFS</li>
+             * <li>LOG_HUB</li>
+             * <li>POLARDB</li>
+             * <li>HBASE_0_9_4</li>
+             * <li>HBASE_1_1_X</li>
+             * <li>DRDS</li>
+             * <li>HIVE</li>
+             * <li>FTP</li>
+             * <li>ELASTIC_SEARCH</li>
+             * <li>MYSQL</li>
+             * <li>MONGODB</li>
+             * <li>OSS</li>
+             * <li>HANA</li>
+             * <li>SQL_SERVER</li>
+             * <li>POSTGRE_SQL</li>
+             * <li>ANALYTICDB</li>
+             * <li>ADB_FOR_MYSQL_V3</li>
+             * <li>ADB_FOR_PG</li>
+             * <li>ORACLE</li>
+             * <li>VERTICA</li>
+             * <li>DB2</li>
+             * <li>TERA_DATA, etc.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -736,7 +787,7 @@ public class CreateDataSourceRequest extends Request {
             } 
 
             /**
-             * DevDataSourceCreate.
+             * <p>Development environment data source</p>
              */
             public Builder devDataSourceCreate(DevDataSourceCreate devDataSourceCreate) {
                 this.devDataSourceCreate = devDataSourceCreate;
@@ -744,7 +795,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * <p>数据源创建结构体</p>
+             * <p>Production environment data source</p>
              */
             public Builder prodDataSourceCreate(ProdDataSourceCreate prodDataSourceCreate) {
                 this.prodDataSourceCreate = prodDataSourceCreate;

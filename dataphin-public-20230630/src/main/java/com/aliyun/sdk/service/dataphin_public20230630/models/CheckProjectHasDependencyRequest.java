@@ -112,6 +112,7 @@ public class CheckProjectHasDependencyRequest extends Request {
         }
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class CheckProjectHasDependencyRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

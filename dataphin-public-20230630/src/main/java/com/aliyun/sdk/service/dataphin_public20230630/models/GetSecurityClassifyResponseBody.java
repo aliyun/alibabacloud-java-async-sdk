@@ -119,7 +119,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityClassifyInfo.
+         * <p>The data classification details.</p>
          */
         public Builder securityClassifyInfo(SecurityClassifyInfo securityClassifyInfo) {
             this.securityClassifyInfo = securityClassifyInfo;
@@ -162,7 +171,7 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -293,7 +302,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             } 
 
             /**
-             * Abbreviation.
+             * <p>The classification abbreviation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder abbreviation(String abbreviation) {
                 this.abbreviation = abbreviation;
@@ -301,7 +313,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The data classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -309,7 +324,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * LevelAbbreviation.
+             * <p>The security level abbreviation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lv_test</p>
              */
             public Builder levelAbbreviation(String levelAbbreviation) {
                 this.levelAbbreviation = levelAbbreviation;
@@ -317,7 +335,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * LevelIndex.
+             * <p>The security level index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelIndex(Long levelIndex) {
                 this.levelIndex = levelIndex;
@@ -325,7 +346,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * <p>The security level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lv_teat</p>
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;
@@ -333,7 +357,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The classification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +368,10 @@ public class GetSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The classification path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/a/b/c</p>
              */
             public Builder path(String path) {
                 this.path = path;

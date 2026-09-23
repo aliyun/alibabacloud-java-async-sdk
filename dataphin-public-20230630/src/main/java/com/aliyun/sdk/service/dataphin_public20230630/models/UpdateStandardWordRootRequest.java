@@ -112,6 +112,7 @@ public class UpdateStandardWordRootRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateStandardWordRootRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -245,6 +247,7 @@ public class UpdateStandardWordRootRequest extends Request {
             } 
 
             /**
+             * <p>The abbreviation of the root word.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -256,7 +259,10 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the root word.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -264,6 +270,7 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
+             * <p>The full name of the root word.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -275,6 +282,7 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
+             * <p>The name of the root word.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,6 +294,7 @@ public class UpdateStandardWordRootRequest extends Request {
             }
 
             /**
+             * <p>The name of the root word before the update.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

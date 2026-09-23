@@ -112,6 +112,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
+         * <p>The edit command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -274,6 +276,7 @@ public class UpdateResourceRequest extends Request {
             } 
 
             /**
+             * <p>The commit remarks.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -285,6 +288,11 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The compute engine type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE</li>
+             * <li>HADOOP.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -296,6 +304,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The resource description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,6 +316,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The resource ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -318,6 +328,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The resource name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -329,6 +340,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -340,6 +352,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
+             * <p>The storage address of the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

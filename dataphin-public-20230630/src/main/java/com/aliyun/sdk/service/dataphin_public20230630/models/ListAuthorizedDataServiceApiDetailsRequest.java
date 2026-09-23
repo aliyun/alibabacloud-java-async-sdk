@@ -112,7 +112,11 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         }
 
         /**
+         * <p>The query request.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -122,6 +126,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,7 +236,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             } 
 
             /**
-             * <p>AppKey</p>
+             * <p>The application key.</p>
              * 
              * <strong>example:</strong>
              * <p>200000000</p>
@@ -242,7 +247,10 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             }
 
             /**
-             * AppKeyStr.
+             * <p>The application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APP_200000000</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -250,6 +258,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             }
 
             /**
+             * <p>The page number, starting from 1.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -261,6 +270,7 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page. Maximum value: 100.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

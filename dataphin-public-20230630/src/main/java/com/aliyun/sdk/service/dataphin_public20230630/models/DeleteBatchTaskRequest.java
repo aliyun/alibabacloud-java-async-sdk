@@ -112,6 +112,7 @@ public class DeleteBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The delete request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +220,7 @@ public class DeleteBatchTaskRequest extends Request {
             } 
 
             /**
+             * <p>The description of the delete operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class DeleteBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The ID of the node in the folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +244,7 @@ public class DeleteBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

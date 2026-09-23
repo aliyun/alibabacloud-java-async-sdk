@@ -112,6 +112,7 @@ public class ListUserGroupMembersRequest extends Request {
         }
 
         /**
+         * <p>The paged query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListUserGroupMembersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +245,10 @@ public class ListUserGroupMembersRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The username keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -251,6 +256,7 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -262,6 +268,7 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
+             * <p>The number of records per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -273,7 +280,10 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>232231</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -281,7 +291,7 @@ public class ListUserGroupMembersRequest extends Request {
             }
 
             /**
-             * UserIdList.
+             * <p>The user ID.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

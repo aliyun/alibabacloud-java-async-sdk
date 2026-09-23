@@ -111,7 +111,7 @@ public class GetAssetMappingRelationsRequest extends Request {
         }
 
         /**
-         * AssetMappingQuery.
+         * <p>The query instruction.</p>
          */
         public Builder assetMappingQuery(AssetMappingQuery assetMappingQuery) {
             String assetMappingQueryShrink = shrink(assetMappingQuery, "AssetMappingQuery", "json");
@@ -121,6 +121,7 @@ public class GetAssetMappingRelationsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,6 +218,11 @@ public class GetAssetMappingRelationsRequest extends Request {
             } 
 
             /**
+             * <p>The object type of the asset. Valid values:</p>
+             * <ul>
+             * <li>COLUMN: field.</li>
+             * <li>INDEX: metric.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -228,6 +234,7 @@ public class GetAssetMappingRelationsRequest extends Request {
             }
 
             /**
+             * <p>The GUID of the asset object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -239,6 +246,11 @@ public class GetAssetMappingRelationsRequest extends Request {
             }
 
             /**
+             * <p>The type of the mapping relationship. Valid values:</p>
+             * <ul>
+             * <li>VALID: mapped.</li>
+             * <li>INVALID: invalid mapping.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

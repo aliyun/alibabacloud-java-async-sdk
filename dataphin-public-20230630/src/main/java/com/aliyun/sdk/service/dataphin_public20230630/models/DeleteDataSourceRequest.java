@@ -112,6 +112,7 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The request for deleting a data source.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteDataSourceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,11 @@ public class DeleteDataSourceRequest extends Request {
             } 
 
             /**
+             * <p>The deletion mode selection. Valid values:</p>
+             * <ul>
+             * <li>DEV: deletes the data source only in the development environment.</li>
+             * <li>DEV_PROD: deletes the data source in both the development and production environments.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +222,7 @@ public class DeleteDataSourceRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data source in the production environment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

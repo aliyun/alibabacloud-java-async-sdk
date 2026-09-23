@@ -112,6 +112,7 @@ public class UpdateTenantComputeEngineRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateTenantComputeEngineRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -217,6 +219,7 @@ public class UpdateTenantComputeEngineRequest extends Request {
             } 
 
             /**
+             * <p>The list of cluster node endpoints.</p>
              * <p>This parameter is required.</p>
              */
             public Builder clusterUrlList(java.util.List<String> clusterUrlList) {
@@ -225,6 +228,7 @@ public class UpdateTenantComputeEngineRequest extends Request {
             }
 
             /**
+             * <p>The compute source type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -236,7 +240,10 @@ public class UpdateTenantComputeEngineRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

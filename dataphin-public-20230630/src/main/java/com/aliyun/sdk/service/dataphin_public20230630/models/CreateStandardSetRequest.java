@@ -112,6 +112,7 @@ public class CreateStandardSetRequest extends Request {
         }
 
         /**
+         * <p>The create instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateStandardSetRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +233,11 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: the default approval type.</li>
+             * <li>BY_TEMPLATE: approval based on an approval template.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +249,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to enable approval.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enableApproval(Boolean enableApproval) {
@@ -250,6 +258,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to submit approvals in batches.</p>
              * <p>This parameter is required.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
@@ -258,7 +267,10 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -313,6 +325,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
+             * <p>The directory to which the standard set belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -412,6 +425,11 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: the default approval type.</li>
+             * <li>BY_TEMPLATE: approval based on an approval template.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -423,6 +441,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to enable approval.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enableApproval(Boolean enableApproval) {
@@ -431,6 +450,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to submit approvals in batches.</p>
              * <p>This parameter is required.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
@@ -439,7 +459,10 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the approval template. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -507,7 +530,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * SpecifiedUserList.
+             * <p>The list of specified users who can view the standard set. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
              */
             public Builder specifiedUserList(java.util.List<String> specifiedUserList) {
                 this.specifiedUserList = specifiedUserList;
@@ -515,6 +538,12 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>The visibility type. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: visible to all users.</li>
+             * <li>PRIVATE: visible only to standard set members and administrators.</li>
+             * <li>SPECIFIED: visible only to specified users.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -704,7 +733,7 @@ public class CreateStandardSetRequest extends Request {
             } 
 
             /**
-             * ApprovalConfig.
+             * <p>The approval configuration for going online.</p>
              */
             public Builder approvalConfig(ApprovalConfig approvalConfig) {
                 this.approvalConfig = approvalConfig;
@@ -712,6 +741,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>The code of the standard set.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -723,7 +753,10 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * DefaultStandardTemplateId.
+             * <p>The ID of the default standard template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder defaultStandardTemplateId(Long defaultStandardTemplateId) {
                 this.defaultStandardTemplateId = defaultStandardTemplateId;
@@ -731,7 +764,10 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -739,7 +775,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * DirectoryReference.
+             * <p>The directory to which the standard set belongs.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -747,7 +783,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * MaintainerList.
+             * <p>The list of maintainers.</p>
              */
             public Builder maintainerList(java.util.List<String> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -755,7 +791,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * MemberGroupList.
+             * <p>The list of member groups.</p>
              */
             public Builder memberGroupList(java.util.List<String> memberGroupList) {
                 this.memberGroupList = memberGroupList;
@@ -763,7 +799,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * MemberList.
+             * <p>The list of members.</p>
              */
             public Builder memberList(java.util.List<String> memberList) {
                 this.memberList = memberList;
@@ -771,6 +807,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
+             * <p>The name of the standard set.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -782,7 +819,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * OfflineApprovalConfig.
+             * <p>The approval configuration for going offline.</p>
              */
             public Builder offlineApprovalConfig(OfflineApprovalConfig offlineApprovalConfig) {
                 this.offlineApprovalConfig = offlineApprovalConfig;
@@ -790,7 +827,7 @@ public class CreateStandardSetRequest extends Request {
             }
 
             /**
-             * VisibilityConfig.
+             * <p>The visibility configuration.</p>
              */
             public Builder visibilityConfig(VisibilityConfig visibilityConfig) {
                 this.visibilityConfig = visibilityConfig;

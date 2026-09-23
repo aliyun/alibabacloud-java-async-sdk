@@ -127,6 +127,7 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The command for importing the knowledge graph definition.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,7 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +154,10 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -161,6 +166,7 @@ public class ImportKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +251,10 @@ public class ImportKgSchemaRequest extends Request {
             } 
 
             /**
-             * Content.
+             * <p>The knowledge graph definition content converted based on the specified format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name:xxx</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -253,7 +262,10 @@ public class ImportKgSchemaRequest extends Request {
             }
 
             /**
-             * InputFormat.
+             * <p>The format of the knowledge graph definition content. Valid values: json and yaml. Default value: yaml.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yaml</p>
              */
             public Builder inputFormat(String inputFormat) {
                 this.inputFormat = inputFormat;
@@ -261,7 +273,10 @@ public class ImportKgSchemaRequest extends Request {
             }
 
             /**
-             * MergeStrategy.
+             * <p>The merge strategy for the knowledge graph definition content. Valid values: replace and merge. Default value: replace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>replace</p>
              */
             public Builder mergeStrategy(String mergeStrategy) {
                 this.mergeStrategy = mergeStrategy;

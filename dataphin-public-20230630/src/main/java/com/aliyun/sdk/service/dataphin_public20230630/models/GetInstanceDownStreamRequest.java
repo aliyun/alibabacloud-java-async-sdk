@@ -155,6 +155,7 @@ public class GetInstanceDownStreamRequest extends Request {
         }
 
         /**
+         * <p>Number of levels to expand downstream in the DAG query. Valid values: 1 to 6.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +168,14 @@ public class GetInstanceDownStreamRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Environment identifier.</p>
+         * <ul>
+         * <li>DEV: Development environment.</li>
+         * <li>PROD (default): Production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -176,6 +184,7 @@ public class GetInstanceDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The request body.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceGet(InstanceGet instanceGet) {
@@ -186,6 +195,7 @@ public class GetInstanceDownStreamRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,7 +217,17 @@ public class GetInstanceDownStreamRequest extends Request {
         }
 
         /**
-         * RunStatus.
+         * <p>Run status of the instance.</p>
+         * <ul>
+         * <li>INIT</li>
+         * <li>WATING</li>
+         * <li>RUNNING</li>
+         * <li>SUCCESS</li>
+         * <li>FAILED</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder runStatus(String runStatus) {
             this.putQueryParameter("RunStatus", runStatus);
@@ -277,6 +297,7 @@ public class GetInstanceDownStreamRequest extends Request {
             } 
 
             /**
+             * <p>Instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -288,6 +309,16 @@ public class GetInstanceDownStreamRequest extends Request {
             }
 
             /**
+             * <p>Node type of the instance.</p>
+             * <ul>
+             * <li>BBOX_LOGIC_TABLE_NODE</li>
+             * <li>BBOX_LOGIC_FIELD_NODE</li>
+             * <li>BBOX_LOGIC_FIELD_GROUP_NODE</li>
+             * <li>BBOX_INNER_TEMP_NODE</li>
+             * <li>DATA_PROCESS</li>
+             * <li>STREAM_TASK_NODE</li>
+             * <li>FLINK_BATCH</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

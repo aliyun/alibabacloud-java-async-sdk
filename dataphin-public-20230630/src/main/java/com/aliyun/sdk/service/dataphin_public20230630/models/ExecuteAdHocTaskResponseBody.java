@@ -119,7 +119,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ExecuteResult.
+         * <p>The execution result.</p>
          */
         public Builder executeResult(ExecuteResult executeResult) {
             this.executeResult = executeResult;
@@ -135,7 +138,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * SubTaskCount.
+             * <p>The number of subtasks split from the parsed task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subTaskCount(Integer subTaskCount) {
                 this.subTaskCount = subTaskCount;
@@ -233,7 +248,10 @@ public class ExecuteAdHocTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute_SQL_300000843_1611548758327</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

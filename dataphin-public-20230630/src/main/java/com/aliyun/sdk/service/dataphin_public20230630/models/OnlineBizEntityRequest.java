@@ -112,6 +112,7 @@ public class OnlineBizEntityRequest extends Request {
         }
 
         /**
+         * <p>The online request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder onlineCommand(OnlineCommand onlineCommand) {
@@ -122,6 +123,7 @@ public class OnlineBizEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +234,7 @@ public class OnlineBizEntityRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the business unit to which the entity belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -243,6 +246,7 @@ public class OnlineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The remarks for the offline operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +258,7 @@ public class OnlineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The ID of the business entity.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,6 +270,11 @@ public class OnlineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The business type. Valid values:</p>
+             * <ul>
+             * <li>BIZ_OBJECT</li>
+             * <li>BIZ_PROCESS.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

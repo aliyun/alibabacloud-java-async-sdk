@@ -119,7 +119,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * OfflineResult.
+         * <p>The offline result.</p>
          */
         public Builder offlineResult(OfflineResult offlineResult) {
             this.offlineResult = offlineResult;
@@ -151,7 +160,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +224,10 @@ public class OfflineBatchTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * PublishObjectId.
+             * <p>The ID of the object to be published.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10211123</p>
              */
             public Builder publishObjectId(Long publishObjectId) {
                 this.publishObjectId = publishObjectId;

@@ -111,7 +111,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -121,6 +121,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +306,17 @@ public class ListQualityRulesRequest extends Request {
             } 
 
             /**
-             * CatalogList.
+             * <p>The rule type. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: consistency.</li>
+             * <li>EFFECTIVE: validity.</li>
+             * <li>TIMELINESE: timeliness.</li>
+             * <li>ACCURATE: accuracy.</li>
+             * <li>UNIQUENESS: uniqueness.</li>
+             * <li>COMPLETENESS: completeness.</li>
+             * <li>STABILITY: stability.</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
                 this.catalogList = catalogList;
@@ -313,7 +324,10 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword for filtering. Supports searching by rule name and validation object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -321,7 +335,10 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -329,7 +346,10 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -337,7 +357,11 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * RuleStrengthList.
+             * <p>The rule strength. Valid values:</p>
+             * <ul>
+             * <li>STRONG: strong.</li>
+             * <li>WEAK: weak.</li>
+             * </ul>
              */
             public Builder ruleStrengthList(java.util.List<String> ruleStrengthList) {
                 this.ruleStrengthList = ruleStrengthList;
@@ -345,7 +369,11 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The rule effective status. Valid values:</p>
+             * <ul>
+             * <li>ENABLE: enabled.</li>
+             * <li>DISABLE: disabled.</li>
+             * </ul>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -353,7 +381,7 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * TemplateIdList.
+             * <p>The rule template.</p>
              */
             public Builder templateIdList(java.util.List<Long> templateIdList) {
                 this.templateIdList = templateIdList;
@@ -361,7 +389,17 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * TestRunTaskStatusList.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: not executed.</li>
+             * <li>WAITING: waiting.</li>
+             * <li>RUNNING: executing.</li>
+             * <li>SUCCESS: execution succeeded.</li>
+             * <li>FAILED: execution failed.</li>
+             * <li>CANCEL: canceled.</li>
+             * <li>TIMEOUT: timed out.</li>
+             * <li>OFFLINE: offline.</li>
+             * </ul>
              */
             public Builder testRunTaskStatusList(java.util.List<String> testRunTaskStatusList) {
                 this.testRunTaskStatusList = testRunTaskStatusList;
@@ -369,7 +407,18 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * TestRunTaskValidateResultList.
+             * <p>The trial run validation result. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: not executed.</li>
+             * <li>WAITING: waiting for execution.</li>
+             * <li>RUNNING: executing.</li>
+             * <li>PASS: passed.</li>
+             * <li>NOT_PASS: not passed.</li>
+             * <li>FAILED: execution failed.</li>
+             * <li>OFFLINE: offline. The task needs to be restarted.</li>
+             * <li>CANCEL: task canceled.</li>
+             * <li>TIMEOUT: task timed out.</li>
+             * </ul>
              */
             public Builder testRunTaskValidateResultList(java.util.List<String> testRunTaskValidateResultList) {
                 this.testRunTaskValidateResultList = testRunTaskValidateResultList;
@@ -377,7 +426,10 @@ public class ListQualityRulesRequest extends Request {
             }
 
             /**
-             * WatchId.
+             * <p>The monitoring ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

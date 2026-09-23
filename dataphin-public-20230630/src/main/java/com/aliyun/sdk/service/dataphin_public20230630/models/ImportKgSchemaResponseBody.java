@@ -119,7 +119,10 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * ImportResult.
+         * <p>The import result.</p>
          */
         public Builder importResult(ImportResult importResult) {
             this.importResult = importResult;
@@ -143,7 +149,10 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ImportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ImportKgSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityTypeCount.
+             * <p>The number of entity types that were changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1032591</p>
              */
             public Builder entityTypeCount(Integer entityTypeCount) {
                 this.entityTypeCount = entityTypeCount;
@@ -236,7 +248,10 @@ public class ImportKgSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTypeCount.
+             * <p>The number of relation types that were changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3380766</p>
              */
             public Builder relationTypeCount(Integer relationTypeCount) {
                 this.relationTypeCount = relationTypeCount;

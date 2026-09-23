@@ -119,7 +119,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The search results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +276,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             } 
 
             /**
-             * ItemId.
+             * <p>The ID of the matched entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>itemId</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -272,7 +287,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             }
 
             /**
-             * ItemTypeCode.
+             * <p>The entity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EntityTypeCode1</p>
              */
             public Builder itemTypeCode(String itemTypeCode) {
                 this.itemTypeCode = itemTypeCode;
@@ -280,7 +298,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedPropertyCode.
+             * <p>The property code that matched the semantic search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder matchedPropertyCode(String matchedPropertyCode) {
                 this.matchedPropertyCode = matchedPropertyCode;
@@ -288,7 +309,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedPropertyValue.
+             * <p>The actual value of the matched property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder matchedPropertyValue(String matchedPropertyValue) {
                 this.matchedPropertyValue = matchedPropertyValue;
@@ -296,7 +320,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             }
 
             /**
-             * SimilarityScore.
+             * <p>The similarity score ranging from 0.0 to 1.0, based on cosine similarity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.88</p>
              */
             public Builder similarityScore(Float similarityScore) {
                 this.similarityScore = similarityScore;
@@ -363,7 +390,7 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             } 
 
             /**
-             * SearchResults.
+             * <p>The list of search results.</p>
              */
             public Builder searchResults(java.util.List<SearchResults> searchResults) {
                 this.searchResults = searchResults;
@@ -371,7 +398,10 @@ public class SearchKgBySemanticResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640276</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

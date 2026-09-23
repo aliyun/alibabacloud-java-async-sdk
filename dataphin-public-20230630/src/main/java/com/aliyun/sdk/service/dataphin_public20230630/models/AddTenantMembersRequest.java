@@ -112,6 +112,7 @@ public class AddTenantMembersRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -122,6 +123,7 @@ public class AddTenantMembersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +204,10 @@ public class AddTenantMembersRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1323241</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +215,17 @@ public class AddTenantMembersRequest extends Request {
             }
 
             /**
-             * RoleList.
+             * <p>The list of roles. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM_ADMIN</li>
+             * <li>DATASOURCE_MANAGER</li>
+             * <li>SECURITY_ADMIN</li>
+             * <li>QUALITY_MANAGER</li>
+             * <li>EXPORT_ADMIN</li>
+             * <li>DATA_STANDARD_MANAGER</li>
+             * <li>LABELS_BUSINESS_PLANNER</li>
+             * <li>BUSINESS_MEMBER.</li>
+             * </ul>
              */
             public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
@@ -265,6 +280,7 @@ public class AddTenantMembersRequest extends Request {
             } 
 
             /**
+             * <p>The list of members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

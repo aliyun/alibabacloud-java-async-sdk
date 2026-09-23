@@ -112,6 +112,7 @@ public class ListApiByAppRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class ListApiByAppRequest extends Request {
         }
 
         /**
+         * <p>The paged query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pageQuery(PageQuery pageQuery) {
@@ -242,10 +244,13 @@ public class ListApiByAppRequest extends Request {
             } 
 
             /**
-             * <p>appKey</p>
+             * <p>The application key.</p>
+             * <blockquote>
+             * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>10121101</p>
+             * <p>200000000</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
@@ -253,7 +258,10 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * AppKeyStr.
+             * <p>The application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APP_200000000</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -261,7 +269,10 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apiName</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -269,7 +280,10 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * PageNum.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -277,7 +291,10 @@ public class ListApiByAppRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The page size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

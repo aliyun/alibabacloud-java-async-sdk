@@ -112,6 +112,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -232,6 +234,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
+             * <p>The list of lineage fields.</p>
              * <p>This parameter is required.</p>
              */
             public Builder columnList(java.util.List<String> columnList) {
@@ -240,6 +243,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The environment. Valid values: prod, dev, and auto.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -251,6 +255,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to select the full table.</p>
              * <p>This parameter is required.</p>
              */
             public Builder fullTable(Boolean fullTable) {
@@ -259,6 +264,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The table name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -359,6 +365,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
+             * <p>The list of lineage fields.</p>
              * <p>This parameter is required.</p>
              */
             public Builder columnList(java.util.List<String> columnList) {
@@ -367,6 +374,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The environment. Valid values: prod, dev, and auto.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,6 +386,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to select the full table.</p>
              * <p>This parameter is required.</p>
              */
             public Builder fullTable(Boolean fullTable) {
@@ -386,6 +395,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The table name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -458,6 +468,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
+             * <p>The collection of lineage input tables.</p>
              * <p>This parameter is required.</p>
              */
             public Builder inputLineageList(java.util.List<InputLineageList> inputLineageList) {
@@ -466,6 +477,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The collection of lineage output tables.</p>
              * <p>This parameter is required.</p>
              */
             public Builder outputLineageList(java.util.List<OutputLineageList> outputLineageList) {
@@ -549,6 +561,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             } 
 
             /**
+             * <p>The node ID in the logical definition subtree.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -560,6 +573,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The list of lineage groups.</p>
              * <p>This parameter is required.</p>
              */
             public Builder lineageGroupList(java.util.List<LineageGroupList> lineageGroupList) {
@@ -568,6 +582,7 @@ public class UpdateBatchTaskUdfLineagesRequest extends Request {
             }
 
             /**
+             * <p>The project to which the node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

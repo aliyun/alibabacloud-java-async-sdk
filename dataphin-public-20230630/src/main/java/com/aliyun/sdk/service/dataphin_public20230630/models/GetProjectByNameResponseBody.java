@@ -119,7 +119,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectInfo.
+         * <p>The project details.</p>
          */
         public Builder projectInfo(ProjectInfo projectInfo) {
             this.projectInfo = projectInfo;
@@ -162,7 +171,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx whitelist</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -260,7 +272,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5432</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -548,7 +563,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitDisplayName.
+             * <p>The display name of the business unit to which the project belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder bizUnitDisplayName(String bizUnitDisplayName) {
                 this.bizUnitDisplayName = bizUnitDisplayName;
@@ -556,7 +574,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The ID of the business unit to which the project belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101131</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -564,7 +585,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSourceId.
+             * <p>The ID of the bound compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101711</p>
              */
             public Builder computeSourceId(Long computeSourceId) {
                 this.computeSourceId = computeSourceId;
@@ -572,7 +596,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeSourceName.
+             * <p>The name of the bound compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds1</p>
              */
             public Builder computeSourceName(String computeSourceName) {
                 this.computeSourceName = computeSourceName;
@@ -580,7 +607,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -588,7 +618,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -596,7 +629,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -604,7 +640,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -612,7 +651,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The modification time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -620,7 +662,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1030111021</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -628,7 +673,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The project mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -636,7 +684,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -644,7 +695,15 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * NameSpaceTag.
+             * <p>The namespace type. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: common pattern.</li>
+             * <li>APPLICATION: application type.</li>
+             * <li>BASE: base type.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASE</p>
              */
             public Builder nameSpaceTag(String nameSpaceTag) {
                 this.nameSpaceTag = nameSpaceTag;
@@ -652,7 +711,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -660,7 +722,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -668,7 +733,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * StreamComputeSourceId.
+             * <p>The ID of the bound streaming compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201711</p>
              */
             public Builder streamComputeSourceId(Long streamComputeSourceId) {
                 this.streamComputeSourceId = streamComputeSourceId;
@@ -676,7 +744,10 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * StreamComputeSourceName.
+             * <p>The name of the bound streaming compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds2</p>
              */
             public Builder streamComputeSourceName(String streamComputeSourceName) {
                 this.streamComputeSourceName = streamComputeSourceName;
@@ -684,7 +755,14 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The project type. Valid values:</p>
+             * <ul>
+             * <li>DISTILL: distillation project.</li>
+             * <li>GENERAL: general project.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -692,7 +770,7 @@ public class GetProjectByNameResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteLists.
+             * <p>The whitelists.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
                 this.whiteLists = whiteLists;

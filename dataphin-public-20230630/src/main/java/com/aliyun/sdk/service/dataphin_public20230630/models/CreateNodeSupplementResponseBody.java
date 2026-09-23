@@ -119,7 +119,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,14 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         }
 
         /**
-         * SubmitId.
+         * <p>The submit ID.</p>
+         * <ul>
+         * <li>List mode: Returns the FlowId.</li>
+         * <li>Batch mode: Returns the JobId. You can call the GetOperationSubmitStatus operation to query the submit status. After the submission succeeds, the FlowId is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>f_2264518792396800000_20210223_2329354897145659392</p>
          */
         public Builder submitId(String submitId) {
             this.submitId = submitId;
@@ -159,7 +178,10 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true/false</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -112,6 +112,7 @@ public class CheckResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>Check user resource permission</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkCommand(CheckCommand checkCommand) {
@@ -122,6 +123,7 @@ public class CheckResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class CheckResourcePermissionRequest extends Request {
             } 
 
             /**
+             * <p>Resource ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -290,6 +293,7 @@ public class CheckResourcePermissionRequest extends Request {
             } 
 
             /**
+             * <p>Operation type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -301,6 +305,7 @@ public class CheckResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>Permission resource list</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {
@@ -309,6 +314,31 @@ public class CheckResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>Resource type</p>
+             * <ul>
+             * <li>PHYSICAL_TABLE: Physical table</li>
+             * <li>PHYSICAL_FIELD: Physical table field</li>
+             * <li>LOGICAL_TABLE: Fact logical table</li>
+             * <li>LOGICAL_FIELD: Fact logical table field</li>
+             * <li>LABEL_TABLE: Label logical table</li>
+             * <li>LABEL_FIELD: Label logical table field</li>
+             * <li>DATASOURCE: Data source</li>
+             * <li>GLOBAL_PARAM: Global parameter</li>
+             * <li>REALTIME_LOGICAL_TABLE: Real-time meta table</li>
+             * <li>REALTIME_LOGICAL_FIELD: Real-time meta table field</li>
+             * <li>REALTIME_MIRROR_TABLE: Mirror table</li>
+             * <li>REALTIME_MIRROR_FIELD: Real-time mirror table field</li>
+             * <li>FUNCTION: Function</li>
+             * <li>FEATURE: Feature permission</li>
+             * <li>PHYSICAL_VIEW: Physical view</li>
+             * <li>LOGICAL_VIEW: Logical view</li>
+             * <li>QD_SERVICE_FEATURE: Service tag</li>
+             * <li>QD_ADVANCED_FEATURE: Advanced tag</li>
+             * <li>QD_CLUSTER: Group</li>
+             * <li>QD_EVENT: Event</li>
+             * <li>QD_OFFLINE_SERVICE: Tag offline service task</li>
+             * <li>PHYSICAL_MATERIALIZED_VIEW: Materialized view</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,6 +350,7 @@ public class CheckResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>User ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

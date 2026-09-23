@@ -119,7 +119,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         } 
 
         /**
-         * AppInfoList.
+         * <p>The list of API groups.</p>
          */
         public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
             this.appInfoList = appInfoList;
@@ -127,7 +127,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         }
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -255,10 +264,13 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
             } 
 
             /**
-             * <p>AppKey</p>
+             * <p>The application key.</p>
+             * <blockquote>
+             * <p>Notice: Deprecated. Use AppKeyStr instead.</notice>.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>202212</p>
+             * <p>12345</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
@@ -266,7 +278,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
             }
 
             /**
-             * AppKeyStr.
+             * <p>The application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app12345</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -285,7 +300,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdResponseBody extends TeaModel 
             }
 
             /**
-             * Name.
+             * <p>The app name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

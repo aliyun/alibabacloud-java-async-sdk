@@ -127,6 +127,7 @@ public class ExecKgCypherRequest extends Request {
         }
 
         /**
+         * <p>The custom Cypher query instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder execCommand(ExecCommand execCommand) {
@@ -137,6 +138,7 @@ public class ExecKgCypherRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ExecKgCypherRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +245,10 @@ public class ExecKgCypherRequest extends Request {
             } 
 
             /**
-             * DataType.
+             * <p>The data type of paramValue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -344,7 +350,10 @@ public class ExecKgCypherRequest extends Request {
             } 
 
             /**
-             * Limit.
+             * <p>The maximum number of records to return.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -352,7 +361,7 @@ public class ExecKgCypherRequest extends Request {
             }
 
             /**
-             * Params.
+             * <p>The input parameters of the query statement.</p>
              */
             public Builder params(java.util.List<Params> params) {
                 this.params = params;
@@ -360,7 +369,10 @@ public class ExecKgCypherRequest extends Request {
             }
 
             /**
-             * Query.
+             * <p>The custom Cypher query statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MATCH (n) RETURN n LIMIT 10</p>
              */
             public Builder query(String query) {
                 this.query = query;

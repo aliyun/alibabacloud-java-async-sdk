@@ -112,6 +112,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
         }
 
         /**
+         * <p>The parse request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder parseCommand(ParseCommand parseCommand) {
@@ -283,6 +285,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             } 
 
             /**
+             * <p>The SQL code to be parsed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -294,7 +297,10 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * DataSourceCatalog.
+             * <p>The catalog for a database SQL node. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_catalog</p>
              */
             public Builder dataSourceCatalog(String dataSourceCatalog) {
                 this.dataSourceCatalog = dataSourceCatalog;
@@ -302,7 +308,10 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID for a database SQL node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12131111</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -310,7 +319,10 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * DataSourceSchema.
+             * <p>The schema for a database SQL node. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erp</p>
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
@@ -318,7 +330,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * IncludeAllInputTables.
+             * <p>Specifies whether to include dependency information for input tables that have no corresponding nodes. Default value: false.</p>
              */
             public Builder includeAllInputTables(Boolean includeAllInputTables) {
                 this.includeAllInputTables = includeAllInputTables;
@@ -326,7 +338,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
-             * NeedQueryLineages.
+             * <p>Specifies whether to query data lineage when querying upstream dependencies. Default value: false.</p>
              */
             public Builder needQueryLineages(Boolean needQueryLineages) {
                 this.needQueryLineages = needQueryLineages;
@@ -334,6 +346,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
+             * <p>The node type, such as MAX_COMPUTE_SQL.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,6 +358,7 @@ public class ParseBatchTaskDependencyRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

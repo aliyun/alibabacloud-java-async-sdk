@@ -112,6 +112,7 @@ public class DeleteSecurityIdentifyResultsRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteSecurityIdentifyResultsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +191,7 @@ public class DeleteSecurityIdentifyResultsRequest extends Request {
             } 
 
             /**
-             * IdentifyResultIdList.
+             * <p>The list of identification result IDs.</p>
              */
             public Builder identifyResultIdList(java.util.List<Long> identifyResultIdList) {
                 this.identifyResultIdList = identifyResultIdList;

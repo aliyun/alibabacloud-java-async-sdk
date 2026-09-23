@@ -112,6 +112,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
         }
 
         /**
+         * <p>Submit command</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitCommand(SubmitCommand submitCommand) {
@@ -204,6 +206,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
             } 
 
             /**
+             * <p>Rule ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
+             * <p>Monitoring object ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -339,7 +343,10 @@ public class SubmitQualityRuleTasksRequest extends Request {
             } 
 
             /**
-             * BizDate.
+             * <p>Business date, format: yyyy-MM-dd</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -347,6 +354,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
+             * <p>Whether it is a test run: true for test run, false for formal run.</p>
              * <p>This parameter is required.</p>
              */
             public Builder isTestRun(Boolean isTestRun) {
@@ -355,7 +363,10 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * PartitionExpression.
+             * <p>Partition expression - custom expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=${yyyyMMdd}</p>
              */
             public Builder partitionExpression(String partitionExpression) {
                 this.partitionExpression = partitionExpression;
@@ -363,7 +374,10 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * PartitionExpressionFrom.
+             * <p>Source of the test run partition expression: SCHEDULE for existing schedule, CUSTOM for custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder partitionExpressionFrom(String partitionExpressionFrom) {
                 this.partitionExpressionFrom = partitionExpressionFrom;
@@ -371,7 +385,10 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * ScheduleId.
+             * <p>Existing schedule ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scheduleId(Long scheduleId) {
                 this.scheduleId = scheduleId;
@@ -379,6 +396,7 @@ public class SubmitQualityRuleTasksRequest extends Request {
             }
 
             /**
+             * <p>Monitoring object and rule IDs</p>
              * <p>This parameter is required.</p>
              */
             public Builder watchRuleIdList(java.util.List<WatchRuleIdList> watchRuleIdList) {

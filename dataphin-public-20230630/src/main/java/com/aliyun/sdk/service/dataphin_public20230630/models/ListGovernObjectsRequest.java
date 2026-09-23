@@ -112,6 +112,7 @@ public class ListGovernObjectsRequest extends Request {
         }
 
         /**
+         * <p>The paged query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListGovernObjectsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListGovernObjectsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -281,6 +286,15 @@ public class ListGovernObjectsRequest extends Request {
             } 
 
             /**
+             * <p>The governance item type. Valid values:</p>
+             * <ul>
+             * <li>TABLE</li>
+             * <li>DATASOURCE_TABLE</li>
+             * <li>DATASOURCE</li>
+             * <li>INDEX</li>
+             * <li>REALTIME_LOGICAL_TABLE</li>
+             * <li>QD_FEATURE</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,7 +306,10 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_name</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -300,7 +317,10 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user123</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -308,7 +328,10 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -316,7 +339,10 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -324,7 +350,7 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * ProjectNames.
+             * <p>The list of project names used to filter results.</p>
              */
             public Builder projectNames(java.util.List<String> projectNames) {
                 this.projectNames = projectNames;
@@ -332,7 +358,13 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The list of governance object statuses. Valid values:</p>
+             * <ul>
+             * <li>NEW</li>
+             * <li>VERIFY</li>
+             * <li>FINISHED</li>
+             * <li>IGNORE</li>
+             * </ul>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -340,7 +372,15 @@ public class ListGovernObjectsRequest extends Request {
             }
 
             /**
-             * ViewType.
+             * <p>The view type. Valid values:</p>
+             * <ul>
+             * <li>ALL</li>
+             * <li>OWNER</li>
+             * <li>PROJECT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder viewType(String viewType) {
                 this.viewType = viewType;

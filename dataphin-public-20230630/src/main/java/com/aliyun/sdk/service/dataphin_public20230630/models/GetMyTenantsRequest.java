@@ -111,7 +111,7 @@ public class GetMyTenantsRequest extends Request {
         }
 
         /**
-         * FeatureCodeList.
+         * <p>The feature codes owned by the tenant.</p>
          */
         public Builder featureCodeList(java.util.List<String> featureCodeList) {
             String featureCodeListShrink = shrink(featureCodeList, "FeatureCodeList", "json");
@@ -121,6 +121,7 @@ public class GetMyTenantsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

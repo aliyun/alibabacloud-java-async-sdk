@@ -112,6 +112,7 @@ public class UpdateDataDomainRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataDomainRequest extends Request {
         }
 
         /**
+         * <p>The update request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -272,6 +274,7 @@ public class UpdateDataDomainRequest extends Request {
             } 
 
             /**
+             * <p>The abbreviation of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -283,6 +286,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data board.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -294,6 +298,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -305,7 +310,10 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -313,6 +321,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The display name of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -324,6 +333,7 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The code of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -335,7 +345,10 @@ public class UpdateDataDomainRequest extends Request {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the parent data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10232311</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;

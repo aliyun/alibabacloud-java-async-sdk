@@ -127,6 +127,7 @@ public class OfflinePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class OfflinePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>The offline pipeline node command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder offlineCommand(OfflineCommand offlineCommand) {
@@ -147,6 +149,7 @@ public class OfflinePipelineByAsyncRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +232,11 @@ public class OfflinePipelineByAsyncRequest extends Request {
             } 
 
             /**
+             * <p>The environment for the current operation. Valid values:</p>
+             * <ul>
+             * <li>DEV: the development environment.</li>
+             * <li>PROD: the production environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +248,7 @@ public class OfflinePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,7 +359,10 @@ public class OfflinePipelineByAsyncRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -358,6 +370,7 @@ public class OfflinePipelineByAsyncRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to delete the node.</p>
              * <p>This parameter is required.</p>
              */
             public Builder delete(Boolean delete) {
@@ -366,7 +379,10 @@ public class OfflinePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * FileId.
+             * <p>The file ID of the integration node. You can use this parameter to query the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -374,7 +390,10 @@ public class OfflinePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>The schedule node ID of the integration node. You can use this parameter to query the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -382,7 +401,10 @@ public class OfflinePipelineByAsyncRequest extends Request {
             }
 
             /**
-             * PipelineId.
+             * <p>The primary key ID of the integration pipeline. You can use this parameter to query the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;

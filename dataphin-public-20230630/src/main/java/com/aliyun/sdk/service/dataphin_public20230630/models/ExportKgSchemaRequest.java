@@ -140,6 +140,7 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +162,10 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
-         * OutputFormat.
+         * <p>The format of the exported content. Valid values: json and yaml. Default value: yaml.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>json</p>
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);
@@ -170,7 +174,10 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The version number. If this parameter is empty or set to -1, the model metadata in draft state is returned. If this parameter is set to 0, the model metadata of the latest version is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder versionId(Integer versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -179,6 +186,7 @@ public class ExportKgSchemaRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

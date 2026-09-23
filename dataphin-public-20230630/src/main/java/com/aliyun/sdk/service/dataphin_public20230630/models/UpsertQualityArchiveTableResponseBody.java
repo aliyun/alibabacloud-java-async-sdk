@@ -119,7 +119,10 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The submit status of the asynchronous task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +224,10 @@ public class UpsertQualityArchiveTableResponseBody extends TeaModel {
             } 
 
             /**
-             * ProgressId.
+             * <p>The progress ID of the asynchronous task. This is an asynchronous operation. After a successful submission, only this ID is returned. Call GetQualityArchiveTableProgress to poll the task status and retrieve the final archived table information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>d78f0b5c9a1e4f2ab3c6d5e4f7a8b9c0</p>
              */
             public Builder progressId(String progressId) {
                 this.progressId = progressId;

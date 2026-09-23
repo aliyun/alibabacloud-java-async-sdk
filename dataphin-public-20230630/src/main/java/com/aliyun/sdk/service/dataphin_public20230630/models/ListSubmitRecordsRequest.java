@@ -112,6 +112,7 @@ public class ListSubmitRecordsRequest extends Request {
         }
 
         /**
+         * <p>Query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListSubmitRecordsRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +272,7 @@ public class ListSubmitRecordsRequest extends Request {
             } 
 
             /**
-             * ChangeTypeList.
+             * <p>List of change types (0: Create / 1: Update / 2: Delete).</p>
              */
             public Builder changeTypeList(java.util.List<Integer> changeTypeList) {
                 this.changeTypeList = changeTypeList;
@@ -278,6 +280,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
+             * <p>Page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -289,6 +292,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
+             * <p>Page size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -300,6 +304,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
+             * <p>Project ID.</p>
              * <p>This parameter is required.</p>
              */
             public Builder projectIdList(java.util.List<Long> projectIdList) {
@@ -308,7 +313,10 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * SubmitEndTime.
+             * <p>Submission end time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder submitEndTime(String submitEndTime) {
                 this.submitEndTime = submitEndTime;
@@ -316,7 +324,10 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * SubmitStartTime.
+             * <p>Submission start time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder submitStartTime(String submitStartTime) {
                 this.submitStartTime = submitStartTime;
@@ -324,7 +335,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
-             * SubmitterList.
+             * <p>Submitter.</p>
              */
             public Builder submitterList(java.util.List<String> submitterList) {
                 this.submitterList = submitterList;
@@ -392,7 +403,10 @@ public class ListSubmitRecordsRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>Search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -400,6 +414,7 @@ public class ListSubmitRecordsRequest extends Request {
             }
 
             /**
+             * <p>Pending deployment record filter.</p>
              * <p>This parameter is required.</p>
              */
             public Builder searchFilter(SearchFilter searchFilter) {

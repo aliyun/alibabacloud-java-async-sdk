@@ -112,6 +112,7 @@ public class ResetDataServiceAppSecretRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class ResetDataServiceAppSecretRequest extends Request {
         }
 
         /**
+         * <p>Reset Data Service Application Key</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -218,6 +220,7 @@ public class ResetDataServiceAppSecretRequest extends Request {
             } 
 
             /**
+             * <p>Application ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,7 +232,12 @@ public class ResetDataServiceAppSecretRequest extends Request {
             }
 
             /**
-             * AppKey.
+             * <p>The new application key, which must be globally unique and is used when calling APIs.
+             * The length is 8 to 128 English characters, and can contain digits, underscores (_), and hyphens (-).
+             * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000001</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -237,7 +245,13 @@ public class ResetDataServiceAppSecretRequest extends Request {
             }
 
             /**
-             * AppSecret.
+             * <p>The new application secret.
+             * If this parameter is left empty, the system automatically generates a new AppSecret value.
+             * The length is 8 to 127 English characters, and can contain digits, underscores (_), and hyphens (-).
+             * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123456789</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;

@@ -112,6 +112,7 @@ public class CreateComputeSourceRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateComputeSourceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class CreateComputeSourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -204,6 +209,7 @@ public class CreateComputeSourceRequest extends Request {
             } 
 
             /**
+             * <p>The configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,7 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The value of the configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -353,7 +360,10 @@ public class CreateComputeSourceRequest extends Request {
             } 
 
             /**
-             * ClusterId.
+             * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102311</p>
              */
             public Builder clusterId(Long clusterId) {
                 this.clusterId = clusterId;
@@ -361,6 +371,7 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configList(java.util.List<ConfigList> configList) {
@@ -369,7 +380,14 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
-             * CreateType.
+             * <p>The type of entity to create. Valid values:</p>
+             * <ul>
+             * <li>CLUSTER: Creates a cluster. ClusterId cannot be specified.</li>
+             * <li>COMPUTE_SOURCE: Creates a compute source. This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER</p>
              */
             public Builder createType(String createType) {
                 this.createType = createType;
@@ -377,7 +395,10 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -385,6 +406,7 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The name of the compute source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -396,6 +418,7 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The type of the compute source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -407,7 +430,10 @@ public class CreateComputeSourceRequest extends Request {
             }
 
             /**
-             * TypeVersion.
+             * <p>The version of the compute source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDH6</p>
              */
             public Builder typeVersion(String typeVersion) {
                 this.typeVersion = typeVersion;

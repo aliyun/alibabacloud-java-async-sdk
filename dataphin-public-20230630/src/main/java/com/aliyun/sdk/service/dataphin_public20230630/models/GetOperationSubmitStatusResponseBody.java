@@ -119,7 +119,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OperationSubmitJob.
+         * <p>The submit status of the operation.</p>
          */
         public Builder operationSubmitJob(OperationSubmitJob operationSubmitJob) {
             this.operationSubmitJob = operationSubmitJob;
@@ -151,7 +160,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +292,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * ExternalBizId.
+             * <p>The business ID. If the operation is a data backfill, this value is the data backfill workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f_122_232342</p>
              */
             public Builder externalBizId(String externalBizId) {
                 this.externalBizId = externalBizId;
@@ -285,7 +303,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The submit ID of the data backfill request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -293,7 +314,13 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Operation.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>SUPPLY_DATA: data backfill.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUPPLY_DATA</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -301,7 +328,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStatus.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder operationStatus(String operationStatus) {
                 this.operationStatus = operationStatus;
@@ -309,7 +339,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The user ID of the submitter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132344</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -317,7 +350,10 @@ public class GetOperationSubmitStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * <p>The progress.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;

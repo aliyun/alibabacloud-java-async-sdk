@@ -119,7 +119,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * ParseResult.
+         * <p>The parsing result.</p>
          */
         public Builder parseResult(ParseResult parseResult) {
             this.parseResult = parseResult;
@@ -151,7 +160,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldList.
+             * <p>The list of fields. This parameter applies only to logical table dependencies.</p>
              */
             public Builder fieldList(java.util.List<String> fieldList) {
                 this.fieldList = fieldList;
@@ -298,7 +310,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID. A value of -1 is returned if no node is found for the corresponding input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_11013121</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -306,7 +321,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name. This parameter is empty if no node is found for the corresponding input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test11</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -314,7 +332,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * OutputName.
+             * <p>The output name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test</p>
              */
             public Builder outputName(String outputName) {
                 this.outputName = outputName;
@@ -322,7 +343,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -330,7 +354,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The owner of the node. This parameter is empty if no node is found for the corresponding input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>201122301</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -338,7 +365,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The output table name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -405,7 +435,10 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             } 
 
             /**
-             * NodeIoType.
+             * <p>The input/output type. Valid values: input (dependent node) and output (node output name).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder nodeIoType(String nodeIoType) {
                 this.nodeIoType = nodeIoType;
@@ -413,7 +446,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleNodeInfoList.
+             * <p>The list of schedule nodes.</p>
              */
             public Builder scheduleNodeInfoList(java.util.List<ScheduleNodeInfoList> scheduleNodeInfoList) {
                 this.scheduleNodeInfoList = scheduleNodeInfoList;
@@ -467,7 +500,7 @@ public class ParseBatchTaskDependencyResponseBody extends TeaModel {
             } 
 
             /**
-             * DependNodeList.
+             * <p>The list of dependent nodes.</p>
              */
             public Builder dependNodeList(java.util.List<DependNodeList> dependNodeList) {
                 this.dependNodeList = dependNodeList;

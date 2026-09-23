@@ -119,7 +119,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of property definitions.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -236,7 +248,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The option value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -472,7 +487,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeCode.
+             * <p>The property code (unique identifier).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_level</p>
              */
             public Builder attributeCode(String attributeCode) {
                 this.attributeCode = attributeCode;
@@ -480,7 +498,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeName.
+             * <p>The property name (display name).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data level</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -488,7 +509,14 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeSource.
+             * <p>The property source. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system preset.</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder attributeSource(String attributeSource) {
                 this.attributeSource = attributeSource;
@@ -496,7 +524,15 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeType.
+             * <p>The property type. Valid values:</p>
+             * <ul>
+             * <li>MANAGEMENT: management property.</li>
+             * <li>TECHNICAL: technical property.</li>
+             * <li>BUSINESS: business property.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANAGEMENT</p>
              */
             public Builder attributeType(String attributeType) {
                 this.attributeType = attributeType;
@@ -504,7 +540,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The property description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data asset level classification</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -512,7 +551,11 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * EditableIn.
+             * <p>The location where the property can be edited. Valid values:</p>
+             * <ul>
+             * <li>ASSET: asset catalog.</li>
+             * <li>DEVELOPMENT: development.</li>
+             * </ul>
              */
             public Builder editableIn(java.util.List<String> editableIn) {
                 this.editableIn = editableIn;
@@ -520,7 +563,14 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * EnumSourceType.
+             * <p>The source of dropdown options. Valid values:</p>
+             * <ul>
+             * <li>MANUAL: manual input.</li>
+             * <li>SYSTEM_REFERENCE: reference to a system property.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder enumSourceType(String enumSourceType) {
                 this.enumSourceType = enumSourceType;
@@ -528,7 +578,7 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * EnumValues.
+             * <p>The list of dropdown options. This parameter has a value only when EnumSourceType is set to MANUAL.</p>
              */
             public Builder enumValues(java.util.List<EnumValues> enumValues) {
                 this.enumValues = enumValues;
@@ -536,7 +586,16 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * InputMode.
+             * <p>The input mode. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM_INPUT: custom input.</li>
+             * <li>DROPDOWN_SINGLE: single-select dropdown.</li>
+             * <li>DROPDOWN_MULTI: multi-select dropdown.</li>
+             * <li>HYPERLINK: hyperlink.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DROPDOWN_SINGLE</p>
              */
             public Builder inputMode(String inputMode) {
                 this.inputMode = inputMode;
@@ -544,7 +603,14 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * LinkTarget.
+             * <p>The hyperlink navigation method. This parameter has a value only when InputMode is set to HYPERLINK. Valid values:</p>
+             * <ul>
+             * <li>CURRENT_PAGE: opens in the current page.</li>
+             * <li>NEW_PAGE: opens in a new page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW_PAGE</p>
              */
             public Builder linkTarget(String linkTarget) {
                 this.linkTarget = linkTarget;
@@ -552,7 +618,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxLength.
+             * <p>The maximum length. This parameter is valid only when ValueType is set to STRING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder maxLength(Integer maxLength) {
                 this.maxLength = maxLength;
@@ -560,7 +629,7 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the property is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -568,7 +637,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemReferenceType.
+             * <p>The type of the referenced system property. This parameter has a value only when EnumSourceType is set to SYSTEM_REFERENCE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder systemReferenceType(String systemReferenceType) {
                 this.systemReferenceType = systemReferenceType;
@@ -576,7 +648,10 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * ValueType.
+             * <p>The data type of the property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -584,7 +659,11 @@ public class GetAssetTypeAttributeCodesResponseBody extends TeaModel {
             }
 
             /**
-             * VisibleIn.
+             * <p>The location where the property is visible. Valid values:</p>
+             * <ul>
+             * <li>ASSET: asset catalog.</li>
+             * <li>DEVELOPMENT: development.</li>
+             * </ul>
              */
             public Builder visibleIn(java.util.List<String> visibleIn) {
                 this.visibleIn = visibleIn;

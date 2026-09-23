@@ -112,6 +112,7 @@ public class SyncDepartmentUserRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class SyncDepartmentUserRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder syncDepartmentUserCommand(SyncDepartmentUserCommand syncDepartmentUserCommand) {
@@ -159,12 +161,16 @@ public class SyncDepartmentUserRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DepartmentIdList")
         private java.util.List<String> departmentIdList;
 
+        @com.aliyun.core.annotation.NameInMap("SourceType")
+        private String sourceType;
+
         @com.aliyun.core.annotation.NameInMap("SourceUserId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String sourceUserId;
 
         private DeptUserMapping(Builder builder) {
             this.departmentIdList = builder.departmentIdList;
+            this.sourceType = builder.sourceType;
             this.sourceUserId = builder.sourceUserId;
         }
 
@@ -184,6 +190,13 @@ public class SyncDepartmentUserRequest extends Request {
         }
 
         /**
+         * @return sourceType
+         */
+        public String getSourceType() {
+            return this.sourceType;
+        }
+
+        /**
          * @return sourceUserId
          */
         public String getSourceUserId() {
@@ -192,6 +205,7 @@ public class SyncDepartmentUserRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> departmentIdList; 
+            private String sourceType; 
             private String sourceUserId; 
 
             private Builder() {
@@ -199,11 +213,12 @@ public class SyncDepartmentUserRequest extends Request {
 
             private Builder(DeptUserMapping model) {
                 this.departmentIdList = model.departmentIdList;
+                this.sourceType = model.sourceType;
                 this.sourceUserId = model.sourceUserId;
             } 
 
             /**
-             * DepartmentIdList.
+             * <p>The list of department IDs to which the user belongs. If this parameter is left empty, the user-department affiliation is deleted.</p>
              */
             public Builder departmentIdList(java.util.List<String> departmentIdList) {
                 this.departmentIdList = departmentIdList;
@@ -211,6 +226,15 @@ public class SyncDepartmentUserRequest extends Request {
             }
 
             /**
+             * SourceType.
+             */
+            public Builder sourceType(String sourceType) {
+                this.sourceType = sourceType;
+                return this;
+            }
+
+            /**
+             * <p>The user ID in the user system. This value is the unique identifier of the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -269,6 +293,7 @@ public class SyncDepartmentUserRequest extends Request {
             } 
 
             /**
+             * <p>The mapping between users and their affiliated departments.</p>
              * <p>This parameter is required.</p>
              */
             public Builder deptUserMapping(java.util.List<DeptUserMapping> deptUserMapping) {

@@ -119,7 +119,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. The value OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +289,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -285,7 +300,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +311,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The column ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c011</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -301,7 +322,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c011</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +333,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionKey.
+             * <p>Indicates whether the column is a partition key.</p>
              */
             public Builder partitionKey(Boolean partitionKey) {
                 this.partitionKey = partitionKey;
@@ -317,7 +341,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * <p>Indicates whether the column is a primary key.</p>
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -540,7 +564,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103111231</p>
              */
             public Builder bizUnitId(String bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -548,7 +575,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The business unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -556,7 +586,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnList.
+             * <p>The list of lineage columns.</p>
              */
             public Builder columnList(java.util.List<ColumnList> columnList) {
                 this.columnList = columnList;
@@ -564,7 +594,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -572,7 +605,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -580,7 +616,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment. Valid values: prod and dev.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -588,7 +627,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * FullTable.
+             * <p>Indicates whether the full table is selected.</p>
              */
             public Builder fullTable(Boolean fullTable) {
                 this.fullTable = fullTable;
@@ -596,7 +635,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The globally unique ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Guid_101121</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -604,7 +646,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -612,7 +657,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -620,7 +668,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20112101</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -628,7 +679,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131211211</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -636,7 +690,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prj_test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -644,7 +701,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The table subtype. For example, dim indicates a dimension logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dim</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -763,7 +823,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -771,7 +834,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -779,7 +845,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The column ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c011</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -787,7 +856,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c011</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -795,7 +867,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionKey.
+             * <p>Indicates whether the column is a partition key.</p>
              */
             public Builder partitionKey(Boolean partitionKey) {
                 this.partitionKey = partitionKey;
@@ -803,7 +875,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * <p>Indicates whether the column is a primary key.</p>
              */
             public Builder primaryKey(Boolean primaryKey) {
                 this.primaryKey = primaryKey;
@@ -1026,7 +1098,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>103111231</p>
              */
             public Builder bizUnitId(String bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -1034,7 +1109,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The business unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -1042,7 +1120,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ColumnList.
+             * <p>The list of lineage columns.</p>
              */
             public Builder columnList(java.util.List<OutputLineageListColumnList> columnList) {
                 this.columnList = columnList;
@@ -1050,7 +1128,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1058,7 +1139,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1066,7 +1150,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment. Valid values: prod and dev.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1074,7 +1161,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * FullTable.
+             * <p>Indicates whether the full table is selected.</p>
              */
             public Builder fullTable(Boolean fullTable) {
                 this.fullTable = fullTable;
@@ -1082,7 +1169,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The globally unique ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Guid_101121</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -1090,7 +1180,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1098,7 +1191,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1106,7 +1202,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The owner of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20112101</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -1114,7 +1213,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131211211</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -1122,7 +1224,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prj_test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1130,7 +1235,10 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The table subtype. For example, dim indicates a dimension logical table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dim</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -1197,7 +1305,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * InputLineageList.
+             * <p>The collection of input lineage tables.</p>
              */
             public Builder inputLineageList(java.util.List<InputLineageList> inputLineageList) {
                 this.inputLineageList = inputLineageList;
@@ -1205,7 +1313,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputLineageList.
+             * <p>The collection of output lineage tables.</p>
              */
             public Builder outputLineageList(java.util.List<OutputLineageList> outputLineageList) {
                 this.outputLineageList = outputLineageList;
@@ -1259,7 +1367,7 @@ public class GetBatchTaskUdfLineagesResponseBody extends TeaModel {
             } 
 
             /**
-             * LineageGroupList.
+             * <p>The list of lineage groups.</p>
              */
             public Builder lineageGroupList(java.util.List<LineageGroupList> lineageGroupList) {
                 this.lineageGroupList = lineageGroupList;

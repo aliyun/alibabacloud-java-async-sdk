@@ -127,6 +127,7 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -137,6 +138,7 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +245,10 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -250,7 +256,10 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -258,7 +267,10 @@ public class ListDataServiceMyAppPermissionsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

@@ -127,6 +127,7 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -137,6 +138,7 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the tenant.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListDataServiceApiCallsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +339,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             } 
 
             /**
-             * ApiId.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20122</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -344,7 +350,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -352,10 +361,13 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * <p>appKey</p>
+             * <p>The application key.</p>
+             * <blockquote>
+             * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1021</p>
+             * <p>12345</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
@@ -363,7 +375,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * AppKeyStr.
+             * <p>The application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app12345</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -371,7 +386,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * ClientIp.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -379,6 +397,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
+             * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -390,7 +409,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -398,7 +420,10 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -406,6 +431,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
+             * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -417,7 +443,7 @@ public class ListDataServiceApiCallsRequest extends Request {
             }
 
             /**
-             * Successful.
+             * <p>Indicates whether the call was successful.</p>
              */
             public Builder successful(Boolean successful) {
                 this.successful = successful;

@@ -127,6 +127,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -137,6 +138,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
+         * <p>The configuration for creating a pipeline or workflow node.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -147,6 +149,7 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +162,10 @@ public class CreatePipelineRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -229,6 +235,12 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: the development environment.</li>
+             * <li>PROD: the production environment.</li>
+             * </ul>
+             * <p>For workflow nodes, only PROD is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +252,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline or workflow node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,7 +363,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * Directory.
+             * <p>The folder of the integration pipeline or workflow node. Default value: root folder. The folder must already exist. If it does not exist, call the relevant API operation to create a folder of type offlinePipeline (or unstructuredPipeline for workflows).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -358,7 +374,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * FileId.
+             * <p>The pipeline or workflow file ID. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -366,7 +385,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>The scheduling node ID of the pipeline or workflow node. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -374,6 +396,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The name of the integration pipeline or workflow node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -385,7 +408,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * PipelineId.
+             * <p>The pipeline or workflow node ID. Leave this parameter empty for initial creation. When updating a pipeline or workflow node, specify at least one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -467,7 +493,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * SendTo.
+             * <p>Specifies the downstream condition for a conditional distribution component. Set this parameter to true if the downstream condition is true, or false otherwise. If the node is a workflow node, you can ignore this parameter.</p>
              */
             public Builder sendTo(Boolean sendTo) {
                 this.sendTo = sendTo;
@@ -475,6 +501,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The name of the input step, which corresponds to Steps[*].StepName.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -486,6 +513,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The name of the output step, which corresponds to Steps[*].StepName.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -599,7 +627,12 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * IsDistribute.
+             * <p>Specifies the data distribution mode when the current component has multiple downstream components. Valid values:</p>
+             * <ul>
+             * <li>true: The data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
+             * <li>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
+             * </ul>
+             * <p>If the node is a workflow node, you can ignore this parameter.</p>
              */
             public Builder isDistribute(Boolean isDistribute) {
                 this.isDistribute = isDistribute;
@@ -607,6 +640,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The plugin ID. Each plugin or operator has a unique identifier. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -618,6 +652,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the relevant subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (for workflow operators, use com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig). Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the node configuration created on the Dataphin console.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -629,6 +664,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The step name. Step names must be unique within the same pipeline node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -640,6 +676,14 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The component type. Valid values:</p>
+             * <ul>
+             * <li>input: an input component.</li>
+             * <li>output: an output component.</li>
+             * <li>transfrom: a transform component.</li>
+             * <li>process: a flow control component.</li>
+             * </ul>
+             * <p>For workflow nodes, this parameter specifies the operator type, such as image or text. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should inherit the component or operator configuration class and implement the corresponding component or operator configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -712,6 +756,7 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
+             * <p>The directed acyclic graph (DAG) link configuration that describes the connections between all components or operators.</p>
              * <p>This parameter is required.</p>
              */
             public Builder hops(java.util.List<Hops> hops) {
@@ -720,6 +765,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The component or operator configurations, which contain the detailed configurations of all components or operators used.</p>
              * <p>This parameter is required.</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
@@ -881,7 +927,10 @@ public class CreatePipelineRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -889,7 +938,15 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The integration pipeline configuration mode. Valid values:</p>
+             * <ul>
+             * <li>PIPELINE: pipeline mode. This is the default value.</li>
+             * <li>JSON: script mode.</li>
+             * </ul>
+             * <p>If the node is a workflow node, you can ignore this parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PIPELINE</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -897,6 +954,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The basic information of the integration pipeline or workflow node.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
@@ -905,6 +963,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The integration pipeline component or workflow operator configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder pipelineConfig(PipelineConfig pipelineConfig) {
@@ -913,7 +972,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * PipelineJson.
+             * <p>The integration pipeline configuration in JSON string format for script mode. Workflow nodes do not support script mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pipelineJson(String pipelineJson) {
                 this.pipelineJson = pipelineJson;
@@ -921,7 +983,16 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * PipelineType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>0: offline integration. Default value: 0.</li>
+             * <li>1: real-time integration.</li>
+             * <li>14: offline workflow node.</li>
+             * <li>15: real-time workflow.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder pipelineType(Integer pipelineType) {
                 this.pipelineType = pipelineType;
@@ -929,6 +1000,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
+             * <p>The scheduling configuration in JSON string format. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -940,7 +1012,10 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * Settings.
+             * <p>The channel configuration in JSON string format. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -948,7 +1023,7 @@ public class CreatePipelineRequest extends Request {
             }
 
             /**
-             * Submit.
+             * <p>Specifies whether to submit the node. The node is submitted by default.</p>
              */
             public Builder submit(Boolean submit) {
                 this.submit = submit;

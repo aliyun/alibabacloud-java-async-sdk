@@ -127,6 +127,7 @@ public class GetQualityWatchByObjectIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +149,7 @@ public class GetQualityWatchByObjectIdRequest extends Request {
         }
 
         /**
+         * <p>The object ID, such as a table ID, datasource ID, or metric ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,14 @@ public class GetQualityWatchByObjectIdRequest extends Request {
         }
 
         /**
+         * <p>The monitored object type. Valid values:</p>
+         * <ul>
+         * <li>TABLE: Dataphin table.</li>
+         * <li>DATASOURCE_TABLE: global table.</li>
+         * <li>DATASOURCE: datasource.</li>
+         * <li>INDEX: metric.</li>
+         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

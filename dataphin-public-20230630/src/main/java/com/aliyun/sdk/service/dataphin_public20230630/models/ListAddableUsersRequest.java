@@ -112,6 +112,7 @@ public class ListAddableUsersRequest extends Request {
         }
 
         /**
+         * <p>The request object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListAddableUsersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,10 @@ public class ListAddableUsersRequest extends Request {
             } 
 
             /**
-             * Page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -223,7 +228,10 @@ public class ListAddableUsersRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -231,7 +239,10 @@ public class ListAddableUsersRequest extends Request {
             }
 
             /**
-             * SearchText.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder searchText(String searchText) {
                 this.searchText = searchText;

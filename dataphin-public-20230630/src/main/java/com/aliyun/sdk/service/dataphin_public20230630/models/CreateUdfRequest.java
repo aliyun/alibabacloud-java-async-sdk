@@ -112,6 +112,7 @@ public class CreateUdfRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateUdfRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,6 +317,7 @@ public class CreateUdfRequest extends Request {
             } 
 
             /**
+             * <p>The UDF category identifier. Valid values: 1: window function. 2: statistical function. 3: numerical function. 4: string function. 5: time function. 6: IP address utility function. 7: URL-related function. 8: encoding and decoding function. 9: business-related function. 10: other.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -326,6 +329,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The class name that implements the function in the resource.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -337,6 +341,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The command format for function calling invoke.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -348,6 +353,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The commit remarks.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -359,6 +365,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The compute engine type. Valid values: MAX_COMPUTE, HADOOP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -370,6 +377,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -381,7 +389,10 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The directory in which the function is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -389,6 +400,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The function name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -400,6 +412,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -411,6 +424,7 @@ public class CreateUdfRequest extends Request {
             }
 
             /**
+             * <p>The IDs of referenced resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder refResourceIdList(java.util.List<Long> refResourceIdList) {

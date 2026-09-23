@@ -142,6 +142,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         }
 
         /**
+         * <p>The environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +177,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class GetClusterQueueInfoByEnvRequest extends Request {
         }
 
         /**
+         * <p>The stream-batch mode.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

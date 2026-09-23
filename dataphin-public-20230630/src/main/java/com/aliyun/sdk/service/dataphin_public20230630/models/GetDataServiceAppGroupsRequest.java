@@ -112,6 +112,7 @@ public class GetDataServiceAppGroupsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +134,13 @@ public class GetDataServiceAppGroupsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The data service project ID.</p>
+         * <blockquote>
+         * <p>Notice: This field is deprecated.</notice>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>102102</p>
          */
         public Builder projectId(Integer projectId) {
             this.putQueryParameter("ProjectId", projectId);

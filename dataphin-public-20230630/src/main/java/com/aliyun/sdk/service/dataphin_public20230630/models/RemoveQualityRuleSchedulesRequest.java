@@ -112,6 +112,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
         }
 
         /**
+         * <p>The unbinding instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {
@@ -218,6 +220,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
             } 
 
             /**
+             * <p>The rule ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
             }
 
             /**
+             * <p>The schedule IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder scheduleIdList(java.util.List<Long> scheduleIdList) {
@@ -237,6 +241,7 @@ public class RemoveQualityRuleSchedulesRequest extends Request {
             }
 
             /**
+             * <p>The ID of the monitored object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

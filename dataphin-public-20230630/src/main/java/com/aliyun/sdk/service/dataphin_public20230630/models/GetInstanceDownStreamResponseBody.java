@@ -119,7 +119,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. OK indicates a successful request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceRelationList.
+         * <p>Downstream instances and dependency relationships.</p>
          */
         public Builder instanceRelationList(java.util.List<InstanceRelationList> instanceRelationList) {
             this.instanceRelationList = instanceRelationList;
@@ -143,7 +149,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldInstanceId.
+             * <p>Field instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_23211</p>
              */
             public Builder fieldInstanceId(String fieldInstanceId) {
                 this.fieldInstanceId = fieldInstanceId;
@@ -246,7 +264,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * RunStatus.
+             * <p>Run status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder runStatus(String runStatus) {
                 this.runStatus = runStatus;
@@ -254,7 +275,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * SelectStatus.
+             * <p>Selection status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OPTIONAL</p>
              */
             public Builder selectStatus(String selectStatus) {
                 this.selectStatus = selectStatus;
@@ -334,7 +358,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>Instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_232411</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +369,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +380,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -482,7 +515,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * DownStreamDepth.
+             * <p>Depth level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downStreamDepth(Integer downStreamDepth) {
                 this.downStreamDepth = downStreamDepth;
@@ -490,7 +526,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>Extended information of the node instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;x&quot;}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -498,7 +537,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * FieldInstanceList.
+             * <p>Field instance list.</p>
              */
             public Builder fieldInstanceList(java.util.List<FieldInstanceList> fieldInstanceList) {
                 this.fieldInstanceList = fieldInstanceList;
@@ -506,7 +545,7 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInfo.
+             * <p>Instance information.</p>
              */
             public Builder instanceInfo(InstanceInfo instanceInfo) {
                 this.instanceInfo = instanceInfo;
@@ -514,7 +553,10 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * RunStatus.
+             * <p>Run status of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder runStatus(String runStatus) {
                 this.runStatus = runStatus;
@@ -522,7 +564,16 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * SelectStatus.
+             * <p>Selection status of the instance, primarily used for logical fields.</p>
+             * <ul>
+             * <li>OPTIONAL: Optional.</li>
+             * <li>SELECTED: Required.</li>
+             * <li>DISABLE: Not selectable.</li>
+             * <li>GROUP_SELECTED: Select all or deselect all.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OPTIONAL</p>
              */
             public Builder selectStatus(String selectStatus) {
                 this.selectStatus = selectStatus;
@@ -530,7 +581,24 @@ public class GetInstanceDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * SelectStatusCause.
+             * <p>Reason why the instance is selected.</p>
+             * <ul>
+             * <li>PK_CHANGE</li>
+             * <li>LOGIC_CHANGE</li>
+             * <li>RELATION</li>
+             * <li>BIZ_RELATIO</li>
+             * <li>MV_RELATION</li>
+             * <li>MODEL_REFRESH</li>
+             * <li>FIELD_DELETED</li>
+             * <li>FIELD_ADDED_NO_INSTANCE</li>
+             * <li>PERMISSION_DENY</li>
+             * <li>OUTSIDE_INCOMING</li>
+             * <li>INSTANCE_STATUS</li>
+             * <li>AFFECT_BY_UPSTREAM</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FIELD_DELETED</p>
              */
             public Builder selectStatusCause(String selectStatusCause) {
                 this.selectStatusCause = selectStatusCause;

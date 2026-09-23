@@ -112,6 +112,7 @@ public class SubmitAssetsOffShelveRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class SubmitAssetsOffShelveRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class SubmitAssetsOffShelveRequest extends Request {
         }
 
         /**
+         * <p>The delisting submit command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitCommand(SubmitCommand submitCommand) {
@@ -204,6 +209,7 @@ public class SubmitAssetsOffShelveRequest extends Request {
             } 
 
             /**
+             * <p>The list of asset GUIDs to be delisted. A maximum of 50 GUIDs can be specified per request.</p>
              * <p>This parameter is required.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {
@@ -212,7 +218,11 @@ public class SubmitAssetsOffShelveRequest extends Request {
             }
 
             /**
+             * <p>The delisting description. The value must be 1 to 100 characters in length.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Business adjustment, no longer available externally</p>
              */
             public Builder offShelveDescription(String offShelveDescription) {
                 this.offShelveDescription = offShelveDescription;

@@ -119,7 +119,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -316,7 +328,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The comment for the submission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -324,7 +339,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:10:10</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -332,7 +350,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:10:10</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -340,7 +361,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_10231001</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -348,7 +372,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10232111011</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -356,7 +383,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Published.
+             * <p>Indicates whether the version has been published to the production environment.</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;
@@ -364,7 +391,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user who submitted the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20110110</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -372,7 +402,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The ID of the user who submitted the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -380,7 +413,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -434,7 +470,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
             } 
 
             /**
-             * BatchTaskVersionList.
+             * <p>The list of batch task versions.</p>
              */
             public Builder batchTaskVersionList(java.util.List<BatchTaskVersionList> batchTaskVersionList) {
                 this.batchTaskVersionList = batchTaskVersionList;

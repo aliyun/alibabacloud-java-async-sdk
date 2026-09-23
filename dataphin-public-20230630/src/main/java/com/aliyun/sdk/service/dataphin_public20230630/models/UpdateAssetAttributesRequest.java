@@ -112,6 +112,7 @@ public class UpdateAssetAttributesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateAssetAttributesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UpdateAssetAttributesRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +209,7 @@ public class UpdateAssetAttributesRequest extends Request {
             } 
 
             /**
+             * <p>The property code. This value must match the AttributeCode returned by the GetAssetTypeAttributeCodes operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,7 @@ public class UpdateAssetAttributesRequest extends Request {
             }
 
             /**
+             * <p>The list of property values. For a single-value property, pass one element. For a multi-value property, pass multiple elements. Pass an empty array [] to clear the property value.</p>
              * <p>This parameter is required.</p>
              */
             public Builder values(java.util.List<String> values) {
@@ -284,6 +291,7 @@ public class UpdateAssetAttributesRequest extends Request {
             } 
 
             /**
+             * <p>The list of properties to update.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributeList(java.util.List<AttributeList> attributeList) {
@@ -292,6 +300,7 @@ public class UpdateAssetAttributesRequest extends Request {
             }
 
             /**
+             * <p>The globally unique identifier (GUID) of the asset. You can obtain this value by calling operations such as ListCatalogAssets and GetTableColumnByTableGuids.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,6 +359,7 @@ public class UpdateAssetAttributesRequest extends Request {
             } 
 
             /**
+             * <p>The list of asset property updates. A maximum of 50 entries can be specified in a single request.</p>
              * <p>This parameter is required.</p>
              */
             public Builder assetAttributeUpdateList(java.util.List<AssetAttributeUpdateList> assetAttributeUpdateList) {

@@ -119,7 +119,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLogDTO.
+         * <p>The operation log details.</p>
          */
         public Builder operationLogDTO(OperationLogDTO operationLogDTO) {
             this.operationLogDTO = operationLogDTO;
@@ -162,7 +171,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -371,7 +380,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * BeginTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-15 10:30:00</p>
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -379,7 +391,17 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * CodeType.
+             * <p>The code type. Valid values:</p>
+             * <ul>
+             * <li>SQL0: SQL</li>
+             * <li>shell1: Shell</li>
+             * <li>Python2: Python</li>
+             * <li>MR3: MR</li>
+             * <li>Spark4: Spark</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder codeType(Integer codeType) {
                 this.codeType = codeType;
@@ -387,7 +409,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The execution duration, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -395,7 +420,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -403,7 +431,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试任务</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +442,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>onedata-ide</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -419,7 +453,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * OperationId.
+             * <p>The operation log ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>987654321</p>
              */
             public Builder operationId(Long operationId) {
                 this.operationId = operationId;
@@ -427,7 +464,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131211211</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -435,7 +475,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * RelationTables.
+             * <p>The list of related tables.</p>
              */
             public Builder relationTables(java.util.List<String> relationTables) {
                 this.relationTables = relationTables;
@@ -443,7 +483,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Runner.
+             * <p>The ID of the runner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30231123</p>
              */
             public Builder runner(String runner) {
                 this.runner = runner;
@@ -451,7 +494,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * RunnerName.
+             * <p>The name of the runner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder runnerName(String runnerName) {
                 this.runnerName = runnerName;
@@ -459,7 +505,15 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li>4: Running.</li>
+             * <li>5: Succeeded.</li>
+             * <li>6: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -467,7 +521,10 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10001</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

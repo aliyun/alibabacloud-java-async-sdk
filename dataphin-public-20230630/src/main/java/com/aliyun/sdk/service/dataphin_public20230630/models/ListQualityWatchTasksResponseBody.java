@@ -119,7 +119,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorRuleCount.
+             * <p>The number of rules that failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorRuleCount(Long errorRuleCount) {
                 this.errorRuleCount = errorRuleCount;
@@ -262,7 +274,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedRuleCount.
+             * <p>The number of rules that have been executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder finishedRuleCount(Long finishedRuleCount) {
                 this.finishedRuleCount = finishedRuleCount;
@@ -270,7 +285,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRuleCount.
+             * <p>The number of rules that were successfully executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successRuleCount(Long successRuleCount) {
                 this.successRuleCount = successRuleCount;
@@ -278,7 +296,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRuleCount.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalRuleCount(Long totalRuleCount) {
                 this.totalRuleCount = totalRuleCount;
@@ -371,7 +392,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorRuleCount.
+             * <p>The number of rules that failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorRuleCount(Long errorRuleCount) {
                 this.errorRuleCount = errorRuleCount;
@@ -379,7 +403,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedRuleCount.
+             * <p>The number of rules that have been executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder finishedRuleCount(Long finishedRuleCount) {
                 this.finishedRuleCount = finishedRuleCount;
@@ -387,7 +414,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRuleCount.
+             * <p>The number of rules that were successfully executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successRuleCount(Long successRuleCount) {
                 this.successRuleCount = successRuleCount;
@@ -395,7 +425,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRuleCount.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalRuleCount(Long totalRuleCount) {
                 this.totalRuleCount = totalRuleCount;
@@ -488,7 +521,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorRuleCount.
+             * <p>The number of rules that failed to be executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder errorRuleCount(Long errorRuleCount) {
                 this.errorRuleCount = errorRuleCount;
@@ -496,7 +532,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedRuleCount.
+             * <p>The number of rules that have been executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder finishedRuleCount(Long finishedRuleCount) {
                 this.finishedRuleCount = finishedRuleCount;
@@ -504,7 +543,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRuleCount.
+             * <p>The number of rules that were successfully executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder successRuleCount(Long successRuleCount) {
                 this.successRuleCount = successRuleCount;
@@ -512,7 +554,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRuleCount.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalRuleCount(Long totalRuleCount) {
                 this.totalRuleCount = totalRuleCount;
@@ -592,7 +637,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * StrongRuleCount.
+             * <p>The strong rule count information.</p>
              */
             public Builder strongRuleCount(StrongRuleCount strongRuleCount) {
                 this.strongRuleCount = strongRuleCount;
@@ -600,7 +645,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateRuleCount.
+             * <p>The validation rule count information.</p>
              */
             public Builder validateRuleCount(ValidateRuleCount validateRuleCount) {
                 this.validateRuleCount = validateRuleCount;
@@ -608,7 +653,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WeakRuleCount.
+             * <p>The weak rule count information.</p>
              */
             public Builder weakRuleCount(WeakRuleCount weakRuleCount) {
                 this.weakRuleCount = weakRuleCount;
@@ -844,7 +889,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -852,7 +900,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BizDateFormat.
+             * <p>The business date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd</p>
              */
             public Builder bizDateFormat(String bizDateFormat) {
                 this.bizDateFormat = bizDateFormat;
@@ -860,7 +911,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -868,7 +922,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -876,7 +933,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 20:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -884,7 +944,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -892,7 +955,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -900,7 +966,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -908,7 +977,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * QualityOwner.
+             * <p>The user ID of the quality owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder qualityOwner(String qualityOwner) {
                 this.qualityOwner = qualityOwner;
@@ -916,7 +988,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * QualityOwnerName.
+             * <p>The name of the quality owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder qualityOwnerName(String qualityOwnerName) {
                 this.qualityOwnerName = qualityOwnerName;
@@ -924,7 +999,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCountInfo.
+             * <p>The quality rule count information.</p>
              */
             public Builder ruleCountInfo(RuleCountInfo ruleCountInfo) {
                 this.ruleCountInfo = ruleCountInfo;
@@ -932,7 +1007,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIdList.
+             * <p>The list of quality rule IDs.</p>
              */
             public Builder ruleIdList(java.util.List<Long> ruleIdList) {
                 this.ruleIdList = ruleIdList;
@@ -940,7 +1015,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -948,7 +1026,20 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: not executed.</li>
+             * <li>WAITING: waiting.</li>
+             * <li>RUNNING: running.</li>
+             * <li>SUCCESS: succeeded.</li>
+             * <li>FAILED: failed.</li>
+             * <li>CANCEL: canceled.</li>
+             * <li>TIMEOUT: timed out.</li>
+             * <li>OFFLINE: offline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -956,7 +1047,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WatchId.
+             * <p>The ID of the monitored object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;
@@ -1023,7 +1117,7 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * QualityWatchTaskList.
+             * <p>The list of quality watchtasks.</p>
              */
             public Builder qualityWatchTaskList(java.util.List<QualityWatchTaskList> qualityWatchTaskList) {
                 this.qualityWatchTaskList = qualityWatchTaskList;
@@ -1031,7 +1125,10 @@ public class ListQualityWatchTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

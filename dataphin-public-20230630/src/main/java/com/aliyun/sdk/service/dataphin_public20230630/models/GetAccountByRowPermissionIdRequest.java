@@ -112,6 +112,7 @@ public class GetAccountByRowPermissionIdRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder getAccountByRowPermissionIdQuery(GetAccountByRowPermissionIdQuery getAccountByRowPermissionIdQuery) {
@@ -122,6 +123,7 @@ public class GetAccountByRowPermissionIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +205,7 @@ public class GetAccountByRowPermissionIdRequest extends Request {
             } 
 
             /**
+             * <p>The row-level permission ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -214,7 +217,7 @@ public class GetAccountByRowPermissionIdRequest extends Request {
             }
 
             /**
-             * RuleIds.
+             * <p>The row-level permission rule IDs.</p>
              */
             public Builder ruleIds(java.util.List<Long> ruleIds) {
                 this.ruleIds = ruleIds;

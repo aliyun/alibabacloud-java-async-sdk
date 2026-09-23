@@ -112,6 +112,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
         }
 
         /**
+         * <p>The check command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkCommand(CheckCommand checkCommand) {
@@ -122,6 +123,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
             } 
 
             /**
+             * <p>The configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
             }
 
             /**
+             * <p>The value of the configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +291,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
             } 
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configList(java.util.List<ConfigList> configList) {
@@ -295,6 +300,7 @@ public class CheckComputeSourceConnectivityRequest extends Request {
             }
 
             /**
+             * <p>The compute source type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

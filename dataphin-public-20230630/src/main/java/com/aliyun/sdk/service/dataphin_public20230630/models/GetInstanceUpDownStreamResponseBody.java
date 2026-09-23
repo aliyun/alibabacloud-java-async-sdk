@@ -119,7 +119,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceDagInfo.
+         * <p>The instance dag data, including the current instance and its upstream and downstream instances.</p>
          */
         public Builder instanceDagInfo(InstanceDagInfo instanceDagInfo) {
             this.instanceDagInfo = instanceDagInfo;
@@ -143,7 +149,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldInstanceIdList.
+             * <p>The list of field IDs.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -272,7 +287,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_1234567</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -280,7 +298,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +309,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1234567</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -296,7 +320,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -402,7 +429,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldInstanceIdList.
+             * <p>The list of field IDs.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -410,7 +437,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_1234567</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -418,7 +448,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -426,7 +459,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1234567</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -434,7 +470,15 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: code node.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
+             * <li>PIPELINE_NODE: pipeline node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -540,7 +584,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * FieldInstanceIdList.
+             * <p>The list of field IDs.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -548,7 +592,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_1234567</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -556,7 +603,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -564,7 +614,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1234567</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -572,7 +625,10 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -652,7 +708,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * DownInstanceList.
+             * <p>The downstream instances.</p>
              */
             public Builder downInstanceList(java.util.List<DownInstanceList> downInstanceList) {
                 this.downInstanceList = downInstanceList;
@@ -660,7 +716,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * StartInstanceList.
+             * <p>The center instances.</p>
              */
             public Builder startInstanceList(java.util.List<StartInstanceList> startInstanceList) {
                 this.startInstanceList = startInstanceList;
@@ -668,7 +724,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * UpInstanceList.
+             * <p>The upstream instances.</p>
              */
             public Builder upInstanceList(java.util.List<UpInstanceList> upInstanceList) {
                 this.upInstanceList = upInstanceList;

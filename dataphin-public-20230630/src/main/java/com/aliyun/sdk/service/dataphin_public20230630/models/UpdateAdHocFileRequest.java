@@ -112,6 +112,7 @@ public class UpdateAdHocFileRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateAdHocFileRequest extends Request {
         }
 
         /**
+         * <p>The update request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -218,6 +220,7 @@ public class UpdateAdHocFileRequest extends Request {
             } 
 
             /**
+             * <p>The file content.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class UpdateAdHocFileRequest extends Request {
             }
 
             /**
+             * <p>The file ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +244,7 @@ public class UpdateAdHocFileRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

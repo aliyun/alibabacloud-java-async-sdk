@@ -112,6 +112,7 @@ public class DeleteSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +205,7 @@ public class DeleteSecurityClassifyCatalogRequest extends Request {
             } 
 
             /**
+             * <p>The full path of the original catalog.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -214,7 +217,7 @@ public class DeleteSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * ReturnRemovedDetails.
+             * <p>Specifies whether to return deletion details. Default value: true.</p>
              */
             public Builder returnRemovedDetails(Boolean returnRemovedDetails) {
                 this.returnRemovedDetails = returnRemovedDetails;

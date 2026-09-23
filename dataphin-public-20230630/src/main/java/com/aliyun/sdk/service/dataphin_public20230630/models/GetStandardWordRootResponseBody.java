@@ -119,7 +119,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetStandardWordRootResponseBody extends TeaModel {
         }
 
         /**
-         * WordRootInfo.
+         * <p>The word root details.</p>
          */
         public Builder wordRootInfo(WordRootInfo wordRootInfo) {
             this.wordRootInfo = wordRootInfo;
@@ -332,7 +341,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             } 
 
             /**
-             * Abbreviation.
+             * <p>The abbreviation of the word root.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>avg</p>
              */
             public Builder abbreviation(String abbreviation) {
                 this.abbreviation = abbreviation;
@@ -340,7 +352,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -348,7 +363,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -356,7 +374,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -364,7 +385,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the word root.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -372,7 +396,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * FullName.
+             * <p>The full name of the word root.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>average</p>
              */
             public Builder fullName(String fullName) {
                 this.fullName = fullName;
@@ -380,7 +407,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -388,7 +418,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The username of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -396,7 +429,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -404,7 +440,10 @@ public class GetStandardWordRootResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the word root.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>平均值</p>
              */
             public Builder name(String name) {
                 this.name = name;

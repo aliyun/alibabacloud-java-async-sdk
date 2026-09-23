@@ -119,7 +119,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. OK indicates a successful request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code returned by the backend</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePermissionList.
+         * <p>Resource permission list</p>
          */
         public Builder resourcePermissionList(java.util.List<ResourcePermissionList> resourcePermissionList) {
             this.resourcePermissionList = resourcePermissionList;
@@ -159,7 +171,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
             } 
 
             /**
-             * HasPermission.
+             * <p>Indicates whether the user has the permission on the specified resource</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasPermission(Boolean hasPermission) {
                 this.hasPermission = hasPermission;
@@ -233,7 +251,10 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>Resource ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hadoop.300000806.data_distill.behavior_gameinfor_01</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

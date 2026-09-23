@@ -112,6 +112,7 @@ public class PublishObjectListRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class PublishObjectListRequest extends Request {
         }
 
         /**
+         * <p>The publish command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder publishCommand(PublishCommand publishCommand) {
@@ -218,6 +220,7 @@ public class PublishObjectListRequest extends Request {
             } 
 
             /**
+             * <p>The publish comment. The string can be up to 1024 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class PublishObjectListRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +244,7 @@ public class PublishObjectListRequest extends Request {
             }
 
             /**
+             * <p>The list of pending publish record IDs to be published. A maximum of 50 submit IDs can be specified.</p>
              * <p>This parameter is required.</p>
              */
             public Builder submitIdList(java.util.List<Long> submitIdList) {

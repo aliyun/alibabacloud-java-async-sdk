@@ -119,7 +119,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the asset delisting submission.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorCode.
+             * <p>The error code returned when the submission fails. This value is empty when the submission succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OffShelveFailed</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -262,7 +274,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the submission fails. This value is empty when the submission succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Asset does not exist: odps.project_a.table_not_exist</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -270,7 +285,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The unique identifier of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.project_a.table_orders</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -278,7 +296,7 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the direct delisting or delisting approval was submitted successfully.</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -371,7 +389,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             } 
 
             /**
-             * FailCount.
+             * <p>The number of assets for which the delisting submission failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -379,7 +400,7 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * ResultList.
+             * <p>The delisting submission results for each asset.</p>
              */
             public Builder resultList(java.util.List<ResultList> resultList) {
                 this.resultList = resultList;
@@ -387,7 +408,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of assets for which the delisting submission succeeded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -395,7 +419,10 @@ public class SubmitAssetsOffShelveResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of assets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

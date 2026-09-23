@@ -119,7 +119,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The list of all applications under the tenant.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -236,7 +248,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +357,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppGroup.
+             * <p>Application group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认分组</p>
              */
             public Builder appGroup(String appGroup) {
                 this.appGroup = appGroup;
@@ -350,7 +368,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -358,7 +379,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认应用</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -366,7 +390,7 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * IsMember.
+             * <p>Indicates whether the current user has joined the application.</p>
              */
             public Builder isMember(Boolean isMember) {
                 this.isMember = isMember;
@@ -374,7 +398,7 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerList.
+             * <p>Owner list.</p>
              */
             public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
@@ -441,7 +465,7 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppList.
+             * <p>Application list.</p>
              */
             public Builder appList(java.util.List<AppList> appList) {
                 this.appList = appList;
@@ -449,7 +473,10 @@ public class ListDataServiceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

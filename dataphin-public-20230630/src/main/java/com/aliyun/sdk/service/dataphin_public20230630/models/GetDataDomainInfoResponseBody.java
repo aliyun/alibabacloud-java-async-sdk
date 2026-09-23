@@ -119,7 +119,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DataDomainInfo.
+         * <p>The data domain details.</p>
          */
         public Builder dataDomainInfo(DataDomainInfo dataDomainInfo) {
             this.dataDomainInfo = dataDomainInfo;
@@ -135,7 +138,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -368,7 +380,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Abbreviation.
+             * <p>The abbreviation of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm_code_name</p>
              */
             public Builder abbreviation(String abbreviation) {
                 this.abbreviation = abbreviation;
@@ -376,7 +391,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The ID of the business unit to which the data domain belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>545844456</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -384,7 +402,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -392,7 +413,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -400,7 +424,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -408,7 +435,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -416,7 +446,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The data domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1241844456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -424,7 +457,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The ID of the user who last modified the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -432,7 +468,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The name of the user who last modified the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -440,7 +479,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dm_code_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -448,7 +490,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The ID of the business object owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -456,7 +501,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The ID of the business object owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -464,7 +512,10 @@ public class GetDataDomainInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the parent data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10232311</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;

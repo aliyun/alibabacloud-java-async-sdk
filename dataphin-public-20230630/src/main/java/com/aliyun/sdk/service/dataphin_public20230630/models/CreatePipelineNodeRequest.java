@@ -112,6 +112,7 @@ public class CreatePipelineNodeRequest extends Request {
         }
 
         /**
+         * <p>The command to create a pipeline. Both offline and real-time pipelines are supported.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createPipelineNodeCommand(CreatePipelineNodeCommand createPipelineNodeCommand) {
@@ -122,6 +123,7 @@ public class CreatePipelineNodeRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +218,10 @@ public class CreatePipelineNodeRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The file description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -224,7 +229,10 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
-             * Directory.
+             * <p>The full path of the parent directory of the file. If this parameter is left empty, the root path (/) is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -232,6 +240,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
+             * <p>The file name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -346,6 +355,7 @@ public class CreatePipelineNodeRequest extends Request {
             } 
 
             /**
+             * <p>The task file information.</p>
              * <p>This parameter is required.</p>
              */
             public Builder fileInfo(FileInfo fileInfo) {
@@ -354,6 +364,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
+             * <p>The node type. Valid values: NORMAL, MANUAL, and REAL_TIME.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,6 +376,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
+             * <p>The pipeline name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -376,6 +388,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
+             * <p>The pipeline type. Valid values: OFFLINE_PIPELINE and REAL_TIME_PIPELINE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -387,6 +400,7 @@ public class CreatePipelineNodeRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

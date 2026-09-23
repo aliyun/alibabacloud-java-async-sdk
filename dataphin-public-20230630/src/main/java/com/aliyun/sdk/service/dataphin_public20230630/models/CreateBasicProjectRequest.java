@@ -112,6 +112,7 @@ public class CreateBasicProjectRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateBasicProjectRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,10 @@ public class CreateBasicProjectRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -223,7 +228,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -231,7 +239,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -390,7 +401,10 @@ public class CreateBasicProjectRequest extends Request {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -398,7 +412,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * ComputeSourceId.
+             * <p>The offline compute source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder computeSourceId(Long computeSourceId) {
                 this.computeSourceId = computeSourceId;
@@ -406,7 +423,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -414,7 +434,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The project display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My project.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -422,6 +445,7 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
+             * <p>The project name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -433,7 +457,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * NameSpaceTag.
+             * <p>The namespace identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nameSpaceTag(String nameSpaceTag) {
                 this.nameSpaceTag = nameSpaceTag;
@@ -441,7 +468,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * StreamComputeSourceId.
+             * <p>The real-time compute source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2002</p>
              */
             public Builder streamComputeSourceId(Long streamComputeSourceId) {
                 this.streamComputeSourceId = streamComputeSourceId;
@@ -449,7 +479,10 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The project type. If this parameter is left empty, the default value GENERAL is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -457,7 +490,7 @@ public class CreateBasicProjectRequest extends Request {
             }
 
             /**
-             * WhiteLists.
+             * <p>The sandbox whitelist.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
                 this.whiteLists = whiteLists;

@@ -112,6 +112,7 @@ public class GetTableLineageByTaskIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class GetTableLineageByTaskIdRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class GetTableLineageByTaskIdRequest extends Request {
         }
 
         /**
+         * <p>The data structure for querying table lineage.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tableLineageByTaskIdQuery(TableLineageByTaskIdQuery tableLineageByTaskIdQuery) {
@@ -216,7 +221,7 @@ public class GetTableLineageByTaskIdRequest extends Request {
             } 
 
             /**
-             * NeedNotExistObject.
+             * <p>Specifies whether to return tables that do not exist in the asset inventory. If this parameter is not specified, non-existent tables are not returned.</p>
              */
             public Builder needNotExistObject(Boolean needNotExistObject) {
                 this.needNotExistObject = needNotExistObject;
@@ -224,7 +229,10 @@ public class GetTableLineageByTaskIdRequest extends Request {
             }
 
             /**
-             * TaskEnv.
+             * <p>The environment of the node used to filter the query. Valid values: DEV and PROD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder taskEnv(String taskEnv) {
                 this.taskEnv = taskEnv;
@@ -232,6 +240,7 @@ public class GetTableLineageByTaskIdRequest extends Request {
             }
 
             /**
+             * <p>The ID of the node used to filter the query.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

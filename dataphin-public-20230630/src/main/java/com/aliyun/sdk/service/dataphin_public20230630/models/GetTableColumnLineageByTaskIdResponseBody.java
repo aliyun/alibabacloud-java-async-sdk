@@ -119,7 +119,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Query results.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -550,7 +565,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             } 
 
             /**
-             * InputBizUnitId.
+             * <p>Business unit ID of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputBizUnitId(Long inputBizUnitId) {
                 this.inputBizUnitId = inputBizUnitId;
@@ -558,7 +576,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputColumnId.
+             * <p>GUID of the input column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.123.test_project.input_table.id</p>
              */
             public Builder inputColumnId(String inputColumnId) {
                 this.inputColumnId = inputColumnId;
@@ -566,7 +587,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputColumnName.
+             * <p>Input column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder inputColumnName(String inputColumnName) {
                 this.inputColumnName = inputColumnName;
@@ -574,7 +598,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputDataSourceId.
+             * <p>Data source ID of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputDataSourceId(Long inputDataSourceId) {
                 this.inputDataSourceId = inputDataSourceId;
@@ -582,7 +609,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputDataSourceType.
+             * <p>Storage type of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder inputDataSourceType(String inputDataSourceType) {
                 this.inputDataSourceType = inputDataSourceType;
@@ -590,7 +620,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputDbType.
+             * <p>Database type of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder inputDbType(String inputDbType) {
                 this.inputDbType = inputDbType;
@@ -598,7 +631,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputEnv.
+             * <p>Environment of the input table: DEV or PROD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder inputEnv(String inputEnv) {
                 this.inputEnv = inputEnv;
@@ -606,7 +642,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputProjectId.
+             * <p>Project ID of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder inputProjectId(Long inputProjectId) {
                 this.inputProjectId = inputProjectId;
@@ -614,7 +653,7 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableDeleted.
+             * <p>Indicates whether the input table is deleted.</p>
              */
             public Builder inputTableDeleted(Boolean inputTableDeleted) {
                 this.inputTableDeleted = inputTableDeleted;
@@ -622,7 +661,15 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableId.
+             * <p>GUID of the input table. Each asset has a unique GUID in the following format: </p>
+             * <ul>
+             * <li>Logical table: dp_table.[TenantId].[BizUnitName].[TableName]</li>
+             * <li>Compute source physical table: [EngineType].[TenantId].[ProjectName].[TableName]</li>
+             * <li>Data source table: dp_ds_table.[TenantId].[DataSourceId].[SchemaName].[TableName]</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.123.test_project.order</p>
              */
             public Builder inputTableId(String inputTableId) {
                 this.inputTableId = inputTableId;
@@ -630,7 +677,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableName.
+             * <p>Input table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order</p>
              */
             public Builder inputTableName(String inputTableName) {
                 this.inputTableName = inputTableName;
@@ -638,7 +688,23 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * InputTableType.
+             * <p>Input table type. Valid values:</p>
+             * <ul>
+             * <li>PHYSICAL_TABLE: Physical table (compute source)</li>
+             * <li>DIM_LOGIC_TABLE: Dimension logical table</li>
+             * <li>FACT_LOGIC_TABLE: Fact logical table</li>
+             * <li>SUM_LOGIC_TABLE: Summary logical table</li>
+             * <li>REAL_TIME_LOGIC_TABLE: Real-time meta table</li>
+             * <li>REAL_TIME_MIRROR_TABLE: Real-time mirror table</li>
+             * <li>PHYSICAL_VIEW: Physical view</li>
+             * <li>LOGICAL_VIEW: Logical view</li>
+             * <li>DATA_SOURCE_PHYSICAL_TABLE: Data source table</li>
+             * <li>DATA_SOURCE_VIEW: Data source view</li>
+             * <li>DATA_SOURCE_MATERIALIZED_VIEW: Data source materialized view</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE</p>
              */
             public Builder inputTableType(String inputTableType) {
                 this.inputTableType = inputTableType;
@@ -646,7 +712,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputBizUnitId.
+             * <p>Business unit ID of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputBizUnitId(Long outputBizUnitId) {
                 this.outputBizUnitId = outputBizUnitId;
@@ -654,7 +723,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputColumnId.
+             * <p>GUID of the output column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.123.test_project.input_table.id</p>
              */
             public Builder outputColumnId(String outputColumnId) {
                 this.outputColumnId = outputColumnId;
@@ -662,7 +734,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputColumnName.
+             * <p>Output column name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>id</p>
              */
             public Builder outputColumnName(String outputColumnName) {
                 this.outputColumnName = outputColumnName;
@@ -670,7 +745,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSourceId.
+             * <p>Data source ID of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputDataSourceId(Long outputDataSourceId) {
                 this.outputDataSourceId = outputDataSourceId;
@@ -678,7 +756,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDataSourceType.
+             * <p>Storage type of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder outputDataSourceType(String outputDataSourceType) {
                 this.outputDataSourceType = outputDataSourceType;
@@ -686,7 +767,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputDbType.
+             * <p>Database type of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder outputDbType(String outputDbType) {
                 this.outputDbType = outputDbType;
@@ -694,7 +778,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputEnv.
+             * <p>Environment of the output table: DEV or PROD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder outputEnv(String outputEnv) {
                 this.outputEnv = outputEnv;
@@ -702,7 +789,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputProjectId.
+             * <p>Project ID of the output table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder outputProjectId(Long outputProjectId) {
                 this.outputProjectId = outputProjectId;
@@ -710,7 +800,7 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableDeleted.
+             * <p>Indicates whether the output table is deleted.</p>
              */
             public Builder outputTableDeleted(Boolean outputTableDeleted) {
                 this.outputTableDeleted = outputTableDeleted;
@@ -718,7 +808,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableId.
+             * <p>GUID of the output table. Each asset has a unique GUID. For the format, see InputTableId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.123.test_project.order</p>
              */
             public Builder outputTableId(String outputTableId) {
                 this.outputTableId = outputTableId;
@@ -726,7 +819,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableName.
+             * <p>Output table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>order</p>
              */
             public Builder outputTableName(String outputTableName) {
                 this.outputTableName = outputTableName;
@@ -734,7 +830,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * OutputTableType.
+             * <p>Output table type. For valid values, see InputTableType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE</p>
              */
             public Builder outputTableType(String outputTableType) {
                 this.outputTableType = outputTableType;
@@ -742,7 +841,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * TaskEnv.
+             * <p>Environment of the task (node) associated with the lineage: DEV or PROD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder taskEnv(String taskEnv) {
                 this.taskEnv = taskEnv;
@@ -750,7 +852,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task (node) ID associated with the lineage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -758,7 +863,10 @@ public class GetTableColumnLineageByTaskIdResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>Tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

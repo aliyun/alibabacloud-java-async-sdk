@@ -112,6 +112,7 @@ public class UpdateDataSourceConfigRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataSourceConfigRequest extends Request {
         }
 
         /**
+         * <p>The data source configuration item change.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             } 
 
             /**
+             * <p>The key ID of the configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             }
 
             /**
+             * <p>The configuration value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +291,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             } 
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
@@ -295,6 +300,7 @@ public class UpdateDataSourceConfigRequest extends Request {
             }
 
             /**
+             * <p>The data source ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

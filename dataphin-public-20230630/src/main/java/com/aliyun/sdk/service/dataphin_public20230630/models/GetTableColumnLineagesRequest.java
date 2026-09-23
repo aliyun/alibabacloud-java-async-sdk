@@ -126,7 +126,7 @@ public class GetTableColumnLineagesRequest extends Request {
         }
 
         /**
-         * FilterQuery.
+         * <p>The filter conditions.</p>
          */
         public Builder filterQuery(FilterQuery filterQuery) {
             String filterQueryShrink = shrink(filterQuery, "FilterQuery", "json");
@@ -136,6 +136,7 @@ public class GetTableColumnLineagesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class GetTableColumnLineagesRequest extends Request {
         }
 
         /**
+         * <p>The GUID of the table, which is the unique identifier of the asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +269,7 @@ public class GetTableColumnLineagesRequest extends Request {
             } 
 
             /**
-             * NeedDownstream.
+             * <p>Specifies whether to query downstream lineage. Default value: true.</p>
              */
             public Builder needDownstream(Boolean needDownstream) {
                 this.needDownstream = needDownstream;
@@ -275,7 +277,7 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * NeedNotExistObject.
+             * <p>Specifies whether to return tables that do not exist in the asset inventory. Default value: false.</p>
              */
             public Builder needNotExistObject(Boolean needNotExistObject) {
                 this.needNotExistObject = needNotExistObject;
@@ -283,7 +285,7 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * NeedUpstream.
+             * <p>Specifies whether to query upstream lineage. Default value: true.</p>
              */
             public Builder needUpstream(Boolean needUpstream) {
                 this.needUpstream = needUpstream;
@@ -291,7 +293,10 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * NodeEnv.
+             * <p>The environment of the nodes to query. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nodeEnv(String nodeEnv) {
                 this.nodeEnv = nodeEnv;
@@ -299,7 +304,7 @@ public class GetTableColumnLineagesRequest extends Request {
             }
 
             /**
-             * NodeIdList.
+             * <p>The list of node IDs to filter.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
                 this.nodeIdList = nodeIdList;

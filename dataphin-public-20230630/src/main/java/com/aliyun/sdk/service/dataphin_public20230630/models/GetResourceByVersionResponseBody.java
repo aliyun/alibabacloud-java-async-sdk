@@ -119,7 +119,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceInfo.
+         * <p>The details of the resource file.</p>
          */
         public Builder resourceInfo(ResourceInfo resourceInfo) {
             this.resourceInfo = resourceInfo;
@@ -162,7 +171,7 @@ public class GetResourceByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -371,7 +380,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * ComputeEngineType.
+             * <p>The compute engine source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder computeEngineType(String computeEngineType) {
                 this.computeEngineType = computeEngineType;
@@ -379,7 +391,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30011021</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -387,7 +402,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -395,7 +413,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The storage folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -403,7 +424,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -411,7 +435,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -419,7 +446,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10200121011</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -427,7 +457,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30011021</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -435,7 +468,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the resource file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>udf_sleep.jar</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +479,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1030111021</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -451,7 +490,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JAR</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -459,7 +501,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * <p>The size of the resource, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102400</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -467,7 +512,10 @@ public class GetResourceByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * StorageAddress.
+             * <p>The storage address of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300011448/711833/cdcd1c44-f1ee-46bb-b318-1d123dbabf6c</p>
              */
             public Builder storageAddress(String storageAddress) {
                 this.storageAddress = storageAddress;

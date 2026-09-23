@@ -119,7 +119,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Backend response HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * ListResult.
+         * <p>Query result.</p>
          */
         public Builder listResult(ListResult listResult) {
             this.listResult = listResult;
@@ -143,7 +149,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -407,7 +419,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeType.
+             * <p>Change type. Valid values: 0: Create. 1: Update. 2: Delete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder changeType(Integer changeType) {
                 this.changeType = changeType;
@@ -415,7 +430,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>Publish error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>error</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -423,7 +441,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * <p>Publish completion time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:10:10</p>
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -431,7 +452,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -439,7 +463,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * <p>Modification time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -447,7 +474,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Publish record ID, which is not the object ID and is globally unique in the publish list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1241844456</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -455,7 +485,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>Node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123456</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -463,7 +496,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectId.
+             * <p>Object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234567</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -471,7 +507,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * <p>Object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>对象A</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -479,7 +518,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>Object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -487,7 +529,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectVersion.
+             * <p>Object version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder objectVersion(String objectVersion) {
                 this.objectVersion = objectVersion;
@@ -495,7 +540,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>Project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1241844456</p>
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -503,7 +551,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishName.
+             * <p>Publish name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_lc__20241118171502</p>
              */
             public Builder publishName(String publishName) {
                 this.publishName = publishName;
@@ -511,7 +562,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>Publish status. Valid values: 0: Failed. 1: Succeeded. 2: Publishing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
@@ -519,7 +573,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Publisher.
+             * <p>Publisher ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>307999999</p>
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -527,7 +584,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PublisherName.
+             * <p>Publisher name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder publisherName(String publisherName) {
                 this.publisherName = publisherName;
@@ -594,7 +654,7 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>Publish record list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -602,7 +662,10 @@ public class ListPublishRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

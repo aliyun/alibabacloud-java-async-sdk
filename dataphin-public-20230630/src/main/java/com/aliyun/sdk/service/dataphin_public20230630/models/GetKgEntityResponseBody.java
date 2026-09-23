@@ -119,7 +119,10 @@ public class GetKgEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * EntityInfo.
+         * <p>The entity record details.</p>
          */
         public Builder entityInfo(EntityInfo entityInfo) {
             this.entityInfo = entityInfo;
@@ -135,7 +138,10 @@ public class GetKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -249,7 +261,18 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The property data type. Valid values:</p>
+             * <ul>
+             * <li>STRING: string</li>
+             * <li>INTEGER: integer</li>
+             * <li>FLOAT: floating-point number</li>
+             * <li>BOOLEAN: Boolean</li>
+             * <li>DATE: date</li>
+             * <li>LIST: list</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -257,7 +280,10 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -337,7 +363,10 @@ public class GetKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityId.
+             * <p>The entity record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -345,7 +374,10 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -353,7 +385,7 @@ public class GetKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyList.
+             * <p>The list of entity record properties.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;

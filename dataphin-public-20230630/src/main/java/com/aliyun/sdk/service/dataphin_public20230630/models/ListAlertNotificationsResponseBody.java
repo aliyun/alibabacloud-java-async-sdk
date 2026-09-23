@@ -119,7 +119,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         }
 
         /**
-         * ListResult.
+         * <p>The query result.</p>
          */
         public Builder listResult(ListResult listResult) {
             this.listResult = listResult;
@@ -143,7 +149,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +264,21 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSystemType.
+             * <p>The source system. Valid values:</p>
+             * <ul>
+             * <li>ALL: all.</li>
+             * <li>DQE: data quality.</li>
+             * <li>OS: data service.</li>
+             * <li>STREAM: real-time computing.</li>
+             * <li>VDM_BATCH: offline computing.</li>
+             * <li>SOP: O&amp;M platform.</li>
+             * <li>REAL_TIME_PIPELINE: real-time integration.</li>
+             * <li>KGB: baseline monitoring.</li>
+             * </ul>
+             * <p>And more.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VDM_BATCH</p>
              */
             public Builder sourceSystemType(String sourceSystemType) {
                 this.sourceSystemType = sourceSystemType;
@@ -254,7 +286,39 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The alert object type. Valid values:</p>
+             * <ul>
+             * <li>OS_API: API operation.</li>
+             * <li>OS_APPLICATION_SERVICE: service application.</li>
+             * <li>STREAM_TASK: real-time computing.</li>
+             * <li>REAL_TIME_PIPELINE_TASK: real-time integration.</li>
+             * <li>VDM_BATCH_SHELL: SHELL.</li>
+             * <li>VDM_BATCH_PYTHON: PYTHON.</li>
+             * <li>VDM_BATCH_DATAX: DATAX.</li>
+             * <li>VDM_BATCH_DLINK: DLINK.</li>
+             * <li>VDM_BATCH_VIRTUAL: VIRTUAL.</li>
+             * <li>VDM_BATCH_PYTHON37: PYTHON37.</li>
+             * <li>VDM_BATCH_PYTHON311: PYTHON311.</li>
+             * <li>VDM_BATCH_MAX_COMPUTE_SQL: MAXCOMPUTE_SQL.</li>
+             * <li>VDM_BATCH_MAX_COMPUTE_MR: MAXCOMPUTE_MR.</li>
+             * <li>VDM_BATCH_SPARK_JAR_ON_MAX_COMPUTE: SPARK_JAR_ON_MAX_COMPUTE.</li>
+             * <li>VDM_BATCH_HIVE_SQL: HIVE_SQL.</li>
+             * <li>VDM_BATCH_HADOOP_MR: HADOOP_MR.</li>
+             * <li>VDM_BATCH_SPARK_JAR_ON_HIVE: SPARK_JAR_ON_HIVE.</li>
+             * <li>VDM_BATCH_SPARK_SQL_ON_HIVE: SPARK_SQL_ON_HIVE.</li>
+             * <li>VDM_BATCH_SPARK_SQL: VDM_BATCH_SPARK_SQL.</li>
+             * <li>DQE_LOGICAL_TABLE: logical table.</li>
+             * <li>DQE_PHYSICAL_TABLE: physical table.</li>
+             * <li>DQE_REALTIME_TABLE: real-time meta table.</li>
+             * <li>DQE_DATA_SOURCE: data source.</li>
+             * <li>DQE_INDEX: metric.</li>
+             * <li>QD_DECISION_INVOKE: QD decision invocation.</li>
+             * <li>BASELINE: baseline.</li>
+             * </ul>
+             * <p>And more.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VDM_BATCH_SHELL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -321,7 +385,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The alert parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>biz_date</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,7 +396,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The alert parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-24 00:00:00</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -422,7 +492,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertReasonParamList.
+             * <p>The list of alert parameters.</p>
              */
             public Builder alertReasonParamList(java.util.List<AlertReasonParamList> alertReasonParamList) {
                 this.alertReasonParamList = alertReasonParamList;
@@ -430,7 +500,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20241125</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -438,7 +511,47 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The alert reason type. Valid values:</p>
+             * <ul>
+             * <li>DQE_COLUMN: field rule exception.</li>
+             * <li>DQE_DATA_SOURCE: data source rule exception.</li>
+             * <li>DQE_CUSTOMIZE: custom rule exception.</li>
+             * <li>DQE_TABLE: table rule exception.</li>
+             * <li>DQE_REALTIME_TABLE: real-time table rule exception.</li>
+             * <li>DQE_INDEX: metric rule exception.</li>
+             * <li>OS_AVG_RESPONSE: average response time exception.</li>
+             * <li>OS_CALL_TIMES: call count exception.</li>
+             * <li>OS_ERROR_RATE: error rate exception.</li>
+             * <li>OS_OFFLINE: Offline percentage exception.</li>
+             * <li>STREAM_BIZ_DELAY: business delay too high.</li>
+             * <li>STREAM_DATA_RETENTION: data retention exceeds configuration.</li>
+             * <li>STREAM_MORE_THAN_FAILURE: failure frequency exceeds configuration.</li>
+             * <li>STREAM_TPS_OUT_RANGE: TPS out of range.</li>
+             * <li>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed configuration.</li>
+             * <li>STREAM_BACKPRESSURE: backpressure duration exceeds configuration.</li>
+             * <li>STREAM_JOB_FAILURE: job execution failed.</li>
+             * <li>VDM_BATCH_ERROR: error.</li>
+             * <li>VDM_BATCH_FINISH: completed.</li>
+             * <li>VDM_BATCH_TIME_OUT: execution timed out.</li>
+             * <li>VDM_BATCH_UNDONE: not completed.</li>
+             * <li>VDM_BATCH_LOGIC_DATA_DELAY: data delay.</li>
+             * <li>QD_DECISION_CALL_TIMES: decision call count exception.</li>
+             * <li>QD_DECISION_MAX_RESPONSE: maximum response time exception.</li>
+             * <li>QD_DECISION_ERROR_RATE: error rate exception.</li>
+             * <li>QD_DECISION_PARAM_COUNT: decision parameter count exception.</li>
+             * <li>QD_DECISION_PARAM_PERCENTAGE: decision parameter percentage exception.</li>
+             * <li>QD_DECISION_PARAM_SUM: decision parameter sum exception.</li>
+             * <li>QD_DECISION_PARAM_AVG: decision parameter average exception.</li>
+             * <li>LOGICAL_INSTANCE_GENERATION: logical instance generation monitoring.</li>
+             * <li>KGB_TASK_ERROR: baseline task error.</li>
+             * <li>KGB_TASK_SLOW_DOWN: baseline task slowdown.</li>
+             * <li>KGB_EARLY_WARNING: baseline early warning.</li>
+             * <li>KGB_BROKEN_LINE: baseline broken line.</li>
+             * </ul>
+             * <p>And more.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VDM_BATCH_FINISH</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -446,7 +559,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueKey.
+             * <p>The unique identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder uniqueKey(String uniqueKey) {
                 this.uniqueKey = uniqueKey;
@@ -500,7 +616,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the alert receiver.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ADMIN</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -619,7 +738,21 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertChannelType.
+             * <p>The push channel type. Valid values:</p>
+             * <ul>
+             * <li>VOICE: phone call.</li>
+             * <li>SMS: text message.</li>
+             * <li>MAIL: email.</li>
+             * <li>DINGTALK_ROBOT: DingTalk robot.</li>
+             * <li>DINGDING: DingTalk work notification.</li>
+             * <li>CUSTOM: custom message channel.</li>
+             * <li>WECHAT: WeCom.</li>
+             * <li>FEISHU: Lark.</li>
+             * <li>SILENCE: do not send.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SMS</p>
              */
             public Builder alertChannelType(String alertChannelType) {
                 this.alertChannelType = alertChannelType;
@@ -627,7 +760,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAlertChannelId.
+             * <p>The custom message channel ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder customAlertChannelId(String customAlertChannelId) {
                 this.customAlertChannelId = customAlertChannelId;
@@ -635,7 +771,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * OnCallTableId.
+             * <p>The on-call schedule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder onCallTableId(String onCallTableId) {
                 this.onCallTableId = onCallTableId;
@@ -643,7 +782,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * OnCallTableName.
+             * <p>The on-call schedule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder onCallTableName(String onCallTableName) {
                 this.onCallTableName = onCallTableName;
@@ -651,7 +793,15 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The alert receiver type. Valid values:</p>
+             * <ul>
+             * <li>ON_CALL_TABLE: on-call schedule.</li>
+             * <li>USER_DEFINED: custom user.</li>
+             * <li>OWNER: owner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OWNER</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -659,7 +809,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * <p>The user information.</p>
              */
             public Builder user(User user) {
                 this.user = user;
@@ -752,7 +902,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * FailReason.
+             * <p>The alert reason.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>不合法</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -760,7 +913,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * SendContent.
+             * <p>The push content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder sendContent(String sendContent) {
                 this.sendContent = sendContent;
@@ -768,7 +924,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * SendTime.
+             * <p>The push time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-25 10:02:47</p>
              */
             public Builder sendTime(String sendTime) {
                 this.sendTime = sendTime;
@@ -776,7 +935,15 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The push status. Valid values:</p>
+             * <ul>
+             * <li>SUCCESS: Sent successfully.</li>
+             * <li>FAILE: Failed to send.</li>
+             * <li>SENDING: Sending in progress.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -882,7 +1049,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AlertEventId.
+             * <p>The alert event ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder alertEventId(String alertEventId) {
                 this.alertEventId = alertEventId;
@@ -890,7 +1060,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertObject.
+             * <p>The alert object.</p>
              */
             public Builder alertObject(AlertObject alertObject) {
                 this.alertObject = alertObject;
@@ -898,7 +1068,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertReason.
+             * <p>The alert reason.</p>
              */
             public Builder alertReason(AlertReason alertReason) {
                 this.alertReason = alertReason;
@@ -906,7 +1076,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertReceiver.
+             * <p>The receiver information.</p>
              */
             public Builder alertReceiver(AlertReceiver alertReceiver) {
                 this.alertReceiver = alertReceiver;
@@ -914,7 +1084,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSend.
+             * <p>The alert sending information.</p>
              */
             public Builder alertSend(AlertSend alertSend) {
                 this.alertSend = alertSend;
@@ -981,7 +1151,7 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The list of push records.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -989,7 +1159,10 @@ public class ListAlertNotificationsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

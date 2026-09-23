@@ -119,7 +119,10 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -410,7 +419,10 @@ public class ListProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>162112</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -418,7 +430,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The compute source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -426,7 +441,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * <p>The name of the compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds1</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -434,7 +452,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -442,7 +463,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -450,7 +474,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -458,7 +485,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the project was created, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -466,7 +496,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the project was last modified, in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -474,7 +507,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1030111021</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -482,7 +518,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The project mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -490,7 +529,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -498,7 +540,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012112</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -506,7 +551,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The project owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -514,7 +562,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RealtimeDataSourceId.
+             * <p>The real-time compute source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122</p>
              */
             public Builder realtimeDataSourceId(Long realtimeDataSourceId) {
                 this.realtimeDataSourceId = realtimeDataSourceId;
@@ -522,7 +573,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RealtimeDataSourceName.
+             * <p>The name of the real-time compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds2</p>
              */
             public Builder realtimeDataSourceName(String realtimeDataSourceName) {
                 this.realtimeDataSourceName = realtimeDataSourceName;
@@ -530,7 +584,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The project type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -597,7 +654,7 @@ public class ListProjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * ProjectList.
+             * <p>The paginated list of projects.</p>
              */
             public Builder projectList(java.util.List<ProjectList> projectList) {
                 this.projectList = projectList;
@@ -605,7 +662,10 @@ public class ListProjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -127,7 +127,15 @@ public class GetSparkLocalClientInfoRequest extends Request {
         }
 
         /**
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder envEnum(String envEnum) {
             this.putQueryParameter("EnvEnum", envEnum);
@@ -136,6 +144,7 @@ public class GetSparkLocalClientInfoRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +166,11 @@ public class GetSparkLocalClientInfoRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>232432343</p>
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -112,6 +112,7 @@ public class DeleteBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The business domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class DeleteBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

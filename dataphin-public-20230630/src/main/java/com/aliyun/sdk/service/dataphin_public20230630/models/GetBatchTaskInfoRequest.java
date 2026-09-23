@@ -155,7 +155,15 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>dev</li>
+         * <li>prod</li>
+         * </ul>
+         * <p>Default value: dev.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -164,6 +172,7 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The node ID in the directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -176,7 +185,7 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
-         * IncludeAllUpStreams.
+         * <p>Specifies whether to include all upstream nodes, including invalid dependencies. Default value: false.</p>
          */
         public Builder includeAllUpStreams(Boolean includeAllUpStreams) {
             this.putQueryParameter("IncludeAllUpStreams", includeAllUpStreams);
@@ -185,6 +194,7 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +207,10 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -206,6 +219,7 @@ public class GetBatchTaskInfoRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

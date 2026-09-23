@@ -119,7 +119,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         }
 
         /**
-         * QualityAlertInfo.
+         * <p>The alert settings details.</p>
          */
         public Builder qualityAlertInfo(QualityAlertInfo qualityAlertInfo) {
             this.qualityAlertInfo = qualityAlertInfo;
@@ -162,7 +171,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             } 
 
             /**
-             * Id.
+             * <p>The alert duty roster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -236,7 +248,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * <p>The alert duty roster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -303,7 +318,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -311,7 +329,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +464,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             } 
 
             /**
-             * AlertDutyChannelList.
+             * <p>The duty roster alert channels.</p>
              */
             public Builder alertDutyChannelList(java.util.List<String> alertDutyChannelList) {
                 this.alertDutyChannelList = alertDutyChannelList;
@@ -451,7 +472,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * AlertDutyList.
+             * <p>The duty roster alert list.</p>
              */
             public Builder alertDutyList(java.util.List<AlertDutyList> alertDutyList) {
                 this.alertDutyList = alertDutyList;
@@ -459,7 +480,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * AlertQualityOwnerChannelList.
+             * <p>The quality owner alert channels.</p>
              */
             public Builder alertQualityOwnerChannelList(java.util.List<String> alertQualityOwnerChannelList) {
                 this.alertQualityOwnerChannelList = alertQualityOwnerChannelList;
@@ -467,7 +488,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * AlertUserChannelList.
+             * <p>The user alert channels.</p>
              */
             public Builder alertUserChannelList(java.util.List<String> alertUserChannelList) {
                 this.alertUserChannelList = alertUserChannelList;
@@ -475,7 +496,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * AlertUserList.
+             * <p>The user alert list.</p>
              */
             public Builder alertUserList(java.util.List<AlertUserList> alertUserList) {
                 this.alertUserList = alertUserList;
@@ -483,7 +504,7 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * EnableAlertQualityOwner.
+             * <p>Indicates whether alerting is enabled for the quality owner.</p>
              */
             public Builder enableAlertQualityOwner(Boolean enableAlertQualityOwner) {
                 this.enableAlertQualityOwner = enableAlertQualityOwner;
@@ -491,7 +512,10 @@ public class GetQualityAlertOfAllRuleScopeByWatchIdResponseBody extends TeaModel
             }
 
             /**
-             * WatchId.
+             * <p>The monitored object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

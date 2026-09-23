@@ -119,7 +119,10 @@ public class CreateDataDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateDataDomainResponseBody extends TeaModel {
         }
 
         /**
-         * CreateResult.
+         * <p>The creation result.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -135,7 +138,10 @@ public class CreateDataDomainResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateDataDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateDataDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class CreateDataDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -212,7 +224,10 @@ public class CreateDataDomainResponseBody extends TeaModel {
             } 
 
             /**
-             * DataDomainId.
+             * <p>The ID of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1241844456</p>
              */
             public Builder dataDomainId(Long dataDomainId) {
                 this.dataDomainId = dataDomainId;

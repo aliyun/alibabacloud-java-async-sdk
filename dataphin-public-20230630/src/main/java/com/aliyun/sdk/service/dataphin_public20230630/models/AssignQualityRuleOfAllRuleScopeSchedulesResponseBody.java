@@ -119,7 +119,10 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
         }
 
         /**
-         * Data.
+         * <p>The request result.</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class AssignQualityRuleOfAllRuleScopeSchedulesResponseBody extends TeaMod
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

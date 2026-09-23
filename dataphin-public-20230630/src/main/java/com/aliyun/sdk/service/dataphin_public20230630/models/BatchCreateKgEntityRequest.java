@@ -127,6 +127,7 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -137,6 +138,7 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,10 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,6 +163,7 @@ public class BatchCreateKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +237,7 @@ public class BatchCreateKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The property code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +249,7 @@ public class BatchCreateKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The property value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -314,6 +322,7 @@ public class BatchCreateKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The entity type code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -325,6 +334,7 @@ public class BatchCreateKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The list of entity record properties.</p>
              * <p>This parameter is required.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
@@ -380,6 +390,7 @@ public class BatchCreateKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The list of entity records.</p>
              * <p>This parameter is required.</p>
              */
             public Builder entityList(java.util.List<EntityList> entityList) {

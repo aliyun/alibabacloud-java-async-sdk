@@ -126,6 +126,7 @@ public class GetKgSchemaPublishResultRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +148,10 @@ public class GetKgSchemaPublishResultRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The version number. If this parameter is left empty, the most recent publish record is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(Integer versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -156,6 +160,7 @@ public class GetKgSchemaPublishResultRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

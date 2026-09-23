@@ -125,7 +125,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: Development environment. </li>
+         * <li>PROD (default): Production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -134,7 +141,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The query request.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -144,6 +151,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +164,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -462,7 +473,14 @@ public class ListInstancesRequest extends Request {
             } 
 
             /**
-             * BizType.
+             * <p>The business type. Valid values:</p>
+             * <ul>
+             * <li>SCRIPT: Script instance.</li>
+             * <li>LOGICAL_TABLE: Logical table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SCRIPT</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -470,7 +488,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID. Required when querying aggregate logical tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6232322111</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -478,7 +499,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * FlowId.
+             * <p>The workflow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1021</p>
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -486,7 +510,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * MaxBizDate.
+             * <p>The end business date and time. The time format must match the partition format specified by the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-31</p>
              */
             public Builder maxBizDate(String maxBizDate) {
                 this.maxBizDate = maxBizDate;
@@ -494,7 +521,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * MaxRunDate.
+             * <p>The maximum instance run time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-31</p>
              */
             public Builder maxRunDate(String maxRunDate) {
                 this.maxRunDate = maxRunDate;
@@ -502,7 +532,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * MinBizDate.
+             * <p>The start business date and time. The time format must match the partition format specified by the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30</p>
              */
             public Builder minBizDate(String minBizDate) {
                 this.minBizDate = minBizDate;
@@ -510,7 +543,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * MinRunDate.
+             * <p>The minimum instance run time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30</p>
              */
             public Builder minRunDate(String minRunDate) {
                 this.minRunDate = minRunDate;
@@ -518,7 +554,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_23131</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -526,7 +565,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * OwnerList.
+             * <p>The node owners.</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -534,6 +573,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -545,6 +585,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -556,7 +597,14 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * PriorityList.
+             * <p>The priority. Valid values:</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST</li>
+             * </ul>
              */
             public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
@@ -564,6 +612,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -575,7 +624,17 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * RunStatusList.
+             * <p>The run status. Valid values:</p>
+             * <ul>
+             * <li>INIT: Init.</li>
+             * <li>WAIT_SUBMISSION: Waiting for submission.</li>
+             * <li>WAIT_SCHEDULE: Waiting for schedule time.</li>
+             * <li>DISPATCH_BLOCKED: Throttled.</li>
+             * <li>WAIT_RESOURCE: Waiting for schedule resource.</li>
+             * <li>RUNNING: Running.</li>
+             * <li>SUCCESS: Succeeded.</li>
+             * <li>FAILED: Failed.</li>
+             * </ul>
              */
             public Builder runStatusList(java.util.List<String> runStatusList) {
                 this.runStatusList = runStatusList;
@@ -583,7 +642,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * SchedulePaused.
+             * <p>Specifies whether scheduling is paused.</p>
              */
             public Builder schedulePaused(Boolean schedulePaused) {
                 this.schedulePaused = schedulePaused;
@@ -591,7 +650,15 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * SchedulePeriodList.
+             * <p>The scheduling period. Valid values:</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
              */
             public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
@@ -599,6 +666,11 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
+             * <p>The instance scheduling type. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: Periodic instance.</li>
+             * <li>MANUAL: Manual instance.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -610,7 +682,10 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * SearchText.
+             * <p>Fuzzy match by node name or exact match by node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder searchText(String searchText) {
                 this.searchText = searchText;
@@ -618,7 +693,15 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * SubBizTypeList.
+             * <p>The sub-business type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE_SQL</li>
+             * <li>HIVE_SQL</li>
+             * <li>SHELL</li>
+             * <li>PYTHON</li>
+             * <li>ONE_SERVICE_SQL</li>
+             * <li>DATABASE_SQL</li>
+             * </ul>
              */
             public Builder subBizTypeList(java.util.List<String> subBizTypeList) {
                 this.subBizTypeList = subBizTypeList;
@@ -626,7 +709,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * TagList.
+             * <p>The node tag filter list. Each element is a numeric string of a node tag ID (such as &quot;123&quot;). Filters the instance list by node tags. If not specified or empty, no filtering is applied and all instances are returned. Multiple tags use OR logic. Invalid elements (non-numeric or overflow) are ignored.</p>
              */
             public Builder tagList(java.util.List<String> tagList) {
                 this.tagList = tagList;

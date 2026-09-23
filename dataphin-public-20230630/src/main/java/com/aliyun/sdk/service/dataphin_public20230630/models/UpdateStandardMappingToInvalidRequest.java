@@ -112,6 +112,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
         }
 
         /**
+         * <p>Update Command</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -216,7 +218,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             } 
 
             /**
-             * BelongGuidList.
+             * <p>Belonging GUID list, with an upper limit of 1000</p>
              */
             public Builder belongGuidList(java.util.List<String> belongGuidList) {
                 this.belongGuidList = belongGuidList;
@@ -224,7 +226,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             }
 
             /**
-             * GuidList.
+             * <p>GUID list, with an upper limit of 1000</p>
              */
             public Builder guidList(java.util.List<String> guidList) {
                 this.guidList = guidList;
@@ -232,6 +234,7 @@ public class UpdateStandardMappingToInvalidRequest extends Request {
             }
 
             /**
+             * <p>Standard ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

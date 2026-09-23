@@ -127,6 +127,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class UpdateProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -231,6 +234,7 @@ public class UpdateProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
              * <p>This parameter is required.</p>
              */
             public Builder roleList(java.util.List<Integer> roleList) {
@@ -239,6 +243,7 @@ public class UpdateProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -311,6 +316,7 @@ public class UpdateProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The environment identifier.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -322,6 +328,7 @@ public class UpdateProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The list of user members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

@@ -119,7 +119,10 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * <p>The list of users.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;
@@ -228,7 +237,10 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -236,7 +248,10 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30002101</p>
              */
             public Builder id(String id) {
                 this.id = id;

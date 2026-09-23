@@ -156,6 +156,7 @@ public class GetKgNeighborRequest extends Request {
         }
 
         /**
+         * <p>The entity record data ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +169,7 @@ public class GetKgNeighborRequest extends Request {
         }
 
         /**
+         * <p>The entity type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +182,7 @@ public class GetKgNeighborRequest extends Request {
         }
 
         /**
-         * NeighborsQuery.
+         * <p>The entity record neighbor node query instruction.</p>
          */
         public Builder neighborsQuery(NeighborsQuery neighborsQuery) {
             String neighborsQueryShrink = shrink(neighborsQuery, "NeighborsQuery", "json");
@@ -190,6 +192,7 @@ public class GetKgNeighborRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +214,7 @@ public class GetKgNeighborRequest extends Request {
         }
 
         /**
+         * <p>The model ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +299,10 @@ public class GetKgNeighborRequest extends Request {
             } 
 
             /**
-             * Depth.
+             * <p>The maximum depth of neighbor nodes. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -303,7 +310,16 @@ public class GetKgNeighborRequest extends Request {
             }
 
             /**
-             * DirectionType.
+             * <p>The direction type. Valid values:</p>
+             * <ul>
+             * <li>in: the current entity is the target node.</li>
+             * <li>out: the current entity is the source node.</li>
+             * <li>both: the current entity is both the source node and the target node.</li>
+             * </ul>
+             * <p>Default value: both.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>both</p>
              */
             public Builder directionType(String directionType) {
                 this.directionType = directionType;
@@ -311,7 +327,7 @@ public class GetKgNeighborRequest extends Request {
             }
 
             /**
-             * RelationTypes.
+             * <p>The list of relation types.</p>
              */
             public Builder relationTypes(java.util.List<String> relationTypes) {
                 this.relationTypes = relationTypes;

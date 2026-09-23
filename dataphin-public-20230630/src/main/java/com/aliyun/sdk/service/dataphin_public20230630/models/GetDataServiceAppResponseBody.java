@@ -119,7 +119,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the data service application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -236,7 +248,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -394,7 +409,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             } 
 
             /**
-             * AppGroup.
+             * <p>The application group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认分组</p>
              */
             public Builder appGroup(String appGroup) {
                 this.appGroup = appGroup;
@@ -402,7 +420,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -410,7 +431,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * AppKey.
+             * <p>The AppKey of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认应用</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -418,7 +442,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认应用</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -426,7 +453,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecret.
+             * <p>The AppSecret of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认应用</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -434,7 +464,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelist.
+             * <p>The IP whitelist addresses. Specify IP addresses or CIDR blocks separated by semicolons (;). CIDR blocks end with a slash (/) followed by a number in the range of 1 to 32. Example: 192.168.3.12/24.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ipWhitelist(String ipWhitelist) {
                 this.ipWhitelist = ipWhitelist;
@@ -442,7 +475,11 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * IpWhitelistStatus.
+             * <p>Indicates whether the IP whitelist is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              */
             public Builder ipWhitelistStatus(Boolean ipWhitelistStatus) {
                 this.ipWhitelistStatus = ipWhitelistStatus;
@@ -450,7 +487,7 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerList.
+             * <p>The list of owners.</p>
              */
             public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
@@ -458,7 +495,10 @@ public class GetDataServiceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Scenarios.
+             * <p>The common scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

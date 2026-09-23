@@ -119,7 +119,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>Query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Configuration item ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +251,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Configuration item value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -443,7 +464,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigItemList.
+             * <p>Connection configuration items</p>
              */
             public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
                 this.configItemList = configItemList;
@@ -451,7 +472,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710209552704</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -459,7 +483,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212211111</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -467,7 +494,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>Creator name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -475,7 +505,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx 项目</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -483,7 +516,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>Environment of the data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -491,7 +527,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Data source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12313123131</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -499,7 +538,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1710209552704</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -507,7 +549,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Data source name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -515,7 +560,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Owner ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212211111</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -523,7 +571,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>Owner name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -531,7 +582,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Data source scope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -539,7 +593,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Data source type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -606,7 +663,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>Configuration item ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -614,7 +674,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>Configuration item value</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -824,7 +887,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * ConfigItemList.
+             * <p>Connection configuration items</p>
              */
             public Builder configItemList(java.util.List<ProdDataSourceInfoConfigItemList> configItemList) {
                 this.configItemList = configItemList;
@@ -832,7 +895,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708303959000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -840,7 +906,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212211111</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -848,7 +917,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>Creator name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -856,7 +928,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx 测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -864,7 +939,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>Environment of the data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -872,7 +950,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Data source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000028799</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -880,7 +961,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1708303959000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -888,7 +972,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Data source name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -896,7 +983,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Owner ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>212211111</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -904,7 +994,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>Owner name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -912,7 +1005,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * <p>Data source scope</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -920,7 +1016,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Data source type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -987,7 +1086,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>开发环境数据源信息</p>
+             * <p>Development environment data source</p>
              */
             public Builder devDataSourceInfo(DevDataSourceInfo devDataSourceInfo) {
                 this.devDataSourceInfo = devDataSourceInfo;
@@ -995,7 +1094,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>生产环境数据源</p>
+             * <p>Production environment data source</p>
              */
             public Builder prodDataSourceInfo(ProdDataSourceInfo prodDataSourceInfo) {
                 this.prodDataSourceInfo = prodDataSourceInfo;
@@ -1062,7 +1161,7 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSourceList.
+             * <p>Paginated list</p>
              */
             public Builder dataSourceList(java.util.List<DataSourceList> dataSourceList) {
                 this.dataSourceList = dataSourceList;
@@ -1070,7 +1169,10 @@ public class ListDataSourceWithConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records</p>
+             * 
+             * <strong>example:</strong>
+             * <p>39</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

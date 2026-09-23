@@ -112,6 +112,7 @@ public class ListDataServiceAppsRequest extends Request {
         }
 
         /**
+         * <p>Query the list of all applications under the tenant.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListDataServiceAppsRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,7 +230,10 @@ public class ListDataServiceAppsRequest extends Request {
             } 
 
             /**
-             * AppGroupId.
+             * <p>Application group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder appGroupId(Integer appGroupId) {
                 this.appGroupId = appGroupId;
@@ -236,7 +241,10 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>Application name search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>营销看板</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -244,7 +252,10 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>Page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -252,7 +263,10 @@ public class ListDataServiceAppsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>Number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

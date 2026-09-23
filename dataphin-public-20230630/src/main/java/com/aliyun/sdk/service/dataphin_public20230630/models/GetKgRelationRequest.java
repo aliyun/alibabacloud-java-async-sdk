@@ -142,6 +142,7 @@ public class GetKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,6 +164,7 @@ public class GetKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The relationship record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +177,7 @@ public class GetKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The relationship type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class GetKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

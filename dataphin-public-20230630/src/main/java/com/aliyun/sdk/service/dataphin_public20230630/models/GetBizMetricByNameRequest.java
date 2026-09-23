@@ -112,6 +112,7 @@ public class GetBizMetricByNameRequest extends Request {
         }
 
         /**
+         * <p>Query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder bizMetricByNameQuery(BizMetricByNameQuery bizMetricByNameQuery) {
@@ -122,6 +123,7 @@ public class GetBizMetricByNameRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,7 @@ public class GetBizMetricByNameRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether to query draft or published asset details. Set this parameter to True to query draft details, or False to query published details.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class GetBizMetricByNameRequest extends Request {
             }
 
             /**
+             * <p>The name of the business metric.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

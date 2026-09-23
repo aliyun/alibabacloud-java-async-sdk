@@ -111,7 +111,7 @@ public class ListAlertNotificationsRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -121,6 +121,7 @@ public class ListAlertNotificationsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +337,7 @@ public class ListAlertNotificationsRequest extends Request {
             } 
 
             /**
-             * AlertReasonList.
+             * <p>The list of alert reasons.</p>
              */
             public Builder alertReasonList(java.util.List<String> alertReasonList) {
                 this.alertReasonList = alertReasonList;
@@ -344,7 +345,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * ChannelTypeList.
+             * <p>The list of push channel types.</p>
              */
             public Builder channelTypeList(java.util.List<String> channelTypeList) {
                 this.channelTypeList = channelTypeList;
@@ -352,7 +353,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * CustomChannelIdList.
+             * <p>The list of custom message channel IDs.</p>
              */
             public Builder customChannelIdList(java.util.List<String> customChannelIdList) {
                 this.customChannelIdList = customChannelIdList;
@@ -360,7 +361,10 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -368,7 +372,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * MonitoredItemIdList.
+             * <p>The list of monitored item IDs.</p>
              */
             public Builder monitoredItemIdList(java.util.List<String> monitoredItemIdList) {
                 this.monitoredItemIdList = monitoredItemIdList;
@@ -376,6 +380,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
+             * <p>The end time of the push.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -387,6 +392,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
+             * <p>The start time of the push.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -398,6 +404,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -409,6 +416,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
+             * <p>The number of records per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -420,6 +428,18 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
+             * <p>The source system. Valid values:</p>
+             * <ul>
+             * <li>ALL: all.</li>
+             * <li>DQE: data quality.</li>
+             * <li>OS: data service.</li>
+             * <li>STREAM: real-time computing.</li>
+             * <li>VDM_BATCH: offline computing.</li>
+             * <li>SOP: O&amp;M platform.</li>
+             * <li>REAL_TIME_PIPELINE: real-time integration.</li>
+             * <li>KGB: baseline monitoring.</li>
+             * </ul>
+             * <p>And more.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -431,7 +451,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The list of push statuses.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -439,7 +459,7 @@ public class ListAlertNotificationsRequest extends Request {
             }
 
             /**
-             * UserIdList.
+             * <p>The list of push recipient IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

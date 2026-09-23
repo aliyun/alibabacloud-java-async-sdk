@@ -112,6 +112,7 @@ public class OfflineStandardRequest extends Request {
         }
 
         /**
+         * <p>The offline instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder offlineCommand(OfflineCommand offlineCommand) {
@@ -122,6 +123,7 @@ public class OfflineStandardRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,7 @@ public class OfflineStandardRequest extends Request {
             } 
 
             /**
+             * <p>The review remarks. The value can be up to 128 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class OfflineStandardRequest extends Request {
             }
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

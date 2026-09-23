@@ -119,7 +119,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -394,7 +406,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             } 
 
             /**
-             * Annotations.
+             * <p>The annotations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{  &quot;creator&quot;: &quot;<a href="mailto:new_datasource@test.aliyunid.com">new_datasource@test.aliyunid.com</a>&quot;,  &quot;modifier&quot;: &quot;<a href="mailto:new_datasource@test.aliyunid.com">new_datasource@test.aliyunid.com</a>&quot; }</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -402,7 +417,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>61187014-a3ba-4cdd-8609-1f0aa3df4a3d</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -410,7 +428,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * CreateAt.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-31 10:29:17</p>
              */
             public Builder createAt(String createAt) {
                 this.createAt = createAt;
@@ -418,7 +439,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkImageRegistry.
+             * <p>The Flink image registry address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx-registry-vpc.cn-shanghai.cr.aliyuncs.com/xxxx/flink:1.15.4-scala_2.12</p>
              */
             public Builder flinkImageRegistry(String flinkImageRegistry) {
                 this.flinkImageRegistry = flinkImageRegistry;
@@ -426,7 +450,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkImageRepository.
+             * <p>The Flink image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxx-registry-vpc.cn-shanghai.cr.aliyuncs.com</p>
              */
             public Builder flinkImageRepository(String flinkImageRepository) {
                 this.flinkImageRepository = flinkImageRepository;
@@ -434,7 +461,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkImageTag.
+             * <p>The Flink image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.15.4</p>
              */
             public Builder flinkImageTag(String flinkImageTag) {
                 this.flinkImageTag = flinkImageTag;
@@ -442,7 +472,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * FlinkVersion.
+             * <p>The Flink version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.15</p>
              */
             public Builder flinkVersion(String flinkVersion) {
                 this.flinkVersion = flinkVersion;
@@ -450,7 +483,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cdh</p>
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -458,7 +494,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * MaxVcore.
+             * <p>The maximum number of vCores provided by each queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxVcore(String maxVcore) {
                 this.maxVcore = maxVcore;
@@ -466,7 +505,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedAt.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-31 10:29:17</p>
              */
             public Builder modifiedAt(String modifiedAt) {
                 this.modifiedAt = modifiedAt;
@@ -474,7 +516,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphinv45prod</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -482,7 +527,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * <p>The queue name, which serves as a unique identifier. For Kubernetes, this is the resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -490,7 +538,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceVersion.
+             * <p>The resource version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceVersion(String resourceVersion) {
                 this.resourceVersion = resourceVersion;
@@ -498,7 +549,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * <p>The resource specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n  \&quot;kind\&quot; : \&quot;kubernetes\&quot;,\n  \&quot;kubernetes\{&quot;namespace&quot; : &quot;n1730341728989z7&quot;,    &quot;clusterName&quot; : &quot;a51578bdcce145&quot;  },  &quot;state&quot; : &quot;ONLINE&quot;}</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -506,7 +560,10 @@ public class GetClusterQueueInfoByEnvResponseBody extends TeaModel {
             }
 
             /**
-             * VvpClusterType.
+             * <p>The VVP cluster type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PREJOB</p>
              */
             public Builder vvpClusterType(String vvpClusterType) {
                 this.vvpClusterType = vvpClusterType;

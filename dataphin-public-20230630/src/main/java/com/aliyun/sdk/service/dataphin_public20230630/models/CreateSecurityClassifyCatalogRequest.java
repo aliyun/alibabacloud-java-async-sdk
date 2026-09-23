@@ -112,6 +112,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,6 +231,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             } 
 
             /**
+             * <p>The name of the classification folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,7 +243,7 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * OwnerList.
+             * <p>The list of administrator IDs. This parameter takes effect only when the parent folder is the root folder.</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -248,7 +251,10 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * ParentPath.
+             * <p>The full path of the parent folder. Default value: /.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/d1/</p>
              */
             public Builder parentPath(String parentPath) {
                 this.parentPath = parentPath;
@@ -256,7 +262,15 @@ public class CreateSecurityClassifyCatalogRequest extends Request {
             }
 
             /**
-             * VisibleType.
+             * <p>The visibility scope of the classification folder. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: visible to all users.</li>
+             * <li>PRIVATE: visible only to administrators.
+             * Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder visibleType(String visibleType) {
                 this.visibleType = visibleType;

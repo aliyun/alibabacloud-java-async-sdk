@@ -112,6 +112,7 @@ public class SubmitAssetsOnShelveRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class SubmitAssetsOnShelveRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class SubmitAssetsOnShelveRequest extends Request {
         }
 
         /**
+         * <p>The submit listing instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitCommand(SubmitCommand submitCommand) {
@@ -190,6 +195,7 @@ public class SubmitAssetsOnShelveRequest extends Request {
             } 
 
             /**
+             * <p>The list of asset GUIDs to be listed. A maximum of 50 GUIDs can be specified per request.</p>
              * <p>This parameter is required.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {

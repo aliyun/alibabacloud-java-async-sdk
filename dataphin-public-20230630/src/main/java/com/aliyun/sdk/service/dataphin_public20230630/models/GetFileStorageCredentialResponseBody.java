@@ -119,7 +119,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * StorageCredential.
+         * <p>The details of the temporary read/write authorization.</p>
          */
         public Builder storageCredential(StorageCredential storageCredential) {
             this.storageCredential = storageCredential;
@@ -162,7 +171,7 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -319,7 +328,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessId.
+             * <p>The temporary AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp.akId</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -327,7 +339,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKey.
+             * <p>The temporary AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp.akKey</p>
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -335,7 +350,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Bucket.
+             * <p>The file storage bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -343,7 +361,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss-cn-shanghai.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -351,7 +372,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * <p>The expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17343434343434</p>
              */
             public Builder expiration(Long expiration) {
                 this.expiration = expiration;
@@ -359,7 +383,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * <p>The storage object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1023231111/abc</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -378,7 +405,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * <p>The temporary security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>temp.token</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -386,7 +416,10 @@ public class GetFileStorageCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage cluster type. Valid values: oss and ceph.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

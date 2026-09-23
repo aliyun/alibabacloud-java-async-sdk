@@ -127,6 +127,7 @@ public class ApplyDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The apply command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyCommand(ApplyCommand applyCommand) {
@@ -137,6 +138,7 @@ public class ApplyDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ApplyDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +219,10 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The API permission field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -270,7 +276,10 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The API permission field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -444,6 +453,7 @@ public class ApplyDataServiceApiRequest extends Request {
             } 
 
             /**
+             * <p>The API ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -455,7 +465,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>AppId</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1203</p>
@@ -466,7 +476,10 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * ApplyDev.
+             * <p>Specifies whether to apply for permissions on operation-type APIs in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder applyDev(Boolean applyDev) {
                 this.applyDev = applyDev;
@@ -474,7 +487,10 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * ApplyProd.
+             * <p>Specifies whether to apply for permissions on operation-type APIs in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder applyProd(Boolean applyProd) {
                 this.applyProd = applyProd;
@@ -482,7 +498,14 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * ApplyType.
+             * <p>The application type. Valid values:</p>
+             * <ul>
+             * <li>APP: application.</li>
+             * <li>USER: individual account.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APP</p>
              */
             public Builder applyType(String applyType) {
                 this.applyType = applyType;
@@ -490,7 +513,19 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * AuthTypes.
+             * <p>The list of permission types.</p>
+             * <ul>
+             * <li><p>When the principal is an application, the following permission types are supported. To apply for delegation permissions, you must also apply for usage permissions.</p>
+             * <ul>
+             * <li>USE: usage permission.</li>
+             * <li>DELEGATION: delegation permission.</li>
+             * </ul>
+             * </li>
+             * <li><p>When the principal is an individual, only USE (usage) permission is supported.</p>
+             * </li>
+             * <li><p>If this parameter is not specified, the default value is USE (usage) permission.</p>
+             * </li>
+             * </ul>
              */
             public Builder authTypes(java.util.List<String> authTypes) {
                 this.authTypes = authTypes;
@@ -498,7 +533,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * DevFieldList.
+             * <p>The list of permission fields for query-type APIs in the development environment. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty.</p>
              */
             public Builder devFieldList(java.util.List<DevFieldList> devFieldList) {
                 this.devFieldList = devFieldList;
@@ -506,6 +541,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The expiration date in the format of yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -517,7 +553,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
-             * ProdFieldList.
+             * <p>The list of permission fields for query-type APIs in the production environment. This parameter is required in basic mode.</p>
              */
             public Builder prodFieldList(java.util.List<ProdFieldList> prodFieldList) {
                 this.prodFieldList = prodFieldList;
@@ -525,6 +561,7 @@ public class ApplyDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The reason for the application.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

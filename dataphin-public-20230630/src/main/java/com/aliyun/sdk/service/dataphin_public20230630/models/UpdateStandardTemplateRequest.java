@@ -112,6 +112,7 @@ public class UpdateStandardTemplateRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateStandardTemplateRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The version number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,6 +290,12 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The attribute source. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system attribute.</li>
+             * <li>CUSTOM: custom attribute.</li>
+             * <li>STANDARD: standard.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -297,7 +307,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * StandardReference.
+             * <p>The corresponding standard. This parameter takes effect when the attribute source is set to STANDARD.</p>
              */
             public Builder standardReference(StandardReference standardReference) {
                 this.standardReference = standardReference;
@@ -366,6 +376,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The attribute source.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributeFromInfo(AttributeFromInfo attributeFromInfo) {
@@ -374,6 +385,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The attribute ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -445,7 +457,10 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * Column.
+             * <p>The referenced lookup table field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -453,6 +468,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The ID of the lookup table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -553,6 +569,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether the maximum value is included.</p>
              * <p>This parameter is required.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
@@ -561,6 +578,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether the minimum value is included.</p>
              * <p>This parameter is required.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
@@ -569,6 +587,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The maximum value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -580,6 +599,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The minimum value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -690,7 +710,16 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * DataphinAttributeType.
+             * <p>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values:</p>
+             * <ul>
+             * <li>BIZ_UNIT: data board.</li>
+             * <li>PROJECT: project.</li>
+             * <li>USER: user.</li>
+             * <li>USER_GROUP: user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATAPHIN_ATTRIBUTE</p>
              */
             public Builder dataphinAttributeType(String dataphinAttributeType) {
                 this.dataphinAttributeType = dataphinAttributeType;
@@ -698,7 +727,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * LookupTableReference.
+             * <p>The value range. This parameter takes effect when the value source is set to LOOKUP_TABLE.</p>
              */
             public Builder lookupTableReference(LookupTableReference lookupTableReference) {
                 this.lookupTableReference = lookupTableReference;
@@ -706,7 +735,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * MinMaxValueConfig.
+             * <p>The value range. This parameter takes effect when the value source is set to MIN_MAX.</p>
              */
             public Builder minMaxValueConfig(MinMaxValueConfig minMaxValueConfig) {
                 this.minMaxValueConfig = minMaxValueConfig;
@@ -714,6 +743,17 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The value source. Valid values:</p>
+             * <ul>
+             * <li>NONE: no constraint.</li>
+             * <li>LIST: obtained from a list.</li>
+             * <li>LOOKUP_TABLE: lookup table.</li>
+             * <li>MIN_MAX: value between the minimum and maximum.</li>
+             * <li>DATAPHIN_ATTRIBUTE: Dataphin system property.</li>
+             * <li>BUILT_IN_DATA_TYPES: built-in data types.</li>
+             * <li>BUILT_IN_DATA_CLASSIFICATION: built-in data categorization.</li>
+             * <li>BUILT_IN_DATA_LEVEL: built-in data security classification.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -725,7 +765,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * ValueList.
+             * <p>The value range. This parameter takes effect when the value source is set to LIST.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -834,6 +874,15 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The data type of the attribute value. Valid values:</p>
+             * <ul>
+             * <li>STRING: string.</li>
+             * <li>BIGINT: numeric.</li>
+             * <li>DOUBLE: floating-point.</li>
+             * <li>DATE: date, accurate to the day.</li>
+             * <li>DATETIME: date, accurate to milliseconds.</li>
+             * <li>BOOLEAN: Boolean.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -845,7 +894,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -853,7 +905,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Length.
+             * <p>The length of the attribute value. If this parameter is left empty or set to -1, the length is not limited. Typically, only string types have a length limit for attribute values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -861,6 +916,13 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The attribute value type. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom input.</li>
+             * <li>SINGLE_ENUM: single enumeration value.</li>
+             * <li>MULTIPLE_ENUMS: multiple enumeration values.</li>
+             * <li>RANGE: range value.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -872,6 +934,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The value range.</p>
              * <p>This parameter is required.</p>
              */
             public Builder valueRange(ValueRange valueRange) {
@@ -1004,7 +1067,10 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * Code.
+             * <p>The attribute code. This parameter is optional when a common attribute is referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_attr</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1012,7 +1078,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1020,7 +1089,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The attribute name. This parameter is optional when a common attribute is referenced.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attr1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1028,7 +1100,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * RefAttribute.
+             * <p>The referenced attribute information.</p>
              */
             public Builder refAttribute(RefAttribute refAttribute) {
                 this.refAttribute = refAttribute;
@@ -1036,7 +1108,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>Specifies whether the attribute is required. This parameter is optional when a common attribute is referenced.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -1044,10 +1116,19 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The attribute type. This parameter is optional when a common attribute is referenced. Valid values:</p>
+             * <ul>
+             * <li>BIZ_ATTRIBUTE: business attribute.</li>
+             * <li>TECH_ATTRIBUTE: technical attribute.</li>
+             * <li>MANAGEMENT_ATTRIBUTE: management attribute.</li>
+             * <li>QUALITY_ATTRIBUTE: quality attribute.</li>
+             * <li>MASTER_DATA_ATTRIBUTE: master data attribute.</li>
+             * <li>LIFECYCLE_ATTRIBUTE: lifecycle attribute.</li>
+             * <li>SECURITY_ATTRIBUTE: security attribute.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>CUSTOMIZED</p>
+             * <p>BIZ_ATTRIBUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1055,7 +1136,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * ValueConfig.
+             * <p>The value configuration. This parameter is optional when a common attribute is referenced.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -1110,6 +1191,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The list of attributes.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributeList(java.util.List<AttributeList> attributeList) {
@@ -1207,6 +1289,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The number of digits.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1218,6 +1301,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to pad with zeros.</p>
              * <p>This parameter is required.</p>
              */
             public Builder needPaddingZero(Boolean needPaddingZero) {
@@ -1226,6 +1310,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The start value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1237,6 +1322,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The step size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1335,7 +1421,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * AutoIncrementSequenceConfig.
+             * <p>The auto-increment sequence configuration.</p>
              */
             public Builder autoIncrementSequenceConfig(AutoIncrementSequenceConfig autoIncrementSequenceConfig) {
                 this.autoIncrementSequenceConfig = autoIncrementSequenceConfig;
@@ -1343,6 +1429,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The position index of the code rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1354,6 +1441,12 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The type of the code rule. Valid values:</p>
+             * <ul>
+             * <li>FIXED_STRING: fixed string.</li>
+             * <li>AUTO_INCREMENT: auto-increment sequence.</li>
+             * <li>STANDARD_SET_CODE: standard set code.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1365,7 +1458,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The format or value of the code rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1434,6 +1530,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The standard code rules.</p>
              * <p>This parameter is required.</p>
              */
             public Builder codeRuleList(java.util.List<CodeRuleList> codeRuleList) {
@@ -1442,6 +1539,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether strict validation is required.</p>
              * <p>This parameter is required.</p>
              */
             public Builder needStrongValidate(Boolean needStrongValidate) {
@@ -1510,7 +1608,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * AutoConfig.
+             * <p>The automatic generation configuration for standard code rules. This parameter takes effect when the generation method is set to AUTO_GENERATE.</p>
              */
             public Builder autoConfig(AutoConfig autoConfig) {
                 this.autoConfig = autoConfig;
@@ -1518,6 +1616,11 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The standard code generation method. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom.</li>
+             * <li>AUTO_GENERATE: automatically generated based on standard code rules.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1575,7 +1678,10 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The publish comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1737,6 +1843,7 @@ public class UpdateStandardTemplateRequest extends Request {
             } 
 
             /**
+             * <p>The attribute configuration.</p>
              * <p>This parameter is required.</p>
              */
             public Builder attributesConfig(AttributesConfig attributesConfig) {
@@ -1745,6 +1852,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The code of the standard template. The code must be globally unique. The code cannot be modified if the template is referenced.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1756,7 +1864,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * CodeRuleConfig.
+             * <p>The configuration for automatic generation of standard codes.</p>
              */
             public Builder codeRuleConfig(CodeRuleConfig codeRuleConfig) {
                 this.codeRuleConfig = codeRuleConfig;
@@ -1764,7 +1872,10 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the standard template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1772,6 +1883,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The ID of the standard template.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1783,7 +1895,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * MaintainerList.
+             * <p>The list of maintainers.</p>
              */
             public Builder maintainerList(java.util.List<String> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -1791,6 +1903,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
+             * <p>The name of the standard template.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1802,7 +1915,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * PublishInfo.
+             * <p>The publish information of the standard template.</p>
              */
             public Builder publishInfo(PublishInfo publishInfo) {
                 this.publishInfo = publishInfo;
@@ -1810,7 +1923,7 @@ public class UpdateStandardTemplateRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The version number. If this parameter is left empty or set to -1, the latest version is used.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

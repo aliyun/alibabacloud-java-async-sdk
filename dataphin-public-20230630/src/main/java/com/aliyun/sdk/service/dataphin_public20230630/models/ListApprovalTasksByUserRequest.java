@@ -112,6 +112,7 @@ public class ListApprovalTasksByUserRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListApprovalTasksByUserRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListApprovalTasksByUserRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -281,7 +286,43 @@ public class ListApprovalTasksByUserRequest extends Request {
             } 
 
             /**
-             * ApprovalType.
+             * <p>The approval task type. Valid values:</p>
+             * <ul>
+             * <li>APPROVE: Permission approval.</li>
+             * <li>MANAGE: Management.</li>
+             * <li>OTHERS: Others.</li>
+             * <li>ATOMIC: Atomic metric approval.</li>
+             * <li>BIZ_OBJECT: Business object approval.</li>
+             * <li>BIZ_PROCESS: Business process approval.</li>
+             * <li>PUBLISH_APPROVE: Publish approval.</li>
+             * <li>BASELINE_APPROVE: Baseline approval.</li>
+             * <li>CODE_REVIEW: Asset approval.</li>
+             * <li>OBJECT_CODE_REVIEW: Code review.</li>
+             * <li>STANDARD_APPROVAL: Standard online approval.</li>
+             * <li>BATCH_STANDARD_APPROVAL: Batch standard online approval.</li>
+             * <li>STANDARD_OFFLINE_APPROVAL: Standard offline approval.</li>
+             * <li>BATCH_STANDARD_OFFLINE_APPROVAL: Batch standard offline approval.</li>
+             * <li>PRIVILEGE_TRANSFER_APPROVAL: Permission transfer approval.</li>
+             * <li>QD_FEATURE_ONLINE: Label listing.</li>
+             * <li>QD_FEATURE_OFFLINE: Label delisting.</li>
+             * <li>QD_CLUSTER_ONLINE: Group online.</li>
+             * <li>QD_CLUSTER_OFFLINE: Group offline.</li>
+             * <li>QD_MEMBER_ADD_APP: Add member to application.</li>
+             * <li>QD_FEATURE_ADD_APP: Add label to application.</li>
+             * <li>QD_CLUSTER_ADD_APP: Add group to application.</li>
+             * <li>QD_FEATURE_ADD_PROJECT: Add label to project.</li>
+             * <li>QD_CLUSTER_ADD_PROJECT: Add group to project.</li>
+             * <li>TASK_DATA_DOWNLOAD: Data download.</li>
+             * <li>CUSTOM_OPERATE: Custom operation.</li>
+             * <li>PRIVACY_COMPUTING: Privacy-preserving computation.</li>
+             * <li>MDC_TOPIC_DIR_PUBLISH: Asset topic directory publish.</li>
+             * <li>ASSET_PUBLISH: Asset listing approval.</li>
+             * <li>ASSET_UN_PUBLISH: Asset delisting approval.</li>
+             * <li>APPLICATION_CREATE: Application creation approval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_SOURCE</p>
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -289,7 +330,10 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for fuzzy match on the task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datasource</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -297,7 +341,10 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number, starting from 1. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -305,7 +352,10 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20. Maximum value: 100. Values greater than 100 are automatically adjusted to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -313,6 +363,12 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
+             * <p>The relationship type between the current user and the approval task. This parameter is required. Valid values:</p>
+             * <ul>
+             * <li>SUBMITTED: Submitted by me.</li>
+             * <li>PENDING_APPROVAL: Pending my approval.</li>
+             * <li>PROCESSED: Processed by me.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -324,7 +380,16 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The approval status filter. Status filtering is not supported in the pending scenario. Valid values:</p>
+             * <ul>
+             * <li>APPROVING: Approving.</li>
+             * <li>APPROVED: Approved.</li>
+             * <li>REJECTED: Rejected.</li>
+             * <li>REVOKED: Revoked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -332,7 +397,10 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * SubmittedFrom.
+             * <p>The start of the submission time range, in the format yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder submittedFrom(String submittedFrom) {
                 this.submittedFrom = submittedFrom;
@@ -340,7 +408,10 @@ public class ListApprovalTasksByUserRequest extends Request {
             }
 
             /**
-             * SubmittedTo.
+             * <p>The end of the submission time range, in the format yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-31 23:59:59</p>
              */
             public Builder submittedTo(String submittedTo) {
                 this.submittedTo = submittedTo;

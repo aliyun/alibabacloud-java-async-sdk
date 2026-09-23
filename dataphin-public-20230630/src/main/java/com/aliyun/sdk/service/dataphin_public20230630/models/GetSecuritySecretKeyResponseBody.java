@@ -119,7 +119,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * SecuritySecretKeyInfo.
+         * <p>The security key details.</p>
          */
         public Builder securitySecretKeyInfo(SecuritySecretKeyInfo securitySecretKeyInfo) {
             this.securitySecretKeyInfo = securitySecretKeyInfo;
@@ -162,7 +171,7 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -371,7 +380,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * AlgorithmType.
+             * <p>The algorithm type. Valid values: AES, DES, DESEDE, SM2, SM4, RSA, and FF1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES</p>
              */
             public Builder algorithmType(String algorithmType) {
                 this.algorithmType = algorithmType;
@@ -379,7 +391,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * AlgorithmTypeAlias.
+             * <p>The alias of the algorithm type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AES</p>
              */
             public Builder algorithmTypeAlias(String algorithmTypeAlias) {
                 this.algorithmTypeAlias = algorithmTypeAlias;
@@ -387,7 +402,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -395,7 +413,7 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * EnableOpenapiQuery.
+             * <p>Indicates whether OpenAPI query is supported.</p>
              */
             public Builder enableOpenapiQuery(Boolean enableOpenapiQuery) {
                 this.enableOpenapiQuery = enableOpenapiQuery;
@@ -403,7 +421,14 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * GenerationType.
+             * <p>The generation method. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM_GENERATION: system-generated.</li>
+             * <li>USER_GENERATION: user-generated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_GENERATION</p>
              */
             public Builder generationType(String generationType) {
                 this.generationType = generationType;
@@ -411,7 +436,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -419,7 +447,7 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * IsOwnerManageOnly.
+             * <p>Indicates whether only the owner can manage the key.</p>
              */
             public Builder isOwnerManageOnly(Boolean isOwnerManageOnly) {
                 this.isOwnerManageOnly = isOwnerManageOnly;
@@ -427,7 +455,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The key name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -435,7 +466,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -443,7 +477,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -451,7 +488,7 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SecretKeyList.
+             * <p>The key values.</p>
              */
             public Builder secretKeyList(java.util.List<String> secretKeyList) {
                 this.secretKeyList = secretKeyList;
@@ -459,7 +496,10 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SubKeyCount.
+             * <p>The number of sub-keys.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder subKeyCount(Long subKeyCount) {
                 this.subKeyCount = subKeyCount;
@@ -467,7 +507,14 @@ public class GetSecuritySecretKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The key type. Valid values:</p>
+             * <ul>
+             * <li>HASH: hashing and masking.</li>
+             * <li>ENCRYPT: encryption and decryption.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HASH</p>
              */
             public Builder type(String type) {
                 this.type = type;

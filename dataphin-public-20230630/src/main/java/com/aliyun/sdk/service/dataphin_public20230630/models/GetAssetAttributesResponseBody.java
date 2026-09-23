@@ -119,7 +119,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeCode.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data_level</p>
              */
             public Builder attributeCode(String attributeCode) {
                 this.attributeCode = attributeCode;
@@ -262,7 +274,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeName.
+             * <p>The display name of the property.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Level</p>
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -270,7 +285,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the property is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -278,7 +293,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The list of property values.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -384,7 +399,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetName.
+             * <p>The asset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table_orders</p>
              */
             public Builder assetName(String assetName) {
                 this.assetName = assetName;
@@ -392,7 +410,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * AssetType.
+             * <p>The asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -400,7 +421,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeList.
+             * <p>The list of property values.</p>
              */
             public Builder attributeList(java.util.List<AttributeList> attributeList) {
                 this.attributeList = attributeList;
@@ -408,7 +429,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The unique identifier of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.project_a.table_orders</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -416,7 +440,10 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The last modified time, in the format of yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-01 10:30:00</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -470,7 +497,7 @@ public class GetAssetAttributesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetAttributeList.
+             * <p>The list of asset properties.</p>
              */
             public Builder assetAttributeList(java.util.List<AssetAttributeList> assetAttributeList) {
                 this.assetAttributeList = assetAttributeList;

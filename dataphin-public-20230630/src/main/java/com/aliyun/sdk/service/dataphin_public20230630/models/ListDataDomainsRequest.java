@@ -112,6 +112,7 @@ public class ListDataDomainsRequest extends Request {
         }
 
         /**
+         * <p>The query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListDataDomainsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,7 @@ public class ListDataDomainsRequest extends Request {
             } 
 
             /**
-             * BizUnitIdList.
+             * <p>The IDs of the business units to which the data domains belong.</p>
              */
             public Builder bizUnitIdList(java.util.List<Long> bizUnitIdList) {
                 this.bizUnitIdList = bizUnitIdList;
@@ -223,7 +225,10 @@ public class ListDataDomainsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword. You can search by data domain name, code, or description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -231,7 +236,7 @@ public class ListDataDomainsRequest extends Request {
             }
 
             /**
-             * ParentIdList.
+             * <p>The IDs of the parent data domains.</p>
              */
             public Builder parentIdList(java.util.List<Long> parentIdList) {
                 this.parentIdList = parentIdList;

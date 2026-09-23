@@ -97,7 +97,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
         }
 
         /**
-         * AddCommand.
+         * <p>The add request.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
             String addCommandShrink = shrink(addCommand, "AddCommand", "json");
@@ -107,6 +107,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +244,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -251,7 +255,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             }
 
             /**
-             * DingNumber.
+             * <p>The DingTalk number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123@dingding</p>
              */
             public Builder dingNumber(String dingNumber) {
                 this.dingNumber = dingNumber;
@@ -259,7 +266,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxTest</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -267,7 +277,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             }
 
             /**
-             * Mail.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -275,7 +288,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             }
 
             /**
-             * MobilePhone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13888888888</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -283,7 +299,10 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             }
 
             /**
-             * SourceId.
+             * <p>The source user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323131</p>
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -345,7 +364,7 @@ public class AddTenantMembersBySourceUserRequest extends Request {
             } 
 
             /**
-             * SourceUserList.
+             * <p>The list of source users.</p>
              */
             public Builder sourceUserList(java.util.List<SourceUserList> sourceUserList) {
                 this.sourceUserList = sourceUserList;

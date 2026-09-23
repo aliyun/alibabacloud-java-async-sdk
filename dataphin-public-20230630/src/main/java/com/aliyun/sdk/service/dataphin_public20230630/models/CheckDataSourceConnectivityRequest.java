@@ -112,6 +112,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
         }
 
         /**
+         * <p>The object to check.</p>
          * <p>This parameter is required.</p>
          */
         public Builder checkCommand(CheckCommand checkCommand) {
@@ -122,6 +123,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
             } 
 
             /**
+             * <p>The configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
             }
 
             /**
+             * <p>The configuration value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +291,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
             } 
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configItemList(java.util.List<ConfigItemList> configItemList) {
@@ -295,6 +300,7 @@ public class CheckDataSourceConnectivityRequest extends Request {
             }
 
             /**
+             * <p>The data source type. For supported data source types, see the documentation for creating a data source.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

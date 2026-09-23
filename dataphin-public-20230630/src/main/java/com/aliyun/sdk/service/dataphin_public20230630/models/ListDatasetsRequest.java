@@ -111,7 +111,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
-         * DatasetQuery.
+         * <p>The request body.</p>
          */
         public Builder datasetQuery(DatasetQuery datasetQuery) {
             String datasetQueryShrink = shrink(datasetQuery, "DatasetQuery", "json");
@@ -121,6 +121,7 @@ public class ListDatasetsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +333,10 @@ public class ListDatasetsRequest extends Request {
             } 
 
             /**
-             * ContentType.
+             * <p>The content type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -340,7 +344,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * DataUnit.
+             * <p>The data domain ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>74280</p>
              */
             public Builder dataUnit(String dataUnit) {
                 this.dataUnit = dataUnit;
@@ -348,7 +355,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * IncludeVersionList.
+             * <p>Specifies whether to include version details. Default value: FALSE.</p>
              */
             public Builder includeVersionList(Boolean includeVersionList) {
                 this.includeVersionList = includeVersionList;
@@ -356,7 +363,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -364,7 +374,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001391</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -372,7 +385,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -380,7 +396,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -388,6 +407,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +419,14 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * Scenario.
+             * <p>The dataset scenario. Valid values:</p>
+             * <ul>
+             * <li>OFFLINE: offline.</li>
+             * <li>REALTIME: real-time.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -407,7 +434,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -415,7 +445,10 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -423,7 +456,7 @@ public class ListDatasetsRequest extends Request {
             }
 
             /**
-             * TypeList.
+             * <p>The dataset type. If left empty, all types are queried.</p>
              */
             public Builder typeList(java.util.List<String> typeList) {
                 this.typeList = typeList;

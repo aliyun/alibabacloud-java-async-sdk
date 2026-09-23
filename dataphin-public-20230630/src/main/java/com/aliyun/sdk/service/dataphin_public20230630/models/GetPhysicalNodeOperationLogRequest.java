@@ -126,7 +126,14 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment. </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +155,7 @@ public class GetPhysicalNodeOperationLogRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. OK indicates that the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateResult.
+         * <p>Data source creation result</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -135,7 +138,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code returned by the backend</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * DevDataSourceId.
+             * <p>Development environment data source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder devDataSourceId(Long devDataSourceId) {
                 this.devDataSourceId = devDataSourceId;
@@ -233,7 +251,10 @@ public class CreateDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * ProdDataSourceId.
+             * <p>Production environment data source ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder prodDataSourceId(Long prodDataSourceId) {
                 this.prodDataSourceId = prodDataSourceId;

@@ -97,7 +97,7 @@ public class ListSecurityClassifyRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -107,6 +107,7 @@ public class ListSecurityClassifyRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +218,10 @@ public class ListSecurityClassifyRequest extends Request {
             } 
 
             /**
-             * LevelIndex.
+             * <p>The data level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelIndex(Long levelIndex) {
                 this.levelIndex = levelIndex;
@@ -225,7 +229,10 @@ public class ListSecurityClassifyRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The classification name. Fuzzy match is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Personal Information</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +240,10 @@ public class ListSecurityClassifyRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -241,7 +251,10 @@ public class ListSecurityClassifyRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -249,7 +262,10 @@ public class ListSecurityClassifyRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The list of effective statuses. Valid values: ENABLE, DISABLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;ENABLE&quot;]</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;

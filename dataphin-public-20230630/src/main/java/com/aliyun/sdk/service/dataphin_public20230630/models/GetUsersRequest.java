@@ -112,6 +112,7 @@ public class GetUsersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class GetUsersRequest extends Request {
         }
 
         /**
+         * <p>The list of user IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder userIdList(java.util.List<String> userIdList) {

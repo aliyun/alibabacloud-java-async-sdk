@@ -112,6 +112,7 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The update request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -246,6 +251,7 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
+             * <p>The end time in the format of HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -257,6 +263,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The custom interval.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -268,6 +275,11 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The interval unit. Valid values:</p>
+             * <ul>
+             * <li>MINUTE: minute.</li>
+             * <li>HOUR: hour.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -279,6 +291,15 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The schedule period. Valid values:</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -290,6 +311,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The start time in the format of HH:mm.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -362,6 +384,7 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
+             * <p>The parameter name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -373,6 +396,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The parameter value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -431,6 +455,7 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
+             * <p>The version name of the Spark client.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -502,7 +527,10 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
-             * PeriodOffset.
+             * <p>The period offset. This parameter is required when dependencyPeriodType is set to LAST_N_PERIOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodOffset(Integer periodOffset) {
                 this.periodOffset = periodOffset;
@@ -510,6 +538,13 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The type of the dependency period. Valid values:</p>
+             * <ul>
+             * <li>CURRENT_PERIOD: current period.</li>
+             * <li>LAST_PERIOD: previous period.</li>
+             * <li>LAST_N_PERIOD: last N days.</li>
+             * <li>LAST_24_HOUR: last 24 hours.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -673,7 +708,7 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
-             * DependPeriod.
+             * <p>The dependency period.</p>
              */
             public Builder dependPeriod(DependPeriod dependPeriod) {
                 this.dependPeriod = dependPeriod;
@@ -681,7 +716,16 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * DependStrategy.
+             * <p>The dependency strategy. Valid values:</p>
+             * <ul>
+             * <li>ALL: all.</li>
+             * <li>FIRST: first.</li>
+             * <li>LAST: last.</li>
+             * <li>NEAR: nearest.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LAST</p>
              */
             public Builder dependStrategy(String dependStrategy) {
                 this.dependStrategy = dependStrategy;
@@ -689,7 +733,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * FieldList.
+             * <p>The fields of the dependent logical table.</p>
              */
             public Builder fieldList(java.util.List<String> fieldList) {
                 this.fieldList = fieldList;
@@ -697,7 +741,14 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * NodeType.
+             * <p>The type of the upstream dependency node. Valid values:</p>
+             * <ul>
+             * <li>PHYSICAL: physical node.</li>
+             * <li>LOGICAL: logical table dependency.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -705,6 +756,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The period difference. A value of 0 indicates same-period dependency. A positive number indicates dependency on the previous N periods.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -716,7 +768,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * SourceNodeEnabled.
+             * <p>Indicates whether the upstream node is enabled.</p>
              */
             public Builder sourceNodeEnabled(Boolean sourceNodeEnabled) {
                 this.sourceNodeEnabled = sourceNodeEnabled;
@@ -724,7 +776,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * SourceNodeId.
+             * <p>The ID of the upstream node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_2001</p>
              */
             public Builder sourceNodeId(String sourceNodeId) {
                 this.sourceNodeId = sourceNodeId;
@@ -732,6 +787,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The output name of the upstream node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -743,7 +799,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * SourceTableName.
+             * <p>The name of the input table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input1</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -1062,6 +1121,7 @@ public class UpdateBatchTaskRequest extends Request {
             } 
 
             /**
+             * <p>The code of the node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1073,7 +1133,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression for automatic scheduling. Refer to Linux cron expressions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 1 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -1081,7 +1144,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * CustomScheduleConfig.
+             * <p>The custom schedule interval configuration.</p>
              */
             public Builder customScheduleConfig(CustomScheduleConfig customScheduleConfig) {
                 this.customScheduleConfig = customScheduleConfig;
@@ -1089,7 +1152,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * DataSourceCatalog.
+             * <p>The catalog for database SQL nodes. This parameter applies only to datasource types that require a catalog, such as Presto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_catalog</p>
              */
             public Builder dataSourceCatalog(String dataSourceCatalog) {
                 this.dataSourceCatalog = dataSourceCatalog;
@@ -1097,7 +1163,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * DataSourceId.
+             * <p>The datasource ID for database SQL nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12131111</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1105,7 +1174,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * DataSourceSchema.
+             * <p>The schema for database SQL nodes. This parameter applies only to datasource types that require a schema, such as Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erp</p>
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
@@ -1113,7 +1185,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * DevelopOwnerIdList.
+             * <p>The list of development owner IDs.</p>
              */
             public Builder developOwnerIdList(java.util.List<String> developOwnerIdList) {
                 this.developOwnerIdList = developOwnerIdList;
@@ -1121,7 +1193,15 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * Engine.
+             * <p>The execution engine for the node, such as for Python nodes. Valid values:</p>
+             * <ul>
+             * <li>PYTHON2_7</li>
+             * <li>PYTHON3_7</li>
+             * <li>PYTHON3_11</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PYTHON3_7</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1129,6 +1209,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The node ID in the folder tree.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1140,6 +1221,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The name of the offline node.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1151,7 +1233,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * NodeDescription.
+             * <p>The description of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test_description</p>
              */
             public Builder nodeDescription(String nodeDescription) {
                 this.nodeDescription = nodeDescription;
@@ -1159,7 +1244,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * NodeOutputNameList.
+             * <p>The list of node output names.</p>
              */
             public Builder nodeOutputNameList(java.util.List<String> nodeOutputNameList) {
                 this.nodeOutputNameList = nodeOutputNameList;
@@ -1167,7 +1252,15 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * NodeStatus.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li>1: Normal.</li>
+             * <li>2: Paused.</li>
+             * <li>3: Dry run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeStatus(Integer nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -1175,7 +1268,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * ParamList.
+             * <p>The list of custom parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -1183,7 +1276,10 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1191,6 +1287,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the node belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1202,7 +1299,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * PythonModuleList.
+             * <p>The third-party Python packages required by the node.</p>
              */
             public Builder pythonModuleList(java.util.List<String> pythonModuleList) {
                 this.pythonModuleList = pythonModuleList;
@@ -1210,7 +1307,15 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The schedule period. Valid values:</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DAILY</p>
@@ -1221,7 +1326,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * SparkClientInfo.
+             * <p>The Spark client information.</p>
              */
             public Builder sparkClientInfo(SparkClientInfo sparkClientInfo) {
                 this.sparkClientInfo = sparkClientInfo;
@@ -1229,6 +1334,13 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>1: Hive_SQL.</li>
+             * <li>5: MaxCompute_SQL.</li>
+             * <li>10: Shell.</li>
+             * <li>21: Python.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1240,7 +1352,7 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
-             * UpStreamList.
+             * <p>The upstream dependencies.</p>
              */
             public Builder upStreamList(java.util.List<UpStreamList> upStreamList) {
                 this.upStreamList = upStreamList;

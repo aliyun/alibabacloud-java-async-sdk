@@ -126,7 +126,14 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: Development environment. </li>
+         * <li>PROD (default): Production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -145,6 +153,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +166,10 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -358,7 +370,10 @@ public class ListNodesRequest extends Request {
             } 
 
             /**
-             * DryRun.
+             * <p>Specifies whether to perform a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -366,6 +381,11 @@ public class ListNodesRequest extends Request {
             }
 
             /**
+             * <p>The node business type. Valid values:</p>
+             * <ul>
+             * <li>SCRIPT: script.</li>
+             * <li>LOGICAL_TABLE: logical table.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -377,6 +397,15 @@ public class ListNodesRequest extends Request {
             }
 
             /**
+             * <p>The sub-business type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE_SQL</li>
+             * <li>HIVE_SQL</li>
+             * <li>SHELL</li>
+             * <li>PYTHON</li>
+             * <li>ONE_SERVICE_SQL</li>
+             * <li>DATABASE_SQL, etc.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              */
             public Builder nodeSubBizTypeList(java.util.List<String> nodeSubBizTypeList) {
@@ -385,7 +414,7 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * OwnerList.
+             * <p>The user IDs of the owners.</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -393,7 +422,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -401,7 +433,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -409,7 +444,14 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * PriorityList.
+             * <p>The node priority. Valid values:</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST</li>
+             * </ul>
              */
             public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
@@ -417,6 +459,7 @@ public class ListNodesRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -428,7 +471,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * SchedulePaused.
+             * <p>Specifies whether scheduling is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder schedulePaused(Boolean schedulePaused) {
                 this.schedulePaused = schedulePaused;
@@ -436,7 +482,15 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * SchedulePeriodList.
+             * <p>The scheduling period. Valid values:</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
              */
             public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
@@ -444,7 +498,15 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * ScheduleType.
+             * <p>The node scheduling type. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: Periodic.</li>
+             * <li>SUPPLEMENT: Data backfill.</li>
+             * <li>MANUAL: Manual.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -452,7 +514,10 @@ public class ListNodesRequest extends Request {
             }
 
             /**
-             * SearchText.
+             * <p>The search keyword. Supports fuzzy match by node name and exact match by node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder searchText(String searchText) {
                 this.searchText = searchText;

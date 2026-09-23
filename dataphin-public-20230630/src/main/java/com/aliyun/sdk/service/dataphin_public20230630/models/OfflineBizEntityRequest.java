@@ -112,6 +112,7 @@ public class OfflineBizEntityRequest extends Request {
         }
 
         /**
+         * <p>Offline request</p>
          * <p>This parameter is required.</p>
          */
         public Builder offlineCommand(OfflineCommand offlineCommand) {
@@ -122,6 +123,7 @@ public class OfflineBizEntityRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,6 +234,7 @@ public class OfflineBizEntityRequest extends Request {
             } 
 
             /**
+             * <p>Business unit ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -243,6 +246,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>Offline comment</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +258,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>Business entity ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,6 +270,7 @@ public class OfflineBizEntityRequest extends Request {
             }
 
             /**
+             * <p>Business entity type. For more information, see the &quot;CreateBizEntity&quot; operation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

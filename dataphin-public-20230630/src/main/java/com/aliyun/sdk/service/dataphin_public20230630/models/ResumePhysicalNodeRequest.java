@@ -126,7 +126,14 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Environment identifier.</p>
+         * <ul>
+         * <li>DEV: Development environment</li>
+         * <li>PROD (default): Production environment</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class ResumePhysicalNodeRequest extends Request {
         }
 
         /**
+         * <p>Resume scheduling request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resumeCommand(ResumeCommand resumeCommand) {
@@ -227,6 +236,7 @@ public class ResumePhysicalNodeRequest extends Request {
             } 
 
             /**
+             * <p>Node ID list.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
@@ -235,6 +245,7 @@ public class ResumePhysicalNodeRequest extends Request {
             }
 
             /**
+             * <p>Project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -112,6 +112,7 @@ public class DeleteStandardRequest extends Request {
         }
 
         /**
+         * <p>The delete command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteStandardRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class DeleteStandardRequest extends Request {
             } 
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

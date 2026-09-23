@@ -119,7 +119,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -319,7 +328,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicantId.
+             * <p>The applicant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user001</p>
              */
             public Builder applicantId(String applicantId) {
                 this.applicantId = applicantId;
@@ -327,7 +339,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicantName.
+             * <p>The applicant name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder applicantName(String applicantName) {
                 this.applicantName = applicantName;
@@ -335,7 +350,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalType.
+             * <p>The approval type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_SOURCE</p>
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -343,7 +361,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The approval flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -351,7 +372,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relationship between the current user and the approval task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUBMITTED</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -359,7 +383,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSystem.
+             * <p>The source system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Dataphin</p>
              */
             public Builder sourceSystem(String sourceSystem) {
                 this.sourceSystem = sourceSystem;
@@ -367,7 +394,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The approval status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -375,7 +405,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * SubmittedAt.
+             * <p>The submission time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-07-30 10:00:00</p>
              */
             public Builder submittedAt(String submittedAt) {
                 this.submittedAt = submittedAt;
@@ -383,7 +416,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Datasource application</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -450,7 +486,7 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskList.
+             * <p>The list of approval tasks.</p>
              */
             public Builder taskList(java.util.List<TaskList> taskList) {
                 this.taskList = taskList;
@@ -458,7 +494,10 @@ public class ListApprovalTasksByUserResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

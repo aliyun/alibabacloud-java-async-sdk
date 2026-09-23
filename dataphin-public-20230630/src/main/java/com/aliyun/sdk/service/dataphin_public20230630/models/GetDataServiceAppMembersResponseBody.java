@@ -119,7 +119,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The member list of the data service application.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned from the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * EffectiveEnd.
+             * <p>The authorization expiration time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-12-12</p>
              */
             public Builder effectiveEnd(String effectiveEnd) {
                 this.effectiveEnd = effectiveEnd;
@@ -249,7 +261,14 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>The role of the user. Valid values:</p>
+             * <ul>
+             * <li>general: regular member.</li>
+             * <li>owner: application owner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>general</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -257,7 +276,10 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000245</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -311,7 +333,7 @@ public class GetDataServiceAppMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * MemberList.
+             * <p>The application member list.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {
                 this.memberList = memberList;

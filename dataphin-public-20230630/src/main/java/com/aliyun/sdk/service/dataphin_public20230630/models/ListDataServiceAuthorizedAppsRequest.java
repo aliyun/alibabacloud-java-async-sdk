@@ -126,7 +126,7 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -136,6 +136,7 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +243,10 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -249,7 +254,10 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -257,7 +265,10 @@ public class ListDataServiceAuthorizedAppsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

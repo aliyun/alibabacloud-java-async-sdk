@@ -127,6 +127,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The command to add project members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -137,6 +138,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +262,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The username of the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -270,6 +274,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The nickname of the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -281,6 +286,13 @@ public class AddDataServiceProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The role of the user. Valid values:</p>
+             * <ul>
+             * <li>2: development user</li>
+             * <li>3: application member</li>
+             * <li>4: service project administrator</li>
+             * <li>5: O&amp;M user.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -292,6 +304,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,6 +363,7 @@ public class AddDataServiceProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The list of project members to add.</p>
              * <p>This parameter is required.</p>
              */
             public Builder projectMemberList(java.util.List<ProjectMemberList> projectMemberList) {

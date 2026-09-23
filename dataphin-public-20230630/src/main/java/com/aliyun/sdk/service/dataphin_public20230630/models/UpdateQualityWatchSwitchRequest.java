@@ -112,6 +112,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether to enable the monitored object.</p>
              * <p>This parameter is required.</p>
              */
             public Builder open(Boolean open) {
@@ -212,6 +215,7 @@ public class UpdateQualityWatchSwitchRequest extends Request {
             }
 
             /**
+             * <p>The list of monitoring IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder watchIdList(java.util.List<Long> watchIdList) {

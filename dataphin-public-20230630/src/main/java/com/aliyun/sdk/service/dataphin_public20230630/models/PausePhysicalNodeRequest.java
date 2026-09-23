@@ -126,7 +126,14 @@ public class PausePhysicalNodeRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class PausePhysicalNodeRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class PausePhysicalNodeRequest extends Request {
         }
 
         /**
+         * <p>The pause scheduling request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pauseCommand(PauseCommand pauseCommand) {
@@ -227,6 +236,7 @@ public class PausePhysicalNodeRequest extends Request {
             } 
 
             /**
+             * <p>The list of node IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
@@ -235,6 +245,7 @@ public class PausePhysicalNodeRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

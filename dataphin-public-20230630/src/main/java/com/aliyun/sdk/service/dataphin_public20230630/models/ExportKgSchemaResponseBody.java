@@ -119,7 +119,10 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * SchemaInfo.
+         * <p>The knowledge graph definition details.</p>
          */
         public Builder schemaInfo(SchemaInfo schemaInfo) {
             this.schemaInfo = schemaInfo;
@@ -162,7 +171,7 @@ public class ExportKgSchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,11 @@ public class ExportKgSchemaResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The knowledge graph definition content converted based on the specified format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>workspaceId: f1d4559a4db044158305e2d89bccf81f
+             * name: jytest</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -236,7 +249,10 @@ public class ExportKgSchemaResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFormat.
+             * <p>The format of the returned knowledge graph definition content. Valid values: json and yaml.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yaml</p>
              */
             public Builder outputFormat(String outputFormat) {
                 this.outputFormat = outputFormat;

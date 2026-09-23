@@ -112,6 +112,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -230,7 +235,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
             } 
 
             /**
-             * AlertOwners.
+             * <p>Specifies whether to notify the owner. This parameter takes effect only when the status is reverted to NEW.</p>
              */
             public Builder alertOwners(Boolean alertOwners) {
                 this.alertOwners = alertOwners;
@@ -238,6 +243,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
             }
 
             /**
+             * <p>The list of governance object IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder governObjectIds(java.util.List<Long> governObjectIds) {
@@ -246,7 +252,10 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
             }
 
             /**
-             * Remark.
+             * <p>The operation description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Issue fixed</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -254,6 +263,7 @@ public class UpdateDataAssetsGovernObjectStatusRequest extends Request {
             }
 
             /**
+             * <p>The target status. Valid values: FINISHED / NEW / IGNORE / CANCEL_IGNORE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

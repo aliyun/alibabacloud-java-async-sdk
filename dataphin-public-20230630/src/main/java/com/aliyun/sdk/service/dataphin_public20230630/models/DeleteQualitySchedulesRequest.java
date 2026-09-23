@@ -112,6 +112,7 @@ public class DeleteQualitySchedulesRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteQualitySchedulesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class DeleteQualitySchedulesRequest extends Request {
             } 
 
             /**
+             * <p>The IDs of the scheduling objects.</p>
              * <p>This parameter is required.</p>
              */
             public Builder scheduleIdList(java.util.List<Long> scheduleIdList) {

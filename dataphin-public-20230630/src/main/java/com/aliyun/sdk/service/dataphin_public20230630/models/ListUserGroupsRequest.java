@@ -112,6 +112,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
+         * <p>The paged query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListUserGroupsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -256,7 +258,10 @@ public class ListUserGroupsRequest extends Request {
             } 
 
             /**
-             * Active.
+             * <p>Specifies whether the user group is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -264,7 +269,7 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
-             * AdminIdList.
+             * <p>The user IDs of the user group administrators.</p>
              */
             public Builder adminIdList(java.util.List<String> adminIdList) {
                 this.adminIdList = adminIdList;
@@ -272,7 +277,10 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
-             * FilterMine.
+             * <p>Specifies whether to filter user groups that the current user belongs to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder filterMine(Boolean filterMine) {
                 this.filterMine = filterMine;
@@ -280,7 +288,10 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for the user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -288,6 +299,7 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -299,6 +311,7 @@ public class ListUserGroupsRequest extends Request {
             }
 
             /**
+             * <p>The number of records per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

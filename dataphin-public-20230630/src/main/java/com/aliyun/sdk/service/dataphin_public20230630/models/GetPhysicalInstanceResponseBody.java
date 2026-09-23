@@ -119,7 +119,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Instance.
+         * <p>Instance details</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -143,7 +149,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323111</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +251,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Username</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +321,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323111</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +332,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Username</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +402,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>User ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323111</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -383,7 +413,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Username</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -671,7 +704,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitName.
+             * <p>Business unit name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -679,7 +715,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-02-02 23:53:17</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -687,7 +726,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -695,7 +734,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx 测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -703,7 +745,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DryRun.
+             * <p>Indicates whether this is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -711,7 +756,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>Source system of the node</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -719,7 +767,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HasDev.
+             * <p>Indicates whether the development environment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDev(Boolean hasDev) {
                 this.hasDev = hasDev;
@@ -727,7 +778,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HasProd.
+             * <p>Indicates whether the production environment exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasProd(Boolean hasProd) {
                 this.hasProd = hasProd;
@@ -735,7 +789,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Node ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_3232312</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -743,7 +800,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>Last modified time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-02-02 23:53:17</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -751,7 +811,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>Modifier</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -759,7 +819,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Node name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -767,7 +830,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerList.
+             * <p>Owner list</p>
              */
             public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
@@ -775,7 +838,14 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityList.
+             * <p>Priority</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST</li>
+             * </ul>
              */
             public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
@@ -783,7 +853,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupList.
+             * <p>Resource group list</p>
              */
             public Builder resourceGroupList(java.util.List<String> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
@@ -791,7 +861,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePaused.
+             * <p>Indicates whether scheduling is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder schedulePaused(Boolean schedulePaused) {
                 this.schedulePaused = schedulePaused;
@@ -799,7 +872,15 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriodList.
+             * <p>Scheduling period</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
              */
             public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
@@ -807,7 +888,18 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubDetailType.
+             * <p>Sub-business type</p>
+             * <ul>
+             * <li>MAX_COMPUTE_SQL</li>
+             * <li>HIVE_SQL</li>
+             * <li>SHELL</li>
+             * <li>PYTHON</li>
+             * <li>ONE_SERVICE_SQL</li>
+             * <li>DATABASE_SQL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHELL</p>
              */
             public Builder subDetailType(String subDetailType) {
                 this.subDetailType = subDetailType;
@@ -815,7 +907,21 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Node type</p>
+             * <ul>
+             * <li>BBOX_LOGIC_TABLE_NODE: Logical table node</li>
+             * <li>BBOX_LOGIC_FIELD_NODE: Logical field node</li>
+             * <li>BBOX_LOGIC_FIELD_GROUP_NODE: Field group node</li>
+             * <li>BBOX_INNER_TEMP_NODE: Logical table temp node</li>
+             * <li>DATA_PROCESS: Code task</li>
+             * <li>STREAM_TASK_NODE: Real-time task</li>
+             * <li>PIPELINE_NODE: Pipeline node</li>
+             * <li>FLINK_BATCH: Flink batch task</li>
+             * <li>ODM_NODE: ODM node</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -986,7 +1092,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>Business date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-25</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -994,7 +1103,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DueTime.
+             * <p>Scheduled time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27 00:30:00</p>
              */
             public Builder dueTime(String dueTime) {
                 this.dueTime = dueTime;
@@ -1002,7 +1114,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Execution duration</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600s</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1010,7 +1125,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndExecuteTime.
+             * <p>End execution time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27 02:30:00</p>
              */
             public Builder endExecuteTime(Long endExecuteTime) {
                 this.endExecuteTime = endExecuteTime;
@@ -1018,7 +1136,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>Extended information</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -1026,7 +1147,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_23231</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1034,7 +1158,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>Running instance index</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1042,7 +1169,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * <p>Node details</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -1050,7 +1177,10 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartExecuteTime.
+             * <p>Start execution time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-27 01:30:00</p>
              */
             public Builder startExecuteTime(Long startExecuteTime) {
                 this.startExecuteTime = startExecuteTime;
@@ -1058,7 +1188,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StatusList.
+             * <p>Status list</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;

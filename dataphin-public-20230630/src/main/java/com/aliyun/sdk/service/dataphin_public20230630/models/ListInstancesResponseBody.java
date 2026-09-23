@@ -119,7 +119,10 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paginated result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21313112</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +248,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +318,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21313112</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +329,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +399,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21313112</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -383,7 +410,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -671,7 +701,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitName.
+             * <p>The business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx_test</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -679,7 +712,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -687,7 +723,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the node.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -695,7 +731,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -703,7 +742,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DryRun.
+             * <p>Indicates whether the node is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -711,7 +753,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The source of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCES</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -719,7 +764,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HasDev.
+             * <p>Indicates whether the node has a development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasDev(Boolean hasDev) {
                 this.hasDev = hasDev;
@@ -727,7 +775,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HasProd.
+             * <p>Indicates whether the node has a production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasProd(Boolean hasProd) {
                 this.hasProd = hasProd;
@@ -735,7 +786,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_132331</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -743,7 +797,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -751,7 +808,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The modifier of the node.</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -759,7 +816,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -767,7 +827,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerList.
+             * <p>The owner.</p>
              */
             public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
@@ -775,7 +835,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityList.
+             * <p>The priority. Valid values:</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST</li>
+             * </ul>
              */
             public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
@@ -783,7 +850,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupList.
+             * <p>The schedule resource groups for execution.</p>
              */
             public Builder resourceGroupList(java.util.List<String> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
@@ -791,7 +858,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePaused.
+             * <p>Specifies whether scheduling is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder schedulePaused(Boolean schedulePaused) {
                 this.schedulePaused = schedulePaused;
@@ -799,7 +869,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriodList.
+             * <p>The scheduling period.</p>
              */
             public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
@@ -807,7 +877,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubDetailType.
+             * <p>The sub-business type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE_SQL</li>
+             * <li>HIVE_SQL</li>
+             * <li>SHELL</li>
+             * <li>PYTHON</li>
+             * <li>ONE_SERVICE_SQL</li>
+             * <li>DATABASE_SQL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SHELL</p>
              */
             public Builder subDetailType(String subDetailType) {
                 this.subDetailType = subDetailType;
@@ -815,7 +896,14 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The business type of the node. Valid values:</p>
+             * <ul>
+             * <li>SCRIPT: script.</li>
+             * <li>LOGICAL_TABLE: logical table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCES</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -986,7 +1074,10 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -994,7 +1085,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DueTime.
+             * <p>The scheduling time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder dueTime(String dueTime) {
                 this.dueTime = dueTime;
@@ -1002,7 +1096,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1010,7 +1107,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndExecuteTime.
+             * <p>The execution end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder endExecuteTime(Long endExecuteTime) {
                 this.endExecuteTime = endExecuteTime;
@@ -1018,7 +1118,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>The extended node information, which contains properties specific to different business system instances, such as the fileId of a pipeline, whether a logical table uses hierarchy dimensions, mid node information, and instance output names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -1026,7 +1129,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_23231</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1034,7 +1140,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the hourly or minutely instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1042,7 +1151,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * <p>The node details.</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -1050,7 +1159,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StartExecuteTime.
+             * <p>The execution start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:46:13</p>
              */
             public Builder startExecuteTime(Long startExecuteTime) {
                 this.startExecuteTime = startExecuteTime;
@@ -1058,7 +1170,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusList.
+             * <p>The instance status.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -1125,7 +1237,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The paginated records.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1133,7 +1245,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

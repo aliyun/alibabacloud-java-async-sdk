@@ -126,7 +126,10 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The app group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202102</p>
          */
         public Builder groupId(Integer groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -135,6 +138,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +160,7 @@ public class GetDataServiceAuthorizedAppsByGroupIdRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ListFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Request error code. OK indicates a normal request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * FileList.
+         * <p>File list</p>
          */
         public Builder fileList(java.util.List<FileList> fileList) {
             this.fileList = fileList;
@@ -135,7 +138,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>Backend response HTTP code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Request error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -342,7 +357,10 @@ public class ListFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>File category</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tempCode</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -350,7 +368,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>File content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -358,7 +379,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212111</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -366,7 +390,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>File directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/xx/x</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -374,7 +401,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>File type, such as directory</p>
+             * 
+             * <strong>example:</strong>
+             * <p>directory</p>
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -382,7 +412,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717483193830</p>
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -390,7 +423,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Modification time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717483193830</p>
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -398,7 +434,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>File ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111231112</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -406,7 +445,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>Last modifier</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1212111</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -414,7 +456,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>File name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -422,7 +467,10 @@ public class ListFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>Project ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>312112121</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

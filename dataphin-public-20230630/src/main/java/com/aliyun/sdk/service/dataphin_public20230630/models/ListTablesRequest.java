@@ -111,7 +111,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -121,6 +121,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,6 +229,7 @@ public class ListTablesRequest extends Request {
             } 
 
             /**
+             * <p>The asset catalog, such as the project name or business unit name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -239,7 +241,10 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for searching. Table names are supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -247,7 +252,10 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -255,7 +263,10 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

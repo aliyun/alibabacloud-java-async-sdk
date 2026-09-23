@@ -119,7 +119,10 @@ public class ListKgRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -249,7 +261,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the property. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -257,7 +272,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +381,7 @@ public class ListKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * PropertyList.
+             * <p>The list of properties for the relationship record.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -371,7 +389,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationId.
+             * <p>The relationship record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -379,7 +400,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relationship type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BELONG_TO</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -387,7 +411,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEntityId.
+             * <p>The source entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder sourceEntityId(String sourceEntityId) {
                 this.sourceEntityId = sourceEntityId;
@@ -395,7 +422,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEntityId.
+             * <p>The target entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abd-xxx</p>
              */
             public Builder targetEntityId(String targetEntityId) {
                 this.targetEntityId = targetEntityId;
@@ -462,7 +492,7 @@ public class ListKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * RelationList.
+             * <p>The list of paged relationship records.</p>
              */
             public Builder relationList(java.util.List<RelationList> relationList) {
                 this.relationList = relationList;
@@ -470,7 +500,10 @@ public class ListKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -112,6 +112,7 @@ public class ListAssetTopicsRequest extends Request {
         }
 
         /**
+         * <p>The query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListAssetTopicsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListAssetTopicsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -229,6 +234,7 @@ public class ListAssetTopicsRequest extends Request {
             } 
 
             /**
+             * <p>The asset type. Valid values: TABLE, INDEX, API, DASHBOARD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,7 +246,10 @@ public class ListAssetTopicsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for the topic name. Maximum length: 256 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core Metrics</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -248,7 +257,10 @@ public class ListAssetTopicsRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9770420</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -256,7 +268,10 @@ public class ListAssetTopicsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 50. Valid values: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7428337</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

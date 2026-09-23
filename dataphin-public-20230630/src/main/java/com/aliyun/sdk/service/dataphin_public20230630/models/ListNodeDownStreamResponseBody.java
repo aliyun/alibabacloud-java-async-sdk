@@ -119,7 +119,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * NodeInfoList.
+         * <p>The list of nodes.</p>
          */
         public Builder nodeInfoList(java.util.List<NodeInfoList> nodeInfoList) {
             this.nodeInfoList = nodeInfoList;
@@ -151,7 +160,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             } 
 
             /**
-             * Depth.
+             * <p>The depth level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -272,7 +290,7 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * FieldIdList.
+             * <p>The list of field IDs.</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -280,7 +298,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_2423351</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -288,7 +309,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxTest</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -296,7 +320,10 @@ public class ListNodeDownStreamResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The node type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder type(String type) {
                 this.type = type;

@@ -112,6 +112,7 @@ public class UpdateTenantMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateTenantMemberRequest extends Request {
         }
 
         /**
+         * <p>The request object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -241,7 +243,10 @@ public class UpdateTenantMemberRequest extends Request {
             } 
 
             /**
-             * DingNumber.
+             * <p>The DingTalk number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123@dingding</p>
              */
             public Builder dingNumber(String dingNumber) {
                 this.dingNumber = dingNumber;
@@ -249,7 +254,10 @@ public class UpdateTenantMemberRequest extends Request {
             }
 
             /**
-             * Mail.
+             * <p>The email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -257,7 +265,10 @@ public class UpdateTenantMemberRequest extends Request {
             }
 
             /**
-             * MobilePhone.
+             * <p>The phone number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13888888888</p>
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -265,7 +276,7 @@ public class UpdateTenantMemberRequest extends Request {
             }
 
             /**
-             * RoleList.
+             * <p>The list of roles.</p>
              */
             public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
@@ -273,7 +284,10 @@ public class UpdateTenantMemberRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2331</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -328,6 +342,7 @@ public class UpdateTenantMemberRequest extends Request {
             } 
 
             /**
+             * <p>The list of members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {

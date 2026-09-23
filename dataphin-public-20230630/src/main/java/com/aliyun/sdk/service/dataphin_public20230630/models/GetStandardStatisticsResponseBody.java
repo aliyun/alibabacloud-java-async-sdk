@@ -119,7 +119,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The statistical results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * Count.
+             * <p>The number of standards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -236,7 +248,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardType.
+             * <p>The standard type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder standardType(String standardType) {
                 this.standardType = standardType;
@@ -303,7 +318,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardTypeCountList.
+             * <p>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</p>
              */
             public Builder standardTypeCountList(java.util.List<StandardTypeCountList> standardTypeCountList) {
                 this.standardTypeCountList = standardTypeCountList;
@@ -311,7 +326,10 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of standards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

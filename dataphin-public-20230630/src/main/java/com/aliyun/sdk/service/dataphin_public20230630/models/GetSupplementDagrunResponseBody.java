@@ -119,7 +119,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         }
 
         /**
-         * DagrunList.
+         * <p>The list of dagruns.</p>
          */
         public Builder dagrunList(java.util.List<DagrunList> dagrunList) {
             this.dagrunList = dagrunList;
@@ -135,7 +138,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date. The time format must conform to the partition format specified by the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-01</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -298,7 +316,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The runtime duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -306,7 +327,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             }
 
             /**
-             * EndExecuteTime.
+             * <p>The execution end timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717081789000</p>
              */
             public Builder endExecuteTime(Long endExecuteTime) {
                 this.endExecuteTime = endExecuteTime;
@@ -325,7 +349,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             }
 
             /**
-             * StartExecuteTime.
+             * <p>The execution start timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717081729000</p>
              */
             public Builder startExecuteTime(Long startExecuteTime) {
                 this.startExecuteTime = startExecuteTime;
@@ -333,7 +360,20 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the data backfill instance workflow. Valid values:</p>
+             * <ul>
+             * <li>INIT: dagrun init.</li>
+             * <li>CREATE_FAILED: dagrun creation failed.</li>
+             * <li>CREATED: dagrun created.</li>
+             * <li>READY: dagrun ready for exec.</li>
+             * <li>RUNNING: dagrun running.</li>
+             * <li>KILLED: dagrun stopped.</li>
+             * <li>FAILED: dagrun failed.</li>
+             * <li>SUCCESS: dagrun succeeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -341,7 +381,10 @@ public class GetSupplementDagrunResponseBody extends TeaModel {
             }
 
             /**
-             * SupplementId.
+             * <p>The ID of the data backfill instance workflow.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f_8241792_20201202_2099680</p>
              */
             public Builder supplementId(String supplementId) {
                 this.supplementId = supplementId;

@@ -112,6 +112,7 @@ public class PublishStandardRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class PublishStandardRequest extends Request {
         }
 
         /**
+         * <p>The publish command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder publishCommand(PublishCommand publishCommand) {
@@ -256,7 +258,7 @@ public class PublishStandardRequest extends Request {
             } 
 
             /**
-             * AutoPublishAfterApproval.
+             * <p>Specifies whether to automatically publish after approval. Default value: true.</p>
              */
             public Builder autoPublishAfterApproval(Boolean autoPublishAfterApproval) {
                 this.autoPublishAfterApproval = autoPublishAfterApproval;
@@ -264,6 +266,7 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
+             * <p>The review comment. Maximum length: 128 characters.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -275,6 +278,7 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -286,7 +290,7 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
-             * ReviewerIdList.
+             * <p>The specified reviewers.</p>
              */
             public Builder reviewerIdList(java.util.List<String> reviewerIdList) {
                 this.reviewerIdList = reviewerIdList;
@@ -294,7 +298,10 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
-             * StandardStage.
+             * <p>The stage of the standard. Valid values: DEV and PROD. Default value: DEV.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder standardStage(String standardStage) {
                 this.standardStage = standardStage;
@@ -302,7 +309,10 @@ public class PublishStandardRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version number. Default value: -1 (latest version).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

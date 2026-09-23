@@ -119,7 +119,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         }
 
         /**
-         * MappingRelationList.
+         * <p>The list of mapping relationships.</p>
          */
         public Builder mappingRelationList(java.util.List<MappingRelationList> mappingRelationList) {
             this.mappingRelationList = mappingRelationList;
@@ -143,7 +149,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend response exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +354,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>The type of the asset. Valid values: COLUMN (field) and INDEX (metric).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -353,7 +365,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -361,7 +376,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -369,7 +387,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +398,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardCode.
+             * <p>The code of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc</p>
              */
             public Builder standardCode(String standardCode) {
                 this.standardCode = standardCode;
@@ -385,7 +409,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardId.
+             * <p>The ID of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder standardId(Long standardId) {
                 this.standardId = standardId;
@@ -393,7 +420,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardName.
+             * <p>The name of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder standardName(String standardName) {
                 this.standardName = standardName;
@@ -401,7 +431,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetDirectory.
+             * <p>The directory where the standard set is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir1</p>
              */
             public Builder standardSetDirectory(String standardSetDirectory) {
                 this.standardSetDirectory = standardSetDirectory;
@@ -409,7 +442,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetId.
+             * <p>The ID of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder standardSetId(Long standardSetId) {
                 this.standardSetId = standardSetId;
@@ -417,7 +453,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetName.
+             * <p>The name of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder standardSetName(String standardSetName) {
                 this.standardSetName = standardSetName;
@@ -425,7 +464,10 @@ public class GetBelongAssetMappingResponseBody extends TeaModel {
             }
 
             /**
-             * StandardStage.
+             * <p>The stage of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder standardStage(String standardStage) {
                 this.standardStage = standardStage;

@@ -126,7 +126,7 @@ public class GetTableLineagesRequest extends Request {
         }
 
         /**
-         * FilterQuery.
+         * <p>The filter conditions.</p>
          */
         public Builder filterQuery(FilterQuery filterQuery) {
             String filterQueryShrink = shrink(filterQuery, "FilterQuery", "json");
@@ -136,6 +136,7 @@ public class GetTableLineagesRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +158,7 @@ public class GetTableLineagesRequest extends Request {
         }
 
         /**
+         * <p>The GUID of the table, which is the unique identifier of each asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,7 +269,7 @@ public class GetTableLineagesRequest extends Request {
             } 
 
             /**
-             * NeedDownstream.
+             * <p>Specifies whether to query downstream lineage. Default value: false.</p>
              */
             public Builder needDownstream(Boolean needDownstream) {
                 this.needDownstream = needDownstream;
@@ -275,7 +277,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * NeedNotExistObject.
+             * <p>Specifies whether to return tables that do not exist in the asset list. Default value: false.</p>
              */
             public Builder needNotExistObject(Boolean needNotExistObject) {
                 this.needNotExistObject = needNotExistObject;
@@ -283,7 +285,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * NeedUpstream.
+             * <p>Specifies whether to query upstream lineage. Default value: false.</p>
              */
             public Builder needUpstream(Boolean needUpstream) {
                 this.needUpstream = needUpstream;
@@ -291,7 +293,10 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * NodeEnv.
+             * <p>The environment to which the task belongs. This parameter is used for filtering. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nodeEnv(String nodeEnv) {
                 this.nodeEnv = nodeEnv;
@@ -299,7 +304,7 @@ public class GetTableLineagesRequest extends Request {
             }
 
             /**
-             * NodeIdList.
+             * <p>The list of task IDs used for filtering.</p>
              */
             public Builder nodeIdList(java.util.List<String> nodeIdList) {
                 this.nodeIdList = nodeIdList;

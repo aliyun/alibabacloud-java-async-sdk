@@ -119,7 +119,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details from the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * QualityWatchInfo.
+         * <p>The details of the monitored object.</p>
          */
         public Builder qualityWatchInfo(QualityWatchInfo qualityWatchInfo) {
             this.qualityWatchInfo = qualityWatchInfo;
@@ -162,7 +171,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -332,7 +341,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -340,7 +352,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -348,7 +363,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -356,7 +374,14 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier. Valid values:</p>
+             * <ul>
+             * <li>PROD</li>
+             * <li>DEV.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -364,7 +389,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -372,7 +400,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -380,7 +411,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The datasource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -388,7 +422,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -396,7 +433,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -404,7 +444,14 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The datasource type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE</li>
+             * <li>HADOOP.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -679,7 +726,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -687,7 +737,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The business unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -695,7 +748,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Catalog.
+             * <p>The metric catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -703,7 +759,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * CellSumLogicTableName.
+             * <p>The name of the cell aggregate table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dws_all</p>
              */
             public Builder cellSumLogicTableName(String cellSumLogicTableName) {
                 this.cellSumLogicTableName = cellSumLogicTableName;
@@ -711,7 +770,16 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeType.
+             * <p>The computation type of the metric. Valid values:</p>
+             * <ul>
+             * <li>AUTO</li>
+             * <li>CUSTOM</li>
+             * <li>MOUNT</li>
+             * <li>COMBINE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -719,7 +787,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * DateType.
+             * <p>The data type of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder dateType(String dateType) {
                 this.dateType = dateType;
@@ -727,7 +798,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -735,7 +809,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -743,7 +820,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * GranularityDisplayName.
+             * <p>The display name of the statistical granularity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>全站汇总表</p>
              */
             public Builder granularityDisplayName(String granularityDisplayName) {
                 this.granularityDisplayName = granularityDisplayName;
@@ -751,7 +831,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * GranularityId.
+             * <p>The statistical granularity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18755764</p>
              */
             public Builder granularityId(Long granularityId) {
                 this.granularityId = granularityId;
@@ -759,7 +842,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The metric GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -767,7 +853,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The metric ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -775,7 +864,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -783,7 +875,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -791,7 +886,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -799,7 +897,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -807,7 +908,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -815,7 +919,13 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li>INDEX.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INDEX</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1051,7 +1161,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -1059,7 +1172,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The business unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -1067,7 +1183,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Catalog.
+             * <p>The table catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -1075,7 +1194,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1083,7 +1205,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * <p>The datasource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -1091,7 +1216,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1099,7 +1227,14 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment identifier. Valid values:</p>
+             * <ul>
+             * <li>DEV</li>
+             * <li>PROD.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1107,7 +1242,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1115,7 +1253,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionTable.
+             * <p>Indicates whether the table is a partitioned table.</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -1123,7 +1261,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1131,7 +1272,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -1139,7 +1283,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1147,7 +1294,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1155,7 +1305,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1163,7 +1316,18 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type. Valid values:</p>
+             * <ul>
+             * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
+             * <li>LOGIC_FACT_TABLE: logical fact table.</li>
+             * <li>LOGIC_SUM_TABLE: logical aggregate table.</li>
+             * <li>LOGIC_LABEL_TABLE: logical label table.</li>
+             * <li>PHYSICAL_TABLE: physical table.</li>
+             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LOGIC_DIM_TABLE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1438,7 +1602,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1446,7 +1613,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -1454,7 +1624,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -1462,7 +1635,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceInfo.
+             * <p>The datasource details.</p>
              */
             public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
                 this.dataSourceInfo = dataSourceInfo;
@@ -1470,7 +1643,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * EnabledRuleCount.
+             * <p>The number of enabled rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder enabledRuleCount(Long enabledRuleCount) {
                 this.enabledRuleCount = enabledRuleCount;
@@ -1478,7 +1654,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The monitoring ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1486,7 +1665,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * IndexInfo.
+             * <p>The metric details.</p>
              */
             public Builder indexInfo(IndexInfo indexInfo) {
                 this.indexInfo = indexInfo;
@@ -1494,7 +1673,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * LatestWatchTaskId.
+             * <p>The ID of the most recent quality watchtask for the monitored object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder latestWatchTaskId(Long latestWatchTaskId) {
                 this.latestWatchTaskId = latestWatchTaskId;
@@ -1502,7 +1684,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * LatestWatchTaskStatus.
+             * <p>The status of the most recent quality watchtask for the monitored object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder latestWatchTaskStatus(String latestWatchTaskStatus) {
                 this.latestWatchTaskStatus = latestWatchTaskStatus;
@@ -1510,7 +1695,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -1518,7 +1706,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1526,7 +1717,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The monitoring name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1534,7 +1728,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * QualityOwner.
+             * <p>The user ID of the quality owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder qualityOwner(String qualityOwner) {
                 this.qualityOwner = qualityOwner;
@@ -1542,7 +1739,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * QualityOwnerName.
+             * <p>The display name of the quality owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder qualityOwnerName(String qualityOwnerName) {
                 this.qualityOwnerName = qualityOwnerName;
@@ -1550,7 +1750,10 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * <p>The number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder ruleCount(Long ruleCount) {
                 this.ruleCount = ruleCount;
@@ -1558,7 +1761,14 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>ENABLE</li>
+             * <li>DISABLE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1566,7 +1776,7 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * TableInfo.
+             * <p>The monitored table object.</p>
              */
             public Builder tableInfo(TableInfo tableInfo) {
                 this.tableInfo = tableInfo;
@@ -1574,7 +1784,17 @@ public class GetQualityWatchByObjectIdResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The monitored object type. Valid values:</p>
+             * <ul>
+             * <li>TABLE: Dataphin table.</li>
+             * <li>DATASOURCE_TABLE: global table.</li>
+             * <li>DATASOURCE: datasource.</li>
+             * <li>INDEX: metric.</li>
+             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder type(String type) {
                 this.type = type;

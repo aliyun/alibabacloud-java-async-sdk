@@ -112,6 +112,7 @@ public class UpsertQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpsertQualityRuleRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UpsertQualityRuleRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder upsertCommand(UpsertCommand upsertCommand) {
@@ -241,7 +246,7 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Indicates whether the maximum value is included.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -249,7 +254,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Indicates whether the minimum value is included.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -257,7 +262,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value. This parameter applies to range interval properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -265,7 +273,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum value. This parameter applies to range interval properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -273,7 +284,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ValueList.
+             * <p>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -379,7 +390,18 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * DataType.
+             * <p>The property field data type. Valid values:</p>
+             * <ul>
+             * <li>STRING: text.</li>
+             * <li>BIGINT: integer.</li>
+             * <li>DOUBLE: floating-point.</li>
+             * <li>BOOLEAN: Boolean.</li>
+             * <li>DATE: date.</li>
+             * <li>DATETIME: datetime.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -387,7 +409,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * DefaultValue.
+             * <p>The property default value.</p>
              */
             public Builder defaultValue(DefaultValue defaultValue) {
                 this.defaultValue = defaultValue;
@@ -395,7 +417,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Length.
+             * <p>The property field length. You can use this parameter to constrain the maximum length of text-type property values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>986992</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -403,7 +428,16 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The property value input method. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom input.</li>
+             * <li>SINGLE_ENUM: single-select dropdown.</li>
+             * <li>MULTIPLE_ENUMS: multi-select dropdown.</li>
+             * <li>RANGE: range interval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMIZED</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -411,7 +445,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ValueEnumList.
+             * <p>The property option values. This parameter applies only to properties whose input method is single-select dropdown or multi-select dropdown.</p>
              */
             public Builder valueEnumList(java.util.List<String> valueEnumList) {
                 this.valueEnumList = valueEnumList;
@@ -543,7 +577,10 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -551,7 +588,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the property is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -559,7 +596,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The property ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>711484689131</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -567,7 +607,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attr01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -575,7 +618,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the property is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -583,7 +626,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Searchable.
+             * <p>Indicates whether the property is searchable.</p>
              */
             public Builder searchable(Boolean searchable) {
                 this.searchable = searchable;
@@ -591,7 +634,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ValueConfig.
+             * <p>The property value configuration details.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -697,7 +740,7 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Indicates whether the maximum value is included.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -705,7 +748,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Indicates whether the minimum value is included.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -713,7 +756,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value. This parameter applies to range interval properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -721,7 +767,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum value. This parameter applies to range interval properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -729,7 +778,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ValueList.
+             * <p>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -796,7 +845,7 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * AttributeInfo.
+             * <p>The property details.</p>
              */
             public Builder attributeInfo(AttributeInfo attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -804,7 +853,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * <p>The property value.</p>
              */
             public Builder attributeValue(AttributeValue attributeValue) {
                 this.attributeValue = attributeValue;
@@ -884,7 +933,10 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * ComponentType.
+             * <p>The control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>expression</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -892,7 +944,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -900,7 +955,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1019,7 +1077,10 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The condition node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1027,7 +1088,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Metric.
+             * <p>The metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -1035,7 +1099,20 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Operator.
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li>EQUAL</li>
+             * <li>NOT_EQUAL</li>
+             * <li>LARGER</li>
+             * <li>SMALLER</li>
+             * <li>LARGE_OR_EQUAL</li>
+             * <li>SMALLER_OR_EQUAL</li>
+             * <li>AND</li>
+             * <li>OR</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1043,7 +1120,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ParentId.
+             * <p>The parent condition node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1051,7 +1131,14 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The condition type. Valid values:</p>
+             * <ul>
+             * <li>RELATION: relationship.</li>
+             * <li>EXPRESSION: expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RELATION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1059,7 +1146,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1288,7 +1378,15 @@ public class UpsertQualityRuleRequest extends Request {
             } 
 
             /**
-             * ArchiveMode.
+             * <p>The exception archive mode. Valid values:</p>
+             * <ul>
+             * <li>ONLY_ERROR_FIELD: Archives only the exception fields.</li>
+             * <li>FULL_RECORD: Archives the complete record.</li>
+             * </ul>
+             * <p>Default value: ONLY_ERROR_FIELD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ONLY_ERROR_FIELD</p>
              */
             public Builder archiveMode(String archiveMode) {
                 this.archiveMode = archiveMode;
@@ -1296,7 +1394,15 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ArchiveStoreType.
+             * <p>The exception archive storage type. Valid values:</p>
+             * <ul>
+             * <li>FILE_SYSTEM: File system.</li>
+             * <li>CUSTOM_TABLE: Custom table.</li>
+             * </ul>
+             * <p>Default value: FILE_SYSTEM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FILE_SYSTEM</p>
              */
             public Builder archiveStoreType(String archiveStoreType) {
                 this.archiveStoreType = archiveStoreType;
@@ -1304,7 +1410,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * AttributeWithValueList.
+             * <p>The rule business property configuration.</p>
              */
             public Builder attributeWithValueList(java.util.List<AttributeWithValueList> attributeWithValueList) {
                 this.attributeWithValueList = attributeWithValueList;
@@ -1312,6 +1418,17 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The rule catalog. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: consistency.</li>
+             * <li>EFFECTIVE: validity.</li>
+             * <li>TIMELINESE: timeliness.</li>
+             * <li>ACCURATE: accuracy.</li>
+             * <li>UNIQUENESS: uniqueness.</li>
+             * <li>COMPLETENESS: completeness.</li>
+             * <li>STABILITY: stability.</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
@@ -1320,7 +1437,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1328,7 +1448,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * EnableErrorArchive.
+             * <p>Specifies whether to enable error archiving.</p>
              */
             public Builder enableErrorArchive(Boolean enableErrorArchive) {
                 this.enableErrorArchive = enableErrorArchive;
@@ -1336,7 +1456,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * FormPropertyList.
+             * <p>The rule configuration key-value pairs. These are related to the templatetype. Different template types return different form key-value pair configurations.</p>
              */
             public Builder formPropertyList(java.util.List<FormPropertyList> formPropertyList) {
                 this.formPropertyList = formPropertyList;
@@ -1344,7 +1464,10 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The rule ID. If this parameter is not empty, the operation updates the rule. If this parameter is empty, the operation creates a rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1352,6 +1475,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The name of the quality rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1363,6 +1487,11 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The rule strength. Valid values:</p>
+             * <ul>
+             * <li>STRONG</li>
+             * <li>WEAK</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1374,6 +1503,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The template ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1385,6 +1515,40 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The templatetype. Valid values:</p>
+             * <ul>
+             * <li>FIELD_NULL_VALUE_VALIDATE: field null value check.</li>
+             * <li>FIELD_EMPTY_STRING_VALIDATE: field empty string check.</li>
+             * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check.</li>
+             * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check.</li>
+             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check.</li>
+             * <li>FUNCTION_TIME_COMPARE: time function comparison.</li>
+             * <li>SINGLE_TABLE_TIME_COMPARE: single-table time field comparison.</li>
+             * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison.</li>
+             * <li>FIELD_FORMAT_VALIDATE: field format check.</li>
+             * <li>FIELD_LENGTH_VALIDATE: field length check.</li>
+             * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check.</li>
+             * <li>CODE_TABLE_COMPARE: lookup table reference comparison.</li>
+             * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: single-table field value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: single-table field statistical value consistency comparison.</li>
+             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: single-table field business logic consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison.</li>
+             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison.</li>
+             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison.</li>
+             * <li>TABLE_STABILITY_VALIDATE: table stability check.</li>
+             * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check.</li>
+             * <li>FIELD_STABILITY_VALIDATE: field stability check.</li>
+             * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check.</li>
+             * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check.</li>
+             * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check.</li>
+             * <li>DATASOURCE_AVAILABLE_CHECK: datasource connectivity monitoring.</li>
+             * <li>TABLE_SCHEMA_CHECK: table schema change monitoring.</li>
+             * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison.</li>
+             * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring.</li>
+             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1396,7 +1560,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
-             * ValidateConditionList.
+             * <p>The validation conditions.</p>
              */
             public Builder validateConditionList(java.util.List<ValidateConditionList> validateConditionList) {
                 this.validateConditionList = validateConditionList;
@@ -1404,6 +1568,7 @@ public class UpsertQualityRuleRequest extends Request {
             }
 
             /**
+             * <p>The ID of the associated watch.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

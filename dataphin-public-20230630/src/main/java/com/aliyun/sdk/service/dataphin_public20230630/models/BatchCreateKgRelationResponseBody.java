@@ -119,7 +119,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * CreateResult.
+         * <p>The result of batch relationship record creation.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -135,7 +138,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * RelationId.
+             * <p>The relationship record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -236,7 +248,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relationship type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BELONG_TO</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -316,7 +331,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             } 
 
             /**
-             * FailCount.
+             * <p>The number of failed records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -324,7 +342,10 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully created records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -332,7 +353,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessRelationList.
+             * <p>The list of successfully created entity records.</p>
              */
             public Builder successRelationList(java.util.List<SuccessRelationList> successRelationList) {
                 this.successRelationList = successRelationList;

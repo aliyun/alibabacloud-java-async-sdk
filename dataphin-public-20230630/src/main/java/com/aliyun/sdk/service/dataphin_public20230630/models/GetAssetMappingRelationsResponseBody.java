@@ -119,7 +119,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * MappingRelationList.
+         * <p>The list of mapping relationships.</p>
          */
         public Builder mappingRelationList(java.util.List<MappingRelationList> mappingRelationList) {
             this.mappingRelationList = mappingRelationList;
@@ -143,7 +149,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details from the backend response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +354,14 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>The Asset Type. Valid values:</p>
+             * <ul>
+             * <li>COLUMN: field.</li>
+             * <li>INDEX: metric.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -353,7 +369,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1122</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -361,7 +380,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -369,7 +391,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +402,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardCode.
+             * <p>The code of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cc</p>
              */
             public Builder standardCode(String standardCode) {
                 this.standardCode = standardCode;
@@ -385,7 +413,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardId.
+             * <p>The ID of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder standardId(Long standardId) {
                 this.standardId = standardId;
@@ -393,7 +424,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardName.
+             * <p>The name of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder standardName(String standardName) {
                 this.standardName = standardName;
@@ -401,7 +435,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetDirectory.
+             * <p>The folder in which the standard set resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir1</p>
              */
             public Builder standardSetDirectory(String standardSetDirectory) {
                 this.standardSetDirectory = standardSetDirectory;
@@ -409,7 +446,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetId.
+             * <p>The ID of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder standardSetId(Long standardSetId) {
                 this.standardSetId = standardSetId;
@@ -417,7 +457,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardSetName.
+             * <p>The name of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder standardSetName(String standardSetName) {
                 this.standardSetName = standardSetName;
@@ -425,7 +468,10 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * StandardStage.
+             * <p>The stage of the standard.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder standardStage(String standardStage) {
                 this.standardStage = standardStage;

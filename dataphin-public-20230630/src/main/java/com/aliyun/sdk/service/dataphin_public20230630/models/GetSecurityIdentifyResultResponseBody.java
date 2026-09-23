@@ -119,7 +119,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIdentifyResultInfo.
+         * <p>The identification result details.</p>
          */
         public Builder securityIdentifyResultInfo(SecurityIdentifyResultInfo securityIdentifyResultInfo) {
             this.securityIdentifyResultInfo = securityIdentifyResultInfo;
@@ -162,7 +171,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -683,7 +692,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -691,7 +703,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitDisplayName.
+             * <p>The display name of the business unit in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD_test</p>
              */
             public Builder bizUnitDisplayName(String bizUnitDisplayName) {
                 this.bizUnitDisplayName = bizUnitDisplayName;
@@ -699,7 +714,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -707,7 +725,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The business unit name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD_test</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -715,7 +736,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyAbbreviation.
+             * <p>The classification abbreviation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classifyAbbreviation(String classifyAbbreviation) {
                 this.classifyAbbreviation = classifyAbbreviation;
@@ -723,7 +747,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyId.
+             * <p>The classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33</p>
              */
             public Builder classifyId(Long classifyId) {
                 this.classifyId = classifyId;
@@ -731,7 +758,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyName.
+             * <p>The classification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classifyName(String classifyName) {
                 this.classifyName = classifyName;
@@ -739,7 +769,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 10:30:30</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -747,7 +780,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -755,7 +791,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101121</p>
              */
             public Builder datasourceId(Long datasourceId) {
                 this.datasourceId = datasourceId;
@@ -763,7 +802,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds1</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -771,7 +813,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * FieldDescription.
+             * <p>The field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder fieldDescription(String fieldDescription) {
                 this.fieldDescription = fieldDescription;
@@ -779,7 +824,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * FieldId.
+             * <p>The field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test.col1</p>
              */
             public Builder fieldId(String fieldId) {
                 this.fieldId = fieldId;
@@ -787,7 +835,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * <p>The field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1</p>
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -795,7 +846,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * HasBetterRule.
+             * <p>Indicates whether a better matching result exists.</p>
              */
             public Builder hasBetterRule(Boolean hasBetterRule) {
                 this.hasBetterRule = hasBetterRule;
@@ -803,7 +854,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The identification result ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -811,7 +865,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifyRecordId.
+             * <p>The identification record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder identifyRecordId(Long identifyRecordId) {
                 this.identifyRecordId = identifyRecordId;
@@ -819,7 +876,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * IsCustomIdentify.
+             * <p>Indicates whether a custom tagging rule is used.</p>
              */
             public Builder isCustomIdentify(Boolean isCustomIdentify) {
                 this.isCustomIdentify = isCustomIdentify;
@@ -827,7 +884,7 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * IsLocked.
+             * <p>Indicates whether the result is locked.</p>
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -835,7 +892,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * LevelAbbreviation.
+             * <p>The sensitivity level abbreviation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder levelAbbreviation(String levelAbbreviation) {
                 this.levelAbbreviation = levelAbbreviation;
@@ -843,7 +903,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * LevelColor.
+             * <p>The sensitivity level color.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelColor(Long levelColor) {
                 this.levelColor = levelColor;
@@ -851,7 +914,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * LevelIndex.
+             * <p>The sensitivity level index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelIndex(Long levelIndex) {
                 this.levelIndex = levelIndex;
@@ -859,7 +925,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * <p>The sensitivity level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;
@@ -867,7 +936,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -875,7 +947,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 10:30:30</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -883,7 +958,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDisplayName.
+             * <p>The display name of the project in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectDisplayName(String projectDisplayName) {
                 this.projectDisplayName = projectDisplayName;
@@ -891,7 +969,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101121</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -899,7 +980,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -907,7 +991,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * ScanTaskId.
+             * <p>The scan task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder scanTaskId(Long scanTaskId) {
                 this.scanTaskId = scanTaskId;
@@ -915,7 +1002,14 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li>ENABLE: enabled.</li>
+             * <li>DISABLE: disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -923,7 +1017,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableCatalog.
+             * <p>The table catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testdb</p>
              */
             public Builder tableCatalog(String tableCatalog) {
                 this.tableCatalog = tableCatalog;
@@ -931,7 +1028,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableDescription.
+             * <p>The table description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tableDescription(String tableDescription) {
                 this.tableDescription = tableDescription;
@@ -939,7 +1039,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableEnv.
+             * <p>The table environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder tableEnv(String tableEnv) {
                 this.tableEnv = tableEnv;
@@ -947,7 +1050,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableId.
+             * <p>The table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -955,7 +1061,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -963,7 +1072,10 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableTaskId.
+             * <p>The identification table task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder tableTaskId(Long tableTaskId) {
                 this.tableTaskId = tableTaskId;
@@ -971,7 +1083,20 @@ public class GetSecurityIdentifyResultResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * <p>The table type. Valid values:</p>
+             * <ul>
+             * <li>LOGIC_TABLE: logical table.</li>
+             * <li>LOGIC_DIM_TABLE: logical dimension table.</li>
+             * <li>LOGIC_FACT_TABLE: fact logical table.</li>
+             * <li>LOGIC_SUM_TABLE: aggregate logical table.</li>
+             * <li>LOGIC_ODM_SOURCE: source table.</li>
+             * <li>LOGIC_LABEL_TABLE: label logical table.</li>
+             * <li>PHYSICAL_TABLE: physical table.</li>
+             * <li>REAL_TIME_LOGIC_TABLE: real-time configured logical table.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LOGIC_TABLE</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;

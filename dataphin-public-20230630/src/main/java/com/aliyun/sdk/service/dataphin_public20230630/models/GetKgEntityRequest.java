@@ -142,6 +142,7 @@ public class GetKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The entity record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class GetKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The entity type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class GetKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class GetKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

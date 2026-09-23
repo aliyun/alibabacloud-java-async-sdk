@@ -112,6 +112,7 @@ public class UpdateDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The command to update the data service application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -242,7 +244,10 @@ public class UpdateDataServiceAppRequest extends Request {
             } 
 
             /**
-             * AppGroupId.
+             * <p>Application group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000000</p>
              */
             public Builder appGroupId(Integer appGroupId) {
                 this.appGroupId = appGroupId;
@@ -250,6 +255,7 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>Application ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -261,7 +267,10 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认应用</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -269,7 +278,7 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * OwnerIds.
+             * <p>List of owner IDs.</p>
              */
             public Builder ownerIds(java.util.List<String> ownerIds) {
                 this.ownerIds = ownerIds;
@@ -277,7 +286,10 @@ public class UpdateDataServiceAppRequest extends Request {
             }
 
             /**
-             * Scenarios.
+             * <p>Application scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据分析</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

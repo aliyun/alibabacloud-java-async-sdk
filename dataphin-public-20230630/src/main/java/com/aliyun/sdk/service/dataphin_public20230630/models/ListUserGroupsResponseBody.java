@@ -119,7 +119,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -151,7 +160,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +253,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -246,7 +264,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -254,7 +275,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32313131</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -373,7 +397,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Specifies whether the user group is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -381,7 +408,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * AdminList.
+             * <p>The administrators of the user group.</p>
              */
             public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
@@ -389,7 +416,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx 测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -397,7 +427,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31313232</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -405,7 +438,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * MyRole.
+             * <p>The role of the current user in the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SECURITY_ADMIN</p>
              */
             public Builder myRole(String myRole) {
                 this.myRole = myRole;
@@ -413,7 +449,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +519,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -488,7 +530,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupList.
+             * <p>The paged list.</p>
              */
             public Builder userGroupList(java.util.List<UserGroupList> userGroupList) {
                 this.userGroupList = userGroupList;

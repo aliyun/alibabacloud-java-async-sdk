@@ -119,7 +119,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * ComputeSourceInfo.
+         * <p>The compute source details.</p>
          */
         public Builder computeSourceInfo(ComputeSourceInfo computeSourceInfo) {
             this.computeSourceInfo = computeSourceInfo;
@@ -135,7 +138,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -381,7 +396,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             } 
 
             /**
-             * BindProject.
+             * <p>Indicates whether a project is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder bindProject(Boolean bindProject) {
                 this.bindProject = bindProject;
@@ -389,7 +407,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * BindProjectId.
+             * <p>The ID of the associated project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10101101</p>
              */
             public Builder bindProjectId(Long bindProjectId) {
                 this.bindProjectId = bindProjectId;
@@ -397,7 +418,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * BindProjectName.
+             * <p>The name of the associated project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp_mctest</p>
              */
             public Builder bindProjectName(String bindProjectName) {
                 this.bindProjectName = bindProjectName;
@@ -405,7 +429,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the compute source creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101101</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -413,7 +440,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The name of the compute source creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -421,7 +451,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>compute source for xxx.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -429,7 +462,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp_test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -437,7 +473,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1681881607000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -445,7 +484,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711881607000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -453,7 +495,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The compute source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12356</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -461,7 +506,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -469,7 +517,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the compute source owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101101</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -477,7 +528,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the compute source owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -485,7 +539,10 @@ public class GetComputeSourceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;

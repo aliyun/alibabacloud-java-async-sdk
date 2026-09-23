@@ -119,7 +119,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * QualityRuleInfo.
+         * <p>The quality rule details.</p>
          */
         public Builder qualityRuleInfo(QualityRuleInfo qualityRuleInfo) {
             this.qualityRuleInfo = qualityRuleInfo;
@@ -162,7 +171,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +276,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Indicates whether the maximum value is included.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -275,7 +284,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Indicates whether the minimum value is included.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -283,7 +292,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value. This applies to range interval attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -291,7 +303,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum value. This applies to range interval attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -299,7 +314,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>The list of attribute values. This applies to attributes with custom input, single-select dropdown, or multi-select dropdown input methods.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -405,7 +420,18 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The attribute field data type. Valid values:</p>
+             * <ul>
+             * <li>STRING: text</li>
+             * <li>BIGINT: integer</li>
+             * <li>DOUBLE: floating-point</li>
+             * <li>BOOLEAN: Boolean</li>
+             * <li>DATE: date</li>
+             * <li>DATETIME: datetime.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -413,7 +439,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The attribute default value.</p>
              */
             public Builder defaultValue(DefaultValue defaultValue) {
                 this.defaultValue = defaultValue;
@@ -421,7 +447,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Length.
+             * <p>The attribute field length. This constrains the maximum length of text-type attribute values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6921666</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -429,7 +458,16 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The attribute value input method. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom input</li>
+             * <li>SINGLE_ENUM: single-select dropdown</li>
+             * <li>MULTIPLE_ENUMS: multi-select dropdown</li>
+             * <li>RANGE: range interval.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMIZED</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -437,7 +475,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValueEnumList.
+             * <p>The attribute option values. This applies only to attributes with a single-select dropdown or multi-select dropdown input method.</p>
              */
             public Builder valueEnumList(java.util.List<String> valueEnumList) {
                 this.valueEnumList = valueEnumList;
@@ -569,7 +607,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -577,7 +618,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the attribute is enabled.</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -585,7 +626,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>612415804007</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -593,7 +637,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attr01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -601,7 +648,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the attribute is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -609,7 +656,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Searchable.
+             * <p>Indicates whether the attribute is searchable.</p>
              */
             public Builder searchable(Boolean searchable) {
                 this.searchable = searchable;
@@ -617,7 +664,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConfig.
+             * <p>The attribute value configuration details.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -723,7 +770,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Indicates whether the maximum value is included.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -731,7 +778,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Indicates whether the minimum value is included.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -739,7 +786,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value. This applies to range interval attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -747,7 +797,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum value. This applies to range interval attributes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -755,7 +808,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>The list of attribute values. This applies to attributes with custom input, single-select dropdown, or multi-select dropdown input methods.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -822,7 +875,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeInfo.
+             * <p>The attribute details.</p>
              */
             public Builder attributeInfo(AttributeInfo attributeInfo) {
                 this.attributeInfo = attributeInfo;
@@ -830,7 +883,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeValue.
+             * <p>The property value.</p>
              */
             public Builder attributeValue(AttributeValue attributeValue) {
                 this.attributeValue = attributeValue;
@@ -910,7 +963,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * ComponentType.
+             * <p>The control type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>expression</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -918,7 +974,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The property name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -926,7 +985,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -993,7 +1055,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * ScheduleId.
+             * <p>The schedule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder scheduleId(Long scheduleId) {
                 this.scheduleId = scheduleId;
@@ -1001,7 +1066,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleName.
+             * <p>The schedule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder scheduleName(String scheduleName) {
                 this.scheduleName = scheduleName;
@@ -1146,7 +1214,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The condition node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>268</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1154,7 +1225,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Metric.
+             * <p>The metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -1162,7 +1236,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1170,7 +1247,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator. Valid values: EQUAL, NOT_EQUAL, LARGER, SMALLER, LARGE_OR_EQUAL, SMALLER_OR_EQUAL, AND, OR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AND</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1178,7 +1258,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>且</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -1186,7 +1269,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent condition node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -1194,7 +1280,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The condition type. Valid values:</p>
+             * <ul>
+             * <li>RELATION: relationship</li>
+             * <li>EXPRESSION: expression.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RELATION</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1202,7 +1295,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1269,7 +1365,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The validation object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1277,7 +1376,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The validation object type. Valid values: UNKNOWN, TABLE, COLUMN, DATASOURCE, DATASOURCE_TABLE, REALTIME, INDEX, CHAIN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1656,7 +1758,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeWithValueList.
+             * <p>The rule business attribute configurations.</p>
              */
             public Builder attributeWithValueList(java.util.List<AttributeWithValueList> attributeWithValueList) {
                 this.attributeWithValueList = attributeWithValueList;
@@ -1664,7 +1766,17 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogList.
+             * <p>The rule categories. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: consistency</li>
+             * <li>EFFECTIVE: validity</li>
+             * <li>TIMELINESE: timeliness</li>
+             * <li>ACCURATE: accuracy</li>
+             * <li>UNIQUENESS: uniqueness</li>
+             * <li>COMPLETENESS: completeness</li>
+             * <li>STABILITY: stability</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
                 this.catalogList = catalogList;
@@ -1672,7 +1784,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1680,7 +1795,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -1688,7 +1806,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The creator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -1696,7 +1817,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1704,7 +1828,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * EnableErrorArchive.
+             * <p>Indicates whether exception archiving is enabled.</p>
              */
             public Builder enableErrorArchive(Boolean enableErrorArchive) {
                 this.enableErrorArchive = enableErrorArchive;
@@ -1712,7 +1836,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * FormPropertyList.
+             * <p>The rule configuration key-value pairs. These vary by templatetype. Different templatetypes return different form key-value pair configurations.</p>
              */
             public Builder formPropertyList(java.util.List<FormPropertyList> formPropertyList) {
                 this.formPropertyList = formPropertyList;
@@ -1720,7 +1844,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The quality rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1728,7 +1855,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The ID of the user who last modified the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -1736,7 +1866,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierName.
+             * <p>The name of the user who last modified the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder modifierName(String modifierName) {
                 this.modifierName = modifierName;
@@ -1744,7 +1877,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1752,7 +1888,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The quality rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1760,7 +1899,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleBindList.
+             * <p>The list of schedules bound to the rule.</p>
              */
             public Builder scheduleBindList(java.util.List<ScheduleBindList> scheduleBindList) {
                 this.scheduleBindList = scheduleBindList;
@@ -1768,7 +1907,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The quality rule status. Valid values:</p>
+             * <ul>
+             * <li>ENABLE</li>
+             * <li>DISABLE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1776,7 +1922,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Strength.
+             * <p>The rule strength. Valid values:</p>
+             * <ul>
+             * <li>STRONG</li>
+             * <li>WEAK.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STRONG</p>
              */
             public Builder strength(String strength) {
                 this.strength = strength;
@@ -1784,7 +1937,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -1792,7 +1948,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1800,7 +1959,16 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateScope.
+             * <p>The templatetype group. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system preset</li>
+             * <li>CUSTOM: custom template</li>
+             * <li>TEMPLATE: union of SYSTEM and CUSTOM</li>
+             * <li>CUSTOM_SQL: custom SQL template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder templateScope(String templateScope) {
                 this.templateScope = templateScope;
@@ -1808,7 +1976,43 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The templatetype. Valid values:</p>
+             * <ul>
+             * <li>FIELD_NULL_VALUE_VALIDATE: field null value check</li>
+             * <li>FIELD_EMPTY_STRING_VALIDATE: field empty character string check</li>
+             * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check</li>
+             * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check</li>
+             * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check</li>
+             * <li>FUNCTION_TIME_COMPARE: time function comparison</li>
+             * <li>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison</li>
+             * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison</li>
+             * <li>FIELD_FORMAT_VALIDATE: field format check</li>
+             * <li>FIELD_LENGTH_VALIDATE: field length check</li>
+             * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check</li>
+             * <li>CODE_TABLE_COMPARE: lookup table reference comparison</li>
+             * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison</li>
+             * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison</li>
+             * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison</li>
+             * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison</li>
+             * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison</li>
+             * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison</li>
+             * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison</li>
+             * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison</li>
+             * <li>TABLE_STABILITY_VALIDATE: table stability check</li>
+             * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check</li>
+             * <li>FIELD_STABILITY_VALIDATE: field stability check</li>
+             * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check</li>
+             * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check</li>
+             * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check</li>
+             * <li>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring</li>
+             * <li>TABLE_SCHEMA_CHECK: table schema change monitoring</li>
+             * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison</li>
+             * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring</li>
+             * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison, and more.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FIELD_NULL_VALUE_VALIDATE</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -1816,7 +2020,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TestRunRuleTaskId.
+             * <p>The ID of the most recent test run task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder testRunRuleTaskId(Long testRunRuleTaskId) {
                 this.testRunRuleTaskId = testRunRuleTaskId;
@@ -1824,7 +2031,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TestRunRuleTaskStatus.
+             * <p>The status of the most recent test run task. Valid values: NOT_RUN, WAITING, RUNNING, SUCCESS, FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder testRunRuleTaskStatus(String testRunRuleTaskStatus) {
                 this.testRunRuleTaskStatus = testRunRuleTaskStatus;
@@ -1832,7 +2042,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * TestRunRuleValidateResult.
+             * <p>Indicates whether the test run validation passed.</p>
              */
             public Builder testRunRuleValidateResult(Boolean testRunRuleValidateResult) {
                 this.testRunRuleValidateResult = testRunRuleValidateResult;
@@ -1840,7 +2050,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateConditionList.
+             * <p>The list of validation conditions.</p>
              */
             public Builder validateConditionList(java.util.List<ValidateConditionList> validateConditionList) {
                 this.validateConditionList = validateConditionList;
@@ -1848,7 +2058,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateObject.
+             * <p>The validation object.</p>
              */
             public Builder validateObject(ValidateObject validateObject) {
                 this.validateObject = validateObject;
@@ -1856,7 +2066,10 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * WatchId.
+             * <p>The ID of the associated monitoring task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

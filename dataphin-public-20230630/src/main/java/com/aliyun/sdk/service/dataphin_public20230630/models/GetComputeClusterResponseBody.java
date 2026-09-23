@@ -119,7 +119,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterConfig.
+         * <p>The cluster details.</p>
          */
         public Builder clusterConfig(ClusterConfig clusterConfig) {
             this.clusterConfig = clusterConfig;
@@ -127,7 +127,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +279,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterSafetyAuthType.
+             * <p>The control mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE_COMPUTE_SOURCE</p>
              */
             public Builder clusterSafetyAuthType(String clusterSafetyAuthType) {
                 this.clusterSafetyAuthType = clusterSafetyAuthType;
@@ -275,7 +290,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>The list of whitelisted user group IDs.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -283,7 +298,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupNames.
+             * <p>The list of whitelisted user group names.</p>
              */
             public Builder userGroupNames(java.util.List<String> userGroupNames) {
                 this.userGroupNames = userGroupNames;
@@ -291,7 +306,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * UserIds.
+             * <p>The list of whitelisted user IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;
@@ -299,7 +314,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * UserNames.
+             * <p>The list of whitelisted usernames.</p>
              */
             public Builder userNames(java.util.List<String> userNames) {
                 this.userNames = userNames;
@@ -444,7 +459,7 @@ public class GetComputeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterSafetyControl.
+             * <p>The cluster security control configuration.</p>
              */
             public Builder clusterSafetyControl(ClusterSafetyControl clusterSafetyControl) {
                 this.clusterSafetyControl = clusterSafetyControl;
@@ -452,7 +467,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Des.
+             * <p>The cluster description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder des(String des) {
                 this.des = des;
@@ -460,7 +478,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -468,7 +489,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -476,7 +500,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102311</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -484,7 +511,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The cluster name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -492,7 +522,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The cluster owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012211</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -500,7 +533,10 @@ public class GetComputeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * TypeVersion.
+             * <p>The cluster version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDH6</p>
              */
             public Builder typeVersion(String typeVersion) {
                 this.typeVersion = typeVersion;

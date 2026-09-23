@@ -119,7 +119,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -249,7 +261,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -257,7 +272,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +381,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
             } 
 
             /**
-             * PropertyList.
+             * <p>The relation record property list.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -371,7 +389,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * RelationId.
+             * <p>The relation record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder relationId(String relationId) {
                 this.relationId = relationId;
@@ -379,7 +400,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relation type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BELONG_TO</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -387,7 +411,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEntityId.
+             * <p>The source entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder sourceEntityId(String sourceEntityId) {
                 this.sourceEntityId = sourceEntityId;
@@ -395,7 +422,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEntityId.
+             * <p>The target entity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abd-xxx</p>
              */
             public Builder targetEntityId(String targetEntityId) {
                 this.targetEntityId = targetEntityId;
@@ -475,7 +505,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -483,7 +516,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -491,7 +527,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -571,7 +610,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityId.
+             * <p>The entity record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -579,7 +621,10 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -587,7 +632,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyList.
+             * <p>The entity record property list.</p>
              */
             public Builder propertyList(java.util.List<NodeListPropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -654,7 +699,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
             } 
 
             /**
-             * EdgeList.
+             * <p>The edge list.</p>
              */
             public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -662,7 +707,7 @@ public class GetKgNeighborResponseBody extends TeaModel {
             }
 
             /**
-             * NodeList.
+             * <p>The node list.</p>
              */
             public Builder nodeList(java.util.List<NodeList> nodeList) {
                 this.nodeList = nodeList;

@@ -119,7 +119,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class OperateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatusList.
+         * <p>The O&amp;M results of the instances.</p>
          */
         public Builder instanceStatusList(java.util.List<InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
@@ -143,7 +149,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class OperateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +305,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -298,7 +316,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The error message returned when the operation fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -306,7 +327,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_132435</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -314,7 +338,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +349,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The owner of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121311</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -330,7 +360,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -338,7 +371,10 @@ public class OperateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The result of the operation, which indicates success or failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

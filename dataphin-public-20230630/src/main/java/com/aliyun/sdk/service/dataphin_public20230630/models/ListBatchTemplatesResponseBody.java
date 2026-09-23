@@ -119,7 +119,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -410,7 +419,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * Comment.
+             * <p>The template submission comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>初始化提交</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -418,7 +430,11 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * <p>The template content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash
+             * echo \&quot;hello world\&quot;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -426,7 +442,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentVersion.
+             * <p>The current latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -434,7 +453,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The template description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>用于数据处理的Shell模板</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -442,7 +464,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The compute engine version. Currently supported Python versions: Python 2.7 and Python 3.7.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Python 3.7</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -450,7 +475,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The template creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -458,7 +486,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The template update time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-28 15:30:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -466,7 +497,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The template ID, which is the same as the menu tree node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -474,7 +508,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The last modifier of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>李四</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -482,7 +519,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifierId.
+             * <p>The ID of the last modifier of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100002</p>
              */
             public Builder modifierId(String modifierId) {
                 this.modifierId = modifierId;
@@ -490,7 +530,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>数据处理模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -498,7 +541,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>The node type. Valid values: 10 (Shell) and 21 (Python).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder operatorType(Integer operatorType) {
                 this.operatorType = operatorType;
@@ -506,7 +552,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The template owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -514,7 +563,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The template owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100001</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -522,7 +574,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -530,7 +585,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The template status. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -597,7 +655,7 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * TemplateList.
+             * <p>The list of template records.</p>
              */
             public Builder templateList(java.util.List<TemplateList> templateList) {
                 this.templateList = templateList;
@@ -605,7 +663,10 @@ public class ListBatchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

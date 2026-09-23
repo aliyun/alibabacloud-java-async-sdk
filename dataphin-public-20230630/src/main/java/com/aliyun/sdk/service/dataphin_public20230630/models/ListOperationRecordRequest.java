@@ -112,6 +112,7 @@ public class ListOperationRecordRequest extends Request {
         }
 
         /**
+         * <p>The query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listCommand(ListCommand listCommand) {
@@ -122,6 +123,7 @@ public class ListOperationRecordRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -348,7 +350,10 @@ public class ListOperationRecordRequest extends Request {
             } 
 
             /**
-             * BeginTimeEnd.
+             * <p>The end of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-12-31 23:59:59</p>
              */
             public Builder beginTimeEnd(String beginTimeEnd) {
                 this.beginTimeEnd = beginTimeEnd;
@@ -356,7 +361,10 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * BeginTimeStart.
+             * <p>The beginning of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-01-01 00:00:00</p>
              */
             public Builder beginTimeStart(String beginTimeStart) {
                 this.beginTimeStart = beginTimeStart;
@@ -364,7 +372,10 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * CodeContent.
+             * <p>The keyword for code search.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select</p>
              */
             public Builder codeContent(String codeContent) {
                 this.codeContent = codeContent;
@@ -372,7 +383,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * CodeType.
+             * <p>The list of code types.</p>
              */
             public Builder codeType(java.util.List<Integer> codeType) {
                 this.codeType = codeType;
@@ -380,7 +391,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * Duration.
+             * <p>The list of duration ranges.</p>
              */
             public Builder duration(java.util.List<Integer> duration) {
                 this.duration = duration;
@@ -388,7 +399,10 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * FileName.
+             * <p>The script name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试脚本</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -396,7 +410,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * ObjectType.
+             * <p>The list of object types.</p>
              */
             public Builder objectType(java.util.List<String> objectType) {
                 this.objectType = objectType;
@@ -404,6 +418,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
+             * <p>The page number. Default value: 1.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -415,6 +430,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page. Default value: 20.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -426,6 +442,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -437,7 +454,10 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * SortType.
+             * <p>The sort type. Valid values: 0 (start time ascending), 1 (start time descending), 2 (object name).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sortType(Integer sortType) {
                 this.sortType = sortType;
@@ -445,7 +465,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The list of task statuses.</p>
              */
             public Builder status(java.util.List<Integer> status) {
                 this.status = status;
@@ -453,7 +473,7 @@ public class ListOperationRecordRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>The list of executor IDs.</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

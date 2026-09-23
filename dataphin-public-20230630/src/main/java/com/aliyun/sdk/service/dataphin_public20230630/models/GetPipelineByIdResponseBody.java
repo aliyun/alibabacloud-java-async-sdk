@@ -119,7 +119,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The pipeline node details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +292,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Desc.
+             * <p>The description of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -288,7 +303,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The folder of the integration pipeline node. The default value is the root folder. The folder must already exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -296,7 +314,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The pipeline file ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -304,7 +325,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The scheduling node ID of the pipeline node. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -312,7 +336,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The name of the integration pipeline node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -320,7 +347,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The pipeline node ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -400,7 +430,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * SendTo.
+             * <p>Specifies the condition for a conditional distribution component. Set this parameter to true when the downstream connection condition is true, or false otherwise.</p>
              */
             public Builder sendTo(Boolean sendTo) {
                 this.sendTo = sendTo;
@@ -408,7 +438,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The name of the input step, which corresponds to Steps[*].StepName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_reader</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -416,7 +449,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * <p>The name of the output step, which corresponds to Steps[*].StepName.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps_writer</p>
              */
             public Builder target(String target) {
                 this.target = target;
@@ -522,7 +558,11 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * IsDistribute.
+             * <p>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</p>
+             * <ul>
+             * <li>true: The data of the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
+             * <li>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
+             * </ul>
              */
             public Builder isDistribute(Boolean isDistribute) {
                 this.isDistribute = isDistribute;
@@ -530,7 +570,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * <p>The plugin ID. Each plugin has a unique identifier. Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysqlinput</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -538,7 +581,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * PluginConfig.
+             * <p>The specific component configuration. The value is a JSON string. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pluginConfig(String pluginConfig) {
                 this.pluginConfig = pluginConfig;
@@ -546,7 +592,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * StepName.
+             * <p>The step name. Step names must be unique within the same pipeline node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_reader</p>
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -554,7 +603,17 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * StepType.
+             * <p>The component type. Valid values:</p>
+             * <ul>
+             * <li>input: an input component.</li>
+             * <li>output: an output component.</li>
+             * <li>transfrom: a transform component.</li>
+             * <li>process: a flow control component.</li>
+             * </ul>
+             * <p>Refer to the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>input</p>
              */
             public Builder stepType(String stepType) {
                 this.stepType = stepType;
@@ -621,7 +680,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Hops.
+             * <p>The DAG (directed acyclic graph) link configuration that describes the connections between all components.</p>
              */
             public Builder hops(java.util.List<Hops> hops) {
                 this.hops = hops;
@@ -629,7 +688,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Steps.
+             * <p>The component configurations, which contain the detailed configurations of all components used.</p>
              */
             public Builder steps(java.util.List<Steps> steps) {
                 this.steps = steps;
@@ -761,7 +820,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Mode.
+             * <p>The configuration mode of the integration pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PIPELINE</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -769,7 +831,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * <p>The basic information of the pipeline node.</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -777,7 +839,7 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineConfig.
+             * <p>The component configuration of the integration pipeline.</p>
              */
             public Builder pipelineConfig(PipelineConfig pipelineConfig) {
                 this.pipelineConfig = pipelineConfig;
@@ -785,7 +847,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineJson.
+             * <p>The script mode configuration of the integration pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder pipelineJson(String pipelineJson) {
                 this.pipelineJson = pipelineJson;
@@ -793,7 +858,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineType.
+             * <p>The type of the pipeline node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineType(Integer pipelineType) {
                 this.pipelineType = pipelineType;
@@ -801,7 +869,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleConfig.
+             * <p>The scheduling configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder scheduleConfig(String scheduleConfig) {
                 this.scheduleConfig = scheduleConfig;
@@ -809,7 +880,10 @@ public class GetPipelineByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Settings.
+             * <p>The channel configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;

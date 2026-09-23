@@ -111,7 +111,7 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
-         * CreateCommand.
+         * <p>The creation request.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
             String createCommandShrink = shrink(createCommand, "CreateCommand", "json");
@@ -121,6 +121,7 @@ public class CreateUserGroupRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +228,10 @@ public class CreateUserGroupRequest extends Request {
             } 
 
             /**
-             * Active.
+             * <p>Specifies whether to enable the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -235,7 +239,7 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * AdminUserIdList.
+             * <p>The user IDs of the user group administrators.</p>
              */
             public Builder adminUserIdList(java.util.List<String> adminUserIdList) {
                 this.adminUserIdList = adminUserIdList;
@@ -243,7 +247,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -251,7 +258,10 @@ public class CreateUserGroupRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx用户组</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -139,6 +139,7 @@ public class GetFileStorageCredentialRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +161,10 @@ public class GetFileStorageCredentialRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The project ID. This parameter is required when the temporary authorization is used to create resource files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1030131021</p>
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -169,7 +173,16 @@ public class GetFileStorageCredentialRequest extends Request {
         }
 
         /**
-         * Purpose.
+         * <p>The purpose of the authorization. Valid values:</p>
+         * <ul>
+         * <li>RESOURCE: creates resource files.</li>
+         * <li>COMPUTE_SOURCE_SETTING: stores compute source configurations.</li>
+         * <li>NONE: no specific purpose.</li>
+         * </ul>
+         * <p>Default value: NONE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RESOURCE</p>
          */
         public Builder purpose(String purpose) {
             this.putQueryParameter("Purpose", purpose);
@@ -178,7 +191,7 @@ public class GetFileStorageCredentialRequest extends Request {
         }
 
         /**
-         * UseVpcEndpoint.
+         * <p>Specifies whether to use an internal endpoint. Default value: false.</p>
          */
         public Builder useVpcEndpoint(Boolean useVpcEndpoint) {
             this.putQueryParameter("UseVpcEndpoint", useVpcEndpoint);

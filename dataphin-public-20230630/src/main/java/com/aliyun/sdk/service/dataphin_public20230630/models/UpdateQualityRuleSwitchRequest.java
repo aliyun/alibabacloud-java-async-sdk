@@ -112,6 +112,7 @@ public class UpdateQualityRuleSwitchRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateQualityRuleSwitchRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateQualityRuleSwitchRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether to enable the quality rules.</p>
              * <p>This parameter is required.</p>
              */
             public Builder open(Boolean open) {
@@ -212,6 +215,7 @@ public class UpdateQualityRuleSwitchRequest extends Request {
             }
 
             /**
+             * <p>The list of rule IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ruleIdList(java.util.List<Long> ruleIdList) {

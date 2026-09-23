@@ -119,7 +119,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * FileInfo.
+         * <p>The details of the custom query file.</p>
          */
         public Builder fileInfo(FileInfo fileInfo) {
             this.fileInfo = fileInfo;
@@ -135,7 +138,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetAdHocFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The file content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select 1;</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -298,7 +313,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12121</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -306,7 +324,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the file is located.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/xx1/xx2/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -314,7 +335,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12121111</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -322,7 +346,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12121</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -330,7 +357,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +368,10 @@ public class GetAdHocFileResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12132323</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

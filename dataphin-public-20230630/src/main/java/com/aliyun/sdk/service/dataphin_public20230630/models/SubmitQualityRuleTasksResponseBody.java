@@ -119,7 +119,10 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Details of the backend response exception</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * SubmitResult.
+         * <p>Execution result</p>
          */
         public Builder submitResult(SubmitResult submitResult) {
             this.submitResult = submitResult;
@@ -162,7 +171,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * RuleTaskIdList.
+             * <p>Rule task IDs, returned in the test run scenario</p>
              */
             public Builder ruleTaskIdList(java.util.List<Long> ruleTaskIdList) {
                 this.ruleTaskIdList = ruleTaskIdList;
@@ -236,7 +245,7 @@ public class SubmitQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WatchTaskIdList.
+             * <p>Monitoring object task IDs, returned in non-test run scenarios</p>
              */
             public Builder watchTaskIdList(java.util.List<Long> watchTaskIdList) {
                 this.watchTaskIdList = watchTaskIdList;

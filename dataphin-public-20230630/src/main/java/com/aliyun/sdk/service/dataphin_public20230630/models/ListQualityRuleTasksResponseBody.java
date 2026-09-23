@@ -119,7 +119,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -436,7 +445,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -444,7 +456,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BizDateFormat.
+             * <p>The business date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd</p>
              */
             public Builder bizDateFormat(String bizDateFormat) {
                 this.bizDateFormat = bizDateFormat;
@@ -452,7 +467,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -460,7 +478,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -468,7 +489,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -476,7 +500,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the rule task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -484,7 +511,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The ID of the user who last modified the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -492,7 +522,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -500,7 +533,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The rule ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -508,7 +544,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -516,7 +555,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -524,7 +566,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -532,7 +577,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateObjectName.
+             * <p>The name of the validated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder validateObjectName(String validateObjectName) {
                 this.validateObjectName = validateObjectName;
@@ -540,7 +588,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateObjectType.
+             * <p>The object type of the validated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column</p>
              */
             public Builder validateObjectType(String validateObjectType) {
                 this.validateObjectType = validateObjectType;
@@ -548,7 +599,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ValidatePartition.
+             * <p>The validation partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20251011</p>
              */
             public Builder validatePartition(String validatePartition) {
                 this.validatePartition = validatePartition;
@@ -556,7 +610,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateSuccess.
+             * <p>Indicates whether the validation passed.</p>
              */
             public Builder validateSuccess(Boolean validateSuccess) {
                 this.validateSuccess = validateSuccess;
@@ -564,7 +618,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WatchId.
+             * <p>The ID of the associated quality watchtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;
@@ -572,7 +629,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * WatchTaskId.
+             * <p>The ID of the quality watchtask. This ID is empty for trial-run rule tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchTaskId(Long watchTaskId) {
                 this.watchTaskId = watchTaskId;
@@ -639,7 +699,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * QualityRuleTaskList.
+             * <p>The list of quality rule tasks.</p>
              */
             public Builder qualityRuleTaskList(java.util.List<QualityRuleTaskList> qualityRuleTaskList) {
                 this.qualityRuleTaskList = qualityRuleTaskList;
@@ -647,7 +707,10 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

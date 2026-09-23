@@ -112,6 +112,7 @@ public class CreateDataDomainRequest extends Request {
         }
 
         /**
+         * <p>The create request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateDataDomainRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class CreateDataDomainRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -258,6 +263,7 @@ public class CreateDataDomainRequest extends Request {
             } 
 
             /**
+             * <p>The abbreviation of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -269,6 +275,7 @@ public class CreateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The ID of the business unit to which the data domain belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -280,7 +287,10 @@ public class CreateDataDomainRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -288,10 +298,11 @@ public class CreateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The display name of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>主题域测试</p>
+             * <p>DataDomainTest</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -299,6 +310,7 @@ public class CreateDataDomainRequest extends Request {
             }
 
             /**
+             * <p>The code of the data domain.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -310,7 +322,10 @@ public class CreateDataDomainRequest extends Request {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the parent data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10232311</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;

@@ -119,7 +119,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateInfo.
+         * <p>The template details.</p>
          */
         public Builder templateInfo(TemplateInfo templateInfo) {
             this.templateInfo = templateInfo;
@@ -241,7 +250,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * ColumnName.
+             * <p>The field to check.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -249,7 +261,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IsCaseSensitive.
+             * <p>Indicates whether the check is case-sensitive.</p>
              */
             public Builder isCaseSensitive(Boolean isCaseSensitive) {
                 this.isCaseSensitive = isCaseSensitive;
@@ -257,7 +269,14 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The monitoring method. Valid values:</p>
+             * <ul>
+             * <li>METADATA: metadata monitoring.</li>
+             * <li>QUALITY: data quality monitoring.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>METADATA</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -324,7 +343,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * StandardId.
+             * <p>The standard ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder standardId(Long standardId) {
                 this.standardId = standardId;
@@ -332,7 +354,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -399,7 +424,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeFrom.
+             * <p>The attribute source. Valid values:</p>
+             * <ul>
+             * <li>SYSTEM: system attribute.</li>
+             * <li>CUSTOM: custom attribute.</li>
+             * <li>STANDARD: standard.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder attributeFrom(String attributeFrom) {
                 this.attributeFrom = attributeFrom;
@@ -407,7 +440,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * StandardReference.
+             * <p>The corresponding standard. This parameter takes effect when the attribute source is set to STANDARD.</p>
              */
             public Builder standardReference(StandardReference standardReference) {
                 this.standardReference = standardReference;
@@ -474,7 +507,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeFromInfo.
+             * <p>The attribute source.</p>
              */
             public Builder attributeFromInfo(AttributeFromInfo attributeFromInfo) {
                 this.attributeFromInfo = attributeFromInfo;
@@ -482,7 +515,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * AttributeId.
+             * <p>The attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder attributeId(Long attributeId) {
                 this.attributeId = attributeId;
@@ -549,7 +585,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Column.
+             * <p>The referenced lookup table field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>col1</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -557,7 +596,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * LookupTableId.
+             * <p>The lookup table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder lookupTableId(Long lookupTableId) {
                 this.lookupTableId = lookupTableId;
@@ -650,7 +692,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * IncludeMaxValue.
+             * <p>Indicates whether the maximum value is included.</p>
              */
             public Builder includeMaxValue(Boolean includeMaxValue) {
                 this.includeMaxValue = includeMaxValue;
@@ -658,7 +700,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * IncludeMinValue.
+             * <p>Indicates whether the minimum value is included.</p>
              */
             public Builder includeMinValue(Boolean includeMinValue) {
                 this.includeMinValue = includeMinValue;
@@ -666,7 +708,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaxValue.
+             * <p>The maximum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxValue(String maxValue) {
                 this.maxValue = maxValue;
@@ -674,7 +719,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MinValue.
+             * <p>The minimum value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder minValue(String minValue) {
                 this.minValue = minValue;
@@ -780,7 +828,16 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DataphinAttributeType.
+             * <p>The value range. This parameter takes effect when the value source is set to DATAPHIN_ATTRIBUTE. Valid values:</p>
+             * <ul>
+             * <li>BIZ_UNIT: data domain.</li>
+             * <li>PROJECT: project.</li>
+             * <li>USER: user.</li>
+             * <li>USER_GROUP: user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATAPHIN_ATTRIBUTE</p>
              */
             public Builder dataphinAttributeType(String dataphinAttributeType) {
                 this.dataphinAttributeType = dataphinAttributeType;
@@ -788,7 +845,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * LookupTableReference.
+             * <p>The value range. This parameter takes effect when the value source is set to LOOKUP_TABLE.</p>
              */
             public Builder lookupTableReference(LookupTableReference lookupTableReference) {
                 this.lookupTableReference = lookupTableReference;
@@ -796,7 +853,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MinMaxValueConfig.
+             * <p>The value range. This parameter takes effect when the value source is set to MIN_MAX.</p>
              */
             public Builder minMaxValueConfig(MinMaxValueConfig minMaxValueConfig) {
                 this.minMaxValueConfig = minMaxValueConfig;
@@ -804,7 +861,20 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConstraint.
+             * <p>The value source. Valid values:</p>
+             * <ul>
+             * <li>NONE: no constraint.</li>
+             * <li>LIST: obtained from a list.</li>
+             * <li>LOOKUP_TABLE: lookup table.</li>
+             * <li>MIN_MAX: value between the minimum and maximum.</li>
+             * <li>DATAPHIN_ATTRIBUTE: Dataphin system property.</li>
+             * <li>BUILT_IN_DATA_TYPES: built-in data types.</li>
+             * <li>BUILT_IN_DATA_CLASSIFICATION: built-in data categorization.</li>
+             * <li>BUILT_IN_DATA_LEVEL: built-in data security classification.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NONE</p>
              */
             public Builder valueConstraint(String valueConstraint) {
                 this.valueConstraint = valueConstraint;
@@ -812,7 +882,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ValueList.
+             * <p>The value range. This parameter takes effect when the value source is set to LIST.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -918,7 +988,18 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * DataType.
+             * <p>The data type of the attribute value. Valid values:</p>
+             * <ul>
+             * <li>STRING: string.</li>
+             * <li>BIGINT: numeric.</li>
+             * <li>DOUBLE: floating-point.</li>
+             * <li>DATE: date, accurate to the day.</li>
+             * <li>DATETIME: date, accurate to the millisecond.</li>
+             * <li>BOOLEAN: Boolean.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STRING</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -926,7 +1007,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -934,7 +1018,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Length.
+             * <p>The length of the attribute value. If this parameter is left empty or set to -1, the length is not limited. Typically, only string types have a length limit for attribute values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -942,7 +1029,16 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The attribute value type. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom input.</li>
+             * <li>SINGLE_ENUM: single enumeration value.</li>
+             * <li>MULTIPLE_ENUMS: multiple enumeration values.</li>
+             * <li>RANGE: range value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMIZED</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -950,7 +1046,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ValueRange.
+             * <p>The value range.</p>
              */
             public Builder valueRange(ValueRange valueRange) {
                 this.valueRange = valueRange;
@@ -1121,7 +1217,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The attribute code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_attr</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1129,7 +1228,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1137,7 +1239,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * EnableMonitorConfig.
+             * <p>Indicates whether monitoring configuration is enabled.</p>
              */
             public Builder enableMonitorConfig(Boolean enableMonitorConfig) {
                 this.enableMonitorConfig = enableMonitorConfig;
@@ -1145,7 +1247,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The attribute ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1153,7 +1258,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorConfig.
+             * <p>The monitoring configuration.</p>
              */
             public Builder monitorConfig(MonitorConfig monitorConfig) {
                 this.monitorConfig = monitorConfig;
@@ -1161,7 +1266,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The attribute name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>attr1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1169,7 +1277,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RefAttribute.
+             * <p>The referenced attribute information.</p>
              */
             public Builder refAttribute(RefAttribute refAttribute) {
                 this.refAttribute = refAttribute;
@@ -1177,7 +1285,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * <p>Indicates whether the attribute is required.</p>
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -1185,7 +1293,19 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The attribute type. Valid values:</p>
+             * <ul>
+             * <li>BIZ_ATTRIBUTE: business attribute.</li>
+             * <li>TECH_ATTRIBUTE: technical attribute.</li>
+             * <li>MANAGEMENT_ATTRIBUTE: management attribute.</li>
+             * <li>QUALITY_ATTRIBUTE: quality attribute.</li>
+             * <li>MASTER_DATA_ATTRIBUTE: master data attribute.</li>
+             * <li>LIFECYCLE_ATTRIBUTE: lifecycle attribute.</li>
+             * <li>SECURITY_ATTRIBUTE: security attribute.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BIZ_ATTRIBUTE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1193,7 +1313,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ValueConfig.
+             * <p>The value configuration.</p>
              */
             public Builder valueConfig(ValueConfig valueConfig) {
                 this.valueConfig = valueConfig;
@@ -1247,7 +1367,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributeList.
+             * <p>The list of attributes.</p>
              */
             public Builder attributeList(java.util.List<AttributeList> attributeList) {
                 this.attributeList = attributeList;
@@ -1340,7 +1460,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Digit.
+             * <p>The number of digits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder digit(Integer digit) {
                 this.digit = digit;
@@ -1348,7 +1471,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NeedPaddingZero.
+             * <p>Indicates whether zero-padding is required.</p>
              */
             public Builder needPaddingZero(Boolean needPaddingZero) {
                 this.needPaddingZero = needPaddingZero;
@@ -1356,7 +1479,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * StartValue.
+             * <p>The start value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder startValue(Long startValue) {
                 this.startValue = startValue;
@@ -1364,7 +1490,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * <p>The step size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -1457,7 +1586,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoIncrementSequenceConfig.
+             * <p>The auto-increment sequence configuration.</p>
              */
             public Builder autoIncrementSequenceConfig(AutoIncrementSequenceConfig autoIncrementSequenceConfig) {
                 this.autoIncrementSequenceConfig = autoIncrementSequenceConfig;
@@ -1465,7 +1594,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The position index of the code rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1473,7 +1605,15 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The code rule type. Valid values:</p>
+             * <ul>
+             * <li>FIXED_STRING: fixed string.</li>
+             * <li>AUTO_INCREMENT: auto-increment sequence.</li>
+             * <li>STANDARD_SET_CODE: standard set code.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>FIXED_STRING</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1481,7 +1621,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The format or value of the code rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1548,7 +1691,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * CodeRuleList.
+             * <p>The standard code rules.</p>
              */
             public Builder codeRuleList(java.util.List<CodeRuleList> codeRuleList) {
                 this.codeRuleList = codeRuleList;
@@ -1556,7 +1699,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * NeedStrongValidate.
+             * <p>Indicates whether strong validation is required.</p>
              */
             public Builder needStrongValidate(Boolean needStrongValidate) {
                 this.needStrongValidate = needStrongValidate;
@@ -1623,7 +1766,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoConfig.
+             * <p>The auto-generation configuration for the standard code rule. This parameter takes effect when the generation method is set to AUTO_GENERATE.</p>
              */
             public Builder autoConfig(AutoConfig autoConfig) {
                 this.autoConfig = autoConfig;
@@ -1631,7 +1774,14 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * GenerateType.
+             * <p>The standard code generation method. Valid values:</p>
+             * <ul>
+             * <li>CUSTOMIZED: custom.</li>
+             * <li>AUTO_GENERATE: automatically generated based on the standard code rule.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOMIZED</p>
              */
             public Builder generateType(String generateType) {
                 this.generateType = generateType;
@@ -1698,7 +1848,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1706,7 +1859,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1773,7 +1929,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1781,7 +1940,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1848,7 +2010,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1856,7 +2021,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2079,7 +2247,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * AttributesConfig.
+             * <p>The attribute configuration.</p>
              */
             public Builder attributesConfig(AttributesConfig attributesConfig) {
                 this.attributesConfig = attributesConfig;
@@ -2087,7 +2255,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The code of the standard template. This value is globally unique and cannot be modified when references exist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2095,7 +2266,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CodeRuleConfig.
+             * <p>The auto-generation rule configuration for the standard code.</p>
              */
             public Builder codeRuleConfig(CodeRuleConfig codeRuleConfig) {
                 this.codeRuleConfig = codeRuleConfig;
@@ -2103,7 +2274,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2111,7 +2285,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -2119,7 +2293,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the standard template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2127,7 +2304,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The standard template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2135,7 +2315,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier.</p>
              */
             public Builder lastModifier(LastModifier lastModifier) {
                 this.lastModifier = lastModifier;
@@ -2143,7 +2323,7 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainerList.
+             * <p>The list of maintainers.</p>
              */
             public Builder maintainerList(java.util.List<MaintainerList> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -2151,7 +2331,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -2159,7 +2342,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the standard template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试模板</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2167,7 +2353,14 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFrom.
+             * <p>The source of the standard template. Valid values:</p>
+             * <ul>
+             * <li>CUSTOM: custom standard template.</li>
+             * <li>SYSTEM: system built-in standard template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder templateFrom(String templateFrom) {
                 this.templateFrom = templateFrom;
@@ -2186,7 +2379,10 @@ public class GetStandardTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(Integer version) {
                 this.version = version;

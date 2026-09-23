@@ -119,7 +119,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +171,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * <p>The task details.</p>
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -264,7 +276,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time in the format of HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20:59</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -272,7 +287,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The custom interval.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -280,7 +298,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalUnit.
+             * <p>The interval unit. Valid values: MINUTE, HOUR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HOUR</p>
              */
             public Builder intervalUnit(String intervalUnit) {
                 this.intervalUnit = intervalUnit;
@@ -288,7 +309,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriod.
+             * <p>The scheduling period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder schedulePeriod(String schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -296,7 +320,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time in the format of HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -363,7 +390,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -371,7 +401,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -425,7 +458,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * SparkClientVersion.
+             * <p>The Spark client version name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder sparkClientVersion(String sparkClientVersion) {
                 this.sparkClientVersion = sparkClientVersion;
@@ -492,7 +528,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * PeriodOffset.
+             * <p>The period offset. This parameter is required when PeriodType is set to LAST_N_PERIOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodOffset(Integer periodOffset) {
                 this.periodOffset = periodOffset;
@@ -500,7 +539,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodType.
+             * <p>The dependency period type. Valid values:</p>
+             * <ul>
+             * <li>CURRENT_PERIOD</li>
+             * <li>LAST_PERIOD</li>
+             * <li>LAST_N_PERIOD</li>
+             * <li>LAST_24_HOUR</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CURRENT_PERIOD</p>
              */
             public Builder periodType(String periodType) {
                 this.periodType = periodType;
@@ -684,7 +732,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * DependPeriod.
+             * <p>The dependency period.</p>
              */
             public Builder dependPeriod(DependPeriod dependPeriod) {
                 this.dependPeriod = dependPeriod;
@@ -692,7 +740,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DependStrategy.
+             * <p>The dependency strategy. Valid values: ALL, FIRST, LAST, NEAR.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LAST</p>
              */
             public Builder dependStrategy(String dependStrategy) {
                 this.dependStrategy = dependStrategy;
@@ -700,7 +751,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * FieldList.
+             * <p>The dependent logical table fields.</p>
              */
             public Builder fieldList(java.util.List<String> fieldList) {
                 this.fieldList = fieldList;
@@ -708,7 +759,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The type of the upstream dependency node. Valid values:</p>
+             * <ul>
+             * <li>PHYSICAL: physical node.</li>
+             * <li>LOGICAL: logical table dependency.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -716,7 +774,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodDiff.
+             * <p>The period difference. A value of 0 indicates a same-cycle dependency. A positive number indicates a dependency on the previous N cycles.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder periodDiff(Integer periodDiff) {
                 this.periodDiff = periodDiff;
@@ -724,7 +785,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceNodeEnabled.
+             * <p>Indicates whether the upstream node is enabled.</p>
              */
             public Builder sourceNodeEnabled(Boolean sourceNodeEnabled) {
                 this.sourceNodeEnabled = sourceNodeEnabled;
@@ -732,7 +793,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceNodeId.
+             * <p>The upstream node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_2001</p>
              */
             public Builder sourceNodeId(String sourceNodeId) {
                 this.sourceNodeId = sourceNodeId;
@@ -740,7 +804,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceNodeName.
+             * <p>The upstream node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input1</p>
              */
             public Builder sourceNodeName(String sourceNodeName) {
                 this.sourceNodeName = sourceNodeName;
@@ -748,7 +815,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceNodeOutputName.
+             * <p>The output name of the upstream node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input1</p>
              */
             public Builder sourceNodeOutputName(String sourceNodeOutputName) {
                 this.sourceNodeOutputName = sourceNodeOutputName;
@@ -756,7 +826,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceNodeUserName.
+             * <p>The username of the upstream node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder sourceNodeUserName(String sourceNodeUserName) {
                 this.sourceNodeUserName = sourceNodeUserName;
@@ -764,7 +837,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SourceTableName.
+             * <p>The input table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_input1</p>
              */
             public Builder sourceTableName(String sourceTableName) {
                 this.sourceTableName = sourceTableName;
@@ -1286,7 +1362,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The task code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>show tables;</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1294,7 +1373,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 1 * * ?</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -1302,7 +1384,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * CustomScheduleConfig.
+             * <p>The custom scheduling interval configuration.</p>
              */
             public Builder customScheduleConfig(CustomScheduleConfig customScheduleConfig) {
                 this.customScheduleConfig = customScheduleConfig;
@@ -1310,7 +1392,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DagId.
+             * <p>The ID of the DAG to which the task belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dag_102121211</p>
              */
             public Builder dagId(String dagId) {
                 this.dagId = dagId;
@@ -1318,7 +1403,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceCatalog.
+             * <p>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_catalog</p>
              */
             public Builder dataSourceCatalog(String dataSourceCatalog) {
                 this.dataSourceCatalog = dataSourceCatalog;
@@ -1326,7 +1414,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID for database SQL nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12131111</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -1334,7 +1425,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceSchema.
+             * <p>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erp</p>
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
@@ -1342,7 +1436,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopOwnerIdList.
+             * <p>The list of development owner IDs.</p>
              */
             public Builder developOwnerIdList(java.util.List<String> developOwnerIdList) {
                 this.developOwnerIdList = developOwnerIdList;
@@ -1350,7 +1444,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopOwnerNameList.
+             * <p>The list of development owner names.</p>
              */
             public Builder developOwnerNameList(java.util.List<String> developOwnerNameList) {
                 this.developOwnerNameList = developOwnerNameList;
@@ -1358,7 +1452,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The node ID in the directory tree.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12113111</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -1366,7 +1463,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * HasDevNode.
+             * <p>Indicates whether the task has a development environment node.</p>
              */
             public Builder hasDevNode(Boolean hasDevNode) {
                 this.hasDevNode = hasDevNode;
@@ -1374,7 +1471,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTask1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1382,7 +1482,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NeedPublish.
+             * <p>Indicates whether the task needs to be published.</p>
              */
             public Builder needPublish(Boolean needPublish) {
                 this.needPublish = needPublish;
@@ -1390,7 +1490,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeDescription.
+             * <p>The task description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxTest</p>
              */
             public Builder nodeDescription(String nodeDescription) {
                 this.nodeDescription = nodeDescription;
@@ -1398,7 +1501,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeFrom.
+             * <p>The source of the node, indicating the organization or application that created the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openapi</p>
              */
             public Builder nodeFrom(String nodeFrom) {
                 this.nodeFrom = nodeFrom;
@@ -1406,7 +1512,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1011_21232132322</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -1414,7 +1523,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTask1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -1422,7 +1534,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeOutputNameList.
+             * <p>The list of node output names.</p>
              */
             public Builder nodeOutputNameList(java.util.List<String> nodeOutputNameList) {
                 this.nodeOutputNameList = nodeOutputNameList;
@@ -1430,7 +1542,15 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeStatus.
+             * <p>The node status. Valid values:</p>
+             * <ul>
+             * <li>1: Normal.</li>
+             * <li>2: Paused.</li>
+             * <li>3: Dry run.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nodeStatus(Integer nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -1438,7 +1558,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorUserId.
+             * <p>The user ID of the current operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30231123</p>
              */
             public Builder operatorUserId(String operatorUserId) {
                 this.operatorUserId = operatorUserId;
@@ -1446,7 +1569,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OpsOwnerIdList.
+             * <p>The list of O&amp;M owner IDs.</p>
              */
             public Builder opsOwnerIdList(java.util.List<String> opsOwnerIdList) {
                 this.opsOwnerIdList = opsOwnerIdList;
@@ -1454,7 +1577,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OpsOwnerNameList.
+             * <p>The list of O&amp;M owner names.</p>
              */
             public Builder opsOwnerNameList(java.util.List<String> opsOwnerNameList) {
                 this.opsOwnerNameList = opsOwnerNameList;
@@ -1462,7 +1585,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1470,7 +1596,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The user ID of the node owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30231123</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -1478,7 +1607,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ParamList.
+             * <p>The list of custom parameters for the node.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -1486,7 +1615,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Paused.
+             * <p>Indicates whether the node is paused for scheduling.</p>
              */
             public Builder paused(Boolean paused) {
                 this.paused = paused;
@@ -1494,7 +1623,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The scheduling priority of the node. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -1502,7 +1634,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131211211</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -1510,7 +1645,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Published.
+             * <p>Indicates whether the task is published.</p>
              */
             public Builder published(Boolean published) {
                 this.published = published;
@@ -1518,7 +1653,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test xx</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1526,7 +1664,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Rerunable.
+             * <p>Indicates whether the node can be rerun.</p>
              */
             public Builder rerunable(Boolean rerunable) {
                 this.rerunable = rerunable;
@@ -1534,7 +1672,18 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriod.
+             * <p>The scheduling period. Valid values:</p>
+             * <ul>
+             * <li>YEARLY</li>
+             * <li>MONTHLY</li>
+             * <li>WEEKLY</li>
+             * <li>DAILY</li>
+             * <li>HOURLY</li>
+             * <li>MINUTELY</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder schedulePeriod(String schedulePeriod) {
                 this.schedulePeriod = schedulePeriod;
@@ -1542,7 +1691,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>1: periodic node.</li>
+             * <li>3: manual node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder scheduleType(Integer scheduleType) {
                 this.scheduleType = scheduleType;
@@ -1550,7 +1706,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * SparkClientInfo.
+             * <p>The Spark client information.</p>
              */
             public Builder sparkClientInfo(SparkClientInfo sparkClientInfo) {
                 this.sparkClientInfo = sparkClientInfo;
@@ -1558,7 +1714,15 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The submit status. Valid values:</p>
+             * <ul>
+             * <li>0: draft.</li>
+             * <li>1: submitted.</li>
+             * <li>100: in development.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TestTask1</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1566,7 +1730,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type. For more information, refer to the API operation for creating batch tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder taskType(Integer taskType) {
                 this.taskType = taskType;
@@ -1574,7 +1741,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UpStreamList.
+             * <p>The upstream dependencies.</p>
              */
             public Builder upStreamList(java.util.List<UpStreamList> upStreamList) {
                 this.upStreamList = upStreamList;

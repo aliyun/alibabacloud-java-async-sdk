@@ -119,7 +119,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetUdfByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * UdfInfo.
+         * <p>The details of the user-defined function.</p>
          */
         public Builder udfInfo(UdfInfo udfInfo) {
             this.udfInfo = udfInfo;
@@ -358,7 +367,22 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * Category.
+             * <p>The udf type. Valid values:</p>
+             * <ul>
+             * <li>1: window function.</li>
+             * <li>2: statistical function.</li>
+             * <li>3: numerical function.</li>
+             * <li>4: string function.</li>
+             * <li>5: time function.</li>
+             * <li>6: IP address utility function.</li>
+             * <li>7: URL-related function.</li>
+             * <li>8: encoding and decoding function.</li>
+             * <li>9: business-related function.</li>
+             * <li>10: other.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder category(Integer category) {
                 this.category = category;
@@ -366,7 +390,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ClassName.
+             * <p>The registered class name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>com.lydaas.dataphin.UdfTest</p>
              */
             public Builder className(String className) {
                 this.className = className;
@@ -374,7 +401,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * CommandHelp.
+             * <p>The command help.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>udf_to_lower(char x)</p>
              */
             public Builder commandHelp(String commandHelp) {
                 this.commandHelp = commandHelp;
@@ -382,7 +412,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeEngineType.
+             * <p>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HADOOP</p>
              */
             public Builder computeEngineType(String computeEngineType) {
                 this.computeEngineType = computeEngineType;
@@ -390,7 +423,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012110</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -398,7 +434,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -406,7 +445,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory where the function is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -414,7 +456,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time, in the yyyy-MM-d HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -422,7 +467,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time, in the yyyy-MM-d HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-10 10:01:01</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -430,7 +478,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the user-defined function.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1030111021</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -438,7 +489,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012110</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -446,7 +500,10 @@ public class GetUdfByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The function name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>udf_to_lower</p>
              */
             public Builder name(String name) {
                 this.name = name;

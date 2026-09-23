@@ -112,6 +112,7 @@ public class UpdateDevProdProjectRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDevProdProjectRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -215,7 +217,10 @@ public class UpdateDevProdProjectRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -223,7 +228,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -231,7 +239,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -429,7 +440,10 @@ public class UpdateDevProdProjectRequest extends Request {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -437,7 +451,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * DevComputeSourceId.
+             * <p>The ID of the offline compute source in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder devComputeSourceId(Long devComputeSourceId) {
                 this.devComputeSourceId = devComputeSourceId;
@@ -445,7 +462,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * DevDescription.
+             * <p>The description of the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev desc</p>
              */
             public Builder devDescription(String devDescription) {
                 this.devDescription = devDescription;
@@ -453,7 +473,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * DevStreamComputeSourceId.
+             * <p>The ID of the real-time compute source in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2002</p>
              */
             public Builder devStreamComputeSourceId(Long devStreamComputeSourceId) {
                 this.devStreamComputeSourceId = devStreamComputeSourceId;
@@ -461,7 +484,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>My project.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -469,6 +495,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -480,7 +507,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_project</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -488,7 +518,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * NameSpaceTag.
+             * <p>The namespace identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nameSpaceTag(String nameSpaceTag) {
                 this.nameSpaceTag = nameSpaceTag;
@@ -496,7 +529,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * ProdComputeSourceId.
+             * <p>The ID of the offline compute source in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2003</p>
              */
             public Builder prodComputeSourceId(Long prodComputeSourceId) {
                 this.prodComputeSourceId = prodComputeSourceId;
@@ -504,7 +540,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * ProdDescription.
+             * <p>The description of the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>prod desc</p>
              */
             public Builder prodDescription(String prodDescription) {
                 this.prodDescription = prodDescription;
@@ -512,7 +551,10 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * ProdStreamComputeSourceId.
+             * <p>The ID of the real-time compute source in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2004</p>
              */
             public Builder prodStreamComputeSourceId(Long prodStreamComputeSourceId) {
                 this.prodStreamComputeSourceId = prodStreamComputeSourceId;
@@ -520,7 +562,7 @@ public class UpdateDevProdProjectRequest extends Request {
             }
 
             /**
-             * WhiteLists.
+             * <p>The sandbox whitelist.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
                 this.whiteLists = whiteLists;

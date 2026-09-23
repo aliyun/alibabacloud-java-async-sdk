@@ -112,6 +112,7 @@ public class CreateBizEntityRequest extends Request {
         }
 
         /**
+         * <p>The create request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateBizEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +272,10 @@ public class CreateBizEntityRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description of the business object. The description can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,6 +283,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The display name of the business object. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -289,6 +295,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -300,7 +307,10 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The user ID of the business object owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -308,7 +318,10 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * ParentId.
+             * <p>The parent entity from which the business object inherits. Only common business objects support inheritance, and the parent entity must be an online business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116306</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -316,7 +329,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * RefBizEntityIdList.
+             * <p>The list of associated online business entity IDs.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -324,6 +337,13 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The object type of the business object. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: common object.</li>
+             * <li>ENUM: enumeration object.</li>
+             * <li>VIRTUAL: virtual object.</li>
+             * <li>HIERARCHY: hierarchy object.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -475,7 +495,7 @@ public class CreateBizEntityRequest extends Request {
             } 
 
             /**
-             * BizEventEntityIdList.
+             * <p>The list of business event activity IDs included in the business process activity. This parameter takes effect only when the current activity is a business process activity.</p>
              */
             public Builder bizEventEntityIdList(java.util.List<Long> bizEventEntityIdList) {
                 this.bizEventEntityIdList = bizEventEntityIdList;
@@ -483,7 +503,10 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the business activity. The description can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -491,6 +514,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The display name of the business activity. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -502,6 +526,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The code name of the business activity. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,7 +538,10 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The user ID of the business activity owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -521,7 +549,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * PreBizProcessIdList.
+             * <p>The list of preceding business process activity IDs for the business process activity.</p>
              */
             public Builder preBizProcessIdList(java.util.List<Long> preBizProcessIdList) {
                 this.preBizProcessIdList = preBizProcessIdList;
@@ -529,7 +557,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * RefBizEntityIdList.
+             * <p>The list of associated online business entity IDs.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -537,6 +565,12 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The type of the business activity. Valid values:</p>
+             * <ul>
+             * <li>BIZ_EVENT: business event.</li>
+             * <li>BIZ_SNAPSHOT: business snapshot.</li>
+             * <li>BIZ_PROCESS: business process.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -649,7 +683,7 @@ public class CreateBizEntityRequest extends Request {
             } 
 
             /**
-             * BizObject.
+             * <p>The business object.</p>
              */
             public Builder bizObject(BizObject bizObject) {
                 this.bizObject = bizObject;
@@ -657,7 +691,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
-             * BizProcess.
+             * <p>The business activity.</p>
              */
             public Builder bizProcess(BizProcess bizProcess) {
                 this.bizProcess = bizProcess;
@@ -665,6 +699,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The ID of the business unit to which the business activity belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -676,6 +711,7 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data domain to which the business activity belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -687,6 +723,11 @@ public class CreateBizEntityRequest extends Request {
             }
 
             /**
+             * <p>The business type. Valid values: </p>
+             * <ul>
+             * <li>BIZ_OBJECT: business object.</li>
+             * <li>BIZ_PROCESS: business activity.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

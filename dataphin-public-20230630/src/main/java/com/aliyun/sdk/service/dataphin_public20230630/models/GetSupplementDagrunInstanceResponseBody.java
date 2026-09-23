@@ -119,7 +119,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * <p>The list of instances.</p>
          */
         public Builder instanceList(java.util.List<InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -143,7 +149,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001012</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -233,7 +251,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +321,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001012</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -308,7 +332,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -375,7 +402,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001012</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -383,7 +413,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -671,7 +704,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BizUnitName.
+             * <p>The business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -679,7 +715,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-30 10:08:49</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -687,7 +726,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the node.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -695,7 +734,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The node description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -703,7 +745,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DryRun.
+             * <p>Indicates whether the node is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -711,7 +756,16 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * From.
+             * <p>The source business system. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: code development.</li>
+             * <li>BLACK_BOX: black box.</li>
+             * <li>ONE_ID: extraction.</li>
+             * <li>PIPELINE: pipeline.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder from(String from) {
                 this.from = from;
@@ -719,7 +773,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HasDev.
+             * <p>Indicates whether the node exists in the development environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasDev(Boolean hasDev) {
                 this.hasDev = hasDev;
@@ -727,7 +784,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * HasProd.
+             * <p>Indicates whether the node exists in the production environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasProd(Boolean hasProd) {
                 this.hasProd = hasProd;
@@ -735,7 +795,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_239496</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -743,7 +806,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-30 10:08:49</p>
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -751,7 +817,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The modifier.</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -759,7 +825,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -767,7 +836,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerList.
+             * <p>The owners of the node.</p>
              */
             public Builder ownerList(java.util.List<OwnerList> ownerList) {
                 this.ownerList = ownerList;
@@ -775,7 +844,14 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PriorityList.
+             * <p>The priority. Valid values:</p>
+             * <ul>
+             * <li>HIGHEST</li>
+             * <li>HIGH</li>
+             * <li>MIDDLE</li>
+             * <li>LOW</li>
+             * <li>LOWEST.</li>
+             * </ul>
              */
             public Builder priorityList(java.util.List<String> priorityList) {
                 this.priorityList = priorityList;
@@ -783,7 +859,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupList.
+             * <p>The schedule resource groups.</p>
              */
             public Builder resourceGroupList(java.util.List<String> resourceGroupList) {
                 this.resourceGroupList = resourceGroupList;
@@ -791,7 +867,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePaused.
+             * <p>Indicates whether the node is paused.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder schedulePaused(Boolean schedulePaused) {
                 this.schedulePaused = schedulePaused;
@@ -799,7 +878,15 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulePeriodList.
+             * <p>The scheduling period. Valid values:</p>
+             * <ul>
+             * <li>MINUTELY</li>
+             * <li>HOURLY</li>
+             * <li>DAILY</li>
+             * <li>WEEKLY</li>
+             * <li>MONTHLY</li>
+             * <li>QUARTERLY.</li>
+             * </ul>
              */
             public Builder schedulePeriodList(java.util.List<String> schedulePeriodList) {
                 this.schedulePeriodList = schedulePeriodList;
@@ -807,7 +894,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SubDetailType.
+             * <p>The node subtype.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SHELL</p>
              */
             public Builder subDetailType(String subDetailType) {
                 this.subDetailType = subDetailType;
@@ -815,7 +905,17 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: code node.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: black box logical table node.</li>
+             * <li>ONE_ID_LABEL: extraction label node.</li>
+             * <li>ONE_ID_RULE: extraction label node.</li>
+             * <li>PIPELINE_NODE: pipeline node.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_PROCESS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -999,7 +1099,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-01</p>
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -1007,7 +1110,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DueTime.
+             * <p>The scheduled date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-02</p>
              */
             public Builder dueTime(Long dueTime) {
                 this.dueTime = dueTime;
@@ -1015,7 +1121,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The execution duration. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1023,7 +1132,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndExecuteTime.
+             * <p>The end time of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-12 00:25:02</p>
              */
             public Builder endExecuteTime(Long endExecuteTime) {
                 this.endExecuteTime = endExecuteTime;
@@ -1031,7 +1143,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * <p>The extended information. This field contains information specific to instances of different business systems, such as the fileId of a pipeline, whether a logical table is a hierarchy dimension table, mid-node information, and instance output names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;a&quot;:&quot;b&quot;}</p>
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -1039,7 +1154,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_239496_20210411_246982077481</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1047,7 +1165,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the hourly or minutely instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -1055,7 +1176,7 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInfo.
+             * <p>The details of the node associated with the instance.</p>
              */
             public Builder nodeInfo(NodeInfo nodeInfo) {
                 this.nodeInfo = nodeInfo;
@@ -1063,7 +1184,10 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StartExecuteTime.
+             * <p>The start time of the execution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-12 00:00:00</p>
              */
             public Builder startExecuteTime(Long startExecuteTime) {
                 this.startExecuteTime = startExecuteTime;
@@ -1071,7 +1195,14 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * StatusList.
+             * <p>The list of instance statuses. A physical instance list contains only one status. Valid values:</p>
+             * <ul>
+             * <li>NIT: init.</li>
+             * <li>WATING: waiting.</li>
+             * <li>RUNNING: running.</li>
+             * <li>SUCCESS: succeeded.</li>
+             * <li>FAILED: failed.</li>
+             * </ul>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -1079,7 +1210,15 @@ public class GetSupplementDagrunInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: periodic instance.</li>
+             * <li>SUPPLEMENT: data backfill instance.</li>
+             * <li>MANUAL: manual instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUPPLEMENT</p>
              */
             public Builder type(String type) {
                 this.type = type;

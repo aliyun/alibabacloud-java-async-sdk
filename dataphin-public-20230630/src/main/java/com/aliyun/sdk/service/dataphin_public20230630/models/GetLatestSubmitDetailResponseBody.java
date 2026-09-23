@@ -119,7 +119,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SubmitDetailResult.
+         * <p>The pending submit details.</p>
          */
         public Builder submitDetailResult(SubmitDetailResult submitDetailResult) {
             this.submitDetailResult = submitDetailResult;
@@ -159,7 +171,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ObjectId.
+             * <p>The object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -246,7 +261,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * <p>The object name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -254,7 +272,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * <p>The object type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE_SQL</p>
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -373,7 +394,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeType.
+             * <p>The change type. Valid values: CREATE, UPDATE, and DELETE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DELETE</p>
              */
             public Builder changeType(String changeType) {
                 this.changeType = changeType;
@@ -381,7 +405,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1234</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -389,7 +416,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectVersion.
+             * <p>The object version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder objectVersion(String objectVersion) {
                 this.objectVersion = objectVersion;
@@ -397,7 +427,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -405,7 +438,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitComment.
+             * <p>The submit comment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>提交说明</p>
              */
             public Builder submitComment(String submitComment) {
                 this.submitComment = submitComment;
@@ -413,7 +449,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitObject.
+             * <p>The submit object.</p>
              */
             public Builder submitObject(SubmitObject submitObject) {
                 this.submitObject = submitObject;
@@ -519,7 +555,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The submit record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -527,7 +566,23 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>The publish status. Valid values: </p>
+             * <ul>
+             * <li>NOT_VERIFIED: not verified.</li>
+             * <li>APPROVING: approval in progress.</li>
+             * <li>APPROVE_FAILED: approval failed.</li>
+             * <li>APPROVE_SUCCESS: approval succeeded.</li>
+             * <li>APPROVE_REVOKED: approval revoked.</li>
+             * <li>CHECKING: publish verification in progress.</li>
+             * <li>CHECK_FAILED: publish verification failed.</li>
+             * <li>CHECK_SUCCESS: publish verification succeeded.</li>
+             * <li>PUBLISHING: publishing in progress.</li>
+             * <li>FAILED: publish failed.</li>
+             * <li>SUCCESS: publish succeeded.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder publishStatus(String publishStatus) {
                 this.publishStatus = publishStatus;
@@ -535,7 +590,7 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseObject.
+             * <p>The pending submit record object.</p>
              */
             public Builder releaseObject(ReleaseObject releaseObject) {
                 this.releaseObject = releaseObject;
@@ -543,7 +598,18 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitStatus.
+             * <p>The submit status. Valid values: </p>
+             * <ul>
+             * <li><p>TO_BE_PUBLISHED: pending.</p>
+             * </li>
+             * <li><p>PUBLISHED: published.</p>
+             * </li>
+             * <li><p>PUBLISHING: publishing.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TO_BE_PUBLISHED</p>
              */
             public Builder submitStatus(String submitStatus) {
                 this.submitStatus = submitStatus;
@@ -551,7 +617,10 @@ public class GetLatestSubmitDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The record tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tag</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

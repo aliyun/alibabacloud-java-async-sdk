@@ -127,6 +127,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
+         * <p>The request object.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +154,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,6 +249,7 @@ public class ListProjectMembersRequest extends Request {
             } 
 
             /**
+             * <p>The project environment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -257,7 +261,10 @@ public class ListProjectMembersRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -265,7 +272,10 @@ public class ListProjectMembersRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

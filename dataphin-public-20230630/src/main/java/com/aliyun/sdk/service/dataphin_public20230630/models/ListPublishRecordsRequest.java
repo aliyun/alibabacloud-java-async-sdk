@@ -112,6 +112,7 @@ public class ListPublishRecordsRequest extends Request {
         }
 
         /**
+         * <p>Query command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListPublishRecordsRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -283,7 +285,7 @@ public class ListPublishRecordsRequest extends Request {
             } 
 
             /**
-             * ChangeTypeList.
+             * <p>List of change types (0: Create, 1: Update, 2: Delete).</p>
              */
             public Builder changeTypeList(java.util.List<Integer> changeTypeList) {
                 this.changeTypeList = changeTypeList;
@@ -291,6 +293,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
+             * <p>Page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -302,6 +305,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
+             * <p>Page size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -313,6 +317,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
+             * <p>List of project IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder projectIdList(java.util.List<Long> projectIdList) {
@@ -321,7 +326,10 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * PublishEndTime.
+             * <p>Publish end time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder publishEndTime(String publishEndTime) {
                 this.publishEndTime = publishEndTime;
@@ -329,7 +337,10 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * PublishStartTime.
+             * <p>Publish start time in the yyyy-MM-dd HH:mm:ss format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder publishStartTime(String publishStartTime) {
                 this.publishStartTime = publishStartTime;
@@ -337,7 +348,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * PublishStatusList.
+             * <p>List of publish statuses (0: Failed, 1: Succeeded, 2: Publishing).</p>
              */
             public Builder publishStatusList(java.util.List<Integer> publishStatusList) {
                 this.publishStatusList = publishStatusList;
@@ -345,7 +356,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
-             * SubmitterList.
+             * <p>List of submitter IDs.</p>
              */
             public Builder submitterList(java.util.List<String> submitterList) {
                 this.submitterList = submitterList;
@@ -413,7 +424,10 @@ public class ListPublishRecordsRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>Search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -421,6 +435,7 @@ public class ListPublishRecordsRequest extends Request {
             }
 
             /**
+             * <p>Publish record filter.</p>
              * <p>This parameter is required.</p>
              */
             public Builder searchFilter(SearchFilter searchFilter) {

@@ -112,6 +112,7 @@ public class GetAlertEventRequest extends Request {
         }
 
         /**
+         * <p>The alert event ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class GetAlertEventRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

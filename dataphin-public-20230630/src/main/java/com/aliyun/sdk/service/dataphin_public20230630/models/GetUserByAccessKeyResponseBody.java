@@ -119,7 +119,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
         }
 
         /**
-         * UserInfo.
+         * <p>The user information.</p>
          */
         public Builder userInfo(UserInfo userInfo) {
             this.userInfo = userInfo;
@@ -225,7 +240,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * RoleKey.
+             * <p>The role identifier, such as SUPER_ADMIN or COMMON_USER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUPER_ADMIN</p>
              */
             public Builder roleKey(String roleKey) {
                 this.roleKey = roleKey;
@@ -233,7 +251,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tenant Administrator</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -391,7 +412,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -399,7 +423,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The Dataphin user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30011210</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -407,7 +434,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Mail.
+             * <p>The email address of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xx@aliyun.com">xx@aliyun.com</a></p>
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -415,7 +445,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -423,7 +456,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * <p>The account source type, such as ALIYUN_OAUTH2, PUBLICCLOUD_OAUTH2, BUC, or APSARA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN_OAUTH2</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -431,7 +467,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUserId.
+             * <p>The source account ID of the user during SSO integration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder sourceUserId(String sourceUserId) {
                 this.sourceUserId = sourceUserId;
@@ -439,7 +478,15 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The tenant member status. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: Normal.</li>
+             * <li>DEACTIVATE: Deactivated.</li>
+             * <li>DELETE: Deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -447,7 +494,7 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * TenantRoles.
+             * <p>The list of tenant-level roles assigned to the AK/SK owner in the current tenant.</p>
              */
             public Builder tenantRoles(java.util.List<TenantRoles> tenantRoles) {
                 this.tenantRoles = tenantRoles;
@@ -455,7 +502,10 @@ public class GetUserByAccessKeyResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username of the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

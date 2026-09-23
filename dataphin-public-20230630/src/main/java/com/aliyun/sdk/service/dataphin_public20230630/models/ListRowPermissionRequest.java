@@ -112,6 +112,7 @@ public class ListRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class ListRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder pageRowPermissionQuery(PageRowPermissionQuery pageRowPermissionQuery) {
@@ -217,7 +219,10 @@ public class ListRowPermissionRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -225,6 +230,7 @@ public class ListRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -236,6 +242,7 @@ public class ListRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

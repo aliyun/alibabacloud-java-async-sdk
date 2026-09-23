@@ -119,7 +119,10 @@ public class ListApiByAppResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListApiByAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class ListApiByAppResponseBody extends TeaModel {
         }
 
         /**
-         * ListResult.
+         * <p>The query result.</p>
          */
         public Builder listResult(ListResult listResult) {
             this.listResult = listResult;
@@ -143,7 +149,10 @@ public class ListApiByAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class ListApiByAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +279,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasourceId.
+             * <p>The datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds54321</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -275,7 +290,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The datasource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>publicDatasource</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -283,7 +301,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceType.
+             * <p>The datasource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder datasourceType(Long datasourceType) {
                 this.datasourceType = datasourceType;
@@ -291,7 +312,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceUrl.
+             * <p>The datasource URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/public_datasource">https://example.com/public_datasource</a></p>
              */
             public Builder datasourceUrl(String datasourceUrl) {
                 this.datasourceUrl = datasourceUrl;
@@ -299,7 +323,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -548,7 +575,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DateFormat.
+             * <p>The date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd</p>
              */
             public Builder dateFormat(String dateFormat) {
                 this.dateFormat = dateFormat;
@@ -556,7 +586,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value for registered APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_public_value</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -564,7 +597,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个示例公共参数</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -572,7 +608,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionCode.
+             * <p>The parameter description code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CODE_003</p>
              */
             public Builder descriptionCode(String descriptionCode) {
                 this.descriptionCode = descriptionCode;
@@ -580,7 +619,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -588,7 +630,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * InitialValue.
+             * <p>The initial value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_key_value</p>
              */
             public Builder initialValue(String initialValue) {
                 this.initialValue = initialValue;
@@ -596,7 +641,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumn.
+             * <p>The frontend binding field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>publicColumn1</p>
              */
             public Builder mappingColumn(String mappingColumn) {
                 this.mappingColumn = mappingColumn;
@@ -604,7 +652,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Must.
+             * <p>Indicates whether the request parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder must(Long must) {
                 this.must = must;
@@ -612,7 +663,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -620,7 +674,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Indicates whether the parameter is editable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Long optional) {
                 this.optional = optional;
@@ -628,7 +685,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>original_public_column</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -636,7 +696,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The frontend parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>publicParam1</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -644,7 +707,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -652,7 +718,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterLocation.
+             * <p>The request parameter location for registered APIs or the value path for response parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/to/public_param</p>
              */
             public Builder parameterLocation(String parameterLocation) {
                 this.parameterLocation = parameterLocation;
@@ -660,7 +729,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The parameter example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>publicValue1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -867,7 +939,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiId.
+             * <p>The primary key of data_api.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67890</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -875,7 +950,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthenticationMode.
+             * <p>The API datasource authentication mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OAuth2</p>
              */
             public Builder authenticationMode(String authenticationMode) {
                 this.authenticationMode = authenticationMode;
@@ -883,7 +961,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceId.
+             * <p>The API datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds67890</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -891,7 +972,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The API datasource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registerDatasource</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -899,7 +983,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * FailExample.
+             * <p>The failure example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Invalid request&quot;}</p>
              */
             public Builder failExample(String failExample) {
                 this.failExample = failExample;
@@ -907,7 +994,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * HttpMethod.
+             * <p>The HTTP method of the registered API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder httpMethod(Long httpMethod) {
                 this.httpMethod = httpMethod;
@@ -915,7 +1005,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * <p>The model type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder modelType(Long modelType) {
                 this.modelType = modelType;
@@ -923,7 +1016,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * <p>The service path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/api/v1/register</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -931,7 +1027,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The API datasource request protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -939,7 +1038,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessExample.
+             * <p>The success example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:[]}</p>
              */
             public Builder successExample(String successExample) {
                 this.successExample = successExample;
@@ -947,7 +1049,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -955,7 +1060,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The API datasource URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/register_api">https://example.com/register_api</a></p>
              */
             public Builder url(String url) {
                 this.url = url;
@@ -1061,7 +1169,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasourceId.
+             * <p>The datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds12345</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -1069,7 +1180,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The datasource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleDatasource</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -1077,7 +1191,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceType.
+             * <p>The datasource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder datasourceType(Long datasourceType) {
                 this.datasourceType = datasourceType;
@@ -1085,7 +1202,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceUrl.
+             * <p>The datasource URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/datasource">https://example.com/datasource</a></p>
              */
             public Builder datasourceUrl(String datasourceUrl) {
                 this.datasourceUrl = datasourceUrl;
@@ -1093,7 +1213,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1342,7 +1465,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DateFormat.
+             * <p>The date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd</p>
              */
             public Builder dateFormat(String dateFormat) {
                 this.dateFormat = dateFormat;
@@ -1350,7 +1476,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value for registered APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_value</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -1358,7 +1487,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个示例参数</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1366,7 +1498,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionCode.
+             * <p>The parameter description code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CODE_001</p>
              */
             public Builder descriptionCode(String descriptionCode) {
                 this.descriptionCode = descriptionCode;
@@ -1374,7 +1509,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1382,7 +1520,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * InitialValue.
+             * <p>The initial value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_key_value</p>
              */
             public Builder initialValue(String initialValue) {
                 this.initialValue = initialValue;
@@ -1390,7 +1531,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumn.
+             * <p>The frontend binding field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder mappingColumn(String mappingColumn) {
                 this.mappingColumn = mappingColumn;
@@ -1398,7 +1542,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Must.
+             * <p>Indicates whether the request parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder must(Long must) {
                 this.must = must;
@@ -1406,7 +1553,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1414,7 +1564,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Indicates whether the parameter is editable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Long optional) {
                 this.optional = optional;
@@ -1422,7 +1575,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>original_column</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -1430,7 +1586,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The frontend parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -1438,7 +1597,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -1446,7 +1608,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterLocation.
+             * <p>The request parameter location for registered APIs or the value path for response parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/to/param</p>
              */
             public Builder parameterLocation(String parameterLocation) {
                 this.parameterLocation = parameterLocation;
@@ -1454,7 +1619,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The parameter example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -1570,7 +1738,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DatasourceId.
+             * <p>The datasource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds67890</p>
              */
             public Builder datasourceId(String datasourceId) {
                 this.datasourceId = datasourceId;
@@ -1578,7 +1749,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceName.
+             * <p>The datasource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>responseDatasource</p>
              */
             public Builder datasourceName(String datasourceName) {
                 this.datasourceName = datasourceName;
@@ -1586,7 +1760,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceType.
+             * <p>The datasource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder datasourceType(Long datasourceType) {
                 this.datasourceType = datasourceType;
@@ -1594,7 +1771,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DatasourceUrl.
+             * <p>The datasource URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/response_datasource">https://example.com/response_datasource</a></p>
              */
             public Builder datasourceUrl(String datasourceUrl) {
                 this.datasourceUrl = datasourceUrl;
@@ -1602,7 +1782,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>response_table</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1851,7 +2034,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * DateFormat.
+             * <p>The date format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yyyy-MM-dd</p>
              */
             public Builder dateFormat(String dateFormat) {
                 this.dateFormat = dateFormat;
@@ -1859,7 +2045,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value for registered APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default_response_value</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -1867,7 +2056,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个示例响应参数</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1875,7 +2067,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DescriptionCode.
+             * <p>The parameter description code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CODE_002</p>
              */
             public Builder descriptionCode(String descriptionCode) {
                 this.descriptionCode = descriptionCode;
@@ -1883,7 +2078,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The primary key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1891,7 +2089,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * InitialValue.
+             * <p>The initial value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_key_value</p>
              */
             public Builder initialValue(String initialValue) {
                 this.initialValue = initialValue;
@@ -1899,7 +2100,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * MappingColumn.
+             * <p>The frontend binding field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>responseColumn1</p>
              */
             public Builder mappingColumn(String mappingColumn) {
                 this.mappingColumn = mappingColumn;
@@ -1907,7 +2111,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Must.
+             * <p>Indicates whether the request parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder must(Long must) {
                 this.must = must;
@@ -1915,7 +2122,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -1923,7 +2133,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Optional.
+             * <p>Indicates whether the parameter is editable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder optional(Long optional) {
                 this.optional = optional;
@@ -1931,7 +2144,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalColumn.
+             * <p>The original field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>original_response_column</p>
              */
             public Builder originalColumn(String originalColumn) {
                 this.originalColumn = originalColumn;
@@ -1939,7 +2155,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamName.
+             * <p>The frontend parameter name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>responseParam1</p>
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -1947,7 +2166,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParamType.
+             * <p>The parameter type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>String</p>
              */
             public Builder paramType(String paramType) {
                 this.paramType = paramType;
@@ -1955,7 +2177,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterLocation.
+             * <p>The request parameter location for registered APIs or the value path for response parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/path/to/response_param</p>
              */
             public Builder parameterLocation(String parameterLocation) {
                 this.parameterLocation = parameterLocation;
@@ -1963,7 +2188,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Sample.
+             * <p>The parameter example.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>responseValue1</p>
              */
             public Builder sample(String sample) {
                 this.sample = sample;
@@ -2573,7 +2801,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiNo.
+             * <p>The API number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>987654321</p>
              */
             public Builder apiNo(Long apiNo) {
                 this.apiNo = apiNo;
@@ -2581,7 +2812,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ApiTimeout.
+             * <p>The API timeout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder apiTimeout(Long apiTimeout) {
                 this.apiTimeout = apiTimeout;
@@ -2589,7 +2823,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleApp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -2597,7 +2834,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthTypes.
+             * <p>The list of permission types.</p>
              */
             public Builder authTypes(java.util.List<String> authTypes) {
                 this.authTypes = authTypes;
@@ -2605,7 +2842,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * BizModuleEnName.
+             * <p>The business module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleModule</p>
              */
             public Builder bizModuleEnName(String bizModuleEnName) {
                 this.bizModuleEnName = bizModuleEnName;
@@ -2613,7 +2853,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * CacheSwitch.
+             * <p>The API cache switch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cacheSwitch(String cacheSwitch) {
                 this.cacheSwitch = cacheSwitch;
@@ -2621,7 +2864,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * CacheTime.
+             * <p>The cache duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder cacheTime(String cacheTime) {
                 this.cacheTime = cacheTime;
@@ -2629,7 +2875,15 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * CreateType.
+             * <p>The creation type. Valid values:
+             * SQL_MODE(0, &quot;Logical table API - SQL mode&quot;),
+             * WIZARD_MODE(1, &quot;Logical table API - wizard mode&quot;),
+             * DIRECT_API_MODE(2, &quot;Direct datasource - SQL mode&quot;),
+             * REGISTER_API_MODE(3, &quot;Registered API mode&quot;),
+             * COMPOSITE_API_MODE(4, &quot;Composite API mode&quot;).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder createType(Long createType) {
                 this.createType = createType;
@@ -2637,7 +2891,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DbEnv.
+             * <p>The data environment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder dbEnv(Long dbEnv) {
                 this.dbEnv = dbEnv;
@@ -2645,7 +2902,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一个示例API</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2653,7 +2913,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DirectDatasourceId.
+             * <p>The datasource ID of the direct API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>54321</p>
              */
             public Builder directDatasourceId(Long directDatasourceId) {
                 this.directDatasourceId = directDatasourceId;
@@ -2661,7 +2924,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * DirectDatasourceName.
+             * <p>The datasource name of the direct API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>directDatasource</p>
              */
             public Builder directDatasourceName(String directDatasourceName) {
                 this.directDatasourceName = directDatasourceName;
@@ -2669,7 +2935,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The API group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>67890</p>
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
@@ -2677,7 +2946,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>The API group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleGroup</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -2685,7 +2957,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2693,7 +2968,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * IsLogicalTable.
+             * <p>Indicates whether the table is a logical table.</p>
              */
             public Builder isLogicalTable(Boolean isLogicalTable) {
                 this.isLogicalTable = isLogicalTable;
@@ -2701,7 +2976,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * IsPagedQuery.
+             * <p>Indicates whether the query is a paged query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder isPagedQuery(Long isPagedQuery) {
                 this.isPagedQuery = isPagedQuery;
@@ -2709,7 +2987,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * MaxReturnNum.
+             * <p>The maximum number of returned records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxReturnNum(Long maxReturnNum) {
                 this.maxReturnNum = maxReturnNum;
@@ -2717,7 +2998,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * <p>The model type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder modelType(Long modelType) {
                 this.modelType = modelType;
@@ -2725,7 +3009,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleApi</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2733,7 +3020,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ProjId.
+             * <p>The service project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112233</p>
              */
             public Builder projId(Long projId) {
                 this.projId = projId;
@@ -2741,7 +3031,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ProjName.
+             * <p>The service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleProject</p>
              */
             public Builder projName(String projName) {
                 this.projName = projName;
@@ -2749,7 +3042,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder protocol(Long protocol) {
                 this.protocol = protocol;
@@ -2757,7 +3053,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolName.
+             * <p>The protocol name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP和HTTPS</p>
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
@@ -2775,7 +3074,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RegisterApi.
+             * <p>The registered API information.</p>
              */
             public Builder registerApi(RegisterApi registerApi) {
                 this.registerApi = registerApi;
@@ -2783,7 +3082,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RequestMethod.
+             * <p>The request method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder requestMethod(Long requestMethod) {
                 this.requestMethod = requestMethod;
@@ -2791,7 +3093,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RequestMethodName.
+             * <p>The request method name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GET</p>
              */
             public Builder requestMethodName(String requestMethodName) {
                 this.requestMethodName = requestMethodName;
@@ -2809,7 +3114,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * <p>The resource group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleResourceGroup</p>
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -2827,7 +3135,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ResultSample.
+             * <p>The sample call result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;status&quot;:&quot;success&quot;,&quot;data&quot;:[]}</p>
              */
             public Builder resultSample(String resultSample) {
                 this.resultSample = resultSample;
@@ -2835,7 +3146,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnType.
+             * <p>The return type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder returnType(Long returnType) {
                 this.returnType = returnType;
@@ -2843,7 +3157,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnTypeName.
+             * <p>The return type name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder returnTypeName(String returnTypeName) {
                 this.returnTypeName = returnTypeName;
@@ -2851,7 +3168,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RsGrpId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>grp12345</p>
              */
             public Builder rsGrpId(String rsGrpId) {
                 this.rsGrpId = rsGrpId;
@@ -2859,7 +3179,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ScriptType.
+             * <p>The script type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SQL</p>
              */
             public Builder scriptType(String scriptType) {
                 this.scriptType = scriptType;
@@ -2867,7 +3190,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialSql.
+             * <p>The special SQL flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder specialSql(Long specialSql) {
                 this.specialSql = specialSql;
@@ -2875,7 +3201,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * SqlStatement.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM example_table</p>
              */
             public Builder sqlStatement(String sqlStatement) {
                 this.sqlStatement = sqlStatement;
@@ -2883,7 +3212,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The logical table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>exampleTable</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -2891,7 +3223,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * <p>The timeout duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -2899,7 +3234,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateRate.
+             * <p>The update frequency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder updateRate(Long updateRate) {
                 this.updateRate = updateRate;
@@ -2907,7 +3245,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateRateName.
+             * <p>The update frequency name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>每日更新</p>
              */
             public Builder updateRateName(String updateRateName) {
                 this.updateRateName = updateRateName;
@@ -2915,7 +3256,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The API version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2982,7 +3326,7 @@ public class ListApiByAppResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The API list.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -2990,7 +3334,10 @@ public class ListApiByAppResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

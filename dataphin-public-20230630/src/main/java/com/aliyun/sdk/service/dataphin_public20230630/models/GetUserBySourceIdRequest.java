@@ -126,6 +126,7 @@ public class GetUserBySourceIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,10 @@ public class GetUserBySourceIdRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -147,6 +151,7 @@ public class GetUserBySourceIdRequest extends Request {
         }
 
         /**
+         * <p>The user source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +164,10 @@ public class GetUserBySourceIdRequest extends Request {
         }
 
         /**
-         * SourceType.
+         * <p>The user source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyun</p>
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

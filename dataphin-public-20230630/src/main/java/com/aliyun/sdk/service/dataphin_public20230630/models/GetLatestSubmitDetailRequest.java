@@ -112,6 +112,7 @@ public class GetLatestSubmitDetailRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class GetLatestSubmitDetailRequest extends Request {
         }
 
         /**
+         * <p>The pending submit query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitDetailQuery(SubmitDetailQuery submitDetailQuery) {
@@ -204,6 +206,7 @@ public class GetLatestSubmitDetailRequest extends Request {
             } 
 
             /**
+             * <p>The object ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class GetLatestSubmitDetailRequest extends Request {
             }
 
             /**
+             * <p>The object type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

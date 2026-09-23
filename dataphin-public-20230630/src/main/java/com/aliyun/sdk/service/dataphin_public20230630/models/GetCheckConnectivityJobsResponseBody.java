@@ -119,7 +119,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error details returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -293,7 +305,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             } 
 
             /**
-             * DataSourceId.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192</p>
              */
             public Builder dataSourceId(String dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -301,7 +316,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message that provides a detailed error description when the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>notFoundIp</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -309,7 +327,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -317,7 +338,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * <p>The task type, such as application-level or cluster-level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>application/cluster</p>
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -325,7 +349,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -333,7 +360,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -341,7 +371,10 @@ public class GetCheckConnectivityJobsResponseBody extends TeaModel {
             }
 
             /**
-             * VoldemortTaskId.
+             * <p>The Voldemort task ID, which is used to associate with the underlying execution task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_7572319950395080706_20251225_7572319950395080707</p>
              */
             public Builder voldemortTaskId(String voldemortTaskId) {
                 this.voldemortTaskId = voldemortTaskId;

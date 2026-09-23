@@ -112,6 +112,7 @@ public class CreateBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The create request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateBizUnitRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class CreateBizUnitRequest extends Request {
             } 
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -316,6 +319,7 @@ public class CreateBizUnitRequest extends Request {
             } 
 
             /**
+             * <p>The list of data domain architects.</p>
              * <p>This parameter is required.</p>
              */
             public Builder bizUnitAccountList(java.util.List<BizUnitAccountList> bizUnitAccountList) {
@@ -324,7 +328,10 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the business object. The description can be up to 128 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -332,6 +339,7 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The display name of the business object. The name can be up to 64 characters in length and can contain only Chinese characters, letters, digits, underscores, and hyphens.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -343,6 +351,21 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The preset icon. Valid values:</p>
+             * <ul>
+             * <li>icon-e-commerce: E-commerce.</li>
+             * <li>icon-finance: Finance.</li>
+             * <li>con-cloud-computing: Cloud computing.</li>
+             * <li>icon-advertisement: Advertising and marketing.</li>
+             * <li>icon-logistics: Logistics.</li>
+             * <li>icon-entertainment: Entertainment.</li>
+             * <li>icon-traffic: Travel.</li>
+             * <li>icon-health: Health.</li>
+             * <li>icon-social-contact: Social and communication.</li>
+             * <li>con-dining: Dining.</li>
+             * <li>icon-education: Education.</li>
+             * <li>icon-environment: Environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,7 +377,14 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
-             * Mode.
+             * <p>The production mode. Valid values:</p>
+             * <ul>
+             * <li>BASIC: single-environment mode.</li>
+             * <li>DEV_PROD: development/production dual-environment mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV_PROD</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -362,6 +392,7 @@ public class CreateBizUnitRequest extends Request {
             }
 
             /**
+             * <p>The code name of the business object. The name can be up to 64 characters in length and can contain only letters, digits, and underscores. For ADB_PG engines, the code name can be up to 40 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

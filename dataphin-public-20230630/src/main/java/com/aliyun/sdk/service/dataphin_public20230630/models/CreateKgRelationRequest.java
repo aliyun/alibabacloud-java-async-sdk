@@ -127,6 +127,7 @@ public class CreateKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -137,6 +138,7 @@ public class CreateKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class CreateKgRelationRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +234,7 @@ public class CreateKgRelationRequest extends Request {
             } 
 
             /**
+             * <p>The property code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +246,7 @@ public class CreateKgRelationRequest extends Request {
             }
 
             /**
+             * <p>The property value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -341,7 +346,7 @@ public class CreateKgRelationRequest extends Request {
             } 
 
             /**
-             * PropertyList.
+             * <p>The relationship record property list.</p>
              */
             public Builder propertyList(java.util.List<PropertyList> propertyList) {
                 this.propertyList = propertyList;
@@ -349,6 +354,7 @@ public class CreateKgRelationRequest extends Request {
             }
 
             /**
+             * <p>The relationship type code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,6 +366,7 @@ public class CreateKgRelationRequest extends Request {
             }
 
             /**
+             * <p>The source entity record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -371,6 +378,7 @@ public class CreateKgRelationRequest extends Request {
             }
 
             /**
+             * <p>The target entity record ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

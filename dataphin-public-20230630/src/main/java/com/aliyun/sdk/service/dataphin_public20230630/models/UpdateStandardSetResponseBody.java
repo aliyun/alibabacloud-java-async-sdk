@@ -106,7 +106,10 @@ public class UpdateStandardSetResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class UpdateStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +128,10 @@ public class UpdateStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +150,7 @@ public class UpdateStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

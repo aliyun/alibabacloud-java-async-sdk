@@ -112,6 +112,7 @@ public class UpsertQualityWatchRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpsertQualityWatchRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder upsertCommand(UpsertCommand upsertCommand) {
@@ -189,7 +191,10 @@ public class UpsertQualityWatchRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The data source ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -386,7 +391,10 @@ public class UpsertQualityWatchRequest extends Request {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -394,7 +402,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * CellSumLogicTableName.
+             * <p>The cell aggregate table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dws_all</p>
              */
             public Builder cellSumLogicTableName(String cellSumLogicTableName) {
                 this.cellSumLogicTableName = cellSumLogicTableName;
@@ -402,7 +413,16 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * ComputeType.
+             * <p>The metric computation type. Valid values:</p>
+             * <ul>
+             * <li>AUTO</li>
+             * <li>CUSTOM</li>
+             * <li>MOUNT</li>
+             * <li>COMBINE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder computeType(String computeType) {
                 this.computeType = computeType;
@@ -410,7 +430,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * DateType.
+             * <p>The metric data type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bigint</p>
              */
             public Builder dateType(String dateType) {
                 this.dateType = dateType;
@@ -418,7 +441,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -426,7 +452,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The metric display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logic</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -434,7 +463,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * GranularityDisplayName.
+             * <p>The statistical granularity name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>全站汇总表</p>
              */
             public Builder granularityDisplayName(String granularityDisplayName) {
                 this.granularityDisplayName = granularityDisplayName;
@@ -442,7 +474,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * GranularityId.
+             * <p>The statistical granularity ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18755764</p>
              */
             public Builder granularityId(Long granularityId) {
                 this.granularityId = granularityId;
@@ -450,7 +485,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The metric ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -458,7 +496,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_idx_</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -466,7 +507,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -474,7 +518,13 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The metric type. Valid values:</p>
+             * <ul>
+             * <li>INDEX.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INDEX</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -528,7 +578,10 @@ public class UpsertQualityWatchRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -649,7 +702,7 @@ public class UpsertQualityWatchRequest extends Request {
             } 
 
             /**
-             * DataSourceInfo.
+             * <p>The data source details.</p>
              */
             public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
                 this.dataSourceInfo = dataSourceInfo;
@@ -657,7 +710,10 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The monitored object ID. If this parameter is specified, the object is updated. If this parameter is not specified, a new object is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -665,7 +721,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * IndexInfo.
+             * <p>The monitoring metrics object.</p>
              */
             public Builder indexInfo(IndexInfo indexInfo) {
                 this.indexInfo = indexInfo;
@@ -673,6 +729,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
+             * <p>The quality owner.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -684,7 +741,7 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
-             * TableInfo.
+             * <p>The monitored table object.</p>
              */
             public Builder tableInfo(TableInfo tableInfo) {
                 this.tableInfo = tableInfo;
@@ -692,6 +749,14 @@ public class UpsertQualityWatchRequest extends Request {
             }
 
             /**
+             * <p>The monitored object type. Valid values:</p>
+             * <ul>
+             * <li>TABLE: Dataphin table.</li>
+             * <li>DATASOURCE_TABLE: global table.</li>
+             * <li>DATASOURCE: data source.</li>
+             * <li>INDEX: metric.</li>
+             * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

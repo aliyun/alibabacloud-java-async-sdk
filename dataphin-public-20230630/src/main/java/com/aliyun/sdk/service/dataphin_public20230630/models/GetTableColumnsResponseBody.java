@@ -119,7 +119,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * ColumnList.
+         * <p>The list of asset table columns.</p>
          */
         public Builder columnList(java.util.List<ColumnList> columnList) {
             this.columnList = columnList;
@@ -135,7 +138,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -514,7 +523,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassifyId.
+             * <p>The ID of the data classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder classifyId(Long classifyId) {
                 this.classifyId = classifyId;
@@ -522,7 +534,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ClassifyName.
+             * <p>The name of the data classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder classifyName(String classifyName) {
                 this.classifyName = classifyName;
@@ -530,7 +545,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -538,7 +556,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -546,7 +567,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -554,7 +578,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3301</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -562,7 +589,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * <p>The type of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAX_COMPUTE</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -570,7 +600,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * <p>The data type of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -578,7 +611,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultValue.
+             * <p>The default value of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -586,7 +622,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Age</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -594,7 +633,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the column belongs. Valid values: dev and prod.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -602,7 +644,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121.col1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -610,7 +655,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * IsForeignKey.
+             * <p>Indicates whether the field is a foreign key.</p>
              */
             public Builder isForeignKey(Boolean isForeignKey) {
                 this.isForeignKey = isForeignKey;
@@ -618,7 +663,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionColumn.
+             * <p>Indicates whether the field is a partition key.</p>
              */
             public Builder isPartitionColumn(Boolean isPartitionColumn) {
                 this.isPartitionColumn = isPartitionColumn;
@@ -626,7 +671,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * IsPrimaryKey.
+             * <p>Indicates whether the field is a primary key.</p>
              */
             public Builder isPrimaryKey(Boolean isPrimaryKey) {
                 this.isPrimaryKey = isPrimaryKey;
@@ -634,7 +679,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -642,7 +690,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * LevelAbbreviation.
+             * <p>The abbreviation of the data level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L1</p>
              */
             public Builder levelAbbreviation(String levelAbbreviation) {
                 this.levelAbbreviation = levelAbbreviation;
@@ -650,7 +701,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -658,7 +712,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>age</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -666,7 +723,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * Nullable.
+             * <p>Indicates whether the field allows null values.</p>
              */
             public Builder nullable(Boolean nullable) {
                 this.nullable = nullable;
@@ -674,7 +731,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * SeqNumber.
+             * <p>The sequence number of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -682,7 +742,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * <p>The GUID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -690,7 +753,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -698,7 +764,10 @@ public class GetTableColumnsResponseBody extends TeaModel {
             }
 
             /**
-             * VisitCount30d.
+             * <p>The number of queries in the last 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder visitCount30d(Long visitCount30d) {
                 this.visitCount30d = visitCount30d;

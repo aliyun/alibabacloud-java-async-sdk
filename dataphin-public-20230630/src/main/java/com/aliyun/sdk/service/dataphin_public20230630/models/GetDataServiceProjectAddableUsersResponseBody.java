@@ -119,7 +119,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +171,7 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
         }
 
         /**
-         * UserList.
+         * <p>The list of project members.</p>
          */
         public Builder userList(java.util.List<UserList> userList) {
             this.userList = userList;
@@ -241,7 +250,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The username of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xx@aliyuncs.com">xx@aliyuncs.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -249,7 +261,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -257,7 +272,10 @@ public class GetDataServiceProjectAddableUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -112,6 +112,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
+         * <p>The query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -350,6 +352,7 @@ public class ListAlertEventsRequest extends Request {
             } 
 
             /**
+             * <p>The end date of the alert.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -361,7 +364,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * AlertObjectTypeList.
+             * <p>The list of alert object types.</p>
              */
             public Builder alertObjectTypeList(java.util.List<String> alertObjectTypeList) {
                 this.alertObjectTypeList = alertObjectTypeList;
@@ -369,7 +372,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * AlertReasonList.
+             * <p>The list of alert reasons.</p>
              */
             public Builder alertReasonList(java.util.List<String> alertReasonList) {
                 this.alertReasonList = alertReasonList;
@@ -377,6 +380,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
+             * <p>The start date of the alert.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -388,7 +392,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * BizNameList.
+             * <p>The list of business units.</p>
              */
             public Builder bizNameList(java.util.List<String> bizNameList) {
                 this.bizNameList = bizNameList;
@@ -396,7 +400,10 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for the query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -404,7 +411,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * MonitoredItemIdList.
+             * <p>The list of monitored item IDs.</p>
              */
             public Builder monitoredItemIdList(java.util.List<String> monitoredItemIdList) {
                 this.monitoredItemIdList = monitoredItemIdList;
@@ -412,6 +419,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -423,6 +431,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -434,7 +443,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * ProjectNameList.
+             * <p>The list of projects.</p>
              */
             public Builder projectNameList(java.util.List<String> projectNameList) {
                 this.projectNameList = projectNameList;
@@ -442,6 +451,18 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
+             * <p>The source system. Valid values:</p>
+             * <ul>
+             * <li>ALL: all</li>
+             * <li>DQE: data quality</li>
+             * <li>OS: data service</li>
+             * <li>STREAM: real-time computing</li>
+             * <li>VDM_BATCH: offline computing</li>
+             * <li>SOP: O&amp;M platform</li>
+             * <li>REAL_TIME_PIPELINE: real-time integration</li>
+             * <li>KGB: baseline monitoring</li>
+             * </ul>
+             * <p>and more.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -453,7 +474,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The list of alert statuses.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -461,7 +482,7 @@ public class ListAlertEventsRequest extends Request {
             }
 
             /**
-             * UserIdList.
+             * <p>The list of alert contact IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

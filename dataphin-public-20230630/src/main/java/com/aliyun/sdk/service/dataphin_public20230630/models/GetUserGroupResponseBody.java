@@ -119,7 +119,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         }
 
         /**
-         * UserGroupInfo.
+         * <p>The user group details.</p>
          */
         public Builder userGroupInfo(UserGroupInfo userGroupInfo) {
             this.userGroupInfo = userGroupInfo;
@@ -238,7 +253,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>The account name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -246,7 +264,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -254,7 +275,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>131313</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -373,7 +397,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * Active.
+             * <p>Indicates whether the user group is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -381,7 +408,7 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * AdminList.
+             * <p>The administrators of the user group.</p>
              */
             public Builder adminList(java.util.List<AdminList> adminList) {
                 this.adminList = adminList;
@@ -389,7 +416,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -397,7 +427,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1313213</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -405,7 +438,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MyRole.
+             * <p>The role of the current user in the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder myRole(String myRole) {
                 this.myRole = myRole;
@@ -413,7 +449,10 @@ public class GetUserGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;

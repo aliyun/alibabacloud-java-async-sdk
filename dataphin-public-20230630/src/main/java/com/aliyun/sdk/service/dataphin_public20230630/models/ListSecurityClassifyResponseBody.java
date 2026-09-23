@@ -119,7 +119,7 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
         } 
 
         /**
-         * ClassifyListResult.
+         * <p>The result of the data classification list.</p>
          */
         public Builder classifyListResult(ClassifyListResult classifyListResult) {
             this.classifyListResult = classifyListResult;
@@ -127,7 +127,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +354,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             } 
 
             /**
-             * CatalogPath.
+             * <p>The catalog path of the classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/Root/Personal Information</p>
              */
             public Builder catalogPath(String catalogPath) {
                 this.catalogPath = catalogPath;
@@ -353,7 +365,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The classification description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Personal sensitive information classification</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -361,7 +376,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveFieldCount.
+             * <p>The number of effective fields.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder effectiveFieldCount(Integer effectiveFieldCount) {
                 this.effectiveFieldCount = effectiveFieldCount;
@@ -369,7 +387,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -377,7 +398,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * IsBindDesensitizeRule.
+             * <p>Indicates whether a masking rule is bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isBindDesensitizeRule(Boolean isBindDesensitizeRule) {
                 this.isBindDesensitizeRule = isBindDesensitizeRule;
@@ -385,7 +409,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * LevelId.
+             * <p>The level ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -393,7 +420,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * LevelName.
+             * <p>The level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>L3</p>
              */
             public Builder levelName(String levelName) {
                 this.levelName = levelName;
@@ -401,7 +431,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The classification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Personal Information</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -409,7 +442,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -417,7 +453,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * ShortName.
+             * <p>The short name of the classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PI</p>
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
@@ -425,7 +464,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -492,7 +534,7 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             } 
 
             /**
-             * ClassifyList.
+             * <p>The list of data classifications.</p>
              */
             public Builder classifyList(java.util.List<ClassifyList> classifyList) {
                 this.classifyList = classifyList;
@@ -500,7 +542,10 @@ public class ListSecurityClassifyResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

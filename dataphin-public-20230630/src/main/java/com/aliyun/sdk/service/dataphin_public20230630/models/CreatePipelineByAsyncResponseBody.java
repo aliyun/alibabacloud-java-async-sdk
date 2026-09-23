@@ -119,7 +119,10 @@ public class CreatePipelineByAsyncResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class CreatePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Asynchronous execution query ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder data(Long data) {
             this.data = data;
@@ -135,7 +141,10 @@ public class CreatePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +152,10 @@ public class CreatePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Backend response exception details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +174,7 @@ public class CreatePipelineByAsyncResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request was successful</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

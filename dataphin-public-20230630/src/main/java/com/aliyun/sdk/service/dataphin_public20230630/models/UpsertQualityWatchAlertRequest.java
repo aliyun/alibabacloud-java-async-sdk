@@ -112,6 +112,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder upsertCommand(UpsertCommand upsertCommand) {
@@ -202,7 +204,10 @@ public class UpsertQualityWatchAlertRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the on-duty alert schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -210,7 +215,10 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the on-duty alert schedule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +285,10 @@ public class UpsertQualityWatchAlertRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -285,7 +296,10 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -404,7 +418,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             } 
 
             /**
-             * AlertDutyChannelList.
+             * <p>The alert channels for on-duty schedules.</p>
              */
             public Builder alertDutyChannelList(java.util.List<String> alertDutyChannelList) {
                 this.alertDutyChannelList = alertDutyChannelList;
@@ -412,7 +426,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * AlertDutyList.
+             * <p>The list of on-duty schedules for alerts.</p>
              */
             public Builder alertDutyList(java.util.List<AlertDutyList> alertDutyList) {
                 this.alertDutyList = alertDutyList;
@@ -420,7 +434,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * AlertQualityOwnerChannelList.
+             * <p>The alert channels for the quality owner.</p>
              */
             public Builder alertQualityOwnerChannelList(java.util.List<String> alertQualityOwnerChannelList) {
                 this.alertQualityOwnerChannelList = alertQualityOwnerChannelList;
@@ -428,7 +442,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * AlertUserChannelList.
+             * <p>The alert channels for users.</p>
              */
             public Builder alertUserChannelList(java.util.List<String> alertUserChannelList) {
                 this.alertUserChannelList = alertUserChannelList;
@@ -436,7 +450,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * AlertUserList.
+             * <p>The list of users to receive alerts.</p>
              */
             public Builder alertUserList(java.util.List<AlertUserList> alertUserList) {
                 this.alertUserList = alertUserList;
@@ -444,7 +458,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
-             * EnableAlertQualityOwner.
+             * <p>Specifies whether to enable alerts for the quality owner.</p>
              */
             public Builder enableAlertQualityOwner(Boolean enableAlertQualityOwner) {
                 this.enableAlertQualityOwner = enableAlertQualityOwner;
@@ -513,6 +527,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             } 
 
             /**
+             * <p>The alert configuration details.</p>
              * <p>This parameter is required.</p>
              */
             public Builder qualityAlertInfo(QualityAlertInfo qualityAlertInfo) {
@@ -521,6 +536,7 @@ public class UpsertQualityWatchAlertRequest extends Request {
             }
 
             /**
+             * <p>The ID of the monitored object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

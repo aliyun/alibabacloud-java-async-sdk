@@ -119,7 +119,10 @@ public class ListTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +248,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -680,7 +695,7 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetTagList.
+             * <p>The asset inventory tags.</p>
              */
             public Builder assetTagList(java.util.List<String> assetTagList) {
                 this.assetTagList = assetTagList;
@@ -688,7 +703,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The ID of the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2011</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -696,7 +714,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitName.
+             * <p>The name of the business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>LD_test01</p>
              */
             public Builder bizUnitName(String bizUnitName) {
                 this.bizUnitName = bizUnitName;
@@ -704,7 +725,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -712,7 +736,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -720,7 +747,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30011211</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -728,7 +758,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDomainId.
+             * <p>The ID of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>211</p>
              */
             public Builder dataDomainId(Long dataDomainId) {
                 this.dataDomainId = dataDomainId;
@@ -736,7 +769,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataDomainName.
+             * <p>The name of the data domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>211</p>
              */
             public Builder dataDomainName(String dataDomainName) {
                 this.dataDomainName = dataDomainName;
@@ -744,7 +780,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * <p>The ID of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3301</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -752,7 +791,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>学生</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -760,7 +802,14 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment. Valid values:</p>
+             * <ul>
+             * <li>dev</li>
+             * <li>prod.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -768,7 +817,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID. This value is used to navigate to the ODM model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -776,7 +828,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10011</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -784,7 +839,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsBasicMode.
+             * <p>Indicates whether the project or business version to which the table belongs is in Basic mode.</p>
              */
             public Builder isBasicMode(Boolean isBasicMode) {
                 this.isBasicMode = isBasicMode;
@@ -792,7 +847,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsPartitionTable.
+             * <p>Indicates whether the table is a partitioned table.</p>
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -800,7 +855,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * LastDdlTime.
+             * <p>The time when the table DDL was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder lastDdlTime(String lastDdlTime) {
                 this.lastDdlTime = lastDdlTime;
@@ -808,7 +866,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * LastDmlTime.
+             * <p>The time when the table data was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder lastDmlTime(String lastDmlTime) {
                 this.lastDmlTime = lastDmlTime;
@@ -816,7 +877,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * LastQueryTime.
+             * <p>The time when the data was last viewed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder lastQueryTime(String lastQueryTime) {
                 this.lastQueryTime = lastQueryTime;
@@ -824,7 +888,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * LifeCycle.
+             * <p>The lifecycle of the table, in days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder lifeCycle(Long lifeCycle) {
                 this.lifeCycle = lifeCycle;
@@ -832,7 +899,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t_test01</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -840,7 +910,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The Dataphin user ID of the table owner. This value may be empty if the owner is not bound.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30011211</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -848,7 +921,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentModelId.
+             * <p>The ID of the parent model. This value is used to navigate to the ODM model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parentModelId(String parentModelId) {
                 this.parentModelId = parentModelId;
@@ -856,7 +932,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The ID of the logical project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -864,7 +943,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the logical project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testPrj</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -872,7 +954,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>The security classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder securityLevel(Long securityLevel) {
                 this.securityLevel = securityLevel;
@@ -880,7 +965,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevelAbbreviation.
+             * <p>The abbreviation of the security classification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高级</p>
              */
             public Builder securityLevelAbbreviation(String securityLevelAbbreviation) {
                 this.securityLevelAbbreviation = securityLevelAbbreviation;
@@ -888,7 +976,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevelName.
+             * <p>The name of the security classification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>高级</p>
              */
             public Builder securityLevelName(String securityLevelName) {
                 this.securityLevelName = securityLevelName;
@@ -896,7 +987,14 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li>HIVE</li>
+             * <li>MAX_COMPUTE.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>HIVE</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -904,7 +1002,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamTableConfig.
+             * <p>The dynamic properties of the real-time meta table.</p>
              */
             public Builder streamTableConfig(java.util.List<StreamTableConfig> streamTableConfig) {
                 this.streamTableConfig = streamTableConfig;
@@ -912,7 +1010,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TableSizeInBytes.
+             * <p>The total storage size of the table, in bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10241024</p>
              */
             public Builder tableSizeInBytes(Long tableSizeInBytes) {
                 this.tableSizeInBytes = tableSizeInBytes;
@@ -920,7 +1021,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * VisitCount30d.
+             * <p>The number of visits in the last 30 days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder visitCount30d(Long visitCount30d) {
                 this.visitCount30d = visitCount30d;
@@ -987,7 +1091,7 @@ public class ListTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * TableList.
+             * <p>The list of tables.</p>
              */
             public Builder tableList(java.util.List<TableList> tableList) {
                 this.tableList = tableList;
@@ -995,7 +1099,10 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

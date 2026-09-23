@@ -126,7 +126,14 @@ public class ExecuteManualNodeRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class ExecuteManualNodeRequest extends Request {
         }
 
         /**
+         * <p>The request for running a manual task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder executeCommand(ExecuteCommand executeCommand) {
@@ -145,6 +153,7 @@ public class ExecuteManualNodeRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -225,7 +234,10 @@ public class ExecuteManualNodeRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -233,7 +245,10 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -356,6 +371,7 @@ public class ExecuteManualNodeRequest extends Request {
             } 
 
             /**
+             * <p>The end business date.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,7 +383,10 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
-             * FlowName.
+             * <p>The workflow name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
@@ -375,6 +394,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
+             * <p>The node ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -386,7 +406,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
-             * ParamList.
+             * <p>The runtime parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -394,6 +414,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -405,6 +426,7 @@ public class ExecuteManualNodeRequest extends Request {
             }
 
             /**
+             * <p>The start business date.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

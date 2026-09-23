@@ -112,6 +112,7 @@ public class RemoveDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class RemoveDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>Remove regular members from a data service application</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {
@@ -204,6 +206,7 @@ public class RemoveDataServiceAppMemberRequest extends Request {
             } 
 
             /**
+             * <p>Application ID</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class RemoveDataServiceAppMemberRequest extends Request {
             }
 
             /**
+             * <p>List of application member IDs</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberIds(java.util.List<String> memberIds) {

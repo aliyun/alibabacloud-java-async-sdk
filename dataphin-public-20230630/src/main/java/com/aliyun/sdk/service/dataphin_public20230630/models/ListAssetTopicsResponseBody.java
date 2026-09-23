@@ -119,7 +119,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated result of asset topics.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -236,7 +248,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -303,7 +318,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             } 
 
             /**
-             * UserGroupId.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20001</p>
              */
             public Builder userGroupId(String userGroupId) {
                 this.userGroupId = userGroupId;
@@ -311,7 +329,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupName.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Governance Group</p>
              */
             public Builder userGroupName(String userGroupName) {
                 this.userGroupName = userGroupName;
@@ -378,7 +399,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001012</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -386,7 +410,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jane</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -544,7 +571,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             } 
 
             /**
-             * AssetType.
+             * <p>The asset type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TABLE</p>
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -552,7 +582,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -560,7 +593,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * Owners.
+             * <p>The topic administrators.</p>
              */
             public Builder owners(java.util.List<Owners> owners) {
                 this.owners = owners;
@@ -568,7 +601,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicDescription.
+             * <p>The topic description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aggregates assets related to core metrics</p>
              */
             public Builder topicDescription(String topicDescription) {
                 this.topicDescription = topicDescription;
@@ -576,7 +612,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * <p>The topic ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28440278777</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -584,7 +623,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core Metrics Topic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -592,7 +634,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityType.
+             * <p>The visibility scope. Valid values: PUBLIC, SPECIFIED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SPECIFIED</p>
              */
             public Builder visibilityType(String visibilityType) {
                 this.visibilityType = visibilityType;
@@ -600,7 +645,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * VisibleUserGroups.
+             * <p>The explicitly visible user groups. Returns null for PUBLIC topics.</p>
              */
             public Builder visibleUserGroups(java.util.List<VisibleUserGroups> visibleUserGroups) {
                 this.visibleUserGroups = visibleUserGroups;
@@ -608,7 +653,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * VisibleUsers.
+             * <p>The explicitly visible users. Returns null for PUBLIC topics.</p>
              */
             public Builder visibleUsers(java.util.List<VisibleUsers> visibleUsers) {
                 this.visibleUsers = visibleUsers;
@@ -675,7 +720,7 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             } 
 
             /**
-             * TopicList.
+             * <p>The list of topics.</p>
              */
             public Builder topicList(java.util.List<TopicList> topicList) {
                 this.topicList = topicList;
@@ -683,7 +728,10 @@ public class ListAssetTopicsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that match the query conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-599403204152</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

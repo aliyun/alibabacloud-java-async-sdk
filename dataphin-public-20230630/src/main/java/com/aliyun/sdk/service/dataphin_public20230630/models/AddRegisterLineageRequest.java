@@ -112,6 +112,7 @@ public class AddRegisterLineageRequest extends Request {
         }
 
         /**
+         * <p>The command for registering and adding data lineage.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addRegisterLineageCommand(AddRegisterLineageCommand addRegisterLineageCommand) {
@@ -122,6 +123,7 @@ public class AddRegisterLineageRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +295,10 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -301,7 +306,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -309,7 +317,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -317,7 +325,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1.column1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -325,7 +336,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataType.
+             * <p>The asset type. Set this parameter based on the actual scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder metadataType(String metadataType) {
                 this.metadataType = metadataType;
@@ -333,7 +347,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +358,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ParentGuid.
+             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder parentGuid(String parentGuid) {
                 this.parentGuid = parentGuid;
@@ -349,7 +369,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ReferenceType.
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_GUID, BY_PROPERTY</p>
              */
             public Builder referenceType(String referenceType) {
                 this.referenceType = referenceType;
@@ -357,7 +380,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -515,7 +541,10 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -523,7 +552,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -531,7 +563,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -539,7 +571,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1.column1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -547,7 +582,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataType.
+             * <p>The asset type. Set this parameter based on the actual scenario.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder metadataType(String metadataType) {
                 this.metadataType = metadataType;
@@ -555,7 +593,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +604,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ParentGuid.
+             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder parentGuid(String parentGuid) {
                 this.parentGuid = parentGuid;
@@ -571,7 +615,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ReferenceType.
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_GUID, BY_PROPERTY</p>
              */
             public Builder referenceType(String referenceType) {
                 this.referenceType = referenceType;
@@ -579,7 +626,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -661,7 +711,7 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * IsDirect.
+             * <p>Specifies whether this is a direct lineage relationship. Default value: true.</p>
              */
             public Builder isDirect(Boolean isDirect) {
                 this.isDirect = isDirect;
@@ -669,6 +719,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The source asset reference.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(Source source) {
@@ -677,6 +728,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The target asset reference.</p>
              * <p>This parameter is required.</p>
              */
             public Builder target(Target target) {
@@ -837,7 +889,10 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -845,7 +900,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -853,7 +911,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -861,7 +919,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -869,7 +930,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataSubType.
+             * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
              */
             public Builder metadataSubType(String metadataSubType) {
                 this.metadataSubType = metadataSubType;
@@ -877,6 +941,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset type. Set this parameter based on the actual scenario.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -888,7 +953,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -896,6 +964,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -907,7 +976,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -1067,7 +1139,10 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -1075,7 +1150,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1083,7 +1161,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -1091,7 +1169,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -1099,7 +1180,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataSubType.
+             * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
              */
             public Builder metadataSubType(String metadataSubType) {
                 this.metadataSubType = metadataSubType;
@@ -1107,6 +1191,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset type. Set this parameter based on the actual scenario.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1118,7 +1203,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1126,6 +1214,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1137,7 +1226,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -1271,7 +1363,7 @@ public class AddRegisterLineageRequest extends Request {
             } 
 
             /**
-             * CheckAssetExist.
+             * <p>Specifies whether to check the existence of the asset. By default, the existence is not checked.</p>
              */
             public Builder checkAssetExist(Boolean checkAssetExist) {
                 this.checkAssetExist = checkAssetExist;
@@ -1279,7 +1371,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * DetailedLineages.
+             * <p>The detailed lineage relationships. For tables, these are field-level lineage relationships. If you do not want to add field-level lineage, leave this parameter empty.</p>
              */
             public Builder detailedLineages(java.util.List<DetailedLineages> detailedLineages) {
                 this.detailedLineages = detailedLineages;
@@ -1287,7 +1379,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * RelationProperties.
+             * <p>The lineage relationship properties.</p>
              */
             public Builder relationProperties(java.util.Map<String, ?> relationProperties) {
                 this.relationProperties = relationProperties;
@@ -1295,6 +1387,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The source asset.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(AddRegisterLineageCommandSource source) {
@@ -1303,6 +1396,7 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The target asset.</p>
              * <p>This parameter is required.</p>
              */
             public Builder target(AddRegisterLineageCommandTarget target) {
@@ -1311,7 +1405,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001234</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1319,7 +1416,10 @@ public class AddRegisterLineageRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the current user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300004567</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

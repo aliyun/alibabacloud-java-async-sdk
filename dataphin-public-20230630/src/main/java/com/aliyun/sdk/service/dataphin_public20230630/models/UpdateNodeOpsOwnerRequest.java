@@ -112,6 +112,7 @@ public class UpdateNodeOpsOwnerRequest extends Request {
         }
 
         /**
+         * <p>The command for updating O&amp;M owners.</p>
          * <p>This parameter is required.</p>
          */
         public Builder command(Command command) {
@@ -122,6 +123,7 @@ public class UpdateNodeOpsOwnerRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class UpdateNodeOpsOwnerRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -218,6 +223,7 @@ public class UpdateNodeOpsOwnerRequest extends Request {
             } 
 
             /**
+             * <p>The node ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +235,12 @@ public class UpdateNodeOpsOwnerRequest extends Request {
             }
 
             /**
+             * <p>The node source type. Only offline nodes are supported. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: compute node.</li>
+             * <li>PIPELINE: integration node.</li>
+             * <li>BLACK_BOX: logical table.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +252,12 @@ public class UpdateNodeOpsOwnerRequest extends Request {
             }
 
             /**
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li>DATA_PROCESS: compute node.</li>
+             * <li>PIPELINE_NODE: integration node.</li>
+             * <li>BBOX_LOGIC_TABLE_NODE: logical table.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -312,6 +330,7 @@ public class UpdateNodeOpsOwnerRequest extends Request {
             } 
 
             /**
+             * <p>The list of nodes. Only offline nodes are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
@@ -320,6 +339,7 @@ public class UpdateNodeOpsOwnerRequest extends Request {
             }
 
             /**
+             * <p>The updated O&amp;M owners. Specify a list of user account IDs. A maximum of 50 IDs are supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

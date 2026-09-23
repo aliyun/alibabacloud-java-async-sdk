@@ -113,6 +113,7 @@ public class SubmitPipelineByIdRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -123,6 +124,7 @@ public class SubmitPipelineByIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +137,7 @@ public class SubmitPipelineByIdRequest extends Request {
         }
 
         /**
+         * <p>The ID used to query the pipeline task.</p>
          * <p>This parameter is required.</p>
          */
         public Builder queryId(QueryId queryId) {
@@ -206,6 +209,11 @@ public class SubmitPipelineByIdRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: the development environment.</li>
+             * <li>PROD: the production environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -217,6 +225,7 @@ public class SubmitPipelineByIdRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline task belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -300,7 +309,10 @@ public class SubmitPipelineByIdRequest extends Request {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID of the integration task. You can specify any one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -308,7 +320,10 @@ public class SubmitPipelineByIdRequest extends Request {
             }
 
             /**
-             * NodeId.
+             * <p>The node ID of the integration task scheduling node. You can specify any one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -316,7 +331,10 @@ public class SubmitPipelineByIdRequest extends Request {
             }
 
             /**
-             * PipelineId.
+             * <p>The primary key ID of the integration pipeline. You can specify any one of pipelineId, fileId, or nodeId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;

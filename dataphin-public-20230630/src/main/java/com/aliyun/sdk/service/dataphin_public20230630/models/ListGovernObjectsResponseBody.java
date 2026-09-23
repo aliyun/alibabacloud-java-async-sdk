@@ -119,7 +119,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +240,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Yang Jing 2088252351182803</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -236,7 +251,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -407,7 +425,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * ObjectId.
+             * <p>The object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9223058119411358258</p>
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
@@ -415,7 +436,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentObjectId.
+             * <p>The ID of the parent object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>913836</p>
              */
             public Builder parentObjectId(String parentObjectId) {
                 this.parentObjectId = parentObjectId;
@@ -423,7 +447,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemContactMail.
+             * <p>The contact email for the governance issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:126983612986391@gamail.com">126983612986391@gamail.com</a></p>
              */
             public Builder problemContactMail(String problemContactMail) {
                 this.problemContactMail = problemContactMail;
@@ -431,7 +458,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemContactOther.
+             * <p>The other contact information for the governance issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Jane</p>
              */
             public Builder problemContactOther(String problemContactOther) {
                 this.problemContactOther = problemContactOther;
@@ -439,7 +469,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemContactPhone.
+             * <p>The contact phone number for the governance issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16278902467</p>
              */
             public Builder problemContactPhone(String problemContactPhone) {
                 this.problemContactPhone = problemContactPhone;
@@ -447,7 +480,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemDesc.
+             * <p>The description of the governance issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Governance issue description</p>
              */
             public Builder problemDesc(String problemDesc) {
                 this.problemDesc = problemDesc;
@@ -455,7 +491,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemSubmitType.
+             * <p>The submission type of the issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder problemSubmitType(String problemSubmitType) {
                 this.problemSubmitType = problemSubmitType;
@@ -463,7 +502,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemSubmitter.
+             * <p>The user who submitted the issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder problemSubmitter(String problemSubmitter) {
                 this.problemSubmitter = problemSubmitter;
@@ -471,7 +513,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemSubmitterUserName.
+             * <p>The username of the issue submitter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder problemSubmitterUserName(String problemSubmitterUserName) {
                 this.problemSubmitterUserName = problemSubmitterUserName;
@@ -479,7 +524,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * ProblemTypes.
+             * <p>The types of the governance issue.</p>
              */
             public Builder problemTypes(java.util.List<String> problemTypes) {
                 this.problemTypes = problemTypes;
@@ -611,7 +656,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * Cause.
+             * <p>The cause of the issue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Host exception. The instance was migrated with data loss</p>
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -619,7 +667,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Store scheduled power on/off business domain canary list\n</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -627,7 +678,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * KnowledgeId.
+             * <p>The knowledge entry ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-341426256859</p>
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -635,7 +689,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-mnneiiwtemj-wjuggee</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -643,7 +700,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buc_459782</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -651,7 +711,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * <p>The Solutions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;Type\&quot;:\&quot;text\&quot;,\&quot;Value\&quot;:\&quot;OSS public network access\&quot;}</p>
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -659,7 +722,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Makassar International Eight Festival &amp; Forum (F8 Makassar)</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -856,7 +922,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * CommitTime.
+             * <p>The time when the record was reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-08-31 10:10:59</p>
              */
             public Builder commitTime(String commitTime) {
                 this.commitTime = commitTime;
@@ -864,7 +933,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * GovernItemId.
+             * <p>The governance object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>139487419630</p>
              */
             public Builder governItemId(Long governItemId) {
                 this.governItemId = governItemId;
@@ -872,7 +944,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * GovernObjectId.
+             * <p>The governance object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-643545112181</p>
              */
             public Builder governObjectId(Long governObjectId) {
                 this.governObjectId = governObjectId;
@@ -880,7 +955,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * IsRectify.
+             * <p>Indicates whether rectification is in progress.</p>
              */
             public Builder isRectify(Boolean isRectify) {
                 this.isRectify = isRectify;
@@ -888,7 +963,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Owners.
+             * <p>The list of owners.</p>
              */
             public Builder owners(java.util.List<Owners> owners) {
                 this.owners = owners;
@@ -896,7 +971,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Problem.
+             * <p>The governance issue object.</p>
              */
             public Builder problem(Problem problem) {
                 this.problem = problem;
@@ -904,7 +979,100 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The property values.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *                     &quot;gmt_create&quot;: &quot;2026-08-31 06:00:22.296&quot;,
+             *                     &quot;index_compute_type&quot;: &quot;&quot;,
+             *                     &quot;table_env&quot;: &quot;PROD&quot;,
+             *                     &quot;table_datasource_id&quot;: &quot;1&quot;,
+             *                     &quot;owner_id&quot;: &quot;300006218&quot;,
+             *                     &quot;index_catalog&quot;: &quot;&quot;,
+             *                     &quot;qd_feature_owner&quot;: &quot;&quot;,
+             *                     &quot;rule_task_start_time&quot;: &quot;2026-08-31 06:00:00&quot;,
+             *                     &quot;table_id&quot;: &quot;odps.300023201.fashion_ads.api2mysql_demo&quot;,
+             *                     &quot;rule_strength&quot;: &quot;WEAK&quot;,
+             *                     &quot;table_biz_unit_name&quot;: &quot;LD_Fashion&quot;,
+             *                     &quot;table_name&quot;: &quot;fashion_ads.api2mysql_demo&quot;,
+             *                     &quot;index_type&quot;: &quot;&quot;,
+             *                     &quot;table_datasource_from&quot;: &quot;META_DATA&quot;,
+             *                     &quot;datasource_type&quot;: &quot;MaxCompute&quot;,
+             *                     &quot;datasource_scope&quot;: &quot;OFFLINE&quot;,
+             *                     &quot;template_zh_tw_name&quot;: &quot;欄位空值校正&quot;,
+             *                     &quot;problem_submit_type&quot;: &quot;SYSTEM&quot;,
+             *                     &quot;template_type&quot;: &quot;FIELD_NULL_VALUE_VALIDATE&quot;,
+             *                     &quot;index_name_cn&quot;: &quot;&quot;,
+             *                     &quot;datasource_name&quot;: &quot;Dataphin&quot;,
+             *                     &quot;id&quot;: &quot;918363&quot;,
+             *                     &quot;index_id&quot;: &quot;&quot;,
+             *                     &quot;validate_partition&quot;: &quot;ds=\&quot;20260831\&quot;&quot;,
+             *                     &quot;index_owner_id&quot;: &quot;&quot;,
+             *                     &quot;datasource_owner&quot;: &quot;300006218&quot;,
+             *                     &quot;rule_name&quot;: &quot;date_odps_test_2025-09-22 20:32:07&quot;,
+             *                     &quot;watch_type&quot;: &quot;TABLE&quot;,
+             *                     &quot;validate_status&quot;: &quot;NOT_PASS&quot;,
+             *                     &quot;qd_feature_id&quot;: &quot;&quot;,
+             *                     &quot;table_desc&quot;: &quot;api2mysql_demo&quot;,
+             *                     &quot;is_ignore&quot;: &quot;false&quot;,
+             *                     &quot;rule_desc&quot;: &quot;&quot;,
+             *                     &quot;table_partitioned&quot;: &quot;true&quot;,
+             *                     &quot;template_owner&quot;: &quot;300006218&quot;,
+             *                     &quot;index_biz_unit_id&quot;: &quot;&quot;,
+             *                     &quot;table_biz_unit_id&quot;: &quot;6865277495315392&quot;,
+             *                     &quot;index_biz_unit_name&quot;: &quot;&quot;,
+             *                     &quot;watch_env&quot;: &quot;PROD&quot;,
+             *                     &quot;problem_contact_other&quot;: &quot;&quot;,
+             *                     &quot;status&quot;: &quot;NEW&quot;,
+             *                     &quot;datasource_from&quot;: &quot;META_DATA&quot;,
+             *                     &quot;table_project_name&quot;: &quot;fashion_ads&quot;,
+             *                     &quot;tenant_id&quot;: &quot;300023201&quot;,
+             *                     &quot;datasource_env&quot;: &quot;PROD&quot;,
+             *                     &quot;template_en_name&quot;: &quot;Verify Field Null Values&quot;,
+             *                     &quot;commit_time&quot;: &quot;2026-08-31 06:00:21.135&quot;,
+             *                     &quot;gmt_modified&quot;: &quot;2026-08-31 06:00:22.296&quot;,
+             *                     &quot;qd_feature_name&quot;: &quot;&quot;,
+             *                     &quot;table_catalog&quot;: &quot;fashion_ads&quot;,
+             *                     &quot;rule_status&quot;: &quot;ENABLE&quot;,
+             *                     &quot;problem_contact_mail&quot;: &quot;&quot;,
+             *                     &quot;rule_task_status&quot;: &quot;SUCCESS&quot;,
+             *                     &quot;rule_validate_object_type&quot;: &quot;COLUMN&quot;,
+             *                     &quot;watch_status&quot;: &quot;ENABLE&quot;,
+             *                     &quot;index_guid&quot;: &quot;&quot;,
+             *                     &quot;system_template&quot;: &quot;true&quot;,
+             *                     &quot;quality_owners&quot;: &quot;300006218&quot;,
+             *                     &quot;index_name&quot;: &quot;&quot;,
+             *                     &quot;problem_contact_phone&quot;: &quot;&quot;,
+             *                     &quot;watch_task_id&quot;: &quot;8325922&quot;,
+             *                     &quot;rule_task_id&quot;: &quot;8328383&quot;,
+             *                     &quot;index_desc&quot;: &quot;&quot;,
+             *                     &quot;table_type&quot;: &quot;PHYSICAL_TABLE&quot;,
+             *                     &quot;table_project_id&quot;: &quot;6865331520706176&quot;,
+             *                     &quot;trace_id&quot;: &quot;time:4326023&quot;,
+             *                     &quot;datasource_id&quot;: &quot;1&quot;,
+             *                     &quot;qd_feature_code&quot;: &quot;&quot;,
+             *                     &quot;rule_validate_object_name&quot;: &quot;date_odps&quot;,
+             *                     &quot;problem_desc&quot;: &quot;date_odps_test_2025-09-22 20:32:07&quot;,
+             *                     &quot;table_owner&quot;: &quot;300006218&quot;,
+             *                     &quot;quality_owner_groups&quot;: &quot;&quot;,
+             *                     &quot;govern_item_id&quot;: &quot;100&quot;,
+             *                     &quot;rule_catalogs&quot;: &quot;COMPLETENESS&quot;,
+             *                     &quot;table_datasource_type&quot;: &quot;MAX_COMPUTE&quot;,
+             *                     &quot;template_zh_cn_name&quot;: &quot;字段空值校验&quot;,
+             *                     &quot;rule_task_biz_date&quot;: &quot;20260831 06:00:00&quot;,
+             *                     &quot;problem_types&quot;: &quot;[{\&quot;value\&quot;:\&quot;COMPLETENESS\&quot;}]&quot;,
+             *                     &quot;rule_id&quot;: &quot;4322944&quot;,
+             *                     &quot;problem_attachment_file_ids&quot;: &quot;null&quot;,
+             *                     &quot;watch_name&quot;: &quot;&quot;,
+             *                     &quot;template_name&quot;: &quot;&quot;,
+             *                     &quot;schedule_params&quot;: &quot;&quot;,
+             *                     &quot;is_rectify&quot;: &quot;false&quot;,
+             *                     &quot;rule_task_end_time&quot;: &quot;&quot;,
+             *                     &quot;watch_id&quot;: &quot;3841908&quot;,
+             *                     &quot;validate_result&quot;: &quot;false&quot;,
+             *                     &quot;qd_feature_guid&quot;: &quot;&quot;,
+             *                     &quot;govern_object_id&quot;: &quot;913836&quot;,
+             *                     &quot;template_id&quot;: &quot;100&quot;</p>
              */
             public Builder properties(java.util.Map<String, ?> properties) {
                 this.properties = properties;
@@ -912,7 +1080,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RectifyId.
+             * <p>The rectification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-787032739353</p>
              */
             public Builder rectifyId(Long rectifyId) {
                 this.rectifyId = rectifyId;
@@ -920,7 +1091,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RectifyName.
+             * <p>The name of the rectification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test rectification</p>
              */
             public Builder rectifyName(String rectifyName) {
                 this.rectifyName = rectifyName;
@@ -928,7 +1102,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RectifyStatus.
+             * <p>The rectification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW</p>
              */
             public Builder rectifyStatus(String rectifyStatus) {
                 this.rectifyStatus = rectifyStatus;
@@ -936,7 +1113,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedKnowledge.
+             * <p>The related knowledge base entries.</p>
              */
             public Builder relatedKnowledge(java.util.List<RelatedKnowledge> relatedKnowledge) {
                 this.relatedKnowledge = relatedKnowledge;
@@ -944,7 +1121,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the governance object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1011,7 +1191,7 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The paged list of governance objects.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -1019,7 +1199,10 @@ public class ListGovernObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

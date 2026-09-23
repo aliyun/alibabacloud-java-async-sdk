@@ -127,6 +127,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -137,6 +138,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,6 +313,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the called API.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -321,7 +325,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -329,6 +336,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
+             * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -340,7 +348,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * OrderColumn.
+             * <p>The column used for sorting. Valid values: CALL_COUNT: the number of calls. ERROR_COUNT: the number of errors. ERROR_RATE: the error rate. Default value: CALL_COUNT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CALL_COUNT</p>
              */
             public Builder orderColumn(String orderColumn) {
                 this.orderColumn = orderColumn;
@@ -348,7 +359,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * OrderType.
+             * <p>The sort order. Valid values: 1: ascending order. 2: descending order. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -356,7 +370,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -364,7 +381,10 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -372,6 +392,7 @@ public class ListDataServiceApiImpactsRequest extends Request {
             }
 
             /**
+             * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

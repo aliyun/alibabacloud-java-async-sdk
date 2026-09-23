@@ -112,6 +112,7 @@ public class UpsertQualityScheduleRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpsertQualityScheduleRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder upsertCommand(UpsertCommand upsertCommand) {
@@ -348,7 +350,15 @@ public class UpsertQualityScheduleRequest extends Request {
             } 
 
             /**
-             * CronExpression.
+             * <p>The cron expression for timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li><ul>
+             * <li>1/* * * *</li>
+             * </ul>
+             * </li>
+             * </ul>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -356,7 +366,10 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The schedule object ID. If this parameter is specified, the schedule is updated. If this parameter is not specified, a schedule is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -364,6 +377,7 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
+             * <p>The name of the schedule object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -375,7 +389,10 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * PartitionExpression.
+             * <p>The custom partition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=${yyyyMMdd}</p>
              */
             public Builder partitionExpression(String partitionExpression) {
                 this.partitionExpression = partitionExpression;
@@ -383,7 +400,17 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * PartitionType.
+             * <p>The partition type. Valid values:</p>
+             * <ul>
+             * <li>EVERY_DAY: every day.</li>
+             * <li>PRE_DAY: yesterday.</li>
+             * <li>TODAY: today.</li>
+             * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday).</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder partitionType(String partitionType) {
                 this.partitionType = partitionType;
@@ -391,7 +418,17 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * PeriodScheduleIntervalType.
+             * <p>The schedule interval type for timed scheduling. Valid values:</p>
+             * <ul>
+             * <li>DAILY: day.</li>
+             * <li>WEEKLY: week.</li>
+             * <li>MONTHLY: month.</li>
+             * <li>HOURLY: hour.</li>
+             * <li>MINUTELY: minute.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder periodScheduleIntervalType(String periodScheduleIntervalType) {
                 this.periodScheduleIntervalType = periodScheduleIntervalType;
@@ -399,7 +436,7 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * PeriodScheduleParamList.
+             * <p>The schedule interval values for timed scheduling.</p>
              */
             public Builder periodScheduleParamList(java.util.List<String> periodScheduleParamList) {
                 this.periodScheduleParamList = periodScheduleParamList;
@@ -407,7 +444,15 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * StaticTaskTriggerType.
+             * <p>The trigger method for fixed task triggers. Valid values:</p>
+             * <ul>
+             * <li>ALL_TASKS_FINISHED: triggered when all tasks are finished.</li>
+             * <li>ONE_TASKS_FINISHED: triggered when one task is finished.</li>
+             * <li>PRE_ONE_TASKS_START: triggered when the previous task starts.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONE_TASKS_FINISHED</p>
              */
             public Builder staticTaskTriggerType(String staticTaskTriggerType) {
                 this.staticTaskTriggerType = staticTaskTriggerType;
@@ -415,7 +460,7 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * TriggerNodeList.
+             * <p>The list of trigger nodes for trigger scheduling.</p>
              */
             public Builder triggerNodeList(java.util.List<String> triggerNodeList) {
                 this.triggerNodeList = triggerNodeList;
@@ -423,7 +468,14 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger method for trigger scheduling. Valid values:</p>
+             * <ul>
+             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STATIC_TASK_TRIGGER</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -431,6 +483,14 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
+             * <p>The schedule type. Valid values:</p>
+             * <ul>
+             * <li>PERIOD_SCHEDULE: timed scheduling.</li>
+             * <li>MANUAL_SCHEDULE: manual trigger.</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+             * <li>DEPENDENCY_SCHEDULE: dependency scheduling.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -442,7 +502,14 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
-             * ValidatePartitionType.
+             * <p>The validation scope. Valid values:</p>
+             * <ul>
+             * <li>TASK_REFERRED_PARTITION: task update partition.</li>
+             * <li>USER_DEFINED_PARTITION: custom partition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TASK_REFERRED_PARTITION</p>
              */
             public Builder validatePartitionType(String validatePartitionType) {
                 this.validatePartitionType = validatePartitionType;
@@ -450,6 +517,7 @@ public class UpsertQualityScheduleRequest extends Request {
             }
 
             /**
+             * <p>The monitored object ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

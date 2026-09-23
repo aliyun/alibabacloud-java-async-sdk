@@ -119,7 +119,10 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Reset Data Service application key result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Backend exception details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
             } 
 
             /**
-             * AppKey.
+             * <p>The new application key</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000001</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -236,7 +248,10 @@ public class ResetDataServiceAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecret.
+             * <p>The new application secret</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123456789</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;

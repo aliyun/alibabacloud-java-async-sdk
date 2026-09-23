@@ -119,7 +119,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The details of the business metric.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +279,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -275,7 +290,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>display name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -283,7 +301,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>guid</p>
+             * <p>The GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>table1.a.b</p>
@@ -294,7 +312,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>metric3</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -302,7 +323,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * <p>The type of the technical metric. Valid values: INDEX (modeling metric) and CUSTOM_INDEX (custom metric).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM_INDEX</p>
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -434,7 +458,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * CatalogDesc.
+             * <p>The catalog description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>catalog desc</p>
              */
             public Builder catalogDesc(String catalogDesc) {
                 this.catalogDesc = catalogDesc;
@@ -442,7 +469,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogId.
+             * <p>The catalog ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1561740764851842</p>
              */
             public Builder catalogId(Long catalogId) {
                 this.catalogId = catalogId;
@@ -450,7 +480,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * CatalogName.
+             * <p>The catalog name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test catalog</p>
              */
             public Builder catalogName(String catalogName) {
                 this.catalogName = catalogName;
@@ -458,7 +491,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ParentCatalogId.
+             * <p>The parent catalog ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1561740764851841</p>
              */
             public Builder parentCatalogId(Long parentCatalogId) {
                 this.parentCatalogId = parentCatalogId;
@@ -466,7 +502,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ParentPath.
+             * <p>The parent path of the catalog.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/catalog1/</p>
              */
             public Builder parentPath(String parentPath) {
                 this.parentPath = parentPath;
@@ -474,7 +513,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * <p>The topic ID to which the catalog belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>43297700</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -482,7 +524,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The topic name to which the catalog belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test topic</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -549,7 +594,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the custom attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CustomAttributeCode</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -557,7 +605,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>The list of attribute values. 1. For custom input and single-select dropdown attributes, the first value in the list is used. 2. For multi-select dropdown attributes, all values in the list are used. 3. For hyperlink attributes, the first value is the display text and the second value is the link URL.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -663,7 +711,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -671,7 +722,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>display name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -679,7 +733,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>guid</p>
+             * <p>The GUID.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -690,7 +744,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric2</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -698,7 +755,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relation type. Valid values: POSITIVE (positive correlation), NEGATIVE (negative correlation), and OTHER (other).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSITIVE</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -778,7 +838,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * ScopeType.
+             * <p>The type of view scope. Valid values: ALL_USERS_CAN_VIEW (visible to all users), PART_USERS_CAN_VIEW (visible to specific users), and PART_USERS_CAN_NOT_VIEW (invisible to specific users).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PART_USERS_CAN_NOT_VIEW</p>
              */
             public Builder scopeType(String scopeType) {
                 this.scopeType = scopeType;
@@ -786,7 +849,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupNames.
+             * <p>The names of user groups. This parameter takes effect only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
              */
             public Builder userGroupNames(java.util.List<String> userGroupNames) {
                 this.userGroupNames = userGroupNames;
@@ -794,7 +857,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * UserNames.
+             * <p>The usernames of individual accounts. This parameter is valid only when the view scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW.</p>
              */
             public Builder userNames(java.util.List<String> userNames) {
                 this.userNames = userNames;
@@ -1056,7 +1119,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * AssociatedTechMetrics.
+             * <p>The list of associated technical metrics.</p>
              */
             public Builder associatedTechMetrics(java.util.List<AssociatedTechMetrics> associatedTechMetrics) {
                 this.associatedTechMetrics = associatedTechMetrics;
@@ -1064,7 +1127,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * BizOwnerName.
+             * <p>The name of the business owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SuperAdmin</p>
              */
             public Builder bizOwnerName(String bizOwnerName) {
                 this.bizOwnerName = bizOwnerName;
@@ -1072,7 +1138,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Catalogs.
+             * <p>The list of affiliated catalogs.</p>
              */
             public Builder catalogs(java.util.List<Catalogs> catalogs) {
                 this.catalogs = catalogs;
@@ -1080,7 +1146,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * CustomAttribute.
+             * <p>The list of custom attributes.</p>
              */
             public Builder customAttribute(java.util.List<CustomAttribute> customAttribute) {
                 this.customAttribute = customAttribute;
@@ -1088,7 +1154,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric Desc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1096,7 +1165,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric Display Name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -1104,10 +1176,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * <p>guid</p>
+             * <p>The GUID of the business metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>test</p>
+             * <p>guid</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -1115,7 +1187,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * <p>The list of labels.</p>
              */
             public Builder labels(java.util.List<String> labels) {
                 this.labels = labels;
@@ -1123,7 +1195,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * MetricDefinition.
+             * <p>The metric definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Metric1]+[Metric2]</p>
              */
             public Builder metricDefinition(String metricDefinition) {
                 this.metricDefinition = metricDefinition;
@@ -1131,7 +1206,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * MetricRelationDiagramExpression.
+             * <p>The expression of the metric relation diagram.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Metric2]*10</p>
              */
             public Builder metricRelationDiagramExpression(String metricRelationDiagramExpression) {
                 this.metricRelationDiagramExpression = metricRelationDiagramExpression;
@@ -1139,7 +1217,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * MetricRelationDiagramSwitchOpen.
+             * <p>Indicates whether the metric relation diagram is enabled. A value of true indicates that the diagram is enabled. A value of false indicates that the diagram is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder metricRelationDiagramSwitchOpen(Boolean metricRelationDiagramSwitchOpen) {
                 this.metricRelationDiagramSwitchOpen = metricRelationDiagramSwitchOpen;
@@ -1147,7 +1228,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the business metric.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Metric1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1155,7 +1239,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * OperateInstructionContent.
+             * <p>The text content of the operation instruction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>content</p>
              */
             public Builder operateInstructionContent(String operateInstructionContent) {
                 this.operateInstructionContent = operateInstructionContent;
@@ -1163,7 +1250,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * OperateInstructionEnabled.
+             * <p>Indicates whether the operation instruction is enabled. A value of true indicates that the operation instruction is enabled. A value of false indicates that the operation instruction is disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder operateInstructionEnabled(Boolean operateInstructionEnabled) {
                 this.operateInstructionEnabled = operateInstructionEnabled;
@@ -1171,7 +1261,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedBizMetrics.
+             * <p>The list of related business metrics.</p>
              */
             public Builder relatedBizMetrics(java.util.List<RelatedBizMetrics> relatedBizMetrics) {
                 this.relatedBizMetrics = relatedBizMetrics;
@@ -1179,7 +1269,10 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1187,7 +1280,7 @@ public class GetBizMetricByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ViewScope.
+             * <p>The view scope.</p>
              */
             public Builder viewScope(ViewScope viewScope) {
                 this.viewScope = viewScope;

@@ -112,6 +112,7 @@ public class GetStandardStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class GetStandardStatisticsRequest extends Request {
         }
 
         /**
+         * <p>The statistical query instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder statisticsQuery(StatisticsQuery statisticsQuery) {
@@ -215,7 +217,10 @@ public class GetStandardStatisticsRequest extends Request {
             } 
 
             /**
-             * EndTime.
+             * <p>The end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -223,7 +228,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * IncludeEndTime.
+             * <p>Specifies whether to include the end time. Default value: false.</p>
              */
             public Builder includeEndTime(Boolean includeEndTime) {
                 this.includeEndTime = includeEndTime;
@@ -231,7 +236,10 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-01 00:00:00</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -312,7 +320,7 @@ public class GetStandardStatisticsRequest extends Request {
             } 
 
             /**
-             * CreateTimePeriod.
+             * <p>The creation time period.</p>
              */
             public Builder createTimePeriod(CreateTimePeriod createTimePeriod) {
                 this.createTimePeriod = createTimePeriod;
@@ -320,6 +328,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
+             * <p>The folder to which the standards belong. The search includes all subfolders under this folder.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -331,7 +340,7 @@ public class GetStandardStatisticsRequest extends Request {
             }
 
             /**
-             * StandardStageList.
+             * <p>The stages to which the standards belong.</p>
              */
             public Builder standardStageList(java.util.List<String> standardStageList) {
                 this.standardStageList = standardStageList;

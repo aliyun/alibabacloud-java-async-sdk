@@ -112,6 +112,7 @@ public class CreateRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createRowPermissionCommand(CreateRowPermissionCommand createRowPermissionCommand) {
@@ -122,6 +123,7 @@ public class CreateRowPermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +219,10 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
-             * ColumnDesc.
+             * <p>The description of the mapping field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Controls the business ID field.</p>
              */
             public Builder columnDesc(String columnDesc) {
                 this.columnDesc = columnDesc;
@@ -225,6 +230,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The name of the mapping field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -236,6 +242,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The type of the mapping field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -349,6 +356,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The name of the mapping field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -360,6 +368,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The operator of the expression.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -371,6 +380,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The sub-expressions.</p>
              * <p>This parameter is required.</p>
              */
             public Builder subConditions(java.util.List<?> subConditions) {
@@ -379,6 +389,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The type of the expression.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -390,7 +401,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * Values.
+             * <p>The operation values of the expression.</p>
              */
             public Builder values(java.util.List<String> values) {
                 this.values = values;
@@ -445,6 +456,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the account bound to the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -517,6 +529,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The type of the account bound to the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -528,6 +541,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The accounts bound to the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -653,6 +667,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The rule expressions.</p>
              * <p>This parameter is required.</p>
              */
             public Builder expressions(java.util.List<Expressions> expressions) {
@@ -661,7 +676,10 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * IsDelete.
+             * <p>Specifies whether the rule is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDelete(Boolean isDelete) {
                 this.isDelete = isDelete;
@@ -669,7 +687,11 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The name of the rule.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MiddlePlatform.</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -677,6 +699,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The scope type of the rule.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -688,7 +711,10 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>The status of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -696,7 +722,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * UserMappingList.
+             * <p>The accounts bound to the rule.</p>
              */
             public Builder userMappingList(java.util.List<UserMappingList> userMappingList) {
                 this.userMappingList = userMappingList;
@@ -779,6 +805,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The field of the table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -790,6 +817,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The name of the mapping field.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -801,6 +829,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The GUID of the table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -912,6 +941,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
+             * <p>The mapping fields.</p>
              * <p>This parameter is required.</p>
              */
             public Builder mappingColumns(java.util.List<MappingColumns> mappingColumns) {
@@ -920,7 +950,10 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * RowPermissionDesc.
+             * <p>The description of the row-level permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Control business data.</p>
              */
             public Builder rowPermissionDesc(String rowPermissionDesc) {
                 this.rowPermissionDesc = rowPermissionDesc;
@@ -928,7 +961,11 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
+             * <p>The name of the row-level permission.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BusinessControl.</p>
              */
             public Builder rowPermissionName(String rowPermissionName) {
                 this.rowPermissionName = rowPermissionName;
@@ -936,7 +973,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * Rules.
+             * <p>The rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -944,7 +981,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>The related tables.</p>
              */
             public Builder tables(java.util.List<Tables> tables) {
                 this.tables = tables;

@@ -119,7 +119,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * CreateResult.
+         * <p>The result of creating entity records in batches.</p>
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -135,7 +138,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * EntityId.
+             * <p>The entity record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-xxx</p>
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -236,7 +248,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -316,7 +331,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             } 
 
             /**
-             * FailCount.
+             * <p>The number of entity records that failed to be created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failCount(Integer failCount) {
                 this.failCount = failCount;
@@ -324,7 +342,10 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully created entity records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -332,7 +353,7 @@ public class BatchCreateKgEntityResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessEntityList.
+             * <p>The list of IDs of successfully created entity records.</p>
              */
             public Builder successEntityList(java.util.List<SuccessEntityList> successEntityList) {
                 this.successEntityList = successEntityList;

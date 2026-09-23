@@ -119,7 +119,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * OperationRecordDetailResponse.
+         * <p>The execution record detail response.</p>
          */
         public Builder operationRecordDetailResponse(OperationRecordDetailResponse operationRecordDetailResponse) {
             this.operationRecordDetailResponse = operationRecordDetailResponse;
@@ -162,7 +171,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +276,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * Index.
+             * <p>The result index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -275,7 +287,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>The result content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;count&quot;:100,&quot;data&quot;:[{&quot;id&quot;:1}]}</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -283,7 +298,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * <p>The result SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SELECT * FROM test_table</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -291,7 +309,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>task_123456</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -299,7 +320,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The result title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>查询结果</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -392,7 +416,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12113111</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -400,7 +427,12 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * LogContent.
+             * <p>The log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Task started...
+             * Executing SQL...
+             * Task finished successfully.</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -408,7 +440,10 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OperationId.
+             * <p>The operation record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>987654321</p>
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -416,7 +451,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * <p>The list of execution results.</p>
              */
             public Builder results(java.util.List<Results> results) {
                 this.results = results;

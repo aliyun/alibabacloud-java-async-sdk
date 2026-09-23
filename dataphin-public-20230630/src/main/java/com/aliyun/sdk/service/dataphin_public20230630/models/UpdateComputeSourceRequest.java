@@ -112,6 +112,7 @@ public class UpdateComputeSourceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UpdateComputeSourceRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The operator user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UpdateComputeSourceRequest extends Request {
         }
 
         /**
+         * <p>The edit command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +209,7 @@ public class UpdateComputeSourceRequest extends Request {
             } 
 
             /**
+             * <p>The configuration item.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The configuration item value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -368,7 +375,10 @@ public class UpdateComputeSourceRequest extends Request {
             } 
 
             /**
-             * ClusterId.
+             * <p>The associated cluster ID. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE (to create a compute source that references a cluster). This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102311</p>
              */
             public Builder clusterId(Long clusterId) {
                 this.clusterId = clusterId;
@@ -376,6 +386,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The connection configuration items.</p>
              * <p>This parameter is required.</p>
              */
             public Builder configList(java.util.List<ConfigList> configList) {
@@ -384,7 +395,14 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
-             * CreateType.
+             * <p>The creation entity type. Valid values:</p>
+             * <ul>
+             * <li>CLUSTER: Creates the entity as a cluster. ClusterId cannot be specified.</li>
+             * <li>COMPUTE_SOURCE: Creates the entity as a compute source. This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER</p>
              */
             public Builder createType(String createType) {
                 this.createType = createType;
@@ -392,6 +410,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The description.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -403,6 +422,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The compute source ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -414,6 +434,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The compute source name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -425,6 +446,7 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
+             * <p>The compute source type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -436,7 +458,10 @@ public class UpdateComputeSourceRequest extends Request {
             }
 
             /**
-             * TypeVersion.
+             * <p>The compute source type version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CDH6</p>
              */
             public Builder typeVersion(String typeVersion) {
                 this.typeVersion = typeVersion;

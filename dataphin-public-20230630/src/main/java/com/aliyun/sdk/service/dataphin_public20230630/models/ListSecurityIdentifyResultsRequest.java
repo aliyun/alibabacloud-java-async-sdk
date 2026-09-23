@@ -111,7 +111,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>Query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -121,6 +121,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +306,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             } 
 
             /**
-             * BizUnitNameList.
+             * <p>Business unit names.</p>
              */
             public Builder bizUnitNameList(java.util.List<String> bizUnitNameList) {
                 this.bizUnitNameList = bizUnitNameList;
@@ -313,7 +314,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * ClassifyId.
+             * <p>Data classification ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder classifyId(Long classifyId) {
                 this.classifyId = classifyId;
@@ -321,7 +325,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * DatasourceNameList.
+             * <p>Data source names.</p>
              */
             public Builder datasourceNameList(java.util.List<String> datasourceNameList) {
                 this.datasourceNameList = datasourceNameList;
@@ -329,7 +333,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>Environment identifier of the data source, project, or business unit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -337,7 +344,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * IsLocked.
+             * <p>Whether it is locked.</p>
              */
             public Builder isLocked(Boolean isLocked) {
                 this.isLocked = isLocked;
@@ -345,7 +352,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>Keyword filter. Supports matching by table catalog, table name, table display name, and field name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -353,7 +363,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>Page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -361,7 +374,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>Number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -369,7 +385,7 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * ProjectNameList.
+             * <p>Project names.</p>
              */
             public Builder projectNameList(java.util.List<String> projectNameList) {
                 this.projectNameList = projectNameList;
@@ -377,7 +393,10 @@ public class ListSecurityIdentifyResultsRequest extends Request {
             }
 
             /**
-             * Status.
+             * <p>Effective status filter: ENABLE or DISABLE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLE</p>
              */
             public Builder status(String status) {
                 this.status = status;

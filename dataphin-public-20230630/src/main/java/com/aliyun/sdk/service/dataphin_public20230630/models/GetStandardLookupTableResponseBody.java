@@ -119,7 +119,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         }
 
         /**
-         * LookupTableInfo.
+         * <p>The lookup table details.</p>
          */
         public Builder lookupTableInfo(LookupTableInfo lookupTableInfo) {
             this.lookupTableInfo = lookupTableInfo;
@@ -143,7 +149,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -215,7 +224,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             } 
 
             /**
-             * Directory.
+             * <p>The directory to which the lookup table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir1/dir2</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -308,7 +320,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             } 
 
             /**
-             * Description.
+             * <p>The code description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -316,7 +331,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * EnglishName.
+             * <p>The English name of the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HZ</p>
              */
             public Builder englishName(String englishName) {
                 this.englishName = englishName;
@@ -324,7 +342,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The code name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Hangzhou</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +353,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The code value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>杭州</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -555,7 +579,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the lookup table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CITY</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -563,7 +590,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -571,7 +601,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -579,7 +612,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * <p>The username of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -587,7 +623,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the lookup table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -595,7 +634,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryReference.
+             * <p>The directory to which the lookup table belongs.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -603,7 +642,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The lookup table ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -611,7 +653,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -619,7 +664,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The username of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -627,7 +675,7 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * LookupTableValueList.
+             * <p>The list of lookup table values.</p>
              */
             public Builder lookupTableValueList(java.util.List<LookupTableValueList> lookupTableValueList) {
                 this.lookupTableValueList = lookupTableValueList;
@@ -635,7 +683,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -643,7 +694,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the lookup table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>城市码表</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -651,7 +705,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The user ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -659,7 +716,10 @@ public class GetStandardLookupTableResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The username of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;

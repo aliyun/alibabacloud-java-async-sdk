@@ -119,7 +119,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The aggregate statistics of API calls.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +289,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             } 
 
             /**
-             * CallCount.
+             * <p>The number of API calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1021</p>
              */
             public Builder callCount(Long callCount) {
                 this.callCount = callCount;
@@ -288,7 +300,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorApiCount.
+             * <p>The number of APIs with call errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder errorApiCount(Long errorApiCount) {
                 this.errorApiCount = errorApiCount;
@@ -296,7 +311,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorAppCount.
+             * <p>The number of applications affected by errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder errorAppCount(Long errorAppCount) {
                 this.errorAppCount = errorAppCount;
@@ -304,7 +322,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * <p>The number of failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -312,7 +333,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorRate.
+             * <p>The error rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.01</p>
              */
             public Builder errorRate(Double errorRate) {
                 this.errorRate = errorRate;
@@ -320,7 +344,10 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineRate.
+             * <p>The offline percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.03</p>
              */
             public Builder offlineRate(Double offlineRate) {
                 this.offlineRate = offlineRate;

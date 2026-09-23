@@ -142,6 +142,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The business entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +177,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The business type. Valid values: BIZ_OBJECT and BIZ_PROCESS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class GetBizEntityInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class CreatePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The creation result of the integration pipeline or workflow task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -267,7 +276,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * HostMachine.
+             * <p>The name and IP address of the server machine that executes the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hostName:hostIp</p>
              */
             public Builder hostMachine(String hostMachine) {
                 this.hostMachine = hostMachine;
@@ -275,7 +287,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The scheduling node ID of the pipeline or workflow task after successful creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -283,7 +298,10 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * <p>The pipeline or workflow ID after successful creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder pipelineId(Long pipelineId) {
                 this.pipelineId = pipelineId;
@@ -291,7 +309,11 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * SubmitId.
+             * <p>The submit ID of the pending publish list generated after the pipeline is submitted. Use this ID to publish through the publish domain.
+             * Workflow tasks support only PROD, so this value is not returned for workflow tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder submitId(Long submitId) {
                 this.submitId = submitId;
@@ -299,7 +321,11 @@ public class CreatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The pending publish version number generated after the pipeline is submitted.
+             * Workflow tasks support only PROD, so this value is not returned for workflow tasks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder version(String version) {
                 this.version = version;

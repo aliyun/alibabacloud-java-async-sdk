@@ -142,6 +142,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The node ID in the directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +168,10 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -175,6 +180,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The ID of the project to which the node belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +193,7 @@ public class GetBatchTaskInfoByVersionRequest extends Request {
         }
 
         /**
+         * <p>The version number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

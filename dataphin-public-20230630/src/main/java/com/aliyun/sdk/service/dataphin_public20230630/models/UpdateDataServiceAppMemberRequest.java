@@ -112,6 +112,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
         }
 
         /**
+         * <p>The command to update regular members of a data service application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
             } 
 
             /**
+             * <p>The authorization expiration time.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +291,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
             } 
 
             /**
+             * <p>The application ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -298,6 +303,7 @@ public class UpdateDataServiceAppMemberRequest extends Request {
             }
 
             /**
+             * <p>The list of members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {

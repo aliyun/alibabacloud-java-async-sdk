@@ -119,7 +119,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The summary of call exception impacts.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiName.
+             * <p>The API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -249,7 +261,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * <p>The API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2012</p>
              */
             public Builder appId(Long appId) {
                 this.appId = appId;
@@ -257,7 +272,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * <p>The number of exceptions for the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -372,7 +390,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The app name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app1</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -380,7 +401,10 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * <p>The number of exceptions for the app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -447,7 +471,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrorApiList.
+             * <p>The list of APIs affected by exceptions.</p>
              */
             public Builder errorApiList(java.util.List<ErrorApiList> errorApiList) {
                 this.errorApiList = errorApiList;
@@ -455,7 +479,7 @@ public class GetDataServiceApiErrorImpactResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorAppList.
+             * <p>The list of apps affected by exceptions.</p>
              */
             public Builder errorAppList(java.util.List<ErrorAppList> errorAppList) {
                 this.errorAppList = errorAppList;

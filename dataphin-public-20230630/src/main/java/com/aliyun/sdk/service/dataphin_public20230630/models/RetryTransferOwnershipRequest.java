@@ -111,6 +111,7 @@ public class RetryTransferOwnershipRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +133,7 @@ public class RetryTransferOwnershipRequest extends Request {
         }
 
         /**
-         * PrivilegeTransferRecord.
+         * <p>The transfer information.</p>
          */
         public Builder privilegeTransferRecord(PrivilegeTransferRecord privilegeTransferRecord) {
             String privilegeTransferRecordShrink = shrink(privilegeTransferRecord, "PrivilegeTransferRecord", "json");
@@ -216,6 +217,7 @@ public class RetryTransferOwnershipRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the transfer task.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -227,6 +229,7 @@ public class RetryTransferOwnershipRequest extends Request {
             }
 
             /**
+             * <p>The user ID of the recipient.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -238,7 +241,10 @@ public class RetryTransferOwnershipRequest extends Request {
             }
 
             /**
-             * TransferComment.
+             * <p>The remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder transferComment(String transferComment) {
                 this.transferComment = transferComment;

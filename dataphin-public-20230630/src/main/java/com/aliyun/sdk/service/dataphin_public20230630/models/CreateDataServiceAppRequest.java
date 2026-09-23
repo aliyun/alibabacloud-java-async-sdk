@@ -112,6 +112,7 @@ public class CreateDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The command to create a data service application.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class CreateDataServiceAppRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -260,6 +265,7 @@ public class CreateDataServiceAppRequest extends Request {
             } 
 
             /**
+             * <p>The application group ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -271,7 +277,12 @@ public class CreateDataServiceAppRequest extends Request {
             }
 
             /**
-             * AppKey.
+             * <p>The application key, which must be globally unique and is used when calling APIs.
+             * The key must be 8 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+             * This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200000001</p>
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -279,10 +290,11 @@ public class CreateDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>The application name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>默认应用</p>
+             * <p>Default application</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -290,7 +302,13 @@ public class CreateDataServiceAppRequest extends Request {
             }
 
             /**
-             * AppSecret.
+             * <p>The application secret.
+             * If this parameter is not specified, the system automatically generates a new AppSecret value.
+             * The secret must be 8 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
+             * This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc123456789</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -298,6 +316,7 @@ public class CreateDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>The list of owner IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder ownerIds(java.util.List<String> ownerIds) {
@@ -306,10 +325,11 @@ public class CreateDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>The common scenarios.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>数据分析</p>
+             * <p>Data analytics</p>
              */
             public Builder scenarios(String scenarios) {
                 this.scenarios = scenarios;

@@ -127,6 +127,11 @@ public class GetStreamJobsRequest extends Request {
         }
 
         /**
+         * <p>The Dataphin environment. Valid values:</p>
+         * <ul>
+         * <li>DEV</li>
+         * <li>PROD.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +144,7 @@ public class GetStreamJobsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +166,7 @@ public class GetStreamJobsRequest extends Request {
         }
 
         /**
+         * <p>The Dataphin project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

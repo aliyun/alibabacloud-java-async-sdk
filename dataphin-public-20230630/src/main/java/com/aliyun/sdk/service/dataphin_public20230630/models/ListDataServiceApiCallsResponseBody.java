@@ -119,7 +119,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paginated query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -567,7 +576,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiId.
+             * <p>The ID of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102112</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -575,7 +587,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>The name of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -583,7 +598,13 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * AppKey.
+             * <p>The application key.</p>
+             * <blockquote>
+             * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
@@ -591,7 +612,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * AppKeyStr.
+             * <p>The application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc12345</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -599,7 +623,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -607,7 +634,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * BizCode.
+             * <p>The business status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder bizCode(String bizCode) {
                 this.bizCode = bizCode;
@@ -615,7 +645,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * BizCodeDescription.
+             * <p>The description of the business status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder bizCodeDescription(String bizCodeDescription) {
                 this.bizCodeDescription = bizCodeDescription;
@@ -623,7 +656,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The IP address of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -631,7 +667,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * CostTime.
+             * <p>The duration of the request, in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder costTime(Integer costTime) {
                 this.costTime = costTime;
@@ -639,7 +678,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the request. Format: yyyy-MM-dd HH:mm:ss.SSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-01 01:01:03.000</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -647,7 +689,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * Env.
+             * <p>The environment. Valid values: 0 (dev) and 1 (prod).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder env(Integer env) {
                 this.env = env;
@@ -655,7 +700,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteCostTime.
+             * <p>The execution duration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder executeCostTime(Integer executeCostTime) {
                 this.executeCostTime = executeCostTime;
@@ -663,7 +711,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteMode.
+             * <p>The execution mode. Valid values: 1 (synchronous) and 2 (asynchronous).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeMode(Integer executeMode) {
                 this.executeMode = executeMode;
@@ -671,7 +722,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatusCode.
+             * <p>The HTTP status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder httpStatusCode(String httpStatusCode) {
                 this.httpStatusCode = httpStatusCode;
@@ -679,7 +733,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * HttpStatusDescription.
+             * <p>The description of the status code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder httpStatusDescription(String httpStatusDescription) {
                 this.httpStatusDescription = httpStatusDescription;
@@ -687,7 +744,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The job ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102356</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -695,7 +755,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102356</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -703,7 +766,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -711,10 +777,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Id of the request</p>
+             * <p>The request ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>82E78D6B-AA8F-1FEF-8AA3-5C9DA2A79140</p>
+             * <p>1234567890-232sds-3e232-ae2e232</p>
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -722,7 +788,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestParameter.
+             * <p>The request parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;name&quot;:&quot;test&quot;}</p>
              */
             public Builder requestParameter(String requestParameter) {
                 this.requestParameter = requestParameter;
@@ -730,7 +799,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * RequestSize.
+             * <p>The size of the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder requestSize(Integer requestSize) {
                 this.requestSize = requestSize;
@@ -738,7 +810,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseParameter.
+             * <p>The response parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;code&quot;:&quot;200&quot;,&quot;message&quot;:&quot;success&quot;}</p>
              */
             public Builder responseParameter(String responseParameter) {
                 this.responseParameter = responseParameter;
@@ -746,7 +821,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseSize.
+             * <p>The size of the response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder responseSize(Integer responseSize) {
                 this.responseSize = responseSize;
@@ -754,7 +832,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultCount.
+             * <p>The number of returned data records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resultCount(Integer resultCount) {
                 this.resultCount = resultCount;
@@ -762,7 +843,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * <p>The SQL statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select col1 from t_test1 limit 100;</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -770,7 +854,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the request. Format: yyyy-MM-dd HH:mm:ss.SSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-11-01 01:01:01.000</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -778,7 +865,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The call status of the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -786,7 +876,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * Successful.
+             * <p>Indicates whether the request was successful.</p>
              */
             public Builder successful(Boolean successful) {
                 this.successful = successful;
@@ -853,7 +943,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             } 
 
             /**
-             * CallLogList.
+             * <p>The list of API call logs.</p>
              */
             public Builder callLogList(java.util.List<CallLogList> callLogList) {
                 this.callLogList = callLogList;
@@ -861,7 +951,10 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -112,6 +112,7 @@ public class ListBizEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The query request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListBizEntitiesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +282,7 @@ public class ListBizEntitiesRequest extends Request {
             } 
 
             /**
-             * BizUnitIdList.
+             * <p>The list of business unit IDs.</p>
              */
             public Builder bizUnitIdList(java.util.List<Long> bizUnitIdList) {
                 this.bizUnitIdList = bizUnitIdList;
@@ -288,7 +290,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * BizUnitNameList.
+             * <p>The list of business unit IDs.</p>
              */
             public Builder bizUnitNameList(java.util.List<String> bizUnitNameList) {
                 this.bizUnitNameList = bizUnitNameList;
@@ -296,7 +298,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * DataDomainIdList.
+             * <p>The list of data domain IDs.</p>
              */
             public Builder dataDomainIdList(java.util.List<Long> dataDomainIdList) {
                 this.dataDomainIdList = dataDomainIdList;
@@ -304,7 +306,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * DataDomainNameList.
+             * <p>The list of data domain IDs.</p>
              */
             public Builder dataDomainNameList(java.util.List<String> dataDomainNameList) {
                 this.dataDomainNameList = dataDomainNameList;
@@ -312,7 +314,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * HasTableRef.
+             * <p>Specifies whether the business entity is associated with a logical table.</p>
              */
             public Builder hasTableRef(Boolean hasTableRef) {
                 this.hasTableRef = hasTableRef;
@@ -320,7 +322,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * OwnerUserIdList.
+             * <p>The list of owner user IDs.</p>
              */
             public Builder ownerUserIdList(java.util.List<String> ownerUserIdList) {
                 this.ownerUserIdList = ownerUserIdList;
@@ -328,7 +330,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The list of business entity statuses. For more information, refer to the API operation for querying business entity details.</p>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -336,7 +338,7 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * SubTypeList.
+             * <p>The list of business entity subtypes. For more information, refer to the API operation for querying business entity details.</p>
              */
             public Builder subTypeList(java.util.List<String> subTypeList) {
                 this.subTypeList = subTypeList;
@@ -429,7 +431,7 @@ public class ListBizEntitiesRequest extends Request {
             } 
 
             /**
-             * FilterCriteria.
+             * <p>The filter criteria for the query.</p>
              */
             public Builder filterCriteria(FilterCriteria filterCriteria) {
                 this.filterCriteria = filterCriteria;
@@ -437,7 +439,10 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>object_</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -445,7 +450,10 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -453,7 +461,10 @@ public class ListBizEntitiesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

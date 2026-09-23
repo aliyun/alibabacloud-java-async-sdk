@@ -111,7 +111,7 @@ public class ListQualityRuleTasksRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -121,6 +121,7 @@ public class ListQualityRuleTasksRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +306,10 @@ public class ListQualityRuleTasksRequest extends Request {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -313,7 +317,17 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * CatalogList.
+             * <p>The rule type. Valid values:</p>
+             * <ul>
+             * <li>CONSISTENT: consistency</li>
+             * <li>EFFECTIVE: validity</li>
+             * <li>TIMELINESE: timeliness</li>
+             * <li>ACCURATE: accuracy</li>
+             * <li>UNIQUENESS: uniqueness</li>
+             * <li>COMPLETENESS: completeness</li>
+             * <li>STABILITY: stability</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
              */
             public Builder catalogList(java.util.List<String> catalogList) {
                 this.catalogList = catalogList;
@@ -321,7 +335,10 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The search keyword. You can search by field name or rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -329,7 +346,10 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -337,7 +357,10 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -345,7 +368,11 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * RuleStrengthList.
+             * <p>The rule strength. Valid values:</p>
+             * <ul>
+             * <li>STRONG: strong</li>
+             * <li>WEAK: weak.</li>
+             * </ul>
              */
             public Builder ruleStrengthList(java.util.List<String> ruleStrengthList) {
                 this.ruleStrengthList = ruleStrengthList;
@@ -353,7 +380,14 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * RuleTagList.
+             * <p>The rule label. Valid values:</p>
+             * <ul>
+             * <li>DEFAULT: default label</li>
+             * <li>DATA_STANDARD_MANUAL: standard rule manually created</li>
+             * <li>DATA_STANDARD_AUTO: quality rule created by automatic creation from a standard</li>
+             * <li>PIPELINE: rule created by a pipeline</li>
+             * <li>DATA_MODELING: data modeling diagnostics.</li>
+             * </ul>
              */
             public Builder ruleTagList(java.util.List<String> ruleTagList) {
                 this.ruleTagList = ruleTagList;
@@ -361,7 +395,17 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * StatusList.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: not executed</li>
+             * <li>WAITING: waiting</li>
+             * <li>RUNNING: running</li>
+             * <li>SUCCESS: succeeded</li>
+             * <li>FAILED: failed</li>
+             * <li>CANCEL: canceled</li>
+             * <li>TIMEOUT: timed out</li>
+             * <li>OFFLINE: offline.</li>
+             * </ul>
              */
             public Builder statusList(java.util.List<String> statusList) {
                 this.statusList = statusList;
@@ -369,7 +413,18 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * ValidateResultList.
+             * <p>The validation result. Valid values:</p>
+             * <ul>
+             * <li>NOT_RUN: not executed</li>
+             * <li>WAITING: waiting for execution</li>
+             * <li>RUNNING: running</li>
+             * <li>PASS: passed</li>
+             * <li>NOT_PASS: not passed</li>
+             * <li>FAILED: execution failed</li>
+             * <li>OFFLINE: offline and needs to be restarted</li>
+             * <li>CANCEL: task canceled</li>
+             * <li>TIMEOUT: task timed out.</li>
+             * </ul>
              */
             public Builder validateResultList(java.util.List<String> validateResultList) {
                 this.validateResultList = validateResultList;
@@ -377,7 +432,10 @@ public class ListQualityRuleTasksRequest extends Request {
             }
 
             /**
-             * WatchTaskId.
+             * <p>The ID of the quality watchtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder watchTaskId(Long watchTaskId) {
                 this.watchTaskId = watchTaskId;

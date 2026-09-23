@@ -119,7 +119,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * TenantList.
+         * <p>The list of tenants.</p>
          */
         public Builder tenantList(java.util.List<TenantList> tenantList) {
             this.tenantList = tenantList;
@@ -342,7 +357,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             } 
 
             /**
-             * DeleteTime.
+             * <p>The time when the tenant was deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1717343597000</p>
              */
             public Builder deleteTime(Long deleteTime) {
                 this.deleteTime = deleteTime;
@@ -350,7 +368,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Deleted.
+             * <p>Indicates whether the tenant is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder deleted(Boolean deleted) {
                 this.deleted = deleted;
@@ -358,7 +379,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The tenant description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx 测试</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -366,7 +390,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132311</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -374,7 +401,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The tenant name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -382,7 +412,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * OpsTenant.
+             * <p>Indicates whether the tenant is an O&amp;M tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder opsTenant(Boolean opsTenant) {
                 this.opsTenant = opsTenant;
@@ -390,7 +423,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The ID of the user to whom the tenant belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21323231</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -398,7 +434,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceLimited.
+             * <p>Indicates whether resource quota calculation is performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder resourceLimited(Boolean resourceLimited) {
                 this.resourceLimited = resourceLimited;
@@ -406,7 +445,7 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantTypeList.
+             * <p>The tenant types.</p>
              */
             public Builder tenantTypeList(java.util.List<String> tenantTypeList) {
                 this.tenantTypeList = tenantTypeList;
@@ -414,7 +453,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * TitleType.
+             * <p>The title type of the tenant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>icon</p>
              */
             public Builder titleType(String titleType) {
                 this.titleType = titleType;
@@ -422,7 +464,10 @@ public class GetMyTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * Visible.
+             * <p>Indicates whether the tenant is visible.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder visible(Boolean visible) {
                 this.visible = visible;

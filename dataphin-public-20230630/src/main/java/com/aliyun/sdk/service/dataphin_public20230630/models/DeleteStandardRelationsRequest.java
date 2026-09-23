@@ -112,6 +112,7 @@ public class DeleteStandardRelationsRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteStandardRelationsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,6 +192,7 @@ public class DeleteStandardRelationsRequest extends Request {
             } 
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -276,6 +279,7 @@ public class DeleteStandardRelationsRequest extends Request {
             } 
 
             /**
+             * <p>The standard association type: RELATIVE.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -287,6 +291,7 @@ public class DeleteStandardRelationsRequest extends Request {
             }
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -298,6 +303,7 @@ public class DeleteStandardRelationsRequest extends Request {
             }
 
             /**
+             * <p>The list of referenced standards.</p>
              * <p>This parameter is required.</p>
              */
             public Builder standardRefList(java.util.List<StandardRefList> standardRefList) {

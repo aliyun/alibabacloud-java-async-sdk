@@ -119,7 +119,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result returned when the node is created.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +250,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * FileId.
+             * <p>The job file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7083701105376640</p>
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -246,7 +261,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>JobId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123123</p>
              */
             public Builder jobId(Long jobId) {
                 this.jobId = jobId;
@@ -254,7 +272,10 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The redirect relative path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</p>
              */
             public Builder url(String url) {
                 this.url = url;

@@ -141,7 +141,15 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
+         * <p>Default value for dev_prod projects: DEV.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -150,6 +158,7 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,6 +180,7 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,6 +193,7 @@ public class GetBatchTemplateVersionsRequest extends Request {
         }
 
         /**
+         * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

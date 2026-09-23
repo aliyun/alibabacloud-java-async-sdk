@@ -126,6 +126,7 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
+         * <p>The lookup table ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +139,7 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
-         * Nullable.
+         * <p>Specifies whether to allow a null value to be returned when the lookup table does not exist. If set to false, an exception is thrown. Default value: true.</p>
          */
         public Builder nullable(Boolean nullable) {
             this.putQueryParameter("Nullable", nullable);
@@ -147,6 +148,7 @@ public class GetStandardLookupTableRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

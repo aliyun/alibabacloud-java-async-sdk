@@ -127,6 +127,7 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +149,7 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class RevokeDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The revoke instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder revokeCommand(RevokeCommand revokeCommand) {
@@ -296,6 +299,7 @@ public class RevokeDataServiceApiRequest extends Request {
             } 
 
             /**
+             * <p>The API ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +311,10 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * AppId.
+             * <p>The ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1203</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -315,7 +322,14 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * AuthType.
+             * <p>The permission type. Valid values:</p>
+             * <ul>
+             * <li>USE: use permission</li>
+             * <li>DELEGATION: delegation permission.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USE</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -323,7 +337,14 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The API environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development environment</li>
+             * <li>PROD: production environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -331,7 +352,14 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * GranteeType.
+             * <p>The authorization object type. Valid values:</p>
+             * <ul>
+             * <li>APP: application</li>
+             * <li>USER: user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APP</p>
              */
             public Builder granteeType(String granteeType) {
                 this.granteeType = granteeType;
@@ -339,6 +367,7 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The reason for the request.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -350,7 +379,10 @@ public class RevokeDataServiceApiRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -112,6 +112,7 @@ public class ExecuteAdHocTaskRequest extends Request {
         }
 
         /**
+         * <p>The execution command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder executeCommand(ExecuteCommand executeCommand) {
@@ -122,6 +123,7 @@ public class ExecuteAdHocTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,6 +206,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             } 
 
             /**
+             * <p>The parameter.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +218,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
+             * <p>The parameter value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -353,6 +357,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             } 
 
             /**
+             * <p>The node script.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -364,7 +369,10 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
-             * DataSourceCatalog.
+             * <p>The catalog for a database SQL task. This parameter takes effect only for data source types that require a catalog, such as Presto.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_catalog</p>
              */
             public Builder dataSourceCatalog(String dataSourceCatalog) {
                 this.dataSourceCatalog = dataSourceCatalog;
@@ -372,7 +380,10 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
-             * DataSourceId.
+             * <p>The data source ID for a database SQL task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12131111</p>
              */
             public Builder dataSourceId(Long dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -380,7 +391,10 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
-             * DataSourceSchema.
+             * <p>The schema for a database SQL task. This parameter takes effect only for data source types that require a schema, such as Oracle.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>erp</p>
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
@@ -388,6 +402,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
+             * <p>The node type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -399,7 +414,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
-             * ParamList.
+             * <p>The runtime parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -407,6 +422,7 @@ public class ExecuteAdHocTaskRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

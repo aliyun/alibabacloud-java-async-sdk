@@ -170,6 +170,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
+         * <p>The business date.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +183,15 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
+         * <p>Default value: PROD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -191,7 +200,10 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
-         * Index.
+         * <p>If the node is an hourly or minutely node, multiple instances are generated per day. This parameter specifies the ordinal number of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Integer index) {
             this.putQueryParameter("Index", index);
@@ -200,6 +212,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -212,6 +225,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +247,7 @@ public class ExecuteTriggerNodeRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * BizEntityInfo.
+         * <p>The creation result.</p>
          */
         public Builder bizEntityInfo(BizEntityInfo bizEntityInfo) {
             this.bizEntityInfo = bizEntityInfo;
@@ -127,7 +127,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -459,7 +471,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalId.
+             * <p>The approval flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221323121212</p>
              */
             public Builder approvalId(String approvalId) {
                 this.approvalId = approvalId;
@@ -467,7 +482,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalStatus.
+             * <p>The approval status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVING</p>
              */
             public Builder approvalStatus(String approvalStatus) {
                 this.approvalStatus = approvalStatus;
@@ -475,7 +493,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ChildBizEntityIdList.
+             * <p>The list of child business objects of the business object.</p>
              */
             public Builder childBizEntityIdList(java.util.List<Long> childBizEntityIdList) {
                 this.childBizEntityIdList = childBizEntityIdList;
@@ -483,7 +501,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -491,7 +512,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_object_name</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -499,7 +523,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -507,7 +534,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -515,7 +545,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The business object ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -523,7 +556,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The ID of the user who last modified the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -531,7 +567,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The name of the user who last modified the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -539,7 +578,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The code name of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_object_code_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -547,7 +589,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * <p>The online status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineStatus(String onlineStatus) {
                 this.onlineStatus = onlineStatus;
@@ -555,7 +600,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -563,7 +611,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The owner of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -571,7 +622,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The parent entity that the business object inherits from. Only common business objects support inheritance, and the parent entity must be online.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>116306</p>
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -579,7 +633,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RefBizEntityIdList.
+             * <p>The list of associated online business entity IDs.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -587,7 +641,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RefDimTableCount.
+             * <p>The number of associated logical dimension tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refDimTableCount(Integer refDimTableCount) {
                 this.refDimTableCount = refDimTableCount;
@@ -595,7 +652,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RefSummaryTableCount.
+             * <p>The number of associated aggregate tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refSummaryTableCount(Integer refSummaryTableCount) {
                 this.refSummaryTableCount = refSummaryTableCount;
@@ -603,7 +663,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -611,7 +674,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The object type of the business object. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -912,7 +978,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalId.
+             * <p>The approval flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>221323121212</p>
              */
             public Builder approvalId(String approvalId) {
                 this.approvalId = approvalId;
@@ -920,7 +989,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ApprovalStatus.
+             * <p>The approval status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVING</p>
              */
             public Builder approvalStatus(String approvalStatus) {
                 this.approvalStatus = approvalStatus;
@@ -928,7 +1000,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * BizEventEntityIdList.
+             * <p>The list of business event activity IDs contained in the business flow activity. This parameter is valid only when the type is a business flow activity.</p>
              */
             public Builder bizEventEntityIdList(java.util.List<Long> bizEventEntityIdList) {
                 this.bizEventEntityIdList = bizEventEntityIdList;
@@ -936,7 +1008,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -944,7 +1019,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>业务活动测试</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -952,7 +1030,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -960,7 +1041,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-10 10:00:00</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -968,7 +1052,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * HasDependent.
+             * <p>Indicates whether the business process is depended on by other entities.</p>
              */
             public Builder hasDependent(Boolean hasDependent) {
                 this.hasDependent = hasDependent;
@@ -976,7 +1060,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The business process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1011</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -984,7 +1071,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The ID of the user who last modified the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder lastModifier(String lastModifier) {
                 this.lastModifier = lastModifier;
@@ -992,7 +1082,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifierName.
+             * <p>The name of the user who last modified the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder lastModifierName(String lastModifierName) {
                 this.lastModifierName = lastModifierName;
@@ -1000,7 +1093,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the business process.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create_process_code_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1008,7 +1104,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineStatus.
+             * <p>The online status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder onlineStatus(String onlineStatus) {
                 this.onlineStatus = onlineStatus;
@@ -1016,7 +1115,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The owner of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -1024,7 +1126,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserId.
+             * <p>The owner of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30010010</p>
              */
             public Builder ownerUserId(String ownerUserId) {
                 this.ownerUserId = ownerUserId;
@@ -1032,7 +1137,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * PreBizProcessIdList.
+             * <p>The preceding business flow activities of the business flow activity.</p>
              */
             public Builder preBizProcessIdList(java.util.List<Long> preBizProcessIdList) {
                 this.preBizProcessIdList = preBizProcessIdList;
@@ -1040,7 +1145,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RefBizEntityIdList.
+             * <p>The list of associated online business entity IDs.</p>
              */
             public Builder refBizEntityIdList(java.util.List<Long> refBizEntityIdList) {
                 this.refBizEntityIdList = refBizEntityIdList;
@@ -1048,7 +1153,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * RefFactTableCount.
+             * <p>The number of associated fact tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder refFactTableCount(Integer refFactTableCount) {
                 this.refFactTableCount = refFactTableCount;
@@ -1056,7 +1164,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1064,7 +1175,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the business process. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIZ_EVENT</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1170,7 +1284,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * BizObject.
+             * <p>The business object.</p>
              */
             public Builder bizObject(BizObject bizObject) {
                 this.bizObject = bizObject;
@@ -1178,7 +1292,7 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * BizProcess.
+             * <p>The business process.</p>
              */
             public Builder bizProcess(BizProcess bizProcess) {
                 this.bizProcess = bizProcess;
@@ -1186,7 +1300,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID of the business object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6798087749072704</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -1194,7 +1311,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * DataDomainId.
+             * <p>The ID of the subject domain to which the entity belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20101011</p>
              */
             public Builder dataDomainId(Long dataDomainId) {
                 this.dataDomainId = dataDomainId;
@@ -1202,7 +1322,10 @@ public class GetBizEntityInfoByVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the business entity. For more information, refer to the query business entity details operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BIZ_OBJECT</p>
              */
             public Builder type(String type) {
                 this.type = type;

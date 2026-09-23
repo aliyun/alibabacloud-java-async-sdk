@@ -206,6 +206,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
+     * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
+     * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
+     * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
+     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -266,6 +278,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateResourceResponse> createResource(CreateResourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of published APIs by appKey.</p>
+     * 
      * @param request the request parameters of CreateRowPermission  CreateRowPermissionRequest
      * @return CreateRowPermissionResponse
      */
@@ -740,6 +755,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogAssetDetailsResponse> getCatalogAssetDetails(GetCatalogAssetDetailsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
+     * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
      * @return GetCheckConnectivityJobsResponse
      */
@@ -752,6 +770,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClusterQueueInfoByEnvResponse> getClusterQueueInfoByEnv(GetClusterQueueInfoByEnvRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a tested connectivity task based on the datasource ID.</p>
+     * 
      * @param request the request parameters of GetComputeCluster  GetComputeClusterRequest
      * @return GetComputeClusterResponse
      */
@@ -764,6 +785,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetComputeSourceResponse> getComputeSource(GetComputeSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the details of a Query Governance object by governance item ID.</p>
+     * 
      * @param request the request parameters of GetDataAssetsGovernObject  GetDataAssetsGovernObjectRequest
      * @return GetDataAssetsGovernObjectResponse
      */
@@ -866,6 +890,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDataSourceDependenciesResponse> getDataSourceDependencies(GetDataSourceDependenciesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a tested connectivity task based on the data source ID.</p>
+     * 
      * @param request the request parameters of GetDataset  GetDatasetRequest
      * @return GetDatasetResponse
      */
@@ -1184,6 +1211,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSecuritySecretKeyResponse> getSecuritySecretKey(GetSecuritySecretKeyRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a published API based on the AppKey.</p>
+     * 
+     * @param request the request parameters of GetServerVersion  GetServerVersionRequest
+     * @return GetServerVersionResponse
+     */
+    CompletableFuture<GetServerVersionResponse> getServerVersion(GetServerVersionRequest request);
+
+    /**
      * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
      * @return GetSparkLocalClientInfoResponse
      */
@@ -1358,6 +1394,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertNotificationsResponse> listAlertNotifications(ListAlertNotificationsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the detailed information of published APIs by appKey.</p>
+     * 
      * @param request the request parameters of ListApiByApp  ListApiByAppRequest
      * @return ListApiByAppResponse
      */
@@ -1382,6 +1421,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAssetTopicsResponse> listAssetTopics(ListAssetTopicsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of ListAuthorizedDataServiceApiDetails  ListAuthorizedDataServiceApiDetailsRequest
      * @return ListAuthorizedDataServiceApiDetailsResponse
      */
@@ -1412,6 +1454,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCatalogAssetsResponse> listCatalogAssets(ListCatalogAssetsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the list of clusters.</p>
+     * 
      * @param request the request parameters of ListComputeClusters  ListComputeClustersRequest
      * @return ListComputeClustersResponse
      */
@@ -1484,6 +1529,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourceWithConfigResponse> listDataSourceWithConfig(ListDataSourceWithConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API allows you to retrieve dataset information for a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. ProjectId is required. Other parameters are optional and can be configured as needed to filter results.</p>
+     * 
      * @param request the request parameters of ListDatasets  ListDatasetsRequest
      * @return ListDatasetsResponse
      */
@@ -1496,6 +1545,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <p>This API operation allows you to retrieve dataset information under a specific project by providing a tenant ID, project ID, and other optional parameters such as keywords and type lists. Paging is supported. The returned data includes basic dataset information and version details. Note that <code>ProjectId</code> is required, while other parameters are options that can be configured as needed to filter results.</p>
+     * 
      * @param request the request parameters of ListGovernObjects  ListGovernObjectsRequest
      * @return ListGovernObjectsResponse
      */
@@ -1868,6 +1921,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitQualityWatchTasksResponse> submitQualityWatchTasks(SubmitQualityWatchTasksRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries the details of a published API operation by AppKey.</p>
+     * 
      * @param request the request parameters of SyncDepartment  SyncDepartmentRequest
      * @return SyncDepartmentResponse
      */
@@ -1946,6 +2002,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateComputeSourceResponse> updateComputeSource(UpdateComputeSourceRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Operation description</h2>
+     * <ul>
+     * <li>This API operation updates the status of existing issue checklists under a specific project.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDataAssetsGovernObjectStatus  UpdateDataAssetsGovernObjectStatusRequest
      * @return UpdateDataAssetsGovernObjectStatusResponse
      */
@@ -1988,6 +2050,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDataSourceConfigResponse> updateDataSourceConfig(UpdateDataSourceConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>Request description.</h2>
+     * 
      * @param request the request parameters of UpdateDataset  UpdateDatasetRequest
      * @return UpdateDatasetResponse
      */

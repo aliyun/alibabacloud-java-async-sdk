@@ -140,7 +140,10 @@ public class ListKgEntityRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * <p>The entity type code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Company</p>
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -149,7 +152,7 @@ public class ListKgEntityRequest extends Request {
         }
 
         /**
-         * ListQuery.
+         * <p>The paged query filter conditions.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
             String listQueryShrink = shrink(listQuery, "ListQuery", "json");
@@ -159,6 +162,7 @@ public class ListKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +184,7 @@ public class ListKgEntityRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -267,6 +272,17 @@ public class ListKgEntityRequest extends Request {
             } 
 
             /**
+             * <p>The operator. Valid values:</p>
+             * <ul>
+             * <li>eq: equal to.</li>
+             * <li>neq: not equal to.</li>
+             * <li>contains: contains.</li>
+             * <li>gt: greater than.</li>
+             * <li>gte: greater than or equal to.</li>
+             * <li>lt: less than.</li>
+             * <li>lte: less than or equal to.</li>
+             * <li>like: fuzzy match.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -278,6 +294,7 @@ public class ListKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The property code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -289,6 +306,7 @@ public class ListKgEntityRequest extends Request {
             }
 
             /**
+             * <p>The property match value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -385,7 +403,7 @@ public class ListKgEntityRequest extends Request {
             } 
 
             /**
-             * FilterList.
+             * <p>The property filter conditions.</p>
              */
             public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
@@ -393,7 +411,10 @@ public class ListKgEntityRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword for searching display properties.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -401,7 +422,10 @@ public class ListKgEntityRequest extends Request {
             }
 
             /**
-             * PageNum.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -409,7 +433,10 @@ public class ListKgEntityRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

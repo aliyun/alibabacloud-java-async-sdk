@@ -169,7 +169,10 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * DownStreamDepth.
+         * <p>The number of downstream node levels. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder downStreamDepth(Integer downStreamDepth) {
             this.putQueryParameter("DownStreamDepth", downStreamDepth);
@@ -178,7 +181,14 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment. </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -187,6 +197,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The center node.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceId(InstanceId instanceId) {
@@ -197,6 +208,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +230,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,7 +243,10 @@ public class GetInstanceUpDownStreamRequest extends Request {
         }
 
         /**
-         * UpStreamDepth.
+         * <p>The number of upstream node levels. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder upStreamDepth(Integer upStreamDepth) {
             this.putQueryParameter("UpStreamDepth", upStreamDepth);
@@ -299,7 +315,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
             } 
 
             /**
-             * FieldInstanceIdList.
+             * <p>The list of field IDs. This parameter can be specified when the node is a logical table instance ID. If this parameter is not specified, the full table is used by default.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -307,6 +323,7 @@ public class GetInstanceUpDownStreamRequest extends Request {
             }
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

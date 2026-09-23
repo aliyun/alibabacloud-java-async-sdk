@@ -126,7 +126,14 @@ public class OperateInstanceRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment. </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class OperateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class OperateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The operation request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder operateCommand(OperateCommand operateCommand) {
@@ -226,7 +235,7 @@ public class OperateInstanceRequest extends Request {
             } 
 
             /**
-             * FieldInstanceIdList.
+             * <p>The field instance IDs.</p>
              */
             public Builder fieldInstanceIdList(java.util.List<String> fieldInstanceIdList) {
                 this.fieldInstanceIdList = fieldInstanceIdList;
@@ -234,6 +243,7 @@ public class OperateInstanceRequest extends Request {
             }
 
             /**
+             * <p>The instance ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,6 +330,7 @@ public class OperateInstanceRequest extends Request {
             } 
 
             /**
+             * <p>The list of instances to operate on.</p>
              * <p>This parameter is required.</p>
              */
             public Builder instanceIdList(java.util.List<InstanceIdList> instanceIdList) {
@@ -328,6 +339,14 @@ public class OperateInstanceRequest extends Request {
             }
 
             /**
+             * <p>The operation to perform. Valid values:	</p>
+             * <ul>
+             * <li>RERUN: Reruns the instance.</li>
+             * <li>PAUSE: Pauses the instance.</li>
+             * <li>RESUME: Resumes the instance.</li>
+             * <li>TERMINATE: Stops the instance.</li>
+             * <li>SET_SUCCESS: Sets the instance status to successful.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -339,6 +358,7 @@ public class OperateInstanceRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Backend response exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>Paginated query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether the request is successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -345,7 +354,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiId.
+             * <p>API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1322</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -353,7 +365,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>teset</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -361,7 +376,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>Creator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -369,7 +387,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>Creator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -377,7 +398,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -385,7 +409,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserName.
+             * <p>Owner name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerUserName(String ownerUserName) {
                 this.ownerUserName = ownerUserName;
@@ -393,7 +420,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeBelongTo.
+             * <p>The user to whom the privilege belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder privilegeBelongTo(String privilegeBelongTo) {
                 this.privilegeBelongTo = privilegeBelongTo;
@@ -401,7 +431,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeFrom.
+             * <p>Authorization source. Valid value: 0, which indicates the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder privilegeFrom(Integer privilegeFrom) {
                 this.privilegeFrom = privilegeFrom;
@@ -409,7 +442,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>Project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102122</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -417,7 +453,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>Project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -425,7 +464,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Role. Valid value: 0, which indicates the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder role(Integer role) {
                 this.role = role;
@@ -492,7 +534,7 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             } 
 
             /**
-             * PermissionList.
+             * <p>Paginated permission list.</p>
              */
             public Builder permissionList(java.util.List<PermissionList> permissionList) {
                 this.permissionList = permissionList;
@@ -500,7 +542,10 @@ public class ListDataServiceMyApiPermissionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

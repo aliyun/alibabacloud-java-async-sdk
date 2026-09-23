@@ -112,6 +112,7 @@ public class UpdateStandardLookupTableRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateStandardLookupTableRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -190,6 +192,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             } 
 
             /**
+             * <p>The directory to which the lookup table belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -288,7 +291,10 @@ public class UpdateStandardLookupTableRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The code description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -296,7 +302,10 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * EnglishName.
+             * <p>The English name of the code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HZ</p>
              */
             public Builder englishName(String englishName) {
                 this.englishName = englishName;
@@ -304,6 +313,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
+             * <p>The code name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -315,6 +325,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
+             * <p>The code value.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -453,6 +464,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             } 
 
             /**
+             * <p>The lookup table code.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -464,7 +476,10 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The lookup table description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -472,7 +487,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * DirectoryReference.
+             * <p>The directory to which the lookup table belongs.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -480,6 +495,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
+             * <p>The lookup table ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -491,7 +507,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * LookupTableValueList.
+             * <p>The list of lookup table values.</p>
              */
             public Builder lookupTableValueList(java.util.List<LookupTableValueList> lookupTableValueList) {
                 this.lookupTableValueList = lookupTableValueList;
@@ -499,6 +515,7 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
+             * <p>The lookup table name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -510,7 +527,10 @@ public class UpdateStandardLookupTableRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the lookup table owner. Default value: the user ID of the caller.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012021</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;

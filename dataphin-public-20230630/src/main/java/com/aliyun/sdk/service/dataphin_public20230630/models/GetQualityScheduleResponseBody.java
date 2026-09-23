@@ -119,7 +119,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * QualityScheduleInfo.
+         * <p>The details of the schedule object.</p>
          */
         public Builder qualityScheduleInfo(QualityScheduleInfo qualityScheduleInfo) {
             this.qualityScheduleInfo = qualityScheduleInfo;
@@ -162,7 +171,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -436,7 +445,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -444,7 +456,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The user ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -452,7 +467,15 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * CronExpression.
+             * <p>The cron expression for timed scheduling.</p>
+             * 
+             * <strong>example:</strong>
+             * <ul>
+             * <li><ul>
+             * <li>1/* * * *</li>
+             * </ul>
+             * </li>
+             * </ul>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -460,7 +483,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the schedule object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -468,7 +494,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * IsRefByRule.
+             * <p>Indicates whether the schedule object is referenced by a rule.</p>
              */
             public Builder isRefByRule(Boolean isRefByRule) {
                 this.isRefByRule = isRefByRule;
@@ -476,7 +502,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The user ID of the last modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -484,7 +513,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -492,7 +524,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the schedule object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -500,7 +535,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionExpression.
+             * <p>The custom partition expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=${yyyyMMdd}</p>
              */
             public Builder partitionExpression(String partitionExpression) {
                 this.partitionExpression = partitionExpression;
@@ -508,7 +546,17 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionType.
+             * <p>The partition type. Valid values:</p>
+             * <ul>
+             * <li>EVERY_DAY: every day.</li>
+             * <li>PRE_DAY: yesterday.</li>
+             * <li>TODAY: today.</li>
+             * <li>FIRST_DAY_OF_WEEK: first day of the week (Sunday).</li>
+             * <li>CUSTOM: custom.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CUSTOM</p>
              */
             public Builder partitionType(String partitionType) {
                 this.partitionType = partitionType;
@@ -516,7 +564,17 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodScheduleIntervalType.
+             * <p>The interval type for timed scheduling. Valid values:</p>
+             * <ul>
+             * <li>DAILY: day.</li>
+             * <li>WEEKLY: week.</li>
+             * <li>MONTHLY: month.</li>
+             * <li>HOURLY: hour.</li>
+             * <li>MINUTELY: minute.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DAILY</p>
              */
             public Builder periodScheduleIntervalType(String periodScheduleIntervalType) {
                 this.periodScheduleIntervalType = periodScheduleIntervalType;
@@ -524,7 +582,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodScheduleParamList.
+             * <p>The interval values for timed scheduling.</p>
              */
             public Builder periodScheduleParamList(java.util.List<String> periodScheduleParamList) {
                 this.periodScheduleParamList = periodScheduleParamList;
@@ -532,7 +590,15 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * StaticTaskTriggerType.
+             * <p>The trigger type for fixed task triggers. Valid values:</p>
+             * <ul>
+             * <li>ALL_TASKS_FINISHED: triggered when all tasks are finished.</li>
+             * <li>ONE_TASKS_FINISHED: triggered when one task is finished.</li>
+             * <li>PRE_ONE_TASKS_START: triggered when the previous task starts.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONE_TASKS_FINISHED</p>
              */
             public Builder staticTaskTriggerType(String staticTaskTriggerType) {
                 this.staticTaskTriggerType = staticTaskTriggerType;
@@ -540,7 +606,7 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerNodeList.
+             * <p>The list of trigger nodes for trigger-based scheduling.</p>
              */
             public Builder triggerNodeList(java.util.List<String> triggerNodeList) {
                 this.triggerNodeList = triggerNodeList;
@@ -548,7 +614,14 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerType.
+             * <p>The trigger type for trigger-based scheduling. Valid values:</p>
+             * <ul>
+             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STATIC_TASK_TRIGGER</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -556,7 +629,17 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The schedule type. Valid values:</p>
+             * <ul>
+             * <li>PERIOD_SCHEDULE: timed scheduling.</li>
+             * <li>MANUAL_SCHEDULE: manual trigger.</li>
+             * <li>CODE_CHECK_TRIGGER: code check trigger.</li>
+             * <li>STATIC_TASK_TRIGGER: fixed task trigger.</li>
+             * <li>DEPENDENCY_SCHEDULE: dependency scheduling.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PERIOD_SCHEDULE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -564,7 +647,14 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * ValidatePartitionType.
+             * <p>The validation scope. Valid values:</p>
+             * <ul>
+             * <li>TASK_REFERRED_PARTITION: partition updated by the task.</li>
+             * <li>USER_DEFINED_PARTITION: custom partition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TASK_REFERRED_PARTITION</p>
              */
             public Builder validatePartitionType(String validatePartitionType) {
                 this.validatePartitionType = validatePartitionType;
@@ -572,7 +662,10 @@ public class GetQualityScheduleResponseBody extends TeaModel {
             }
 
             /**
-             * WatchId.
+             * <p>The ID of the monitored object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22</p>
              */
             public Builder watchId(Long watchId) {
                 this.watchId = watchId;

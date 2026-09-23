@@ -112,6 +112,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         }
 
         /**
+         * <p>Paginated query</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListDataSourceWithConfigRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +271,10 @@ public class ListDataSourceWithConfigRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>Data source name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vcns-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +282,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
-             * OwnerList.
+             * <p>Data source owner</p>
              */
             public Builder ownerList(java.util.List<String> ownerList) {
                 this.ownerList = ownerList;
@@ -285,6 +290,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
+             * <p>Page number. The value starts from 1.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -296,6 +302,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
+             * <p>Number of records per page</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -307,7 +314,16 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
-             * ScopeList.
+             * <p>Data source scope. Valid values:</p>
+             * <ul>
+             * <li>STREAMING: Real-time</li>
+             * <li>OFFLINE: Offline</li>
+             * <li>DIP_META_SYNC: Meta warehouse initialization</li>
+             * <li>DATA_DISTILL: Data distillation</li>
+             * <li>CUMPUTE_SOURCE_SHADOW: Shadow compute source</li>
+             * <li>LABEL: Label</li>
+             * <li>ALL: Offline + Real-time</li>
+             * </ul>
              */
             public Builder scopeList(java.util.List<String> scopeList) {
                 this.scopeList = scopeList;
@@ -315,7 +331,10 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
-             * Tag.
+             * <p>Tag marked when creating the data source</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -323,7 +342,7 @@ public class ListDataSourceWithConfigRequest extends Request {
             }
 
             /**
-             * TypeList.
+             * <p>Data source type</p>
              */
             public Builder typeList(java.util.List<String> typeList) {
                 this.typeList = typeList;

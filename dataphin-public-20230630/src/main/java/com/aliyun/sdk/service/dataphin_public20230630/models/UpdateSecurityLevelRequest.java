@@ -112,6 +112,7 @@ public class UpdateSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -215,7 +217,10 @@ public class UpdateSecurityLevelRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The classification description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -223,7 +228,10 @@ public class UpdateSecurityLevelRequest extends Request {
             }
 
             /**
-             * Index.
+             * <p>The classification order. If this parameter is not specified, the classification name is used for matching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -231,7 +239,10 @@ public class UpdateSecurityLevelRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The classification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

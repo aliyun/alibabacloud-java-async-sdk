@@ -112,6 +112,7 @@ public class UpdateBasicProjectRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateBasicProjectRequest extends Request {
         }
 
         /**
+         * <p>The update command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -215,7 +217,10 @@ public class UpdateBasicProjectRequest extends Request {
             } 
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -223,7 +228,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * Ip.
+             * <p>IP</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127.0.0.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -231,7 +239,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8080</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -391,7 +402,10 @@ public class UpdateBasicProjectRequest extends Request {
             } 
 
             /**
-             * BizUnitId.
+             * <p>The business unit ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder bizUnitId(Long bizUnitId) {
                 this.bizUnitId = bizUnitId;
@@ -399,7 +413,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * ComputeSourceId.
+             * <p>The ID of the offline compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2001</p>
              */
             public Builder computeSourceId(Long computeSourceId) {
                 this.computeSourceId = computeSourceId;
@@ -407,7 +424,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The project description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test project</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -415,7 +435,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * DisplayName.
+             * <p>The display name of the project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MyProject.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -423,6 +446,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -434,6 +458,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
+             * <p>The project name. This value cannot be modified. Pass in the current project name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -445,7 +470,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * NameSpaceTag.
+             * <p>The namespace identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder nameSpaceTag(String nameSpaceTag) {
                 this.nameSpaceTag = nameSpaceTag;
@@ -453,7 +481,10 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * StreamComputeSourceId.
+             * <p>The ID of the real-time compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2002</p>
              */
             public Builder streamComputeSourceId(Long streamComputeSourceId) {
                 this.streamComputeSourceId = streamComputeSourceId;
@@ -461,7 +492,7 @@ public class UpdateBasicProjectRequest extends Request {
             }
 
             /**
-             * WhiteLists.
+             * <p>The sandbox whitelist.</p>
              */
             public Builder whiteLists(java.util.List<WhiteLists> whiteLists) {
                 this.whiteLists = whiteLists;

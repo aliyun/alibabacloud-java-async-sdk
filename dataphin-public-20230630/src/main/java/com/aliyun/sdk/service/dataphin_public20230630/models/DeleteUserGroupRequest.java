@@ -112,6 +112,7 @@ public class DeleteUserGroupRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class DeleteUserGroupRequest extends Request {
         }
 
         /**
+         * <p>The user group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

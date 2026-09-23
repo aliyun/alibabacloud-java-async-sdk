@@ -112,6 +112,7 @@ public class ListTenantMembersRequest extends Request {
         }
 
         /**
+         * <p>The request object.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListTenantMembersRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,6 +245,7 @@ public class ListTenantMembersRequest extends Request {
             } 
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -254,6 +257,7 @@ public class ListTenantMembersRequest extends Request {
             }
 
             /**
+             * <p>The number of entries per page.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -265,7 +269,26 @@ public class ListTenantMembersRequest extends Request {
             }
 
             /**
-             * RoleList.
+             * <p>The member roles:</p>
+             * <ul>
+             * <li>SUPER_ADMIN: Dataphin super administrator</li>
+             * <li>SYSTEM_ADMIN: system administrator</li>
+             * <li>COMMON_USER: Dataphin user</li>
+             * <li>DATA_ADMIN: Dataphin data administrator</li>
+             * <li>EXPORT_ADMIN: export administrator</li>
+             * <li>SECURITY_ADMIN: security administrator</li>
+             * <li>DATASOURCE_MANAGER: data source administrator</li>
+             * <li>QUALITY_MANAGER: asset quality manager</li>
+             * <li>DATA_STANDARD_MANAGER: data standard administrator</li>
+             * <li>LABELS_BUSINESS_PLANNER: tag business planner</li>
+             * <li>BUSINESS_MEMBER: general business user</li>
+             * <li>DATAPRO_OPERATE_SUPER_ADMIN: operations super administrator</li>
+             * <li>DATAPRO_OPERATE_ADMIN: operations administrator</li>
+             * <li>DATAPRO_OPERATE_MEMBER: operations member</li>
+             * <li>DATAPRO_BUSINESS_ANALYST: business analyst</li>
+             * <li>LABELS_BUSINESS_MEMBER: tag business member</li>
+             * <li>DATAPRO_BUSINESS_MEMBER: DATAPRO general business user</li>
+             * </ul>
              */
             public Builder roleList(java.util.List<String> roleList) {
                 this.roleList = roleList;
@@ -273,7 +296,10 @@ public class ListTenantMembersRequest extends Request {
             }
 
             /**
-             * SearchText.
+             * <p>The search keyword.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder searchText(String searchText) {
                 this.searchText = searchText;
@@ -281,7 +307,7 @@ public class ListTenantMembersRequest extends Request {
             }
 
             /**
-             * UserGroupIdList.
+             * <p>The IDs of the user groups to which the member belongs.</p>
              */
             public Builder userGroupIdList(java.util.List<String> userGroupIdList) {
                 this.userGroupIdList = userGroupIdList;

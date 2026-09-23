@@ -126,7 +126,14 @@ public class GetSupplementDagrunRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class GetSupplementDagrunRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +164,7 @@ public class GetSupplementDagrunRequest extends Request {
         }
 
         /**
+         * <p>The ID of the data backfill instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

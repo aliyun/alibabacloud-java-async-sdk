@@ -112,6 +112,7 @@ public class CreateSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class CreateSecurityLevelRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -229,7 +234,10 @@ public class CreateSecurityLevelRequest extends Request {
             } 
 
             /**
-             * Abbreviation.
+             * <p>The abbreviation of the classification level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder abbreviation(String abbreviation) {
                 this.abbreviation = abbreviation;
@@ -237,7 +245,10 @@ public class CreateSecurityLevelRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the classification level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -245,7 +256,10 @@ public class CreateSecurityLevelRequest extends Request {
             }
 
             /**
-             * Index.
+             * <p>The order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -253,6 +267,7 @@ public class CreateSecurityLevelRequest extends Request {
             }
 
             /**
+             * <p>The name of the classification level.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

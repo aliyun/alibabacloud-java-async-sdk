@@ -119,7 +119,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of querying the anomaly archived table list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -280,7 +289,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * ArchiveTableId.
+             * <p>The ID of the archived table. This ID is used when you update, switch to active, or delete the archived table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7673533</p>
              */
             public Builder archiveTableId(Long archiveTableId) {
                 this.archiveTableId = archiveTableId;
@@ -288,7 +300,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * ArchiveTableName.
+             * <p>The full table name in the format of project_name.table_name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Train.a01_reanme_exception_data</p>
              */
             public Builder archiveTableName(String archiveTableName) {
                 this.archiveTableName = archiveTableName;
@@ -296,7 +311,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Ddl.
+             * <p>The DDL statement for creating the archived table, which includes dataphin_quality_* system fields and the dataphin_quality_validate_date partition field definition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>create table mfg_fin_cdm.a_shixin_b_exception_data\n         (  \n            dataphin_quality_tenant_id varchar(64) comment \&quot;Tenant ID\&quot;\n         , \n            dataphin_quality_rule_id varchar(64) comment \&quot;Quality rule ID\&quot;\n         , \n            dataphin_quality_rule_name string comment \&quot;Quality rule name\&quot;\n         , \n            dataphin_quality_column_name varchar(1024) comment \&quot;Validation field name\&quot;\n         , \n            dataphin_quality_watch_task_id varchar(128) comment \&quot;Monitored object task ID\&quot;\n         , \n            dataphin_quality_rule_task_id varchar(64) comment \&quot;Rule task ID\&quot;\n         , \n            dataphin_quality_validate_time varchar(64) comment \&quot;Quality validation time\&quot;\n         , \n            dataphin_quality_archive_mode varchar(32) comment \&quot;Anomaly archiving mode, ONLY_ERROR_FIELD/FULL_RECORD\&quot;\n         , \n            dataphin_quality_error_data string comment \&quot;Anomaly data\&quot;\n         , \n            执行依据文号 string comment \&quot;\&quot;\n         , \n            立案时间 string comment \&quot;\&quot;\n         , \n            案号 string comment \&quot;\&quot;\n         , \n            执行法院 string comment \&quot;\&quot;\n         , \n            性别 string comment \&quot;\&quot;\n         , \n            省份 string comment \&quot;\&quot;\n         , \n            被执行人的履行情况 string comment \&quot;\&quot;\n         , \n            发布时间 string comment \&quot;\&quot;\n         , \n            姓名 string comment \&quot;\&quot;\n         , \n            身份证号 string comment \&quot;\&quot;\n         , \n            失信被执行人行为具体情形 string comment \&quot;\&quot;\n         ) \n        partitioned by (dataphin_quality_validate_date string comment \&quot;Validation date (partition field)\&quot;)</p>
              */
             public Builder ddl(String ddl) {
                 this.ddl = ddl;
@@ -304,7 +322,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether this is the active archived table. At least one active archived table must exist under the same monitored object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -312,7 +333,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Lifecycle.
+             * <p>The lifecycle in days. An empty value indicates no lifecycle is configured.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder lifecycle(Integer lifecycle) {
                 this.lifecycle = lifecycle;
@@ -320,7 +344,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxArchiveCount.
+             * <p>The maximum number of records to archive per validation. A value of -1 indicates full archiving.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxArchiveCount(Long maxArchiveCount) {
                 this.maxArchiveCount = maxArchiveCount;
@@ -387,7 +414,7 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             } 
 
             /**
-             * ArchiveTableList.
+             * <p>The list of anomaly archived tables.</p>
              */
             public Builder archiveTableList(java.util.List<ArchiveTableList> archiveTableList) {
                 this.archiveTableList = archiveTableList;
@@ -395,7 +422,10 @@ public class ListQualityArchiveTablesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The number of custom anomaly archived tables.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

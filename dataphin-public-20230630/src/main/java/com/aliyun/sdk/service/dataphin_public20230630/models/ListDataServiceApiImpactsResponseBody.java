@@ -119,7 +119,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paged query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -419,7 +428,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -427,7 +439,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * CallCount.
+             * <p>The number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder callCount(Long callCount) {
                 this.callCount = callCount;
@@ -435,7 +450,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientFailCount.
+             * <p>The number of client failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder clientFailCount(Long clientFailCount) {
                 this.clientFailCount = clientFailCount;
@@ -443,7 +461,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The source IP address of the access request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -451,7 +472,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorApiCount.
+             * <p>The number of abnormal API calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorApiCount(Long errorApiCount) {
                 this.errorApiCount = errorApiCount;
@@ -459,7 +483,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * <p>The number of errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -467,7 +494,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorRate.
+             * <p>The error rate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder errorRate(String errorRate) {
                 this.errorRate = errorRate;
@@ -475,7 +505,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * LastCallTime.
+             * <p>The most recent call time. Format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder lastCallTime(String lastCallTime) {
                 this.lastCallTime = lastCallTime;
@@ -483,7 +516,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * Minute.
+             * <p>The gateway statistics time. Format: yyyy_MMdd_HHmm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025_0611_1011</p>
              */
             public Builder minute(String minute) {
                 this.minute = minute;
@@ -491,7 +527,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineCount.
+             * <p>The number of offline instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder offlineCount(Long offlineCount) {
                 this.offlineCount = offlineCount;
@@ -499,7 +538,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessTimeCost.
+             * <p>The total time consumed by successful calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder successTimeCost(String successTimeCost) {
                 this.successTimeCost = successTimeCost;
@@ -507,7 +549,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -515,7 +560,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTimeCost.
+             * <p>The total time consumed by the API, including failed calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>231</p>
              */
             public Builder totalTimeCost(String totalTimeCost) {
                 this.totalTimeCost = totalTimeCost;
@@ -582,7 +630,7 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             } 
 
             /**
-             * ImpactList.
+             * <p>The list of API impact analysis results.</p>
              */
             public Builder impactList(java.util.List<ImpactList> impactList) {
                 this.impactList = impactList;
@@ -590,7 +638,10 @@ public class ListDataServiceApiImpactsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -119,7 +119,10 @@ public class GetStandardSetResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +163,7 @@ public class GetStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * StandardSetInfo.
+         * <p>The details of the standard set.</p>
          */
         public Builder standardSetInfo(StandardSetInfo standardSetInfo) {
             this.standardSetInfo = standardSetInfo;
@@ -162,7 +171,7 @@ public class GetStandardSetResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,14 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalType.
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: default approval type.</li>
+             * <li>BY_TEMPLATE: approval based on an approval template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_DEFAULT</p>
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -262,7 +278,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * EnableApproval.
+             * <p>Indicates whether approval is enabled.</p>
              */
             public Builder enableApproval(Boolean enableApproval) {
                 this.enableApproval = enableApproval;
@@ -270,7 +286,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * IsSubmitInBatch.
+             * <p>Indicates whether batch approval submission is enabled.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
                 this.isSubmitInBatch = isSubmitInBatch;
@@ -278,7 +294,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -345,7 +364,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -353,7 +375,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -407,7 +432,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Directory.
+             * <p>The parent directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dir1</p>
              */
             public Builder directory(String directory) {
                 this.directory = directory;
@@ -474,7 +502,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -482,7 +513,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -549,7 +583,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -557,7 +594,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -624,7 +664,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -632,7 +675,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The user group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testGroup</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -699,7 +745,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -707,7 +756,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -800,7 +852,14 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalType.
+             * <p>The approval process type. Valid values:</p>
+             * <ul>
+             * <li>BY_DEFAULT: default approval type.</li>
+             * <li>BY_TEMPLATE: approval based on an approval template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_DEFAULT</p>
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -808,7 +867,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * EnableApproval.
+             * <p>Indicates whether approval is enabled.</p>
              */
             public Builder enableApproval(Boolean enableApproval) {
                 this.enableApproval = enableApproval;
@@ -816,7 +875,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * IsSubmitInBatch.
+             * <p>Indicates whether batch approval submission is enabled.</p>
              */
             public Builder isSubmitInBatch(Boolean isSubmitInBatch) {
                 this.isSubmitInBatch = isSubmitInBatch;
@@ -824,7 +883,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The approval template ID. This parameter takes effect only when the approval process type is set to BY_TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;
@@ -891,7 +953,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000913</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -899,7 +964,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>susan</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -966,7 +1034,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * SpecifiedUserList.
+             * <p>The list of specified users who can view the standard set. This parameter takes effect only when the visibility type is set to SPECIFIED.</p>
              */
             public Builder specifiedUserList(java.util.List<SpecifiedUserList> specifiedUserList) {
                 this.specifiedUserList = specifiedUserList;
@@ -974,7 +1042,15 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The visibility type. Valid values:</p>
+             * <ul>
+             * <li>PUBLIC: public.</li>
+             * <li>PRIVATE: private. Only standard set members and administrators can view the standard set.</li>
+             * <li>SPECIFIED: visible to specified users only.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1223,7 +1299,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             } 
 
             /**
-             * ApprovalConfig.
+             * <p>The approval configuration for going online.</p>
              */
             public Builder approvalConfig(ApprovalConfig approvalConfig) {
                 this.approvalConfig = approvalConfig;
@@ -1231,7 +1307,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The code of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CITY</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1239,7 +1318,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the standard set was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1247,7 +1329,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * <p>The creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -1255,7 +1337,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultStandardTemplateId.
+             * <p>The default standard template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder defaultStandardTemplateId(Long defaultStandardTemplateId) {
                 this.defaultStandardTemplateId = defaultStandardTemplateId;
@@ -1263,7 +1348,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1271,7 +1359,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryReference.
+             * <p>The directory to which the standard set belongs.</p>
              */
             public Builder directoryReference(DirectoryReference directoryReference) {
                 this.directoryReference = directoryReference;
@@ -1279,7 +1367,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The standard set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1287,7 +1378,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The user who last modified the standard set.</p>
              */
             public Builder lastModifier(LastModifier lastModifier) {
                 this.lastModifier = lastModifier;
@@ -1295,7 +1386,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainerList.
+             * <p>The list of maintainers.</p>
              */
             public Builder maintainerList(java.util.List<MaintainerList> maintainerList) {
                 this.maintainerList = maintainerList;
@@ -1303,7 +1394,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * MemberGroupList.
+             * <p>The list of member groups.</p>
              */
             public Builder memberGroupList(java.util.List<MemberGroupList> memberGroupList) {
                 this.memberGroupList = memberGroupList;
@@ -1311,7 +1402,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * MemberList.
+             * <p>The list of members.</p>
              */
             public Builder memberList(java.util.List<MemberList> memberList) {
                 this.memberList = memberList;
@@ -1319,7 +1410,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the standard set was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -1327,7 +1421,10 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the standard set.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1335,7 +1432,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * OfflineApprovalConfig.
+             * <p>The approval configuration for going offline.</p>
              */
             public Builder offlineApprovalConfig(OfflineApprovalConfig offlineApprovalConfig) {
                 this.offlineApprovalConfig = offlineApprovalConfig;
@@ -1343,7 +1440,7 @@ public class GetStandardSetResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityConfig.
+             * <p>The visibility configuration.</p>
              */
             public Builder visibilityConfig(VisibilityConfig visibilityConfig) {
                 this.visibilityConfig = visibilityConfig;

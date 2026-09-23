@@ -119,7 +119,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +237,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -233,7 +248,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -300,7 +318,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -308,7 +329,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -375,7 +399,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -383,7 +410,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -450,7 +480,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -458,7 +491,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30000001</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -538,7 +574,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ErrMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>userId is error</p>
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -546,7 +585,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeDisplayName.
+             * <p>The name of the transfer module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table owner</p>
              */
             public Builder privilegeDisplayName(String privilegeDisplayName) {
                 this.privilegeDisplayName = privilegeDisplayName;
@@ -554,7 +596,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the transfer module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -764,7 +809,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Creator.
+             * <p>The creator.</p>
              */
             public Builder creator(Creator creator) {
                 this.creator = creator;
@@ -772,7 +817,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FlowId.
+             * <p>The approval flow ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1753669315426</p>
              */
             public Builder flowId(Long flowId) {
                 this.flowId = flowId;
@@ -780,7 +828,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632036495973809</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -788,7 +839,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The last modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1632036495973809</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -796,7 +850,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifier.
+             * <p>The last modifier.</p>
              */
             public Builder lastModifier(LastModifier lastModifier) {
                 this.lastModifier = lastModifier;
@@ -804,7 +858,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NewOwner.
+             * <p>The new owner.</p>
              */
             public Builder newOwner(NewOwner newOwner) {
                 this.newOwner = newOwner;
@@ -812,7 +866,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OldOwner.
+             * <p>The previous owner.</p>
              */
             public Builder oldOwner(OldOwner oldOwner) {
                 this.oldOwner = oldOwner;
@@ -820,7 +874,14 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeTransferMode.
+             * <p>The transfer mode. Valid values:</p>
+             * <ul>
+             * <li>ONE_STOP: one-click transfer.</li>
+             * <li>FUNCTION_MODULE_BASED: transfer by function module.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ONE_STOP</p>
              */
             public Builder privilegeTransferMode(String privilegeTransferMode) {
                 this.privilegeTransferMode = privilegeTransferMode;
@@ -828,7 +889,7 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeTransferResultEntries.
+             * <p>The transfer details of function modules.</p>
              */
             public Builder privilegeTransferResultEntries(java.util.List<PrivilegeTransferResultEntries> privilegeTransferResultEntries) {
                 this.privilegeTransferResultEntries = privilegeTransferResultEntries;
@@ -836,7 +897,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProposalId.
+             * <p>The approval ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder proposalId(Long proposalId) {
                 this.proposalId = proposalId;
@@ -844,7 +908,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The approval title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>transefer title</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -852,7 +919,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransferComment.
+             * <p>The transfer description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>comment</p>
              */
             public Builder transferComment(String transferComment) {
                 this.transferComment = transferComment;
@@ -860,7 +930,10 @@ public class GetTransferInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TransferStatus.
+             * <p>The transfer status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APPROVED</p>
              */
             public Builder transferStatus(String transferStatus) {
                 this.transferStatus = transferStatus;

@@ -119,7 +119,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>Paginated query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -255,7 +264,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>Application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10211</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -263,10 +275,13 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * <p>appKey</p>
+             * <p>Application key.</p>
+             * <blockquote>
+             * <p>Notice: Deprecated. Use AppKeyStr instead.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>1201</p>
+             * <p>200000000</p>
              */
             public Builder appKey(Long appKey) {
                 this.appKey = appKey;
@@ -274,7 +289,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * AppKeyStr.
+             * <p>Application key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>APP_200000000</p>
              */
             public Builder appKeyStr(String appKeyStr) {
                 this.appKeyStr = appKeyStr;
@@ -282,7 +300,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>Application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -609,7 +630,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiId.
+             * <p>API ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1022</p>
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -617,7 +641,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * <p>API name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -625,7 +652,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * AppCount.
+             * <p>Number of bound applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder appCount(Integer appCount) {
                 this.appCount = appCount;
@@ -633,7 +663,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * AppInfoList.
+             * <p>List of referenced application information.</p>
              */
             public Builder appInfoList(java.util.List<AppInfoList> appInfoList) {
                 this.appInfoList = appInfoList;
@@ -641,7 +671,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyStatus.
+             * <p>Application status. Valid values: 0 (not all applied), 1 (applied), 2 (no app, need to apply for an app first).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder applyStatus(Integer applyStatus) {
                 this.applyStatus = applyStatus;
@@ -649,7 +682,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * CallCount.
+             * <p>Number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>21</p>
              */
             public Builder callCount(Integer callCount) {
                 this.callCount = callCount;
@@ -657,7 +693,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * CreateType.
+             * <p>Creation type. Valid values: 0 (custom mode), 1 (wizard mode), 2 (direct connection API).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder createType(Integer createType) {
                 this.createType = createType;
@@ -665,7 +704,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * CustomUpdateRate.
+             * <p>Custom update frequency content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0/1 * * *</p>
              */
             public Builder customUpdateRate(String customUpdateRate) {
                 this.customUpdateRate = customUpdateRate;
@@ -673,7 +715,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * DeployTime.
+             * <p>Publish time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder deployTime(String deployTime) {
                 this.deployTime = deployTime;
@@ -681,7 +726,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>API description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -689,7 +737,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteMode.
+             * <p>Call type. Valid values: 1 (synchronous), 2 (asynchronous).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder executeMode(Integer executeMode) {
                 this.executeMode = executeMode;
@@ -697,7 +748,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>Group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102131</p>
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -705,7 +759,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * <p>API group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -713,7 +770,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * LogicUnitNo.
+             * <p>Service unit number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1022</p>
              */
             public Builder logicUnitNo(Long logicUnitNo) {
                 this.logicUnitNo = logicUnitNo;
@@ -721,7 +781,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>Mode. Valid values: 0 (basic), 1 (dev_prod).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -729,7 +792,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>Owner ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012011</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -737,7 +803,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserName.
+             * <p>Owner name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>张三</p>
              */
             public Builder ownerUserName(String ownerUserName) {
                 this.ownerUserName = ownerUserName;
@@ -745,7 +814,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>Data service project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102101</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -753,7 +825,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>Service project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -761,7 +836,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateRate.
+             * <p>Update frequency. Valid values: 0 (custom), 1 (daily), 2 (hourly), 3 (per minute).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder updateRate(Integer updateRate) {
                 this.updateRate = updateRate;
@@ -769,7 +847,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Modification time. Time format: yyyy-MM-dd HH:mm:ss.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00:00</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -777,7 +858,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>API version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -844,7 +928,7 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiList.
+             * <p>Paginated API list.</p>
              */
             public Builder apiList(java.util.List<ApiList> apiList) {
                 this.apiList = apiList;
@@ -852,7 +936,10 @@ public class ListDataServicePublishedApisResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>Total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

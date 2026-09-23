@@ -111,7 +111,7 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
-         * AddCommand.
+         * <p>The command to add user group members.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
             String addCommandShrink = shrink(addCommand, "AddCommand", "json");
@@ -121,6 +121,7 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +134,10 @@ public class AddUserGroupMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -202,6 +206,7 @@ public class AddUserGroupMemberRequest extends Request {
             } 
 
             /**
+             * <p>The user group ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -213,7 +218,7 @@ public class AddUserGroupMemberRequest extends Request {
             }
 
             /**
-             * UserIdList.
+             * <p>The list of user IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

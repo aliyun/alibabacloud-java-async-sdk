@@ -112,6 +112,7 @@ public class GrantResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>The grant request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder grantCommand(GrantCommand grantCommand) {
@@ -122,6 +123,7 @@ public class GrantResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,7 +191,10 @@ public class GrantResourcePermissionRequest extends Request {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hadoop.300000806.data_distill.behavior_gameinfor_01</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -313,6 +318,7 @@ public class GrantResourcePermissionRequest extends Request {
             } 
 
             /**
+             * <p>The expiration timestamp, in milliseconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -324,6 +330,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The operation types.</p>
              * <p>This parameter is required.</p>
              */
             public Builder operateList(java.util.List<String> operateList) {
@@ -332,7 +339,10 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
-             * Reason.
+             * <p>The reason for the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -340,6 +350,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The list of resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {
@@ -348,6 +359,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The resource type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -359,6 +371,7 @@ public class GrantResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The authorized users pending authorization.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {

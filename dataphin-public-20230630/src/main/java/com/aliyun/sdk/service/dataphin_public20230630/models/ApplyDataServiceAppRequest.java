@@ -127,6 +127,7 @@ public class ApplyDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The apply command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applyCommand(ApplyCommand applyCommand) {
@@ -137,6 +138,7 @@ public class ApplyDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,7 +151,10 @@ public class ApplyDataServiceAppRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -158,6 +163,7 @@ public class ApplyDataServiceAppRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +263,7 @@ public class ApplyDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>The expiration date in yyyy-MM-dd format.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -268,6 +275,7 @@ public class ApplyDataServiceAppRequest extends Request {
             }
 
             /**
+             * <p>The reason for the application.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

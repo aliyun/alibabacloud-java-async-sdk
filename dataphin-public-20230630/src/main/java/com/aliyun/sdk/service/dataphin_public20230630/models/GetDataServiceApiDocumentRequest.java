@@ -126,6 +126,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
         }
 
         /**
+         * <p>The API ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +139,7 @@ public class GetDataServiceApiDocumentRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +161,10 @@ public class GetDataServiceApiDocumentRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * <p>The version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

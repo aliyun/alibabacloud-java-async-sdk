@@ -112,6 +112,7 @@ public class ListAssetDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>The query parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListAssetDirectoriesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListAssetDirectoriesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -255,7 +260,10 @@ public class ListAssetDirectoriesRequest extends Request {
             } 
 
             /**
-             * Keyword.
+             * <p>The folder name keyword. Maximum length: 128 characters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core Metrics</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -263,7 +271,10 @@ public class ListAssetDirectoriesRequest extends Request {
             }
 
             /**
-             * MaxLevel.
+             * <p>The maximum number of expansion levels. This parameter takes effect only in browse mode. Valid values: 1 to 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6470568</p>
              */
             public Builder maxLevel(Integer maxLevel) {
                 this.maxLevel = maxLevel;
@@ -271,7 +282,10 @@ public class ListAssetDirectoriesRequest extends Request {
             }
 
             /**
-             * Page.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>696844</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -279,7 +293,10 @@ public class ListAssetDirectoriesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 50. Valid values: 1 to 200.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7576639</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -287,7 +304,10 @@ public class ListAssetDirectoriesRequest extends Request {
             }
 
             /**
-             * ParentDirectoryId.
+             * <p>The parent folder ID. This parameter takes effect only in browse mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>466096149777</p>
              */
             public Builder parentDirectoryId(Long parentDirectoryId) {
                 this.parentDirectoryId = parentDirectoryId;
@@ -295,6 +315,7 @@ public class ListAssetDirectoriesRequest extends Request {
             }
 
             /**
+             * <p>The topic ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

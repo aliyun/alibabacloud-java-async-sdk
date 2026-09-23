@@ -112,6 +112,7 @@ public class GetAssetAttributesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class GetAssetAttributesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class GetAssetAttributesRequest extends Request {
         }
 
         /**
+         * <p>The query instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder queryCommand(QueryCommand queryCommand) {
@@ -203,7 +208,7 @@ public class GetAssetAttributesRequest extends Request {
             } 
 
             /**
-             * AttributeCodeList.
+             * <p>The list of property codes to return. If this parameter is not specified, all custom properties of the asset are returned.</p>
              */
             public Builder attributeCodeList(java.util.List<String> attributeCodeList) {
                 this.attributeCodeList = attributeCodeList;
@@ -211,6 +216,7 @@ public class GetAssetAttributesRequest extends Request {
             }
 
             /**
+             * <p>The list of asset GUIDs. A maximum of 50 GUIDs are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {

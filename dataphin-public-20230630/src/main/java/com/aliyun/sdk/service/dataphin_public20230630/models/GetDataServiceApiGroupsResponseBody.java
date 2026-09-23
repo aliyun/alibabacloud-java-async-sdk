@@ -119,7 +119,7 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * ApiGroupList.
+         * <p>The list of API groups.</p>
          */
         public Builder apiGroupList(java.util.List<ApiGroupList> apiGroupList) {
             this.apiGroupList = apiGroupList;
@@ -127,7 +127,10 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +138,10 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>101231</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -236,7 +248,10 @@ public class GetDataServiceApiGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The group name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

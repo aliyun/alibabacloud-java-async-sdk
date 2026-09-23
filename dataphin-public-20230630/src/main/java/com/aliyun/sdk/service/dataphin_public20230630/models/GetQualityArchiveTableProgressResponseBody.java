@@ -119,7 +119,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The asynchronous task progress details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             } 
 
             /**
-             * ArchiveTableId.
+             * <p>The archived table ID. This parameter is returned after the task succeeds and can be used to switch the active table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88012</p>
              */
             public Builder archiveTableId(Long archiveTableId) {
                 this.archiveTableId = archiveTableId;
@@ -262,7 +274,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ArchiveTableName.
+             * <p>The full name of the archived table. This parameter is returned after the task succeeds. When creating a table, the name includes the automatically appended _exception_data suffix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Train.a01_reanme3_exception_data</p>
              */
             public Builder archiveTableName(String archiveTableName) {
                 this.archiveTableName = archiveTableName;
@@ -270,7 +285,10 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * <p>The reason for the task failure. This parameter is returned only when Status is FAILED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The archived table name already exists!</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -278,7 +296,16 @@ public class GetQualityArchiveTableProgressResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>PROGRESS: In progress.</li>
+             * <li>SUCCESS: Succeeded.</li>
+             * <li>FAILED: Failed.</li>
+             * <li>CANCEL: Canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;

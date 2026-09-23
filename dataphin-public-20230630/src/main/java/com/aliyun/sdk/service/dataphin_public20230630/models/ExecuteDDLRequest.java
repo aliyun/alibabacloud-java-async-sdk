@@ -113,6 +113,7 @@ public class ExecuteDDLRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -123,6 +124,7 @@ public class ExecuteDDLRequest extends Request {
         }
 
         /**
+         * <p>The one-click table creation parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder DDLCommand(DDLCommand DDLCommand) {
@@ -133,6 +135,7 @@ public class ExecuteDDLRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +209,11 @@ public class ExecuteDDLRequest extends Request {
             } 
 
             /**
+             * <p>The current operating environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development environment.</li>
+             * <li>PROD: production environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -217,6 +225,7 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline task belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -352,7 +361,10 @@ public class ExecuteDDLRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog of the data source or compute cluster. This parameter is required only in OneCatalog scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dummy_cdm_dev</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -360,7 +372,17 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * DsCategory.
+             * <p>The data source category. Valid values:</p>
+             * <ul>
+             * <li>DATA_SOURCE: physical data source.</li>
+             * <li>PROJECT_COMPUTE_SOURCE: compute source bound to a project.</li>
+             * <li>ONE_CATALOG: compute source or data source in multi-engine mode (OneCatalog).</li>
+             * <li>DATA_SET: dataset.</li>
+             * </ul>
+             * <p>This parameter is optional. The system automatically infers the category based on other fields if this parameter is not specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATA_SOURCE</p>
              */
             public Builder dsCategory(String dsCategory) {
                 this.dsCategory = dsCategory;
@@ -368,7 +390,10 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * DsId.
+             * <p>The ID of the data source, compute source, or dataset. This parameter is optional when DsCategory is set to PROJECT_COMPUTE_SOURCE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder dsId(String dsId) {
                 this.dsId = dsId;
@@ -376,7 +401,11 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development environment.</li>
+             * <li>PROD: production environment.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>DEV</p>
@@ -387,7 +416,14 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * OneCatalogType.
+             * <p>The catalog type when DsCategory is set to ONE_CATALOG. Valid values:</p>
+             * <ul>
+             * <li>COMPUTE_CLUSTER: compute cluster.</li>
+             * <li>DATA_SOURCE: physical data source.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>COMPUTE_CLUSTER</p>
              */
             public Builder oneCatalogType(String oneCatalogType) {
                 this.oneCatalogType = oneCatalogType;
@@ -395,7 +431,7 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The ID of the project bound to the compute source. This parameter is required only when DsCategory is set to PROJECT_COMPUTE_SOURCE.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -406,7 +442,10 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The dataset version. This parameter is required only when DsCategory is set to DATA_SET.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -488,6 +527,7 @@ public class ExecuteDDLRequest extends Request {
             } 
 
             /**
+             * <p>The identifier of the data source, compute source, or dataset used for table creation.</p>
              * <p>This parameter is required.</p>
              */
             public Builder datasourceId(DatasourceId datasourceId) {
@@ -496,6 +536,7 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
+             * <p>The DDL statement for table creation.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -507,7 +548,10 @@ public class ExecuteDDLRequest extends Request {
             }
 
             /**
-             * DropTable.
+             * <p>Specifies whether to drop the table if it already exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dropTable(Boolean dropTable) {
                 this.dropTable = dropTable;

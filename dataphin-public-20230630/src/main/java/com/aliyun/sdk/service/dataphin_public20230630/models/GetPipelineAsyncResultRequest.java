@@ -127,6 +127,7 @@ public class GetPipelineAsyncResultRequest extends Request {
         }
 
         /**
+         * <p>The asynchronous execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class GetPipelineAsyncResultRequest extends Request {
         }
 
         /**
+         * <p>The request context information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder context(Context context) {
@@ -149,6 +151,7 @@ public class GetPipelineAsyncResultRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +234,11 @@ public class GetPipelineAsyncResultRequest extends Request {
             } 
 
             /**
+             * <p>The current operation environment. Valid values:</p>
+             * <ul>
+             * <li>DEV: development environment.</li>
+             * <li>PROD: production environment.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,6 +250,7 @@ public class GetPipelineAsyncResultRequest extends Request {
             }
 
             /**
+             * <p>The ID of the project to which the integration pipeline task belongs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

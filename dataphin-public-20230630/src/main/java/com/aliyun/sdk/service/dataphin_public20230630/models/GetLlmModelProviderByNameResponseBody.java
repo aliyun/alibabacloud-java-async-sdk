@@ -119,7 +119,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The large language model service provider and available models.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -332,7 +341,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * CnName.
+             * <p>The Chinese name of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>通义千问-Max</p>
              */
             public Builder cnName(String cnName) {
                 this.cnName = cnName;
@@ -340,7 +352,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The model description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>General text generation model</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -348,7 +363,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddingDimensions.
+             * <p>The list of available dimension values for the embedding model. Only embedding models have this value.</p>
              */
             public Builder embeddingDimensions(java.util.List<Integer> embeddingDimensions) {
                 this.embeddingDimensions = embeddingDimensions;
@@ -356,7 +371,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>The enabling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -364,7 +382,14 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * InvokeType.
+             * <p>The model invocation method. Valid values:</p>
+             * <ul>
+             * <li>OPEN_AI</li>
+             * <li>DASH_SCOPE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>DASH_SCOPE</p>
              */
             public Builder invokeType(String invokeType) {
                 this.invokeType = invokeType;
@@ -372,7 +397,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * <p>The model ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder modelId(Long modelId) {
                 this.modelId = modelId;
@@ -380,7 +408,14 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ModelTypes.
+             * <p>The list of model modality types. Valid values:</p>
+             * <ul>
+             * <li>TEXT: text</li>
+             * <li>IMAGE: image</li>
+             * <li>AUDIO: audio</li>
+             * <li>VIDEO: video</li>
+             * <li>EMBEDDING: embedding</li>
+             * </ul>
              */
             public Builder modelTypes(java.util.List<String> modelTypes) {
                 this.modelTypes = modelTypes;
@@ -388,7 +423,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The model name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qwen-max</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -396,7 +434,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProvider.
+             * <p>The service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder serviceProvider(String serviceProvider) {
                 this.serviceProvider = serviceProvider;
@@ -404,7 +445,12 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * <p>The list of model task capabilities. Valid values:</p>
+             * <ul>
+             * <li>ASR: speech recognition</li>
+             * <li>TTS: speech synthesis</li>
+             * <li>TRANSLATION: speech translation</li>
+             * </ul>
              */
             public Builder tasks(java.util.List<String> tasks) {
                 this.tasks = tasks;
@@ -536,7 +582,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             } 
 
             /**
-             * BaseUrl.
+             * <p>The base URL of the model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://dashscope.aliyuncs.com">https://dashscope.aliyuncs.com</a></p>
              */
             public Builder baseUrl(String baseUrl) {
                 this.baseUrl = baseUrl;
@@ -544,7 +593,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>The enabling status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -552,7 +604,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the model service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -560,7 +615,7 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * LlmModels.
+             * <p>The list of models provided by the model service provider.</p>
              */
             public Builder llmModels(java.util.List<LlmModels> llmModels) {
                 this.llmModels = llmModels;
@@ -568,7 +623,14 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderSource.
+             * <p>The source of the model service provider. Valid values:</p>
+             * <ul>
+             * <li>BUILTIN_MODEL: built-in</li>
+             * <li>BYOM: user-provided</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BUILTIN_MODEL</p>
              */
             public Builder providerSource(String providerSource) {
                 this.providerSource = providerSource;
@@ -576,7 +638,18 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ProviderType.
+             * <p>The service provider type. Valid values:</p>
+             * <ul>
+             * <li>BAILIAN</li>
+             * <li>DEEPSEEK</li>
+             * <li>AI_STACK</li>
+             * <li>VLLM</li>
+             * <li>AGENT_ONE</li>
+             * <li>DATAPHIN</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BAILIAN</p>
              */
             public Builder providerType(String providerType) {
                 this.providerType = providerType;
@@ -584,7 +657,10 @@ public class GetLlmModelProviderByNameResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProvider.
+             * <p>The name of the model service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bailian</p>
              */
             public Builder serviceProvider(String serviceProvider) {
                 this.serviceProvider = serviceProvider;

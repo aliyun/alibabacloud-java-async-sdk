@@ -112,6 +112,7 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The request for creating an API.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +256,18 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             /**
-             * BatchInputDataSize.
+             * <p>The data volume per batch. Valid values:</p>
+             * <ul>
+             * <li>When the data volume type is single record, this parameter cannot be set.</li>
+             * <li>When the data volume type is batch:<ul>
+             * <li>If the transaction processing mode is 1, this parameter cannot be set.</li>
+             * <li>If the transaction processing mode is 2, the value ranges from 1 to 1000000.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder batchInputDataSize(Integer batchInputDataSize) {
                 this.batchInputDataSize = batchInputDataSize;
@@ -262,7 +275,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * DataVolumeType.
+             * <p>The data volume type. Valid values:</p>
+             * <ul>
+             * <li>1: single record</li>
+             * <li>2: batch.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder dataVolumeType(Integer dataVolumeType) {
                 this.dataVolumeType = dataVolumeType;
@@ -270,7 +290,19 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ErrorHandlingType.
+             * <p>The error handling method. Valid values:</p>
+             * <ul>
+             * <li>1: partial success allowed</li>
+             * <li>2: all must succeed</li>
+             * </ul>
+             * <p>Parameter rules:</p>
+             * <ul>
+             * <li>When the data volume type is single record, this parameter cannot be set.</li>
+             * <li>When the data volume type is batch, the value is 1 or 2.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorHandlingType(Integer errorHandlingType) {
                 this.errorHandlingType = errorHandlingType;
@@ -278,7 +310,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * MaxInputDataSize.
+             * <p>The maximum number of input records. Valid values:</p>
+             * <ul>
+             * <li>When the data volume type is single record, this parameter cannot be set.</li>
+             * <li>When the data volume type is batch, the value ranges from 1 to 1000000.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder maxInputDataSize(Integer maxInputDataSize) {
                 this.maxInputDataSize = maxInputDataSize;
@@ -286,7 +325,18 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParallelNum.
+             * <p>The degree of parallelism. Valid values:</p>
+             * <ul>
+             * <li>When the data volume type is single record, this parameter cannot be set.</li>
+             * <li>When the data volume type is batch:<ul>
+             * <li>If the transaction processing mode is 1, this parameter cannot be set.</li>
+             * <li>If the transaction processing mode is 2, the value ranges from 1 to 5.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parallelNum(Integer parallelNum) {
                 this.parallelNum = parallelNum;
@@ -294,7 +344,24 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * TransactionType.
+             * <p>The transaction processing mode. Valid values:</p>
+             * <ul>
+             * <li>0: no transaction</li>
+             * <li>1: no batching</li>
+             * <li>2: batch processing</li>
+             * </ul>
+             * <p>Parameter rules:</p>
+             * <ul>
+             * <li>When the data volume type is single record, the transaction processing mode is 0.</li>
+             * <li>When the data volume type is batch:<ul>
+             * <li>If the error handling method is 1, the transaction processing mode is 1 or 2.</li>
+             * <li>If the error handling method is 2, the transaction processing mode can only be 1.</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder transactionType(Integer transactionType) {
                 this.transactionType = transactionType;
@@ -430,7 +497,10 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             /**
-             * DefaultValue.
+             * <p>The default value of the input parameter for operation-type APIs. This parameter takes effect when the parameter is not required. If not specified, the value is null.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -438,7 +508,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ExampleValue.
+             * <p>The example value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -446,6 +519,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether the parameter is required.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -457,6 +531,23 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>&quot;STRING&quot;</li>
+             * <li>&quot;DOUBLE&quot;</li>
+             * <li>&quot;INT&quot;</li>
+             * <li>&quot;DATE&quot;</li>
+             * <li>&quot;LONG&quot;</li>
+             * <li>&quot;FLOAT&quot;</li>
+             * <li>&quot;BOOLEAN&quot;</li>
+             * <li>&quot;SHORT&quot;</li>
+             * <li>&quot;BYTE&quot;</li>
+             * <li>&quot;BIGDECIMAL&quot;</li>
+             * <li>&quot;BINARY&quot;</li>
+             * <li>&quot;ARRAY&quot;</li>
+             * <li>&quot;Array(int)&quot;</li>
+             * <li>&quot;Array(string)&quot;.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -468,7 +559,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParameterDescription.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>字段d</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -476,6 +570,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The parameter name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -487,6 +582,11 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The value type of the parameter. Valid values:</p>
+             * <ul>
+             * <li>1 (single value): A fixed value used for operators such as =, &gt;=, &lt;=, &gt;, &lt;, !=, and between. </li>
+             * <li>2 (multiple values): The input parameter contains multiple values separated by commas (,). Used for In and Not In operators.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -598,7 +698,10 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             /**
-             * ExampleValue.
+             * <p>The example value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>amazing</p>
              */
             public Builder exampleValue(String exampleValue) {
                 this.exampleValue = exampleValue;
@@ -606,6 +709,23 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The data type. Valid values:</p>
+             * <ul>
+             * <li>&quot;STRING&quot;</li>
+             * <li>&quot;DOUBLE&quot;</li>
+             * <li>&quot;INT&quot;</li>
+             * <li>&quot;DATE&quot;</li>
+             * <li>&quot;LONG&quot;</li>
+             * <li>&quot;FLOAT&quot;</li>
+             * <li>&quot;BOOLEAN&quot;</li>
+             * <li>&quot;SHORT&quot;</li>
+             * <li>&quot;BYTE&quot;</li>
+             * <li>&quot;BIGDECIMAL&quot;</li>
+             * <li>&quot;BINARY&quot;</li>
+             * <li>&quot;ARRAY&quot;</li>
+             * <li>&quot;Array(int)&quot;</li>
+             * <li>&quot;Array(string)&quot;.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -617,7 +737,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParameterDescription.
+             * <p>The parameter description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>字段a</p>
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -625,7 +748,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ParameterLocation.
+             * <p>The location of the response parameter for operation-type APIs. This parameter must be set when the API is an operation-type API with batch data volume. Valid values:</p>
+             * <ul>
+             * <li>success: the response data of a successful operation</li>
+             * <li>failed: the response data of a failed operation.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder parameterLocation(String parameterLocation) {
                 this.parameterLocation = parameterLocation;
@@ -633,6 +763,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The parameter name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -784,7 +915,10 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             /**
-             * DatasourceID.
+             * <p>The ID of the datasource. This parameter is required when the API mode is direct datasource connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6668888888888812345L</p>
              */
             public Builder datasourceID(Long datasourceID) {
                 this.datasourceID = datasourceID;
@@ -792,6 +926,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The data type on which the API is based. Valid values:</p>
+             * <ul>
+             * <li>1: datasource.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -803,7 +941,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * IsPaginated.
+             * <p>Specifies whether to paginate the results. This parameter is required only when RequestType is set to List. Default value: false. Pagination is not supported in asynchronous call mode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isPaginated(Boolean isPaginated) {
                 this.isPaginated = isPaginated;
@@ -811,6 +952,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The SQL script.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -822,7 +964,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ScriptRequestParameters.
+             * <p>The list of request parameters for the script API.</p>
              */
             public Builder scriptRequestParameters(java.util.List<ScriptRequestParameters> scriptRequestParameters) {
                 this.scriptRequestParameters = scriptRequestParameters;
@@ -830,7 +972,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ScriptResponseParameters.
+             * <p>The list of response parameters for the script API.</p>
              */
             public Builder scriptResponseParameters(java.util.List<ScriptResponseParameters> scriptResponseParameters) {
                 this.scriptResponseParameters = scriptResponseParameters;
@@ -838,7 +980,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * SortPriority.
+             * <p>The sorting priority. This parameter takes effect only when the SQL mode is basic mode. Default value: 2. Valid values:</p>
+             * <ul>
+             * <li>1: SQL script </li>
+             * <li>2: OrderByList request parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder sortPriority(Integer sortPriority) {
                 this.sortPriority = sortPriority;
@@ -846,6 +995,11 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The SQL mode. Valid values:</p>
+             * <ul>
+             * <li>1: basic mode</li>
+             * <li>2: advanced mode.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1161,6 +1315,7 @@ public class CreateDataServiceApiRequest extends Request {
             } 
 
             /**
+             * <p>The group ID of the API.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1172,7 +1327,11 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The group name of the API.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>默认API分组</p>
              */
             public Builder apiGroupName(String apiGroupName) {
                 this.apiGroupName = apiGroupName;
@@ -1180,6 +1339,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The name of the API.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1191,6 +1351,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The type of the API. Valid values:</p>
+             * <ul>
+             * <li>3: datasource SQL mode.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1202,6 +1366,11 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The protocol. Different gateway types support different protocols. For more information, see the documentation. Valid values:</p>
+             * <ul>
+             * <li>0: HTTP </li>
+             * <li>1: HTTPS.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              */
             public Builder bizProtocol(java.util.List<Integer> bizProtocol) {
@@ -1210,7 +1379,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * CacheTimeout.
+             * <p>The cache timeout period, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder cacheTimeout(Integer cacheTimeout) {
                 this.cacheTimeout = cacheTimeout;
@@ -1218,7 +1390,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * CallMode.
+             * <p>The call mode of the API. Default value: 1. Valid values:</p>
+             * <ul>
+             * <li>1: synchronous call</li>
+             * <li>2: asynchronous call.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder callMode(Integer callMode) {
                 this.callMode = callMode;
@@ -1226,7 +1405,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * CustomUpdateRate.
+             * <p>The custom update frequency. This parameter is required when the update frequency is set to custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>每天8点</p>
              */
             public Builder customUpdateRate(String customUpdateRate) {
                 this.customUpdateRate = customUpdateRate;
@@ -1234,7 +1416,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1242,7 +1427,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * DmlConfig.
+             * <p>The configuration of the operation-type API. This parameter is not required when creating a query-type API.</p>
              */
             public Builder dmlConfig(DmlConfig dmlConfig) {
                 this.dmlConfig = dmlConfig;
@@ -1250,7 +1435,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ExecutionTimeout.
+             * <p>The execution timeout period for asynchronous API calls. This parameter takes effect only for asynchronous API calls and is required when the call mode is asynchronous.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder executionTimeout(Integer executionTimeout) {
                 this.executionTimeout = executionTimeout;
@@ -1258,6 +1446,11 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The development mode of the API. Valid values:</p>
+             * <ul>
+             * <li>0: Basic mode </li>
+             * <li>1: Dev-Prod mode.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1269,6 +1462,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The ID of the data service project.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1280,6 +1474,14 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The request method of the API. Valid values:</p>
+             * <ul>
+             * <li>0 (GET): Returns a single record. The query result is unique. </li>
+             * <li>1 (LIST): Returns multiple records.</li>
+             * <li>2 (CREATE): Creates objects. Supports single or batch creation.</li>
+             * <li>3 (UPDATE): Updates objects. Supports single or batch updates.</li>
+             * <li>4 (DELETE): Deletes objects. Supports single or batch deletions.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1291,7 +1493,10 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * ReturnSqlSwitch.
+             * <p>Specifies whether to return the SQL in the result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder returnSqlSwitch(Boolean returnSqlSwitch) {
                 this.returnSqlSwitch = returnSqlSwitch;
@@ -1299,7 +1504,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * RowPermissionIds.
+             * <p>The list of row-level permission IDs.</p>
              */
             public Builder rowPermissionIds(java.util.List<Long> rowPermissionIds) {
                 this.rowPermissionIds = rowPermissionIds;
@@ -1307,6 +1512,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The details of the script API.</p>
              * <p>This parameter is required.</p>
              */
             public Builder scriptDetails(ScriptDetails scriptDetails) {
@@ -1315,6 +1521,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The timeout period, in seconds.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1326,7 +1533,16 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
-             * UpdateRate.
+             * <p>The update frequency. Default value: 1. Valid values:</p>
+             * <ul>
+             * <li>0: custom</li>
+             * <li>1: day</li>
+             * <li>2: hour</li>
+             * <li>3: minute.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder updateRate(Integer updateRate) {
                 this.updateRate = updateRate;
@@ -1334,6 +1550,7 @@ public class CreateDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The version of the API.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

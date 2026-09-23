@@ -126,7 +126,14 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>Project environment. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DEV</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class GetProjectRequest extends Request {
         }
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,6 +155,7 @@ public class GetProjectRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

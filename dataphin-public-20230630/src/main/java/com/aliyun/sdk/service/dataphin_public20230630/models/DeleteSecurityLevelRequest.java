@@ -112,6 +112,7 @@ public class DeleteSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteSecurityLevelRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +204,10 @@ public class DeleteSecurityLevelRequest extends Request {
             } 
 
             /**
-             * Index.
+             * <p>The sensitivity level of the classification level. If this parameter is not specified, the classification level is deleted based on an exact match of the classification level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -210,7 +215,10 @@ public class DeleteSecurityLevelRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The classification level name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;

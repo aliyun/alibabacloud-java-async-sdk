@@ -112,6 +112,7 @@ public class GetTransferInfoRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class GetTransferInfoRequest extends Request {
         }
 
         /**
+         * <p>The transfer record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

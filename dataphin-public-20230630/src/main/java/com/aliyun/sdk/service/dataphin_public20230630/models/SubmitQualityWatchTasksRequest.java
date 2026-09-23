@@ -112,6 +112,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
         }
 
         /**
+         * <p>The submit command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder submitCommand(SubmitCommand submitCommand) {
@@ -216,7 +218,10 @@ public class SubmitQualityWatchTasksRequest extends Request {
             } 
 
             /**
-             * BizDate.
+             * <p>The business date, in the yyyy-MM-dd format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -224,7 +229,10 @@ public class SubmitQualityWatchTasksRequest extends Request {
             }
 
             /**
-             * PartitionExpression.
+             * <p>The partition expression. This is a custom expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds=${yyyyMMdd}</p>
              */
             public Builder partitionExpression(String partitionExpression) {
                 this.partitionExpression = partitionExpression;
@@ -232,6 +240,7 @@ public class SubmitQualityWatchTasksRequest extends Request {
             }
 
             /**
+             * <p>The monitored object IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder watchIdList(java.util.List<Long> watchIdList) {

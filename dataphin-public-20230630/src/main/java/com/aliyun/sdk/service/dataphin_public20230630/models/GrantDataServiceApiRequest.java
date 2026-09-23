@@ -127,6 +127,7 @@ public class GrantDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The grant command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder grantCommand(GrantCommand grantCommand) {
@@ -137,6 +138,7 @@ public class GrantDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class GrantDataServiceApiRequest extends Request {
         }
 
         /**
+         * <p>The data service project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +219,10 @@ public class GrantDataServiceApiRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The API permission field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -270,7 +276,10 @@ public class GrantDataServiceApiRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The API permission field ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -457,6 +466,7 @@ public class GrantDataServiceApiRequest extends Request {
             } 
 
             /**
+             * <p>The API ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -468,7 +478,7 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * <p>AppID</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>1201</p>
@@ -479,7 +489,10 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * ApplyDev.
+             * <p>Specifies whether to request development environment permissions for operation-type APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder applyDev(Boolean applyDev) {
                 this.applyDev = applyDev;
@@ -487,7 +500,10 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * ApplyProd.
+             * <p>Specifies whether to request production environment permissions for operation-type APIs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder applyProd(Boolean applyProd) {
                 this.applyProd = applyProd;
@@ -495,7 +511,16 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * AuthTypes.
+             * <p>The list of authorization permission types. Valid values:</p>
+             * <ul>
+             * <li>When the grantee is an application, the following permission types are supported. To grant delegation permissions, you must also grant usage permissions.<ul>
+             * <li>USE: usage permission.</li>
+             * <li>DELEGATION: delegation permission.</li>
+             * </ul>
+             * </li>
+             * <li>When the grantee is an individual, only USE (usage) permission is supported.</li>
+             * <li>If this parameter is not specified, the default value is USE (usage) permission.</li>
+             * </ul>
              */
             public Builder authTypes(java.util.List<String> authTypes) {
                 this.authTypes = authTypes;
@@ -503,7 +528,7 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * DevFieldList.
+             * <p>The list of development environment permission fields for query-type APIs. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty. This parameter is not required for operation-type APIs.</p>
              */
             public Builder devFieldList(java.util.List<DevFieldList> devFieldList) {
                 this.devFieldList = devFieldList;
@@ -511,6 +536,7 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The expiration date in the format of yyyy-MM-dd.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -522,7 +548,14 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * GranteeType.
+             * <p>The authorization object type. Valid values:</p>
+             * <ul>
+             * <li>APP: application.</li>
+             * <li>USER: user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>APP</p>
              */
             public Builder granteeType(String granteeType) {
                 this.granteeType = granteeType;
@@ -530,7 +563,7 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * ProdFieldList.
+             * <p>The list of production environment permission fields for query-type APIs. This parameter is required in basic mode. This parameter is not required for operation-type APIs.</p>
              */
             public Builder prodFieldList(java.util.List<ProdFieldList> prodFieldList) {
                 this.prodFieldList = prodFieldList;
@@ -538,6 +571,7 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
+             * <p>The reason for the authorization request.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -549,7 +583,10 @@ public class GrantDataServiceApiRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12345</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

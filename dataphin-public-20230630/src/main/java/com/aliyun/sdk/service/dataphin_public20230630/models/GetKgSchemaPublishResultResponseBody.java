@@ -119,7 +119,10 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The publish result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -241,7 +250,10 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The publish content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -249,7 +261,17 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The publish status. Valid values:</p>
+             * <ul>
+             * <li>Publishing: Publishing in progress.</li>
+             * <li>Published: Published successfully.</li>
+             * <li>Partial: Partially completed.</li>
+             * <li>Failed: Failed.</li>
+             * <li>RollbackFailed: Publish failed and rollback failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Published</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -257,7 +279,10 @@ public class GetKgSchemaPublishResultResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder versionId(Integer versionId) {
                 this.versionId = versionId;

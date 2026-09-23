@@ -112,6 +112,7 @@ public class ListRowPermissionByUserIdRequest extends Request {
         }
 
         /**
+         * <p>The request command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listRowPermissionByUserIdQuery(ListRowPermissionByUserIdQuery listRowPermissionByUserIdQuery) {
@@ -122,6 +123,7 @@ public class ListRowPermissionByUserIdRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,6 +220,7 @@ public class ListRowPermissionByUserIdRequest extends Request {
             } 
 
             /**
+             * <p>The specified operator.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -229,6 +232,7 @@ public class ListRowPermissionByUserIdRequest extends Request {
             }
 
             /**
+             * <p>The page number.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -240,6 +244,7 @@ public class ListRowPermissionByUserIdRequest extends Request {
             }
 
             /**
+             * <p>The page size.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

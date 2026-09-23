@@ -111,7 +111,7 @@ public class GetBelongAssetMappingRequest extends Request {
         }
 
         /**
-         * AssetMappingQuery.
+         * <p>Query command.</p>
          */
         public Builder assetMappingQuery(AssetMappingQuery assetMappingQuery) {
             String assetMappingQueryShrink = shrink(assetMappingQuery, "AssetMappingQuery", "json");
@@ -121,6 +121,7 @@ public class GetBelongAssetMappingRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,6 +203,7 @@ public class GetBelongAssetMappingRequest extends Request {
             } 
 
             /**
+             * <p>The GUID of the belonging asset.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -213,7 +215,10 @@ public class GetBelongAssetMappingRequest extends Request {
             }
 
             /**
-             * RelationType.
+             * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VALID</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;

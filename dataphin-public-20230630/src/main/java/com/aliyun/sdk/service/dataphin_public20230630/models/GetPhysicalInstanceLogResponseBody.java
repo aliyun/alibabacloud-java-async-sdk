@@ -119,7 +119,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned if the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,7 +163,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -159,7 +174,7 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TaskrunLogList.
+         * <p>All execution logs of the instance, including logs from multiple reruns.</p>
          */
         public Builder taskrunLogList(java.util.List<TaskrunLogList> taskrunLogList) {
             this.taskrunLogList = taskrunLogList;
@@ -277,7 +292,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Duration.
+             * <p>The task execution duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60s</p>
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -285,7 +303,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The time when the task finished running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:48:13</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -293,7 +314,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogContent.
+             * <p>The run log content. This value is empty if the task has not been run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -301,7 +325,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The time when the task started running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -309,7 +336,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The run status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +347,10 @@ public class GetPhysicalInstanceLogResponseBody extends TeaModel {
             }
 
             /**
-             * TaskrunId.
+             * <p>The task ID for each run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tr_23231</p>
              */
             public Builder taskrunId(String taskrunId) {
                 this.taskrunId = taskrunId;

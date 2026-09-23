@@ -112,6 +112,7 @@ public class UploadDataSourceFileRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +125,10 @@ public class UploadDataSourceFileRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -133,6 +137,7 @@ public class UploadDataSourceFileRequest extends Request {
         }
 
         /**
+         * <p>The request object for uploading a datasource authentication file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder uploadCommand(UploadCommand uploadCommand) {
@@ -204,6 +209,7 @@ public class UploadDataSourceFileRequest extends Request {
             } 
 
             /**
+             * <p>The Base64-encoded file content. The decoded file size must be between 0 and 5 MB.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -215,6 +221,7 @@ public class UploadDataSourceFileRequest extends Request {
             }
 
             /**
+             * <p>The file name, including the extension. The extension is validated against a whitelist. Supported extensions: jar, xml, conf, keytab, jks, rsa, pem, yaml, keystore, properties, and key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

@@ -112,6 +112,7 @@ public class RevokeResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class RevokeResourcePermissionRequest extends Request {
         }
 
         /**
+         * <p>The authorization revocation request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder revokeCommand(RevokeCommand revokeCommand) {
@@ -189,7 +191,10 @@ public class RevokeResourcePermissionRequest extends Request {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300002102.beginner_test.amin_table</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -298,7 +303,7 @@ public class RevokeResourcePermissionRequest extends Request {
             } 
 
             /**
-             * OperateList.
+             * <p>The list of operations.</p>
              */
             public Builder operateList(java.util.List<String> operateList) {
                 this.operateList = operateList;
@@ -306,7 +311,10 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
-             * Reason.
+             * <p>The reason for revoking the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -314,6 +322,7 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The list of resources.</p>
              * <p>This parameter is required.</p>
              */
             public Builder resourceList(java.util.List<ResourceList> resourceList) {
@@ -322,6 +331,7 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The resource type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -333,6 +343,7 @@ public class RevokeResourcePermissionRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

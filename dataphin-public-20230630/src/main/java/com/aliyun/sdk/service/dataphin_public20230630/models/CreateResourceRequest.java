@@ -112,6 +112,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
+         * <p>The create command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -122,6 +123,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -288,6 +290,7 @@ public class CreateResourceRequest extends Request {
             } 
 
             /**
+             * <p>The commit remarks.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -299,6 +302,12 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The compute engine type. Valid values:</p>
+             * <ul>
+             * <li>MAX_COMPUTE</li>
+             * <li>HADOOP</li>
+             * <li>NONE.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -310,6 +319,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The description of the resource file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -321,6 +331,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The folder in which the resource file is stored.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -332,6 +343,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The resource name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -343,6 +355,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -354,6 +367,13 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The type of the resource file. Valid values:</p>
+             * <ul>
+             * <li>FILE: common file.</li>
+             * <li>JAR: JAR file.</li>
+             * <li>PYTHON: Python file.</li>
+             * <li>OTHERS: other type of file.</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -365,6 +385,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
+             * <p>The storage address of the resource file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

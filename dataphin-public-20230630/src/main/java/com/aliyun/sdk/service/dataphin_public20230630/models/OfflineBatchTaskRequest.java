@@ -142,6 +142,7 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The remarks for the offline operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The node ID in the node directory tree.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class OfflineBatchTaskRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

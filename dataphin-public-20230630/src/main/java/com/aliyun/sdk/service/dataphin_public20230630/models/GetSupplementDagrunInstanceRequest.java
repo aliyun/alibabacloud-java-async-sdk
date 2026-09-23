@@ -126,7 +126,7 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         }
 
         /**
-         * <p>Dagrun ID</p>
+         * <p>The dagrun ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,14 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment. </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -148,6 +155,7 @@ public class GetSupplementDagrunInstanceRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

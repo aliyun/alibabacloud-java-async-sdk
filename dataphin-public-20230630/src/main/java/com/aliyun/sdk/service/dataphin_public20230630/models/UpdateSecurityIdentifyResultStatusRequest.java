@@ -112,6 +112,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
         }
 
         /**
+         * <p>The update instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -204,6 +206,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
             } 
 
             /**
+             * <p>Specifies whether the result is effective.</p>
              * <p>This parameter is required.</p>
              */
             public Builder enable(Boolean enable) {
@@ -212,6 +215,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends Request {
             }
 
             /**
+             * <p>The list of identification result IDs.</p>
              * <p>This parameter is required.</p>
              */
             public Builder identifyResultIdList(java.util.List<Long> identifyResultIdList) {

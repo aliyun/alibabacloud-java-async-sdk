@@ -119,7 +119,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The response data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -251,7 +263,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * ClientFileResourceId.
+             * <p>The client file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XXXX-XXXX-XXXX-XXXX</p>
              */
             public Builder clientFileResourceId(String clientFileResourceId) {
                 this.clientFileResourceId = clientFileResourceId;
@@ -259,7 +274,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClientFileResourceName.
+             * <p>The client file name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-cleint.zip</p>
              */
             public Builder clientFileResourceName(String clientFileResourceName) {
                 this.clientFileResourceName = clientFileResourceName;
@@ -267,7 +285,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClientName.
+             * <p>The client name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>spark-clinet</p>
              */
             public Builder clientName(String clientName) {
                 this.clientName = clientName;
@@ -275,7 +296,10 @@ public class GetSparkLocalClientInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Editable.
+             * <p>Indicates whether the client information is editable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true/false</p>
              */
             public Builder editable(Boolean editable) {
                 this.editable = editable;

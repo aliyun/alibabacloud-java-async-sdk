@@ -112,6 +112,7 @@ public class GetCatalogAssetDetailsRequest extends Request {
         }
 
         /**
+         * <p>The paged query for the listed asset catalog.</p>
          * <p>This parameter is required.</p>
          */
         public Builder getCatalogAssetDetailsQuery(GetCatalogAssetDetailsQuery getCatalogAssetDetailsQuery) {
@@ -122,6 +123,7 @@ public class GetCatalogAssetDetailsRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class GetCatalogAssetDetailsRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -216,6 +221,7 @@ public class GetCatalogAssetDetailsRequest extends Request {
             } 
 
             /**
+             * <p>The asset GUID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -227,7 +233,11 @@ public class GetCatalogAssetDetailsRequest extends Request {
             }
 
             /**
-             * IncludeColumns.
+             * <p>Specifies whether to include the field list. Default value: false. Valid values:</p>
+             * <ul>
+             * <li>false: Not included.</li>
+             * <li>true: Included.</li>
+             * </ul>
              */
             public Builder includeColumns(Boolean includeColumns) {
                 this.includeColumns = includeColumns;
@@ -235,7 +245,11 @@ public class GetCatalogAssetDetailsRequest extends Request {
             }
 
             /**
-             * IncludeDetailedAttributes.
+             * <p>Specifies whether to include detailed data. Default value: false. Valid values:</p>
+             * <ul>
+             * <li>false: Not included.</li>
+             * <li>true: Included.</li>
+             * </ul>
              */
             public Builder includeDetailedAttributes(Boolean includeDetailedAttributes) {
                 this.includeDetailedAttributes = includeDetailedAttributes;

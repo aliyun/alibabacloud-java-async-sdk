@@ -112,6 +112,7 @@ public class DeleteSecurityClassifyRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteSecurityClassifyRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +217,10 @@ public class DeleteSecurityClassifyRequest extends Request {
             } 
 
             /**
-             * Id.
+             * <p>The categorization ID. If this parameter is not specified, the categorization is matched and deleted based on the categorization name and parent path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -223,7 +228,10 @@ public class DeleteSecurityClassifyRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The categorization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +239,10 @@ public class DeleteSecurityClassifyRequest extends Request {
             }
 
             /**
-             * ParentPath.
+             * <p>The categorization path. Default value: /.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/</p>
              */
             public Builder parentPath(String parentPath) {
                 this.parentPath = parentPath;

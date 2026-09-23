@@ -127,6 +127,20 @@ public class GetDirectoryTreeRequest extends Request {
         }
 
         /**
+         * <p>Directory type.</p>
+         * <ul>
+         * <li>Ad-hoc Query: tempCode</li>
+         * <li>Code Task: codeManage</li>
+         * <li>Offline Pipeline: offlinePipeline</li>
+         * <li>Pipeline Custom Component: offlinePipelineCustomPlugin</li>
+         * <li>Sync Task: dataX</li>
+         * <li>Real-time Meta Table: streamMeta</li>
+         * <li>Real-time Custom Source: streamCustomDataSource</li>
+         * <li>Real-time Compute Template: streamTemplate</li>
+         * <li>Resource Management: resourceManage</li>
+         * <li>Offline Function: udfResource</li>
+         * <li>Real-time Function: streamFunction</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +153,7 @@ public class GetDirectoryTreeRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +175,7 @@ public class GetDirectoryTreeRequest extends Request {
         }
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

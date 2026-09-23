@@ -119,7 +119,10 @@ public class CreateStandardMappingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class CreateStandardMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The creation result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class CreateStandardMappingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class CreateStandardMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class CreateStandardMappingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,7 @@ public class CreateStandardMappingResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedGuidList.
+             * <p>The list of asset GUIDs that failed to be created.</p>
              */
             public Builder failedGuidList(java.util.List<String> failedGuidList) {
                 this.failedGuidList = failedGuidList;
@@ -236,7 +245,10 @@ public class CreateStandardMappingResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * <p>The number of successfully added mappings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;

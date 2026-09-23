@@ -127,6 +127,7 @@ public class RemoveProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,7 @@ public class RemoveProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class RemoveProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The command to remove a member.</p>
          * <p>This parameter is required.</p>
          */
         public Builder removeCommand(RemoveCommand removeCommand) {
@@ -230,6 +233,7 @@ public class RemoveProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The environment identifier. Valid values: DEV and PROD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -241,7 +245,7 @@ public class RemoveProjectMemberRequest extends Request {
             }
 
             /**
-             * UserIdList.
+             * <p>The user IDs.</p>
              */
             public Builder userIdList(java.util.List<String> userIdList) {
                 this.userIdList = userIdList;

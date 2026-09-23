@@ -119,7 +119,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * LogInfo.
+         * <p>The log details.</p>
          */
         public Builder logInfo(LogInfo logInfo) {
             this.logInfo = logInfo;
@@ -143,7 +149,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +302,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Content.
+             * <p>The runtime log content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -298,7 +313,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * <p>Indicates whether the next log entry exists.</p>
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -306,7 +321,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * HasResult.
+             * <p>Indicates whether the current query produces a result.</p>
              */
             public Builder hasResult(Boolean hasResult) {
                 this.hasResult = hasResult;
@@ -314,7 +329,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * NextOffset.
+             * <p>The start position of the next log entry.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021</p>
              */
             public Builder nextOffset(Integer nextOffset) {
                 this.nextOffset = nextOffset;
@@ -322,7 +340,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * SubTaskId.
+             * <p>The subtask ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder subTaskId(Integer subTaskId) {
                 this.subTaskId = subTaskId;
@@ -330,7 +351,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute_SQL_300000843_1611548758327</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -338,7 +362,10 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>The task running status. Example: WAIT_RESOURCE indicates that the task is waiting for resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WAIT_RESOURCE</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

@@ -119,7 +119,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>Error code. A value of OK indicates the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Operation result</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>HTTP status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
             } 
 
             /**
-             * Message.
+             * <p>Exception message</p>
+             * 
+             * <strong>example:</strong>
+             * <p>npe</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -233,7 +251,10 @@ public class UpdateBizMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Indicates whether the update was successful. Valid values: true (success) and false (failure)</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder success(Boolean success) {
                 this.success = success;

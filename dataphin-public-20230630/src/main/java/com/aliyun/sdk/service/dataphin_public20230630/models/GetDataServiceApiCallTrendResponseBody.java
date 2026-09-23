@@ -119,7 +119,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The access trend data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +263,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiIdList.
+             * <p>The API IDs.</p>
              */
             public Builder apiIdList(java.util.List<Long> apiIdList) {
                 this.apiIdList = apiIdList;
@@ -262,7 +271,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorApiCount.
+             * <p>The number of APIs with call errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder errorApiCount(Integer errorApiCount) {
                 this.errorApiCount = errorApiCount;
@@ -270,7 +282,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorAppCount.
+             * <p>The number of affected applications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder errorAppCount(Integer errorAppCount) {
                 this.errorAppCount = errorAppCount;
@@ -278,7 +293,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Minute.
+             * <p>The time scale in minutes, in the format of yyyy-MM-dd HH:mm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 08:00</p>
              */
             public Builder minute(String minute) {
                 this.minute = minute;
@@ -358,7 +376,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * CallCount.
+             * <p>The number of calls.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1021</p>
              */
             public Builder callCount(Long callCount) {
                 this.callCount = callCount;
@@ -366,7 +387,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCount.
+             * <p>The number of call errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102</p>
              */
             public Builder errorCount(Long errorCount) {
                 this.errorCount = errorCount;
@@ -374,7 +398,10 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Minute.
+             * <p>The minute in the format of yyyy_MMdd_HHmm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder minute(String minute) {
                 this.minute = minute;
@@ -441,7 +468,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             } 
 
             /**
-             * CallErrorImpactTrendList.
+             * <p>The call error impact trends, sorted by minute in ascending order.</p>
              */
             public Builder callErrorImpactTrendList(java.util.List<CallErrorImpactTrendList> callErrorImpactTrendList) {
                 this.callErrorImpactTrendList = callErrorImpactTrendList;
@@ -449,7 +476,7 @@ public class GetDataServiceApiCallTrendResponseBody extends TeaModel {
             }
 
             /**
-             * CallErrorTrendList.
+             * <p>The call error trends, sorted by minute in ascending order.</p>
              */
             public Builder callErrorTrendList(java.util.List<CallErrorTrendList> callErrorTrendList) {
                 this.callErrorTrendList = callErrorTrendList;

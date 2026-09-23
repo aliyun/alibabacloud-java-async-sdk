@@ -119,7 +119,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The details of the backend exception.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * <p>The paging query result.</p>
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -162,7 +171,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * Key.
+             * <p>The configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -236,7 +248,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the configuration item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -511,7 +526,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AppId.
+             * <p>The primary key ID of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1022</p>
              */
             public Builder appId(Integer appId) {
                 this.appId = appId;
@@ -519,7 +537,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -527,7 +548,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyUserId.
+             * <p>The ID of the permission account, which is the applicant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30012101</p>
              */
             public Builder applyUserId(String applyUserId) {
                 this.applyUserId = applyUserId;
@@ -535,7 +559,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplyUserName.
+             * <p>The permission account, which is the applicant.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试</p>
              */
             public Builder applyUserName(String applyUserName) {
                 this.applyUserName = applyUserName;
@@ -543,7 +570,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The expiration date in the format of yyyy-MM-dd.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30</p>
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -551,7 +581,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The application ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -559,7 +592,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * IsProjectManager.
+             * <p>Indicates whether the current user is a project administrator.</p>
              */
             public Builder isProjectManager(Boolean isProjectManager) {
                 this.isProjectManager = isProjectManager;
@@ -567,7 +600,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The ID of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1121</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -575,7 +611,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUserName.
+             * <p>The name of the owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerUserName(String ownerUserName) {
                 this.ownerUserName = ownerUserName;
@@ -583,7 +622,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeAccount.
+             * <p>The permission account. Valid values: 0: individual account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder privilegeAccount(Integer privilegeAccount) {
                 this.privilegeAccount = privilegeAccount;
@@ -591,7 +633,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivilegeType.
+             * <p>The permission type. Valid values: 0: usage permission. 1: development permission.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder privilegeType(Integer privilegeType) {
                 this.privilegeType = privilegeType;
@@ -599,7 +644,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102122</p>
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -607,7 +655,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The project name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -615,7 +666,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RealHasOwnerPrivilege.
+             * <p>Indicates whether the user actually has owner permissions on this application. The user may lack permissions because of expiration or other reasons.</p>
              */
             public Builder realHasOwnerPrivilege(Boolean realHasOwnerPrivilege) {
                 this.realHasOwnerPrivilege = realHasOwnerPrivilege;
@@ -623,7 +674,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RealHasPrivilege.
+             * <p>Indicates whether the user actually has permissions.</p>
              */
             public Builder realHasPrivilege(Boolean realHasPrivilege) {
                 this.realHasPrivilege = realHasPrivilege;
@@ -631,7 +682,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RemarkForDebugList.
+             * <p>The descriptions used for troubleshooting.</p>
              */
             public Builder remarkForDebugList(java.util.List<RemarkForDebugList> remarkForDebugList) {
                 this.remarkForDebugList = remarkForDebugList;
@@ -639,7 +690,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Revocable.
+             * <p>Indicates whether the permissions can be returned or revoked.</p>
              */
             public Builder revocable(Boolean revocable) {
                 this.revocable = revocable;
@@ -647,7 +698,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RevocableDetail.
+             * <p>The detailed status of the revoke button. Valid values: -1: super administrators cannot revoke. -2: owners cannot revoke. -3: project administrators without actual permissions are grayed out. -4: regular users without permissions cannot revoke. 1: project administrators with actual permissions can revoke. 2: regular users with permissions can revoke.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder revocableDetail(Integer revocableDetail) {
                 this.revocableDetail = revocableDetail;
@@ -714,7 +768,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthorizedAppList.
+             * <p>The paginated list of authorized applications.</p>
              */
             public Builder authorizedAppList(java.util.List<AuthorizedAppList> authorizedAppList) {
                 this.authorizedAppList = authorizedAppList;
@@ -722,7 +776,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>68</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

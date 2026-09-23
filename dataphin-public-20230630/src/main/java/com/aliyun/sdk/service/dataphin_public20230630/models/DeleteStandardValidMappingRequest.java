@@ -112,6 +112,7 @@ public class DeleteStandardValidMappingRequest extends Request {
         }
 
         /**
+         * <p>The delete instruction.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteCommand(DeleteCommand deleteCommand) {
@@ -122,6 +123,7 @@ public class DeleteStandardValidMappingRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,7 +218,7 @@ public class DeleteStandardValidMappingRequest extends Request {
             } 
 
             /**
-             * BelongGuidList.
+             * <p>The list of parent GUIDs. A maximum of 1000 GUIDs are supported.</p>
              */
             public Builder belongGuidList(java.util.List<String> belongGuidList) {
                 this.belongGuidList = belongGuidList;
@@ -224,7 +226,7 @@ public class DeleteStandardValidMappingRequest extends Request {
             }
 
             /**
-             * GuidList.
+             * <p>The list of GUIDs. A maximum of 1000 GUIDs are supported.</p>
              */
             public Builder guidList(java.util.List<String> guidList) {
                 this.guidList = guidList;
@@ -232,6 +234,7 @@ public class DeleteStandardValidMappingRequest extends Request {
             }
 
             /**
+             * <p>The standard ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

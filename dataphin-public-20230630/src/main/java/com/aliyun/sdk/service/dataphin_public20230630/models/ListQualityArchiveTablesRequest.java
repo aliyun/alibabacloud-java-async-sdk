@@ -112,6 +112,7 @@ public class ListQualityArchiveTablesRequest extends Request {
         }
 
         /**
+         * <p>The input parameters for querying the anomaly archived table list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListQualityArchiveTablesRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +136,10 @@ public class ListQualityArchiveTablesRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -190,6 +195,7 @@ public class ListQualityArchiveTablesRequest extends Request {
             } 
 
             /**
+             * <p>The ID of the monitored object.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

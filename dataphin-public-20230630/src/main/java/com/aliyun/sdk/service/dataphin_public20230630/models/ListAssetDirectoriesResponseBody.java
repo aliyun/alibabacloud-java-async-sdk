@@ -119,7 +119,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The paginated result of asset topic folders.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30001011</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -236,7 +248,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>John</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -420,7 +435,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DirectoryDescription.
+             * <p>The folder description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core metrics asset folder</p>
              */
             public Builder directoryDescription(String directoryDescription) {
                 this.directoryDescription = directoryDescription;
@@ -428,7 +446,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * <p>The folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8223183275</p>
              */
             public Builder directoryId(Long directoryId) {
                 this.directoryId = directoryId;
@@ -436,7 +457,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryName.
+             * <p>The folder name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Core Metrics</p>
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -444,7 +468,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullPath.
+             * <p>The display path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/Data Governance/Core Metrics</p>
              */
             public Builder fullPath(String fullPath) {
                 this.fullPath = fullPath;
@@ -452,7 +479,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullPathIds.
+             * <p>The ID path from the top level to the current folder.</p>
              */
             public Builder fullPathIds(java.util.List<Long> fullPathIds) {
                 this.fullPathIds = fullPathIds;
@@ -460,7 +487,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * FullPathNames.
+             * <p>The name path from the top level to the current folder.</p>
              */
             public Builder fullPathNames(java.util.List<String> fullPathNames) {
                 this.fullPathNames = fullPathNames;
@@ -468,7 +495,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * HasChildren.
+             * <p>Indicates whether published direct child folders exist.</p>
              */
             public Builder hasChildren(Boolean hasChildren) {
                 this.hasChildren = hasChildren;
@@ -476,7 +503,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The absolute level of the folder.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7120213</p>
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -484,7 +514,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Modifier.
+             * <p>The last modifier.</p>
              */
             public Builder modifier(Modifier modifier) {
                 this.modifier = modifier;
@@ -492,7 +522,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The last modified time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-30 00:00:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -500,7 +533,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ParentDirectoryId.
+             * <p>The parent folder ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-292276281678</p>
              */
             public Builder parentDirectoryId(Long parentDirectoryId) {
                 this.parentDirectoryId = parentDirectoryId;
@@ -593,7 +629,7 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             } 
 
             /**
-             * DirectoryList.
+             * <p>The folder list.</p>
              */
             public Builder directoryList(java.util.List<DirectoryList> directoryList) {
                 this.directoryList = directoryList;
@@ -601,7 +637,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * <p>The topic ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>471794724245</p>
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -609,7 +648,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * <p>The topic name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Data Governance</p>
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -617,7 +659,10 @@ public class ListAssetDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of records that match the conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-165955346599</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

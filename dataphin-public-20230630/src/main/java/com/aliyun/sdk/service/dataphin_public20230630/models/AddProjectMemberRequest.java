@@ -127,6 +127,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The command for adding members.</p>
          * <p>This parameter is required.</p>
          */
         public Builder addCommand(AddCommand addCommand) {
@@ -137,6 +138,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -149,6 +151,7 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +164,10 @@ public class AddProjectMemberRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -231,6 +237,7 @@ public class AddProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The member roles. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
              * <p>This parameter is required.</p>
              */
             public Builder roleList(java.util.List<Integer> roleList) {
@@ -239,6 +246,7 @@ public class AddProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The user ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -311,6 +319,7 @@ public class AddProjectMemberRequest extends Request {
             } 
 
             /**
+             * <p>The environment identifier. Valid values: DEV, PROD.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -322,6 +331,7 @@ public class AddProjectMemberRequest extends Request {
             }
 
             /**
+             * <p>The list of user members.</p>
              * <p>This parameter is required.</p>
              */
             public Builder userList(java.util.List<UserList> userList) {

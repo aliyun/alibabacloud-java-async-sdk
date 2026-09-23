@@ -111,6 +111,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,7 +133,7 @@ public class UpdateUserGroupRequest extends Request {
         }
 
         /**
-         * UpdateCommand.
+         * <p>The command to edit the user group.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
             String updateCommandShrink = shrink(updateCommand, "UpdateCommand", "json");
@@ -228,7 +229,7 @@ public class UpdateUserGroupRequest extends Request {
             } 
 
             /**
-             * AdminUserIdList.
+             * <p>The list of administrator user IDs for the user group.</p>
              */
             public Builder adminUserIdList(java.util.List<String> adminUserIdList) {
                 this.adminUserIdList = adminUserIdList;
@@ -236,7 +237,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -244,6 +248,7 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
+             * <p>The ID of the user group.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -255,7 +260,10 @@ public class UpdateUserGroupRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder name(String name) {
                 this.name = name;

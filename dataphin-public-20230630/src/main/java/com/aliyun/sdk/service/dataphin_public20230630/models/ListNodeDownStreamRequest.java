@@ -126,7 +126,14 @@ public class ListNodeDownStreamRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: development environment. </li>
+         * <li>PROD (default): production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -135,6 +142,7 @@ public class ListNodeDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The request for querying node downstream.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -145,6 +153,7 @@ public class ListNodeDownStreamRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +166,10 @@ public class ListNodeDownStreamRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -238,7 +250,10 @@ public class ListNodeDownStreamRequest extends Request {
             } 
 
             /**
-             * Exclude.
+             * <p>Specifies whether to exclude the matched results. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exclude(Boolean exclude) {
                 this.exclude = exclude;
@@ -246,7 +261,15 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>The filter key. Valid values:</p>
+             * <ul>
+             * <li>PROJECT: project</li>
+             * <li>PHYSICAL_NODE_ID: physical node ID</li>
+             * <li>LOGICAL_TABLE_NODE_ID: logical table ID</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PROJECT</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +277,7 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
-             * ValueList.
+             * <p>The list of filter values.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -321,7 +344,10 @@ public class ListNodeDownStreamRequest extends Request {
             } 
 
             /**
-             * FieldIdList.
+             * <p>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>112</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -329,7 +355,10 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_23431</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -423,7 +452,10 @@ public class ListNodeDownStreamRequest extends Request {
             } 
 
             /**
-             * DownStreamDepth.
+             * <p>The depth of the downstream query. Default value: 3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder downStreamDepth(Integer downStreamDepth) {
                 this.downStreamDepth = downStreamDepth;
@@ -431,7 +463,7 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
-             * FilterList.
+             * <p>The list of filters. You can include or exclude results based on projects and nodes. Default value: empty.</p>
              */
             public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
@@ -439,6 +471,7 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
+             * <p>The list of nodes.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
@@ -447,7 +480,10 @@ public class ListNodeDownStreamRequest extends Request {
             }
 
             /**
-             * ProjectId.
+             * <p>The project ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123011</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

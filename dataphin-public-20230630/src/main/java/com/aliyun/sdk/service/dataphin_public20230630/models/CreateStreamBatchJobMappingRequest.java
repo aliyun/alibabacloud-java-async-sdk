@@ -112,6 +112,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,6 +134,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
         }
 
         /**
+         * <p>The stream-batch integrated node information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder streamBatchJobMappingCreateCommand(StreamBatchJobMappingCreateCommand streamBatchJobMappingCreateCommand) {
@@ -315,6 +317,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             } 
 
             /**
+             * <p>The cluster ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -326,7 +329,10 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p>The description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>这是一段任务的描述信息</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,6 +340,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The folder in which the node is generated.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -345,6 +352,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The Flink DPI engine version.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,6 +364,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The environment.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -367,6 +376,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The file name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -378,6 +388,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The file type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -389,6 +400,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -400,6 +412,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The queue name.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -411,6 +424,7 @@ public class CreateStreamBatchJobMappingRequest extends Request {
             }
 
             /**
+             * <p>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

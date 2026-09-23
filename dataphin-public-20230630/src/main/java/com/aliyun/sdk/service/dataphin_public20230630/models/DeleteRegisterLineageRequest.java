@@ -112,6 +112,7 @@ public class DeleteRegisterLineageRequest extends Request {
         }
 
         /**
+         * <p>The command for deleting registered data lineage.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deleteRegisterLineageCommand(DeleteRegisterLineageCommand deleteRegisterLineageCommand) {
@@ -122,6 +123,7 @@ public class DeleteRegisterLineageRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -293,7 +295,10 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -301,7 +306,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -309,7 +317,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -317,7 +325,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -325,7 +336,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataType.
+             * <p>The asset type. Set this parameter as needed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder metadataType(String metadataType) {
                 this.metadataType = metadataType;
@@ -333,7 +347,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -341,7 +358,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ParentGuid.
+             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder parentGuid(String parentGuid) {
                 this.parentGuid = parentGuid;
@@ -349,7 +369,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ReferenceType.
+             * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_GUID, BY_PROPERTY</p>
              */
             public Builder referenceType(String referenceType) {
                 this.referenceType = referenceType;
@@ -357,7 +380,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -515,7 +541,10 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -523,7 +552,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -531,7 +563,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -539,7 +571,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -547,7 +582,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataType.
+             * <p>The asset type. Set this parameter as needed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>COLUMN</p>
              */
             public Builder metadataType(String metadataType) {
                 this.metadataType = metadataType;
@@ -555,7 +593,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>column1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +604,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ParentGuid.
+             * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder parentGuid(String parentGuid) {
                 this.parentGuid = parentGuid;
@@ -571,7 +615,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ReferenceType.
+             * <p>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BY_GUID, BY_PROPERTY</p>
              */
             public Builder referenceType(String referenceType) {
                 this.referenceType = referenceType;
@@ -579,7 +626,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -661,7 +711,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * IsDirect.
+             * <p>Specifies whether the lineage is direct. Default value: true.</p>
              */
             public Builder isDirect(Boolean isDirect) {
                 this.isDirect = isDirect;
@@ -669,6 +719,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The source asset reference.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(Source source) {
@@ -677,6 +728,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The target asset reference.</p>
              * <p>This parameter is required.</p>
              */
             public Builder target(Target target) {
@@ -837,7 +889,10 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -845,7 +900,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -853,7 +911,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -861,7 +919,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -869,7 +930,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataSubType.
+             * <p>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
              */
             public Builder metadataSubType(String metadataSubType) {
                 this.metadataSubType = metadataSubType;
@@ -877,6 +941,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset type. Set this parameter as needed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -888,7 +953,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -896,6 +964,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -907,7 +976,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -1067,7 +1139,10 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * Catalog.
+             * <p>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dataphin</p>
              */
             public Builder catalog(String catalog) {
                 this.catalog = catalog;
@@ -1075,7 +1150,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Env.
+             * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DEV, PROD</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1083,7 +1161,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * ExtProperties.
+             * <p>The extended properties.</p>
              */
             public Builder extProperties(java.util.Map<String, ?> extProperties) {
                 this.extProperties = extProperties;
@@ -1091,7 +1169,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Guid.
+             * <p>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>odps.300000001.project1.table1</p>
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -1099,7 +1180,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * MetadataSubType.
+             * <p>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT,SUM_BIZ_UNIT</p>
              */
             public Builder metadataSubType(String metadataSubType) {
                 this.metadataSubType = metadataSubType;
@@ -1107,6 +1191,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset type. Set this parameter as needed.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1118,7 +1203,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>table1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1126,6 +1214,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1137,7 +1226,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * Schema.
+             * <p>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project1, bizUnit1</p>
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -1258,7 +1350,7 @@ public class DeleteRegisterLineageRequest extends Request {
             } 
 
             /**
-             * CascadeDeleteLineage.
+             * <p>Specifies whether to automatically delete the object lineage after all detailedLineage entries are deleted. Default value: true.</p>
              */
             public Builder cascadeDeleteLineage(Boolean cascadeDeleteLineage) {
                 this.cascadeDeleteLineage = cascadeDeleteLineage;
@@ -1266,7 +1358,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * DetailedLineages.
+             * <p>The detailed lineage relationships. For tables, the detailed lineage relationships refer to field-level lineage.</p>
              */
             public Builder detailedLineages(java.util.List<DetailedLineages> detailedLineages) {
                 this.detailedLineages = detailedLineages;
@@ -1274,6 +1366,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The source of the data lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder source(DeleteRegisterLineageCommandSource source) {
@@ -1282,6 +1375,7 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
+             * <p>The target of the data lineage.</p>
              * <p>This parameter is required.</p>
              */
             public Builder target(DeleteRegisterLineageCommandTarget target) {
@@ -1290,7 +1384,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * TenantId.
+             * <p>The tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001234</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -1298,7 +1395,10 @@ public class DeleteRegisterLineageRequest extends Request {
             }
 
             /**
-             * UserId.
+             * <p>The current user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300004567</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

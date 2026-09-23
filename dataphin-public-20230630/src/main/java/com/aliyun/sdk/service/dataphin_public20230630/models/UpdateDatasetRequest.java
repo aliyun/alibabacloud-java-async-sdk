@@ -127,6 +127,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +149,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +162,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
+         * <p>The update request struct.</p>
          * <p>This parameter is required.</p>
          */
         public Builder updateCommand(UpdateCommand updateCommand) {
@@ -811,6 +814,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
+             * <p><strong>The data source ID.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -822,7 +826,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * DataSourceName.
+             * <p>The data source name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test data source.</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -830,7 +837,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * DevPath.
+             * <p>The development path (not required for basic projects).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTML正文提取/test423/</p>
              */
             public Builder devPath(String devPath) {
                 this.devPath = devPath;
@@ -838,6 +848,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The mount path.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -849,7 +860,11 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The production path.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTML正文提取/test423/</p>
              */
             public Builder prodPath(String prodPath) {
                 this.prodPath = prodPath;
@@ -959,6 +974,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
+             * <p>The embedding dimension.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -970,6 +986,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The embedding model.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -981,7 +998,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * IndexParams.
+             * <p>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{M:30, efConstruction:360}</p>
              */
             public Builder indexParams(java.util.Map<String, ?> indexParams) {
                 this.indexParams = indexParams;
@@ -989,6 +1009,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1000,6 +1021,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1150,7 +1172,10 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>primary key</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1158,7 +1183,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * ElementType.
+             * <p><strong>The array element subtype. Valid only when type is set to ARRAY.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>INT64</p>
              */
             public Builder elementType(String elementType) {
                 this.elementType = elementType;
@@ -1166,7 +1194,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * MaxCapacity.
+             * <p>The maximum capacity of the array. Valid only when type is set to ARRAY. Default value: 4096.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>250</p>
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -1174,6 +1205,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The field name.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1185,7 +1217,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Pk.
+             * <p>Indicates whether the field is a primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder pk(Boolean pk) {
                 this.pk = pk;
@@ -1193,6 +1228,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The field type.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1204,7 +1240,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>Indicates whether the field is a URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder url(Boolean url) {
                 this.url = url;
@@ -1212,7 +1251,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * VectorIndexConfig.
+             * <p>The vector index configuration.</p>
              */
             public Builder vectorIndexConfig(VectorIndexConfig vectorIndexConfig) {
                 this.vectorIndexConfig = vectorIndexConfig;
@@ -1266,7 +1305,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p>The field list.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -1415,6 +1454,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
+             * <p><strong>The data source ID.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1426,7 +1466,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * DataSourceName.
+             * <p><strong>The data source name.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test data source.</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1434,7 +1477,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * DevSchema.
+             * <p><strong>The development database/schema.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTML正文提取/test423/</p>
              */
             public Builder devSchema(String devSchema) {
                 this.devSchema = devSchema;
@@ -1442,6 +1488,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>Specifies whether to store metadata in a new table or an existing table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1453,7 +1500,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * MetadataStorageType.
+             * <p><strong>The metastore type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>MILVUS</p>
              */
             public Builder metadataStorageType(String metadataStorageType) {
                 this.metadataStorageType = metadataStorageType;
@@ -1461,7 +1511,11 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The production database/schema.</strong></p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTML正文提取/test423/</p>
              */
             public Builder prodSchema(String prodSchema) {
                 this.prodSchema = prodSchema;
@@ -1469,6 +1523,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The table name.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1480,7 +1535,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * TableSchema.
+             * <p>The table schema.</p>
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;
@@ -1590,6 +1645,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
+             * <p>The embedding dimension.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1601,6 +1657,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The embedding model.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1612,7 +1669,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * IndexParams.
+             * <p>The index build parameters. Different parameters are required based on the indexType. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{M:30, efConstruction:360}</p>
              */
             public Builder indexParams(java.util.Map<String, ?> indexParams) {
                 this.indexParams = indexParams;
@@ -1620,6 +1680,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all types.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1631,6 +1692,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1781,7 +1843,10 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * Comment.
+             * <p>The field description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>happen time</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -1789,7 +1854,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * ElementType.
+             * <p><strong>The array element subtype. Valid only when type is set to ARRAY.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>INT64</p>
              */
             public Builder elementType(String elementType) {
                 this.elementType = elementType;
@@ -1797,7 +1865,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * MaxCapacity.
+             * <p><strong>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder maxCapacity(Integer maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -1805,6 +1876,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The field name.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1816,7 +1888,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Pk.
+             * <p>Indicates whether the field is a primary key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder pk(Boolean pk) {
                 this.pk = pk;
@@ -1824,6 +1899,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p><strong>The field type.</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1835,7 +1911,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Url.
+             * <p>Indicates whether the field is a URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder url(Boolean url) {
                 this.url = url;
@@ -1843,7 +1922,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * VectorIndexConfig.
+             * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. This parameter is used to specify the dimensions, index type, and similarity metric.</p>
              */
             public Builder vectorIndexConfig(ColumnsVectorIndexConfig vectorIndexConfig) {
                 this.vectorIndexConfig = vectorIndexConfig;
@@ -1897,7 +1976,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p><strong>The field list.</strong></p>
              */
             public Builder columns(java.util.List<TableSchemaColumns> columns) {
                 this.columns = columns;
@@ -1993,6 +2072,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
+             * <p>The meta table data source type (only KAFKA is supported in the current release).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2004,7 +2084,11 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The meta table name.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test meta table.</p>
              */
             public Builder metaTableName(String metaTableName) {
                 this.metaTableName = metaTableName;
@@ -2012,6 +2096,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The project ID to which the meta table belongs (cross-project access is supported).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2023,7 +2108,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * TableSchema.
+             * <p>The table schema.</p>
              */
             public Builder tableSchema(RealtimeMetaTableConfigTableSchema tableSchema) {
                 this.tableSchema = tableSchema;
@@ -2116,7 +2201,7 @@ public class UpdateDatasetRequest extends Request {
             } 
 
             /**
-             * FileStorageConfig.
+             * <p>The file storage configuration.</p>
              */
             public Builder fileStorageConfig(FileStorageConfig fileStorageConfig) {
                 this.fileStorageConfig = fileStorageConfig;
@@ -2124,7 +2209,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * MetadataStorageConfig.
+             * <p>The metastore configuration.</p>
              */
             public Builder metadataStorageConfig(MetadataStorageConfig metadataStorageConfig) {
                 this.metadataStorageConfig = metadataStorageConfig;
@@ -2132,7 +2217,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * RealtimeMetaTableConfig.
+             * <p>The real-time meta table configuration. Takes effect when metadataStorageType is set to STREAM_TABLE.</p>
              */
             public Builder realtimeMetaTableConfig(RealtimeMetaTableConfig realtimeMetaTableConfig) {
                 this.realtimeMetaTableConfig = realtimeMetaTableConfig;
@@ -2140,7 +2225,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * VersionDescription.
+             * <p><strong>Version description</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test dataset version.</p>
              */
             public Builder versionDescription(String versionDescription) {
                 this.versionDescription = versionDescription;
@@ -2373,7 +2461,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p><strong>The content type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>GENERAL</p>
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -2381,7 +2472,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * DataCellId.
+             * <p>The subject area ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78201</p>
              */
             public Builder dataCellId(String dataCellId) {
                 this.dataCellId = dataCellId;
@@ -2389,7 +2483,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Description.
+             * <p><strong>The description.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test dataset.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2397,6 +2494,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The file ID (the file ID at creation time).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2408,6 +2506,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
+             * <p>The dataset ID (business primary key).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2419,7 +2518,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * MetadataStorageType.
+             * <p><strong>The metastore type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>POSTGRESQL</p>
              */
             public Builder metadataStorageType(String metadataStorageType) {
                 this.metadataStorageType = metadataStorageType;
@@ -2427,10 +2529,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The dataset name.</p>
              * 
              * <strong>example:</strong>
-             * <p>happen_time</p>
+             * <p>audio_dataset</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2438,7 +2540,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Owner.
+             * <p>The list of owner IDs, separated by commas.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300001391</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -2446,7 +2551,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Scenario.
+             * <p><strong>Scenarios:</strong> <code>OFFLINE</code> (offline, default) / <code>REALTIME</code> (real-time).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OFFLINE</p>
              */
             public Builder scenario(String scenario) {
                 this.scenario = scenario;
@@ -2454,7 +2562,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * StorageType.
+             * <p><strong>The storage type.</strong></p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -2462,10 +2573,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * <p>The dataset type.</p>
              * 
              * <strong>example:</strong>
-             * <p>date</p>
+             * <p>HYBRID</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2473,7 +2584,10 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * Version.
+             * <p>The version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -2481,7 +2595,7 @@ public class UpdateDatasetRequest extends Request {
             }
 
             /**
-             * VersionConfig.
+             * <p>The dataset version configuration.</p>
              */
             public Builder versionConfig(VersionConfig versionConfig) {
                 this.versionConfig = versionConfig;

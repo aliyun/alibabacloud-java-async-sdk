@@ -126,6 +126,7 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
+         * <p>The data backfill request.</p>
          * <p>This parameter is required.</p>
          */
         public Builder createCommand(CreateCommand createCommand) {
@@ -136,7 +137,14 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
-         * Env.
+         * <p>The environment identifier. Valid values:</p>
+         * <ul>
+         * <li>DEV: Development environment. </li>
+         * <li>PROD (default): Production environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PROD</p>
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);
@@ -145,6 +153,7 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +166,10 @@ public class CreateNodeSupplementRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -225,7 +237,7 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * FieldIdList.
+             * <p>The field ID.</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -233,7 +245,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Id.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2323232</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -313,7 +328,10 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * Exclude.
+             * <p>Specifies whether to exclude the matched items. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder exclude(Boolean exclude) {
                 this.exclude = exclude;
@@ -321,7 +339,18 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Key.
+             * <p>The filter key. Valid values:</p>
+             * <ul>
+             * <li>PROJECT: project</li>
+             * <li>NODE_OUTPUT_NAME: node output name</li>
+             * <li>NODE_NAME: node name</li>
+             * <li>NODE_ID: node ID</li>
+             * <li>TARGETS: specified endpoints</li>
+             * <li>SOURCES: specified start points</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NODE_OUTPUT_NAME</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,7 +358,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * ValueList.
+             * <p>The list of filter values.</p>
              */
             public Builder valueList(java.util.List<String> valueList) {
                 this.valueList = valueList;
@@ -396,7 +425,10 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -404,7 +436,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -472,7 +507,7 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * FieldIdList.
+             * <p>The list of field IDs. This parameter is applicable when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</p>
              */
             public Builder fieldIdList(java.util.List<String> fieldIdList) {
                 this.fieldIdList = fieldIdList;
@@ -480,7 +515,11 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
+             * <p>The node ID.</p>
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_1232324</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -547,7 +586,10 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>param1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -555,7 +597,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -622,7 +667,10 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * NodeId.
+             * <p>The node ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>n_23324</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -630,7 +678,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * ParamList.
+             * <p>The parameter list.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
                 this.paramList = paramList;
@@ -857,7 +905,10 @@ public class CreateNodeSupplementRequest extends Request {
             } 
 
             /**
-             * ContainAllDownStream.
+             * <p>Specifies whether to include all downstream nodes in batch mode. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder containAllDownStream(Boolean containAllDownStream) {
                 this.containAllDownStream = containAllDownStream;
@@ -865,7 +916,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * DownStreamNodeIdList.
+             * <p>The IDs of downstream nodes to run. This parameter takes effect only when ContainAllDownStream is set to false.</p>
              */
             public Builder downStreamNodeIdList(java.util.List<DownStreamNodeIdList> downStreamNodeIdList) {
                 this.downStreamNodeIdList = downStreamNodeIdList;
@@ -873,10 +924,11 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
+             * <p>The end business date.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-06-01</p>
+             * <p>2024-05-21</p>
              */
             public Builder endBizDate(String endBizDate) {
                 this.endBizDate = endBizDate;
@@ -884,7 +936,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * FilterList.
+             * <p>The list of filters. This parameter is used together with ContainAllDownStream to include or exclude nodes based on criteria such as project or node. Default value: empty.</p>
              */
             public Builder filterList(java.util.List<FilterList> filterList) {
                 this.filterList = filterList;
@@ -892,7 +944,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * GlobalParamList.
+             * <p>The runtime global parameters.</p>
              */
             public Builder globalParamList(java.util.List<GlobalParamList> globalParamList) {
                 this.globalParamList = globalParamList;
@@ -900,7 +952,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * MaxDueTime.
+             * <p>The latest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20:59</p>
              */
             public Builder maxDueTime(String maxDueTime) {
                 this.maxDueTime = maxDueTime;
@@ -908,7 +963,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * MinDueTime.
+             * <p>The earliest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:00</p>
              */
             public Builder minDueTime(String minDueTime) {
                 this.minDueTime = minDueTime;
@@ -916,7 +974,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The name of the data backfill. If this parameter is not specified, the system automatically generates a name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestBackfill</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -924,6 +985,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
+             * <p>The root nodes for data backfill. Multiple root nodes are supported.</p>
              * <p>This parameter is required.</p>
              */
             public Builder nodeIdList(java.util.List<NodeIdList> nodeIdList) {
@@ -932,7 +994,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * NodeParamsList.
+             * <p>The runtime custom parameters configured by node.</p>
              */
             public Builder nodeParamsList(java.util.List<NodeParamsList> nodeParamsList) {
                 this.nodeParamsList = nodeParamsList;
@@ -940,7 +1002,10 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * Parallelism.
+             * <p>The concurrency. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder parallelism(Integer parallelism) {
                 this.parallelism = parallelism;
@@ -948,6 +1013,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
+             * <p>The project ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -959,7 +1025,7 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
-             * RunImmediately.
+             * <p>Corresponds to the &quot;Task Run Time&quot; option in the data backfill dialog box. If this parameter is set to true, the scheduled run time of instances is ignored and all instances run immediately. If this parameter is set to false, instances wait for their scheduled run time before running. Default value: true.</p>
              */
             public Builder runImmediately(Boolean runImmediately) {
                 this.runImmediately = runImmediately;
@@ -967,10 +1033,11 @@ public class CreateNodeSupplementRequest extends Request {
             }
 
             /**
+             * <p>The start business date.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>2021-06-01</p>
+             * <p>2024-05-21</p>
              */
             public Builder startBizDate(String startBizDate) {
                 this.startBizDate = startBizDate;

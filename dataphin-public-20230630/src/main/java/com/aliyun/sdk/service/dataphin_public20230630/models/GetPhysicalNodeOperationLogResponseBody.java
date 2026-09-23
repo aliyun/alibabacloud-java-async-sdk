@@ -119,7 +119,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code returned by the backend.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -135,7 +141,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,7 +152,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLogList.
+         * <p>The node operation logs.</p>
          */
         public Builder operationLogList(java.util.List<OperationLogList> operationLogList) {
             this.operationLogList = operationLogList;
@@ -151,7 +160,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -264,7 +279,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             } 
 
             /**
-             * Context.
+             * <p>The log details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx</p>
              */
             public Builder context(String context) {
                 this.context = context;
@@ -272,7 +290,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperationTime.
+             * <p>The operation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-05-30 16:47:13</p>
              */
             public Builder operationTime(String operationTime) {
                 this.operationTime = operationTime;
@@ -280,7 +301,20 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperationType.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>TASK_UPDATE_PRIORITY: updates the node priority.</li>
+             * <li>PAUSE_TASK: pauses scheduling.</li>
+             * <li>RESUME_TASK: resumes scheduling.</li>
+             * <li>CREATE_NODE: creates a node.</li>
+             * <li>FORCE_DELETE_NODE: force deletes a node.</li>
+             * <li>UPDATE_NODE: updates a node.</li>
+             * <li>DELETE_NODE: deletes a node.</li>
+             * <li>CHANGE_NODE_OWNER: changes the node owner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAUSE_TASK</p>
              */
             public Builder operationType(String operationType) {
                 this.operationType = operationType;
@@ -288,7 +322,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * <p>The operator ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132222</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -296,7 +333,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>The operator name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xx测试</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;

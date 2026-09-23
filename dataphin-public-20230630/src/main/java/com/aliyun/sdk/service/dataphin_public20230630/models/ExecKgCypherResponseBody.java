@@ -119,7 +119,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The backend response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The query result.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The backend exception details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>internal error</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,7 +171,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -228,7 +237,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -236,7 +248,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -368,7 +383,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The data ID of the relationship record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bcd-456</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -376,7 +394,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The list of relationship record properties.</p>
              */
             public Builder properties(java.util.List<Properties> properties) {
                 this.properties = properties;
@@ -384,7 +402,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * <p>The relationship type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SALE</p>
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -392,7 +413,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEntityDataId.
+             * <p>The data ID of the source entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>source-123</p>
              */
             public Builder sourceEntityDataId(String sourceEntityDataId) {
                 this.sourceEntityDataId = sourceEntityDataId;
@@ -400,7 +424,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEntityType.
+             * <p>The source entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product</p>
              */
             public Builder sourceEntityType(String sourceEntityType) {
                 this.sourceEntityType = sourceEntityType;
@@ -408,7 +435,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEntityDataId.
+             * <p>The data ID of the target entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>target-345</p>
              */
             public Builder targetEntityDataId(String targetEntityDataId) {
                 this.targetEntityDataId = targetEntityDataId;
@@ -416,7 +446,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * TargetEntityType.
+             * <p>The target entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Shop</p>
              */
             public Builder targetEntityType(String targetEntityType) {
                 this.targetEntityType = targetEntityType;
@@ -483,7 +516,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -491,7 +527,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -571,7 +610,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * DataId.
+             * <p>The data ID of the entity record.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abc-123</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -579,7 +621,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * EntityType.
+             * <p>The entity type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Product</p>
              */
             public Builder entityType(String entityType) {
                 this.entityType = entityType;
@@ -587,7 +632,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * <p>The list of entity record properties.</p>
              */
             public Builder properties(java.util.List<NodeListProperties> properties) {
                 this.properties = properties;
@@ -654,7 +699,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The property code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>company_name</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -662,7 +710,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The property value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alibaba</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -716,7 +767,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * Columns.
+             * <p>The list of columns in the row.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -809,7 +860,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             } 
 
             /**
-             * EdgeList.
+             * <p>The list of edges.</p>
              */
             public Builder edgeList(java.util.List<EdgeList> edgeList) {
                 this.edgeList = edgeList;
@@ -817,7 +868,10 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteCypher.
+             * <p>The transformed execution statement.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MATCH p=()-[:Product]-&gt;() RETURN p, count(*) LIMIT 25</p>
              */
             public Builder executeCypher(String executeCypher) {
                 this.executeCypher = executeCypher;
@@ -825,7 +879,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * NodeList.
+             * <p>The list of nodes.</p>
              */
             public Builder nodeList(java.util.List<NodeList> nodeList) {
                 this.nodeList = nodeList;
@@ -833,7 +887,7 @@ public class ExecKgCypherResponseBody extends TeaModel {
             }
 
             /**
-             * RowList.
+             * <p>The list of rows.</p>
              */
             public Builder rowList(java.util.List<RowList> rowList) {
                 this.rowList = rowList;

@@ -142,6 +142,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
+         * <p>Remarks.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
+         * <p>Resource file ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,6 +190,7 @@ public class DeleteResourceRequest extends Request {
         }
 
         /**
+         * <p>Project ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

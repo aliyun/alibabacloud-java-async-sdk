@@ -112,6 +112,7 @@ public class ListComputeSourcesRequest extends Request {
         }
 
         /**
+         * <p>The query conditions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder listQuery(ListQuery listQuery) {
@@ -122,6 +123,7 @@ public class ListComputeSourcesRequest extends Request {
         }
 
         /**
+         * <p>Tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +243,7 @@ public class ListComputeSourcesRequest extends Request {
             } 
 
             /**
-             * BindProject.
+             * <p>Specifies whether the compute source is bound to a project.</p>
              */
             public Builder bindProject(Boolean bindProject) {
                 this.bindProject = bindProject;
@@ -249,7 +251,10 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * Keyword.
+             * <p>The keyword used for filtering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -257,7 +262,10 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * PageNo.
+             * <p>The page number. Default value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNo(Integer pageNo) {
                 this.pageNo = pageNo;
@@ -265,7 +273,10 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * PageSize.
+             * <p>The number of records per page. Default value: 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -273,7 +284,10 @@ public class ListComputeSourcesRequest extends Request {
             }
 
             /**
-             * Type.
+             * <p>The type of the compute source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MaxCompute</p>
              */
             public Builder type(String type) {
                 this.type = type;

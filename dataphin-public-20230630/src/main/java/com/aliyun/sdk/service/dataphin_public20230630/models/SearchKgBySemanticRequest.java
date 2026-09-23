@@ -113,6 +113,7 @@ public class SearchKgBySemanticRequest extends Request {
         }
 
         /**
+         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,7 @@ public class SearchKgBySemanticRequest extends Request {
         }
 
         /**
+         * <p>The search command.</p>
          * <p>This parameter is required.</p>
          */
         public Builder searchCommand(SearchCommand searchCommand) {
@@ -135,6 +137,7 @@ public class SearchKgBySemanticRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,7 +249,7 @@ public class SearchKgBySemanticRequest extends Request {
             } 
 
             /**
-             * EntityTypeCodes.
+             * <p>The entity type codes used for filtering. If this parameter is not specified, all entity types are searched.</p>
              */
             public Builder entityTypeCodes(java.util.List<String> entityTypeCodes) {
                 this.entityTypeCodes = entityTypeCodes;
@@ -254,7 +257,10 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * MinSimilarity.
+             * <p>The minimum similarity threshold. Valid values: 0.0 to 1.0. Default value: 0.0 (no filtering). This parameter takes effect only for the semantic search path.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder minSimilarity(Float minSimilarity) {
                 this.minSimilarity = minSimilarity;
@@ -262,7 +268,10 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * PropertyCode.
+             * <p>The property code for semantic search. If this parameter is not specified, all properties with semantic search enabled are searched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder propertyCode(String propertyCode) {
                 this.propertyCode = propertyCode;
@@ -270,10 +279,11 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
+             * <p>The natural language query text. The value can be 0 to 500 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>查询北京的学生</p>
+             * <p>Query students in Beijing</p>
              */
             public Builder queryText(String queryText) {
                 this.queryText = queryText;
@@ -281,7 +291,10 @@ public class SearchKgBySemanticRequest extends Request {
             }
 
             /**
-             * TopK.
+             * <p>The maximum number of results to return. Default value: 20. Valid values: 1 to 100.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder topK(Integer topK) {
                 this.topK = topK;
