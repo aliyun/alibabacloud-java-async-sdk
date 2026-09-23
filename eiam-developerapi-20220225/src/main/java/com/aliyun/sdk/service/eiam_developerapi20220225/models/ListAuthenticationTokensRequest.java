@@ -184,6 +184,7 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +197,10 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
+         * <p>Authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter an IDaaS-issued Access Token.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,6 +213,7 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
+         * <p>ID of the authentication token consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,6 +226,7 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
+         * <p>Credential provider identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +239,10 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
-         * expired.
+         * <p>Indicates whether the authentication token is expired.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder expired(Boolean expired) {
             this.putQueryParameter("expired", expired);
@@ -241,7 +251,10 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records to return in this paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -250,7 +263,10 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>Token that marks the start of the next page in a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -259,7 +275,10 @@ public class ListAuthenticationTokensRequest extends Request {
         }
 
         /**
-         * revoked.
+         * <p>Indicates whether the authentication token is revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder revoked(Boolean revoked) {
             this.putQueryParameter("revoked", revoked);

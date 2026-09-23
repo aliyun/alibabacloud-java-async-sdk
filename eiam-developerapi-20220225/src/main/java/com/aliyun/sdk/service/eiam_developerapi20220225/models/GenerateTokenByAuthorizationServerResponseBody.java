@@ -132,7 +132,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         } 
 
         /**
-         * access_token.
+         * <p>Access credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
          */
         public Builder accessToken(String accessToken) {
             this.accessToken = accessToken;
@@ -140,7 +143,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * expires_at.
+         * <p>Expiration time of the access credential, as a UNIX timestamp in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653288641</p>
          */
         public Builder expiresAt(Long expiresAt) {
             this.expiresAt = expiresAt;
@@ -148,7 +154,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * expires_in.
+         * <p>Validity period of the access credential, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1200</p>
          */
         public Builder expiresIn(Long expiresIn) {
             this.expiresIn = expiresIn;
@@ -156,7 +165,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * id_token.
+         * <p>Identity credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
          */
         public Builder idToken(String idToken) {
             this.idToken = idToken;
@@ -164,7 +176,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * refresh_token.
+         * <p>Refresh token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ATxxxxx</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.refreshToken = refreshToken;
@@ -172,7 +187,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * scope.
+         * <p>Scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -180,7 +198,10 @@ public class GenerateTokenByAuthorizationServerResponseBody extends TeaModel {
         }
 
         /**
-         * token_type.
+         * <p>Token type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer</p>
          */
         public Builder tokenType(String tokenType) {
             this.tokenType = tokenType;

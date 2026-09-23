@@ -223,7 +223,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * authenticationTokenId.
+         * <p>The authentication token ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
          */
         public Builder authenticationTokenId(String authenticationTokenId) {
             this.authenticationTokenId = authenticationTokenId;
@@ -231,7 +234,13 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * authenticationTokenType.
+         * <p>The authentication token type.</p>
+         * <blockquote>
+         * <p>The value is fixed as <code>oauth_access_token</code>, indicating an OAuth Access Token type authentication token.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth_access_token</p>
          */
         public Builder authenticationTokenType(String authenticationTokenType) {
             this.authenticationTokenType = authenticationTokenType;
@@ -239,7 +248,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * consumerId.
+         * <p>The consumer ID of the authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
         public Builder consumerId(String consumerId) {
             this.consumerId = consumerId;
@@ -247,7 +259,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * consumerType.
+         * <p>The consumer type of the authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder consumerType(String consumerType) {
             this.consumerType = consumerType;
@@ -255,7 +270,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * createTime.
+         * <p>The creation time of the authentication token. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830225000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -263,7 +281,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * creatorId.
+         * <p>The creator ID of the authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -271,7 +292,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * creatorType.
+         * <p>The creator type of the authentication token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder creatorType(String creatorType) {
             this.creatorType = creatorType;
@@ -279,7 +303,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * credentialProviderId.
+         * <p>The credential provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
          */
         public Builder credentialProviderId(String credentialProviderId) {
             this.credentialProviderId = credentialProviderId;
@@ -287,7 +314,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * expirationTime.
+         * <p>The expiration time of the authentication token. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1772693568000</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.expirationTime = expirationTime;
@@ -295,7 +325,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>EIAM实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -306,7 +336,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * oauthAccessTokenContent.
+         * <p>The content of the OAuth Access Token type authentication token.</p>
          */
         public Builder oauthAccessTokenContent(OauthAccessTokenContent oauthAccessTokenContent) {
             this.oauthAccessTokenContent = oauthAccessTokenContent;
@@ -314,7 +344,7 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * oauthAuthorizationSession.
+         * <p>The authorization session of the OAuth user_federation flow. Returned during first-time authorization or when user interaction is required.</p>
          */
         public Builder oauthAuthorizationSession(OauthAuthorizationSession oauthAuthorizationSession) {
             this.oauthAuthorizationSession = oauthAuthorizationSession;
@@ -322,7 +352,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * revoked.
+         * <p>Indicates whether the authentication token is revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder revoked(Boolean revoked) {
             this.revoked = revoked;
@@ -330,7 +363,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
         }
 
         /**
-         * updateTime.
+         * <p>The update time of the authentication token. This value is a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830225000</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;
@@ -409,7 +445,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * accessTokenValue.
+             * <p>The access_token field in the OAuth protocol token endpoint response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DgEBAGP2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder accessTokenValue(String accessTokenValue) {
                 this.accessTokenValue = accessTokenValue;
@@ -417,7 +456,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * <p>The scope field in the OAuth protocol token endpoint response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example:test_01 example:test_02</p>
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -425,7 +467,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * tokenType.
+             * <p>The token_type field in the OAuth protocol token endpoint response.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Bearer</p>
              */
             public Builder tokenType(String tokenType) {
                 this.tokenType = tokenType;
@@ -518,7 +563,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             } 
 
             /**
-             * authorizationUrl.
+             * <p>The user authorization URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://login.dingtalk.com/oauth2/auth?client_id=">https://login.dingtalk.com/oauth2/auth?client_id=</a>...</p>
              */
             public Builder authorizationUrl(String authorizationUrl) {
                 this.authorizationUrl = authorizationUrl;
@@ -526,7 +574,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * sessionId.
+             * <p>The authorization session ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atpoas_01l6losojlojbbv01adsq56xxxxx</p>
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;
@@ -534,7 +585,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * sessionStatus.
+             * <p>The authorization session status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pending</p>
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
@@ -542,7 +596,10 @@ public class FetchOAuthAuthenticationTokenResponseBody extends TeaModel {
             }
 
             /**
-             * sessionUri.
+             * <p>The authorization session URI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>urn:ietf:params:oauth:request_uri:atpoas_01l6ljnvrpc5niakl3gj3amxxxxxx</p>
              */
             public Builder sessionUri(String sessionUri) {
                 this.sessionUri = sessionUri;

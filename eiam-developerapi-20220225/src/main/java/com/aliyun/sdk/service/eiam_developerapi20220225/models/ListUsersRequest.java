@@ -181,7 +181,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The authentication information. The value is in the Bearer ${access_token} format. Example: Bearer ATxxxx.</p>
+         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The ID of the organizational unit.</p>
+         * <p>The organization ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ou_wovwffm62xifdziem7an7xxxxx</p>
@@ -206,7 +206,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The number of records to return on each page. The default value is 20. The value must be in the range of 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

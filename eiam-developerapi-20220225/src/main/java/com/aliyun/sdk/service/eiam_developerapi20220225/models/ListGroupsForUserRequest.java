@@ -156,6 +156,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,6 +169,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +182,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +195,9 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
+         * <p>The authentication information.
+         * Format: Bearer ${access_token}.
+         * Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +210,10 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -213,7 +222,7 @@ public class ListGroupsForUserRequest extends Request {
         }
 
         /**
-         * <p>nextToken</p>
+         * <p>The token to retrieve the next page of results. Leave this parameter empty to query from the first page.</p>
          * 
          * <strong>example:</strong>
          * <p>NTxxx</p>

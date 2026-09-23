@@ -199,6 +199,7 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +212,10 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,6 +228,7 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The \<code>aud\\</code> field of the JWT.</p>
          * <p>This parameter is required.</p>
          */
         public Builder audiences(java.util.List<String> audiences) {
@@ -232,6 +238,7 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Credential provider identity.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +251,11 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * customClaims.
+         * <p>Custom claims.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Key-value pairs. Keys must be strings.</p>
          */
         public Builder customClaims(java.util.Map<String, ?> customClaims) {
             this.putBodyParameter("customClaims", customClaims);
@@ -253,7 +264,10 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * expiration.
+         * <p>The validity period of the JWT, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>900</p>
          */
         public Builder expiration(Integer expiration) {
             this.putBodyParameter("expiration", expiration);
@@ -262,7 +276,10 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * includeDerivedShortToken.
+         * <p>Whether the generated JWT needs to include a &quot;derived short token&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder includeDerivedShortToken(Boolean includeDerivedShortToken) {
             this.putBodyParameter("includeDerivedShortToken", includeDerivedShortToken);
@@ -271,7 +288,10 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * issuer.
+         * <p>The \<code>iss\\</code> field of the JWT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://test.issuer.com">https://test.issuer.com</a></p>
          */
         public Builder issuer(String issuer) {
             this.putBodyParameter("issuer", issuer);
@@ -280,6 +300,7 @@ public class GenerateJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The \<code>sub\\</code> field of the JWT.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

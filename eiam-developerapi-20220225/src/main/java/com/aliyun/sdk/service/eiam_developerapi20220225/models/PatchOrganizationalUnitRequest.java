@@ -211,7 +211,7 @@ public class PatchOrganizationalUnitRequest extends Request {
          * <p>The description of the organizational unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>test organizational unit</p>
+         * <p>测试组织</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);

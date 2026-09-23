@@ -223,7 +223,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * authenticationTokenId.
+         * <p>The authentication token ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atntkn_01l6lot7o4e4r77oelp6qtuxxxxx</p>
          */
         public Builder authenticationTokenId(String authenticationTokenId) {
             this.authenticationTokenId = authenticationTokenId;
@@ -231,7 +234,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * authorizationUrl.
+         * <p>The user authorization URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://login.dingtalk.com/oauth2/auth?client_id=">https://login.dingtalk.com/oauth2/auth?client_id=</a>...</p>
          */
         public Builder authorizationUrl(String authorizationUrl) {
             this.authorizationUrl = authorizationUrl;
@@ -239,7 +245,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * consumerId.
+         * <p>The authentication token consumer ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
         public Builder consumerId(String consumerId) {
             this.consumerId = consumerId;
@@ -247,7 +256,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * consumerType.
+         * <p>The authentication token consumer type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder consumerType(String consumerType) {
             this.consumerType = consumerType;
@@ -255,7 +267,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * creatorId.
+         * <p>The authentication token creator ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -263,7 +278,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * creatorType.
+         * <p>The authentication token creator type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder creatorType(String creatorType) {
             this.creatorType = creatorType;
@@ -271,7 +289,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * credentialProviderIdentifier.
+         * <p>The credential provider business identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_example_identifier</p>
          */
         public Builder credentialProviderIdentifier(String credentialProviderIdentifier) {
             this.credentialProviderIdentifier = credentialProviderIdentifier;
@@ -279,7 +300,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>access_denied</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -287,7 +311,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * errorDescription.
+         * <p>The error description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The user denied the authorization request</p>
          */
         public Builder errorDescription(String errorDescription) {
             this.errorDescription = errorDescription;
@@ -295,7 +322,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * expirationTime.
+         * <p>The authentication token expiration time. UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1704153600000</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.expirationTime = expirationTime;
@@ -303,7 +333,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -311,7 +344,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * sessionId.
+         * <p>The authorization session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atpoas_01l6losojlojbbv01adsq56xxxxx</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -319,7 +355,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * sessionStatus.
+         * <p>The authorization session status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pending</p>
          */
         public Builder sessionStatus(String sessionStatus) {
             this.sessionStatus = sessionStatus;
@@ -327,7 +366,10 @@ public class GetOAuthAuthorizationSessionResponseBody extends TeaModel {
         }
 
         /**
-         * sessionUri.
+         * <p>The authorization session URI.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:ietf:params:oauth:request_uri:atpoas_01l6ljnvrpc5niakl3gj3amxxxxxx</p>
          */
         public Builder sessionUri(String sessionUri) {
             this.sessionUri = sessionUri;

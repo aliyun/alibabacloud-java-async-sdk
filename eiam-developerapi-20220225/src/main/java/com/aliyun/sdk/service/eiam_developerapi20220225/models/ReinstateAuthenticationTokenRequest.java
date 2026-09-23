@@ -127,6 +127,7 @@ public class ReinstateAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,10 @@ public class ReinstateAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter an IDaaS-issued Access Token.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,10 @@ public class ReinstateAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The original authentication token.</p>
+         * <blockquote>
+         * <p>You can pass either the original authentication token or its derived short token.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +172,16 @@ public class ReinstateAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * token_type_hint.
+         * <p>A hint about the authentication token type.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Do not provide a value for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tokenTypeHint(String tokenTypeHint) {
             this.putBodyParameter("token_type_hint", tokenTypeHint);

@@ -113,6 +113,7 @@ public class ObtainCredentialRequest extends Request {
         }
 
         /**
+         * <p>The EIAM instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +126,10 @@ public class ObtainCredentialRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. Format: Bearer ${access_token}. </p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -137,6 +142,7 @@ public class ObtainCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

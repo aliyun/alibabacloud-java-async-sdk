@@ -112,6 +112,7 @@ public class ValidateAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,10 @@ public class ValidateAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The original authentication token.</p>
+         * <blockquote>
+         * <p>Pass either the original authentication token or a derived short token.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,16 @@ public class ValidateAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * token_type_hint.
+         * <p>A hint about the type of the authentication token.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>No value is currently required for this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tokenTypeHint(String tokenTypeHint) {
             this.putBodyParameter("token_type_hint", tokenTypeHint);

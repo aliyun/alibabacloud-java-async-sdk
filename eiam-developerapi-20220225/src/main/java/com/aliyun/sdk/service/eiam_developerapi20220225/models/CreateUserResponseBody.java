@@ -54,7 +54,7 @@ public class CreateUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The account ID.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

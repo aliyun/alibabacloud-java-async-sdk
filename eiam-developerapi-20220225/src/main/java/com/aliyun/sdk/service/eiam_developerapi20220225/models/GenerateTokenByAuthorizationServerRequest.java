@@ -324,6 +324,7 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,6 +337,7 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
+         * <p>Authorization server ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -348,7 +350,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * application_federated_credential_name.
+         * <p>Federated application credential name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxxxx</p>
          */
         public Builder applicationFederatedCredentialName(String applicationFederatedCredentialName) {
             this.putQueryParameter("application_federated_credential_name", applicationFederatedCredentialName);
@@ -357,7 +362,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * client_assertion.
+         * <p>Client assertion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJraWQiOiJLRVlLZ0Iyxxxxx</p>
          */
         public Builder clientAssertion(String clientAssertion) {
             this.putQueryParameter("client_assertion", clientAssertion);
@@ -366,7 +374,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * client_assertion_type.
+         * <p>Client assertion type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:ietf:params:oauth:client-assertion-type:jwt-bearer</p>
          */
         public Builder clientAssertionType(String clientAssertionType) {
             this.putQueryParameter("client_assertion_type", clientAssertionType);
@@ -375,6 +386,7 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
+         * <p>Client ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -387,7 +399,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * client_secret.
+         * <p>Client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSEHDcHcrUKHw1CuxkJEHPveWRxxxxx</p>
          */
         public Builder clientSecret(String clientSecret) {
             this.putQueryParameter("client_secret", clientSecret);
@@ -396,7 +411,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * client_x509.
+         * <p>Client certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxxxx</p>
          */
         public Builder clientX509(String clientX509) {
             this.putQueryParameter("client_x509", clientX509);
@@ -405,7 +423,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * client_x509_chain.
+         * <p>Intermediate certificate list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxxxx</p>
          */
         public Builder clientX509Chain(String clientX509Chain) {
             this.putQueryParameter("client_x509_chain", clientX509Chain);
@@ -414,7 +435,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * code.
+         * <p>Authorization code. Required when grant_type is authorization_code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CO541xY59EsKniV2wvWDXZ4jiKxxxxx</p>
          */
         public Builder code(String code) {
             this.putQueryParameter("code", code);
@@ -423,7 +447,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * code_verifier.
+         * <p>You can validate the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder codeVerifier(String codeVerifier) {
             this.putQueryParameter("code_verifier", codeVerifier);
@@ -432,7 +459,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * device_code.
+         * <p>Device code. Required when grant_type is urn:ietf:params:oauth:grant-type:device_code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DCxxxxxx</p>
          */
         public Builder deviceCode(String deviceCode) {
             this.putQueryParameter("device_code", deviceCode);
@@ -441,6 +471,7 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
+         * <p>Grant type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -453,7 +484,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>Password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testxxxxx</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("password", password);
@@ -462,7 +496,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * redirect_uri.
+         * <p>Redirection URI. Required when grant_type is authorization_code. Must match the redirect_uri used in the authorization code request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/xxxxx">https://example.com/xxxxx</a></p>
          */
         public Builder redirectUri(String redirectUri) {
             this.putQueryParameter("redirect_uri", redirectUri);
@@ -471,7 +508,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * refresh_token.
+         * <p>Refresh token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RTxxxxx</p>
          */
         public Builder refreshToken(String refreshToken) {
             this.putQueryParameter("refresh_token", refreshToken);
@@ -480,7 +520,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>Scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>openid</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("scope", scope);
@@ -489,7 +532,10 @@ public class GenerateTokenByAuthorizationServerRequest extends Request {
         }
 
         /**
-         * username.
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userxxxxx</p>
          */
         public Builder username(String username) {
             this.putQueryParameter("username", username);

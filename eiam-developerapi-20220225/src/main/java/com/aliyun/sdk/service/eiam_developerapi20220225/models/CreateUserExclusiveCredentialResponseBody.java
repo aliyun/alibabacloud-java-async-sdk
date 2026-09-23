@@ -80,7 +80,10 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * credentialCiphertext.
+         * <p>The encrypted ciphertext of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJraWQiOiJBVVRIU0tFWxxxxx</p>
          */
         public Builder credentialCiphertext(String credentialCiphertext) {
             this.credentialCiphertext = credentialCiphertext;
@@ -88,7 +91,10 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * credentialId.
+         * <p>The credential ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cred_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
          */
         public Builder credentialId(String credentialId) {
             this.credentialId = credentialId;
@@ -96,7 +102,7 @@ public class CreateUserExclusiveCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * <p>凭据标识。</p>
+         * <p>The credential identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>credential_identifier_test</p>

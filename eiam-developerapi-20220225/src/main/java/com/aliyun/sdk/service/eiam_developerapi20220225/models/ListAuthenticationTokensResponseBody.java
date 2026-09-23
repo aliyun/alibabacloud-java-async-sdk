@@ -93,7 +93,7 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>资源实体列表。</p>
+         * <p>List of resource entities.</p>
          */
         public Builder entities(java.util.List<Entities> entities) {
             this.entities = entities;
@@ -101,7 +101,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>Maximum number of records returned in this query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>Token returned by this call. Use it for the next paged query to get the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxxexample</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>Total number of resource entities that match the query criteria.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -313,7 +322,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             } 
 
             /**
-             * authenticationTokenId.
+             * <p>Authentication token ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
              */
             public Builder authenticationTokenId(String authenticationTokenId) {
                 this.authenticationTokenId = authenticationTokenId;
@@ -321,7 +333,16 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * authenticationTokenType.
+             * <p>Authentication token type. Valid values:</p>
+             * <ul>
+             * <li><p>jwt: JWT authentication token</p>
+             * </li>
+             * <li><p>oauth_access_token: OAuth Access Token authentication token</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>jwt</p>
              */
             public Builder authenticationTokenType(String authenticationTokenType) {
                 this.authenticationTokenType = authenticationTokenType;
@@ -329,7 +350,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * consumerId.
+             * <p>ID of the authentication token consumer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test_jwt_subject</p>
              */
             public Builder consumerId(String consumerId) {
                 this.consumerId = consumerId;
@@ -337,7 +361,16 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * consumerType.
+             * <p>Type of the authentication token consumer. Valid values:</p>
+             * <ul>
+             * <li><p>application: Application</p>
+             * </li>
+             * <li><p>custom: Custom type</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder consumerType(String consumerType) {
                 this.consumerType = consumerType;
@@ -345,7 +378,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * <p>Creation time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830225000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -353,7 +389,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * creatorId.
+             * <p>ID of the authentication token creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -361,7 +400,13 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * creatorType.
+             * <p>Type of the authentication token creator. Valid values:</p>
+             * <ul>
+             * <li>application: Application</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>application</p>
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -369,7 +414,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * credentialProviderId.
+             * <p>Credential provider ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
              */
             public Builder credentialProviderId(String credentialProviderId) {
                 this.credentialProviderId = credentialProviderId;
@@ -377,7 +425,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * expirationTime.
+             * <p>Expiration time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1772693568000</p>
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;
@@ -385,7 +436,7 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * <p>EIAM实例ID。</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -396,7 +447,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * revoked.
+             * <p>Indicates whether the authentication token is revoked.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder revoked(Boolean revoked) {
                 this.revoked = revoked;
@@ -404,7 +458,10 @@ public class ListAuthenticationTokensResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * <p>Last update time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1649830225000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

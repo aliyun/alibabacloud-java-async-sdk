@@ -93,7 +93,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * data.
+         * <p>The data object.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of entries returned on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +112,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * nextToken.
+         * <p>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NTxxx</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -117,7 +123,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -209,7 +218,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * groupId.
+             * <p>The group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -217,7 +229,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * groupMemberRelationSourceId.
+             * <p>The source ID of the group membership.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder groupMemberRelationSourceId(String groupMemberRelationSourceId) {
                 this.groupMemberRelationSourceId = groupMemberRelationSourceId;
@@ -225,7 +240,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * groupMemberRelationSourceType.
+             * <p>The source type of the group membership.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>build_in</p>
              */
             public Builder groupMemberRelationSourceType(String groupMemberRelationSourceType) {
                 this.groupMemberRelationSourceType = groupMemberRelationSourceType;
@@ -233,7 +251,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

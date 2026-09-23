@@ -130,7 +130,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the token expires. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The expiration time. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1653288641</p>
@@ -141,7 +141,7 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The remaining validity period of the token. Unit: seconds.</p>
+         * <p>The validity period of the token in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>
@@ -174,7 +174,9 @@ public class GenerateTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the token. Valid values: Basic Bearer</p>
+         * <p>The token type. Valid values:
+         * Basic - Basic type
+         * Bearer - Bearer type</p>
          * 
          * <strong>example:</strong>
          * <p>Bearer</p>

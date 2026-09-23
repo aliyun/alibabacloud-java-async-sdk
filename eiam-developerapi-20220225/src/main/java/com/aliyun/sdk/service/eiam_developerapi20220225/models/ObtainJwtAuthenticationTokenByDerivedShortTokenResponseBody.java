@@ -210,7 +210,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         } 
 
         /**
-         * authenticationTokenId.
+         * <p>Authentication token ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atntkn_01kqflm0sxxx8nmdc1cb5dskxxxxx</p>
          */
         public Builder authenticationTokenId(String authenticationTokenId) {
             this.authenticationTokenId = authenticationTokenId;
@@ -218,7 +221,13 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * authenticationTokenType.
+         * <p>Type of the authentication token.</p>
+         * <blockquote>
+         * <p>The value is always <code>jwt</code>, indicating a JWT authentication token.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>jwt</p>
          */
         public Builder authenticationTokenType(String authenticationTokenType) {
             this.authenticationTokenType = authenticationTokenType;
@@ -226,7 +235,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * consumerId.
+         * <p>ID of the authentication token consumer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_jwt_subject</p>
          */
         public Builder consumerId(String consumerId) {
             this.consumerId = consumerId;
@@ -234,7 +246,16 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * consumerType.
+         * <p>Type of the authentication token consumer. Valid values:</p>
+         * <ul>
+         * <li><p>application</p>
+         * </li>
+         * <li><p>custom</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>custom</p>
          */
         public Builder consumerType(String consumerType) {
             this.consumerType = consumerType;
@@ -242,7 +263,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * createTime.
+         * <p>Creation time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830225000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -250,7 +274,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * creatorId.
+         * <p>ID of the authentication token creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app_ngtkgrrxxxxktg5eao6z4xxxxx</p>
          */
         public Builder creatorId(String creatorId) {
             this.creatorId = creatorId;
@@ -258,7 +285,13 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * creatorType.
+         * <p>Type of the authentication token creator. Valid values:</p>
+         * <ul>
+         * <li>application</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>application</p>
          */
         public Builder creatorType(String creatorType) {
             this.creatorType = creatorType;
@@ -266,7 +299,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * credentialProviderId.
+         * <p>Credential provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</p>
          */
         public Builder credentialProviderId(String credentialProviderId) {
             this.credentialProviderId = credentialProviderId;
@@ -274,7 +310,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * expirationTime.
+         * <p>Expiration time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1772693568000</p>
          */
         public Builder expirationTime(Long expirationTime) {
             this.expirationTime = expirationTime;
@@ -282,7 +321,7 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * <p>EIAM实例ID。</p>
+         * <p>Instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -293,7 +332,7 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * jwtContent.
+         * <p>Content of the JWT authentication token.</p>
          */
         public Builder jwtContent(JwtContent jwtContent) {
             this.jwtContent = jwtContent;
@@ -301,7 +340,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * revoked.
+         * <p>Indicates whether the authentication token is revoked.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder revoked(Boolean revoked) {
             this.revoked = revoked;
@@ -309,7 +351,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
         }
 
         /**
-         * updateTime.
+         * <p>Last update time of the authentication token, as a UNIX timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1649830225000</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;
@@ -375,7 +420,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
             } 
 
             /**
-             * derivedShortToken.
+             * <p>Derived short token for the JWT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sk-Nx2vzxxxxxxxxxxxxxxxxx</p>
              */
             public Builder derivedShortToken(String derivedShortToken) {
                 this.derivedShortToken = derivedShortToken;
@@ -383,7 +431,10 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenResponseBody extends
             }
 
             /**
-             * jwtValue.
+             * <p>JWT content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eyJhbGciOixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
              */
             public Builder jwtValue(String jwtValue) {
                 this.jwtValue = jwtValue;

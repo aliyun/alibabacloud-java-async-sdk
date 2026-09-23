@@ -98,6 +98,7 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenRequest extends Requ
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class ObtainJwtAuthenticationTokenByDerivedShortTokenRequest extends Requ
         }
 
         /**
+         * <p>Derived short token for the JWT authentication token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -119,7 +119,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         } 
 
         /**
-         * cloudAccountId.
+         * <p>The cloud account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ca_01kmegjc11qa1txxxxx</p>
          */
         public Builder cloudAccountId(String cloudAccountId) {
             this.cloudAccountId = cloudAccountId;
@@ -127,7 +130,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
 
         /**
-         * cloudAccountRoleAccessCredential.
+         * <p>The temporary access credentials for assuming the cloud account role.</p>
          */
         public Builder cloudAccountRoleAccessCredential(CloudAccountRoleAccessCredential cloudAccountRoleAccessCredential) {
             this.cloudAccountRoleAccessCredential = cloudAccountRoleAccessCredential;
@@ -135,7 +138,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
 
         /**
-         * cloudAccountRoleExternalId.
+         * <p>The business identifier of the cloud account role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::xxx:role/role-test</p>
          */
         public Builder cloudAccountRoleExternalId(String cloudAccountRoleExternalId) {
             this.cloudAccountRoleExternalId = cloudAccountRoleExternalId;
@@ -143,7 +149,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
 
         /**
-         * cloudAccountRoleId.
+         * <p>The cloud account role ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>carole_01kmek49aqxxxx</p>
          */
         public Builder cloudAccountRoleId(String cloudAccountRoleId) {
             this.cloudAccountRoleId = cloudAccountRoleId;
@@ -151,7 +160,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
 
         /**
-         * cloudAccountRoleName.
+         * <p>The cloud account role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>role-test</p>
          */
         public Builder cloudAccountRoleName(String cloudAccountRoleName) {
             this.cloudAccountRoleName = cloudAccountRoleName;
@@ -159,7 +171,13 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
         }
 
         /**
-         * cloudAccountVendorType.
+         * <p>The cloud account type. Valid values:</p>
+         * <ul>
+         * <li>alibaba_cloud: Alibaba Cloud.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba_cloud</p>
          */
         public Builder cloudAccountVendorType(String cloudAccountVendorType) {
             this.cloudAccountVendorType = cloudAccountVendorType;
@@ -251,7 +269,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             } 
 
             /**
-             * accessKeyId.
+             * <p>The access key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STS.NUgYrLnoC37mZZCNnAbez****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -259,7 +280,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * accessKeySecret.
+             * <p>The access key secret.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVwjCkNzTMupZ8NbTCxCBRq3K16jtcWFTJAyBEv2****</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -267,7 +291,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * expiration.
+             * <p>The token expiration time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T04:27:09Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -275,7 +302,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * securityToken.
+             * <p>The security token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAIShwJ1q6Ft5B2yfSjIr5bSEsj4g7BihPWGWHz****</p>
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -368,7 +398,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             } 
 
             /**
-             * accessKeyId.
+             * <p>The access key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ASIAYBGN7XJKRFOM****</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -376,7 +409,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * expiration.
+             * <p>The STS Token expiration time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T04:27:09Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -384,7 +420,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * secretAccessKey.
+             * <p>The secret access key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CVwjCkNzTMupZ8NbTCxCBRq3K16jtcWFTJAyBEv2****</p>
              */
             public Builder secretAccessKey(String secretAccessKey) {
                 this.secretAccessKey = secretAccessKey;
@@ -392,7 +431,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * sessionToken.
+             * <p>The session security token of the temporary credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FwoDYXdzEJzfSjIr5bSEsj4g7BihPWGWHz****</p>
              */
             public Builder sessionToken(String sessionToken) {
                 this.sessionToken = sessionToken;
@@ -485,7 +527,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             } 
 
             /**
-             * expiration.
+             * <p>The STS Token expiration time (UTC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-20T04:27:09Z</p>
              */
             public Builder expiration(String expiration) {
                 this.expiration = expiration;
@@ -493,7 +538,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * tmpSecretId.
+             * <p>The access key ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AKIDq2UjXVflTbnaxpFl0RFdN9yj****</p>
              */
             public Builder tmpSecretId(String tmpSecretId) {
                 this.tmpSecretId = tmpSecretId;
@@ -501,7 +549,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * tmpSecretKey.
+             * <p>The secret access key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3fGkJjyI+ZHWTxnq8VJHtYGRg****</p>
              */
             public Builder tmpSecretKey(String tmpSecretKey) {
                 this.tmpSecretKey = tmpSecretKey;
@@ -509,7 +560,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * token.
+             * <p>The session security token of the temporary credentials.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aHv1Z6aO7sxRbV4G2vjAij50jdew5Kaa****</p>
              */
             public Builder token(String token) {
                 this.token = token;
@@ -602,7 +656,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             } 
 
             /**
-             * accessCredentialExpiresAt.
+             * <p>The expiration time of the temporary access credentials for the cloud account role, in UNIX timestamp format (seconds).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1767196800</p>
              */
             public Builder accessCredentialExpiresAt(Long accessCredentialExpiresAt) {
                 this.accessCredentialExpiresAt = accessCredentialExpiresAt;
@@ -610,7 +667,10 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * alibabaCloudStsToken.
+             * <p>The temporary identity credentials (STS Token) for assuming an Alibaba Cloud RAM role.</p>
+             * <blockquote>
+             * <p>This field is returned only when the cloud account type associated with the cloud account role is Alibaba Cloud (alibaba_cloud).</p>
+             * </blockquote>
              */
             public Builder alibabaCloudStsToken(AlibabaCloudStsToken alibabaCloudStsToken) {
                 this.alibabaCloudStsToken = alibabaCloudStsToken;
@@ -618,7 +678,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * awsStsToken.
+             * <p>The STS Token representing an AWS role.</p>
              */
             public Builder awsStsToken(AwsStsToken awsStsToken) {
                 this.awsStsToken = awsStsToken;
@@ -626,7 +686,7 @@ public class ObtainCloudAccountRoleAccessCredentialResponseBody extends TeaModel
             }
 
             /**
-             * tencentCloudStsToken.
+             * <p>The STS Token representing a Tencent Cloud role.</p>
              */
             public Builder tencentCloudStsToken(TencentCloudStsToken tencentCloudStsToken) {
                 this.tencentCloudStsToken = tencentCloudStsToken;

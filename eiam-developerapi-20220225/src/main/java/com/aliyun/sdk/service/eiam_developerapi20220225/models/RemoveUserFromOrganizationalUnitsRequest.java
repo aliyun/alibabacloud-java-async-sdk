@@ -143,6 +143,7 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,9 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
+         * <p>The authorization credential for the request.
+         * Format: Bearer ${access_token}.
+         * Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +197,7 @@ public class RemoveUserFromOrganizationalUnitsRequest extends Request {
         }
 
         /**
+         * <p>The organizational unit IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

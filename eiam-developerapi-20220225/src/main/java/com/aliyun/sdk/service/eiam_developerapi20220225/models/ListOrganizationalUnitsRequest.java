@@ -182,7 +182,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+         * <p>The authentication information. The value must be in the format of \<code>Bearer ${access_token}\\</code>. Example: \<code>Bearer ATxxxx\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The page number. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -207,7 +207,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 20. Valid values: 1 to 100.</p>
+         * <p>The number of records on each page. The default value is 20. The value can range from 1 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -219,7 +219,7 @@ public class ListOrganizationalUnitsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the parent organizational unit.</p>
+         * <p>The parent organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

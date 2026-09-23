@@ -127,6 +127,7 @@ public class RevokeAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +140,10 @@ public class RevokeAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -151,6 +156,10 @@ public class RevokeAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>Original authentication token.</p>
+         * <blockquote>
+         * <p>You can pass either the original authentication token or a derived short token.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +172,16 @@ public class RevokeAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * token_type_hint.
+         * <p>Authentication token type hint.</p>
+         * <blockquote>
+         * <p>Notice: </p>
+         * </blockquote>
+         * <p>Currently, no value is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder tokenTypeHint(String tokenTypeHint) {
             this.putBodyParameter("token_type_hint", tokenTypeHint);

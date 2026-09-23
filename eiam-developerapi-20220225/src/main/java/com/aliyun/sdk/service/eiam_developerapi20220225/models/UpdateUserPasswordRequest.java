@@ -142,6 +142,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,6 +155,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,6 +168,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,6 +181,7 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
+         * <p>The authentication credential. Format: \<code>Bearer ${access_token}\\</code>. Example: \<code>Bearer ATxxxx\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +194,10 @@ public class UpdateUserPasswordRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The new password. For the password requirements, see the password policy in the console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);

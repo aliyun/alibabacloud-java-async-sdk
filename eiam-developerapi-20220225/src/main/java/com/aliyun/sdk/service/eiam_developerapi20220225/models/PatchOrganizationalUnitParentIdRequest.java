@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.eiam.dev.models.*;
 
 /**
  * 
- * {@link GetApplicationProvisioningScopeRequest} extends {@link RequestModel}
+ * {@link PatchOrganizationalUnitParentIdRequest} extends {@link RequestModel}
  *
- * <p>GetApplicationProvisioningScopeRequest</p>
+ * <p>PatchOrganizationalUnitParentIdRequest</p>
  */
-public class GetApplicationProvisioningScopeRequest extends Request {
+public class PatchOrganizationalUnitParentIdRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
@@ -31,24 +31,36 @@ public class GetApplicationProvisioningScopeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationalUnitId;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("Authorization")
     @com.aliyun.core.annotation.Validation(required = true)
     private String authorization;
 
-    private GetApplicationProvisioningScopeRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String parentId;
+
+    private PatchOrganizationalUnitParentIdRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.applicationId = builder.applicationId;
+        this.organizationalUnitId = builder.organizationalUnitId;
         this.authorization = builder.authorization;
+        this.parentId = builder.parentId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetApplicationProvisioningScopeRequest create() {
+    public static PatchOrganizationalUnitParentIdRequest create() {
         return builder().build();
     }
 
@@ -79,28 +91,46 @@ public class GetApplicationProvisioningScopeRequest extends Request {
     }
 
     /**
+     * @return organizationalUnitId
+     */
+    public String getOrganizationalUnitId() {
+        return this.organizationalUnitId;
+    }
+
+    /**
      * @return authorization
      */
     public String getAuthorization() {
         return this.authorization;
     }
 
-    public static final class Builder extends Request.Builder<GetApplicationProvisioningScopeRequest, Builder> {
+    /**
+     * @return parentId
+     */
+    public String getParentId() {
+        return this.parentId;
+    }
+
+    public static final class Builder extends Request.Builder<PatchOrganizationalUnitParentIdRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String applicationId; 
+        private String organizationalUnitId; 
         private String authorization; 
+        private String parentId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetApplicationProvisioningScopeRequest request) {
+        private Builder(PatchOrganizationalUnitParentIdRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.applicationId = request.applicationId;
+            this.organizationalUnitId = request.organizationalUnitId;
             this.authorization = request.authorization;
+            this.parentId = request.parentId;
         } 
 
         /**
@@ -117,7 +147,7 @@ public class GetApplicationProvisioningScopeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
+         * <p>idaas_xx001</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -130,7 +160,7 @@ public class GetApplicationProvisioningScopeRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>app_mkv7rgt4d7i4u7zqtzev2mxxxx</p>
+         * <p>app_xx001</p>
          */
         public Builder applicationId(String applicationId) {
             this.putPathParameter("applicationId", applicationId);
@@ -139,13 +169,24 @@ public class GetApplicationProvisioningScopeRequest extends Request {
         }
 
         /**
-         * <p>The authentication information.
-         * Format: Bearer ${access_token}.
-         * Example: Bearer ATxxxx.</p>
+         * <p>The organizational unit ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Bearer AT8csE2seYxxxxxij</p>
+         * <p>ou_xxx001</p>
+         */
+        public Builder organizationalUnitId(String organizationalUnitId) {
+            this.putPathParameter("organizationalUnitId", organizationalUnitId);
+            this.organizationalUnitId = organizationalUnitId;
+            return this;
+        }
+
+        /**
+         * <p>The authentication information. Format: Bearer access_token.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bearer xxxx</p>
          */
         public Builder authorization(String authorization) {
             this.putHeaderParameter("Authorization", authorization);
@@ -153,9 +194,22 @@ public class GetApplicationProvisioningScopeRequest extends Request {
             return this;
         }
 
+        /**
+         * <p>The ID of the parent organizational unit.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ou_001</p>
+         */
+        public Builder parentId(String parentId) {
+            this.putBodyParameter("parentId", parentId);
+            this.parentId = parentId;
+            return this;
+        }
+
         @Override
-        public GetApplicationProvisioningScopeRequest build() {
-            return new GetApplicationProvisioningScopeRequest(this);
+        public PatchOrganizationalUnitParentIdRequest build() {
+            return new PatchOrganizationalUnitParentIdRequest(this);
         } 
 
     } 

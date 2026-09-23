@@ -128,6 +128,7 @@ public class RevokeAuthenticationTokenByConsumerRequest extends Request {
         }
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,10 @@ public class RevokeAuthenticationTokenByConsumerRequest extends Request {
         }
 
         /**
+         * <p>Authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class RevokeAuthenticationTokenByConsumerRequest extends Request {
         }
 
         /**
+         * <p>Consumer ID of the authentication token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class RevokeAuthenticationTokenByConsumerRequest extends Request {
         }
 
         /**
+         * <p>Credential provider identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -155,6 +155,7 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +168,10 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. Format: Bearer ${access_token}.</p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +184,7 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The credential provider identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +197,7 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * customParameters.
+         * <p>Custom key-value pairs appended to the OAuth authorization URL to pass additional parameters supported by the OAuth provider.</p>
          */
         public Builder customParameters(java.util.Map<String, String> customParameters) {
             this.putBodyParameter("customParameters", customParameters);
@@ -200,7 +206,10 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * forceAuthentication.
+         * <p>Specifies whether to ignore existing valid tokens and force re-authorization. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceAuthentication(Boolean forceAuthentication) {
             this.putBodyParameter("forceAuthentication", forceAuthentication);
@@ -209,7 +218,16 @@ public class FetchOAuthAuthenticationTokenRequest extends Request {
         }
 
         /**
-         * scope.
+         * <p>The scope corresponding to the OAuth protocol.</p>
+         * <blockquote>
+         * <p>If not specified, the scope of the issued OAuth Access Token defaults to the scope configuration of the corresponding credential provider.</p>
+         * </blockquote>
+         * <blockquote>
+         * <p>Notice: Multiple scope values are separated by spaces.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>example:test_01 example:test_02</p>
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);

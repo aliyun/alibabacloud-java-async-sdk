@@ -143,6 +143,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -155,6 +156,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +169,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
+         * <p>The account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +182,9 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
+         * <p>The authentication information.
+         * Format: Bearer ${access_token}.
+         * Example: Bearer ATxxxx.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +197,7 @@ public class SetUserPrimaryOrganizationalUnitRequest extends Request {
         }
 
         /**
+         * <p>The primary organization ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

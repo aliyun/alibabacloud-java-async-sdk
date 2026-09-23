@@ -214,6 +214,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The EIAM instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -226,6 +227,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The authentication information. Format: Bearer ${access_token}. </p>
+         * <blockquote>
+         * <p>Enter the Access Token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,6 +243,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential content.</p>
          * <p>This parameter is required.</p>
          */
         public Builder credentialContent(CredentialContent credentialContent) {
@@ -247,7 +253,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
-         * credentialExternalId.
+         * <p>The external unique identifier of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>YNWLVQAZMNRROYWKxxx</p>
          */
         public Builder credentialExternalId(String credentialExternalId) {
             this.putBodyParameter("credentialExternalId", credentialExternalId);
@@ -256,6 +265,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential identifier.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,6 +278,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +291,14 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
-         * credentialScenarioLabel.
+         * <p>The scenarios label of the credential. Valid values:</p>
+         * <ul>
+         * <li>llm: large language model.</li>
+         * <li>saas: third-party SaaS service.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>llm</p>
          */
         public Builder credentialScenarioLabel(String credentialScenarioLabel) {
             this.putBodyParameter("credentialScenarioLabel", credentialScenarioLabel);
@@ -289,6 +307,11 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
+         * <p>The credential type. Valid values:</p>
+         * <ul>
+         * <li>api_key: API Key authentication credential.</li>
+         * <li>oauth_client: OAuth client authentication credential.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -301,7 +324,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The credential description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>credential_description</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -310,7 +336,10 @@ public class CreateUserExclusiveCredentialRequest extends Request {
         }
 
         /**
-         * returnCiphertext.
+         * <p>Specifies whether to return the encrypted ciphertext of the credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder returnCiphertext(Boolean returnCiphertext) {
             this.putBodyParameter("returnCiphertext", returnCiphertext);
@@ -366,6 +395,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
             } 
 
             /**
+             * <p>The value of the API Key.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -423,7 +453,7 @@ public class CreateUserExclusiveCredentialRequest extends Request {
             } 
 
             /**
-             * apiKeyContent.
+             * <p>The credential content for the API Key credential type.</p>
              */
             public Builder apiKeyContent(ApiKeyContent apiKeyContent) {
                 this.apiKeyContent = apiKeyContent;

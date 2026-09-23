@@ -128,6 +128,7 @@ public class ObtainJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,6 +141,10 @@ public class ObtainJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The authentication credential. The format is <code>Bearer ${access_token}</code>.</p>
+         * <blockquote>
+         * <p>Use an access token issued by IDaaS.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,6 +157,7 @@ public class ObtainJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The ID of the authentication token.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,6 +170,7 @@ public class ObtainJwtAuthenticationTokenRequest extends Request {
         }
 
         /**
+         * <p>The ID of the authentication token consumer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

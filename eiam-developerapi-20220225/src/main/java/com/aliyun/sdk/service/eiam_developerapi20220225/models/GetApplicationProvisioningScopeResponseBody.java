@@ -67,7 +67,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         } 
 
         /**
-         * groupIds.
+         * <p>The list of group IDs.</p>
          */
         public Builder groupIds(java.util.List<String> groupIds) {
             this.groupIds = groupIds;
@@ -75,7 +75,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IDs of organizational units.</p>
+         * <p>The list of organization IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[ou_xxx001]</p>

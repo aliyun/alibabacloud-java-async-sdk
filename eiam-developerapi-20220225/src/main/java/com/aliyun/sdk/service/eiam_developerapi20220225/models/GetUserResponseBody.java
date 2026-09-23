@@ -386,7 +386,7 @@ public class GetUserResponseBody extends TeaModel {
          * <p>The description of the account.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxxx</p>
+         * <p>测试账户</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -590,10 +590,14 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The source type of the account. Valid values:</p>
          * <ul>
-         * <li>build_in: The account was created in IDaaS.</li>
-         * <li>ding_talk: The account was imported from DingTalk.</li>
-         * <li>ad: The account was imported from Microsoft Active Directory (AD).</li>
-         * <li>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</li>
+         * <li><p>build_in: The account was created in IDaaS.</p>
+         * </li>
+         * <li><p>ding_talk: The account was imported from DingTalk.</p>
+         * </li>
+         * <li><p>ad: The account was imported from Microsoft Active Directory (AD).</p>
+         * </li>
+         * <li><p>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

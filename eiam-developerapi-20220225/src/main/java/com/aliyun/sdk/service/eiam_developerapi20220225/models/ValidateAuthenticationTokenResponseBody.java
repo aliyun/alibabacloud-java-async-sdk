@@ -54,7 +54,10 @@ public class ValidateAuthenticationTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * active.
+         * <p>Indicates whether the authentication token is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder active(Boolean active) {
             this.active = active;
