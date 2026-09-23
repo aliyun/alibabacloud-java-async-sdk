@@ -102,7 +102,7 @@ public class ModifyPrepayInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

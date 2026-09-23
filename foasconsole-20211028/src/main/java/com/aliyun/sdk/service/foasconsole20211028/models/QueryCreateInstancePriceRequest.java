@@ -285,11 +285,11 @@ public class QueryCreateInstancePriceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables auto-renewal.</li>
-         * <li><strong>false</strong>: does not enable auto-renewal. (Default)</li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled (default).</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is invalid for pay-as-you-go instances.</p>
+         * <p>This parameter does not take effect for pay-as-you-go instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -302,7 +302,11 @@ public class QueryCreateInstancePriceRequest extends Request {
         }
 
         /**
-         * <p>The billing type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>POST: pay-as-you-go.</li>
+         * <li>PRE: subscription.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -316,6 +320,9 @@ public class QueryCreateInstancePriceRequest extends Request {
 
         /**
          * <p>The number of billing cycles.</p>
+         * <blockquote>
+         * <p>When ChargeType is set to PRE, the Duration parameter is required.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -431,6 +438,10 @@ public class QueryCreateInstancePriceRequest extends Request {
 
         /**
          * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li>true: Use a coupon.</li>
+         * <li>false: Do not use a coupon.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -616,6 +627,9 @@ public class QueryCreateInstancePriceRequest extends Request {
 
             /**
              * <p>The memory size.</p>
+             * <blockquote>
+             * <p>The memory size must be 4 times the number of CPUs.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>16</p>

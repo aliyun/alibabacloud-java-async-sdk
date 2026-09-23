@@ -217,7 +217,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The price reduction rate.</p>
+             * <p>The price reduction ratio.</p>
              */
             public Builder cheapRate(String cheapRate) {
                 this.cheapRate = cheapRate;
@@ -225,7 +225,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard total price after the price reduction.</p>
+             * <p>The total list price after the price reduction.</p>
              */
             public Builder cheapStandAmount(String cheapStandAmount) {
                 this.cheapStandAmount = cheapStandAmount;
@@ -249,7 +249,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original standard total price.</p>
+             * <p>The original total list price.</p>
              */
             public Builder originalStandAmount(String originalStandAmount) {
                 this.originalStandAmount = originalStandAmount;
@@ -384,6 +384,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether the coupon is selected. Valid values:</p>
+             * <ul>
+             * <li>true: Selected.</li>
+             * <li>false: Not selected.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -453,10 +457,10 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The promotion rule description.</p>
+             * <p>The description of the promotion rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Get a 15% discount for a 1-year subscription</p>
+             * <p>Purchase for one year or longer and enjoy a 15% discount off the list price</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -718,7 +722,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the enterprise customer discount is applied.</p>
+             * <p>Indicates whether an enterprise discount is applied.</p>
              */
             public Builder isContractActivity(Boolean isContractActivity) {
                 this.isContractActivity = isContractActivity;
@@ -775,7 +779,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotional price based on the official website discount.</p>
+             * <p>The promotional price based on the standard discount from the official website.</p>
              */
             public Builder standDiscountPrice(String standDiscountPrice) {
                 this.standDiscountPrice = standDiscountPrice;
@@ -783,7 +787,7 @@ public class QueryCreateInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The official website discounted price or direct sales contract discounted price.</p>
+             * <p>The standard discounted price on the official website or the direct sales contract discounted price.</p>
              */
             public Builder standPrice(String standPrice) {
                 this.standPrice = standPrice;

@@ -159,7 +159,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription period.</p>
+         * <p>The subscription period. Valid values:</p>
+         * <ul>
+         * <li>Month: month.</li>
+         * <li>Year: year.</li>
+         * <li>Hour: hour.</li>
+         * <li>Day: day.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

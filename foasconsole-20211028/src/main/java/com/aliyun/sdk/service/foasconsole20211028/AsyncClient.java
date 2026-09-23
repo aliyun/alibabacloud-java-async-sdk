@@ -227,7 +227,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of Realtime Compute for Apache Flink.</em>*</p>
+     * <p><em>Before using this operation, make sure that you fully understand the billing method and <a href="https://www.alibabacloud.com/help/en/flink/product-overview/renewal-policy">pricing</a> of the fully managed Flink service.</em>*</p>
      * 
      * @param request the request parameters of RenewInstance  RenewInstanceRequest
      * @return RenewInstanceResponse

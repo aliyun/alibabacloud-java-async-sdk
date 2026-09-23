@@ -212,7 +212,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * <p>The payment type.</p>
+         * <p>The billing method.</p>
          * 
          * <strong>example:</strong>
          * <p>PRE</p>

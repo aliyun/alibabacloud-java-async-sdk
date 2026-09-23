@@ -231,7 +231,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reduced list price total.</p>
+             * <p>The list price total after the price reduction.</p>
              * 
              * <strong>example:</strong>
              * <p>8000</p>
@@ -242,7 +242,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to display the price reduction percentage.</p>
+             * <p>Indicates whether the price reduction is displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -275,7 +275,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price reduction start time.</p>
+             * <p>The price reduction start time in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31T16:00:00Z</p>
@@ -374,7 +374,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
              * <p>The coupon description.</p>
              * 
              * <strong>example:</strong>
-             * <p>¥1,391.5 coupon (valid until 03/23/2022)</p>
+             * <p>￥1,391.5 coupon (valid until 03/23/2022)</p>
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -385,7 +385,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
              * <p>The coupon name.</p>
              * 
              * <strong>example:</strong>
-             * <p>¥1,391.5 coupon</p>
+             * <p>￥1,391.5 coupon</p>
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -805,7 +805,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price based on the official website discount.</p>
+             * <p>The discounted price based on the list discount.</p>
              * 
              * <strong>example:</strong>
              * <p>21321</p>
@@ -816,7 +816,7 @@ public class QueryConvertPrepayInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The official website discount price or direct sales contract discount price.</p>
+             * <p>The list discount price or direct sales contract discount price.</p>
              * 
              * <strong>example:</strong>
              * <p>32432</p>

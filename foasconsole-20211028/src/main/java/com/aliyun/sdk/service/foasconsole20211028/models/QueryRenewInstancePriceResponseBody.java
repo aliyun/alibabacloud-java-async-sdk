@@ -80,7 +80,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The price information, including the price and discount rules.</p>
+         * <p>The price information, including the price and promotion rules.</p>
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -242,7 +242,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to display the price reduction percentage.</p>
+             * <p>Indicates whether the price reduction percentage is displayed.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -253,7 +253,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The monthly equivalent price.</p>
+             * <p>The equivalent monthly price.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -275,7 +275,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the price reduction.</p>
+             * <p>The start time of the price reduction, in ISO 8601 format.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-31T16:00:00Z</p>
@@ -393,7 +393,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon ID.</p>
+             * <p>The coupon number.</p>
              * 
              * <strong>example:</strong>
              * <p>500011220010099</p>
@@ -483,7 +483,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
              * <p>The description of the promotion rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>Purchase for 1 year or more to enjoy a 15% discount off the list price</p>
+             * <p>Purchase for 1 year or more and enjoy a 15% discount off the list price</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -797,7 +797,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion rules.</p>
+             * <p>The promotion rule group.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;
@@ -805,7 +805,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotional price based on the standard discount on the official website.</p>
+             * <p>The promotional price based on the standard website discount.</p>
              * 
              * <strong>example:</strong>
              * <p>21321</p>
@@ -816,7 +816,7 @@ public class QueryRenewInstancePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The standard discounted price on the official website or the direct sales contract discounted price.</p>
+             * <p>The list price with the website discount or direct sales contract discount applied.</p>
              * 
              * <strong>example:</strong>
              * <p>32432</p>

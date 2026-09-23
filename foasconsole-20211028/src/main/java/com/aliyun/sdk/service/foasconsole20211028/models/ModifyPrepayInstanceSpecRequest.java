@@ -146,7 +146,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         } 
 
         /**
-         * Ha.
+         * <p>Specifies whether to enable zone-disaster recovery resources for the workspace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ha(Boolean ha) {
             this.putBodyParameter("Ha", ha);
@@ -155,7 +158,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * HaResourceSpec.
+         * <p>The resource specifications for zone-disaster recovery.</p>
          */
         public Builder haResourceSpec(HaResourceSpec haResourceSpec) {
             String haResourceSpecShrink = shrink(haResourceSpec, "HaResourceSpec", "json");
@@ -165,7 +168,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * HaVSwitchIds.
+         * <p>The list of vSwitch IDs in the secondary zone for zone-disaster recovery.</p>
          */
         public Builder haVSwitchIds(java.util.List<String> haVSwitchIds) {
             String haVSwitchIdsShrink = shrink(haVSwitchIds, "HaVSwitchIds", "json");
@@ -175,7 +178,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * HaZoneId.
+         * <p>The ID of the secondary zone for zone-disaster recovery.</p>
          */
         public Builder haZoneId(String haZoneId) {
             this.putBodyParameter("HaZoneId", haZoneId);
@@ -197,7 +200,7 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -280,7 +283,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for zone-disaster recovery resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -288,7 +294,10 @@ public class ModifyPrepayInstanceSpecRequest extends Request {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size of zone-disaster recovery resources, in GB. The value must be 4 times the number of CPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;

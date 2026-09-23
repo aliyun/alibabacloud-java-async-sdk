@@ -454,7 +454,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable zone-disaster recovery resources.</p>
+         * <p>Specifies whether to use zone-disaster recovery resources.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -499,7 +499,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * <p>The type of monitoring and alerting service. You can select Application Real-Time Monitoring Service (ARMS) or CloudMonitor.</p>
+         * <p>The type of the monitoring and alerting service. You can select ARMS or CloudMonitor.</p>
          * 
          * <strong>example:</strong>
          * <p>TAIHAO</p>
@@ -879,7 +879,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The memory size for zone-disaster recovery. The value is active memory allocated for high availability (HA).</p>
+             * <p>The memory size for zone-disaster recovery high availability (HA).</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -1050,6 +1050,7 @@ public class CreateInstanceRequest extends Request {
      */
     public static class Storage extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullyManaged")
+        @Deprecated
         private Boolean fullyManaged;
 
         @com.aliyun.core.annotation.NameInMap("Oss")
@@ -1110,7 +1111,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * <p>The Object Storage Service (OSS) storage.</p>
+             * <p>The OSS storage configurations.</p>
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;

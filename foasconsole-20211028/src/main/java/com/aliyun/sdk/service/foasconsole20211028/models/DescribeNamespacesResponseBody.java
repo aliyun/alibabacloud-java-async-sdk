@@ -173,7 +173,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
          * <li>true: Successful.</li>
          * <li>false: Failed.</li>
@@ -268,7 +268,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The maximum CPU limit for pay-as-you-go resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -276,7 +279,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The maximum memory limit for pay-as-you-go resources. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -343,7 +349,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>The number of CPUs for subscription resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -351,7 +360,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * MemoryGB.
+             * <p>The memory size for subscription resources. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder memoryGB(Integer memoryGB) {
                 this.memoryGB = memoryGB;
@@ -512,7 +524,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of used CPUs.</p>
+             * <p>The number of CPUs used.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -523,7 +535,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Cu.
+             * <p>The number of compute units (CUs) used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cu(Float cu) {
                 this.cu = cu;
@@ -531,7 +546,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of used memory.</p>
+             * <p>The amount of memory used.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -816,7 +831,7 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * GuaranteedResourceSpec.
+             * <p>The subscription resources allocated to the namespace.</p>
              */
             public Builder guaranteedResourceSpec(GuaranteedResourceSpec guaranteedResourceSpec) {
                 this.guaranteedResourceSpec = guaranteedResourceSpec;
@@ -824,7 +839,10 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * Ha.
+             * <p>Indicates whether zone-disaster recovery is enabled for the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder ha(Boolean ha) {
                 this.ha = ha;
