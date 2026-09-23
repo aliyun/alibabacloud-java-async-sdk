@@ -171,7 +171,14 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to enable the DryRun dry run mode. If you do not specify this parameter, a normal request is sent. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: A dry run request is sent. The system checks whether the request meets the execution conditions without performing the specified operation. If the dry run fails, the corresponding error code is returned. If the dry run succeeds, the error code Defense.Control.DryRunOperation is returned.</li>
+         * <li><strong>false</strong>: A normal request is sent. The specified operation is performed after the request passes the check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -214,7 +221,7 @@ public class DeleteDefenseRuleRequest extends Request {
         }
 
         /**
-         * <p>The protection object associated with the rule to delete.</p>
+         * <p>The protected object associated with the rule to delete.</p>
          * <blockquote>
          * <p>This parameter is required only when <strong>DefenseType</strong> is set to <strong>resource</strong>.</p>
          * </blockquote>

@@ -477,7 +477,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total access volume in the last 30 days.</p>
+             * <p>The total number of access requests in the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>1683388800</p>
@@ -510,17 +510,17 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The API information, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
+             * <p>API-related information, which is a JSON string constructed from a series of parameters. The parameters include:</p>
              * <ul>
              * <li><strong>param_num</strong>: the number of API parameters.</li>
              * <li><strong>request_method</strong>: the request method.</li>
              * <li><strong>protocol</strong>: the request protocol.</li>
              * <li><strong>api_url</strong>: the request URL.</li>
              * <li><strong>poc_payload</strong>: the request.</li>
-             * <li><strong>request</strong>: the request sample.</li>
-             * <li><strong>response</strong>: the response sample.</li>
+             * <li><strong>request</strong>: the request example.</li>
+             * <li><strong>response</strong>: the response example.</li>
              * <li><strong>param</strong>: the request parameters.<blockquote>
-             * <p>This field is returned only when the <strong>ApiId</strong> parameter is specified.</p>
+             * <p>This value is returned only when the <strong>ApiId</strong> request parameter is specified.</p>
              * </blockquote>
              * </li>
              * </ul>
@@ -552,10 +552,10 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive information involved in the API, which is a string converted from a JSON object constructed with a series of parameters. The parameters include:</p>
+             * <p>Sensitive information related to the API, which is a JSON string constructed from a series of parameters. The parameters include:</p>
              * <ul>
-             * <li><strong>request_sensitive_list</strong>: the list of sensitive data types in the request.</li>
-             * <li><strong>response_sensitive_list</strong>: the list of sensitive data types in the response.</li>
+             * <li><strong>request_sensitive_list</strong>: the list of sensitive data types in requests.</li>
+             * <li><strong>response_sensitive_list</strong>: the list of sensitive data types in responses.</li>
              * <li><strong>sensitive_list</strong>: the list of sensitive data types.</li>
              * <li><strong>sensitive_level</strong>: the sensitivity level.</li>
              * </ul>
@@ -574,7 +574,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data in the API request.</p>
+             * <p>The sensitive data in API requests.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;1002&quot;,&quot;1005&quot;]</p>
@@ -585,7 +585,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The sensitive data in the API response.</p>
+             * <p>The sensitive data in API responses.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;1002&quot;,&quot;1005&quot;]</p>
@@ -598,9 +598,9 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>The status of the API. Valid values:</p>
              * <ul>
-             * <li><strong>NewbornInterface</strong>: newly added.</li>
-             * <li><strong>OfflineInterface</strong>: inactive.</li>
-             * <li><strong>normal</strong>: normal.</li>
+             * <li><strong>NewbornInterface</strong>: New.</li>
+             * <li><strong>OfflineInterface</strong>: Inactive.</li>
+             * <li><strong>normal</strong>: Normal.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -614,7 +614,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>The business purpose of the API.</p>
              * <blockquote>
-             * <p>You can call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
+             * <p>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to obtain the supported business purposes.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -628,9 +628,9 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>The service object. Valid values:</p>
              * <ul>
-             * <li><strong>PublicAPI</strong>: public service.</li>
-             * <li><strong>ThirdpartAPI</strong>: third-party collaboration.</li>
-             * <li><strong>InternalAPI</strong>: internal office.</li>
+             * <li><strong>PublicAPI</strong>: Public service.</li>
+             * <li><strong>ThirdpartAPI</strong>: Third-party collaboration.</li>
+             * <li><strong>InternalAPI</strong>: Internal office.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -644,8 +644,8 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the API has an authentication field. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: has authentication.</li>
-             * <li><strong>1</strong>: does not have authentication.</li>
+             * <li><strong>0</strong>: Has authentication.</li>
+             * <li><strong>1</strong>: Does not have authentication.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -657,7 +657,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bot access volume in the last 30 days.</p>
+             * <p>The number of bot access requests in the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -668,7 +668,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cross-border access volume in the last 30 days.</p>
+             * <p>The number of cross-border access requests in the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -690,7 +690,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of API samples.</p>
+             * <p>The list of API examples.</p>
              */
             public Builder examples(java.util.List<String> examples) {
                 this.examples = examples;
@@ -698,7 +698,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the API asset was first discovered, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+             * <p>The time when the API asset was first discovered. The value is a UNIX timestamp (UTC), in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683388800</p>
@@ -711,8 +711,8 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             /**
              * <p>Specifies whether the API is followed. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: followed.</li>
-             * <li><strong>0</strong>: not followed.</li>
+             * <li><strong>1</strong>: Followed.</li>
+             * <li><strong>0</strong>: Not followed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -724,7 +724,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent access time of the API asset, in UNIX timestamp (UTC) format. Unit: seconds.</p>
+             * <p>The most recent access time of the API asset. The value is a UNIX timestamp (UTC), in seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1683388800</p>
@@ -757,7 +757,7 @@ public class DescribeApisecApiResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of protected objects corresponding to the asset.</p>
+             * <p>The list of protected objects associated with the asset.</p>
              */
             public Builder resources(java.util.List<String> resources) {
                 this.resources = resources;
