@@ -67,7 +67,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66815255-7CCE-4759-AC37-9755794C3626</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetServiceCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCredential.
+         * <p>The service credential information.</p>
          */
         public Builder serviceCredential(ServiceCredential serviceCredential) {
             this.serviceCredential = serviceCredential;
@@ -206,7 +209,11 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * <p>Format: RFC 3339 (UTC), for example, 2026-03-15T09:20:58Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-03-15T09:20:58Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -214,7 +221,12 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time.
+             * This field is not returned for permanent service credentials.</p>
+             * <p>Format: RFC 3339 (UTC), for example, 2026-04-15T09:20:58Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-04-15T09:20:58Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -222,7 +234,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialId.
+             * <p>The service credential ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SC***************</p>
              */
             public Builder serviceCredentialId(String serviceCredentialId) {
                 this.serviceCredentialId = serviceCredentialId;
@@ -230,7 +245,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialName.
+             * <p>The service credential name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder serviceCredentialName(String serviceCredentialName) {
                 this.serviceCredentialName = serviceCredentialName;
@@ -238,7 +256,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.aliyuncs.com</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -246,7 +267,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The service credential status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -254,7 +278,10 @@ public class GetServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The logon name of the Resource Access Management (RAM) user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

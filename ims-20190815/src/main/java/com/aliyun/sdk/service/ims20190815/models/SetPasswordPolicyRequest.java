@@ -227,10 +227,12 @@ public class SetPasswordPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to disable logon after the password expires. Valid values:</p>
+         * <p>Specifies whether logon is blocked after a password expires.</p>
          * <ul>
-         * <li>true: After the password expires, you cannot use the password to log on to the console. You can log on to the console only after you reset the password by using your Alibaba Cloud account or as a RAM user that has administrative rights.</li>
-         * <li>false: After the password expires, you can change the password to log on to the console. This is the default value.</li>
+         * <li><p>true: After a password expires, the RAM user cannot log on to the console. An Alibaba Cloud account owner or a RAM administrator must reset the password before the RAM user can log on.</p>
+         * </li>
+         * <li><p>false (default): After a password expires, the RAM user can change the password and then log on.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +245,13 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * InitialPasswordAge.
+         * <p>Validity period for initial passwords. Initial passwords apply to newly created RAM users or users whose console logon settings are re-enabled.</p>
+         * <p>Valid values: 0 to 90. Unit: days.</p>
+         * <p>Default value: 14.</p>
+         * <p>A value of 0 disables this constraint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder initialPasswordAge(Integer initialPasswordAge) {
             this.putQueryParameter("InitialPasswordAge", initialPasswordAge);
@@ -252,7 +260,17 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * InterceptRiskPasswordOnApi.
+         * <p>Specifies whether threat passwords are blocked when set using APIs.</p>
+         * <p>Default value: false</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder interceptRiskPasswordOnApi(Boolean interceptRiskPasswordOnApi) {
             this.putQueryParameter("InterceptRiskPasswordOnApi", interceptRiskPasswordOnApi);
@@ -261,9 +279,9 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of password retries. If you enter the wrong passwords for the specified consecutive times, the account is locked for one hour.</p>
+         * <p>Maximum number of failed password attempts. After the specified number of consecutive incorrect password attempts, the account is locked for one hour.</p>
          * <p>Valid values: 0 to 32.</p>
-         * <p>The default value is 0, which indicates that the password retries are not limited.</p>
+         * <p>Default value: 0, which disables this constraint.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -275,9 +293,9 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the password.</p>
+         * <p>Password validity period.</p>
          * <p>Valid values: 0 to 1095. Unit: days.</p>
-         * <p>The default value is 0, which indicates that the password never expires.</p>
+         * <p>Default value: 0, which means passwords never expire.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -289,9 +307,9 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of unique characters in the password.</p>
+         * <p>Minimum number of unique characters in a password.</p>
          * <p>Valid values: 0 to 8.</p>
-         * <p>The default value is 0, which indicates that no limits are imposed on the number of unique characters in a password.</p>
+         * <p>Default value: 0, which imposes no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -303,8 +321,9 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>The minimum number of characters in the password.</p>
-         * <p>Valid values: 8 to 32. Default value: 8.</p>
+         * <p>Minimum password length.</p>
+         * <p>Valid values: 8 to 32.</p>
+         * <p>Default value: 8.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -316,10 +335,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to exclude the username from the password. Valid values:</p>
+         * <p>Specifies whether passwords must not contain the user name.</p>
          * <ul>
-         * <li>true: A password cannot contain the username.</li>
-         * <li>false: A password can contain the username. This is the default value.</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -332,9 +353,9 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>The policy for password history check.</p>
-         * <p>The previous N passwords cannot be reused. Valid values of N: 0 to 24.</p>
-         * <p>The default value is 0, which indicates that RAM users can reuse previous passwords.</p>
+         * <p>Prevents reuse of previous passwords.</p>
+         * <p>Valid values: 0 to 24. This value specifies how many previous passwords are blocked from reuse.</p>
+         * <p>Default value: 0, which disables this constraint.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -346,10 +367,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain lowercase letters. Valid values:</p>
+         * <p>Specifies whether passwords must contain lowercase letters.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,10 +385,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain digits. Valid values:</p>
+         * <p>Specifies whether passwords must contain numbers.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,10 +403,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain special characters. Valid values:</p>
+         * <p>Specifies whether passwords must contain special characters.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -394,10 +421,12 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the password must contain uppercase letters. Valid values:</p>
+         * <p>Specifies whether passwords must contain uppercase letters.</p>
          * <ul>
-         * <li>true</li>
-         * <li>false (default)</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false (default)</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

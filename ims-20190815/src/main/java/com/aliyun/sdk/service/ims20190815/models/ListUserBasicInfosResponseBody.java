@@ -95,8 +95,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.\<code>\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -130,7 +132,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The basic information about the RAM users.</p>
+         * UserBasicInfos.
          */
         public Builder userBasicInfos(UserBasicInfos userBasicInfos) {
             this.userBasicInfos = userBasicInfos;
@@ -222,10 +224,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -233,10 +232,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -244,10 +240,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20732900249392****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -255,10 +248,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+             * UserPrincipalName.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

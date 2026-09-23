@@ -75,7 +75,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6616F09B-2768-4C11-8866-A8EE4C4A583E</p>
@@ -157,10 +157,7 @@ public class GetApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,10 +165,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,15 +173,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p><code>openid</code> is required by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Required.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -594,7 +580,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>472457090344041****</p>
@@ -605,7 +591,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
+             * <p>The application name.</p>
              * 
              * <strong>example:</strong>
              * <p>myapp</p>
@@ -616,11 +602,14 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application. Valid values:</p>
+             * <p>The application type. Valid values:</p>
              * <ul>
-             * <li>WebApp: a web application.</li>
-             * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
-             * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
+             * <li><p>WebApp: a web application that is based on browser interaction.</p>
+             * </li>
+             * <li><p>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
+             * </li>
+             * <li><p>ServerApp: an application that directly accesses Alibaba Cloud services without user logon. Currently, only applications that use the System for Cross-domain Identity Management (SCIM) protocol for user synchronization are supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -632,7 +621,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the application was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>
@@ -673,7 +662,16 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolVersion.
+             * <p>The OAuth protocol version of the application. Valid values:</p>
+             * <ul>
+             * <li><p><code>2.0</code>: OAuth 2.0</p>
+             * </li>
+             * <li><p><code>2.1</code>: OAuth 2.1</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder protocolVersion(String protocolVersion) {
                 this.protocolVersion = protocolVersion;
@@ -681,7 +679,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URL.</p>
+             * <p>The redirect URLs.</p>
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -711,7 +709,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the application was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>

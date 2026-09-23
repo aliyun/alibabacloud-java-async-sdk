@@ -91,7 +91,7 @@ public class CreateGroupRequest extends Request {
          * <p>The description can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>Dev-Team</p>
+         * <p>开发团队</p>
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);

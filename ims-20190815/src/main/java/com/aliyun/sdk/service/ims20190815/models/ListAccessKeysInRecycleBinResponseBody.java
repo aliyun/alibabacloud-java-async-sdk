@@ -67,7 +67,7 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the AccessKey pairs.</p>
+         * AccessKeys.
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -170,10 +170,7 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LTAI*******************</p>
+             * AccessKeyId.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -181,10 +178,7 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-11T09:12:00Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -192,10 +186,7 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair will be permanently deleted from the recycle bin.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-12T09:12:00Z</p>
+             * DeleteDate.
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -203,10 +194,7 @@ public class ListAccessKeysInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was deleted and moved to the recycle bin.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-12T09:12:00Z</p>
+             * RecycleDate.
              */
             public Builder recycleDate(String recycleDate) {
                 this.recycleDate = recycleDate;

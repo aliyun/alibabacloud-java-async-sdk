@@ -29,10 +29,8 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler = new TeaAsyncHandler(configuration);
         this.product = "Ims";
         this.version = "2019-08-15";
-        this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-hangzhou", "ims.aliyuncs.com")
-        );
+        this.endpointRule = "central";
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -42,6 +40,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to add client ID <code>598469743454717****</code> to the OIDC IdP named <code>TestOIDCProvider</code>.</p>
+     * 
      * @param request the request parameters of AddClientIdToOIDCProvider  AddClientIdToOIDCProviderRequest
      * @return AddClientIdToOIDCProviderResponse
      */
@@ -120,7 +122,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * <p>This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ChangePassword  ChangePasswordRequest
@@ -505,6 +507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <h3>使用说明</h3>
+     * <p>删除服务凭证前，必须先调用 <code>UpdateServiceCredential</code> 将目标服务凭证的 <code>Status</code> 设置为 <code>Inactive</code>，再调用本接口。<code>Active</code> 状态的服务凭证不能直接删除。</p>
+     * 
      * @param request the request parameters of DeleteServiceCredential  DeleteServiceCredentialRequest
      * @return DeleteServiceCredentialResponse
      */
@@ -580,7 +586,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <b>description</b> :
      * <p>If you want to call this operation to uninstall an internal application, the type of the internal application must be <strong>ServerApp</strong>. Otherwise, an error occurs when you call this operation.</p>
      * <blockquote>
-     * <p> For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
+     * <p>For <strong>internal applications</strong>, only internal applications of the ServerApp type need to be <strong>installed or provisioned</strong>. Therefore, only internal applications of the ServerApp type <strong>can be uninstalled</strong>. Internal applications of the WebApp and NativeApp types <strong>do not need to and cannot be uninstalled</strong>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeprovisionApplication  DeprovisionApplicationRequest
@@ -800,7 +806,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
+     * <p>This topic provides an example on how to query the configurations of an application named <code>472457090344041****</code>.</p>
      * 
      * @param request the request parameters of GetApplication  GetApplicationRequest
      * @return GetApplicationResponse
@@ -820,6 +826,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口前，目标应用必须已经安装；可先调用 <code>ProvisionApplication</code> 安装应用，并使用已安装应用的 <code>AppId</code>。仅使用 <code>CreateApplication</code> 返回、但尚未安装的应用 ID 调用会失败。</p>
+     * 
      * @param request the request parameters of GetApplicationProvisionInfo  GetApplicationProvisionInfoRequest
      * @return GetApplicationProvisionInfoResponse
      */
@@ -874,6 +883,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>调用本接口时，<code>AppId</code> 必须来自当前账号已安装的外部应用。可先调用 <code>ListExternalApplications</code> 获取；如果账号中没有已安装的外部应用，需先调用 <code>ProvisionExternalApplication</code> 安装。</p>
+     * 
      * @param request the request parameters of GetExternalApplication  GetExternalApplicationRequest
      * @return GetExternalApplicationResponse
      */
@@ -946,6 +958,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>查询前，目标 RAM 用户必须已有控制台登录配置（<code>LoginProfile</code>）；如果尚未配置，需先调用 <code>CreateLoginProfile</code> 创建登录配置。</p>
+     * 
      * @param request the request parameters of GetLoginProfile  GetLoginProfileRequest
      * @return GetLoginProfileResponse
      */
@@ -1221,7 +1236,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <code>myapp</code> belongs to the current account.</p>
+     * <p>This topic provides an example of how to query the applications in your Alibaba Cloud account. The response shows that only one application, named <code>myapp</code>, exists in the account.</p>
      * 
      * @param request the request parameters of ListApplications  ListApplicationsRequest
      * @return ListApplicationsResponse
@@ -1576,7 +1591,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
+     * <h3>Usage notes</h3>
      * <p>This topic provides an example on how to remove the client ID <code>498469743454717****</code> from the OIDC IdP named <code>TestOIDCProvider</code>.</p>
      * 
      * @param request the request parameters of RemoveClientIdFromOIDCProvider  RemoveClientIdFromOIDCProviderRequest
@@ -1727,10 +1742,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h3></h3>
-     * <p>This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.</p>
-     * 
      * @param request the request parameters of SetSecurityPreference  SetSecurityPreferenceRequest
      * @return SetSecurityPreferenceResponse
      */
@@ -1970,7 +1981,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to change the description of an IdP named <code>test-provider</code> to <code>This is a new provider.</code></p>
+     * <p>This example shows how to change the description of the identity provider <code>test-provider</code> to <code>This is a new provider.</code>.</p>
      * 
      * @param request the request parameters of UpdateSAMLProvider  UpdateSAMLProviderRequest
      * @return UpdateSAMLProviderResponse
@@ -2008,9 +2019,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example to show how to modify the name of a RAM user from <code>test@example.onaliyun.com</code> to <code>new@example.onaliyun.com</code>.</p>
-     * 
      * @param request the request parameters of UpdateUser  UpdateUserRequest
      * @return UpdateUserResponse
      */

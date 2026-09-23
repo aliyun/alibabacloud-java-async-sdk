@@ -67,7 +67,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the installed applications.</p>
+         * ApplicationProvisionInfos.
          */
         public Builder applicationProvisionInfos(ApplicationProvisionInfos applicationProvisionInfos) {
             this.applicationProvisionInfos = applicationProvisionInfos;
@@ -144,10 +144,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +260,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted to the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -290,11 +284,17 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("AppCategory")
+        private String appCategory;
+
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
+
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
+        private String assignmentType;
 
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -305,16 +305,22 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+        private Boolean needPrincipalConsent;
+
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ApplicationProvisionInfo(Builder builder) {
             this.accountId = builder.accountId;
+            this.appCategory = builder.appCategory;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.assignmentType = builder.assignmentType;
             this.createDate = builder.createDate;
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
+            this.needPrincipalConsent = builder.needPrincipalConsent;
             this.updateDate = builder.updateDate;
         }
 
@@ -334,6 +340,13 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return appCategory
+         */
+        public String getAppCategory() {
+            return this.appCategory;
+        }
+
+        /**
          * @return appId
          */
         public String getAppId() {
@@ -345,6 +358,13 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return assignmentType
+         */
+        public String getAssignmentType() {
+            return this.assignmentType;
         }
 
         /**
@@ -369,6 +389,13 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return needPrincipalConsent
+         */
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -377,11 +404,14 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountId; 
+            private String appCategory; 
             private String appId; 
             private String appName; 
+            private String assignmentType; 
             private String createDate; 
             private DelegatedScope delegatedScope; 
             private String displayName; 
+            private Boolean needPrincipalConsent; 
             private String updateDate; 
 
             private Builder() {
@@ -389,19 +419,19 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
 
             private Builder(ApplicationProvisionInfo model) {
                 this.accountId = model.accountId;
+                this.appCategory = model.appCategory;
                 this.appId = model.appId;
                 this.appName = model.appName;
+                this.assignmentType = model.assignmentType;
                 this.createDate = model.createDate;
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
+                this.needPrincipalConsent = model.needPrincipalConsent;
                 this.updateDate = model.updateDate;
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>177242285274****</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -409,10 +439,15 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>452392483381546****</p>
+             * AppCategory.
+             */
+            public Builder appCategory(String appCategory) {
+                this.appCategory = appCategory;
+                return this;
+            }
+
+            /**
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -420,10 +455,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GiteePrd</p>
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -431,10 +463,15 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was installed. The value is a timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603693518000</p>
+             * AssignmentType.
+             */
+            public Builder assignmentType(String assignmentType) {
+                this.assignmentType = assignmentType;
+                return this;
+            }
+
+            /**
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -442,7 +479,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the permissions that are granted to the application.</p>
+             * DelegatedScope.
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -450,10 +487,7 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GiteeAliyun</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -461,10 +495,15 @@ public class ListApplicationProvisionInfosResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The value is a timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603693518000</p>
+             * NeedPrincipalConsent.
+             */
+            public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+                this.needPrincipalConsent = needPrincipalConsent;
+                return this;
+            }
+
+            /**
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -144,10 +144,7 @@ public class GetExternalApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class GetExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +260,7 @@ public class GetExternalApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;

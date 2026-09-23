@@ -54,7 +54,10 @@ public class UpdateServiceCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53C8FBFD-F2E9-50F2-AD63-B6566B3D4D7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

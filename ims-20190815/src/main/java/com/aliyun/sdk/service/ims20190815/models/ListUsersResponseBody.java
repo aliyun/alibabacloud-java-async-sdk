@@ -95,8 +95,10 @@ public class ListUsersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +132,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM users.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -196,10 +198,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oparator</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -207,10 +206,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alice</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -461,10 +457,7 @@ public class ListUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is a cloud computing engineer.</p>
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -472,10 +465,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-12T09:12:00Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -483,10 +473,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -494,13 +481,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the RAM user.</p>
-             * <blockquote>
-             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
+             * Email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -508,10 +489,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the RAM user last logged on to the console.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-12T09:12:00Z</p>
+             * LastLoginDate.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -519,13 +497,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mobile phone number of the RAM user.</p>
-             * <blockquote>
-             * <p> This parameter applies only to the Alibaba Cloud China site (aliyun.com).</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>86-1868888****</p>
+             * MobilePhone.
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -533,15 +505,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the RAM user. Valid values:</p>
-             * <ul>
-             * <li>Manual: The RAM user is manually created in the RAM console.</li>
-             * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
-             * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>CloudSSO</p>
+             * ProvisionType.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -549,10 +513,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +521,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -568,10 +529,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-13T09:19:49Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -579,10 +537,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20732900249392****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -590,10 +545,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+             * UserPrincipalName.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

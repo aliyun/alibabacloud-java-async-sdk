@@ -352,7 +352,7 @@ public class GetOIDCProviderResponseBody extends TeaModel {
              * <p>The URL of the issuer.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
+             * <p><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></p>
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;

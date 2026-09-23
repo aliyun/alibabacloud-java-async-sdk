@@ -67,7 +67,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81313F5E-3C85-478F-BCC9-E1B70E4556DB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCredential.
+         * <p>The service credential information.</p>
          */
         public Builder serviceCredential(ServiceCredential serviceCredential) {
             this.serviceCredential = serviceCredential;
@@ -219,7 +222,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the service credential was created. The time follows RFC 3339 (UTC). Example: 2026-01-01T10:05:24Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-01T10:05:24Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -227,7 +233,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time of the service credential. This field is not returned for service credentials that never expire. The time follows RFC 3339 (UTC). Example: 2026-02-01T10:05:24Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-02-01T10:05:24Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -235,7 +244,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialId.
+             * <p>The ID of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SC*************</p>
              */
             public Builder serviceCredentialId(String serviceCredentialId) {
                 this.serviceCredentialId = serviceCredentialId;
@@ -243,7 +255,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialName.
+             * <p>The name of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourServiceCredentialName</p>
              */
             public Builder serviceCredentialName(String serviceCredentialName) {
                 this.serviceCredentialName = serviceCredentialName;
@@ -251,7 +266,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialSecret.
+             * <p>The secret of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourServiceCredentialSecret</p>
              */
             public Builder serviceCredentialSecret(String serviceCredentialSecret) {
                 this.serviceCredentialSecret = serviceCredentialSecret;
@@ -259,7 +277,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The service name of the Alibaba Cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.aliyuncs.com</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -267,7 +288,15 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the service credential. Valid values:</p>
+             * <ul>
+             * <li>Active: enabled.</li>
+             * <li>Inactive: disabled.</li>
+             * <li>Expired: expired.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +304,10 @@ public class CreateServiceCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The logon name of the RAM user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

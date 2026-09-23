@@ -67,7 +67,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the password policy.</p>
+         * <p>Details of the password policy.</p>
          */
         public Builder passwordPolicy(PasswordPolicy passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
@@ -287,7 +287,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to disable logon after the password expires.</p>
+             * <p>Indicates whether logon is blocked after the password expires.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -298,7 +298,10 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * InitialPasswordAge.
+             * <p>The validity period of the initial password.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>14</p>
              */
             public Builder initialPasswordAge(Integer initialPasswordAge) {
                 this.initialPasswordAge = initialPasswordAge;
@@ -306,7 +309,17 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptRiskPasswordOnApi.
+             * <p>Indicates whether threat passwords are blocked when set using APIs.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><p>true</p>
+             * </li>
+             * <li><p>false (default)</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder interceptRiskPasswordOnApi(Boolean interceptRiskPasswordOnApi) {
                 this.interceptRiskPasswordOnApi = interceptRiskPasswordOnApi;
@@ -314,7 +327,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of password retries.</p>
+             * <p>Maximum number of failed password attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -325,7 +338,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the password.</p>
+             * <p>The password validity period.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -336,7 +349,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of unique characters in the password.</p>
+             * <p>The minimum number of different characters in the password.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -347,7 +360,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum required number of characters in a password.</p>
+             * <p>The minimum password length.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -358,7 +371,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to exclude the username from the password.</p>
+             * <p>Indicates whether the password must not contain the user name.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -369,7 +382,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy for password history check.</p>
+             * <p>The password reuse prevention policy.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -391,7 +404,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the password must contain digits.</p>
+             * <p>Indicates whether the password must contain numbers.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

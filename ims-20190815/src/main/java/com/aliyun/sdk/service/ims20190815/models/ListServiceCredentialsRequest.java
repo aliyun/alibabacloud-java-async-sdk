@@ -115,7 +115,11 @@ public class ListServiceCredentialsRequest extends Request {
         } 
 
         /**
-         * AllUsers.
+         * <p>Specifies whether to query service credentials for all Resource Access Management (RAM) users under the Alibaba Cloud account.</p>
+         * <p>When the value is true, you cannot specify UserPrincipalName at the same time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allUsers(Boolean allUsers) {
             this.putQueryParameter("AllUsers", allUsers);
@@ -124,7 +128,10 @@ public class ListServiceCredentialsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +140,10 @@ public class ListServiceCredentialsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results. This parameter is not required for the first API call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE*******</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -142,7 +152,10 @@ public class ListServiceCredentialsRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * <p>The Alibaba Cloud service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.aliyuncs.com</p>
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -151,7 +164,11 @@ public class ListServiceCredentialsRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
+         * <p>Queries the service credentials of the specified RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

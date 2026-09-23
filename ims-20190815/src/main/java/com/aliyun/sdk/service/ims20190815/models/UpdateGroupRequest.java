@@ -101,7 +101,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * <p>The name of the RAM user group.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>Dev-Team</p>
@@ -113,11 +113,11 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The new description.</p>
-         * <p>The description can be up to 128 characters in length.</p>
+         * <p>The new comments.</p>
+         * <p>Maximum length: 128 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test-Team</p>
+         * <p>Test team</p>
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -126,8 +126,8 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The new display name of the RAM user group.</p>
-         * <p>The name can be up to 24 characters in length.</p>
+         * <p>The new display name of the user group.</p>
+         * <p>Maximum length: 24 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Test-Team</p>
@@ -139,8 +139,8 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * <p>The new name of the RAM user group.</p>
-         * <p>The name can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The new name of the user group.</p>
+         * <p>Maximum length: 64 characters. The name can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>Test-Team</p>

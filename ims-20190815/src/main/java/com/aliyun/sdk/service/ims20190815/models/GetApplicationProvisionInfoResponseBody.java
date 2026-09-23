@@ -144,10 +144,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +260,7 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the scopes of permissions that are granted to the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -290,11 +284,17 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
+        @com.aliyun.core.annotation.NameInMap("AppCategory")
+        private String appCategory;
+
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
+
+        @com.aliyun.core.annotation.NameInMap("AssignmentType")
+        private String assignmentType;
 
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
@@ -305,16 +305,22 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
+        @com.aliyun.core.annotation.NameInMap("NeedPrincipalConsent")
+        private Boolean needPrincipalConsent;
+
         @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private ApplicationProvisionInfo(Builder builder) {
             this.accountId = builder.accountId;
+            this.appCategory = builder.appCategory;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.assignmentType = builder.assignmentType;
             this.createDate = builder.createDate;
             this.delegatedScope = builder.delegatedScope;
             this.displayName = builder.displayName;
+            this.needPrincipalConsent = builder.needPrincipalConsent;
             this.updateDate = builder.updateDate;
         }
 
@@ -334,6 +340,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return appCategory
+         */
+        public String getAppCategory() {
+            return this.appCategory;
+        }
+
+        /**
          * @return appId
          */
         public String getAppId() {
@@ -345,6 +358,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return assignmentType
+         */
+        public String getAssignmentType() {
+            return this.assignmentType;
         }
 
         /**
@@ -369,6 +389,13 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return needPrincipalConsent
+         */
+        public Boolean getNeedPrincipalConsent() {
+            return this.needPrincipalConsent;
+        }
+
+        /**
          * @return updateDate
          */
         public String getUpdateDate() {
@@ -377,11 +404,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountId; 
+            private String appCategory; 
             private String appId; 
             private String appName; 
+            private String assignmentType; 
             private String createDate; 
             private DelegatedScope delegatedScope; 
             private String displayName; 
+            private Boolean needPrincipalConsent; 
             private String updateDate; 
 
             private Builder() {
@@ -389,11 +419,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
 
             private Builder(ApplicationProvisionInfo model) {
                 this.accountId = model.accountId;
+                this.appCategory = model.appCategory;
                 this.appId = model.appId;
                 this.appName = model.appName;
+                this.assignmentType = model.assignmentType;
                 this.createDate = model.createDate;
                 this.delegatedScope = model.delegatedScope;
                 this.displayName = model.displayName;
+                this.needPrincipalConsent = model.needPrincipalConsent;
                 this.updateDate = model.updateDate;
             } 
 
@@ -405,6 +438,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * AppCategory.
+             */
+            public Builder appCategory(String appCategory) {
+                this.appCategory = appCategory;
                 return this;
             }
 
@@ -427,6 +468,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AssignmentType.
+             */
+            public Builder assignmentType(String assignmentType) {
+                this.assignmentType = assignmentType;
                 return this;
             }
 
@@ -457,6 +506,14 @@ public class GetApplicationProvisionInfoResponseBody extends TeaModel {
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * NeedPrincipalConsent.
+             */
+            public Builder needPrincipalConsent(Boolean needPrincipalConsent) {
+                this.needPrincipalConsent = needPrincipalConsent;
                 return this;
             }
 

@@ -59,10 +59,10 @@ public class ListApplicationProvisionInfosRequest extends Request {
         } 
 
         /**
-         * <p>The source of the applications. Valid values:</p>
+         * <p>The source type of the application. Valid values:</p>
          * <ul>
-         * <li>inner: The applications are from the current account.</li>
-         * <li>external: The applications are from other accounts.</li>
+         * <li>inner: applications from the current account.</li>
+         * <li>external: applications from other accounts.</li>
          * </ul>
          * 
          * <strong>example:</strong>

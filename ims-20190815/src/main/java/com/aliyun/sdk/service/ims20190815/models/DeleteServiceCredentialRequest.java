@@ -74,6 +74,7 @@ public class DeleteServiceCredentialRequest extends Request {
         } 
 
         /**
+         * <p>The service credential ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DeleteServiceCredentialRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the Resource Access Management (RAM) user. If this parameter is not specified, the service credential of the identity that invokes this operation is deleted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

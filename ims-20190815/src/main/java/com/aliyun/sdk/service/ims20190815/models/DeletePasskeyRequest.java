@@ -85,7 +85,7 @@ public class DeletePasskeyRequest extends Request {
         }
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>

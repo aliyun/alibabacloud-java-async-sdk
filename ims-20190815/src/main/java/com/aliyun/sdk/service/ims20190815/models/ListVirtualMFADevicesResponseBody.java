@@ -93,7 +93,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <p>Indicates whether the returned results are truncated. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -108,9 +108,9 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for querying the next page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the MFA device.</p>
+         * VirtualMFADevices.
          */
         public Builder virtualMFADevices(VirtualMFADevices virtualMFADevices) {
             this.virtualMFADevices = virtualMFADevices;
@@ -212,10 +212,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -223,10 +220,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20732900249392****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -234,10 +228,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test@177242285274****.onaliyun.com</p>
+             * UserPrincipalName.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;
@@ -317,10 +308,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the MFA device was activated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-16T06:02:09Z</p>
+             * ActivateDate.
              */
             public Builder activateDate(String activateDate) {
                 this.activateDate = activateDate;
@@ -328,10 +316,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the MFA device.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::177242285274****:mfa/test</p>
+             * SerialNumber.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -339,7 +324,7 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information of the RAM user that has an MFA device bound.</p>
+             * User.
              */
             public Builder user(User user) {
                 this.user = user;

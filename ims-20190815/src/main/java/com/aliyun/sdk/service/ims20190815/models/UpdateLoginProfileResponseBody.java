@@ -67,7 +67,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The console logon configurations.</p>
+         * <p>The console logon information.</p>
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -209,7 +209,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether console logon is automatically disabled if a RAM user does not log on to the console in the previous specified number of days. The number of days is specified by MaxIdleDaysForUsers. The default value is true, and you cannot change the value.</p>
+             * <p>Indicates whether console logon is automatically disabled when the idle disable conditions are met. This feature is enabled by default and cannot be disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -220,7 +220,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether MFA must be enabled.</p>
+             * <p>Indicates whether the user is required to enable multi-factor authentication (MFA).</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -231,7 +231,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the RAM user is required to reset the password upon the next logon.</p>
+             * <p>Indicates whether the Resource Access Management (RAM) user is required to reset the password at the next logon.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -242,7 +242,16 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordStatus.
+             * <p>The status of the initial password. The initial password refers to the password that is set when console logon is newly created or re-enabled.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>NotInitial: The password is not an initial password.</li>
+             * <li>InitialValid: The initial password is valid.</li>
+             * <li>InitialExpired: The initial password has expired.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NotInitial</p>
              */
             public Builder passwordStatus(String passwordStatus) {
                 this.passwordStatus = passwordStatus;
@@ -250,7 +259,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether to enable password-based logons to the console.</p>
+             * <p>Indicates whether console password logon is enabled or disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>
@@ -261,7 +270,8 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time.</p>
+             * <p>The update time.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-10-14T07:48:41Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-14T07:48:41Z</p>
@@ -272,7 +282,7 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
+             * <p>The logon name of the Resource Access Management (RAM) user.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:test@example11.onaliyun.com">test@example11.onaliyun.com</a></p>

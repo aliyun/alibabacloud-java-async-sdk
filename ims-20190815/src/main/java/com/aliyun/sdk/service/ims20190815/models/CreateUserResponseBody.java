@@ -144,10 +144,7 @@ public class CreateUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>operator</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -155,10 +152,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>alice</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -470,9 +464,12 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The source of the RAM user. Valid values:</p>
              * <ul>
-             * <li>Manual: The RAM user is manually created in the RAM console.</li>
-             * <li>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</li>
-             * <li>CloudSSO: The RAM user is mapped from a CloudSSO user.</li>
+             * <li><p>Manual: The RAM user is manually created in the RAM console.</p>
+             * </li>
+             * <li><p>SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
+             * </li>
+             * <li><p>CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -484,7 +481,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

@@ -161,7 +161,10 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * GenerateTime.
+         * <p>The time when the report for the check item was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-19T15:06:52Z</p>
          */
         public Builder generateTime(String generateTime) {
             this.generateTime = generateTime;
@@ -169,7 +172,16 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -177,7 +189,10 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>This parameter is returned only when <code>IsTruncated</code> is set to true. Use this parameter to retrieve the truncated content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -185,7 +200,18 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * MetricType.
+         * <p>The data type of the metric value. Valid values:</p>
+         * <ul>
+         * <li><p>Number: the numeric type.</p>
+         * </li>
+         * <li><p>String: the string type.</p>
+         * </li>
+         * <li><p>Boolean: the Boolean type.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Number</p>
          */
         public Builder metricType(String metricType) {
             this.metricType = metricType;
@@ -193,7 +219,10 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * MetricValue.
+         * <p>The metric value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder metricValue(Object metricValue) {
             this.metricValue = metricValue;
@@ -201,7 +230,10 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2CE9688-AA85-5F23-8C22-0EC23473405F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The application information.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -157,10 +157,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,10 +165,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,15 +173,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p><code>openid</code> is required by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Required.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -295,7 +281,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -583,7 +569,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+             * <p>The Alibaba Cloud account ID to which the application belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>177242285274****</p>
@@ -594,7 +580,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>472457090344041****</p>
@@ -628,6 +614,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
             /**
              * <p>The creation time.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>
@@ -638,7 +625,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * <p>The permission scope information of the application.</p>
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -657,7 +644,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+             * <p>Indicates whether the application is allowed to be installed by other accounts.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -668,7 +655,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolVersion.
+             * <p>The OAuth protocol version of the application. Valid values:</p>
+             * <ul>
+             * <li><code>2.0</code>: OAuth 2.0 protocol.</li>
+             * <li><code>2.1</code>: OAuth 2.1 protocol.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder protocolVersion(String protocolVersion) {
                 this.protocolVersion = protocolVersion;
@@ -676,7 +670,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URLs.</p>
+             * RedirectUris.
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -695,7 +689,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a secret is required.</p>
+             * <p>Indicates whether an application secret is required.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -707,6 +701,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
 
             /**
              * <p>The update time.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2020-10-23T08:06:57Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>

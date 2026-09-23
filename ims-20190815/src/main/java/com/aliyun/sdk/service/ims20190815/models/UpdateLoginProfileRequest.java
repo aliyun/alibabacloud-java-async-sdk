@@ -116,10 +116,10 @@ public class UpdateLoginProfileRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to forcefully enable multi-factor authentication (MFA) for the RAM user. Valid values:</p>
+         * <p>Specifies whether the Resource Access Management (RAM) user is required to enable multi-factor authentication (MFA). Valid values:</p>
          * <ul>
-         * <li>true: forcefully enables MFA for the RAM user. The RAM user must bind an MFA device upon the next logon.</li>
-         * <li>false: does not forcefully enable MFA for the RAM user.</li>
+         * <li>true: MFA is required. The RAM user must attach an MFA device at the next logon.</li>
+         * <li>false: MFA is not required.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -132,8 +132,8 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The new password that is used to log on to the console.</p>
-         * <p>The new password must meet the complexity requirements.</p>
+         * <p>The new console logon password of the Resource Access Management (RAM) user.</p>
+         * <p>The password must meet the password strength requirements.</p>
          * 
          * <strong>example:</strong>
          * <p>mypassword</p>
@@ -145,7 +145,7 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the RAM user is required to reset the password upon the next logon. Valid values:</p>
+         * <p>Specifies whether the Resource Access Management (RAM) user is required to reset the password at the next logon. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -161,10 +161,10 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable password-based logons to the console. Valid values:</p>
+         * <p>Enables or disables console password logon. Valid values:</p>
          * <ul>
-         * <li>Active: enables password-based logons to the console.</li>
-         * <li>Inactive: disables password-based logons to the console.</li>
+         * <li>Active: enables console password logon.</li>
+         * <li>Inactive: disables console password logon.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>The logon name of the RAM user.</p>
+         * <p>The logon name of the Resource Access Management (RAM) user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

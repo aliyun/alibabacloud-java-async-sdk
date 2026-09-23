@@ -54,7 +54,10 @@ public class DeleteServiceCredentialResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>492E130C-76D3-55D5-BE5C-C023E431369A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

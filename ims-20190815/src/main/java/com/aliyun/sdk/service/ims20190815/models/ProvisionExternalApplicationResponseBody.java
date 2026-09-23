@@ -67,7 +67,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the external application.</p>
+         * <p>The external application information.</p>
          */
         public Builder externalApplication(ExternalApplication externalApplication) {
             this.externalApplication = externalApplication;
@@ -144,10 +144,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -266,7 +260,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the scopes of permissions that are granted to the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -398,7 +392,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
+             * <p>The application principal name in the format of <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code>.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="mailto:GiteePrd@app.177242285274">GiteePrd@app.177242285274</a>****.onaliyun.com</p>
@@ -409,7 +403,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was installed. The value is a timestamp.</p>
+             * <p>The installation timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1603693518000</p>
@@ -420,7 +414,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the scopes of permissions that are granted to the application.</p>
+             * <p>The permission scope information of the application.</p>
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -428,7 +422,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the application.</p>
+             * <p>The display name.</p>
              * 
              * <strong>example:</strong>
              * <p>GiteeAliyun</p>
@@ -439,7 +433,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The external application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>403550611646604****</p>
@@ -450,7 +444,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the external application belongs.</p>
+             * <p>The Alibaba Cloud account ID to which the external application is installed.</p>
              * 
              * <strong>example:</strong>
              * <p>157242285274****</p>
@@ -461,7 +455,7 @@ public class ProvisionExternalApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The value is a timestamp.</p>
+             * <p>The update timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1603693518000</p>

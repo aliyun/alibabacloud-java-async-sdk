@@ -95,8 +95,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +112,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -133,7 +135,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM users.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -225,10 +227,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -236,10 +235,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was added to the RAM user group. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-20T06:57:00Z</p>
+             * JoinDate.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -247,10 +243,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20732900249392****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -258,10 +251,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+             * UserPrincipalName.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

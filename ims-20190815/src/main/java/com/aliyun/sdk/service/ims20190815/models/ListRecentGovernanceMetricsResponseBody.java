@@ -91,7 +91,7 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The metric values of all governance items. The value of the parameter is an array, and each row in the array contains the metric value of a governance item.</p>
+         * GovernanceMetrics.
          */
         public Builder governanceMetrics(GovernanceMetrics governanceMetrics) {
             this.governanceMetrics = governanceMetrics;
@@ -181,10 +181,7 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the governance item.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>RecentAccountLoginTimes</p>
+             * GovernanceItem.
              */
             public Builder governanceItem(String governanceItem) {
                 this.governanceItem = governanceItem;
@@ -192,15 +189,7 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the metric value. Valid values:</p>
-             * <ul>
-             * <li>Number</li>
-             * <li>String</li>
-             * <li>Boolean</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Number</p>
+             * MetricType.
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -208,10 +197,7 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metric value. The type of the metric value is determined by <code>MetricType</code>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * MetricValue.
              */
             public Builder metricValue(Object metricValue) {
                 this.metricValue = metricValue;

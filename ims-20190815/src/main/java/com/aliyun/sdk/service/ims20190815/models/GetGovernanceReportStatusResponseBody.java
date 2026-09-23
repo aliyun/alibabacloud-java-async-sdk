@@ -88,7 +88,10 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F2CE9688-AA85-5F23-8C22-0EC23473405A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,18 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
         }
 
         /**
-         * WholeReportStatus.
+         * <p>The overall generation status of the report. Valid values:</p>
+         * <ul>
+         * <li><p>Started: The report generation has started.</p>
+         * </li>
+         * <li><p>Progressing: The report is being generated.</p>
+         * </li>
+         * <li><p>Completed: The report has been generated.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Progressing</p>
          */
         public Builder wholeReportStatus(String wholeReportStatus) {
             this.wholeReportStatus = wholeReportStatus;

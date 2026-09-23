@@ -74,6 +74,7 @@ public class GetAccessKeyPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The access key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,11 @@ public class GetAccessKeyPolicyRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the RAM user. </p>
+         * <p>If this parameter is left empty, the network access restriction policy of the specified access key for the current user is returned by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

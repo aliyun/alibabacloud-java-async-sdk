@@ -67,7 +67,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about application permissions.</p>
+         * PredefinedScopes.
          */
         public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
             this.predefinedScopes = predefinedScopes;
@@ -144,10 +144,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -155,10 +152,7 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission scope.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

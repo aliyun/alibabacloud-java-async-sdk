@@ -64,7 +64,7 @@ public class DeprovisionApplicationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>452392483381546****</p>
+         * <p>407342493648015****</p>
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

@@ -106,7 +106,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         } 
 
         /**
-         * IsTruncated.
+         * <p>Indicates whether there is a next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +117,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +128,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The token used to retrieve the next page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EXAMPLE*******</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +139,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D80A0F97-6F12-5CD1-A70A-77A03BF4CFC5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,7 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceCredentials.
+         * <p>The list of service credentials.</p>
          */
         public Builder serviceCredentials(java.util.List<ServiceCredentials> serviceCredentials) {
             this.serviceCredentials = serviceCredentials;
@@ -269,7 +281,11 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the service credential was created.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2026-05-07T05:49:57Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-05-07T05:49:57Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -277,7 +293,11 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpirationTime.
+             * <p>The expiration time. This field is not returned for permanent service credentials.</p>
+             * <p>Format: RFC 3339 (UTC). Example: 2026-06-07T05:49:57Z.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-06-07T05:49:57Z</p>
              */
             public Builder expirationTime(String expirationTime) {
                 this.expirationTime = expirationTime;
@@ -285,7 +305,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialId.
+             * <p>The ID of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SC*************</p>
              */
             public Builder serviceCredentialId(String serviceCredentialId) {
                 this.serviceCredentialId = serviceCredentialId;
@@ -293,7 +316,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceCredentialName.
+             * <p>The name of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder serviceCredentialName(String serviceCredentialName) {
                 this.serviceCredentialName = serviceCredentialName;
@@ -301,7 +327,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * <p>The Alibaba Cloud service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.aliyuncs.com</p>
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -309,7 +338,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the service credential.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -317,7 +349,10 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * UserPrincipalName.
+             * <p>The logon name of the Resource Access Management (RAM) user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

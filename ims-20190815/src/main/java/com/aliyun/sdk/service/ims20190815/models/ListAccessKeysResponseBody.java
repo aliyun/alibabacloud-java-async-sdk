@@ -67,7 +67,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The AccessKey pairs.</p>
+         * AccessKeys.
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -170,10 +170,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The AccessKey ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LTAI*******************</p>
+             * AccessKeyId.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -181,10 +178,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-13T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -192,14 +186,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the AccessKey pair. Valid values:</p>
-             * <ul>
-             * <li>Active</li>
-             * <li>Inactive</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Active</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -207,10 +194,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the AccessKey pair was updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-13T12:33:18Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

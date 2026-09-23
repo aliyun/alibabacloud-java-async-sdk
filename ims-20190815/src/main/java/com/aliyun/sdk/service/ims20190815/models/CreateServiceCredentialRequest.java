@@ -103,7 +103,10 @@ public class CreateServiceCredentialRequest extends Request {
         } 
 
         /**
-         * CredentialAgeDays.
+         * <p>The expiration period of the service credential, in days. Valid values: 1 to 36600. If this parameter is not specified, the service credential never expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder credentialAgeDays(Integer credentialAgeDays) {
             this.putQueryParameter("CredentialAgeDays", credentialAgeDays);
@@ -112,6 +115,7 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
+         * <p>The name of the service credential. The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +128,7 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
+         * <p>The service name of the Alibaba Cloud service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +141,10 @@ public class CreateServiceCredentialRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the RAM user. If this parameter is left empty, the service credential is created for the current user by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -93,7 +93,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the external applications.</p>
+         * ExternalApplications.
          */
         public Builder externalApplications(ExternalApplications externalApplications) {
             this.externalApplications = externalApplications;
@@ -103,8 +103,10 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +120,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p>This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,10 +201,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtains the OpenID of the user. This is the default scope and cannot be deleted.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -210,10 +209,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -321,7 +317,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted to the external application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -453,10 +449,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the external application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:GiteePrd@app.153082740420">GiteePrd@app.153082740420</a>****.onaliyun.com</p>
+             * AppPrincipalName.
              */
             public Builder appPrincipalName(String appPrincipalName) {
                 this.appPrincipalName = appPrincipalName;
@@ -464,10 +457,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the external application was installed. The value is a timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603693318000</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -475,7 +465,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the permissions that are granted to the external application.</p>
+             * DelegatedScope.
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -483,10 +473,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the external application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>GiteeAliyun</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -494,10 +481,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the external application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>407426893752729****</p>
+             * ForeignAppId.
              */
             public Builder foreignAppId(String foreignAppId) {
                 this.foreignAppId = foreignAppId;
@@ -505,10 +489,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account for which the external application was installed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>173082740420****</p>
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -516,10 +497,7 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the external application. The value is a timestamp.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1603693518000</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

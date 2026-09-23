@@ -95,8 +95,10 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -130,7 +132,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the RAM users.</p>
+         * Users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -248,10 +250,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the RAM user was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-12T09:12:00Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -259,10 +258,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user will be permanently deleted from the recycle bin.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-11-15T09:12:00Z</p>
+             * DeleteDate.
              */
             public Builder deleteDate(String deleteDate) {
                 this.deleteDate = deleteDate;
@@ -270,10 +266,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -281,10 +274,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was deleted and moved to the recycle bin.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-15T09:12:00Z</p>
+             * RecycleDate.
              */
             public Builder recycleDate(String recycleDate) {
                 this.recycleDate = recycleDate;
@@ -292,10 +282,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20732900249392****</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -303,10 +290,7 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon name of the RAM user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
+             * UserPrincipalName.
              */
             public Builder userPrincipalName(String userPrincipalName) {
                 this.userPrincipalName = userPrincipalName;

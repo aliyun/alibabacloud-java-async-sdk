@@ -95,8 +95,10 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.\<code>\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -119,7 +121,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the OIDC IdP.</p>
+         * OIDCProviders.
          */
         public Builder OIDCProviders(OIDCProviders OIDCProviders) {
             this.OIDCProviders = OIDCProviders;
@@ -313,10 +315,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::177242285274****:oidc-provider/TestOIDCProvider</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -324,10 +323,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the client, If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>498469743454717****</p>
+             * ClientIds.
              */
             public Builder clientIds(String clientIds) {
                 this.clientIds = clientIds;
@@ -335,10 +331,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the OIDC IdP was created. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-11-11T06:56:03Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -346,10 +339,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the OIDC IdP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is a new OIDC Provider.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -357,10 +347,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
+             * Fingerprints.
              */
             public Builder fingerprints(String fingerprints) {
                 this.fingerprints = fingerprints;
@@ -368,10 +355,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the OIDC IdP was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1636613763000</p>
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -379,10 +363,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the OIDC IdP was modified.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1636706309000</p>
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -390,10 +371,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>12</p>
+             * IssuanceLimitTime.
              */
             public Builder issuanceLimitTime(Long issuanceLimitTime) {
                 this.issuanceLimitTime = issuanceLimitTime;
@@ -401,10 +379,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the issuer.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
+             * IssuerUrl.
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;
@@ -412,10 +387,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the OIDC IdP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TestOIDCProvider</p>
+             * OIDCProviderName.
              */
             public Builder OIDCProviderName(String OIDCProviderName) {
                 this.OIDCProviderName = OIDCProviderName;
@@ -423,10 +395,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the OIDC IdP was modified. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-11-12T08:38:29Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

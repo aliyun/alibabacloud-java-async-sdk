@@ -88,6 +88,7 @@ public class UpdatePasskeyRequest extends Request {
 
         /**
          * <p>The ID of the passkey.</p>
+         * <p>This parameter is required. If this parameter is not specified, the <code>MissingPasskeyId</code> error is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>

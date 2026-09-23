@@ -80,7 +80,10 @@ public class GetAccessKeyPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessKeyId.
+         * <p>The access key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LTAI*******************</p>
          */
         public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = accessKeyId;
@@ -88,7 +91,10 @@ public class GetAccessKeyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * AccessKeyPolicy.
+         * <p>The network access restriction policy. The value is a JSON-formatted string. For more information about the AccessKeyPolicy structure, see the SetAccessKeyPolicy documentation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Status&quot;:&quot;Inactive&quot;,&quot;Statements&quot;:[{&quot;Value&quot;:&quot;AllowAllVPC&quot;,&quot;Type&quot;:&quot;VPCWhiteList&quot;,&quot;IPList&quot;:[&quot;::/0&quot;,&quot;0.0.0.0/0&quot;]}]}</p>
          */
         public Builder accessKeyPolicy(String accessKeyPolicy) {
             this.accessKeyPolicy = accessKeyPolicy;
@@ -96,7 +102,10 @@ public class GetAccessKeyPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

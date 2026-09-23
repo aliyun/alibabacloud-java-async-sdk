@@ -93,7 +93,7 @@ public class ListGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the RAM user groups.</p>
+         * Groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -103,8 +103,10 @@ public class ListGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,10 +250,7 @@ public class ListGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -259,10 +258,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-19T12:33:18Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -270,10 +266,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -281,10 +274,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>740317625433843****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -292,10 +282,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dev-team</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -303,10 +290,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-19T12:33:18Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -199,7 +199,7 @@ public class GetGroupResponseBody extends TeaModel {
              * <p>The description.</p>
              * 
              * <strong>example:</strong>
-             * <p>Dev-Team</p>
+             * <p>开发团队</p>
              */
             public Builder comments(String comments) {
                 this.comments = comments;

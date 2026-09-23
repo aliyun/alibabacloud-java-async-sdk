@@ -67,7 +67,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the RAM user groups.</p>
+         * Groups.
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -183,10 +183,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test-Team</p>
+             * Comments.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -194,10 +191,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test-Team</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -205,10 +199,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>740317625433843****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -216,10 +207,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the RAM user group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test-Team</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -227,10 +215,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was added.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-20T06:57:00Z</p>
+             * JoinDate.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;

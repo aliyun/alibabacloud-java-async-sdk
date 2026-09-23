@@ -102,7 +102,16 @@ public class CreateSAMLProviderRequest extends Request {
         } 
 
         /**
-         * AuthnSignAlgo.
+         * <p>The supported signature algorithm. Valid values:</p>
+         * <ul>
+         * <li><p>rsa-sha256</p>
+         * </li>
+         * <li><p>rsa-sha1 (default)</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa-sha1</p>
          */
         public Builder authnSignAlgo(String authnSignAlgo) {
             this.putQueryParameter("AuthnSignAlgo", authnSignAlgo);
@@ -111,7 +120,7 @@ public class CreateSAMLProviderRequest extends Request {
         }
 
         /**
-         * <p>The description.</p>
+         * <p>The IdP escription.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a provider.</p>
@@ -123,7 +132,7 @@ public class CreateSAMLProviderRequest extends Request {
         }
 
         /**
-         * <p>The metadata file which is Base64-encoded.</p>
+         * <p>The metadata file, which is Base64-encoded.</p>
          * <p>The file is provided by an IdP that supports Security Assertion Markup Language (SAML) 2.0.</p>
          * 
          * <strong>example:</strong>
@@ -136,8 +145,8 @@ public class CreateSAMLProviderRequest extends Request {
         }
 
         /**
-         * <p>The name of the IdP.</p>
-         * <p>The name can be up to 128 characters in length. The name can contain letters, digits, <code>periods (.), hyphens (-), and underscores (_)</code>. The name cannot start or end with <code>periods (.), hyphens (-), or underscores (_)</code>.</p>
+         * <p>The IdP name.</p>
+         * <p>It can be up to 128 characters in length, and can contain letters, digits, <code>periods (.), hyphens (-), and underscores (_)</code>. The name cannot start or end with <code>periods (.), hyphens (-), or underscores (_)</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

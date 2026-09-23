@@ -89,6 +89,8 @@ public class SetAccessKeyPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The network access restriction policy.</p>
+         * <p>A JSON-formatted string. For more information, see the AccessKeyPolicy structure description.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +103,7 @@ public class SetAccessKeyPolicyRequest extends Request {
         }
 
         /**
+         * <p>The access key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +116,11 @@ public class SetAccessKeyPolicyRequest extends Request {
         }
 
         /**
-         * UserPrincipalName.
+         * <p>The logon name of the RAM user. </p>
+         * <p>If this parameter is left empty, the network access restriction policy is set for the specified access key of the current user by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

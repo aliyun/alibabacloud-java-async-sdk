@@ -95,8 +95,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +110,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
+         * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.\<code>\\</code></p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -130,7 +132,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about IdPs.</p>
+         * SAMLProviders.
          */
         public Builder SAMLProviders(SAMLProviders SAMLProviders) {
             this.SAMLProviders = SAMLProviders;
@@ -235,10 +237,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>acs:ram::177242285274****:saml-provider/test-provider</p>
+             * Arn.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -246,10 +245,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-22T06:26:15Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -257,10 +253,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This is a provider.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -268,10 +261,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the IdP.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-provider</p>
+             * SAMLProviderName.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -279,10 +269,7 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-22T06:26:15Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

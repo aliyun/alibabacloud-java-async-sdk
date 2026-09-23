@@ -272,7 +272,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).</p>
+             * <p>The client IDs. Multiple client IDs are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>598469743454717****</p>
@@ -305,7 +305,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The fingerprint of the HTTPS certificate. If multiple fingerprints are returned, the fingerprints are separated by commas (,).</p>
+             * <p>The fingerprints of the HTTPS CA certificate. Multiple fingerprints are separated by commas (,).</p>
              * 
              * <strong>example:</strong>
              * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>
@@ -316,7 +316,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the OIDC IdP was created.</p>
+             * <p>The time when the OIDC IdP was created. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1636613763000</p>
@@ -327,7 +327,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the OIDC IdP was modified.</p>
+             * <p>The time when the OIDC IdP was last modified. The value is a UNIX timestamp.</p>
              * 
              * <strong>example:</strong>
              * <p>1636706309000</p>
@@ -338,7 +338,8 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+             * <p>The earliest time when an external IdP is allowed to issue an ID token. If the iat field in the ID token indicates a time earlier than the current time by more than this value, the request is rejected.
+             * Unit: hours. Valid values: 1 to 168.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -349,10 +350,10 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the issuer.</p>
+             * <p>The issuer URL.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://dev-xxxxxx.okta.com">https://dev-xxxxxx.okta.com</a></p>
+             * <p><a href="https://xxxxxx.example.com">https://xxxxxx.example.com</a></p>
              */
             public Builder issuerUrl(String issuerUrl) {
                 this.issuerUrl = issuerUrl;
@@ -371,7 +372,7 @@ public class RemoveClientIdFromOIDCProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the OIDC IdP was modified. The time is displayed in UTC.</p>
+             * <p>The time when the OIDC IdP was last modified. The time is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-12T08:38:29Z</p>

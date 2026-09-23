@@ -75,7 +75,7 @@ public class GetUserInRecycleBinRequest extends Request {
         /**
          * <p>The AccessKey ID of the RAM user.</p>
          * <blockquote>
-         * <p> You must specify only one of the following parameters: <code>UserId</code> and <code>UserAccessKeyId</code>.</p>
+         * <p>You must specify only one of the following parameters: <code>UserId</code> and <code>UserAccessKeyId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class GetUserInRecycleBinRequest extends Request {
         /**
          * <p>The ID of the RAM user.</p>
          * <blockquote>
-         * <p> You must specify only one of the following parameters: <code>UserId</code> and <code>UserAccessKeyId</code>.</p>
+         * <p>You must specify only one of the following parameters: <code>UserId</code> and <code>UserAccessKeyId</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

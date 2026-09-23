@@ -73,9 +73,9 @@ public class RemoveClientIdFromOIDCProviderRequest extends Request {
         } 
 
         /**
-         * <p>The client ID that you want to remove.</p>
-         * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
-         * <p>The client ID can be up to 128 characters in length.</p>
+         * <p>The client ID to remove.</p>
+         * <p>Format: letters, digits, and the special characters <code>.-_:/</code> are allowed. The value cannot start with the special characters <code>.-_:/</code>.</p>
+         * <p>Length: up to 128 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>498469743454717****</p>
@@ -87,7 +87,7 @@ public class RemoveClientIdFromOIDCProviderRequest extends Request {
         }
 
         /**
-         * <p>The name of the OIDC IdP.</p>
+         * <p>The name of an existing OIDC IdP that has the target <code>ClientId</code> attached. If you have not created or attached one, call <code>CreateOIDCProvider</code> (with <code>ClientIds</code> specified) or <code>AddClientIdToOIDCProvider</code> first.</p>
          * 
          * <strong>example:</strong>
          * <p>TestOIDCProvider</p>

@@ -67,7 +67,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application.</p>
+         * Applications.
          */
         public Builder applications(Applications applications) {
             this.applications = applications;
@@ -75,7 +75,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CE458B58-8C40-46F7-A9D4-CB85136B0C06</p>
@@ -157,10 +157,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,10 +165,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,15 +173,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p><code>openid</code> is required by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Required.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -295,7 +281,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * PredefinedScopes.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -572,10 +558,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The validity period of the access token. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3600</p>
+             * AccessTokenValidity.
              */
             public Builder accessTokenValidity(Integer accessTokenValidity) {
                 this.accessTokenValidity = accessTokenValidity;
@@ -583,10 +566,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>177242285274****</p>
+             * AccountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -594,10 +574,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>441442900344560****</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -605,10 +582,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myapp</p>
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -616,15 +590,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application type. Valid values:</p>
-             * <ul>
-             * <li>WebApp: a web application.</li>
-             * <li>NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</li>
-             * <li>ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>WebApp</p>
+             * AppType.
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -632,10 +598,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-23T09:33:22Z</p>
+             * CreateDate.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -643,7 +606,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the permissions that are granted on the application.</p>
+             * DelegatedScope.
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -651,10 +614,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The display name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>myapp</p>
+             * DisplayName.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -662,10 +622,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsMultiTenant.
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
@@ -681,7 +638,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URLs.</p>
+             * RedirectUris.
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -689,10 +646,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the refresh token. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>7776000</p>
+             * RefreshTokenValidity.
              */
             public Builder refreshTokenValidity(Integer refreshTokenValidity) {
                 this.refreshTokenValidity = refreshTokenValidity;
@@ -700,10 +654,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether a secret is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * SecretRequired.
              */
             public Builder secretRequired(Boolean secretRequired) {
                 this.secretRequired = secretRequired;
@@ -711,10 +662,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-10-23T09:33:22Z</p>
+             * UpdateDate.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

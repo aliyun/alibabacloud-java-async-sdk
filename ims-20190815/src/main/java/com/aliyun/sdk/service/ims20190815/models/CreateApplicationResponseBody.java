@@ -67,7 +67,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The application information.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -157,10 +157,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Obtain the OpenID of the user. This is the default permission that you cannot remove.</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,10 +165,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>openid</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -179,15 +173,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the permission is automatically selected by default when you install the application. Valid values:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * <p><code>openid</code> is required by default.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Required.
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -594,7 +580,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application.</p>
+             * <p>The application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>472457090344041****</p>
@@ -627,7 +613,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The time when the application was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>
@@ -668,7 +654,16 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolVersion.
+             * <p>The OAuth protocol version of the application. Valid values:</p>
+             * <ul>
+             * <li><p><code>2.0</code>: OAuth 2.0</p>
+             * </li>
+             * <li><p><code>2.1</code>: OAuth 2.1</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2.0</p>
              */
             public Builder protocolVersion(String protocolVersion) {
                 this.protocolVersion = protocolVersion;
@@ -676,7 +671,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The callback URLs.</p>
+             * <p>The redirect URLs.</p>
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -706,7 +701,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time.</p>
+             * <p>The time when the application information was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-10-23T08:06:57Z</p>
