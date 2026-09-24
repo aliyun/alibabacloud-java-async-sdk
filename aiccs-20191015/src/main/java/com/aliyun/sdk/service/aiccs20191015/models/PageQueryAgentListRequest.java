@@ -157,7 +157,7 @@ public class PageQueryAgentListRequest extends Request {
         } 
 
         /**
-         * <p>The unique identifier for the agent.</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1231*******</p>
@@ -169,10 +169,10 @@ public class PageQueryAgentListRequest extends Request {
         }
 
         /**
-         * <p>The name of the agent.</p>
+         * <p>The agent name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试智能体</p>
+         * <p>TestAgent</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -190,7 +190,7 @@ public class PageQueryAgentListRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1. The default value is 1.</p>
+         * <p>The page number, starting from 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -202,7 +202,7 @@ public class PageQueryAgentListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. The default value is 10.</p>
+         * <p>The page size. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -232,7 +232,7 @@ public class PageQueryAgentListRequest extends Request {
         }
 
         /**
-         * <p>The status of the agent.</p>
+         * <p>The agent status.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

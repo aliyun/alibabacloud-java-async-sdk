@@ -373,7 +373,7 @@ public class UpdateAiCallTaskRequest extends Request {
         } 
 
         /**
-         * <p>The available call days.</p>
+         * <p>The callable days.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callDay(java.util.List<String> callDay) {
@@ -384,7 +384,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>The expiration date of outbound call details (the specific deadline).</p>
+         * <p>The expiration date of outbound call details (the specific deadline). Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-07-30 20:00:20</p>
@@ -409,9 +409,9 @@ public class UpdateAiCallTaskRequest extends Request {
 
         /**
          * <p>The outbound call validity type. Valid values:</p>
-         * <p>0: permanently valid.
-         * 1: valid for a specified duration after import.
-         * 2: valid until a specified date.</p>
+         * <p>0: Permanently valid.
+         * 1: Valid for a specified period after import.
+         * 2: Valid until a specified date.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -423,7 +423,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>The retry interval. Unit: minutes. The maximum value is 120 minutes.</p>
+         * <p>The retry interval. Unit: minutes. The maximum value is 120.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -435,7 +435,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>The reasons for retry upon failure.</p>
+         * <p>The reasons for retrying failed calls.</p>
          */
         public Builder callRetryReason(java.util.List<String> callRetryReason) {
             String callRetryReasonShrink = shrink(callRetryReason, "CallRetryReason", "json");
@@ -457,7 +457,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>The available call time periods.</p>
+         * <p>The callable time periods.</p>
          * <p>This parameter is required.</p>
          */
         public Builder callTime(java.util.List<String> callTime) {
@@ -562,11 +562,11 @@ public class UpdateAiCallTaskRequest extends Request {
 
         /**
          * <p>The creation source. Valid values:</p>
-         * <p>0: created by agent.</p>
-         * <p>1: created by engine.</p>
+         * <p>0: Created by agent.</p>
+         * <p>1: Created by engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>Cannot be modified. Leave this parameter empty</p>
+         * <p>Cannot be modified. You do not need to specify this parameter</p>
          */
         public Builder source(Long source) {
             this.putQueryParameter("Source", source);
@@ -577,9 +577,9 @@ public class UpdateAiCallTaskRequest extends Request {
         /**
          * <p>The start mode. Valid values:</p>
          * <ul>
-         * <li><p>IMMEDIATE: starts immediately.</p>
+         * <li><p>IMMEDIATE: Starts immediately.</p>
          * </li>
-         * <li><p>SCHEDULE: starts at a scheduled time.</p>
+         * <li><p>SCHEDULE: Starts at a scheduled time.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -633,7 +633,7 @@ public class UpdateAiCallTaskRequest extends Request {
         }
 
         /**
-         * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when the StartType parameter is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
+         * <p>The preset start time of the task. The value is a UNIX timestamp in milliseconds. This parameter is valid and required when StartType is set to SCHEDULE. The task automatically starts at the time specified by this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1748923429000</p>

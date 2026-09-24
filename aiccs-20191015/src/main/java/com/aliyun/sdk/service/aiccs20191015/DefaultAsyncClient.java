@@ -414,14 +414,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The <strong>Data</strong> field in the response parameters of this API is the job ID.  </li>
-     * <li>After creating an Intelligent Outbound Call Job, if you need to make updates, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API to update the outbound call job.</li>
+     * <li>The <strong>Data</strong> parameter in the response is the task ID.</li>
+     * <li>After you create an intelligent outbound call task, you can call the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> operation to update the task.</li>
      * </ul>
-     * <h3>Queries per second (QPS) Limit</h3>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No Rate Limiting.</li>
-     * <li>API frequency: 20 queries per second (QPS).<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Per-user call frequency: not throttled.</li>
+     * <li>API frequency: 20 calls per second.<blockquote>
+     * <p>If the total calls from multiple users exceed the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -1259,12 +1259,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The outbound call job details include the job ID, job status, task type, outbound caller number, callee number repetition policy, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.  </p>
-     * <h3>Queries per second (QPS) limits</h3>
+     * <p>The outbound call task details include the task ID, task status, task type, outbound caller number, callee number deduplication policy, and other information. For more information, see <a href="#api-detail-40">Response elements</a>.</p>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: 100 times per second.  </li>
-     * <li>API invocation frequency: 100 times per second.  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Per-user call rate: 100 calls per second.</li>
+     * <li>API call rate: 100 calls per second.<blockquote>
+     * <p>If the total calls from multiple users exceed the API call rate, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -2549,7 +2549,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <p>Call details include the total number of records, call results, agent names, call time, and other information.</p>
      * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user call frequency: not throttled.</li>
+     * <li>Single-user call frequency: not throttled.</li>
      * <li>API frequency: 80 calls per second.<blockquote>
      * <p>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</p>
      * </blockquote>
@@ -2594,10 +2594,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can import callee data by calling this operation. Alternatively, go to the <strong>call task management</strong> page, click <strong>Import Callee Data</strong>, download the template, and then upload your file.</li>
-     * <li>This API operation currently supports only the JSON data type for importing callee data.</li>
-     * <li>Ensure that you have created a call task before you call this operation.</li>
-     * <li>To create a call task, go to the <strong>call task management</strong> page and click <strong>Create Call Task</strong>, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>You can call this operation to import callee data, or import callee data on the <strong>Call Task Management</strong> page by clicking Import Callee Data, downloading the template, and uploading the file.</li>
+     * <li>This operation currently supports only the JSON data type for importing callee data.</li>
+     * <li>Before calling this operation, make sure that you have a successfully created call task.</li>
+     * <li>If you do not have a successfully created call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of ImportTaskNumberDatas  ImportTaskNumberDatasRequest
@@ -3083,9 +3083,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</li>
-     * <li>Before calling this operation, make sure that the intelligent contact robot you created has successfully started a task.</li>
-     * <li>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</li>
+     * <li>You can call this operation to retrieve the details of a call task for an intelligent contact robot. You can also view the details on the <a href="https://aiccs.console.aliyun.com/job/list"><strong>Task Management</strong></a> &gt; <strong>Details</strong> page.</li>
+     * <li>Before calling this operation, make sure that your intelligent contact robot has been created and the task has been started.</li>
+     * <li>If you do not have a created call task, create and start a task on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page, or by calling the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> operations.</li>
      * <li>The optional parameters in this operation are filter conditions for the call task details. If you do not specify them, all task details are returned.</li>
      * </ul>
      * <h3>QPS limit</h3>
@@ -3285,8 +3285,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before querying call task details, make sure that you have created a call task.</li>
-     * <li>If you have not created a call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
+     * <li>Before querying voice call task details, make sure that you have created a voice call task.</li>
+     * <li>If you have not created a voice call task, create one on the <strong>Call Task Management</strong> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryAiCallDetailPage  QueryAiCallDetailPageRequest
@@ -3362,13 +3362,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Operation description</h2>
      * <ul>
-     * <li>This API retrieves the details of a communication agent.</li>
-     * <li>If you do not specify <code>BranchId</code> and <code>VersionId</code>, the API returns the configuration for the latest published version on the effective branch. If the effective branch only contains a draft version, no configuration is returned.</li>
-     * <li>If you specify only <code>BranchId</code>, the API returns the configuration for the latest published version on the specified branch. If the specified branch only contains a draft version, no configuration is returned.</li>
-     * <li>If you specify both <code>BranchId</code> and <code>VersionId</code>, the API returns the configuration for the specified version.</li>
-     * <li>When <code>BranchDeployStatus</code> is <code>1</code> (branch deployed) and <code>VersionPublishStatus</code> is <code>1</code> (version published), imported outbound tasks use the configuration of this branch.</li>
+     * <li>This operation queries the details of a communication agent.</li>
+     * <li>If both <code>BranchId</code> and <code>VersionId</code> are empty, the latest published version configuration of the currently active branch is returned. If the active branch has only a draft version, no configuration is returned.</li>
+     * <li>If only <code>BranchId</code> has a value, the latest published version configuration of the specified branch is returned. If the branch has only a draft version, no configuration is returned.</li>
+     * <li>If both <code>BranchId</code> and <code>VersionId</code> have values, the configuration of the specified version is returned.</li>
+     * <li>When <code>BranchDeployStatus = 1</code> (branch is deployed and online) and <code>VersionPublishStatus = 1</code> (version is published), the branch configuration is the one used by imported outbound call tasks.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryAiVoiceAgentDetailNew  QueryAiVoiceAgentDetailNewRequest
@@ -3391,9 +3391,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This API retrieves call details. You can also view these details on the <strong>call task management</strong> &gt; <strong>details</strong> &gt; <strong>execution history</strong> &gt; <strong>completed</strong> &gt; <strong>call details</strong> page.</li>
-     * <li>Before calling this API, make sure you have created a call task and imported called number data.</li>
-     * <li>You can create a call task and import called number data either on the <strong>call task management</strong> page or by using the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> APIs.</li>
+     * <li>You can use this operation to query call details. You can also view call details in the <strong>Call Task Management</strong> &gt; <strong>Details</strong> &gt; <strong>Execution Records</strong> &gt; <strong>Completed</strong> &gt; <strong>Call Details</strong> page.</li>
+     * <li>Before calling this operation, make sure that you have created a call task and imported callee data.</li>
+     * <li>If you do not have a created call task, create a call task and import callee data on the <strong>Call Task Management</strong> page, or use the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</li>
      * </ul>
      * 
      * @param request the request parameters of QueryConversationDetailInfo  QueryConversationDetailInfoRequest
@@ -3523,12 +3523,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API allows you to query information such as the display name, description, channel type, and ID of skill groups. For details, see <a href="#api-detail-40">Response Parameters</a>.</p>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <p>This operation queries information about skill groups, such as the display name, description, channel type, and ID. For more information, see <a href="#api-detail-40">Response elements</a>.</p>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 1000 queries per second.<blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Single-user call frequency: not throttled.</li>
+     * <li>API frequency: 1,000 calls per second.<blockquote>
+     * <p>If the total calls from multiple users exceed the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -3588,12 +3588,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API allows you to query contact data such as contact status, session recipient, agent name, contact channel, satisfaction rating, and evaluation status. For details, see <a href="#api-detail-40">Response parameters</a>.  </p>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <p>This operation queries contact data, including contact status, session acceptor, agent name, contact channel, satisfaction score, and evaluation status. For more information, see <a href="#api-detail-40">Response elements</a>.</p>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No Rate Limiting.  </li>
-     * <li>API frequency: 50 queries per second (QPS).  <blockquote>
-     * <p>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</p>
+     * <li>Per-user call frequency: not throttled.</li>
+     * <li>API frequency: 50 calls per second.<blockquote>
+     * <p>If the total calls from multiple users exceed the API frequency, throttling is triggered.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -4296,7 +4296,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before updating the configuration of a call task, make sure that the task status is stopped.</p>
+     * <p>Before updating the configuration of a call task, make sure that the task is in the Stopped state.</p>
      * 
      * @param request the request parameters of UpdateAiCallTask  UpdateAiCallTaskRequest
      * @return UpdateAiCallTaskResponse
@@ -4317,12 +4317,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This API supports updating information such as the task name, task description, outbound caller number, and skill group ID. For details, see <a href="#api-detail-35">Request Parameters</a>.</p>
-     * <h3>Queries per second (QPS) limit</h3>
+     * <p>This operation allows you to update the task name, task description, outbound caller number, skill group ID, and other information. For more details, refer to <a href="#api-detail-35">Request parameters</a>.</p>
+     * <h3>QPS limit</h3>
      * <ul>
-     * <li>Per-user invocation frequency: No rate limiting.</li>
-     * <li>API frequency: 20 times per second.<blockquote>
-     * <p>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</p>
+     * <li>Per-user call frequency: not throttled.</li>
+     * <li>API frequency: 20 calls per second.<blockquote>
+     * <p>If the total calls from multiple users exceed the API frequency, throttling is also triggered.</p>
      * </blockquote>
      * </li>
      * </ul>

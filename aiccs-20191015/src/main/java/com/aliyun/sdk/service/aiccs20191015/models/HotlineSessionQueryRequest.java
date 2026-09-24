@@ -449,15 +449,15 @@ public class HotlineSessionQueryRequest extends Request {
         /**
          * <p>The call result. Valid values:</p>
          * <ul>
-         * <li><strong>normal</strong>: The call ended normally.</li>
-         * <li><strong>touchRouteError</strong>: The call was terminated in the queue.</li>
-         * <li><strong>touchInQueue</strong>: The call was terminated in the queue.</li>
-         * <li><strong>touchInLoss</strong>: The call was terminated in the queue.</li>
-         * <li><strong>userHangup</strong>: The user hung up or the call was terminated in the IVR.</li>
-         * <li><strong>sysHangup</strong>: The system hung up or the call was terminated in the IVR.</li>
-         * <li><strong>transferAgent</strong>: The user hung up or the call was terminated in the IVR.</li>
-         * <li><strong>dailing</strong>: The agent hung up or the call was terminated during ringing.</li>
-         * <li><strong>TouchRingCallLoss</strong>: The call was terminated in the queue or during ringing.</li>
+         * <li><strong>normal</strong>: normal hangup.</li>
+         * <li><strong>touchRouteError</strong>: queue hangup.</li>
+         * <li><strong>touchInQueue</strong>: queue hangup.</li>
+         * <li><strong>touchInLoss</strong>: queue hangup.</li>
+         * <li><strong>userHangup</strong>: user hangup or IVR hangup.</li>
+         * <li><strong>sysHangup</strong>: system hangup or IVR hangup.</li>
+         * <li><strong>transferAgent</strong>: user hangup or IVR hangup.</li>
+         * <li><strong>dailing</strong>: agent hangup or ringing hangup.</li>
+         * <li><strong>TouchRingCallLoss</strong>: queue hangup or ringing hangup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -505,7 +505,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * <p>The number of the caller. For example, a mobile phone number, an agent number, or a robot number.</p>
+         * <p>The number of the caller. For example, a mobile phone number of a user, an agent number, or a robot number.</p>
          * 
          * <strong>example:</strong>
          * <p>135615****</p>
@@ -526,7 +526,7 @@ public class HotlineSessionQueryRequest extends Request {
         }
 
         /**
-         * <p>The number of the callee. For example, a mobile phone number, an agent number, or a robot number.</p>
+         * <p>The number of the callee. For example, a mobile phone number of a user, an agent number, or a robot number.</p>
          * 
          * <strong>example:</strong>
          * <p>057177****</p>
@@ -593,7 +593,7 @@ public class HotlineSessionQueryRequest extends Request {
 
         /**
          * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
-         * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * You can obtain the instance ID from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

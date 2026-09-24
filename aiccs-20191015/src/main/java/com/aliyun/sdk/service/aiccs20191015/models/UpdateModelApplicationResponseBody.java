@@ -174,7 +174,7 @@ public class UpdateModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>Indicates whether the API call was successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>

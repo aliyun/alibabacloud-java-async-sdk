@@ -134,14 +134,14 @@ public class QuerySkillGroupsRequest extends Request {
         /**
          * <p>The channel type of the skill group. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Returns all skill groups.</li>
+         * <li><strong>0</strong>: All skill groups are returned.</li>
          * <li><strong>1</strong>: Hotline skill group.</li>
          * <li><strong>2</strong>: Online skill group.</li>
-         * <li><strong>3</strong>: Online and hotline skill group.</li>
+         * <li><strong>3</strong>: Online + hotline skill group.</li>
          * <li><strong>4</strong>: Ticket skill group.</li>
-         * <li><strong>5</strong>: Hotline and ticket skill group.</li>
-         * <li><strong>6</strong>: Online and ticket skill group.</li>
-         * <li><strong>7</strong>: Online, hotline, and ticket skill group.</li>
+         * <li><strong>5</strong>: Hotline + ticket skill group.</li>
+         * <li><strong>6</strong>: Online + ticket skill group.</li>
+         * <li><strong>7</strong>: Online + hotline + ticket skill group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * <p>A unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</p>
+         * <p>The unique ID of the client request. Used for idempotence verification. You can use a UUID to generate this ID.</p>
          * 
          * <strong>example:</strong>
          * <p>46c1341e-2648-447a-****-70b6a298d94d</p>
@@ -178,7 +178,8 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * <p>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The ID of the AICCS instance.
+         * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,7 +192,7 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * <p>The current page number. The value must be greater than <strong>0</strong>. Default Value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +205,7 @@ public class QuerySkillGroupsRequest extends Request {
         }
 
         /**
-         * <p>Page size. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

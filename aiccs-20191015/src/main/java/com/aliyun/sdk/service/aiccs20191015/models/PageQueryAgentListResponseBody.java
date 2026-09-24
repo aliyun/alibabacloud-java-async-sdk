@@ -119,7 +119,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denial.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>Access Denied</p>
@@ -149,10 +149,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The description of the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
-         * <p>成功</p>
+         * <p>Succeeded</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,12 +171,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The request was successful.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -403,7 +401,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>测试智能体</p>
+             * <p>TestAgent</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -422,10 +420,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the review failure.</p>
+             * <p>The reason for review failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>请补充流程说明</p>
+             * <p>Provide additional process description</p>
              */
             public Builder auditReason(String auditReason) {
                 this.auditReason = auditReason;
@@ -433,10 +431,10 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for the build failure.</p>
+             * <p>The reason for build failure.</p>
              * 
              * <strong>example:</strong>
-             * <p>系统错误</p>
+             * <p>System error</p>
              */
             public Builder buildFailReason(String buildFailReason) {
                 this.buildFailReason = buildFailReason;
@@ -447,7 +445,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The business scenario name.</p>
              * 
              * <strong>example:</strong>
-             * <p>个人客户线索转化</p>
+             * <p>Personal customer lead conversion</p>
              */
             public Builder businessTypeName(String businessTypeName) {
                 this.businessTypeName = businessTypeName;
@@ -455,7 +453,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the agent was created.</p>
+             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 17:10:17</p>
@@ -469,7 +467,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
              * <p>The agent description.</p>
              * 
              * <strong>example:</strong>
-             * <p>用于日常测试</p>
+             * <p>Used for daily testing</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -477,7 +475,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the agent was last online.</p>
+             * <p>The most recent online time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 14:38:15</p>
@@ -488,7 +486,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time the agent was last modified.</p>
+             * <p>The most recent modification time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-10-28 17:10:17</p>
@@ -614,7 +612,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>A list of agents.</p>
+             * <p>The list of agent data.</p>
              */
             public Builder list(java.util.List<List> list) {
                 this.list = list;
@@ -633,7 +631,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
+             * <p>The page size.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -644,7 +642,7 @@ public class PageQueryAgentListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count of entries.</p>
+             * <p>The total number of entries.</p>
              * 
              * <strong>example:</strong>
              * <p>14</p>

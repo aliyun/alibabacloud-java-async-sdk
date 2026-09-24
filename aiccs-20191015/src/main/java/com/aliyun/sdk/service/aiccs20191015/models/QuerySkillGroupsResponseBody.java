@@ -119,7 +119,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Current page.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -130,7 +130,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Data.</p>
+         * <p>The data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of items per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -149,7 +149,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EE338D98-9BD3-4413-B165</p>
@@ -160,7 +160,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -171,7 +171,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total number of records.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>76</p>
@@ -279,7 +279,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Skill group channel type.</p>
+             * <p>The channel type of the skill group.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -290,10 +290,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group description.</p>
+             * <p>The description of the skill group.</p>
              * 
              * <strong>example:</strong>
-             * <p>自动化技能组</p>
+             * <p>Automation skill group</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,10 +301,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group display name.</p>
+             * <p>The display name of the skill group.</p>
              * 
              * <strong>example:</strong>
-             * <p>自动化技能组</p>
+             * <p>Automation skill group</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -312,7 +312,7 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group ID.</p>
+             * <p>The ID of the skill group.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -323,10 +323,10 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group name.</p>
+             * <p>The name of the skill group.</p>
              * 
              * <strong>example:</strong>
-             * <p>自动化技能组</p>
+             * <p>Automation skill group</p>
              */
             public Builder skillGroupName(String skillGroupName) {
                 this.skillGroupName = skillGroupName;

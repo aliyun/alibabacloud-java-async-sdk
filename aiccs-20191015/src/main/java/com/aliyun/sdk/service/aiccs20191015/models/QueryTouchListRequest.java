@@ -313,7 +313,7 @@ public class QueryTouchListRequest extends Request {
         } 
 
         /**
-         * <p>List of session IDs for term query.</p>
+         * <p>The list of session IDs to query exactly.</p>
          */
         public Builder channelId(java.util.List<String> channelId) {
             this.putBodyParameter("ChannelId", channelId);
@@ -322,7 +322,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Channel Type.</p>
+         * <p>The channel type.</p>
          */
         public Builder channelType(java.util.List<Integer> channelType) {
             this.putBodyParameter("ChannelType", channelType);
@@ -331,7 +331,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>The right boundary of the time range for session end. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the time range for session end time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614600500000</p>
@@ -343,7 +343,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>The left boundary of the time range for session end. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start of the time range for session end time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614600400000</p>
@@ -355,7 +355,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Current page. The value must be greater than <strong>0</strong>. Default Value: <strong>1</strong>.</p>
+         * <p>The current page number. The value must be greater than <strong>0</strong>. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -367,7 +367,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Satisfaction level.</p>
+         * <p>The satisfaction level.</p>
          */
         public Builder evaluationLevel(java.util.List<Integer> evaluationLevel) {
             this.putBodyParameter("EvaluationLevel", evaluationLevel);
@@ -376,7 +376,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Satisfaction score.</p>
+         * <p>The satisfaction score.</p>
          */
         public Builder evaluationScore(java.util.List<Integer> evaluationScore) {
             this.putBodyParameter("EvaluationScore", evaluationScore);
@@ -385,7 +385,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Evaluation status.</p>
+         * <p>The evaluation status.</p>
          */
         public Builder evaluationStatus(java.util.List<Integer> evaluationStatus) {
             this.putBodyParameter("EvaluationStatus", evaluationStatus);
@@ -394,7 +394,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>The right boundary of the time range for session start. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end of the time range for session start time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614599400000</p>
@@ -406,7 +406,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>The left boundary of the time range for session start. UNIX timestamp format (unit: ms).</p>
+         * <p>The start of the time range for session start time. The value is a timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1614596400000</p>
@@ -418,7 +418,8 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
+         * <p>The ID of the Artificial Intelligence Cloud Call Service (AICCS) instance.
+         * You can obtain the instance ID from <strong>Instance Management</strong> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -431,7 +432,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>List of membership IDs to query.</p>
+         * <p>The list of member IDs to query.</p>
          */
         public Builder memberId(java.util.List<Long> memberId) {
             this.putBodyParameter("MemberId", memberId);
@@ -440,7 +441,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>A list of membership names to query.</p>
+         * <p>The list of member names to query.</p>
          */
         public Builder memberName(java.util.List<String> memberName) {
             this.putBodyParameter("MemberName", memberName);
@@ -449,7 +450,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. The value must be greater than <strong>0</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -461,7 +462,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>List of inbound skill group IDs.</p>
+         * <p>The list of inbound skill group IDs.</p>
          */
         public Builder queueId(java.util.List<Long> queueId) {
             this.putBodyParameter("QueueId", queueId);
@@ -470,7 +471,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>A list of service agent IDs to query.</p>
+         * <p>The list of agent IDs to query.</p>
          */
         public Builder servicerId(java.util.List<Long> servicerId) {
             this.putBodyParameter("ServicerId", servicerId);
@@ -479,7 +480,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>List of service agent names to query.</p>
+         * <p>The list of agent names to query.</p>
          */
         public Builder servicerName(java.util.List<String> servicerName) {
             this.putBodyParameter("ServicerName", servicerName);
@@ -488,7 +489,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>List of touch IDs for term query.</p>
+         * <p>The list of contact IDs to query exactly.</p>
          */
         public Builder touchId(java.util.List<Long> touchId) {
             this.putBodyParameter("TouchId", touchId);
@@ -497,7 +498,7 @@ public class QueryTouchListRequest extends Request {
         }
 
         /**
-         * <p>Touch type.</p>
+         * <p>The contact type.</p>
          */
         public Builder touchType(java.util.List<Integer> touchType) {
             this.putBodyParameter("TouchType", touchType);

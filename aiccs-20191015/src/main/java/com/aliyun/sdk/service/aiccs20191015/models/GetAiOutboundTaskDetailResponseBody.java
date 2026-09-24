@@ -106,7 +106,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -117,7 +117,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Outbound call job details.</p>
+         * <p>The details of the outbound call task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -136,7 +136,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</p>
@@ -147,9 +147,9 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API was invoked successfully.  </p>
+         * <p>Indicates whether the call was successful.</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded.  </li>
+         * <li><strong>true</strong>: Successful.</li>
          * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
@@ -220,7 +220,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of retries.</p>
+             * <p>The number of recall attempts.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -231,7 +231,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Recall interval. Unit: minutes.</p>
+             * <p>The recall interval. Unit: minutes.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -457,7 +457,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Concurrency for automated outbound calls.</p>
+             * <p>The concurrency for automatic outbound calls.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -468,10 +468,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job description.</p>
+             * <p>The task description.</p>
              * 
              * <strong>example:</strong>
-             * <p>房产销售</p>
+             * <p>Real estate sales</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -479,7 +479,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task execution time.</p>
+             * <p>The task execution time. Time periods are configured by day of the week using a JSON object. The start and end values are in the HH:mm format.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;TUESDAY&quot;:[{&quot;start&quot;:&quot;06:00&quot;,&quot;end&quot;:&quot;06:05&quot;}],&quot;MONDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;},{&quot;start&quot;:&quot;20:30&quot;,&quot;end&quot;:&quot;21:45&quot;},{&quot;start&quot;:&quot;22:30&quot;,&quot;end&quot;:&quot;22:50&quot;}],&quot;WEDNESDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;THURSDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;FRIDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SATURDAY&quot;:[{&quot;start&quot;:&quot;09:00&quot;,&quot;end&quot;:&quot;18:00&quot;}],&quot;SUNDAY&quot;:[{&quot;start&quot;:&quot;17:00&quot;,&quot;end&quot;:&quot;23:45&quot;}]}</p>
@@ -490,7 +490,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Fixed outbound call ratio for predictive dialing.</p>
+             * <p>The fixed call rate for predictive outbound calls.</p>
              * 
              * <strong>example:</strong>
              * <p>1.2</p>
@@ -501,7 +501,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group ID (for predictive outbound calls) or IVR ID (for automated outbound calls).</p>
+             * <p>The skill group ID (for predictive outbound calls) or IVR ID (for automatic outbound calls).</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -512,10 +512,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Skill group name or IVR name.</p>
+             * <p>The skill group name or IVR name.</p>
              * 
              * <strong>example:</strong>
-             * <p>热线技能组</p>
+             * <p>Hotline skill group</p>
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -523,10 +523,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job name.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxxxx外呼</p>
+             * <p>xxxxx outbound call</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -534,10 +534,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Called number deduplication policy.</p>
+             * <p>The callee number deduplication policy.</p>
              * <ul>
-             * <li><strong>0</strong>: Remove duplicates.</li>
-             * <li><strong>1</strong>: Do not remove duplicates.</li>
+             * <li><strong>0</strong>: Deduplicate.</li>
+             * <li><strong>1</strong>: Do not deduplicate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -549,7 +549,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Outbound caller numbers.</p>
+             * <p>The outbound caller numbers.</p>
              */
             public Builder outboundNums(java.util.List<String> outboundNums) {
                 this.outboundNums = outboundNums;
@@ -557,7 +557,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Failed-call retry policy.</p>
+             * <p>The failed recall policy.</p>
              */
             public Builder recallRule(RecallRule recallRule) {
                 this.recallRule = recallRule;
@@ -565,13 +565,13 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job status. Valid values:  </p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: Not started.  </li>
-             * <li><strong>1</strong>: In progress.  </li>
-             * <li><strong>2</strong>: System paused.  </li>
-             * <li><strong>3</strong>: Manually paused.  </li>
-             * <li><strong>4</strong>: Completed.  </li>
+             * <li><strong>0</strong>: Not started.</li>
+             * <li><strong>1</strong>: In progress.</li>
+             * <li><strong>2</strong>: System paused.</li>
+             * <li><strong>3</strong>: Manually paused.</li>
+             * <li><strong>4</strong>: Completed.</li>
              * <li><strong>5</strong>: Stopped.</li>
              * </ul>
              * 
@@ -584,10 +584,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task status description.</p>
+             * <p>The task status description.</p>
              * 
              * <strong>example:</strong>
-             * <p>未开始</p>
+             * <p>Not started</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -595,7 +595,7 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Job ID.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>123</p>
@@ -606,10 +606,10 @@ public class GetAiOutboundTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task Type. Valid values:</p>
+             * <p>The task type. Valid values:</p>
              * <ul>
              * <li><strong>2</strong>: Predictive outbound call.</li>
-             * <li><strong>3</strong>: Automated outbound call.</li>
+             * <li><strong>3</strong>: Automatic outbound call.</li>
              * </ul>
              * 
              * <strong>example:</strong>

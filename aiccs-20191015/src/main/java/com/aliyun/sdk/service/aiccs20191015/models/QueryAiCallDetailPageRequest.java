@@ -341,21 +341,21 @@ public class QueryAiCallDetailPageRequest extends Request {
         /**
          * <p>The call result. Valid values:</p>
          * <ul>
-         * <li>CALL_FORWARDING: call forwarding.</li>
-         * <li>INCOMING_CALL_BARRED: incoming call barred.</li>
-         * <li>CALL_REJECTED: call rejected.</li>
-         * <li>ANSWERED: answered.</li>
-         * <li>USER_BUSY: user busy.</li>
-         * <li>POWERED_OFF: powered off.</li>
-         * <li>NO_USER_RESPONSE: out of service area.</li>
-         * <li>OPERATOR_BLOCK: blocked by carrier.</li>
-         * <li>OTHERS: other status.</li>
-         * <li>SUSPEND: suspended.</li>
-         * <li>CANCEL: canceled by caller.</li>
-         * <li>INVALID_NUMBER: invalid number.</li>
-         * <li>UNAVAILABLE: temporarily unavailable.</li>
-         * <li>NETWORK_BUSY: network busy.</li>
-         * <li>NO_ANSWER: no answer.</li>
+         * <li>CALL_FORWARDING: Call forwarding.</li>
+         * <li>INCOMING_CALL_BARRED: Incoming call barred.</li>
+         * <li>CALL_REJECTED: Call rejected.</li>
+         * <li>ANSWERED: Answered.</li>
+         * <li>USER_BUSY: User busy.</li>
+         * <li>POWERED_OFF: Powered off.</li>
+         * <li>NO_USER_RESPONSE: Out of service area.</li>
+         * <li>OPERATOR_BLOCK: Blocked by carrier.</li>
+         * <li>OTHERS: Other status.</li>
+         * <li>SUSPEND: Service suspended.</li>
+         * <li>CANCEL: Caller canceled.</li>
+         * <li>INVALID_NUMBER: Invalid number.</li>
+         * <li>UNAVAILABLE: Temporarily unavailable.</li>
+         * <li>NETWORK_BUSY: Network busy.</li>
+         * <li>NO_ANSWER: No answer.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -402,7 +402,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The end calling time. This value is a timestamp in milliseconds.</p>
+         * <p>The end calling time. This value is a UNIX timestamp. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -414,7 +414,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The end import time. This value is a timestamp in milliseconds.</p>
+         * <p>The end import time. This value is a UNIX timestamp. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -426,7 +426,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click agent details to view the major intent.</p>
+         * <p>The major intent. On the <a href="https://aiccs.console.aliyun.com/agent/customize">Communication Agent Management</a> page, click the agent details to view the major intent.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -438,7 +438,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The maximum conversation duration. Unit: minutes.</p>
+         * <p>The maximum call duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -450,7 +450,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The minimum conversation duration. Unit: minutes.</p>
+         * <p>The minimum call duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -525,7 +525,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The start calling time. This value is a timestamp in milliseconds.</p>
+         * <p>The start calling time. This value is a UNIX timestamp. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -537,7 +537,7 @@ public class QueryAiCallDetailPageRequest extends Request {
         }
 
         /**
-         * <p>The start import time. This value is a timestamp in milliseconds.</p>
+         * <p>The start import time. This value is a UNIX timestamp. Unit: ms.</p>
          * 
          * <strong>example:</strong>
          * <p>1748948749000</p>
@@ -551,11 +551,11 @@ public class QueryAiCallDetailPageRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p>0: pending.</p>
+         * <li><p>0: Pending.</p>
          * </li>
-         * <li><p>1: completed.</p>
+         * <li><p>1: Completed.</p>
          * </li>
-         * <li><p>2: failed.</p>
+         * <li><p>2: Failed.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>

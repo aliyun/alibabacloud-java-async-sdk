@@ -119,7 +119,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for access denial.</p>
+         * <p>The detailed reason why access was denied.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -149,10 +149,10 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code description.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,8 +173,8 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: successful.</li>
-         * <li><strong>false</strong>: failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,7 +574,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the outbound call detail.</p>
+             * <p>The expiration time of the outbound call detail. Format: YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2026-07-30 20:00:20</p>
@@ -618,7 +618,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The calling time. This value is a timestamp in milliseconds.</p>
+             * <p>The calling time. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748948749000</p>
@@ -629,7 +629,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The conversation duration. Unit: seconds.</p>
+             * <p>The call duration. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -640,11 +640,11 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The format is as follows:</p>
+             * <p>The chat record information. The structure is a JSON array, and the chat records are sorted in chronological order. The structure is as follows:</p>
              * <pre><code class="language-json">[
              *     {
              *         &quot;content&quot;:&quot;Chat content&quot;,
-             *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user, assistant (bot)
+             *         &quot;role&quot;:&quot;Role&quot;,//Valid values: user and assistant (bot).
              *     }
              * ]
              * </code></pre>
@@ -740,7 +740,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason for call failure. This field is available only when the call fails.</p>
+             * <p>The reason for the call failure. This field is returned only when the call fails.</p>
              * 
              * <strong>example:</strong>
              * <p>Account suspended</p>
@@ -751,7 +751,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import time. This value is a timestamp in milliseconds.</p>
+             * <p>The import time. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1748948749000</p>
@@ -773,7 +773,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The variable information used at runtime, stored in this field as key-value pairs.</p>
+             * <p>The variable information used at runtime. The information is stored in this field as key-value pairs.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -781,7 +781,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
              *   &quot;phoneNumber&quot;: &quot;777&quot;,
              *   &quot;distance&quot;: &quot;555&quot;,
              *   &quot;mendian&quot;: &quot;444&quot;,
-             *   &quot;sex&quot;: &quot;male&quot;,
+             *   &quot;sex&quot;: &quot;Male&quot;,
              *   &quot;name&quot;: &quot;111&quot;,
              *   &quot;age&quot;: &quot;222&quot;
              * }</p>
@@ -792,7 +792,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external business serial number reserved for external input. A unique ID can be used for business association.</p>
+             * <p>The external business serial number reserved for external input. You can use a unique ID for business association.</p>
              * 
              * <strong>example:</strong>
              * <p>outId</p>
@@ -803,7 +803,7 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download path of the recording file. This field is available only after the recording file is generated.</p>
+             * <p>The download path of the recording file. This field is returned only after the recording file is generated.</p>
              * 
              * <strong>example:</strong>
              * <p>https://*******</p>
@@ -816,12 +816,12 @@ public class QueryAiCallDetailPageResponseBody extends TeaModel {
             /**
              * <p>The task detail status. Valid values:</p>
              * <ul>
-             * <li>0: initialized.</li>
-             * <li>1: waiting to call.</li>
-             * <li>2: waiting to retry.</li>
-             * <li>3: calling.</li>
-             * <li>4: call ended.</li>
-             * <li>5: call failed.</li>
+             * <li>0: Initialization.</li>
+             * <li>1: Waiting for call.</li>
+             * <li>2: Waiting for retry.</li>
+             * <li>3: Calling.</li>
+             * <li>4: Call ended.</li>
+             * <li>5: Call failed.</li>
              * </ul>
              * <p>Only 4 and 5 are desired states.</p>
              * 

@@ -119,7 +119,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The detailed reason for the access denied error.</p>
+         * <p>The detailed reason for access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -130,7 +130,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status code. A value of OK indicates a successful request.</p>
+         * <p>The status code. A value of OK indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -141,7 +141,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned application code.</p>
+         * <p>The returned data, which is the application code.</p>
          * 
          * <strong>example:</strong>
          * <p>325****2D2</p>
@@ -152,7 +152,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that explains the status code.</p>
+         * <p>The description of the status code.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -174,7 +174,7 @@ public class AddModelApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the API call was successful.</p>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -119,7 +119,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The access denied detail.</p>
+         * <p>The details about the access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>Access denied due to insufficient permissions</p>
@@ -141,7 +141,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that describes the status code.</p>
+         * <p>The status code description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,12 +171,10 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Specifies whether the request succeeded.</p>
+         * <p>Indicates whether the API call was successful.</p>
          * <ul>
-         * <li><p><strong><code>true</code></strong>: The request succeeded.</p>
-         * </li>
-         * <li><p><strong><code>false</code></strong>: The request failed.</p>
-         * </li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,6 +240,15 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceDirection")
+        private String serviceDirection;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        private Long templateId;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
         private List(Builder builder) {
             this.agentId = builder.agentId;
             this.agentMode = builder.agentMode;
@@ -257,6 +264,9 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             this.latestPublishTime = builder.latestPublishTime;
             this.modifyTime = builder.modifyTime;
             this.scene = builder.scene;
+            this.serviceDirection = builder.serviceDirection;
+            this.templateId = builder.templateId;
+            this.templateName = builder.templateName;
         }
 
         public static Builder builder() {
@@ -365,6 +375,27 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             return this.scene;
         }
 
+        /**
+         * @return serviceDirection
+         */
+        public String getServiceDirection() {
+            return this.serviceDirection;
+        }
+
+        /**
+         * @return templateId
+         */
+        public Long getTemplateId() {
+            return this.templateId;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
         public static final class Builder {
             private Long agentId; 
             private Long agentMode; 
@@ -380,6 +411,9 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             private String latestPublishTime; 
             private String modifyTime; 
             private String scene; 
+            private String serviceDirection; 
+            private Long templateId; 
+            private String templateName; 
 
             private Builder() {
             } 
@@ -399,6 +433,9 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
                 this.latestPublishTime = model.latestPublishTime;
                 this.modifyTime = model.modifyTime;
                 this.scene = model.scene;
+                this.serviceDirection = model.serviceDirection;
+                this.templateId = model.templateId;
+                this.templateName = model.templateName;
             } 
 
             /**
@@ -413,8 +450,11 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The agent creation mode. Valid values:<br>
-             * <code>0</code>: Prompt mode (<code>PROMPT</code>). <code>1</code>: Conversation flow mode (<code>CONVERSATION</code>).<br></p>
+             * <p>The agent building mode. Valid values:</p>
+             * <ul>
+             * <li>0: prompt mode (PROMPT).</li>
+             * <li>1: dialog flow mode (CONVERSATION).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -428,7 +468,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
              * <p>The agent name.</p>
              * 
              * <strong>example:</strong>
-             * <p>智能客服助手</p>
+             * <p>Intelligent Customer Service Assistant</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -447,7 +487,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time.</p>
+             * <p>The creation time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-20 12:00:00</p>
@@ -458,7 +498,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment branch ID.</p>
+             * <p>The ID of the branch being deployed.</p>
              * 
              * <strong>example:</strong>
              * <p>24</p>
@@ -469,7 +509,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective branch name.</p>
+             * <p>The name of the active branch.</p>
              * 
              * <strong>example:</strong>
              * <p>master</p>
@@ -483,7 +523,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
              * <p>The agent description.</p>
              * 
              * <strong>example:</strong>
-             * <p>智能客服助手，提供自动化的客户服务支持</p>
+             * <p>Intelligent customer service assistant that provides automated customer service support</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -491,7 +531,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective version ID.</p>
+             * <p>The ID of the active version.</p>
              * 
              * <strong>example:</strong>
              * <p>71</p>
@@ -502,7 +542,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective version name.</p>
+             * <p>The name of the active version.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.0.0</p>
@@ -513,7 +553,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether the agent can be used for outbound calls. A value of <code>true</code> means the agent\&quot;s current deployment branch has a published version.</p>
+             * <p>Indicates whether the agent is available for outbound calls. A value of True indicates that the current deployment branch of the agent has a published version and is available for outbound calls.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -524,7 +564,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent publish time.</p>
+             * <p>The latest version publish time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-20 12:00:00</p>
@@ -535,7 +575,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The last modified time.</p>
+             * <p>The last modification time, in the format of YYYY-MM-DD HH:mm:ss.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-01-15 10:30:00</p>
@@ -546,13 +586,46 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scene.</p>
+             * <p>The scenario.</p>
              * 
              * <strong>example:</strong>
-             * <p>个人线索转化</p>
+             * <p>Personal lead conversion</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
+                return this;
+            }
+
+            /**
+             * <p>The service direction.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample value</p>
+             */
+            public Builder serviceDirection(String serviceDirection) {
+                this.serviceDirection = serviceDirection;
+                return this;
+            }
+
+            /**
+             * <p>The source template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>62</p>
+             */
+            public Builder templateId(Long templateId) {
+                this.templateId = templateId;
+                return this;
+            }
+
+            /**
+             * <p>The source template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Sample value</p>
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
                 return this;
             }
 
@@ -672,7 +745,7 @@ public class PageQueryAgentListNewResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total count.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>

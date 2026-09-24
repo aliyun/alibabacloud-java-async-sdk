@@ -129,7 +129,7 @@ public class TestLargeModelRequest extends Request {
         } 
 
         /**
-         * <p>The base models.</p>
+         * <p>The foundation model.</p>
          */
         public Builder baseModel(java.util.List<String> baseModel) {
             String baseModelShrink = shrink(baseModel, "BaseModel", "json");
@@ -139,7 +139,7 @@ public class TestLargeModelRequest extends Request {
         }
 
         /**
-         * <p>The ID of the test scenario.</p>
+         * <p>The scenario ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1232</p>
@@ -181,7 +181,7 @@ public class TestLargeModelRequest extends Request {
          * <p>The user dialog content.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好。</p>
+         * <p>Hello</p>
          */
         public Builder userDialogContent(String userDialogContent) {
             this.putQueryParameter("UserDialogContent", userDialogContent);
