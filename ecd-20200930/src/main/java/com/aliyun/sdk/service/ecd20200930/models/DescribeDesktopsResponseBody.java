@@ -127,7 +127,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -568,7 +568,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              * <ul>
              * <li>cloud_efficiency (ultra cloud disk)<ul>
              * <li>cloud_auto (ultra-fast cloud disk)</li>
-             * <li>cloud_essd (enhanced standard SSD cloud disk. Only specific types are supported.)</li>
+             * <li>cloud_essd (enhanced standard SSD. Only specific types are supported.)</li>
              * </ul>
              * </li>
              * </ul>
@@ -876,7 +876,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The NAS file system description.</p>
+             * <p>The description of the NAS file system.</p>
              * 
              * <strong>example:</strong>
              * <p>newDescription</p>
@@ -1164,7 +1164,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user connected to the cloud desktop.</p>
+             * <p>The ID of the user who is connected to the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>29615820929547****</p>
@@ -1462,6 +1462,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("ReservePoolId")
+        private String reservePoolId;
+
+        @com.aliyun.core.annotation.NameInMap("ReservePoolName")
+        private String reservePoolName;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroups")
         private java.util.List<ResourceGroups> resourceGroups;
 
@@ -1506,6 +1512,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionKey")
         private String volumeEncryptionKey;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
 
         @com.aliyun.core.annotation.NameInMap("ZoneType")
         private String zoneType;
@@ -1568,6 +1577,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.policyGroupNameList = builder.policyGroupNameList;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
+            this.reservePoolId = builder.reservePoolId;
+            this.reservePoolName = builder.reservePoolName;
             this.resourceGroups = builder.resourceGroups;
             this.serialNumber = builder.serialNumber;
             this.sessionType = builder.sessionType;
@@ -1583,6 +1594,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
+            this.zoneId = builder.zoneId;
             this.zoneType = builder.zoneType;
         }
 
@@ -1994,6 +2006,20 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reservePoolId
+         */
+        public String getReservePoolId() {
+            return this.reservePoolId;
+        }
+
+        /**
+         * @return reservePoolName
+         */
+        public String getReservePoolName() {
+            return this.reservePoolName;
+        }
+
+        /**
          * @return resourceGroups
          */
         public java.util.List<ResourceGroups> getResourceGroups() {
@@ -2099,6 +2125,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        /**
          * @return zoneType
          */
         public String getZoneType() {
@@ -2163,6 +2196,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private java.util.List<String> policyGroupNameList; 
             private String progress; 
             private String protocolType; 
+            private String reservePoolId; 
+            private String reservePoolName; 
             private java.util.List<ResourceGroups> resourceGroups; 
             private String serialNumber; 
             private String sessionType; 
@@ -2178,6 +2213,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
+            private String zoneId; 
             private String zoneType; 
 
             private Builder() {
@@ -2241,6 +2277,8 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.policyGroupNameList = model.policyGroupNameList;
                 this.progress = model.progress;
                 this.protocolType = model.protocolType;
+                this.reservePoolId = model.reservePoolId;
+                this.reservePoolName = model.reservePoolName;
                 this.resourceGroups = model.resourceGroups;
                 this.serialNumber = model.serialNumber;
                 this.sessionType = model.sessionType;
@@ -2256,6 +2294,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.tags = model.tags;
                 this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
+                this.zoneId = model.zoneId;
                 this.zoneType = model.zoneType;
             } 
 
@@ -2711,7 +2750,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the secondary ENI created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</p>
+             * <p>The ID of the secondary network interface controller (NIC) created by the cloud desktop service for the RAM or AD user. This value cannot be modified.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -2722,7 +2761,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the secondary ENI created by the cloud desktop service for the RAM or AD user.</p>
+             * <p>The IP address of the secondary NIC created by the cloud desktop service for the RAM or AD user.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.XX.XX</p>
@@ -2867,6 +2906,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
+             * ReservePoolId.
+             */
+            public Builder reservePoolId(String reservePoolId) {
+                this.reservePoolId = reservePoolId;
+                return this;
+            }
+
+            /**
+             * ReservePoolName.
+             */
+            public Builder reservePoolName(String reservePoolName) {
+                this.reservePoolName = reservePoolName;
+                return this;
+            }
+
+            /**
              * <p>The list of enterprise resource group information.</p>
              */
             public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
@@ -2927,7 +2982,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the query. The time is in the ISO 8601 standard and in UTC+0, in the format of <code>yyyy-mm-ddthh:mm:ssz</code>.</p>
+             * <p>The start time of the query. The time is in the ISO 8601 standard and in UTC+0. Format: <code>yyyy-mm-ddthh:mm:ssz</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>2025-01-27T02:20:10Z</p>
@@ -3023,6 +3078,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder volumeEncryptionKey(String volumeEncryptionKey) {
                 this.volumeEncryptionKey = volumeEncryptionKey;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

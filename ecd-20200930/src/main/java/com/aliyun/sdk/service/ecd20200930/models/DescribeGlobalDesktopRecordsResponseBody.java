@@ -260,8 +260,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The session creation time.
-             * The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
+             * <p>The time when the session was created. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-08-31T06:56:45Z</p>
@@ -321,6 +320,9 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LatestConnectionTime")
         private Long latestConnectionTime;
 
+        @com.aliyun.core.annotation.NameInMap("LatestSessionEndTime")
+        private String latestSessionEndTime;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
@@ -379,6 +381,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             this.endUserIds = builder.endUserIds;
             this.gpuSpec = builder.gpuSpec;
             this.latestConnectionTime = builder.latestConnectionTime;
+            this.latestSessionEndTime = builder.latestSessionEndTime;
             this.memory = builder.memory;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
@@ -486,6 +489,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
          */
         public Long getLatestConnectionTime() {
             return this.latestConnectionTime;
+        }
+
+        /**
+         * @return latestSessionEndTime
+         */
+        public String getLatestSessionEndTime() {
+            return this.latestSessionEndTime;
         }
 
         /**
@@ -606,6 +616,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             private java.util.List<String> endUserIds; 
             private String gpuSpec; 
             private Long latestConnectionTime; 
+            private String latestSessionEndTime; 
             private Long memory; 
             private String officeSiteId; 
             private String officeSiteName; 
@@ -638,6 +649,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
                 this.endUserIds = model.endUserIds;
                 this.gpuSpec = model.gpuSpec;
                 this.latestConnectionTime = model.latestConnectionTime;
+                this.latestSessionEndTime = model.latestSessionEndTime;
                 this.memory = model.memory;
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
@@ -678,7 +690,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</p>
+             * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2020-11-06T08:28Z</p>
@@ -785,6 +797,17 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The latest end time of the current session. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-09-14T05:01:12Z</p>
+             */
+            public Builder latestSessionEndTime(String latestSessionEndTime) {
+                this.latestSessionEndTime = latestSessionEndTime;
+                return this;
+            }
+
+            /**
              * <p>The memory of the cloud desktop. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
@@ -844,7 +867,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific operating system model.</p>
+             * <p>The specific operating system version.</p>
              * 
              * <strong>example:</strong>
              * <p>Windows 10</p>
@@ -908,7 +931,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</p>
+             * <p>The UNIX timestamp when the cloud desktop status changed. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1760583xxxx</p>

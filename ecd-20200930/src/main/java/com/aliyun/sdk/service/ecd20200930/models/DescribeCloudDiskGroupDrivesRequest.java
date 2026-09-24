@@ -145,8 +145,8 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         /**
          * <p>The number of entries per page for a paged query.</p>
          * <ul>
-         * <li>Maximum value: 100</li>
-         * <li>Default value: 20</li>
+         * <li>Maximum value: 100.</li>
+         * <li>Default value: 20.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeCloudDiskGroupDrivesRequest extends Request {
         }
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>MTA0MjA=</p>

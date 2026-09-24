@@ -80,7 +80,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the recording files.</p>
+         * <p>The details of the recording file list.</p>
          */
         public Builder recordFiles(java.util.List<RecordFiles> recordFiles) {
             this.recordFiles = recordFiles;
@@ -99,7 +99,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -227,6 +227,9 @@ public class DescribeRecordFileResponseBody extends TeaModel {
      * <p>DescribeRecordFileResponseBody</p>
      */
     public static class RecordFiles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
+        private java.util.List<String> auditStatus;
+
         @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
@@ -273,6 +276,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         private Integer status;
 
         private RecordFiles(Builder builder) {
+            this.auditStatus = builder.auditStatus;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.endUserId = builder.endUserId;
@@ -296,6 +300,13 @@ public class DescribeRecordFileResponseBody extends TeaModel {
 
         public static RecordFiles create() {
             return builder().build();
+        }
+
+        /**
+         * @return auditStatus
+         */
+        public java.util.List<String> getAuditStatus() {
+            return this.auditStatus;
         }
 
         /**
@@ -404,6 +415,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> auditStatus; 
             private String desktopId; 
             private String desktopName; 
             private String endUserId; 
@@ -424,6 +436,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             } 
 
             private Builder(RecordFiles model) {
+                this.auditStatus = model.auditStatus;
                 this.desktopId = model.desktopId;
                 this.desktopName = model.desktopName;
                 this.endUserId = model.endUserId;
@@ -442,6 +455,14 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             } 
 
             /**
+             * <p>The audit status list.</p>
+             */
+            public Builder auditStatus(java.util.List<String> auditStatus) {
+                this.auditStatus = auditStatus;
+                return this;
+            }
+
+            /**
              * <p>The Cloud Desktop ID.</p>
              * 
              * <strong>example:</strong>
@@ -453,7 +474,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Cloud Desktop.</p>
+             * <p>The Cloud Desktop name.</p>
              * 
              * <strong>example:</strong>
              * <p>fvt-ecd</p>
@@ -483,7 +504,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the file.</p>
+             * <p>The file name.</p>
              * 
              * <strong>example:</strong>
              * <p>Task3</p>
@@ -494,7 +515,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the file. Unit: bytes.</p>
+             * <p>The file size. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>139</p>
@@ -516,7 +537,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the recording ended. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The recording end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-18T06:02:25Z</p>
@@ -538,7 +559,7 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the recording started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+             * <p>The recording start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-12-18T06:02:25Z</p>
@@ -601,8 +622,8 @@ public class DescribeRecordFileResponseBody extends TeaModel {
             /**
              * <p>The status of the screen recording file. Valid values:</p>
              * <ul>
-             * <li>0: uploaded.</li>
-             * <li>1: uploading.</li>
+             * <li>0: Upload succeeded.</li>
+             * <li>1: Uploading.</li>
              * </ul>
              * 
              * <strong>example:</strong>

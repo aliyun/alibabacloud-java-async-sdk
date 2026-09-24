@@ -27,6 +27,11 @@ public class ModifyTemplateBaseInfoRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
@@ -40,6 +45,7 @@ public class ModifyTemplateBaseInfoRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
+        this.instanceName = builder.instanceName;
         this.templateId = builder.templateId;
         this.templateName = builder.templateName;
     }
@@ -72,6 +78,13 @@ public class ModifyTemplateBaseInfoRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -88,6 +101,7 @@ public class ModifyTemplateBaseInfoRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyTemplateBaseInfoRequest, Builder> {
         private String regionId; 
         private String description; 
+        private String instanceName; 
         private String templateId; 
         private String templateName; 
 
@@ -99,6 +113,7 @@ public class ModifyTemplateBaseInfoRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
+            this.instanceName = request.instanceName;
             this.templateId = request.templateId;
             this.templateName = request.templateName;
         } 
@@ -125,6 +140,18 @@ public class ModifyTemplateBaseInfoRequest extends Request {
         }
 
         /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myHost</p>
+         */
+        public Builder instanceName(String instanceName) {
+            this.putBodyParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
          * <p>The template ID.</p>
          * <p>This parameter is required.</p>
          * 
@@ -141,7 +168,7 @@ public class ModifyTemplateBaseInfoRequest extends Request {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Shanghai template1</p>
+         * <p>ShanghaiTemplate1</p>
          */
         public Builder templateName(String templateName) {
             this.putBodyParameter("TemplateName", templateName);

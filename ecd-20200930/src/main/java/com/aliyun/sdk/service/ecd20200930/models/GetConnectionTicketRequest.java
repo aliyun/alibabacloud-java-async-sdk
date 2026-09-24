@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetConnectionTicketRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    private String clientType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommandContent")
     private String commandContent;
 
@@ -60,6 +64,7 @@ public class GetConnectionTicketRequest extends Request {
 
     private GetConnectionTicketRequest(Builder builder) {
         super(builder);
+        this.clientType = builder.clientType;
         this.commandContent = builder.commandContent;
         this.desktopId = builder.desktopId;
         this.endUserId = builder.endUserId;
@@ -83,6 +88,13 @@ public class GetConnectionTicketRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientType
+     */
+    public String getClientType() {
+        return this.clientType;
     }
 
     /**
@@ -156,6 +168,7 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetConnectionTicketRequest, Builder> {
+        private String clientType; 
         private String commandContent; 
         private String desktopId; 
         private String endUserId; 
@@ -173,6 +186,7 @@ public class GetConnectionTicketRequest extends Request {
 
         private Builder(GetConnectionTicketRequest request) {
             super(request);
+            this.clientType = request.clientType;
             this.commandContent = request.commandContent;
             this.desktopId = request.desktopId;
             this.endUserId = request.endUserId;
@@ -186,10 +200,22 @@ public class GetConnectionTicketRequest extends Request {
         } 
 
         /**
-         * <p>Specifies a custom user-mode application that is automatically started after the credential is obtained.</p>
+         * <p>The client type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>macos</p>
+         */
+        public Builder clientType(String clientType) {
+            this.putQueryParameter("ClientType", clientType);
+            this.clientType = clientType;
+            return this;
+        }
+
+        /**
+         * <p>The custom user-mode application to configure. After the credential is obtained, the application is automatically started.</p>
          * <ul>
-         * <li>appPath: a value of the String type that specifies the application startup file path, such as <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
-         * <li>appParameter: a value of the String type that specifies the application startup parameters, such as <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
+         * <li>appPath: a value of the STRING type that specifies the path of the application startup file. Example: <code>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</code>. Use double backslashes (\\) as path separators.</li>
+         * <li>appParameter: a value of the STRING type that specifies the application startup parameters. Example: <code>&quot;meetingid 000 meetingname aaa&quot;</code>. Separate parameters with spaces.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +242,7 @@ public class GetConnectionTicketRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer for which to generate a connection credential. This parameter is required to generate the credential.</p>
+         * <p>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>

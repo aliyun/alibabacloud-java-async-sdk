@@ -130,7 +130,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The operation result. The value <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+         * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -152,7 +152,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned when Code is <code>success</code>.</p>
+         * <p>The error message. This parameter is not returned if Code is <code>success</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -174,11 +174,7 @@ public class DeleteTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call was successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

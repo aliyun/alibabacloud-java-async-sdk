@@ -51,6 +51,11 @@ public class ModifyTemplateRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Period")
     @com.aliyun.core.annotation.Validation(maximum = 6, minimum = 1)
     private Integer period;
@@ -89,7 +94,7 @@ public class ModifyTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
-    @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 40)
+    @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 20)
     private Integer systemDiskSize;
 
     @com.aliyun.core.annotation.Body
@@ -120,6 +125,7 @@ public class ModifyTemplateRequest extends Request {
         this.defaultLanguage = builder.defaultLanguage;
         this.description = builder.description;
         this.imageId = builder.imageId;
+        this.instanceName = builder.instanceName;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
@@ -203,6 +209,13 @@ public class ModifyTemplateRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -312,6 +325,7 @@ public class ModifyTemplateRequest extends Request {
         private String defaultLanguage; 
         private String description; 
         private String imageId; 
+        private String instanceName; 
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
@@ -341,6 +355,7 @@ public class ModifyTemplateRequest extends Request {
             this.defaultLanguage = request.defaultLanguage;
             this.description = request.description;
             this.imageId = request.imageId;
+            this.instanceName = request.instanceName;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
@@ -420,7 +435,7 @@ public class ModifyTemplateRequest extends Request {
         /**
          * <p>The description of the template. The description must meet the following requirements:</p>
          * <ul>
-         * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
          * </ul>
          * 
@@ -434,7 +449,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer image. You can query the ID on the Image Management page. System images and custom images are supported.</p>
+         * <p>The cloud computer image ID. You can query the ID on the image management page. System images, custom images, and other image types are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>m-gx2x1dhsmusr2****</p>
@@ -442,6 +457,18 @@ public class ModifyTemplateRequest extends Request {
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wework-aim-test</p>
+         */
+        public Builder instanceName(String instanceName) {
+            this.putBodyParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -532,7 +559,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
+         * <p>The cloud computer tags in key-value format. You can specify up to 20 tags.</p>
          */
         public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
             this.putBodyParameter("ResourceTagList", resourceTagList);
@@ -552,7 +579,7 @@ public class ModifyTemplateRequest extends Request {
         /**
          * <p>The type of the system cloud disk.</p>
          * <blockquote>
-         * <p>Only high frequency and graphics cloud computer specifications support ESSD cloud disks.</p>
+         * <p>Only high frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -565,7 +592,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
+         * <p>The size of the system cloud disk. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</p>
          * <blockquote>
          * <p>The system cloud disk size cannot be smaller than the size of the configured image.</p>
          * </blockquote>
@@ -595,8 +622,8 @@ public class ModifyTemplateRequest extends Request {
         /**
          * <p>The name of the template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be 2 to 126 characters in length.</li>
-         * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
+         * <li>The name must start with a letter or a Chinese character. The name cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
          * </ul>
          * 
@@ -622,7 +649,7 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
-         * <p>The per-user usage duration plan.</p>
+         * <p>The duration plan for a single user.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -705,7 +732,7 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
+             * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -744,6 +771,9 @@ public class ModifyTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+        private String virtualNodePoolId;
+
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnable")
         private Boolean volumeEncryptionEnable;
 
@@ -756,6 +786,7 @@ public class ModifyTemplateRequest extends Request {
             this.resourceInstanceType = builder.resourceInstanceType;
             this.snapshotPolicyId = builder.snapshotPolicyId;
             this.subnetId = builder.subnetId;
+            this.virtualNodePoolId = builder.virtualNodePoolId;
             this.volumeEncryptionEnable = builder.volumeEncryptionEnable;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -804,6 +835,13 @@ public class ModifyTemplateRequest extends Request {
         }
 
         /**
+         * @return virtualNodePoolId
+         */
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
+        }
+
+        /**
          * @return volumeEncryptionEnable
          */
         public Boolean getVolumeEncryptionEnable() {
@@ -823,6 +861,7 @@ public class ModifyTemplateRequest extends Request {
             private String resourceInstanceType; 
             private String snapshotPolicyId; 
             private String subnetId; 
+            private String virtualNodePoolId; 
             private Boolean volumeEncryptionEnable; 
             private String volumeEncryptionKey; 
 
@@ -835,6 +874,7 @@ public class ModifyTemplateRequest extends Request {
                 this.resourceInstanceType = model.resourceInstanceType;
                 this.snapshotPolicyId = model.snapshotPolicyId;
                 this.subnetId = model.subnetId;
+                this.virtualNodePoolId = model.virtualNodePoolId;
                 this.volumeEncryptionEnable = model.volumeEncryptionEnable;
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
             } 
@@ -873,7 +913,7 @@ public class ModifyTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the automatic snapshot policy.</p>
+             * <p>The automatic snapshot policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-35fvn8m2*****</p>
@@ -891,6 +931,17 @@ public class ModifyTemplateRequest extends Request {
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
+                return this;
+            }
+
+            /**
+             * <p>The virtual node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vnp-0bz55ic*******</p>
+             */
+            public Builder virtualNodePoolId(String virtualNodePoolId) {
+                this.virtualNodePoolId = virtualNodePoolId;
                 return this;
             }
 

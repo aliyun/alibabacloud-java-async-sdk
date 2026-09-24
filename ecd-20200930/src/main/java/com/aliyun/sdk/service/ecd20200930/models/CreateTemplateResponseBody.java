@@ -130,7 +130,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The template ID returned after successful creation.</p>
+         * <p>The template ID returned after the template is created.</p>
          * 
          * <strong>example:</strong>
          * <p>b-0cc7rx533*****</p>

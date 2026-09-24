@@ -29,6 +29,9 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
+    private String protocolType;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -37,6 +40,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         this.fileSystemName = builder.fileSystemName;
         this.mountTargetDomain = builder.mountTargetDomain;
         this.officeSiteId = builder.officeSiteId;
+        this.protocolType = builder.protocolType;
         this.requestId = builder.requestId;
     }
 
@@ -81,6 +85,13 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
     }
 
     /**
+     * @return protocolType
+     */
+    public String getProtocolType() {
+        return this.protocolType;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -92,6 +103,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
         private String fileSystemName; 
         private String mountTargetDomain; 
         private String officeSiteId; 
+        private String protocolType; 
         private String requestId; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
             this.fileSystemName = model.fileSystemName;
             this.mountTargetDomain = model.mountTargetDomain;
             this.officeSiteId = model.officeSiteId;
+            this.protocolType = model.protocolType;
             this.requestId = model.requestId;
         } 
 
@@ -146,6 +159,17 @@ public class CreateNASFileSystemResponseBody extends TeaModel {
          */
         public Builder officeSiteId(String officeSiteId) {
             this.officeSiteId = officeSiteId;
+            return this;
+        }
+
+        /**
+         * <p>The protocol type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SMB</p>
+         */
+        public Builder protocolType(String protocolType) {
+            this.protocolType = protocolType;
             return this;
         }
 

@@ -160,6 +160,10 @@ public class DescribeDesktopsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservePoolId")
+    private String reservePoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -216,6 +220,7 @@ public class DescribeDesktopsRequest extends Request {
         this.qosRuleId = builder.qosRuleId;
         this.queryFotaUpdate = builder.queryFotaUpdate;
         this.regionId = builder.regionId;
+        this.reservePoolId = builder.reservePoolId;
         this.resourceGroupId = builder.resourceGroupId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
         this.subPayType = builder.subPayType;
@@ -482,6 +487,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return reservePoolId
+     */
+    public String getReservePoolId() {
+        return this.reservePoolId;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -552,6 +564,7 @@ public class DescribeDesktopsRequest extends Request {
         private String qosRuleId; 
         private Boolean queryFotaUpdate; 
         private String regionId; 
+        private String reservePoolId; 
         private String resourceGroupId; 
         private String snapshotPolicyId; 
         private String subPayType; 
@@ -599,6 +612,7 @@ public class DescribeDesktopsRequest extends Request {
             this.qosRuleId = request.qosRuleId;
             this.queryFotaUpdate = request.queryFotaUpdate;
             this.regionId = request.regionId;
+            this.reservePoolId = request.reservePoolId;
             this.resourceGroupId = request.resourceGroupId;
             this.snapshotPolicyId = request.snapshotPolicyId;
             this.subPayType = request.subPayType;
@@ -635,7 +649,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the IDs of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
+         * <p>The cloud computer pool ID. If <code>DesktopId</code> is specified, <code>DesktopGroupId</code> is ignored. If <code>DesktopId</code> is empty, the system retrieves the DesktopId values of all cloud computers in the cloud computer pool specified by <code>DesktopGroupId</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-2i8qxpv6t1a03****</p>
@@ -683,7 +697,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer status list.</p>
+         * <p>The list of cloud computer statuses.</p>
          */
         public Builder desktopStatusList(java.util.List<String> desktopStatusList) {
             this.putQueryParameter("DesktopStatusList", desktopStatusList);
@@ -813,6 +827,9 @@ public class DescribeDesktopsRequest extends Request {
 
         /**
          * <p>Specifies whether to include automatic snapshot policy information in the response.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeAutoSnapshotPolicy(Boolean includeAutoSnapshotPolicy) {
             this.putQueryParameter("IncludeAutoSnapshotPolicy", includeAutoSnapshotPolicy);
@@ -833,7 +850,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries per page for a paged query.</p>
+         * <p>The number of entries per page for a paged query.</p>
          * <ul>
          * <li>Maximum value: 100.</li>
          * <li>Default value: 10.</li>
@@ -849,7 +866,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether multiple resources exist.</p>
+         * <p>Specifies whether there are multiple resources.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -861,7 +878,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * NetworkInterfaceIp.
+         * <p>The private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.1</p>
          */
         public Builder networkInterfaceIp(String networkInterfaceIp) {
             this.putQueryParameter("NetworkInterfaceIp", networkInterfaceIp);
@@ -870,7 +890,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -975,7 +995,10 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * PublicIp.
+         * <p>The public IP address of the instance to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121.199.28.39</p>
          */
         public Builder publicIp(String publicIp) {
             this.putQueryParameter("PublicIp", publicIp);
@@ -1021,6 +1044,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * ReservePoolId.
+         */
+        public Builder reservePoolId(String reservePoolId) {
+            this.putQueryParameter("ReservePoolId", reservePoolId);
+            this.reservePoolId = reservePoolId;
+            return this;
+        }
+
+        /**
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
@@ -1057,7 +1089,7 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The tags. A tag is a key-value pair that is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
+         * <p>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1137,7 +1169,7 @@ public class DescribeDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, contain <code>http://</code> or <code>https://</code>, or consist of only spaces.</p>
+             * <p>The tag key. If you specify <code>Tag</code>, <code>Key</code> is required. The tag key cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. It also cannot consist of only spaces.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -1148,7 +1180,7 @@ public class DescribeDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+             * <p>The tag value. The tag value cannot exceed 128 characters, cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

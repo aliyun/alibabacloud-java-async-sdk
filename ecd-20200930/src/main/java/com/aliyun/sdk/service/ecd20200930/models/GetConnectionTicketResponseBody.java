@@ -132,7 +132,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The ID of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-gx2x1dhsmucyy****</p>
@@ -154,7 +154,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content and save it as an xxx.ica file, and then open the file. The following Python code provides an example:</p>
+         * <p>The ticket used to connect to the user instance. Before you use the ticket, Base64-decode its content, save the decoded content as an xxx.ica file, and then open the file. Python code example:</p>
          * <pre><code>import base64
          * response = {
          *     &quot;Ticket&quot;: &quot;W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********&quot;,
@@ -208,7 +208,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The connection credential for the cloud computer.</p>
+         * <p>The connection credential of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</p>

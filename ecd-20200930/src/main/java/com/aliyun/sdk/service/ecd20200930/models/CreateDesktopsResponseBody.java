@@ -80,7 +80,7 @@ public class CreateDesktopsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The collection of cloud computer IDs. If multiple cloud computers are created in a single call, multiple cloud computer IDs are returned.</p>
+         * <p>The IDs of the cloud desktops. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</p>
          */
         public Builder desktopId(java.util.List<String> desktopId) {
             this.desktopId = desktopId;

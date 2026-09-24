@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNASFileSystemRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Capacity")
+    private Long capacity;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptType")
     private String encryptType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
+    private String fileSystemType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -49,8 +57,10 @@ public class CreateNASFileSystemRequest extends Request {
 
     private CreateNASFileSystemRequest(Builder builder) {
         super(builder);
+        this.capacity = builder.capacity;
         this.description = builder.description;
         this.encryptType = builder.encryptType;
+        this.fileSystemType = builder.fileSystemType;
         this.name = builder.name;
         this.officeSiteId = builder.officeSiteId;
         this.protocolType = builder.protocolType;
@@ -72,6 +82,13 @@ public class CreateNASFileSystemRequest extends Request {
     }
 
     /**
+     * @return capacity
+     */
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
@@ -83,6 +100,13 @@ public class CreateNASFileSystemRequest extends Request {
      */
     public String getEncryptType() {
         return this.encryptType;
+    }
+
+    /**
+     * @return fileSystemType
+     */
+    public String getFileSystemType() {
+        return this.fileSystemType;
     }
 
     /**
@@ -121,8 +145,10 @@ public class CreateNASFileSystemRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNASFileSystemRequest, Builder> {
+        private Long capacity; 
         private String description; 
         private String encryptType; 
+        private String fileSystemType; 
         private String name; 
         private String officeSiteId; 
         private String protocolType; 
@@ -135,14 +161,28 @@ public class CreateNASFileSystemRequest extends Request {
 
         private Builder(CreateNASFileSystemRequest request) {
             super(request);
+            this.capacity = request.capacity;
             this.description = request.description;
             this.encryptType = request.encryptType;
+            this.fileSystemType = request.fileSystemType;
             this.name = request.name;
             this.officeSiteId = request.officeSiteId;
             this.protocolType = request.protocolType;
             this.regionId = request.regionId;
             this.storageType = request.storageType;
         } 
+
+        /**
+         * <p>The capacity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
+        public Builder capacity(Long capacity) {
+            this.putQueryParameter("Capacity", capacity);
+            this.capacity = capacity;
+            return this;
+        }
 
         /**
          * <p>The description of the NAS file system.</p>
@@ -157,7 +197,7 @@ public class CreateNASFileSystemRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use a Key Management Service (KMS) managed key to encrypt data stored in the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
+         * <p>Specifies whether the file system uses a key managed by Key Management Service (KMS) to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -165,6 +205,18 @@ public class CreateNASFileSystemRequest extends Request {
         public Builder encryptType(String encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
             this.encryptType = encryptType;
+            return this;
+        }
+
+        /**
+         * <p>The file system type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
+        public Builder fileSystemType(String fileSystemType) {
+            this.putQueryParameter("FileSystemType", fileSystemType);
+            this.fileSystemType = fileSystemType;
             return this;
         }
 
@@ -197,7 +249,7 @@ public class CreateNASFileSystemRequest extends Request {
          * <p>The protocol type.</p>
          * 
          * <strong>example:</strong>
-         * <p>ASP</p>
+         * <p>SMB</p>
          */
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);

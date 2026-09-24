@@ -55,6 +55,11 @@ public class CreateTemplateRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Period")
     @com.aliyun.core.annotation.Validation(maximum = 6, minimum = 1)
     private Integer period;
@@ -97,7 +102,7 @@ public class CreateTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
-    @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 40)
+    @com.aliyun.core.annotation.Validation(maximum = 2040, minimum = 20)
     private Integer systemDiskSize;
 
     @com.aliyun.core.annotation.Body
@@ -124,6 +129,7 @@ public class CreateTemplateRequest extends Request {
         this.defaultLanguage = builder.defaultLanguage;
         this.description = builder.description;
         this.imageId = builder.imageId;
+        this.instanceName = builder.instanceName;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
@@ -214,6 +220,13 @@ public class CreateTemplateRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -324,6 +337,7 @@ public class CreateTemplateRequest extends Request {
         private String defaultLanguage; 
         private String description; 
         private String imageId; 
+        private String instanceName; 
         private Integer period; 
         private String periodUnit; 
         private String policyGroupId; 
@@ -354,6 +368,7 @@ public class CreateTemplateRequest extends Request {
             this.defaultLanguage = request.defaultLanguage;
             this.description = request.description;
             this.imageId = request.imageId;
+            this.instanceName = request.instanceName;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
@@ -380,7 +395,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether automatic payment is enabled for the subscription order.</p>
+         * <p>Specifies whether automatic payment is enabled for the subscription order.</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putBodyParameter("AutoPay", autoPay);
@@ -424,7 +439,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The size and specification configurations of data disks.</p>
+         * <p>The data disk size and specification configurations.</p>
          */
         public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
             this.putBodyParameter("DataDiskList", dataDiskList);
@@ -447,8 +462,8 @@ public class CreateTemplateRequest extends Request {
         /**
          * <p>The description of the template. The description must meet the following requirements:</p>
          * <ul>
-         * <li>The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</li>
+         * <li>The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The description can contain Chinese characters, letters, digits, spaces, and special characters, and supports line breaks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -461,7 +476,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</p>
+         * <p>The cloud computer image ID. You can query the ID on the image management page. System images, custom images, and other image types are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>desktopimage-windows-server-2022-64-asp</p>
@@ -469,6 +484,18 @@ public class CreateTemplateRequest extends Request {
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myHost</p>
+         */
+        public Builder instanceName(String instanceName) {
+            this.putBodyParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -547,9 +574,9 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region-specific template configurations. You can specify multiple configurations. The configuration that matches the specific region is used.</p>
+         * <p>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</p>
          * <blockquote>
-         * <p>You can specify configurations for up to 20 regions.</p>
+         * <p>You can configure up to 20 regions.</p>
          * </blockquote>
          */
         public Builder regionConfigList(java.util.List<RegionConfigList> regionConfigList) {
@@ -571,7 +598,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</p>
+         * <p>The cloud computer tags in key-value format. You can specify up to 20 tags.</p>
          */
         public Builder resourceTagList(java.util.List<ResourceTagList> resourceTagList) {
             this.putBodyParameter("ResourceTagList", resourceTagList);
@@ -589,9 +616,9 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The type of the system disk.</p>
+         * <p>The system disk type.</p>
          * <blockquote>
-         * <p>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD disks.</p>
+         * <p>Only high frequency and graphics cloud computer specifications support ESSD disks.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -604,9 +631,9 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * <p>The size of the system disk. Unit: GiB. Valid values: 40 to 500. The value must be a multiple of 10.</p>
+         * <p>The system disk size. Unit: GiB. Valid values: 40 to 500, in increments of 10 GiB.</p>
          * <blockquote>
-         * <p>The system disk size cannot be smaller than the image size.</p>
+         * <p>The system disk size cannot be smaller than the size of the configured image.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -621,7 +648,7 @@ public class CreateTemplateRequest extends Request {
         /**
          * <p>The name of the template. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be 2 to 126 characters in length.</li>
+         * <li>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</li>
          * <li>The name must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</li>
          * <li>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</li>
          * </ul>
@@ -732,9 +759,9 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The size of the data cloud disk. Unit: GiB. Valid values: 40 to 2040. The value must be a multiple of 10.</p>
+             * <p>The data cloud disk size. Unit: GiB. Valid values: 40 to 2040, in increments of 10 GiB.</p>
              * <blockquote>
-             * <p>Notice: The larger the ESSD cloud disk capacity, the higher the performance level (PL) available (for example, PL2 is available for capacities of 460 GiB or more). Higher performance levels (PLs) incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements. Note: Only standard SSD and ESSD cloud disks are supported.</p>
+             * <p>Notice: The larger the ESSD cloud disk capacity, the higher the available performance level (PL) (for example, PL2 is available for capacities of 460 GiB or more). Higher performance levels (PLs) incur higher costs. Select the ESSD cloud disk performance level (PL) based on your requirements.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -774,6 +801,9 @@ public class CreateTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+        private String virtualNodePoolId;
+
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnable")
         private Boolean volumeEncryptionEnable;
 
@@ -786,6 +816,7 @@ public class CreateTemplateRequest extends Request {
             this.resourceInstanceType = builder.resourceInstanceType;
             this.snapshotPolicyId = builder.snapshotPolicyId;
             this.subnetId = builder.subnetId;
+            this.virtualNodePoolId = builder.virtualNodePoolId;
             this.volumeEncryptionEnable = builder.volumeEncryptionEnable;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -834,6 +865,13 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
+         * @return virtualNodePoolId
+         */
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
+        }
+
+        /**
          * @return volumeEncryptionEnable
          */
         public Boolean getVolumeEncryptionEnable() {
@@ -853,6 +891,7 @@ public class CreateTemplateRequest extends Request {
             private String resourceInstanceType; 
             private String snapshotPolicyId; 
             private String subnetId; 
+            private String virtualNodePoolId; 
             private Boolean volumeEncryptionEnable; 
             private String volumeEncryptionKey; 
 
@@ -865,6 +904,7 @@ public class CreateTemplateRequest extends Request {
                 this.resourceInstanceType = model.resourceInstanceType;
                 this.snapshotPolicyId = model.snapshotPolicyId;
                 this.subnetId = model.subnetId;
+                this.virtualNodePoolId = model.virtualNodePoolId;
                 this.volumeEncryptionEnable = model.volumeEncryptionEnable;
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
             } 
@@ -881,7 +921,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
+             * <p>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by WUYING Workspace.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -903,7 +943,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the automatic snapshot policy.</p>
+             * <p>The automatic snapshot policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>sp-35fvn8m21pnx2****</p>
@@ -925,6 +965,17 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
+             * <p>The virtual node pool, used in workstation scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vnp-0bydg********</p>
+             */
+            public Builder virtualNodePoolId(String virtualNodePoolId) {
+                this.virtualNodePoolId = virtualNodePoolId;
+                return this;
+            }
+
+            /**
              * <p>Specifies whether to enable disk encryption.</p>
              * 
              * <strong>example:</strong>
@@ -936,7 +987,7 @@ public class CreateTemplateRequest extends Request {
             }
 
             /**
-             * <p>The ID of the KMS key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+             * <p>The KMS key ID used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a7b3c0c8-b3a2-4876-b1cc-*********</p>

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRecordFileRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
+    private String auditStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
@@ -73,6 +77,7 @@ public class DescribeRecordFileRequest extends Request {
 
     private DescribeRecordFileRequest(Builder builder) {
         super(builder);
+        this.auditStatus = builder.auditStatus;
         this.desktopId = builder.desktopId;
         this.endTime = builder.endTime;
         this.endUserId = builder.endUserId;
@@ -99,6 +104,13 @@ public class DescribeRecordFileRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return auditStatus
+     */
+    public String getAuditStatus() {
+        return this.auditStatus;
     }
 
     /**
@@ -193,6 +205,7 @@ public class DescribeRecordFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRecordFileRequest, Builder> {
+        private String auditStatus; 
         private String desktopId; 
         private String endTime; 
         private String endUserId; 
@@ -213,6 +226,7 @@ public class DescribeRecordFileRequest extends Request {
 
         private Builder(DescribeRecordFileRequest request) {
             super(request);
+            this.auditStatus = request.auditStatus;
             this.desktopId = request.desktopId;
             this.endTime = request.endTime;
             this.endUserId = request.endUserId;
@@ -227,6 +241,24 @@ public class DescribeRecordFileRequest extends Request {
             this.startTime = request.startTime;
             this.status = request.status;
         } 
+
+        /**
+         * <p>The audit status. Valid values:</p>
+         * <ul>
+         * <li>AI_ANALYZED: AI analysis completed.</li>
+         * <li>REVIEWING: Under review.</li>
+         * <li>REVIEWED: Reviewed.</li>
+         * <li>UNREVIEWED: Not reviewed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>REVIEWING</p>
+         */
+        public Builder auditStatus(String auditStatus) {
+            this.putQueryParameter("AuditStatus", auditStatus);
+            this.auditStatus = auditStatus;
+            return this;
+        }
 
         /**
          * <p>The Cloud Desktop ID.</p>
@@ -277,9 +309,9 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * <p>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</p>
+         * <p>The field used for sorting. If not specified, results are sorted by recording start time in descending order. Valid values:</p>
          * <ul>
-         * <li>startTime: recording start time.</li>
+         * <li>startTime: the recording start time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -320,7 +352,7 @@ public class DescribeRecordFileRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of rows per page in a paging query.</p>
+         * <p>The maximum number of rows per page in a paged query. This parameter is used for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -389,8 +421,8 @@ public class DescribeRecordFileRequest extends Request {
         /**
          * <p>The status of the screen recording file. Valid values:</p>
          * <ul>
-         * <li>0: uploaded.</li>
-         * <li>1: uploading.</li>
+         * <li>0: Upload succeeded.</li>
+         * <li>1: Uploading.</li>
          * </ul>
          * 
          * <strong>example:</strong>

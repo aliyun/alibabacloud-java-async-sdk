@@ -898,16 +898,16 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud computers, complete the following preparations:</p>
+     * <p>Before creating cloud desktops, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For related API operations or documentation, refer to:<ul>
-     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a>, <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<ul>
+     * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
      * </ul>
      * </li>
      * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
      * <strong>Call examples:</strong><details>
-     * <summary>Example of creating with a template</summary></li>
+     * <summary>Example of creating a cloud desktop by using a template</summary></li>
      * </ul>
      * <pre><code>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
@@ -921,7 +921,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </code></pre>
      * </details>
      * <details>
-     * <summary>Example of creating without a template</summary>
+     * <summary>Example of creating a cloud desktop without a template</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -941,7 +941,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating a monthly hourly package</summary>
+     * <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -966,7 +966,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating an Agent resource</summary>
+     * <summary>Example of creating an agent resource</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
@@ -986,7 +986,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * }
      * ```
      * </details>
-     * To have cloud computers automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
      * 
      * @param request the request parameters of CreateDesktops  CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -1358,10 +1358,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, note the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</li>
-     * <li>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
+     * <li>For region-specific parameters in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
@@ -1935,7 +1935,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>After the template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
+     * <p>After a template is deleted, cloud computers that were created based on the template are not affected, and resources associated with the template are not affected.</p>
      * 
      * @param request the request parameters of DeleteTemplates  DeleteTemplatesRequest
      * @return DeleteTemplatesResponse
@@ -2124,7 +2124,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
+     * <p>The cloud disk team list is obtained through synchronization from the Wuying client &gt; User Management &gt; organization structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</p>
      * 
      * @param request the request parameters of DescribeCloudDiskGroupDrives  DescribeCloudDiskGroupDrivesRequest
      * @return DescribeCloudDiskGroupDrivesResponse
@@ -2605,7 +2605,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users should select Shanghai as the site. International site users should select Singapore.</li>
+     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
      * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
      * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
      * <li>Sort conditions cannot be used together with other conditions.</li>
@@ -2747,7 +2747,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</li>
+     * <li>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</li>
      * <li>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</li>
      * </ul>
      * 
@@ -3540,8 +3540,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation uses a centralized domain name. The access point is in the China (Shanghai) region. Other regions are not supported.</li>
-     * <li>The cloud computer status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
+     * <li>This operation uses a centralized endpoint in the Shanghai region. Calls from other regions are not supported.</li>
+     * <li>The cloud desktop status information returned by this operation has a 1 to 3 second delay from the actual values.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeVulDesktops  DescribeVulDesktopsRequest
@@ -3801,6 +3801,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAggregatedDesktops  GetAggregatedDesktopsRequest
+     * @return GetAggregatedDesktopsResponse
+     */
+    @Override
+    public CompletableFuture<GetAggregatedDesktopsResponse> getAggregatedDesktops(GetAggregatedDesktopsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAggregatedDesktops").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAggregatedDesktopsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAggregatedDesktopsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAsyncTask  GetAsyncTaskRequest
      * @return GetAsyncTaskResponse
      */
@@ -3820,7 +3838,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</p>
+     * <p>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</p>
      * 
      * @param request the request parameters of GetConnectionTicket  GetConnectionTicketRequest
      * @return GetConnectionTicketResponse
@@ -5024,7 +5042,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
+     * <p>Warning: To ensure compatibility with unset parameters and default upgrade logic in the template, this operation uses full parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
@@ -5046,7 +5064,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>This operation only modifies the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
+     * <p>This operation is used only to modify the name and description of a custom cloud computer template. To modify the parameters of a custom cloud computer template, use <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a>.</p>
      * 
      * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
@@ -5195,6 +5213,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryActiveUserStatisticResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryAuthUserConnectDurationList  QueryAuthUserConnectDurationListRequest
+     * @return QueryAuthUserConnectDurationListResponse
+     */
+    @Override
+    public CompletableFuture<QueryAuthUserConnectDurationListResponse> queryAuthUserConnectDurationList(QueryAuthUserConnectDurationListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAuthUserConnectDurationList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAuthUserConnectDurationListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAuthUserConnectDurationListResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

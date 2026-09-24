@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeVulDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
+    private String connectionStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CveId")
     private String cveId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopIdList")
     private java.util.List<String> desktopIdList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopStatus")
+    private String desktopStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeFixResult")
@@ -79,8 +87,10 @@ public class DescribeVulDesktopsRequest extends Request {
 
     private DescribeVulDesktopsRequest(Builder builder) {
         super(builder);
+        this.connectionStatus = builder.connectionStatus;
         this.cveId = builder.cveId;
         this.desktopIdList = builder.desktopIdList;
+        this.desktopStatus = builder.desktopStatus;
         this.includeFixResult = builder.includeFixResult;
         this.language = builder.language;
         this.maxResults = builder.maxResults;
@@ -110,6 +120,13 @@ public class DescribeVulDesktopsRequest extends Request {
     }
 
     /**
+     * @return connectionStatus
+     */
+    public String getConnectionStatus() {
+        return this.connectionStatus;
+    }
+
+    /**
      * @return cveId
      */
     public String getCveId() {
@@ -121,6 +138,13 @@ public class DescribeVulDesktopsRequest extends Request {
      */
     public java.util.List<String> getDesktopIdList() {
         return this.desktopIdList;
+    }
+
+    /**
+     * @return desktopStatus
+     */
+    public String getDesktopStatus() {
+        return this.desktopStatus;
     }
 
     /**
@@ -215,8 +239,10 @@ public class DescribeVulDesktopsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeVulDesktopsRequest, Builder> {
+        private String connectionStatus; 
         private String cveId; 
         private java.util.List<String> desktopIdList; 
+        private String desktopStatus; 
         private Boolean includeFixResult; 
         private String language; 
         private Integer maxResults; 
@@ -237,8 +263,10 @@ public class DescribeVulDesktopsRequest extends Request {
 
         private Builder(DescribeVulDesktopsRequest request) {
             super(request);
+            this.connectionStatus = request.connectionStatus;
             this.cveId = request.cveId;
             this.desktopIdList = request.desktopIdList;
+            this.desktopStatus = request.desktopStatus;
             this.includeFixResult = request.includeFixResult;
             this.language = request.language;
             this.maxResults = request.maxResults;
@@ -255,7 +283,19 @@ public class DescribeVulDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The CVE ID.</p>
+         * <p>The connection status of the cloud desktop. Valid values: CONNECTED and DISCONNECTED.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Connected</p>
+         */
+        public Builder connectionStatus(String connectionStatus) {
+            this.putQueryParameter("ConnectionStatus", connectionStatus);
+            this.connectionStatus = connectionStatus;
+            return this;
+        }
+
+        /**
+         * <p>The CVE ID of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>CVE-2026-43284</p>
@@ -267,11 +307,23 @@ public class DescribeVulDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer IDs.</p>
+         * <p>The list of cloud desktop IDs.</p>
          */
         public Builder desktopIdList(java.util.List<String> desktopIdList) {
             this.putQueryParameter("DesktopIdList", desktopIdList);
             this.desktopIdList = desktopIdList;
+            return this;
+        }
+
+        /**
+         * <p>The running status of the cloud desktop.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        public Builder desktopStatus(String desktopStatus) {
+            this.putQueryParameter("DesktopStatus", desktopStatus);
+            this.desktopStatus = desktopStatus;
             return this;
         }
 
@@ -288,7 +340,11 @@ public class DescribeVulDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The language type of the returned information.</p>
+         * <p>The language of the returned information. Valid values:</p>
+         * <ul>
+         * <li><strong>ch</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ch</p>
@@ -326,7 +382,7 @@ public class DescribeVulDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include only cloud computers on which fix tasks were executed in the current month.</p>
+         * <p>Specifies whether to include only cloud desktops that have had fix tasks executed in the current month.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -398,7 +454,7 @@ public class DescribeVulDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID used to filter cloud computer information for a specific region.</p>
+         * <p>The region ID used to filter cloud desktop information for a specific region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -419,14 +475,14 @@ public class DescribeVulDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The security level of the intrusion prevention event. Valid values:</p>
+         * <p>The severity level of the intrusion prevention event. Valid values:</p>
          * <ul>
-         * <li><strong>low</strong>: Low risk.</li>
-         * <li><strong>medium</strong>: Medium risk.</li>
-         * <li><strong>critical</strong>: High risk.</li>
+         * <li><strong>low</strong>: Low.</li>
+         * <li><strong>medium</strong>: Medium.</li>
+         * <li><strong>critical</strong>: Critical.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not set this parameter, vulnerabilities of all security levels are queried.</p>
+         * <p>If you do not set this parameter, vulnerabilities of all severity levels are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

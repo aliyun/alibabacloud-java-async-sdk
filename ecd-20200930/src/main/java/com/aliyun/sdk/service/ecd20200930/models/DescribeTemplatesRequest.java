@@ -209,9 +209,9 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The region filter condition for template queries.</p>
+         * <p>The region filter condition for the template query. </p>
          * <blockquote>
-         * <p>If this parameter is specified, the query results exclude configurations for regions that do not match.</p>
+         * <p>If this parameter is specified, region-specific configurations that do not match are excluded from the query results.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer image ID. You can obtain the ID from the image management page. System images and custom images are supported.</p>
+         * <p>The cloud computer image ID. You can obtain the ID from the image management page. System images, custom images, and other image types are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>m-dnz9xjgbm8*****</p>
@@ -262,7 +262,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
+         * <p>The page number of the current page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -274,7 +274,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of rows per page in a paged query. Paging is used to return results in batches.</p>
+         * <p>The maximum number of rows per page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -299,9 +299,6 @@ public class DescribeTemplatesRequest extends Request {
 
         /**
          * <p>The list of template IDs to query.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>DescribeTemplates</p>
          */
         public Builder templateIds(java.util.List<String> templateIds) {
             this.putBodyParameter("TemplateIds", templateIds);

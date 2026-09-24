@@ -114,7 +114,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
+         * <p>The pagination token for the next query. If this parameter is empty, no more results are available.</p>
          * 
          * <strong>example:</strong>
          * <p>MTA0MjA=</p>
@@ -147,7 +147,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation was successful.</p>
+         * <p>Indicates whether the operation is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -170,6 +170,9 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
      * <p>DescribeCloudDiskGroupDrivesResponseBody</p>
      */
     public static class CloudDriveGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthDimension")
+        private String authDimension;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -198,6 +201,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         private String usedSize;
 
         private CloudDriveGroups(Builder builder) {
+            this.authDimension = builder.authDimension;
             this.createTime = builder.createTime;
             this.directoryId = builder.directoryId;
             this.driveId = builder.driveId;
@@ -215,6 +219,13 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
 
         public static CloudDriveGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return authDimension
+         */
+        public String getAuthDimension() {
+            return this.authDimension;
         }
 
         /**
@@ -281,6 +292,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String authDimension; 
             private String createTime; 
             private String directoryId; 
             private String driveId; 
@@ -295,6 +307,7 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
             } 
 
             private Builder(CloudDriveGroups model) {
+                this.authDimension = model.authDimension;
                 this.createTime = model.createTime;
                 this.directoryId = model.directoryId;
                 this.driveId = model.driveId;
@@ -305,6 +318,17 @@ public class DescribeCloudDiskGroupDrivesResponseBody extends TeaModel {
                 this.totalSize = model.totalSize;
                 this.usedSize = model.usedSize;
             } 
+
+            /**
+             * <p>The authorization dimension.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ROSTER</p>
+             */
+            public Builder authDimension(String authDimension) {
+                this.authDimension = authDimension;
+                return this;
+            }
 
             /**
              * <p>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>

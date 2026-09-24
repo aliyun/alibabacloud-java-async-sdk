@@ -158,7 +158,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The operation result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
+         * <p>The modification result. A value of <code>success</code> indicates success. Otherwise, an error message is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -232,7 +232,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation is successful.</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -323,7 +323,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The data cloud disk size. Unit: GiB.</p>
+             * <p>The size of the data cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -371,6 +371,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubnetId")
         private String subnetId;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualNodePoolId")
+        private String virtualNodePoolId;
+
         @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnable")
         private Boolean volumeEncryptionEnable;
 
@@ -386,6 +389,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             this.resourceInstanceType = builder.resourceInstanceType;
             this.snapshotPolicyId = builder.snapshotPolicyId;
             this.subnetId = builder.subnetId;
+            this.virtualNodePoolId = builder.virtualNodePoolId;
             this.volumeEncryptionEnable = builder.volumeEncryptionEnable;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
         }
@@ -455,6 +459,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return virtualNodePoolId
+         */
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
+        }
+
+        /**
          * @return volumeEncryptionEnable
          */
         public Boolean getVolumeEncryptionEnable() {
@@ -477,6 +488,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String resourceInstanceType; 
             private String snapshotPolicyId; 
             private String subnetId; 
+            private String virtualNodePoolId; 
             private Boolean volumeEncryptionEnable; 
             private String volumeEncryptionKey; 
 
@@ -492,6 +504,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
                 this.resourceInstanceType = model.resourceInstanceType;
                 this.snapshotPolicyId = model.snapshotPolicyId;
                 this.subnetId = model.subnetId;
+                this.virtualNodePoolId = model.virtualNodePoolId;
                 this.volumeEncryptionEnable = model.volumeEncryptionEnable;
                 this.volumeEncryptionKey = model.volumeEncryptionKey;
             } 
@@ -508,7 +521,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</p>
+             * <p>The GPU memory information. This field is displayed only when the specification is a graphics type.</p>
              * 
              * <strong>example:</strong>
              * <p>4GiB</p>
@@ -581,6 +594,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
              */
             public Builder subnetId(String subnetId) {
                 this.subnetId = subnetId;
+                return this;
+            }
+
+            /**
+             * <p>The virtual node pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vnp-0bw*******</p>
+             */
+            public Builder virtualNodePoolId(String virtualNodePoolId) {
+                this.virtualNodePoolId = virtualNodePoolId;
                 return this;
             }
 
@@ -812,6 +836,9 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        private String instanceName;
+
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
@@ -874,6 +901,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
+            this.instanceName = builder.instanceName;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.policyGroupId = builder.policyGroupId;
@@ -969,6 +997,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
          */
         public String getImageType() {
             return this.imageType;
+        }
+
+        /**
+         * @return instanceName
+         */
+        public String getInstanceName() {
+            return this.instanceName;
         }
 
         /**
@@ -1101,6 +1136,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String gmtModified; 
             private String imageId; 
             private String imageType; 
+            private String instanceName; 
             private Integer period; 
             private String periodUnit; 
             private String policyGroupId; 
@@ -1133,6 +1169,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
+                this.instanceName = model.instanceName;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
                 this.policyGroupId = model.policyGroupId;
@@ -1161,7 +1198,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</p>
+             * <p>Indicates whether auto-renewal is enabled for subscription shared cloud computers.</p>
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1210,7 +1247,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time of the template (UTC).</p>
+             * <p>The time when the template was created (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -1221,7 +1258,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time of the template (UTC).</p>
+             * <p>The time when the template was last updated (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2025-04-25T05:18:46.000+00:00</p>
@@ -1254,7 +1291,35 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</p>
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myHost</p>
+             */
+            public Builder instanceName(String instanceName) {
+                this.instanceName = instanceName;
+                return this;
+            }
+
+            /**
+             * <p>The subscription duration of the subscription shared cloud computer. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>. The unit is specified by <code>PeriodUnit</code>.</p>
+             * <ul>
+             * <li>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values:<ul>
+             * <li>1</li>
+             * <li>2</li>
+             * <li>3</li>
+             * <li>6</li>
+             * </ul>
+             * </li>
+             * <li>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values:<ul>
+             * <li>1</li>
+             * <li>2</li>
+             * <li>3</li>
+             * <li>4</li>
+             * <li>5</li>
+             * </ul>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1265,7 +1330,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</p>
+             * <p>The unit of the duration for the subscription billable methods.</p>
              * 
              * <strong>example:</strong>
              * <p>Month</p>
@@ -1276,7 +1341,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy group ID.</p>
+             * <p>The policy ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pg-0caoeogkhz*****</p>
@@ -1287,7 +1352,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</p>
+             * <p>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration package is exhausted.</p>
              */
             public Builder postPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
                 this.postPaidAfterUsedUp = postPaidAfterUsedUp;
@@ -1418,7 +1483,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The per-user usage duration plan.</p>
+             * <p>The per-user duration package.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>

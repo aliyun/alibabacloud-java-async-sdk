@@ -140,6 +140,10 @@ public class CreateDesktopsRequest extends Request {
     private Long resellerOwnerUid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReservePoolId")
+    private String reservePoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -223,6 +227,7 @@ public class CreateDesktopsRequest extends Request {
         this.qosRuleId = builder.qosRuleId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
+        this.reservePoolId = builder.reservePoolId;
         this.resourceGroupId = builder.resourceGroupId;
         this.savingPlanId = builder.savingPlanId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
@@ -462,6 +467,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return reservePoolId
+     */
+    public String getReservePoolId() {
+        return this.reservePoolId;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -583,6 +595,7 @@ public class CreateDesktopsRequest extends Request {
         private String qosRuleId; 
         private String regionId; 
         private Long resellerOwnerUid; 
+        private String reservePoolId; 
         private String resourceGroupId; 
         private String savingPlanId; 
         private String snapshotPolicyId; 
@@ -633,6 +646,7 @@ public class CreateDesktopsRequest extends Request {
             this.qosRuleId = request.qosRuleId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
+            this.reservePoolId = request.reservePoolId;
             this.resourceGroupId = request.resourceGroupId;
             this.savingPlanId = request.savingPlanId;
             this.snapshotPolicyId = request.snapshotPolicyId;
@@ -649,7 +663,7 @@ public class CreateDesktopsRequest extends Request {
         } 
 
         /**
-         * <p>The number of cloud computers to create. Valid values: 1 to 300. Default value: 1.</p>
+         * <p>The number of cloud desktops to create. Valid values: 1 to 300. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -697,7 +711,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer template ID. If no template ID is specified, you can create a cloud computer by providing the required fields.</p>
+         * <p>The cloud desktop template ID. If no template ID is specified, you can create a cloud desktop by specifying the required fields.</p>
          * 
          * <strong>example:</strong>
          * <p>b-je9hani001wfn****</p>
@@ -709,7 +723,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of cloud computer templates.</p>
+         * <p>The list of cloud desktop templates.</p>
          */
         public Builder bundleModels(java.util.List<BundleModels> bundleModels) {
             this.putQueryParameter("BundleModels", bundleModels);
@@ -732,7 +746,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the cloud computer.</p>
+         * <p>The billing method of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>PrePaid</p>
@@ -744,7 +758,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The parameters for creating a cloud computer without a template. This parameter is invalid when the BundleId parameter is specified.</p>
+         * <p>The parameters for creating a cloud desktop without a template. This parameter is invalid when the BundleID parameter is specified.</p>
          */
         public Builder desktopAttachment(DesktopAttachment desktopAttachment) {
             String desktopAttachmentShrink = shrink(desktopAttachment, "DesktopAttachment", "json");
@@ -754,7 +768,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the cloud computer.</p>
+         * <p>The private IP address of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.1</p>
@@ -766,11 +780,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer name. The naming rules are as follows:</p>
+         * <p>The cloud desktop name. The naming rules are as follows:</p>
          * <ul>
          * <li>The name can be up to 64 characters in length.</li>
          * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
-         * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
+         * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -783,7 +797,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Controls the format of the cloud computer name.</p>
+         * <p>Controls the format of the desktop name.</p>
          */
         public Builder desktopNameModel(DesktopNameModel desktopNameModel) {
             String desktopNameModelShrink = shrink(desktopNameModel, "DesktopNameModel", "json");
@@ -793,7 +807,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to automatically append a suffix to the cloud computer name when creating multiple cloud computers in a batch.</p>
+         * <p>Specifies whether to automatically append a suffix to the cloud desktop name when you create multiple cloud desktops in a batch.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -805,7 +819,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The details of the cloud computer scheduled tasks. This parameter is being deprecated. Use the TimerGroupId parameter instead.</p>
+         * <p>The details of the scheduled task for the cloud desktop. This parameter is being deprecated. Use the TimerGroupId parameter instead.</p>
          */
         public Builder desktopTimers(java.util.List<DesktopTimers> desktopTimers) {
             this.putQueryParameter("DesktopTimers", desktopTimers);
@@ -828,7 +842,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The list of authorized user IDs to add to the cloud computer. You can specify 1 to 100 user IDs.</p>
+         * <p>The list of authorized user IDs to add to the cloud desktops. You can specify 1 to 100 user IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>123456789</p>
@@ -852,7 +866,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer pool ID.</p>
+         * <p>The cloud desktop pool ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-boyczi8enfyc5****</p>
@@ -864,13 +878,13 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The custom hostname of the cloud computer. Only cloud computers with a Windows operating system in an AD office network are supported.</p>
+         * <p>The custom hostname of the cloud desktop. Settings are supported only for Windows cloud desktops with the Windows operating system type in AD office networks.</p>
          * <p>The naming rules for the hostname are as follows:</p>
          * <ul>
          * <li>The hostname must be 2 to 15 characters in length.</li>
-         * <li>The hostname can contain letters, digits, or hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
+         * <li>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
          * </ul>
-         * <p>When creating multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name them uniformly. For example, if Hostname is set to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+         * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
          * <ul>
          * <li><code>name_prefix</code>: the prefix of the hostname.</li>
          * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> specifies the start number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</li>
@@ -887,7 +901,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The purchase parameters for the monthly hours package.</p>
+         * <p>The parameters for purchasing a monthly hours package.</p>
          */
         public Builder monthDesktopSetting(MonthDesktopSetting monthDesktopSetting) {
             this.putQueryParameter("MonthDesktopSetting", monthDesktopSetting);
@@ -908,7 +922,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The organizational unit (OU) path. After this parameter is specified, the cloud computer joins the corresponding OU in Active Directory (AD).</p>
+         * <p>The organizational unit (OU) path. If specified, the cloud desktop is added to the corresponding OU in Active Directory (AD).</p>
          * 
          * <strong>example:</strong>
          * <p>test.com/wuyingtest/computers</p>
@@ -951,7 +965,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The unit of the subscription duration.</p>
+         * <p>The unit of the subscription billing method duration.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -997,7 +1011,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the public network bandwidth throttling rule.</p>
+         * <p>The ID of the Internet bandwidth throttling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-52fqmg6kvyro7zu4l</p>
@@ -1009,7 +1023,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service (EDS).</p>
+         * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1022,7 +1036,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource owner in reseller mode. You do not need to specify this parameter if you are not in reseller mode.</p>
+         * <p>The user ID for resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>1828644634819902</p>
@@ -1034,7 +1048,19 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the EDS resource group.</p>
+         * <p>The resource reserve pool ID (rp-xxx). This parameter is optional. If specified, the cloud desktop is created from the reserve pool, and compute resources are provided by the reserve pool without generating a compute fee order. If ZoneId is explicitly specified, it must match the zone of the reserve pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rp-xxx</p>
+         */
+        public Builder reservePoolId(String reservePoolId) {
+            this.putQueryParameter("ReservePoolId", reservePoolId);
+            this.reservePoolId = reservePoolId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the WUYING resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-3mtuc28rx95lx****</p>
@@ -1060,7 +1086,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Elastic Desktop Service (EDS) automatic snapshot policy.</p>
+         * <p>The ID of the WUYING automatic snapshot policy.</p>
          * 
          * <strong>example:</strong>
          * <p>sp-28mp6my0l6zow****</p>
@@ -1072,11 +1098,11 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The purchase method of the cloud computer. Valid values:</p>
+         * <p>The purchase method of the cloud desktop. Valid values:</p>
          * <ul>
-         * <li>prePaid: monthly subscription with unlimited duration.</li>
-         * <li>postPaid: pay-as-you-go.</li>
-         * <li>monthPackage: monthly hours package.</li>
+         * <li>prePaid: Monthly subscription with unlimited duration.</li>
+         * <li>postPaid: Pay-as-you-go.</li>
+         * <li>monthPackage: Monthly hours package.</li>
          * <li>jvsAgentPackage: JVS Agent hours package.</li>
          * </ul>
          * 
@@ -1123,9 +1149,9 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The cloud computer assignment mode.</p>
+         * <p>The cloud desktop assignment mode.</p>
          * <blockquote>
-         * <p>If <code>EndUserId</code> is not specified, the created cloud computers are not assigned to any user.</p>
+         * <p>If <code>EndUserId</code> is not specified, the created cloud desktops are not assigned to any user.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1161,7 +1187,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable cloud disk encryption.</p>
+         * <p>Specifies whether to enable disk encryption.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1173,7 +1199,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. Call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to query available keys.</p>
+         * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -1324,7 +1350,7 @@ public class CreateDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>The number of cloud computers to create. Valid values: 1 to 300. Default value: 0.</p>
+             * <p>The number of cloud desktops to create. Valid values: 1 to 300. Default value: 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1335,7 +1361,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The cloud computer template ID.</p>
+             * <p>The cloud desktop template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>b-je9hani001wfn****</p>
@@ -1346,11 +1372,11 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The cloud computer name. The naming rules are as follows:</p>
+             * <p>The cloud desktop name. The naming rules are as follows:</p>
              * <ul>
              * <li>The name can be up to 64 characters in length.</li>
              * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
-             * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), or hyphens (-).</li>
+             * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1362,7 +1388,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The list of users to whom the cloud computers are assigned.</p>
+             * <p>The list of users to whom the cloud desktops are assigned.</p>
              */
             public Builder endUserIds(java.util.List<String> endUserIds) {
                 this.endUserIds = endUserIds;
@@ -1370,13 +1396,13 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The custom hostname of the cloud computer. Only cloud computers with a Windows operating system in an AD office network are supported.</p>
+             * <p>The custom hostname of the cloud desktop. Settings are supported only for cloud desktops with the Windows operating system type in AD office networks.</p>
              * <p>The naming rules for the hostname are as follows:</p>
              * <ul>
              * <li>The hostname must be 2 to 15 characters in length.</li>
-             * <li>The hostname can contain letters, digits, or hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
+             * <li>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
              * </ul>
-             * <p>When creating multiple cloud computers, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name them uniformly. For example, if Hostname is set to ecd-[1,4]-test, the hostname of the first cloud computer is ecd-0001-test, the hostname of the second cloud computer is ecd-0002-test, and so on.</p>
+             * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
              * <ul>
              * <li><code>name_prefix</code>: the prefix of the hostname.</li>
              * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> specifies the start number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</li>
@@ -1392,7 +1418,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable cloud disk encryption.</p>
+             * <p>Specifies whether to enable disk encryption.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1403,7 +1429,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. Call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to query available keys.</p>
+             * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
              * 
              * <strong>example:</strong>
              * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -1566,8 +1592,8 @@ public class CreateDesktopsRequest extends Request {
             /**
              * <p>The type of the data cloud disk. The system cloud disk and data cloud disk must be of the same type. Valid values:</p>
              * <ul>
-             * <li>cloud_auto: enhanced SSD (ESSD) AutoPL cloud disk</li>
-             * <li>cloud_essd: ESSD cloud disk</li>
+             * <li>cloud_auto: standard SSD.</li>
+             * <li>cloud_essd: ESSD cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1622,7 +1648,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The cloud computer specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the specification IDs supported by cloud computers.</p>
+             * <p>The cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported cloud desktop type IDs.</p>
              * 
              * <strong>example:</strong>
              * <p>eds.enterprise_office.8c16g</p>
@@ -1646,8 +1672,8 @@ public class CreateDesktopsRequest extends Request {
             /**
              * <p>The type of the system cloud disk. The system cloud disk and data cloud disk must be of the same type. Valid values:</p>
              * <ul>
-             * <li>cloud_auto: enhanced SSD (ESSD) AutoPL cloud disk</li>
-             * <li>cloud_essd: ESSD cloud disk</li>
+             * <li>cloud_auto: standard SSD.</li>
+             * <li>cloud_essd: ESSD cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1731,7 +1757,10 @@ public class CreateDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to automatically append a suffix to the cloud computer name when creating multiple cloud computers in a batch. Default value: true.</p>
+             * <p>Specifies whether to automatically append a suffix to the cloud desktop name when creating multiple cloud desktops in a batch. Default value: true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder desktopNameIsSuffix(Boolean desktopNameIsSuffix) {
                 this.desktopNameIsSuffix = desktopNameIsSuffix;
@@ -1863,7 +1892,7 @@ public class CreateDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to allow end users to configure scheduled tasks on their own.</p>
+             * <p>Specifies whether end users can configure scheduled tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1876,7 +1905,7 @@ public class CreateDesktopsRequest extends Request {
             /**
              * <p>The cron expression of the scheduled task.</p>
              * <blockquote>
-             * <p>Notice: Specify the time in UTC. For example, to schedule a task at 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
+             * <p>Notice: The time must be specified in UTC. For example, to specify 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1910,7 +1939,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The operation type of the scheduled task. Currently, only the disconnection scheduled task is supported.</p>
+             * <p>The operation type of the scheduled task. Currently, only the disconnect scheduled task is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>Shutdown</p>
@@ -1921,7 +1950,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The reset type of the cloud computer.</p>
+             * <p>The reset type of the cloud desktop.</p>
              * 
              * <strong>example:</strong>
              * <p>RESET_TYPE_SYSTEM</p>
@@ -2041,10 +2070,10 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The plan selected when purchasing a monthly hours package. Valid values: 120, 250, and 360.</p>
+             * <p>The plan option when purchasing a monthly hours package. Valid values: 120, 250, and 360.</p>
              * 
              * <strong>example:</strong>
-             * <p>null</p>
+             * <p>120</p>
              */
             public Builder useDuration(Integer useDuration) {
                 this.useDuration = useDuration;
@@ -2137,7 +2166,7 @@ public class CreateDesktopsRequest extends Request {
             } 
 
             /**
-             * <p>The EDS credit package quota.</p>
+             * <p>The quota of the WUYING credit package.</p>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -2148,7 +2177,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The EDS credit package duration.</p>
+             * <p>The duration of the WUYING credit package.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -2170,7 +2199,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * <p>The monthly credit package. This parameter specifies the credit plan when purchasing Agent resources. Valid values: 200, 1600, and 4000.</p>
+             * <p>The monthly credit package. This parameter is used to select a credit plan when purchasing Agent resources. Valid values: 200, 1600, and 4000.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>

@@ -516,9 +516,7 @@ public class CreateDriveResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <ul>
-             * <li></li>
-             * </ul>
+             * <p>true</p>
              */
             public Builder profileRoaming(Boolean profileRoaming) {
                 this.profileRoaming = profileRoaming;
