@@ -80,7 +80,7 @@ public class ListPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The description of the plug-in.</p>
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5A5D8E74-565C-43DC-B031-29289FA9****</p>
@@ -99,7 +99,7 @@ public class ListPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the plug-in.</p>
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -152,7 +152,7 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address of the plug-in description document.</p>
+             * <p>The total number of records returned.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -261,7 +261,7 @@ public class ListPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The source type of the plug-in.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>IK analysis plug-in for Elasticsearch.</p>
@@ -272,7 +272,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plugin name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>analysis-ik</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -280,7 +283,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The plugin source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -288,7 +294,7 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the plug-in.</p>
+             * <p>The URL of the plugin specification document.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxxx.html">https://xxxx.html</a></p>
@@ -299,7 +305,10 @@ public class ListPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The plugin status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;

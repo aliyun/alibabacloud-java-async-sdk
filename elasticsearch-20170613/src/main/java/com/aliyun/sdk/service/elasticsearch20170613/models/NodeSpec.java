@@ -121,7 +121,10 @@ public class NodeSpec extends TeaModel {
         } 
 
         /**
-         * disk.
+         * <p>Storage space size of data nodes, in GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder disk(Integer disk) {
             this.disk = disk;
@@ -129,7 +132,14 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * diskEncryption.
+         * <p>Whether to enable cloud disk encryption for data nodes:</p>
+         * <ul>
+         * <li>true: Enabled</li>
+         * <li>false: Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder diskEncryption(Boolean diskEncryption) {
             this.diskEncryption = diskEncryption;
@@ -137,7 +147,7 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * diskPreference.
+         * <p>Storage preference.</p>
          */
         public Builder diskPreference(String diskPreference) {
             this.diskPreference = diskPreference;
@@ -145,7 +155,15 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * diskType.
+         * <p>Storage type of data nodes. Supported values:</p>
+         * <ul>
+         * <li>cloud_ssd: SSD cloud disk</li>
+         * <li>cloud_essd: ESSD cloud disk</li>
+         * <li>cloud_efficiency: Ultra cloud disk</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -153,7 +171,10 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
-         * performanceLevel.
+         * <p>Performance level of ESSD cloud disks. Required when the disk type of data nodes is ESSD cloud disk. Supported values: PL1, PL2, PL3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder performanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
@@ -161,7 +182,11 @@ public class NodeSpec extends TeaModel {
         }
 
         /**
+         * <p>Data node specification. Specification details can be viewed in <a href="https://help.aliyun.com/document_detail/271718.html">Product Specifications</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

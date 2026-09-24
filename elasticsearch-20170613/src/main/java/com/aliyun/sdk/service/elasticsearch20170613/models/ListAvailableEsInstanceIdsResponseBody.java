@@ -67,7 +67,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,7 +78,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Elasticsearch cluster.</p>
+             * <p>The name of the Elasticsearch instance.</p>
              * 
              * <strong>example:</strong>
              * <p>instanceName</p>
@@ -181,7 +181,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address that is used to access the Elasticsearch cluster over the Internet.</p>
+             * <p>The public network access address of the Elasticsearch instance.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200</a></p>
@@ -192,7 +192,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elasticsearch cluster.</p>
+             * <p>The Elasticsearch instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-n6w1o1x0w001c****</p>
@@ -203,7 +203,7 @@ public class ListAvailableEsInstanceIdsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address that is used to access the Kibana console of the Elasticsearch cluster over the Internet.</p>
+             * <p>The public network access address of Kibana.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://es-cn-n6w1o1x0w001c****.kibana.elasticsearch.aliyuncs.com:5601">https://es-cn-n6w1o1x0w001c****.kibana.elasticsearch.aliyuncs.com:5601</a></p>

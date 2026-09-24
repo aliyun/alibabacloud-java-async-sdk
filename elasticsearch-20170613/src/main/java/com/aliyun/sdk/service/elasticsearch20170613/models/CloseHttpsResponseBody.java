@@ -67,7 +67,10 @@ public class CloseHttpsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class CloseHttpsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The HTTPS protocol is disabled.</li>
+         * <li>false: Failed to disable the HTTPS protocol.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -89,6 +89,7 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         } 
 
         /**
+         * <p>The monitoring alert project ID, in the format of <strong>es-<yourUID></strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class PostEmonTryAlarmRuleRequest extends Request {
         }
 
         /**
+         * <p>One of the IDs from the alert list obtained through the <a href="https://help.aliyun.com/document_detail/254890.html">GetEmonGrafanaAlerts</a> operation. Specify the ID as needed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

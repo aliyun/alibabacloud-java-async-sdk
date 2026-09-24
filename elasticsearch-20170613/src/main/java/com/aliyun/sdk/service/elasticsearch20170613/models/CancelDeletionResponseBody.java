@@ -67,7 +67,7 @@ public class CancelDeletionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D682B6B3-B425-46DA-A5FC-5F5C60553622</p>
@@ -78,10 +78,10 @@ public class CancelDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the cluster is restored. Valid values:</p>
+         * <p>Indicates whether the instance is recovered. Valid values:</p>
          * <ul>
-         * <li>true: The cluster is restored.</li>
-         * <li>false: The cluster fails to be restored.</li>
+         * <li>true: The instance is recovered.</li>
+         * <li>false: The instance is not recovered.</li>
          * </ul>
          * 
          * <strong>example:</strong>

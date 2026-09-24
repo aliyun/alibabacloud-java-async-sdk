@@ -67,7 +67,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The available status of the region.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1ADFG</p>
@@ -78,7 +78,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The endpoint of the region.</p>
+         * <p>The list of returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -183,7 +183,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             } 
 
             /**
-             * consoleEndpoint.
+             * <p>The endpoint of the region exposed in the console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://elasticsearch-cn-hangzhou.console.aliyun.com">https://elasticsearch-cn-hangzhou.console.aliyun.com</a></p>
              */
             public Builder consoleEndpoint(String consoleEndpoint) {
                 this.consoleEndpoint = consoleEndpoint;
@@ -191,7 +194,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * <p>The region name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -199,7 +205,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionEndpoint.
+             * <p>The endpoint of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -207,7 +216,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -218,7 +227,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the region that is exposed in the console.</p>
+             * <p>The availability status of the region.</p>
              * 
              * <strong>example:</strong>
              * <p>available</p>

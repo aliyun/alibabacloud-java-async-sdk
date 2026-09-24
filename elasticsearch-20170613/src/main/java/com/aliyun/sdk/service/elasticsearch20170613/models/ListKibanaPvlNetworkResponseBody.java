@@ -67,7 +67,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>request id</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -78,7 +78,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The array of result objects.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -144,7 +144,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xdefafns***</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -152,7 +155,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -310,7 +316,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the Kibana private network connection was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-03-07T06:26:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +327,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * endpointId.
+             * <p>The endpoint ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1tah7zbrwmkjef****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -326,7 +338,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * endpointName.
+             * <p>The endpoint name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-xxdjfia****-kibana</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -334,7 +349,14 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * endpointStatus.
+             * <p>The endpoint status. Valid values:</p>
+             * <ul>
+             * <li>Disconnected: disconnected</li>
+             * <li>Connected: connected</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder endpointStatus(String endpointStatus) {
                 this.endpointStatus = endpointStatus;
@@ -350,7 +372,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * pvlId.
+             * <p>The Kibana private network connection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-27a3mul6l***-kibana-internal</p>
              */
             public Builder pvlId(String pvlId) {
                 this.pvlId = pvlId;
@@ -358,7 +383,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * securityGroups.
+             * <p>The list of security groups.</p>
              */
             public Builder securityGroups(java.util.List<String> securityGroups) {
                 this.securityGroups = securityGroups;
@@ -366,7 +391,7 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitchIdsZone.
+             * <p>The vSwitch and zone information.</p>
              */
             public Builder vSwitchIdsZone(java.util.List<VSwitchIdsZone> vSwitchIdsZone) {
                 this.vSwitchIdsZone = vSwitchIdsZone;
@@ -374,7 +399,10 @@ public class ListKibanaPvlNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16k1dvzxtma*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -88,7 +88,7 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class EstimatedLogstashRestartTimeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcibly restart the cluster. Default value: false.</p>
+         * <p>Specifies whether to forcibly restart the instance. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

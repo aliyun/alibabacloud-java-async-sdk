@@ -60,10 +60,11 @@ public class ListKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>es-cn-mp91kzb8m0009****</p>
+         * <p>es-cn-vo93ngti8000a****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

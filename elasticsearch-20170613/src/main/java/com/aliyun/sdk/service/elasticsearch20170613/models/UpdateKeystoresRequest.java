@@ -101,7 +101,10 @@ public class UpdateKeystoresRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -110,7 +113,7 @@ public class UpdateKeystoresRequest extends Request {
         }
 
         /**
-         * remove.
+         * <p>Removes keystore configurations.</p>
          */
         public Builder remove(java.util.List<String> remove) {
             this.putBodyParameter("remove", remove);
@@ -119,7 +122,7 @@ public class UpdateKeystoresRequest extends Request {
         }
 
         /**
-         * update.
+         * <p>Adds or updates the keystore.</p>
          */
         public Builder update(java.util.Map<String, String> update) {
             this.putBodyParameter("update", update);
@@ -128,7 +131,14 @@ public class UpdateKeystoresRequest extends Request {
         }
 
         /**
-         * force.
+         * <p>Specifies whether to forcibly apply the change. Valid values:</p>
+         * <ul>
+         * <li>false: The change is not forcibly applied.</li>
+         * <li>true: The change is forcibly applied.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(String force) {
             this.putQueryParameter("force", force);

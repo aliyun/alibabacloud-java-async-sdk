@@ -80,7 +80,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -99,7 +99,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;
@@ -152,7 +152,7 @@ public class ListDiagnoseReportIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records returned.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

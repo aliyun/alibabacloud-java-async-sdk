@@ -60,10 +60,11 @@ public class DisableKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>es-cn-n6w1o1x0w001c****</p>
+         * <p>es-cn-vo93ngti8000a****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

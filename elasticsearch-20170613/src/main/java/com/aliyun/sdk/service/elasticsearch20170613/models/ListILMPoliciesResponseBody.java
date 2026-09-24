@@ -67,7 +67,10 @@ public class ListILMPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListILMPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of index lifecycle policies returned by the request.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class ListILMPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the index lifecycle policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy-1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +155,10 @@ public class ListILMPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * phases.
+             * <p>The index lifecycle content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;hot&quot;:{&quot;minAge&quot;:&quot;0ms&quot;,&quot;actions&quot;:{&quot;rollover&quot;:{&quot;maxSize&quot;:&quot;50gb&quot;,&quot;maxAge&quot;:&quot;30d&quot;},&quot;setPriority&quot;:{&quot;priority&quot;:100}}},&quot;delete&quot;:{&quot;minAge&quot;:&quot;3d&quot;,&quot;actions&quot;:{&quot;delete&quot;:{}}}}</p>
              */
             public Builder phases(java.util.Map<String, ?> phases) {
                 this.phases = phases;

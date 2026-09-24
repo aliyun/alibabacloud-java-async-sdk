@@ -67,7 +67,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25DB38F8-82E4-4D16-82BB-FF077C7F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The index template details.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -154,7 +157,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * aliases.
+             * <p>The aliases configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;mydata\&quot;:{}}</p>
              */
             public Builder aliases(String aliases) {
                 this.aliases = aliases;
@@ -162,7 +168,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -170,7 +179,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;index.refresh_interval\&quot;:\&quot;1s\&quot;}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -289,7 +301,17 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             } 
 
             /**
-             * dataStream.
+             * <p>Indicates whether the data stream is enabled. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false: Not enabled.</p>
+             * </li>
+             * </ul>
+             * <p>Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataStream(Boolean dataStream) {
                 this.dataStream = dataStream;
@@ -297,7 +319,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ilmPolicy.
+             * <p>The lifecycle policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cube_default_ilm_policy</p>
              */
             public Builder ilmPolicy(String ilmPolicy) {
                 this.ilmPolicy = ilmPolicy;
@@ -313,7 +338,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * indexTemplate.
+             * <p>The index template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data-stream-default</p>
              */
             public Builder indexTemplate(String indexTemplate) {
                 this.indexTemplate = indexTemplate;
@@ -321,7 +349,10 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -329,7 +360,7 @@ public class DescribeIndexTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The component template.</p>
              */
             public Builder template(Template template) {
                 this.template = template;

@@ -103,6 +103,7 @@ public class UpdateIndexTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateIndexTemplateRequest extends Request {
         }
 
         /**
+         * <p>The index template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class UpdateIndexTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. It must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

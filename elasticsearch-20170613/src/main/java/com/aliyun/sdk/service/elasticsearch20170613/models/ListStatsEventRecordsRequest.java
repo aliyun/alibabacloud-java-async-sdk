@@ -124,7 +124,10 @@ public class ListStatsEventRecordsRequest extends Request {
         }
 
         /**
-         * eventType.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserOperator</p>
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("eventType", eventType);
@@ -133,7 +136,10 @@ public class ListStatsEventRecordsRequest extends Request {
         }
 
         /**
-         * level.
+         * <p>The event level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Info</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("level", level);
@@ -151,7 +157,10 @@ public class ListStatsEventRecordsRequest extends Request {
         }
 
         /**
-         * status.
+         * <p>The event status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Executed</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

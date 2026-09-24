@@ -67,7 +67,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E82B8A8-EED7-4557-A6E9-D1AD3E58****</p>
@@ -78,7 +78,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -241,7 +241,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Scenarios of intelligent maintenance.</p>
+             * <p>The common scenarios of intelligent diagnosis and optimization.</p>
              * 
              * <strong>example:</strong>
              * <p>Business Search</p>
@@ -260,7 +260,7 @@ public class DescribeDiagnosisSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp of the last update for Intelligent Maintenance scenarios.</p>
+             * <p>The UNIX timestamp when the intelligent diagnosis and optimization common scenarios were last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1588994035385</p>

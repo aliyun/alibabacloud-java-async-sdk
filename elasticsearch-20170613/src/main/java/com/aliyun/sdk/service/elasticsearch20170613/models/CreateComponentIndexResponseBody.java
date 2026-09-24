@@ -67,7 +67,10 @@ public class CreateComponentIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C20022BA-5382-4339-89FB-30AF48A05431</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class CreateComponentIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The template was created successfully.</li>
+         * <li>false: The template failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

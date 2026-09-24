@@ -97,7 +97,11 @@ public class ClientNodeConfiguration extends TeaModel {
         } 
 
         /**
+         * <p>The number of client nodes.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -105,7 +109,11 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The storage size of the client node. Unit: GB.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -113,7 +121,11 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The storage type of the client node. Only cloud_efficiency (ultra cloud disk) is supported.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_ssd</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -121,7 +133,11 @@ public class ClientNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The node specifications of the client node. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Specifications</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

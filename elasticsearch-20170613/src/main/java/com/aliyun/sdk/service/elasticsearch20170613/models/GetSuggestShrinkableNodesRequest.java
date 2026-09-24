@@ -104,7 +104,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes that you want to remove.</p>
+         * <p>The expected number of nodes available for scale-in to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class GetSuggestShrinkableNodesRequest extends Request {
         }
 
         /**
-         * <p>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</p>
+         * <p>The type of nodes to scale in. <strong>WORKER</strong> indicates hot nodes. <strong>WORKER_WARM</strong> indicates warm nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

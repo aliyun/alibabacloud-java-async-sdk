@@ -162,6 +162,7 @@ public class CreateIndexTemplateRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +175,10 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1136AE9-4E49-4585-9358-6FDD2A6D****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -183,7 +187,15 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable data streams. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false (default): Disabled.</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dataStream(Boolean dataStream) {
             this.putBodyParameter("dataStream", dataStream);
@@ -192,7 +204,10 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * ilmPolicy.
+         * <p>The lifecycle policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-1</p>
          */
         public Builder ilmPolicy(String ilmPolicy) {
             this.putBodyParameter("ilmPolicy", ilmPolicy);
@@ -201,6 +216,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
+         * <p>The index matching pattern (regular expression).</p>
          * <p>This parameter is required.</p>
          */
         public Builder indexPatterns(java.util.List<String> indexPatterns) {
@@ -210,6 +226,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
+         * <p>The index template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -222,7 +239,10 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * priority.
+         * <p>The priority of the cluster index template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("priority", priority);
@@ -231,7 +251,7 @@ public class CreateIndexTemplateRequest extends Request {
         }
 
         /**
-         * template.
+         * <p>The template settings. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-template.html#multiple-component-templates">Multiple Component Templates</a>.</p>
          */
         public Builder template(Template template) {
             this.putBodyParameter("template", template);
@@ -312,7 +332,10 @@ public class CreateIndexTemplateRequest extends Request {
             } 
 
             /**
-             * aliases.
+             * <p>The aliases configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;mydata\&quot;:{}}</p>
              */
             public Builder aliases(String aliases) {
                 this.aliases = aliases;
@@ -320,7 +343,10 @@ public class CreateIndexTemplateRequest extends Request {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -328,7 +354,10 @@ public class CreateIndexTemplateRequest extends Request {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;

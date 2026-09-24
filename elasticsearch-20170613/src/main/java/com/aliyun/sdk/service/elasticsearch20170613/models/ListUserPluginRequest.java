@@ -101,7 +101,10 @@ public class ListUserPluginRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-g4t3sz4wd0**</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -110,7 +113,10 @@ public class ListUserPluginRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The plug-in name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-plugin</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -119,7 +125,10 @@ public class ListUserPluginRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number of the plug-in list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(String page) {
             this.putQueryParameter("page", page);
@@ -128,7 +137,10 @@ public class ListUserPluginRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder size(String size) {
             this.putQueryParameter("size", size);

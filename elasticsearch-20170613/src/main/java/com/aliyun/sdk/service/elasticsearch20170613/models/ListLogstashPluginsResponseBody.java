@@ -67,7 +67,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The address of the documentation for the plug-in.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -78,16 +78,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the plug-in. Valid values:</p>
-         * <ul>
-         * <li>INSTALLED: Installed</li>
-         * <li>UNINSTALLED: Not installed</li>
-         * <li>INSTALLING: The instance is being installed.</li>
-         * <li>UNINSTALLING: The instance is being uninstalled.</li>
-         * <li>UPGRADING: The backup gateway is being upgraded.</li>
-         * <li>FAILED: Installation failed</li>
-         * <li>UNKNOWN: The cluster is lost and cannot be created.</li>
-         * </ul>
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -192,7 +183,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The source of the plug-in.</p>
+             * <p>The plugin description.</p>
              * 
              * <strong>example:</strong>
              * <p>The clone filter is for duplicating events.</p>
@@ -203,7 +194,10 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plugin name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash-filter-clone</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -211,7 +205,10 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The plugin source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -219,7 +216,7 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the plug-in.</p>
+             * <p>The URL of the plugin documentation.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.html">https://xxx.html</a></p>
@@ -230,7 +227,19 @@ public class ListLogstashPluginsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>Creation status of the plugin. Valid values:</p>
+             * <ul>
+             * <li>INSTALLED: Installed.</li>
+             * <li>UNINSTALLED: Not installed.</li>
+             * <li>INSTALLING: Being installed.</li>
+             * <li>UNINSTALLING: Being uninstalled.</li>
+             * <li>UPGRADING: Being upgraded.</li>
+             * <li>FAILED: Installation failed.</li>
+             * <li>UNKNOWN: The cluster is disconnected and creation status cannot be retrieved.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;

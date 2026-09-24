@@ -74,7 +74,7 @@ public class ListAllNodeRequest extends Request {
         } 
 
         /**
-         * <p>The return results.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,13 @@ public class ListAllNodeRequest extends Request {
         }
 
         /**
-         * <p>The Java Virtual Machine (JVM) heap memory usage of the node.</p>
+         * <p>Specifies whether to return monitoring information for nodes. Valid values:</p>
+         * <ul>
+         * <li><p>true (default): Returns monitoring information.</p>
+         * </li>
+         * <li><p>false: Does not return monitoring information.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>

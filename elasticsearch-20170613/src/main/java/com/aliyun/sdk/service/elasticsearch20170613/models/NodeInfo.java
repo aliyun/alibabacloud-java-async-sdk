@@ -93,7 +93,10 @@ public class NodeInfo extends TeaModel {
         } 
 
         /**
-         * host.
+         * <p>The IP address of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.xx.xx</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -101,7 +104,10 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * hostName.
+         * <p>The node name. This parameter is supported only for instances of version 7.16 deployed on ACK.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-tl32vdghe0005cd99-data-b-2</p>
          */
         public Builder hostName(String hostName) {
             this.hostName = hostName;
@@ -109,7 +115,10 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * port.
+         * <p>The port number of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9200</p>
          */
         public Builder port(Long port) {
             this.port = port;
@@ -117,7 +126,10 @@ public class NodeInfo extends TeaModel {
         }
 
         /**
-         * zoneId.
+         * <p>The zone ID of the node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

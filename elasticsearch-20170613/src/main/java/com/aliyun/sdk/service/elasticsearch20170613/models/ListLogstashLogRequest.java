@@ -146,7 +146,7 @@ public class ListLogstashLogRequest extends Request {
         } 
 
         /**
-         * <p>1531910852074</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>20</p>
+         * <p>The beginning of the time range to query logs. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1531910852074</p>
@@ -171,7 +171,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The end of the time range to query logs. This value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1531910852074</p>
@@ -183,7 +183,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The page number of the instance list. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * <p>The keyword to query.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -208,7 +208,7 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).</p>
+         * <p>The number of entries per page for the paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -220,7 +220,14 @@ public class ListLogstashLogRequest extends Request {
         }
 
         /**
-         * <p>1531910852074</p>
+         * <p>The log type. Valid values:</p>
+         * <ul>
+         * <li>LOGSTASH_INSTANCE_LOG: main log.</li>
+         * <li>SEARCHSLOW: searching slow log.</li>
+         * <li>INDEXINGSLOW: indexing slow log.</li>
+         * <li>JVMLOG: GC log.</li>
+         * <li>LOGSTASH_DEBUG_LOG: debug log.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

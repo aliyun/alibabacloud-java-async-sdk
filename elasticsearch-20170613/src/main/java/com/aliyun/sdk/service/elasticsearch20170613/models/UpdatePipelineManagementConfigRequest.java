@@ -158,6 +158,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         } 
 
         /**
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +171,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * endpoints.
+         * <p>The list of access addresses of the Elasticsearch instance where Kibana resides after Kibana pipeline management is enabled.</p>
          */
         public Builder endpoints(java.util.List<String> endpoints) {
             this.putBodyParameter("endpoints", endpoints);
@@ -188,7 +189,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The password for logging on to Kibana.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -197,7 +201,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * pipelineIds.
+         * <p>The list of pipelines managed by Kibana.</p>
          */
         public Builder pipelineIds(java.util.List<String> pipelineIds) {
             this.putBodyParameter("pipelineIds", pipelineIds);
@@ -206,7 +210,14 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * pipelineManagementType.
+         * <p>The pipeline management method. Valid values:</p>
+         * <ul>
+         * <li>ES: Kibana pipeline management.</li>
+         * <li>MULTIPLE_PIPELINE: configuration file management.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ES</p>
          */
         public Builder pipelineManagementType(String pipelineManagementType) {
             this.putBodyParameter("pipelineManagementType", pipelineManagementType);
@@ -215,7 +226,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The username for logging on to Kibana.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);
@@ -224,7 +238,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A unique token used to ensure idempotency of the request. The client generates this value. It must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

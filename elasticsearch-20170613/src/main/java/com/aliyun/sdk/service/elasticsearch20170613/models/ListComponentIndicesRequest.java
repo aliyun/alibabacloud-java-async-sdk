@@ -104,6 +104,7 @@ public class ListComponentIndicesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +117,10 @@ public class ListComponentIndicesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the composable template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -125,7 +129,10 @@ public class ListComponentIndicesRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number for paging. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -134,7 +141,10 @@ public class ListComponentIndicesRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page for paging. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

@@ -67,7 +67,10 @@ public class OpenDiagnosisResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class OpenDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the intelligent O&amp;M feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

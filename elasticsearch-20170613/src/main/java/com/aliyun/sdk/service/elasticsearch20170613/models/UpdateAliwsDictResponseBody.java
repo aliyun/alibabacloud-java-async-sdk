@@ -170,7 +170,7 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * <p>The file size. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>6226</p>
@@ -181,7 +181,7 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the uploaded dictionary file.</p>
+             * <p>The name of the uploaded file.</p>
              * 
              * <strong>example:</strong>
              * <p>aliws_ext_dict.txt</p>
@@ -194,8 +194,8 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
             /**
              * <p>The source type of the dictionary file. Valid values:</p>
              * <ul>
-             * <li>OSS</li>
-             * <li>ORIGIN</li>
+             * <li>OSS: uses OSS open storage.</li>
+             * <li>ORIGIN: retains the previously uploaded dictionary.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -207,7 +207,7 @@ public class UpdateAliwsDictResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The dictionary type. The value is fixed as ALI_WS.</p>
+             * <p>The dictionary type. Valid values: ALI_WS (AliNLP tokenizer).</p>
              * 
              * <strong>example:</strong>
              * <p>ALI_WS</p>

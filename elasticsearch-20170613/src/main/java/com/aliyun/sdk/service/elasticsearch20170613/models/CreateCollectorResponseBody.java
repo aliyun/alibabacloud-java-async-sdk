@@ -67,7 +67,10 @@ public class CreateCollectorResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8466BDFB-C513-4B8D-B4E3-5AB256AB****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class CreateCollectorResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -128,7 +131,10 @@ public class CreateCollectorResponseBody extends TeaModel {
             } 
 
             /**
-             * resId.
+             * <p>The ID of the collector that is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-cn-4135is2tj194p****</p>
              */
             public Builder resId(String resId) {
                 this.resId = resId;

@@ -93,7 +93,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is returned only when an exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is returned only when an exception occurs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified cluster does not exist. Check the cluster status and try again.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -120,13 +126,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The state of the instance. Valid values:</p>
-         * <ul>
-         * <li>active: normal</li>
-         * <li>activating: taking effect</li>
-         * <li>inactive: frozen</li>
-         * <li>invalid: invalid</li>
-         * </ul>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -218,7 +218,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration of dedicated master nodes.</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -229,7 +229,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node specifications.</p>
+             * <p>The storage size of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -240,7 +240,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes.</p>
+             * <p>The storage type of the node. You can ignore this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -251,7 +251,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the node. This parameter can be ignored.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.n4.small</p>
@@ -347,10 +347,10 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration of dedicated master nodes.</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -358,7 +358,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node specifications.</p>
+             * <p>The storage size of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -369,7 +369,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes.</p>
+             * <p>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -380,7 +380,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the node. Only cloud_ssd(SSD cloud disk) is supported.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.sn2ne.large</p>
@@ -463,7 +463,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The node specifications.</p>
+             * <p>The storage size of the node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>40</p>
@@ -474,7 +474,11 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes.</p>
+             * <p>The storage type of the node. Valid values:</p>
+             * <ul>
+             * <li>cloud_ssd: standard SSD.</li>
+             * <li>cloud_efficiency: ultra disk.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -485,7 +489,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of Kibana nodes.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.sn2ne.xlarge</p>
@@ -672,7 +676,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The private domain name of the instance.</p>
+             * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-07-13T03:58:07.253Z</p>
@@ -683,7 +687,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of data nodes.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -694,7 +698,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The internal-facing access domain name of the instance for private network access.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc.elasticsearch.aliyuncs.com</p>
@@ -705,7 +709,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node specifications.</p>
+             * <p>The instance version.</p>
              * 
              * <strong>example:</strong>
              * <p>5.5.3_with_X-Pack</p>
@@ -716,7 +720,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage space of the node. Unit: GB.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc</p>
@@ -727,7 +731,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the node storage space.</p>
+             * <p>The Kibana node configuration.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -735,7 +739,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage space of the node. Unit: GB.</p>
+             * <p>The master node configuration.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -743,11 +747,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <ul>
-             * <li>prepaid: subscription</li>
-             * <li>postpaid: pay-as-you-go</li>
-             * </ul>
+             * <p>The number of data nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -758,11 +758,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the node. Valid values:</p>
-             * <ul>
-             * <li>cloud_ssd: standard SSD</li>
-             * <li>cloud_efficiency: ultra disk</li>
-             * </ul>
+             * <p>The data node configuration.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -770,7 +766,11 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the dedicated KMS instance.</p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li>prepaid: Subscription.</li>
+             * <li>postpaid: Pay-as-you-go.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>postpaid</p>
@@ -781,7 +781,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>active: Normal.</li>
+             * <li>activating: Taking effect.</li>
+             * <li>inactive: Frozen.</li>
+             * <li>invalid: Invalid.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>active</p>

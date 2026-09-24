@@ -74,6 +74,7 @@ public class DescribeComponentIndexRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class DescribeComponentIndexRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The name of the composable template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>template</p>
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

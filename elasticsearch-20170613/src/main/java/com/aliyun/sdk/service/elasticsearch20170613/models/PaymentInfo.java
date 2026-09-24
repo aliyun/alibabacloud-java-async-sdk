@@ -93,7 +93,10 @@ public class PaymentInfo extends TeaModel {
         } 
 
         /**
-         * autoRenewDuration.
+         * <p>The auto-renewal cycle. Unit: month. This parameter is required when <strong>isAutoRenew</strong> is set to <strong>true</strong>. The valid values are the same as those on the buy page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder autoRenewDuration(Long autoRenewDuration) {
             this.autoRenewDuration = autoRenewDuration;
@@ -101,7 +104,10 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * duration.
+         * <p>The subscription duration. This parameter is required. You can specify the duration in months or years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -109,7 +115,14 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * isAutoRenew.
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
+         * <ul>
+         * <li>true: enabled.</li>
+         * <li>false (default): disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isAutoRenew(Boolean isAutoRenew) {
             this.isAutoRenew = isAutoRenew;
@@ -117,7 +130,14 @@ public class PaymentInfo extends TeaModel {
         }
 
         /**
-         * pricingCycle.
+         * <p>The unit of the subscription duration. This parameter is required. Valid values:</p>
+         * <ul>
+         * <li>Year: year</li>
+         * <li>Month: month.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Month</p>
          */
         public Builder pricingCycle(String pricingCycle) {
             this.pricingCycle = pricingCycle;

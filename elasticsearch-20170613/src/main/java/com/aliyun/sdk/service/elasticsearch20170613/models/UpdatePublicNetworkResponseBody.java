@@ -67,7 +67,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2A88ECA1-D827-4581-AD39-05149586****</p>
@@ -78,7 +78,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -131,7 +131,7 @@ public class UpdatePublicNetworkResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the public network access switch.</p>
+             * <p>The status of the public network address switch.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>

@@ -102,6 +102,7 @@ public class CreatePipelinesRequest extends Request {
         } 
 
         /**
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class CreatePipelinesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -123,7 +127,7 @@ public class CreatePipelinesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body parameters that specify pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</p>
          */
         public Builder body(java.util.List<CreatePipelinesRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -132,7 +136,14 @@ public class CreatePipelinesRequest extends Request {
         }
 
         /**
-         * trigger.
+         * <p>Specifies whether to save and deploy the pipeline. Valid values:</p>
+         * <ul>
+         * <li>true: Save and deploy.</li>
+         * <li>false (default): Save only.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder trigger(Boolean trigger) {
             this.putQueryParameter("trigger", trigger);
@@ -293,7 +304,10 @@ public class CreatePipelinesRequest extends Request {
             } 
 
             /**
-             * batchDelay.
+             * <p>The pipeline batch delay. Unit: milliseconds. Default value: 50.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder batchDelay(Integer batchDelay) {
                 this.batchDelay = batchDelay;
@@ -301,7 +315,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * batchSize.
+             * <p>The pipeline batch size. Default value: 125.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -309,6 +326,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
+             * <p>The specific configuration of the pipeline.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -320,7 +338,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * description.
+             * <p>The pipeline description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this is a test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -328,6 +349,7 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
+             * <p>The pipeline ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -339,7 +361,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * queueCheckPointWrites.
+             * <p>The number of queue checkpoint writes. Default value: 1024.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder queueCheckPointWrites(Integer queueCheckPointWrites) {
                 this.queueCheckPointWrites = queueCheckPointWrites;
@@ -347,7 +372,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * queueMaxBytes.
+             * <p>The total capacity of the queue in bytes. Unit: MB. Default value: 1024.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder queueMaxBytes(Integer queueMaxBytes) {
                 this.queueMaxBytes = queueMaxBytes;
@@ -355,7 +383,14 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * queueType.
+             * <p>The queue type. Valid values:</p>
+             * <ul>
+             * <li>MEMORY: A traditional memory-based queue.</li>
+             * <li>PERSISTED: A disk-based ACKed queue (persistent queue).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MEMORY</p>
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -363,7 +398,10 @@ public class CreatePipelinesRequest extends Request {
             }
 
             /**
-             * workers.
+             * <p>The number of pipeline worker threads. Default value: the number of CPU cores of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder workers(Integer workers) {
                 this.workers = workers;

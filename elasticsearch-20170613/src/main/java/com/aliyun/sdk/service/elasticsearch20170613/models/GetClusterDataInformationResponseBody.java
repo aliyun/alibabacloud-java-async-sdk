@@ -67,7 +67,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,7 +78,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -183,7 +183,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The fields in the Mapping for the index.</p>
+             * fields.
              */
             public Builder fields(java.util.List<String> fields) {
                 this.fields = fields;
@@ -191,7 +191,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The index list of the cluster.</p>
+             * indices.
              */
             public Builder indices(java.util.List<String> indices) {
                 this.indices = indices;
@@ -199,10 +199,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Mapping configuration of the cluster.</p>
+             * <p>The mapping configuration of the cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;_doc&quot;:{&quot;properties&quot;:{&quot;user&quot;:{&quot;properties&quot;:{&quot;last&quot;:{&quot;type&quot;:&quot;text&quot;,...}}}}}}</p>
+             * <p>{\&quot;_doc\&quot;:{\&quot;properties\&quot;:{\&quot;user\&quot;:{\&quot;properties\&quot;:{\&quot;last\&quot;:{\&quot;type\&quot;:\&quot;text\&quot;,...}}}}}}</p>
              */
             public Builder mapping(String mapping) {
                 this.mapping = mapping;
@@ -210,10 +210,10 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Settings of the cluster.</p>
+             * <p>The settings configuration of the cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>{\n  &quot;index&quot;: {\n    &quot;replication&quot;: {\n}.....}}</p>
+             * <p>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -221,7 +221,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies the type of the index.</p>
+             * typeName.
              */
             public Builder typeName(java.util.List<String> typeName) {
                 this.typeName = typeName;
@@ -288,7 +288,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether it is connectable.</p>
+             * <p>Indicates whether the cluster is connectable.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -299,7 +299,7 @@ public class GetClusterDataInformationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The metadata of the cluster.</p>
+             * <p>The metadata information of the cluster.</p>
              */
             public Builder metaInfo(MetaInfo metaInfo) {
                 this.metaInfo = metaInfo;

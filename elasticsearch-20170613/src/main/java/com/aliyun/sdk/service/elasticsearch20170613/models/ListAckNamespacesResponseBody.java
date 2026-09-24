@@ -67,7 +67,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>95789100-A329-473B-9D14-9E0B7DB4BD5A</p>
@@ -155,7 +155,7 @@ public class ListAckNamespacesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the namespace.</p>
+             * <p>The namespace status.</p>
              * 
              * <strong>example:</strong>
              * <p>Active</p>

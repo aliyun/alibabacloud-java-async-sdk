@@ -171,7 +171,7 @@ public class ListActionRecordsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>A short description of struct</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

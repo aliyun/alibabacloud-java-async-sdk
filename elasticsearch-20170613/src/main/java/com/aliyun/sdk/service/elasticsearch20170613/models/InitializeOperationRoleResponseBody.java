@@ -67,7 +67,7 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>29101430-4797-4D1D-96C3-9FCBCCA8F845</p>
@@ -78,10 +78,10 @@ public class InitializeOperationRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the service-linked role is created. Valid values:</p>
+         * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li>true: The service-linked role is created.</li>
-         * <li>false: The service-linked role fails to be created.</li>
+         * <li>true: Created.</li>
+         * <li>false: Failed to create.</li>
          * </ul>
          * 
          * <strong>example:</strong>

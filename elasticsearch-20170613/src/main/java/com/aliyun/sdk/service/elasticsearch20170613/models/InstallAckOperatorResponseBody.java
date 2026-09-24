@@ -78,10 +78,10 @@ public class InstallAckOperatorResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether ES-operator is installed. Valid values:</p>
+         * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The installation succeeded.</li>
+         * <li>false: The installation failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

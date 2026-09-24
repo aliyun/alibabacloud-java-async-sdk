@@ -67,7 +67,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8BAE3C32-8E4A-47D6-B4B0-95B5DE643BF5</p>
@@ -78,7 +78,7 @@ public class ListDefaultCollectorConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;

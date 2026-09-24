@@ -67,7 +67,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E1DE2491-804F-4C86-BAB4-548DD70B****</p>
@@ -78,7 +78,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The current request result.</p>
+         * <p>The result of the current request.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -144,7 +144,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current OpenStore storage capacity (estimated value based on actual indexes). Unit: Byte.</p>
+             * <p>The current OpenStore storage usage, which is an estimated value based on actual indexes. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>204800</p>
@@ -155,7 +155,7 @@ public class GetOpenStoreUsageResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of OpenStore yesterday. Unit: bytes.</p>
+             * <p>The OpenStore storage usage of the previous day. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>184320</p>

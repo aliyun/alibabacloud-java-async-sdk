@@ -67,7 +67,10 @@ public class Tag extends TeaModel {
         } 
 
         /**
-         * tagKey.
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         public Builder tagKey(String tagKey) {
             this.tagKey = tagKey;
@@ -75,7 +78,10 @@ public class Tag extends TeaModel {
         }
 
         /**
-         * tagValue.
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev</p>
          */
         public Builder tagValue(String tagValue) {
             this.tagValue = tagValue;

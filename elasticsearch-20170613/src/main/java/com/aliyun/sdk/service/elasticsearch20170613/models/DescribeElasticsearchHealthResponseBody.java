@@ -93,7 +93,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response message returned.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>0731F217-2C8A-4D42-8BCD-5C352866E3B7</p>
@@ -126,7 +126,7 @@ public class DescribeElasticsearchHealthResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The color that indicates the health status of the cluster.</p>
+         * <p>The health status of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GREEN</p>

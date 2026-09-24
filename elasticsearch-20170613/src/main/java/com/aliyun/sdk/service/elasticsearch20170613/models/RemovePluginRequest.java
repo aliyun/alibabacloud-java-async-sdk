@@ -73,7 +73,10 @@ public class RemovePluginRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -82,7 +85,20 @@ public class RemovePluginRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;name&quot;: &quot;pluginName&quot;,
+         *     &quot;elasticsearchVersion&quot;: &quot;8.17.0&quot;,
+         *     &quot;version&quot;: &quot;8.17.0&quot;,
+         *     &quot;fileVersion&quot;: &quot;CAEQbxiBgIDMoJqe6hkiIGYzM****&quot;,
+         *     &quot;state&quot;: &quot;UNINSTALLED&quot;,
+         *     &quot;source&quot;: &quot;USER&quot;,
+         *     &quot;pluginType&quot;: &quot;CUSTOM_PLUGIN&quot;
+         *   }
+         * ]</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

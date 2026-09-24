@@ -67,7 +67,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the current request.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</p>
@@ -78,7 +78,7 @@ public class CapacityPlanResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned result of the request.</p>
+         * <p>The result of the request.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,9 +157,9 @@ public class CapacityPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Configuration type, with a single value: sharedDisk.</p>
+             * <p>The configuration type. The only valid value is sharedDisk.</p>
              * <blockquote>
-             * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+             * <p>This extendConfigs property may appear when the planned instance type is Advanced Edition (advanced).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk size, in GiB.</p>
+             * <p>The disk size, in GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>2048</p>
@@ -182,9 +182,9 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk type, with a single value: CPFS_PREMIUM.</p>
+             * <p>The disk type. The only valid value is CPFS_PREMIUM.</p>
              * <blockquote>
-             * <p>This extendConfigs attribute may appear when the planned instance type is Advanced.</p>
+             * <p>This extendConfigs property may appear when the planned instance type is Advanced Edition (advanced).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of nodes.</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -318,7 +318,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPUs.</p>
+             * <p>The number of CPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -329,7 +329,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk size, in GiB.</p>
+             * <p>The disk size, in GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -340,17 +340,17 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk type, with meanings as follows:</p>
+             * <p>The disk type. Valid values:</p>
              * <ul>
-             * <li><p>cloud_essd: ESSD Cloud Disk</p>
+             * <li><p>cloud_essd: ESSD.</p>
              * </li>
-             * <li><p>cloud_ssd: SSD Cloud Disk</p>
+             * <li><p>cloud_ssd: standard SSD.</p>
              * </li>
-             * <li><p>cloud_efficiency: Efficient Cloud Disk</p>
+             * <li><p>cloud_efficiency: ultra cloud disk.</p>
              * </li>
-             * <li><p>local_ssd: Local SSD Disk</p>
+             * <li><p>local_ssd: local SSD.</p>
              * </li>
-             * <li><p>local_efficiency: Local Efficient Disk</p>
+             * <li><p>local_efficiency: local ultra disk.</p>
              * </li>
              * </ul>
              * 
@@ -363,7 +363,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specified memory size for the current node role.</p>
+             * <p>The memory size of the specification for the current node role.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -374,19 +374,19 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node type, with supported types as follows:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li><p>WORKER: Data Node</p>
+             * <li><p>WORKER: data node.</p>
              * </li>
-             * <li><p>WORKER_WARM: Cold Data Node</p>
+             * <li><p>WORKER_WARM: warm node.</p>
              * </li>
-             * <li><p>MASTER: Dedicated Master Node</p>
+             * <li><p>MASTER: dedicated master node.</p>
              * </li>
-             * <li><p>KIBANA: Kibana Node</p>
+             * <li><p>KIBANA: Kibana node.</p>
              * </li>
-             * <li><p>COORDINATING: Coordinator Node</p>
+             * <li><p>COORDINATING: client node.</p>
              * </li>
-             * <li><p>ELASTIC_WORKER: Elastic Node</p>
+             * <li><p>ELASTIC_WORKER: elastic node.</p>
              * </li>
              * </ul>
              * 
@@ -484,7 +484,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Extended configuration information.</p>
+             * <p>The extended configuration information.</p>
              */
             public Builder extendConfigs(java.util.List<ExtendConfigs> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -492,13 +492,13 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Edition type, with values meaning as follows:</p>
+             * <p>The edition type. Valid values:</p>
              * <ul>
-             * <li><p>advanced: Enhanced Edition</p>
+             * <li><p>advanced: Advanced Edition.</p>
              * </li>
-             * <li><p>x-pack: Commercial Edition</p>
+             * <li><p>x-pack: Commercial Edition.</p>
              * </li>
-             * <li><p>community: Community Edition</p>
+             * <li><p>community: Community Edition.</p>
              * </li>
              * </ul>
              * 
@@ -511,7 +511,7 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node information.</p>
+             * <p>The node information.</p>
              */
             public Builder nodeConfigurations(java.util.List<NodeConfigurations> nodeConfigurations) {
                 this.nodeConfigurations = nodeConfigurations;
@@ -519,11 +519,11 @@ public class CapacityPlanResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Based on the capacity planning calculation, there is no default value. The meanings of the values are as follows:</p>
+             * <p>The result calculated based on capacity planning. No default value is available. Valid values:</p>
              * <ul>
-             * <li><p>true: Represents an oversized cluster, indicating that the number of data nodes calculated by the capacity planning exceeds the threshold of 50.</p>
+             * <li><p>true: The cluster is oversized. The number of data nodes calculated by capacity planning exceeds the threshold of 50.</p>
              * </li>
-             * <li><p>false: The number of data nodes calculated by the capacity planning is within 50.</p>
+             * <li><p>false: The number of data nodes calculated by capacity planning is within 50.</p>
              * </li>
              * </ul>
              * 

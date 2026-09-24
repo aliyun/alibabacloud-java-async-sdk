@@ -67,7 +67,10 @@ public class ListDictInformationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7C4334EA-D22B-48BD-AE28-08EE68******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListDictInformationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -154,7 +157,10 @@ public class ListDictInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * bucketName.
+             * <p>The name of the OSS bucket where the file is stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-osstest*</p>
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -162,7 +168,10 @@ public class ListDictInformationResponseBody extends TeaModel {
             }
 
             /**
-             * etag.
+             * <p>The MD5 checksum (ETag) of the OSS file in uppercase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ABAB5E70BBF631145647F6BE533****</p>
              */
             public Builder etag(String etag) {
                 this.etag = etag;
@@ -170,7 +179,10 @@ public class ListDictInformationResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The storage path of the dictionary file in the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oss/dict_0*.dic</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -250,7 +262,10 @@ public class ListDictInformationResponseBody extends TeaModel {
             } 
 
             /**
-             * fileSize.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2202301</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -258,7 +273,7 @@ public class ListDictInformationResponseBody extends TeaModel {
             }
 
             /**
-             * ossObject.
+             * <p>The details of the OSS file.</p>
              */
             public Builder ossObject(OssObject ossObject) {
                 this.ossObject = ossObject;
@@ -266,7 +281,16 @@ public class ListDictInformationResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The dictionary type. Valid values:</p>
+             * <ul>
+             * <li><p>MAIN: primary token dictionary</p>
+             * </li>
+             * <li><p>STOP: stopword dictionary</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder type(String type) {
                 this.type = type;

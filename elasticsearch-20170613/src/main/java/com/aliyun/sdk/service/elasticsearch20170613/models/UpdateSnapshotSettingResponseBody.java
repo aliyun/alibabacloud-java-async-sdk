@@ -67,7 +67,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -78,7 +78,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -101,11 +101,15 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
+        @com.aliyun.core.annotation.NameInMap("indices")
+        private java.util.List<String> indices;
+
         @com.aliyun.core.annotation.NameInMap("quartzRegex")
         private String quartzRegex;
 
         private Result(Builder builder) {
             this.enable = builder.enable;
+            this.indices = builder.indices;
             this.quartzRegex = builder.quartzRegex;
         }
 
@@ -125,6 +129,13 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
         }
 
         /**
+         * @return indices
+         */
+        public java.util.List<String> getIndices() {
+            return this.indices;
+        }
+
+        /**
          * @return quartzRegex
          */
         public String getQuartzRegex() {
@@ -133,6 +144,7 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enable; 
+            private java.util.List<String> indices; 
             private String quartzRegex; 
 
             private Builder() {
@@ -140,11 +152,12 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
 
             private Builder(Result model) {
                 this.enable = model.enable;
+                this.indices = model.indices;
                 this.quartzRegex = model.quartzRegex;
             } 
 
             /**
-             * <p>Specifies whether to enable automatic backup.</p>
+             * <p>Indicates whether automatic backup is enabled.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -155,7 +168,15 @@ public class UpdateSnapshotSettingResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of automatic backup.</p>
+             * <p>The list of indexes to back up.</p>
+             */
+            public Builder indices(java.util.List<String> indices) {
+                this.indices = indices;
+                return this;
+            }
+
+            /**
+             * <p>The automatic backup start time.</p>
              * 
              * <strong>example:</strong>
              * <p>0 0 01 ? * * *</p>

@@ -144,6 +144,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * endpointName.
+         * <p>The endpoint name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-27a3mul6l000xxx-kibana-endpoint</p>
          */
         public Builder endpointName(String endpointName) {
             this.putBodyParameter("endpointName", endpointName);
@@ -174,7 +178,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * securityGroups.
+         * <p>The security groups.</p>
          */
         public Builder securityGroups(java.util.List<String> securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
@@ -183,7 +187,7 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * vSwitchIdsZone.
+         * <p>The vSwitch and zone information.</p>
          */
         public Builder vSwitchIdsZone(java.util.List<VSwitchIdsZone> vSwitchIdsZone) {
             this.putBodyParameter("vSwitchIdsZone", vSwitchIdsZone);
@@ -192,7 +196,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * vpcId.
+         * <p>The VPC-connected instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp19ip2ocyv24w0e2****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("vpcId", vpcId);
@@ -201,7 +208,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -269,7 +279,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             } 
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp194pz9iezj6h1n5****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -277,7 +290,10 @@ public class EnableKibanaPvlNetworkRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-h</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

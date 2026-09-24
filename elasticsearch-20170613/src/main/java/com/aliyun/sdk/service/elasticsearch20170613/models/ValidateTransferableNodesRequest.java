@@ -89,6 +89,7 @@ public class ValidateTransferableNodesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,7 @@ public class ValidateTransferableNodesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.List<ValidateTransferableNodesRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -110,6 +111,14 @@ public class ValidateTransferableNodesRequest extends Request {
         }
 
         /**
+         * <p>The node type. Valid values:</p>
+         * <ul>
+         * <li>WORKER: hot node</li>
+         * <li>WORKER_WARM: warm node</li>
+         * </ul>
+         * <blockquote>
+         * <p>COORDINATING (client node) and KIBANA (Kibana node) are not supported.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +203,10 @@ public class ValidateTransferableNodesRequest extends Request {
             } 
 
             /**
-             * host.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.xx.xx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -202,7 +214,10 @@ public class ValidateTransferableNodesRequest extends Request {
             }
 
             /**
-             * port.
+             * <p>The access port number of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -210,7 +225,10 @@ public class ValidateTransferableNodesRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID of the instance node. For example, the zone ID for Shanghai Zone C is cn-shanghai-c.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

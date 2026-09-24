@@ -67,7 +67,10 @@ public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0DC92CFE-62AF-51AF-9D5B-F1078D7C451E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class EnableKibanaPvlNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether private network access for Kibana is created.</p>
+         * <ul>
+         * <li>true: Succeeded.</li>
+         * <li>false: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

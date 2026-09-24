@@ -67,7 +67,10 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * instances.
+             * <p>The instance IDs that can establish private network peering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-xxx</p>
              */
             public Builder instances(String instances) {
                 this.instances = instances;
@@ -149,7 +155,10 @@ public class DescribeConnectableClustersResponseBody extends TeaModel {
             }
 
             /**
-             * networkType.
+             * <p>The network type of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;

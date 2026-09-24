@@ -67,7 +67,7 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
@@ -78,10 +78,10 @@ public class UpdateAdvancedSettingResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return results:</p>
+         * <p>The returned result:</p>
          * <ul>
-         * <li>true: garbage collector configuration changed successfully</li>
-         * <li>false: garbage collector configuration changed successfully failed</li>
+         * <li>true: The garbage collector configuration was changed successfully.</li>
+         * <li>false: The garbage collector configuration failed to be changed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

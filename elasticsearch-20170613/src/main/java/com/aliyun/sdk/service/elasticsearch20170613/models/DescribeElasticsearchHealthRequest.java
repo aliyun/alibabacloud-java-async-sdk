@@ -60,7 +60,7 @@ public class DescribeElasticsearchHealthRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

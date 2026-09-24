@@ -80,7 +80,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1A6830A-F59B-4E05-BFAC-9496C21DBBA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -175,7 +178,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * X-Total-Count.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder xTotalCount(Long xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -183,7 +189,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * X-Total-Failed.
+             * <p>The total number of failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder xTotalFailed(Long xTotalFailed) {
                 this.xTotalFailed = xTotalFailed;
@@ -191,7 +200,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * X-Total-Success.
+             * <p>The total number of successes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder xTotalSuccess(Long xTotalSuccess) {
                 this.xTotalSuccess = xTotalSuccess;
@@ -362,7 +374,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * ecsId.
+             * <p>The ECS instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i-2ze8s9cjdf2cv969****</p>
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -370,7 +385,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventCreateTime.
+             * <p>The event creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-07T00:00:00Z</p>
              */
             public Builder eventCreateTime(String eventCreateTime) {
                 this.eventCreateTime = eventCreateTime;
@@ -378,7 +396,15 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventCycleStatus.
+             * <p>The event status. Valid values:</p>
+             * <ul>
+             * <li>FAILED: failed</li>
+             * <li>EXECUTED: executed</li>
+             * <li>EXECUTING: executing</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>EXECUTED</p>
              */
             public Builder eventCycleStatus(String eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -386,7 +412,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventExecuteTime.
+             * <p>The event execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-07T00:00:00Z</p>
              */
             public Builder eventExecuteTime(String eventExecuteTime) {
                 this.eventExecuteTime = eventExecuteTime;
@@ -394,7 +423,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventFinashTime.
+             * <p>The event completion time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-07T00:00:00Z</p>
              */
             public Builder eventFinashTime(String eventFinashTime) {
                 this.eventFinashTime = eventFinashTime;
@@ -402,7 +434,15 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventLevel.
+             * <p>The event level. Valid values:</p>
+             * <ul>
+             * <li>INFO: information</li>
+             * <li>WARN: warning</li>
+             * <li>CRITICAL: critical</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>INFO</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -410,7 +450,18 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * eventType.
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li>ECS:AUTO_RESTART: ECS node automatic restart.</li>
+             * <li>Instance:InstanceFailure.Reboot:Executed: ECS instance restart completed (ECS instance error).</li>
+             * <li>Instance:InstanceFailure.Reboot:Executing: ECS instance restart started (instance error).</li>
+             * <li>Instance:SystemFailure.Reboot:Executed: ECS instance restart completed (system error).</li>
+             * <li>Instance:SystemFailure.Reboot:Executing: ECS instance restart started (system error).</li>
+             * <li>Instance:SystemFailure.Reboot:Failed: ECS instance restart failed (system error).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ECS:AUTO_RESTART</p>
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -418,7 +469,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-2r42l7a740005****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -426,7 +480,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * nodeIP.
+             * <p>The IP address of the node that generated the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.1.xx.xx</p>
              */
             public Builder nodeIP(String nodeIP) {
                 this.nodeIP = nodeIP;
@@ -434,7 +491,10 @@ public class ListInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The region ID where the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -89,6 +89,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,6 +102,7 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
+         * <p>The report ID. You can obtain the report ID by calling the <a href="https://help.aliyun.com/document_detail/183774.html">ListDiagnoseReportIds</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,7 +115,17 @@ public class DescribeDiagnoseReportRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The language in which the intelligent diagnostic report is generated. Default value: browser language. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Simplified Chinese</li>
+         * <li>zt: Traditional Chinese</li>
+         * <li>es: Spanish</li>
+         * <li>fr: French</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);

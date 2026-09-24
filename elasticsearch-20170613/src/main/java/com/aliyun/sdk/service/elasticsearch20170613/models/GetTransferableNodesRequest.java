@@ -90,7 +90,7 @@ public class GetTransferableNodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes to be migrated.</p>
+         * <p>The expected number of nodes to retrieve for data migration.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetTransferableNodesRequest extends Request {
         }
 
         /**
-         * <p>The type of nodes.<strong>WORKER</strong>represents a hot node,<strong>WORKER_WARM</strong> represents a warm node.</p>
+         * <p>The type of nodes for data migration. <strong>WORKER</strong> indicates hot nodes. <strong>WORKER_WARM</strong> indicates warm nodes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class TriggerNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A5D8E74-565C-43DC-B031-29289FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class TriggerNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

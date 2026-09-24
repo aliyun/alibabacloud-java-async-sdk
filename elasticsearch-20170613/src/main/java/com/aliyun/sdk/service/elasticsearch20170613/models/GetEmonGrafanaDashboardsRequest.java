@@ -74,6 +74,7 @@ public class GetEmonGrafanaDashboardsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the monitoring and alerting project. Format: <strong>es-<yourUID></strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

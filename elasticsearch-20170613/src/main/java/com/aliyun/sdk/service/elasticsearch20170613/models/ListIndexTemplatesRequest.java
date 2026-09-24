@@ -102,6 +102,7 @@ public class ListIndexTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class ListIndexTemplatesRequest extends Request {
         }
 
         /**
-         * indexTemplate.
+         * <p>The index template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-template</p>
          */
         public Builder indexTemplate(String indexTemplate) {
             this.putQueryParameter("indexTemplate", indexTemplate);
@@ -123,7 +127,10 @@ public class ListIndexTemplatesRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number of the instance list. Minimum value: 1. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -132,7 +139,10 @@ public class ListIndexTemplatesRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

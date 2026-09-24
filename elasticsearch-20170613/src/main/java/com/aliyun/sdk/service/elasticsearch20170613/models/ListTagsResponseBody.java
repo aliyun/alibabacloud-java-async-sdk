@@ -67,7 +67,7 @@ public class ListTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -78,7 +78,7 @@ public class ListTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -144,7 +144,10 @@ public class ListTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The label key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -152,7 +155,10 @@ public class ListTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The label value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

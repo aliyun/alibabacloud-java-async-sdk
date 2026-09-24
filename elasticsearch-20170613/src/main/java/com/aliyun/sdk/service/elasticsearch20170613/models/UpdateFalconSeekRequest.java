@@ -75,6 +75,7 @@ public class UpdateFalconSeekRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,11 @@ public class UpdateFalconSeekRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the FalconSeek cloud-native kernel feature. Valid values:</p>
+         * <ul>
+         * <li>true: Enable the feature.</li>
+         * <li>false: Disable the feature.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         public Builder enable(Boolean enable) {

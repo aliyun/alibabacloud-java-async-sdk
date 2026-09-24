@@ -67,7 +67,14 @@ public class ZoneInfo extends TeaModel {
         } 
 
         /**
-         * status.
+         * <p>The zone status. Valid values:</p>
+         * <ul>
+         * <li>ISOLATION: offline</li>
+         * <li>NORMAL: Normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -75,7 +82,10 @@ public class ZoneInfo extends TeaModel {
         }
 
         /**
-         * zoneId.
+         * <p>The zone ID, which uniquely identifies the zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

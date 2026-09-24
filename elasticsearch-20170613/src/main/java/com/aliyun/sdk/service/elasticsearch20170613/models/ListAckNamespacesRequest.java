@@ -90,7 +90,7 @@ public class ListAckNamespacesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The ID of the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ListAckNamespacesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number. (Deprecated)</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -115,7 +115,7 @@ public class ListAckNamespacesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of records per page. (Deprecated)</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

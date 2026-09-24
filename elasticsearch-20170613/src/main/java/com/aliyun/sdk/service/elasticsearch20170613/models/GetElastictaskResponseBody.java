@@ -67,7 +67,10 @@ public class GetElastictaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetElastictaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -180,7 +183,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             } 
 
             /**
-             * cronExpression.
+             * <p>The trigger cycle, specified as a Quartz Cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 0 0 ? * MON</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -188,7 +194,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * elasticNodeCount.
+             * <p>The number of elastic data nodes during peak hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder elasticNodeCount(Integer elasticNodeCount) {
                 this.elasticNodeCount = elasticNodeCount;
@@ -196,7 +205,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * replicaCount.
+             * <p>The number of replicas for the target index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicaCount(Integer replicaCount) {
                 this.replicaCount = replicaCount;
@@ -212,7 +224,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * triggerType.
+             * <p>The cause. Currently, only <strong>crontab</strong> is supported, which indicates scheduled triggering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -318,7 +333,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             } 
 
             /**
-             * cronExpression.
+             * <p>The trigger cycle, specified as a Quartz Cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4 4 4 ? * WED</p>
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;
@@ -326,7 +344,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * elasticNodeCount.
+             * <p>The number of elastic data nodes during off-peak hours.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder elasticNodeCount(Integer elasticNodeCount) {
                 this.elasticNodeCount = elasticNodeCount;
@@ -334,7 +355,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * replicaCount.
+             * <p>The number of replicas for the target index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder replicaCount(Integer replicaCount) {
                 this.replicaCount = replicaCount;
@@ -350,7 +374,10 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * triggerType.
+             * <p>The cause. Currently, only crontab is supported, which indicates scheduled triggering.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crontab</p>
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -417,7 +444,7 @@ public class GetElastictaskResponseBody extends TeaModel {
             } 
 
             /**
-             * elasticExpansionTask.
+             * <p>The elastic scale-out rule.</p>
              */
             public Builder elasticExpansionTask(ElasticExpansionTask elasticExpansionTask) {
                 this.elasticExpansionTask = elasticExpansionTask;
@@ -425,7 +452,7 @@ public class GetElastictaskResponseBody extends TeaModel {
             }
 
             /**
-             * elasticShrinkTask.
+             * <p>The elastic scale-in rule.</p>
              */
             public Builder elasticShrinkTask(ElasticShrinkTask elasticShrinkTask) {
                 this.elasticShrinkTask = elasticShrinkTask;

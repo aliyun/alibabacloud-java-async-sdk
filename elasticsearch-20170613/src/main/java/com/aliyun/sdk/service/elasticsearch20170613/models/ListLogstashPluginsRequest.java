@@ -118,7 +118,7 @@ public class ListLogstashPluginsRequest extends Request {
         } 
 
         /**
-         * <p>3</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * <p>USER</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>logstash-filter-clone</p>
@@ -143,7 +143,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The page number of the plugin list. Default value: 1. Minimum value: 1. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -155,7 +155,7 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The number of entries per page for paging. Minimum value: 1. Maximum value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -167,7 +167,11 @@ public class ListLogstashPluginsRequest extends Request {
         }
 
         /**
-         * <p>The description of the plug-in.</p>
+         * <p>The plugin source. Valid values:</p>
+         * <ul>
+         * <li>USER: custom plugin</li>
+         * <li>SYSTEM: system preset plugin</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>USER</p>

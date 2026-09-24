@@ -67,7 +67,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the report.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -78,7 +78,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The diagnosis status. Valid values: Supported: SUCCESS, FAILED, and RUNNING.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -355,7 +355,7 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the diagnostic instance.</p>
+             * <p>The timestamp when the diagnostic report was generated.</p>
              * 
              * <strong>example:</strong>
              * <p>1535745731000</p>
@@ -374,7 +374,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID of the diagnosed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-n6w1o1x0w001c****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -390,7 +393,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * reportId.
+             * <p>The report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger__2020-08-17T17:09:02</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -398,7 +404,10 @@ public class DiagnoseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder state(String state) {
                 this.state = state;

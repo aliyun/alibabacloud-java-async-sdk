@@ -75,6 +75,7 @@ public class DeleteComponentIndexRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteComponentIndexRequest extends Request {
         }
 
         /**
+         * <p>The composite template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

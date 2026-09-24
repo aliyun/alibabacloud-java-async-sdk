@@ -103,6 +103,7 @@ public class ListDeprecatedTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,10 @@ public class ListDeprecatedTemplatesRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The index template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>component-openstore-index-template</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -124,7 +128,10 @@ public class ListDeprecatedTemplatesRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number settings for a paged query. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -133,7 +140,10 @@ public class ListDeprecatedTemplatesRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page settings for a paged query. This parameter is used for paging.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

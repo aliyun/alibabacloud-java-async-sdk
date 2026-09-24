@@ -67,7 +67,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -78,7 +78,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * Result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -144,10 +144,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the remote instance that is connected to the network of the current instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>es-cn-09k1rocex0006****</p>
+             * instances.
              */
             public Builder instances(String instances) {
                 this.instances = instances;
@@ -155,10 +152,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * networkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -212,7 +206,7 @@ public class ListConnectedClustersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The return results.</p>
+             * Result.
              */
             public Builder result(java.util.List<ResultResult> result) {
                 this.result = result;

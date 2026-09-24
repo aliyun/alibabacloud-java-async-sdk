@@ -130,6 +130,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         } 
 
         /**
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +143,10 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -151,7 +155,14 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * enable.
+         * <p>Specifies whether to enable X-Pack monitoring. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -160,7 +171,7 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * endpoints.
+         * <p>The access endpoint of the Elasticsearch instance.</p>
          */
         public Builder endpoints(java.util.List<String> endpoints) {
             this.putBodyParameter("endpoints", endpoints);
@@ -169,7 +180,10 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * password.
+         * <p>The password of the Elasticsearch instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -178,7 +192,10 @@ public class UpdateXpackMonitorConfigRequest extends Request {
         }
 
         /**
-         * userName.
+         * <p>The username of the Elasticsearch instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elastic</p>
          */
         public Builder userName(String userName) {
             this.putBodyParameter("userName", userName);

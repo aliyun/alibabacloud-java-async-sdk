@@ -80,7 +80,16 @@ public class WhiteIpGroup extends TeaModel {
         } 
 
         /**
-         * WhiteIpType.
+         * <p>The type of the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE_ES: Elasticsearch private network access whitelist</li>
+         * <li>PUBLIC_ES: Elasticsearch public network access whitelist</li>
+         * <li>PRIVATE_KIBANA: Kibana private network access whitelist</li>
+         * <li>PUBLIC_KIBANA: Kibana public network access whitelist.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE_ES</p>
          */
         public Builder whiteIpType(String whiteIpType) {
             this.whiteIpType = whiteIpType;
@@ -88,7 +97,10 @@ public class WhiteIpGroup extends TeaModel {
         }
 
         /**
-         * groupName.
+         * <p>The name of the IP address whitelist group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_group</p>
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -96,7 +108,7 @@ public class WhiteIpGroup extends TeaModel {
         }
 
         /**
-         * ips.
+         * <p>The list of IP addresses in the whitelist group.</p>
          */
         public Builder ips(java.util.List<String> ips) {
             this.ips = ips;

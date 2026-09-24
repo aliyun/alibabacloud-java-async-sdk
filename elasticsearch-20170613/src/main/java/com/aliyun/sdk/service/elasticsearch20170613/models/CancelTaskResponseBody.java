@@ -67,7 +67,7 @@ public class CancelTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -78,10 +78,10 @@ public class CancelTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return results:</p>
+         * <p>The result. Valid values:</p>
          * <ul>
-         * <li>true: the task was cancelled successfully</li>
-         * <li>false: the task was cancelled successfully failed</li>
+         * <li>true: The task is canceled.</li>
+         * <li>false: The task failed to be canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

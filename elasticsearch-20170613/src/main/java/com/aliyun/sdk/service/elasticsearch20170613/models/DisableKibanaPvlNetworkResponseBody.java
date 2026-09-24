@@ -67,7 +67,7 @@ public class DisableKibanaPvlNetworkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>request id</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1DERFG</p>
@@ -78,7 +78,14 @@ public class DisableKibanaPvlNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The operation is successful.</li>
+         * <li>false: The operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

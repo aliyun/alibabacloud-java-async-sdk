@@ -67,7 +67,10 @@ public class ValidateSlrPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC4ED7DD-8C84-49B5-8A95-456F82E44D13</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class ValidateSlrPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the service-linked role has been created. Valid values:</p>
+         * <ul>
+         * <li>true: Created.</li>
+         * <li>false: Not created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

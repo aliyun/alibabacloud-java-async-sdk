@@ -67,7 +67,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The endpoint domain name, which is used to configure the connection.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
@@ -78,7 +78,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the endpoint on the service VPC side.</p>
+         * <p>The returned result details.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +170,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             } 
 
             /**
-             * endpointDomain.
+             * <p>The endpoint domain name, which is used for connection configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1tah7zbrwmkjef****.epsrv-bp1w0p3jdirbfmt6****.cn-hangzhou.privatelink.aliyuncs.com</p>
              */
             public Builder endpointDomain(String endpointDomain) {
                 this.endpointDomain = endpointDomain;
@@ -178,7 +181,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * endpointId.
+             * <p>The ID of the service VPC endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ep-bp1tah7zbrwmkjef****</p>
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -186,7 +192,10 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * endpointName.
+             * <p>The name of the service VPC endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpcElasticSearchABC</p>
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -194,7 +203,7 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service VPC-side endpoint.</p>
+             * <p>The ID of the user endpoint service associated with the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>epsrv-bp1w0p3jdirbfmt6****</p>

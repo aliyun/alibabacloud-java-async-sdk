@@ -104,7 +104,7 @@ public class ListPipelineRequest extends Request {
         } 
 
         /**
-         * <p>15</p>
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The page number of the current page in a paged query. Valid values: 1 to 200. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +129,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline_test</p>
@@ -141,7 +141,7 @@ public class ListPipelineRequest extends Request {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The number of pipelines per page in a paged query. Valid values: 1 to 200.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

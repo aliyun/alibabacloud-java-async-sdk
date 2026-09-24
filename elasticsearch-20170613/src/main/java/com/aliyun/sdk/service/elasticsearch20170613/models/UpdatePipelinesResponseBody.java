@@ -67,7 +67,7 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,10 +78,10 @@ public class UpdatePipelinesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the pipeline is updated. Valid values:</p>
+         * <p>The returned result:</p>
          * <ul>
-         * <li>true: The pipeline is updated.</li>
-         * <li>false: The pipeline fails to be updated.</li>
+         * <li>true: The update was successful.</li>
+         * <li>false: The update failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

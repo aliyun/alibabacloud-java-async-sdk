@@ -89,7 +89,7 @@ public class ListDictsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,12 +102,16 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * <p>The type of the dictionary. Valid values:</p>
+         * <p>The dictionary type. Valid values:</p>
          * <ul>
-         * <li>IK: IK dictionary after a standard update</li>
-         * <li>IK_HOT: IK dictionary after a rolling update</li>
-         * <li>SYNONYMS: synonym dictionary</li>
-         * <li>ALIWS: Alibaba Cloud dictionary</li>
+         * <li><p>IK: IK cold update dictionary.</p>
+         * </li>
+         * <li><p>IK_HOT: IK hot update dictionary.</p>
+         * </li>
+         * <li><p>SYNONYMS: Synonym dictionary.</p>
+         * </li>
+         * <li><p>ALIWS: Alibaba dictionary.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -121,7 +125,7 @@ public class ListDictsRequest extends Request {
         }
 
         /**
-         * <p>The name of the dictionary file.</p>
+         * <p>The file name used to filter results.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM_MAIN.dic</p>

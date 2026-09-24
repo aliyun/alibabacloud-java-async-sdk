@@ -67,7 +67,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The time when the pipeline was updated.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>829F38F6-E2D6-4109-90A6-888160BD1***</p>
@@ -78,11 +78,7 @@ public class DescribePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the queue. Valid values:</p>
-         * <ul>
-         * <li>MEMORY: a traditional memory-based queue.</li>
-         * <li>PERSISTED: disk-based ACKed queue (persistent queue).</li>
-         * </ul>
+         * <p>The pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -278,7 +274,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the pipeline was created.</p>
+             * <p>The batch delay of the pipeline. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -289,7 +285,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * batchSize.
+             * <p>The batch size of the pipeline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder batchSize(Integer batchSize) {
                 this.batchSize = batchSize;
@@ -297,7 +296,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the pipeline.</p>
+             * <p>The specific configuration of the pipeline.</p>
              * 
              * <strong>example:</strong>
              * <p>input {  }  filter {  }  output {  }</p>
@@ -308,12 +307,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the MPS queue. Valid values:</p>
-             * <ul>
-             * <li>NOT_DEPLOYED: The node is not deployed.</li>
-             * <li>RUNNING</li>
-             * <li>DELETED: Deleted. The console does not display this status.</li>
-             * </ul>
+             * <p>The pipeline description.</p>
              * 
              * <strong>example:</strong>
              * <p>this is a test</p>
@@ -324,7 +318,10 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreatedTime.
+             * <p>The time when the pipeline was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-06-20T07:26:47.000+0000</p>
              */
             public Builder gmtCreatedTime(String gmtCreatedTime) {
                 this.gmtCreatedTime = gmtCreatedTime;
@@ -332,7 +329,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total capacity of the queue in bytes. Unit: MB.</p>
+             * <p>The time when the pipeline was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-06-20T07:26:47.000+0000</p>
@@ -343,7 +340,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of queue checkpoint writes.</p>
+             * <p>The pipeline ID.</p>
              * 
              * <strong>example:</strong>
              * <p>pipeline_test</p>
@@ -354,7 +351,15 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineStatus.
+             * <p>The pipeline status. Valid values:</p>
+             * <ul>
+             * <li>NOT_DEPLOYED: not deployed.</li>
+             * <li>RUNNING: running.</li>
+             * <li>DELETED: deleted (this status is not displayed in the console).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder pipelineStatus(String pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;
@@ -362,7 +367,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Pipeline batch delay. Unit: milliseconds.</p>
+             * <p>The number of queue checkpoint writes.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -373,7 +378,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of pipeline workers.</p>
+             * <p>The total capacity of the queue in bytes. Unit: MB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -384,7 +389,11 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specific configuration of the pipeline.</p>
+             * <p>The queue type. Valid values:</p>
+             * <ul>
+             * <li>MEMORY: a traditional memory-based queue.</li>
+             * <li>PERSISTED: a disk-based ACKed queue (persistent queue).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>MEMORY</p>
@@ -395,7 +404,7 @@ public class DescribePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the pipeline batch.</p>
+             * <p>The number of pipeline worker threads.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>

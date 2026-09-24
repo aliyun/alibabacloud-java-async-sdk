@@ -88,7 +88,7 @@ public class ActivateZonesRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class ActivateZonesRequest extends Request {
         }
 
         /**
-         * <p>请求体参数。</p>
+         * <p>The request body parameters.</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;cn-hangzhou-i&quot;,&quot;cn-hangzhou-h&quot;]</p>
+         * <p>空</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

@@ -74,7 +74,7 @@ public class ListAlternativeSnapshotReposRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,12 @@ public class ListAlternativeSnapshotReposRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether to return the OSS reference repository added. The return value. Valid values: true and false.</p>
+         * <p>Specifies whether to return the OSS reference repositories that have already been added. Valid values:</p>
+         * <ul>
+         * <li>true: Returns the already added repositories.</li>
+         * <li>false: Does not return the already added repositories.</li>
+         * </ul>
+         * <p>Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

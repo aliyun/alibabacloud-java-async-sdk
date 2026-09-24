@@ -75,7 +75,7 @@ public class DescribeDynamicSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Id of the request</p>
          */
         public Builder result(String result) {
             this.result = result;

@@ -67,7 +67,10 @@ public class RestartLogstashResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class RestartLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the current instance.</p>
          */
         public Builder result(Logstash result) {
             this.result = result;

@@ -88,7 +88,7 @@ public class InstallUserPluginsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,10 @@ public class InstallUserPluginsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The list of custom plugins to install.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[     {&quot;name&quot;: &quot;pluginName1.zip&quot;},     {&quot;name&quot;: &quot;pluginName2.zip&quot;} ]</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

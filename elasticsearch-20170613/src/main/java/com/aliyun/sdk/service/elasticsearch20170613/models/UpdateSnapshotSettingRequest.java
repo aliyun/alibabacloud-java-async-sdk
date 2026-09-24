@@ -74,7 +74,7 @@ public class UpdateSnapshotSettingRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,16 @@ public class UpdateSnapshotSettingRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The data backup configuration, including the automatic backup start time and the scheduled backup switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;quartzRegex&quot;:&quot;0 0 01 ? * * <em>&quot;,
+         *     &quot;enable&quot;:true,
+         *     &quot;indices&quot;: [
+         *         &quot;orders-</em>&quot;
+         *     ]
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

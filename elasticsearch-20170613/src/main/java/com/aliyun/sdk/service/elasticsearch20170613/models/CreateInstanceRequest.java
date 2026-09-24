@@ -301,7 +301,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * clientNodeConfiguration.
+         * <p>The client node configuration.</p>
          */
         public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
             this.putBodyParameter("clientNodeConfiguration", clientNodeConfiguration);
@@ -310,7 +310,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -319,7 +322,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * elasticDataNodeConfiguration.
+         * <p>The elastic node configuration.</p>
          */
         public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
             this.putBodyParameter("elasticDataNodeConfiguration", elasticDataNodeConfiguration);
@@ -328,10 +331,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The access password of the instance. The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$%^&amp;*()_+-=). The password must be 8 to 32 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>es_password</p>
+         * <p>Es_password</p>
          */
         public Builder esAdminPassword(String esAdminPassword) {
             this.putBodyParameter("esAdminPassword", esAdminPassword);
@@ -340,6 +344,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance version. Valid values:</p>
+         * <ul>
+         * <li>8.5.1_with_X-Pack</li>
+         * <li>7.10_with_X-Pack</li>
+         * <li>6.7_with_X-Pack</li>
+         * <li>7.7_with_X-Pack</li>
+         * <li>6.8_with_X-Pack</li>
+         * <li>6.3_with_X-Pack</li>
+         * <li>5.6_with_X-Pack</li>
+         * <li>5.5.3_with_X-Pack</li>
+         * </ul>
+         * <blockquote>
+         * <p>The versions listed above may not include all versions supported by Elasticsearch instances. Call the <a href="https://help.aliyun.com/document_detail/254099.html">GetRegionConfiguration</a> operation to view the actual supported versions.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -352,7 +370,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * instanceCategory.
+         * <p>The edition type. Valid values:</p>
+         * <ul>
+         * <li>x-pack: Creates a commercial edition instance, or a kernel-enhanced edition instance without Indexing Service or OpenStore enabled.</li>
+         * <li>IS: Creates a kernel-enhanced edition instance with Indexing Service or OpenStore enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>advanced</p>
          */
         public Builder instanceCategory(String instanceCategory) {
             this.putBodyParameter("instanceCategory", instanceCategory);
@@ -361,7 +386,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * kibanaConfiguration.
+         * <p>The Kibana node configuration.</p>
+         * <blockquote>
+         * <p>We strongly recommend that you enable Kibana nodes.</p>
+         * </blockquote>
          */
         public Builder kibanaConfiguration(KibanaNodeConfiguration kibanaConfiguration) {
             this.putBodyParameter("kibanaConfiguration", kibanaConfiguration);
@@ -370,7 +398,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * masterConfiguration.
+         * <p>The dedicated master node configuration.</p>
+         * <blockquote>
+         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based dedicated master nodes, specify the instance family followed by the <code>.new</code> suffix. For example, elasticsearch.sn1ne.large.new.</p>
+         * </blockquote>
          */
         public Builder masterConfiguration(MasterNodeConfiguration masterConfiguration) {
             this.putBodyParameter("masterConfiguration", masterConfiguration);
@@ -379,6 +410,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The network configuration.</p>
+         * <blockquote>
+         * <p>You cannot specify an IP whitelist when creating an instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
@@ -388,6 +423,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * <p>The number of data nodes. Valid values: 2 to 50.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -400,7 +436,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * nodeSpec.
+         * <p>The data node configuration.</p>
+         * <blockquote>
+         * <p>In the Beijing, Shanghai, Hangzhou, and Shenzhen regions, when you call createInstance to create an instance with next-generation cloud disk-based data nodes, specify the instance family followed by the <code>.new</code> suffix. For example, elasticsearch.sn1ne.large.new.</p>
+         * </blockquote>
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.putBodyParameter("nodeSpec", nodeSpec);
@@ -409,7 +448,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * paymentInfo.
+         * <p>The billing details of the subscription instance. This parameter is required when you create a subscription instance.</p>
          */
         public Builder paymentInfo(PaymentInfo paymentInfo) {
             this.putBodyParameter("paymentInfo", paymentInfo);
@@ -418,7 +457,14 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * paymentType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>postpaid: pay-as-you-go billing method</li>
+         * <li>prepaid: subscription</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.putBodyParameter("paymentType", paymentType);
@@ -427,7 +473,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzu7tsu4n****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
@@ -436,7 +485,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * tags.
+         * <p>The instance tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -445,7 +494,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * warmNodeConfiguration.
+         * <p>The cold data node configuration.</p>
          */
         public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
             this.putBodyParameter("warmNodeConfiguration", warmNodeConfiguration);
@@ -454,7 +503,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * zoneCount.
+         * <p>The number of zones for the instance. Valid values: 1, 2, and 3. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder zoneCount(Integer zoneCount) {
             this.putBodyParameter("zoneCount", zoneCount);
@@ -463,7 +515,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -531,7 +586,10 @@ public class CreateInstanceRequest extends Request {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyTest</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -539,7 +597,10 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KeyValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -75,6 +75,7 @@ public class DescribeILMPolicyRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DescribeILMPolicyRequest extends Request {
         }
 
         /**
+         * <p>The name of the index lifecycle policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

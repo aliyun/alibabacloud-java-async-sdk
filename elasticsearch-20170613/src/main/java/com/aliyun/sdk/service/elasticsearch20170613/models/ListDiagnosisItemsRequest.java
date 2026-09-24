@@ -87,7 +87,10 @@ public class ListDiagnosisItemsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-v0h14zdee000mimee</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -96,7 +99,17 @@ public class ListDiagnosisItemsRequest extends Request {
         }
 
         /**
-         * lang.
+         * <p>The supported request language. Default value: the browser request language. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Simplified Chinese</li>
+         * <li>zt: Traditional Chinese</li>
+         * <li>es: Spanish</li>
+         * <li>fr: French</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("lang", lang);
@@ -105,7 +118,15 @@ public class ListDiagnosisItemsRequest extends Request {
         }
 
         /**
-         * level.
+         * <p>The diagnostic item level. Valid values:</p>
+         * <ul>
+         * <li>BASIC: basic inspection item (free).</li>
+         * <li>ADVANCED: advanced inspection item (consumes billable tokens).</li>
+         * </ul>
+         * <p>If this parameter is not specified, diagnostic items of all levels are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
          */
         public Builder level(String level) {
             this.putQueryParameter("level", level);

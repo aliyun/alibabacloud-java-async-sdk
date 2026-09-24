@@ -67,7 +67,10 @@ public class TagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3D8795D9-8FF5-46B2-86E6-E3B407*******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result. Valid values:</p>
+         * <ul>
+         * <li>true: The tag-resource relationship is created.</li>
+         * <li>false: The tag-resource relationship failed to be created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

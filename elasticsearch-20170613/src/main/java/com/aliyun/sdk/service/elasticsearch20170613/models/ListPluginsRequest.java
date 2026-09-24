@@ -116,7 +116,7 @@ public class ListPluginsRequest extends Request {
         } 
 
         /**
-         * <p>10</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * <p>SYSTEM</p>
+         * <p>The plugin name.</p>
          * 
          * <strong>example:</strong>
          * <p>analysis-ik</p>
@@ -141,7 +141,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class ListPluginsRequest extends Request {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The plugin source type. Only SYSTEM (system plugin) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>

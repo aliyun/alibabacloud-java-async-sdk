@@ -67,7 +67,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6D******</p>
@@ -78,10 +78,10 @@ public class UntagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return results:</p>
+         * <p>The returned result:</p>
          * <ul>
-         * <li>true: deleted</li>
-         * <li>false: Failed</li>
+         * <li>true: The deletion was successful.</li>
+         * <li>false: The deletion failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

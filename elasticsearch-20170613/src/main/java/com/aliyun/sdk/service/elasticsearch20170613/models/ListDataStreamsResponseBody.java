@@ -80,7 +80,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the returned data streams.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -162,7 +165,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * X-Managed-Count.
+             * <p>The total number of data streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder xManagedCount(Integer xManagedCount) {
                 this.xManagedCount = xManagedCount;
@@ -170,7 +176,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * X-Managed-StorageSize.
+             * <p>The total storage size of indexes. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>143993923932990</p>
              */
             public Builder xManagedStorageSize(Long xManagedStorageSize) {
                 this.xManagedStorageSize = xManagedStorageSize;
@@ -289,7 +298,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The time when the data stream list was queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-13T03:58:07.253Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -297,7 +309,18 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * <p>The index status. Valid values:</p>
+             * <ul>
+             * <li><p>Green: Healthy.</p>
+             * </li>
+             * <li><p>Yellow: Warning.</p>
+             * </li>
+             * <li><p>Red: Abnormal.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Green</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -305,7 +328,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * isManaged.
+             * <p>This field is deprecated and can be ignored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isManaged(Boolean isManaged) {
                 this.isManaged = isManaged;
@@ -313,7 +339,18 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * managedStatus.
+             * <p>The index managed status. Valid values:</p>
+             * <ul>
+             * <li><p>following: Managed.</p>
+             * </li>
+             * <li><p>closing: Being unmanaged.</p>
+             * </li>
+             * <li><p>closed: Not managed.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>following</p>
              */
             public Builder managedStatus(String managedStatus) {
                 this.managedStatus = managedStatus;
@@ -321,7 +358,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The data stream name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Log1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -329,7 +369,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * size.
+             * <p>The total storage space occupied by the current index. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15393899</p>
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -461,7 +504,18 @@ public class ListDataStreamsResponseBody extends TeaModel {
             } 
 
             /**
-             * health.
+             * <p>The data stream status. Valid values:</p>
+             * <ul>
+             * <li><p>Green: Healthy.</p>
+             * </li>
+             * <li><p>Yellow: Warning.</p>
+             * </li>
+             * <li><p>Red: Abnormal.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Green</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -469,7 +523,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * ilmPolicyName.
+             * <p>The index lifecycle policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rollver1</p>
              */
             public Builder ilmPolicyName(String ilmPolicyName) {
                 this.ilmPolicyName = ilmPolicyName;
@@ -477,7 +534,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * indexTemplateName.
+             * <p>The index template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>template1</p>
              */
             public Builder indexTemplateName(String indexTemplateName) {
                 this.indexTemplateName = indexTemplateName;
@@ -485,7 +545,7 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * indices.
+             * <p>The index information under the current data stream.</p>
              */
             public Builder indices(java.util.List<Indices> indices) {
                 this.indices = indices;
@@ -493,7 +553,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * managedStorageSize.
+             * <p>The total storage space occupied by managed indexes under the current data stream. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788239393298</p>
              */
             public Builder managedStorageSize(Long managedStorageSize) {
                 this.managedStorageSize = managedStorageSize;
@@ -501,7 +564,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The index name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-index-0001</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -509,7 +575,10 @@ public class ListDataStreamsResponseBody extends TeaModel {
             }
 
             /**
-             * totalStorageSize.
+             * <p>The total storage space occupied by all indexes under the current data stream. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1788239393298</p>
              */
             public Builder totalStorageSize(Long totalStorageSize) {
                 this.totalStorageSize = totalStorageSize;

@@ -132,7 +132,7 @@ public class ListNodesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the shipper.</p>
+         * <p>The collector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the ECS instances.</p>
+         * <p>The list of ECS instance IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1ei8ysh7orb6eq****</p>
@@ -157,7 +157,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The name of the ECS instance.</p>
+         * <p>The ECS instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -169,7 +169,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number of the returned results.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -181,7 +181,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of results per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -193,7 +193,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the ECS instance. You must configure tagKey and tagValue.</p>
+         * <p>The tag information of the ECS instance. Must include the tag key (tagKey) and tag value (tagValue).</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</p>

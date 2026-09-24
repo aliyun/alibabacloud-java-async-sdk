@@ -67,7 +67,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -154,7 +157,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             } 
 
             /**
-             * aliases.
+             * <p>The alias configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder aliases(java.util.Map<String, ?> aliases) {
                 this.aliases = aliases;
@@ -162,7 +168,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;properties&quot;: { &quot;@timestamp&quot;: { &quot;type&quot;: &quot;date&quot; } } }</p>
              */
             public Builder mappings(java.util.Map<String, ?> mappings) {
                 this.mappings = mappings;
@@ -170,7 +179,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;index.number_of_replicas&quot;: 0 }</p>
              */
             public Builder settings(java.util.Map<String, ?> settings) {
                 this.settings = settings;
@@ -237,7 +249,10 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             } 
 
             /**
-             * _meta.
+             * <p>The metadata, which is used to store remarks and other information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -245,7 +260,7 @@ public class DescribeComponentIndexResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The template information.</p>
              */
             public Builder template(Template template) {
                 this.template = template;

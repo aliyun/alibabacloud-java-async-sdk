@@ -67,7 +67,7 @@ public class DeleteSnapshotRepoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,10 +78,10 @@ public class DeleteSnapshotRepoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return results:</p>
+         * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li>true: reference warehouse deleted successfully</li>
-         * <li>false: reference warehouse deleted successfully failed</li>
+         * <li>true: The reference repository is deleted.</li>
+         * <li>false: The reference repository failed to be deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

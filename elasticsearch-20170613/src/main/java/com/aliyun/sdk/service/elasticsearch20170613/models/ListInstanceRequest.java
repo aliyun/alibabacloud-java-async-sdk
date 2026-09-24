@@ -213,7 +213,7 @@ public class ListInstanceRequest extends Request {
         } 
 
         /**
-         * <p>cn-hangzhou-i</p>
+         * <p>The instance name. Fuzzy match is supported. For example, if you search for <strong>abc</strong>, all instances whose names contain <strong>abc</strong> may be returned, such as <strong>abc</strong>, <strong>abcde</strong>, <strong>xyabc</strong>, and <strong>xabcy</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyunes_test1</p>
@@ -225,7 +225,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>advanced</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>6.7_with_X-Pack</p>
@@ -237,7 +237,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of data nodes.</p>
+         * <p>The edition of the instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>advanced</p>
@@ -249,7 +249,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>postpaid</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>es-cn-v641a0ta3000g****</p>
@@ -261,7 +261,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+         * <p>The page number of the instance list.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -273,11 +273,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to include dedicated master nodes. Valid values:</p>
-         * <ul>
-         * <li>true: The files contain data that is dumped to the IA storage medium.</li>
-         * <li>false: The files do not contain data that is dumped to the IA storage medium.</li>
-         * </ul>
+         * <p>The billing method of the instance. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>postpaid</p>
@@ -289,7 +285,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the resource group to which the instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzvowej3i****</p>
@@ -301,7 +297,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>vpc-bp16k1dvzxtmagcva****</p>
+         * <p>The number of entries per page in a paged query. Settings the number of entries per page for paging. Maximum value: <strong>100</strong>. Default value: <strong>10</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -322,7 +318,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The instance tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
@@ -334,7 +330,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The ID of the virtual private cloud (VPC) in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -346,7 +342,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The zone ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

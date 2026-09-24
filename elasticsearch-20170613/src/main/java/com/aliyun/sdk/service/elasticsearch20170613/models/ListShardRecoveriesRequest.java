@@ -74,7 +74,7 @@ public class ListShardRecoveriesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,12 @@ public class ListShardRecoveriesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return information about data restoration of shards. Valid values:</p>
+         * <p>Specifies whether to display shard data recovery tracking information. Valid values:</p>
          * <ul>
-         * <li>true: returns information about data restoration of shards that are being restored.</li>
-         * <li>false: returns information about data restoration of all shards.</li>
+         * <li><p>true: Displays only ongoing shard data recovery tracking information.</p>
+         * </li>
+         * <li><p>false: Displays all shard data recovery tracking information.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

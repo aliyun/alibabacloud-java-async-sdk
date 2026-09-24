@@ -97,7 +97,11 @@ public class MasterNodeConfiguration extends TeaModel {
         } 
 
         /**
+         * <p>The number of dedicated master nodes.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -105,7 +109,11 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The storage space of dedicated master nodes. Unit: GB.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -113,7 +121,15 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The storage type of dedicated master nodes. Valid values:</p>
+         * <ul>
+         * <li>cloud_ssd: standard SSD</li>
+         * <li>cloud_essd (default): Enterprise SSD (ESSD).</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder diskType(String diskType) {
             this.diskType = diskType;
@@ -121,7 +137,11 @@ public class MasterNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The node specifications of dedicated master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

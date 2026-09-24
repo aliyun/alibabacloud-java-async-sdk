@@ -106,7 +106,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The request status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The request result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +128,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D184B55-FA51-43F7-A1EF-E68A0545****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -138,7 +147,14 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -256,7 +272,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             } 
 
             /**
-             * dps.
+             * <p>The real-time metric monitoring data. Format: <code>{timestamp:data}</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;1586249280&quot;: 465.1980465119913, &quot;1586249300&quot;: 213.45243650423305 }</p>
              */
             public Builder dps(java.util.Map<String, ?> dps) {
                 this.dps = dps;
@@ -264,7 +283,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * integrity.
+             * <p>The completeness of time series data points in the metric query result. A value of 1.0 indicates 100% completeness.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder integrity(Float integrity) {
                 this.integrity = integrity;
@@ -272,7 +294,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * messageWatermark.
+             * <p>The timestamp when the request reaches the server. This is used for troubleshooting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522127381471</p>
              */
             public Builder messageWatermark(Long messageWatermark) {
                 this.messageWatermark = messageWatermark;
@@ -280,7 +305,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * metric.
+             * <p>The metric name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticbuild.elasticsearch.source.total_doc_count</p>
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -288,7 +316,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * summary.
+             * <p>If the queries contain wildcards, the result includes multiple matching time series data sequences. The summary is the aggregation of the values across these time series at each time point, based on the aggregator type specified in the query. Currently, only avg is supported as the aggregation method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder summary(Float summary) {
                 this.summary = summary;
@@ -296,7 +327,10 @@ public class GetEmonMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The query tags.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;taskName&quot;:&quot;et-xxx&quot;,&quot;userId&quot;:&quot;123456&quot;}</p>
              */
             public Builder tags(java.util.Map<String, ?> tags) {
                 this.tags = tags;

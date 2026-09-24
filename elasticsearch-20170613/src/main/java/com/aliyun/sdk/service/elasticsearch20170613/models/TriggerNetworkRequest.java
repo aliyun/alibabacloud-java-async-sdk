@@ -119,7 +119,7 @@ public class TriggerNetworkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +132,11 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
+         * <p>The action type. Valid values:</p>
+         * <ul>
+         * <li>CLOSE: disable.</li>
+         * <li>OPEN: enable.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,6 +149,11 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
+         * <p>The network type. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: public network.</li>
+         * <li>PRIVATE: private network.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +166,11 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
+         * <p>The instance type. Valid values:</p>
+         * <ul>
+         * <li>KIBANA: Kibana cluster.</li>
+         * <li>WORKER: Elasticsearch cluster.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -168,7 +183,10 @@ public class TriggerNetworkRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A unique token used to ensure idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>407d02b74c49beb5bfdac7ec8bde2488</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);

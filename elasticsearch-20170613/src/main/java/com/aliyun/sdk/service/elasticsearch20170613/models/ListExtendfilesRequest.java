@@ -60,7 +60,7 @@ public class ListExtendfilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Logstash cluster.</p>
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -88,7 +88,7 @@ public class ListKibanaPluginsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ListKibanaPluginsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: 1.</p>
+         * <p>The page number of the instance list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -113,7 +113,7 @@ public class ListKibanaPluginsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page Settings for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -67,7 +67,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the log.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
@@ -78,7 +78,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The timestamp of log generation. Unit: ms.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -183,7 +183,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the node that generates the log.</p>
+             * <p>The detailed content of the log.</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -191,7 +191,10 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * host.
+             * <p>The IP address of the node that generated the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -199,7 +202,10 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ls-cn-v0h1kzca****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -207,7 +213,7 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The log level. Valid values include trace, debug, info, warn, and error. GC logs do not have a level.</p>
              * 
              * <strong>example:</strong>
              * <p>info</p>
@@ -218,7 +224,10 @@ public class ListLogstashLogResponseBody extends TeaModel {
             }
 
             /**
-             * timestamp.
+             * <p>The timestamp when the log was generated. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1531985112420</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

@@ -67,7 +67,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -183,7 +183,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The access addresses of the Elasticsearch cluster. Specify each address in the <code>http://Endpoint of the Elasticsearch cluster:Port number</code> format.</p>
+             * <p>The list of access endpoints for the Elasticsearch instance, in the format of <code>domain name:port number</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>[&quot;<a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200%22%5D">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200&quot;]</a></p>
@@ -194,7 +194,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elasticsearch cluster.</p>
+             * <p>The Elasticsearch instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-n6w1o1x0w001c****</p>
@@ -224,7 +224,7 @@ public class DescribePipelineManagementConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username that is used to access the Elasticsearch cluster.</p>
+             * <p>The username used to access the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>elastic</p>

@@ -67,7 +67,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The index template list information.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -154,7 +157,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * aliases.
+             * <p>The aliases configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}</p>
              */
             public Builder aliases(String aliases) {
                 this.aliases = aliases;
@@ -162,7 +168,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}</p>
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -170,7 +179,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;mydata\&quot;:{}}</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -289,7 +301,16 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataStream.
+             * <p>Indicates whether the data stream is enabled. Valid values:</p>
+             * <ul>
+             * <li><p>true: Enabled.</p>
+             * </li>
+             * <li><p>false (default): Not enabled.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder dataStream(Boolean dataStream) {
                 this.dataStream = dataStream;
@@ -297,7 +318,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ilmPolicy.
+             * <p>The index lifecycle policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my_ilm_policy</p>
              */
             public Builder ilmPolicy(String ilmPolicy) {
                 this.ilmPolicy = ilmPolicy;
@@ -305,7 +329,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * indexPatterns.
+             * <p>The index pattern information.</p>
              */
             public Builder indexPatterns(java.util.List<String> indexPatterns) {
                 this.indexPatterns = indexPatterns;
@@ -313,7 +337,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * indexTemplate.
+             * <p>The index template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-template</p>
              */
             public Builder indexTemplate(String indexTemplate) {
                 this.indexTemplate = indexTemplate;
@@ -321,7 +348,10 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * <p>The index template priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -329,7 +359,7 @@ public class ListIndexTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The component template.</p>
              */
             public Builder template(Template template) {
                 this.template = template;

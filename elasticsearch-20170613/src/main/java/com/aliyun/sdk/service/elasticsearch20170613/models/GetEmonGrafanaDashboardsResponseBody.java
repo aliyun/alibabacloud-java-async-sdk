@@ -93,7 +93,10 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,10 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1E9D9827-2092-4385-9DA1-FC5A8D1DB3F5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,14 @@ public class GetEmonGrafanaDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the Grafana dashboard list is retrieved. Valid values:</p>
+         * <ul>
+         * <li>true: The list is retrieved.</li>
+         * <li>false: The retrieval failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

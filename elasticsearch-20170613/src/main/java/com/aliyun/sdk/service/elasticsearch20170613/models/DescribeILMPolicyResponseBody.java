@@ -67,7 +67,10 @@ public class DescribeILMPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FF44681E-FD41-4FDE-B8DF-295DCDD6****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeILMPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the specified index lifecycle policy.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class DescribeILMPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the index lifecycle policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ilm-history-ilm-policy</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -149,7 +155,10 @@ public class DescribeILMPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * phases.
+             * <p>The content of the index lifecycle policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;cold&quot;:{&quot;minAge&quot;:&quot;30d&quot;,&quot;actions&quot;:{&quot;allocate&quot;:{&quot;numberOfReplicas&quot;:1,&quot;require&quot;:{&quot;boxType&quot;:&quot;warm&quot;}},&quot;setPriority&quot;:{&quot;priority&quot;:100}}},&quot;hot&quot;:{&quot;minAge&quot;:&quot;0s&quot;,&quot;actions&quot;:{&quot;rollover&quot;:{&quot;maxAge&quot;:&quot;30d&quot;,&quot;maxDocs&quot;:10000,&quot;maxSize&quot;:&quot;50gb&quot;},&quot;setPriority&quot;:{&quot;priority&quot;:1000}}},&quot;delete&quot;:{&quot;minAge&quot;:&quot;30d&quot;,&quot;actions&quot;:{&quot;delete&quot;:{}}}}</p>
              */
             public Builder phases(java.util.Map<String, ?> phases) {
                 this.phases = phases;

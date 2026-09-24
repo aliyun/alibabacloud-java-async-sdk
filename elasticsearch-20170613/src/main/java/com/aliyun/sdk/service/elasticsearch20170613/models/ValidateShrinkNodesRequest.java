@@ -117,7 +117,7 @@ public class ValidateShrinkNodesRequest extends Request {
         } 
 
         /**
-         * <p>2</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body.</p>
          */
         public Builder body(java.util.List<ValidateShrinkNodesRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -139,7 +139,10 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * count.
+         * <p>The number of nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder count(Integer count) {
             this.putQueryParameter("count", count);
@@ -148,7 +151,11 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Specifies whether to ignore the cluster health status. Valid values:</p>
+         * <ul>
+         * <li>true: Ignored.</li>
+         * <li>false (default): Not ignored.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -160,10 +167,10 @@ public class ValidateShrinkNodesRequest extends Request {
         }
 
         /**
-         * <p>Returned results:</p>
+         * <p>The type of nodes to scale in. Valid values:</p>
          * <ul>
-         * <li>true: can be scaled in</li>
-         * <li>false: cannot be scaled in.</li>
+         * <li>WORKER: hot node</li>
+         * <li>WORKER_WARM: warm node</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -275,7 +282,10 @@ public class ValidateShrinkNodesRequest extends Request {
             } 
 
             /**
-             * host.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.xx.xx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -283,7 +293,10 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * hostName.
+             * <p>The node name of the cloud-native ACK cluster. You can call the <a href="https://help.aliyun.com/document_detail/183958.html">ListAllNode</a> operation to obtain the node name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-pl32xxxxxxx-data-f-1</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -291,12 +304,11 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * <p>Returned results:</p>
+             * <p>The node type. Valid values:</p>
              * <ul>
-             * <li>true: can be scaled in</li>
-             * <li>false: cannot be scaled in.</li>
+             * <li>WORKER: hot node</li>
+             * <li>WORKER_WARM: warm node</li>
              * </ul>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>WORKER</p>
@@ -307,7 +319,10 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * port.
+             * <p>The access port number of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -315,7 +330,10 @@ public class ValidateShrinkNodesRequest extends Request {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID of the instance node. For example, the zone ID of Shanghai Zone C is cn-shanghai-c.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-c</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

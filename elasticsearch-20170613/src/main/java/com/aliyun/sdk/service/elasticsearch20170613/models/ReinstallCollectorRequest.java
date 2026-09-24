@@ -88,7 +88,7 @@ public class ReinstallCollectorRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The collector ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * <p>The request body parameters. For more information, see the Request body section in this topic.</p>
+         * <p>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -113,11 +113,7 @@ public class ReinstallCollectorRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the shipper is installed. Valid values:</p>
-         * <ul>
-         * <li>true: The shipper is installed.</li>
-         * <li>false: The shipper fails to be installed.</li>
-         * </ul>
+         * <p>The request body parameters. For more information, see the RequestBody section below.</p>
          * 
          * <strong>example:</strong>
          * <p>{

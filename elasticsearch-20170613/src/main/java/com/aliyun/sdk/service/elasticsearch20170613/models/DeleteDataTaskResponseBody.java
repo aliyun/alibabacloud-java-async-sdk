@@ -67,7 +67,7 @@ public class DeleteDataTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
@@ -78,7 +78,7 @@ public class DeleteDataTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned results.</p>
+         * <p>The returned result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

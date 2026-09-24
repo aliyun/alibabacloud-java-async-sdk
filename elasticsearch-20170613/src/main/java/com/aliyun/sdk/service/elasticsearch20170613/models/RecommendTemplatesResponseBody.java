@@ -67,7 +67,10 @@ public class RecommendTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>66B060CF-7381-49C7-9B89-7757927FDA16</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class RecommendTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class RecommendTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * content.
+             * <p>The template configuration content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\n\t\&quot;persistent\&quot;: {\n\t\t\&quot;search\&quot;: {\n\t\t\t\&quot;max_buckets\&quot;: \&quot;10000\&quot;\n\t\t}\n\t}\n}</p>
              */
             public Builder content(String content) {
                 this.content = content;
@@ -149,14 +155,16 @@ public class RecommendTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The template name. Valid values:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
-             * <li></li>
-             * <li></li>
+             * <li>staticSettings: cluster static configuration</li>
+             * <li>dynamicSettings: cluster dynamic configuration</li>
+             * <li>indexTemplate: index template configuration</li>
+             * <li>ilmPolicy: index lifecycle configuration</li>
              * </ul>
-             * <p>**</p>
-             * <hr>
+             * <blockquote>
+             * <p>Advanced Edition instances of version 6.7.0 or later support enabling the index lifecycle template.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>dynamicSettings</p>

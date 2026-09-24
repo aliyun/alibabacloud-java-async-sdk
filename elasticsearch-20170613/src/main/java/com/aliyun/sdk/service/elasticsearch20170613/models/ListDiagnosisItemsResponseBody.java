@@ -67,7 +67,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -232,7 +235,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * billable.
+             * <p>Indicates whether billable tokens are consumed. The value is true when level is ADVANCED.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder billable(Boolean billable) {
                 this.billable = billable;
@@ -240,7 +246,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * category.
+             * <p>The category code. You can use this value to group diagnostic items by category.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CLUSTER_HEALTH</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -248,7 +257,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The diagnostic item description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Diagnoses whether data write operations are backlogged in the cluster. When data write operations are backlogged, BulkReject exceptions occur, which may cause data loss and severe system resource consumption</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -256,7 +268,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * esApiRequired.
+             * <p>Indicates whether the cluster API is accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder esApiRequired(Boolean esApiRequired) {
                 this.esApiRequired = esApiRequired;
@@ -264,7 +279,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * key.
+             * <p>The diagnostic item identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClusterBulkRejectDiagnostic</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -272,7 +290,14 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The diagnostic item level. Valid values:</p>
+             * <ul>
+             * <li>BASIC: basic inspection item (free).</li>
+             * <li>ADVANCED: advanced inspection item (consumes billable tokens).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>BASIC</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -280,7 +305,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The diagnostic item name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Index Write BulkReject Diagnostics</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -288,7 +316,10 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * sortOrder.
+             * <p>The sort order number for display.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder sortOrder(Integer sortOrder) {
                 this.sortOrder = sortOrder;
@@ -296,7 +327,7 @@ public class ListDiagnosisItemsResponseBody extends TeaModel {
             }
 
             /**
-             * supportedModes.
+             * <p>The supported execution modes. Basic items support RULE and AGENT. Advanced items support only AGENT.</p>
              */
             public Builder supportedModes(java.util.List<String> supportedModes) {
                 this.supportedModes = supportedModes;

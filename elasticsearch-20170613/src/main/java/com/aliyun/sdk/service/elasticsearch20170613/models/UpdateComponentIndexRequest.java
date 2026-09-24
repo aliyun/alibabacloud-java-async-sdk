@@ -103,6 +103,7 @@ public class UpdateComponentIndexRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class UpdateComponentIndexRequest extends Request {
         }
 
         /**
+         * <p>The template name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class UpdateComponentIndexRequest extends Request {
         }
 
         /**
-         * _meta.
+         * <p>The metadata, which is used to store remarks and other information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
          */
         public Builder meta(java.util.Map<String, ?> meta) {
             this.putBodyParameter("_meta", meta);
@@ -136,7 +141,7 @@ public class UpdateComponentIndexRequest extends Request {
         }
 
         /**
-         * template.
+         * <p>The composable template information.</p>
          */
         public Builder template(Template template) {
             this.putBodyParameter("template", template);
@@ -217,7 +222,10 @@ public class UpdateComponentIndexRequest extends Request {
             } 
 
             /**
-             * aliases.
+             * <p>The aliases configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder aliases(java.util.Map<String, ?> aliases) {
                 this.aliases = aliases;
@@ -225,7 +233,10 @@ public class UpdateComponentIndexRequest extends Request {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;properties&quot;: { &quot;@timestamp&quot;: { &quot;type&quot;: &quot;date&quot; } } }</p>
              */
             public Builder mappings(java.util.Map<String, ?> mappings) {
                 this.mappings = mappings;
@@ -233,7 +244,10 @@ public class UpdateComponentIndexRequest extends Request {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;index.number_of_replicas&quot;: 0 }</p>
              */
             public Builder settings(java.util.Map<String, ?> settings) {
                 this.settings = settings;

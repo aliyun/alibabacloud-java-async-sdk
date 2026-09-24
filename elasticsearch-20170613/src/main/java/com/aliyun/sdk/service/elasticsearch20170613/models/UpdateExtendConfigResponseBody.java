@@ -67,7 +67,10 @@ public class UpdateExtendConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class UpdateExtendConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result. Valid values:</p>
+         * <ul>
+         * <li>true: The scenario-based configuration template was modified successfully.</li>
+         * <li>false: The scenario-based configuration template failed to be modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

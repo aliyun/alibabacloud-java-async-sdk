@@ -80,7 +80,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The total size of the OpenStore cold stage index for this instance. Unit: bytes.</p>
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of indexes in Cloud Hosting.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -99,7 +99,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total storage space occupied by the current index. Unit: bytes.</p>
+         * <p>The index list details.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -191,7 +191,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the index list.</p>
+             * <p>The total number of managed indexes in the cloud.</p>
              * 
              * <strong>example:</strong>
              * <p>15</p>
@@ -202,7 +202,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of indexes in the OpenStore cold phase.</p>
+             * <p>The total size of managed indexes in the cloud. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>18093942932</p>
@@ -213,7 +213,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the index list was queried.</p>
+             * <p>The total number of OpenStore cold-phase indexes.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>
@@ -224,7 +224,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p>The total size of OpenStore cold-phase indexes for the instance. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>9093942932</p>
@@ -372,7 +372,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the Elasticsearch index.</p>
+             * <p>The time when the index list was queried.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-01-11T05:49:41.114Z</p>
@@ -383,7 +383,18 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * <p>The health status of the index. Valid values:</p>
+             * <ul>
+             * <li><p>green: Healthy.</p>
+             * </li>
+             * <li><p>yellow: Warning.</p>
+             * </li>
+             * <li><p>red: Abnormal.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>green</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -391,7 +402,10 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * ilmExplain.
+             * <p>The full lifecycle status of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{    &quot;indices&quot;: {         &quot;.ds-console-2021.08.18-000002&quot;: {             &quot;index&quot;: &quot;.ds-console-2021.08.18-000002&quot;,             &quot;managed&quot;: true,             &quot;policy&quot;: &quot;console&quot;,             &quot;lifecycle_date_millis&quot;: 1629277498775,             &quot;age&quot;: &quot;2.64h&quot;,             &quot;phase&quot;: &quot;hot&quot;,             &quot;phase_time_millis&quot;: 1629277450334,             &quot;action&quot;: &quot;complete&quot;,             &quot;action_time_millis&quot;: 1629278605586,             &quot;step&quot;: &quot;complete&quot;,             &quot;step_time_millis&quot;: 1629278605586,             &quot;phase_execution&quot;: {                 &quot;policy&quot;: &quot;console&quot;,                 &quot;phase_definition&quot;: {                     &quot;min_age&quot;: &quot;0s&quot;,                     &quot;actions&quot;: {                         &quot;rollover&quot;: {                             &quot;max_size&quot;: &quot;1gb&quot;,                             &quot;max_age&quot;: &quot;1d&quot;,                             &quot;max_docs&quot;: 10000                         },                         &quot;set_priority&quot;: {                             &quot;priority&quot;: 1000                         }                     }                 },                 &quot;version&quot;: 1,                 &quot;modified_date_in_millis&quot;: 1629277370953             }         }     } }</p>
              */
             public Builder ilmExplain(String ilmExplain) {
                 this.ilmExplain = ilmExplain;
@@ -399,12 +413,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The managed status of the index. The following three statuses are supported:</p>
-             * <ul>
-             * <li>following: Hosting.</li>
-             * <li>closing: The instance is being unhosted.</li>
-             * <li>closed: unmanaged.</li>
-             * </ul>
+             * <p>This parameter is deprecated and can be ignored.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -415,16 +424,15 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current storage lifecycle. Value meaning:</p>
+             * <p>The index management status. Valid values:</p>
              * <ul>
-             * <li>warm: warm.</li>
-             * <li>cold: the cold phase.</li>
-             * <li>hot: hot phase.</li>
-             * <li>delete: deletes a stage.</li>
+             * <li><p>following: Managed.</p>
+             * </li>
+             * <li><p>closing: Being unmanaged.</p>
+             * </li>
+             * <li><p>closed: Not managed.</p>
+             * </li>
              * </ul>
-             * <blockquote>
-             * <p> If this parameter is empty, the current index is not managed by the lifecycle.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>closing</p>
@@ -435,7 +443,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The full lifecycle status of the current index.</p>
+             * <p>The index name.</p>
              * 
              * <strong>example:</strong>
              * <p>.kibana_task_manager_1</p>
@@ -446,7 +454,23 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * phase.
+             * <p>The current storage lifecycle phase. Valid values:</p>
+             * <ul>
+             * <li><p>warm: Warm phase.</p>
+             * </li>
+             * <li><p>cold: Cold phase.</p>
+             * </li>
+             * <li><p>hot: Hot phase.</p>
+             * </li>
+             * <li><p>delete: Delete phase.</p>
+             * </li>
+             * </ul>
+             * <blockquote>
+             * <p>If this value is empty, the index is not managed by a lifecycle policy.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>warm</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -454,12 +478,7 @@ public class ListInstanceIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running status of the index. The following three statuses are supported:</p>
-             * <ul>
-             * <li>green: healthy.</li>
-             * <li>yellow: alerts.</li>
-             * <li>red: an exception.</li>
-             * </ul>
+             * <p>The total storage space occupied by the index. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>49298589</p>

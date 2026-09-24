@@ -67,7 +67,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -154,7 +157,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * suggestActions.
+             * <p>The suggested action.</p>
              */
             public Builder suggestActions(java.util.List<String> suggestActions) {
                 this.suggestActions = suggestActions;
@@ -162,7 +165,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * suggestText.
+             * <p>The text of the suggested action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder suggestText(String suggestText) {
                 this.suggestText = suggestText;
@@ -170,7 +176,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * suggestType.
+             * <p>The type of the suggested action.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>promptText</p>
              */
             public Builder suggestType(String suggestType) {
                 this.suggestType = suggestType;
@@ -315,7 +324,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * actionSuggest.
+             * <p>The suggested action.</p>
              */
             public Builder actionSuggest(ActionSuggest actionSuggest) {
                 this.actionSuggest = actionSuggest;
@@ -323,7 +332,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * desc.
+             * <p>The event description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance.SpecModify</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -331,7 +343,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * eventStatus.
+             * <p>The event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executed</p>
              */
             public Builder eventStatus(String eventStatus) {
                 this.eventStatus = eventStatus;
@@ -339,7 +354,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * eventTime.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-08 18:31:01</p>
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -347,7 +365,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * executeFinishTime.
+             * <p>The end time of the O&amp;M execution for the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-08 18:41:01</p>
              */
             public Builder executeFinishTime(String executeFinishTime) {
                 this.executeFinishTime = executeFinishTime;
@@ -355,7 +376,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * executeStartTime.
+             * <p>The start time of the O&amp;M execution for the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-08 18:31:00</p>
              */
             public Builder executeStartTime(String executeStartTime) {
                 this.executeStartTime = executeStartTime;
@@ -363,7 +387,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID of the instance on which the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-a5cb2dece****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -371,7 +398,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * opsChangeId.
+             * <p>The execution ID of the cluster change.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f183728022a1c769e97b4*****</p>
              */
             public Builder opsChangeId(String opsChangeId) {
                 this.opsChangeId = opsChangeId;
@@ -568,7 +598,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * autoAlarm.
+             * <p>Indicates whether automatic alerting is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder autoAlarm(Boolean autoAlarm) {
                 this.autoAlarm = autoAlarm;
@@ -576,7 +609,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * displayName.
+             * <p>The display name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Instance.SpecModify</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -584,7 +620,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * dryRun.
+             * <p>Indicates whether this is a dry run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dryRun(Boolean dryRun) {
                 this.dryRun = dryRun;
@@ -592,7 +631,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The event level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -600,7 +642,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * mustOps.
+             * <p>Indicates whether O&amp;M processing is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder mustOps(Boolean mustOps) {
                 this.mustOps = mustOps;
@@ -608,7 +653,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * product.
+             * <p>The product type of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch</p>
              */
             public Builder product(String product) {
                 this.product = product;
@@ -616,7 +664,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleExecuteTime.
+             * <p>The scheduled execution time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-08 18:41:01</p>
              */
             public Builder scheduleExecuteTime(String scheduleExecuteTime) {
                 this.scheduleExecuteTime = scheduleExecuteTime;
@@ -624,7 +675,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * scheduleFinishTime.
+             * <p>The scheduled end time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-08 18:41:01</p>
              */
             public Builder scheduleFinishTime(String scheduleFinishTime) {
                 this.scheduleFinishTime = scheduleFinishTime;
@@ -632,7 +686,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * showContent.
+             * <p>The event content.</p>
              */
             public Builder showContent(ShowContent showContent) {
                 this.showContent = showContent;
@@ -640,7 +694,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The source of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>webConsole</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -648,7 +705,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -656,7 +716,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserOperator</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -723,7 +786,7 @@ public class ListEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The returned content.</p>
              */
             public Builder result(java.util.List<ResultResult> result) {
                 this.result = result;
@@ -731,7 +794,10 @@ public class ListEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of records.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder total(String total) {
                 this.total = total;

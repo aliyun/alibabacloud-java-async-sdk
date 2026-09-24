@@ -54,7 +54,7 @@ public class DeleteLogstashResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>94B03BBA-A132-42C3-8367-0A0C1C45****</p>

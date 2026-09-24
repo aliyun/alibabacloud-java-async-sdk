@@ -67,7 +67,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DC****</p>
@@ -78,7 +78,7 @@ public class RestartInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The return results.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the Dictionary File. Unit: bytes.</p>
+             * <p>The size of the dictionary file, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2782602</p>
@@ -194,9 +194,9 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The source type. Valid values:</p>
              * <ul>
-             * <li>OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</li>
-             * <li>ORIGIN: Open source Elasticsearch</li>
-             * <li>UPLOAD: Uploaded files</li>
+             * <li>OSS: OSS open storage (the OSS bucket must be publicly readable)</li>
+             * <li>ORIGIN: open-source Elasticsearch</li>
+             * <li>UPLOAD: uploaded file</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -208,12 +208,12 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the dictionary. Valid values:</p>
+             * <p>The dictionary type. Valid values:</p>
              * <ul>
-             * <li>STOP: The STOP word.</li>
-             * <li>MAIN: MAIN Dictionary</li>
-             * <li>SYNONYMS: SYNONYMS</li>
-             * <li>ALI_WS: an Alibaba Dictionary.</li>
+             * <li>STOP: stopword</li>
+             * <li>MAIN: main dictionary</li>
+             * <li>SYNONYMS: synonym dictionary</li>
+             * <li>ALI_WS: Alibaba dictionary</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of performance metrics.</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -321,7 +321,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the node storage space. Unit: GB.</p>
+             * <p>The storage size of the node, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -343,7 +343,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification of data nodes.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.n4.small</p>
@@ -439,7 +439,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of nodes in the cluster.</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -450,7 +450,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the node storage space. Unit: GB.</p>
+             * <p>The storage size of the node, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -461,7 +461,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.</p>
+             * <p>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -472,7 +472,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node specifications of the cluster.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.sn2ne.large</p>
@@ -579,7 +579,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -601,7 +601,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch associated with the specified VPC.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp1k4ec6s7sjdbudw****</p>
@@ -684,7 +684,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The storage space size per data node. Unit: GB.</p>
+             * <p>The storage size of the node, in GB.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -695,7 +695,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.</p>
+             * <p>The storage type of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -706,7 +706,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specification of data nodes.</p>
+             * <p>The node specifications.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.n4.small</p>
@@ -802,7 +802,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The size of the Dictionary File. Unit: bytes.</p>
+             * <p>The size of the dictionary file, in bytes.</p>
              * 
              * <strong>example:</strong>
              * <p>2782602</p>
@@ -826,9 +826,9 @@ public class RestartInstanceResponseBody extends TeaModel {
             /**
              * <p>The source type. Valid values:</p>
              * <ul>
-             * <li>OSS:OSS open storage (the OSS storage space must be publicly readable.)</li>
+             * <li>OSS: OSS open storage (the OSS bucket must be publicly readable)</li>
              * <li>ORIGIN: open-source Elasticsearch</li>
-             * <li>UPLOAD</li>
+             * <li>UPLOAD: uploaded file</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -840,12 +840,12 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the dictionary. Valid values:</p>
+             * <p>The dictionary type. Valid values:</p>
              * <ul>
-             * <li>STOP: The STOP word.</li>
-             * <li>MAIN: MAIN Dictionary</li>
-             * <li>SYNONYMS: SYNONYMS</li>
-             * <li>ALI_WS: an Alibaba Dictionary.</li>
+             * <li>STOP: stopword</li>
+             * <li>MAIN: main dictionary</li>
+             * <li>SYNONYMS: synonym dictionary</li>
+             * <li>ALI_WS: Alibaba dictionary</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1148,7 +1148,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-abc</p>
@@ -1159,7 +1159,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the IK dictionaries.</p>
+             * <p>The IK dictionary configuration.</p>
              */
             public Builder dictList(java.util.List<DictList> dictList) {
                 this.dictList = dictList;
@@ -1167,7 +1167,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The intranet access address of the instance.</p>
+             * <p>The internal network access address of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</p>
@@ -1178,7 +1178,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the instance.</p>
+             * <p>The instance version.</p>
              * 
              * <strong>example:</strong>
              * <p>6.7.0_with_X-Pack</p>
@@ -1189,7 +1189,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>es-cn-n6w1o1x0w001c****</p>
@@ -1200,7 +1200,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of Kibana nodes.</p>
+             * <p>The Kibana node configuration.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -1219,7 +1219,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public port of the Kibana network.</p>
+             * <p>The public port of Kibana.</p>
              * 
              * <strong>example:</strong>
              * <p>5601</p>
@@ -1230,7 +1230,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of dedicated master nodes.</p>
+             * <p>The master node configuration.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -1246,7 +1246,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data nodes.</p>
+             * <p>The number of data nodes in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1257,7 +1257,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of data nodes.</p>
+             * <p>The data node configuration.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1265,8 +1265,8 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the created ECS instance.</p>
-             * <p>Valid values: prepaid and postpaid.</p>
+             * <p>The billing method of the instance.</p>
+             * <p>Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</p>
              * 
              * <strong>example:</strong>
              * <p>postpaid</p>
@@ -1299,8 +1299,13 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the cluster.</p>
-             * <p>Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).</p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>active</strong>: Normal.</li>
+             * <li><strong>activating</strong>: Taking effect.</li>
+             * <li><strong>inactive</strong>: Frozen.</li>
+             * <li><strong>invalid</strong>: Invalid.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>active</p>
@@ -1311,7 +1316,7 @@ public class RestartInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of the synonym dictionaries.</p>
+             * <p>The synonym dictionary configuration.</p>
              */
             public Builder synonymsDicts(java.util.List<SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;

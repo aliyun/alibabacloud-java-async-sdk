@@ -80,8 +80,8 @@ public class StopPipelinesResponseBody extends TeaModel {
         /**
          * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li>true: The pipelines are stopped.</li>
-         * <li>false: The pipelines fail to be stopped.</li>
+         * <li>true: The pipelines are stopped successfully.</li>
+         * <li>false: The pipelines failed to be stopped.</li>
          * </ul>
          * 
          * <strong>example:</strong>

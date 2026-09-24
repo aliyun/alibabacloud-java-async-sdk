@@ -60,7 +60,7 @@ public class DescribeCollectorRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the shipper.</p>
+         * <p>The collector instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

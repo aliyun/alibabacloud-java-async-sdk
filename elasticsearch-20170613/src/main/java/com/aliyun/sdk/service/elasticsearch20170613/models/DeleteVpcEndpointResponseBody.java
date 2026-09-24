@@ -67,7 +67,10 @@ public class DeleteVpcEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,16 @@ public class DeleteVpcEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the endpoint is deleted. Valid values:</p>
+         * <ul>
+         * <li><p>true: The endpoint is deleted.</p>
+         * </li>
+         * <li><p>false: The endpoint failed to be deleted.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -93,7 +93,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The labels of the resource.</p>
+         * <p>The response header information. This parameter is empty and is for reference only. Do not create a dependency on this parameter in your program.</p>
+         * <blockquote>
+         * <p>This parameter is not included in the response example.</p>
+         * </blockquote>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -101,7 +104,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of resources to query.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +115,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of resources that have tags.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6D******</p>
@@ -123,7 +126,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the resource. Fixed to <code>ALIYUN::ELASTICSEARCH::INSTANCE</code>.</p>
+         * <p>The tag resource group.</p>
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -176,7 +179,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The resource count of TagResource entries found.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -272,7 +275,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-oew1q8bev0002****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -280,7 +286,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. The value is fixed as <code>ALIYUN::ELASTICSEARCH::INSTANCE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::ELASTICSEARCH::INSTANCE</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -288,7 +297,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -296,7 +308,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -353,7 +365,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates the ID of a resource.</p>
+             * <p>The tag resource.</p>
              */
             public Builder tagResource(java.util.List<TagResource> tagResource) {
                 this.tagResource = tagResource;

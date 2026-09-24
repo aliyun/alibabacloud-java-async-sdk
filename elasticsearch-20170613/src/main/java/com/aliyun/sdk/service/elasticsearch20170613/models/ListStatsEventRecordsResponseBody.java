@@ -67,7 +67,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -167,7 +170,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * cnt.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder cnt(String cnt) {
                 this.cnt = cnt;
@@ -175,7 +181,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * <p>The event level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Info</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -183,7 +192,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The event status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executed</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -191,7 +203,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UserOperator</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +273,7 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * result.
+             * <p>The returned result.</p>
              */
             public Builder result(java.util.List<ResultResult> result) {
                 this.result = result;
@@ -266,7 +281,10 @@ public class ListStatsEventRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * total.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder total(String total) {
                 this.total = total;

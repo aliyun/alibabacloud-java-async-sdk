@@ -60,7 +60,7 @@ public class GetOpenStoreUsageRequest extends Request {
         } 
 
         /**
-         * <p>es-cn-zvp2cqw1f0020****</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -288,7 +288,7 @@ public class Logstash extends TeaModel {
         } 
 
         /**
-         * config.
+         * <p>The instance configuration.</p>
          */
         public Builder config(java.util.Map<String, String> config) {
             this.config = config;
@@ -296,7 +296,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * createdAt.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-13T03:58:07.253Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -304,7 +307,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * dataNode.
+         * <p>Specifies whether to enable data nodes. This parameter must be set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dataNode(Boolean dataNode) {
             this.dataNode = dataNode;
@@ -312,7 +318,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * description.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-abc</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -320,7 +329,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * endTime.
+         * <p>The expiration time of the subscription instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4749897600000</p>
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -328,7 +340,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * endpointList.
+         * <p>The node information.</p>
          */
         public Builder endpointList(java.util.List<EndpointList> endpointList) {
             this.endpointList = endpointList;
@@ -336,7 +348,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ls-cn-n6w1o5jq****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -344,7 +359,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * networkConfig.
+         * <p>The network configuration.</p>
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -352,7 +367,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * nodeAmount.
+         * <p>The number of nodes in the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nodeAmount(Long nodeAmount) {
             this.nodeAmount = nodeAmount;
@@ -360,7 +378,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * nodeSpec.
+         * <p>The data node configuration.</p>
          */
         public Builder nodeSpec(NodeSpec nodeSpec) {
             this.nodeSpec = nodeSpec;
@@ -368,7 +386,14 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * paymentType.
+         * <p>The billing method of the instance. Valid values:</p>
+         * <ul>
+         * <li>prepaid: subscription</li>
+         * <li>postpaid: pay-as-you-go.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>postpaid</p>
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -376,7 +401,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * protocol.
+         * <p>The access protocol of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP</p>
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -384,7 +412,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * resourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfm2h5vbzd****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -392,7 +423,14 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * status.
+         * <p>The zone status. Valid values:</p>
+         * <ul>
+         * <li>ISOLATION: offline</li>
+         * <li>NORMAL: Normal.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -400,7 +438,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * tags.
+         * <p>The instance tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -408,7 +446,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * updatedAt.
+         * <p>The time when the instance was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-07-18T10:10:04.484Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;
@@ -416,7 +457,14 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * version.
+         * <p>The instance version. Valid values:</p>
+         * <ul>
+         * <li>6.7.0_with_X-Pack</li>
+         * <li>7.4.0_with_X-Pack.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7.0_with_X-Pack</p>
          */
         public Builder version(String version) {
             this.version = version;
@@ -424,7 +472,10 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * zoneCount.
+         * <p>The number of zones for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder zoneCount(Long zoneCount) {
             this.zoneCount = zoneCount;
@@ -432,7 +483,7 @@ public class Logstash extends TeaModel {
         }
 
         /**
-         * zoneInfos.
+         * <p>The zone information.</p>
          */
         public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
             this.zoneInfos = zoneInfos;
@@ -511,7 +562,10 @@ public class Logstash extends TeaModel {
             } 
 
             /**
-             * host.
+             * <p>The IP address of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.xx.xx</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -519,7 +573,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The access port number of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -527,7 +584,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -620,7 +680,10 @@ public class Logstash extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -628,7 +691,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abc</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -636,7 +702,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * <p>The zone in which the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-*</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -644,7 +713,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-def</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -724,7 +796,10 @@ public class Logstash extends TeaModel {
             } 
 
             /**
-             * disk.
+             * <p>The disk size of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder disk(Long disk) {
                 this.disk = disk;
@@ -732,7 +807,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The disk type of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -740,7 +818,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstash.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -807,7 +888,10 @@ public class Logstash extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -815,7 +899,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -882,7 +969,14 @@ public class Logstash extends TeaModel {
             } 
 
             /**
-             * status.
+             * <p>The zone status. Valid values:</p>
+             * <ul>
+             * <li>ISOLATION: offline</li>
+             * <li>NORMAL: Normal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -890,7 +984,10 @@ public class Logstash extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

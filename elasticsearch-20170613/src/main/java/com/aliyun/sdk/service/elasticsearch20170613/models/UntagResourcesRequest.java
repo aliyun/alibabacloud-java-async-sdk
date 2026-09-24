@@ -115,7 +115,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to delete all parts. Default value: <strong>false</strong> . This parameter is valid only when <strong>TagKeys</strong> is not specified.</p>
+         * <p>Specifies whether to delete all tags. Default value: <strong>false</strong>. This parameter is valid only when <strong>TagKeys</strong> is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -127,7 +127,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The resource list that you want to delete.</p>
+         * <p>The list of resources from which you want to delete tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;es-cn-09k1rocex0006****&quot;,&quot;es-cn-oew1rgiev0009****&quot;]</p>
@@ -139,7 +139,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Fixed to <strong>INSTANCE</strong> .</p>
+         * <p>The resource type. Set the value to <strong>INSTANCE</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>
@@ -151,7 +151,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags that you want to delete. The list can contain up to 20 subitems.</p>
+         * <p>The list of tag keys to delete. A maximum of 20 items can be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</p>

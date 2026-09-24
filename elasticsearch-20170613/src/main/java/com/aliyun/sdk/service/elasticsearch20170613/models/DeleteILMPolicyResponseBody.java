@@ -67,7 +67,10 @@ public class DeleteILMPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>694FDC20-0FDD-47C4-B921-BFF902FA****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,16 @@ public class DeleteILMPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result. Valid values:</p>
+         * <ul>
+         * <li><p>true: The specified lifecycle policy definition is deleted.</p>
+         * </li>
+         * <li><p>false: The specified lifecycle policy definition failed to be deleted.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

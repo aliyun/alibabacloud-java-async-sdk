@@ -89,7 +89,7 @@ public class MigrateToOtherZoneRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class MigrateToOtherZoneRequest extends Request {
         }
 
         /**
-         * <p>Verify whether the zone node can be migrated. true indicates that the data is only verified and the migration task is not executed. false indicates that the migration task is executed after the verification is successful.</p>
+         * <p>Specifies whether to perform a dry run of the zone node migration. A value of true indicates that only validation is performed without executing the migration task. A value of false indicates that the migration task is executed after validation passes.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23EBF56B-2DC0-4507-8BE5-B87395DB0FEB</p>
@@ -78,10 +78,10 @@ public class CancelLogstashDeletionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the cluster is restored. Valid values:</p>
+         * <p>Indicates whether the instance is successfully resumed. Valid values:</p>
          * <ul>
-         * <li>true: The cluster is restored.</li>
-         * <li>false: The cluster is not restored.</li>
+         * <li>true: The instance is successfully resumed.</li>
+         * <li>false: The instance failed to be resumed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

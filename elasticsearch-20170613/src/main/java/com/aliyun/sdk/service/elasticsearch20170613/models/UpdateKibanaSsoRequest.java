@@ -90,6 +90,7 @@ public class UpdateKibanaSsoRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +103,11 @@ public class UpdateKibanaSsoRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable Alibaba Cloud account authentication for Kibana. Valid values:</p>
+         * <ul>
+         * <li>true: Enable.</li>
+         * <li>false: Disable.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

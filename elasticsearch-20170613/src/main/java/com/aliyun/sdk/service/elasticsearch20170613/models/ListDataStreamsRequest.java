@@ -88,6 +88,7 @@ public class ListDataStreamsRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,16 @@ public class ListDataStreamsRequest extends Request {
         }
 
         /**
-         * isManaged.
+         * <p>Specifies whether to display only managed indexes. Valid values:</p>
+         * <ul>
+         * <li><p>true: Only managed indexes are displayed.</p>
+         * </li>
+         * <li><p>false (default): All indexes are displayed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isManaged(Boolean isManaged) {
             this.putQueryParameter("isManaged", isManaged);
@@ -109,7 +119,10 @@ public class ListDataStreamsRequest extends Request {
         }
 
         /**
-         * name.
+         * <p>The data stream name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Log1</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);

@@ -82,7 +82,10 @@ public class KibanaNodeConfiguration extends TeaModel {
         } 
 
         /**
-         * amount.
+         * <p>The number of Kibana nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder amount(Long amount) {
             this.amount = amount;
@@ -90,7 +93,10 @@ public class KibanaNodeConfiguration extends TeaModel {
         }
 
         /**
-         * disk.
+         * <p>The storage space of the Kibana node. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder disk(Long disk) {
             this.disk = disk;
@@ -98,7 +104,11 @@ public class KibanaNodeConfiguration extends TeaModel {
         }
 
         /**
+         * <p>The Kibana node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>elasticsearch.sn2ne.large</p>
          */
         public Builder spec(String spec) {
             this.spec = spec;

@@ -74,7 +74,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of an instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeDiagnosisSettingsRequest extends Request {
         }
 
         /**
-         * <p>The language of the returned result. Default value: en.</p>
+         * <p>The language of the response. Default value: en.</p>
          * 
          * <strong>example:</strong>
          * <p>en</p>

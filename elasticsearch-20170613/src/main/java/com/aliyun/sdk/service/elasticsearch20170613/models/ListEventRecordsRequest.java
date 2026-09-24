@@ -143,7 +143,10 @@ public class ListEventRecordsRequest extends Request {
         } 
 
         /**
-         * eventType.
+         * <p>The event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserOperator</p>
          */
         public Builder eventType(String eventType) {
             this.putPathParameter("eventType", eventType);
@@ -152,7 +155,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * beginTime.
+         * <p>The start time of the event query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1746516590000</p>
          */
         public Builder beginTime(String beginTime) {
             this.putQueryParameter("beginTime", beginTime);
@@ -161,7 +167,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * <p>The end time of the event query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1746775790000</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -170,7 +179,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The page number for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -179,7 +191,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of entries per page for a paged query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -188,7 +203,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * termContent.
+         * <p>The filter object content. If this parameter is left empty, event records of all instances are returned. The value varies based on the filter type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
          */
         public Builder termContent(String termContent) {
             this.putQueryParameter("termContent", termContent);
@@ -197,7 +215,10 @@ public class ListEventRecordsRequest extends Request {
         }
 
         /**
-         * termType.
+         * <p>The filter object type. If this parameter is left empty, event records of all types are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InstanceId</p>
          */
         public Builder termType(String termType) {
             this.putQueryParameter("termType", termType);

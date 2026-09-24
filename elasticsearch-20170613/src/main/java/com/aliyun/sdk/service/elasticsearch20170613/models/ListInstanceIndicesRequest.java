@@ -144,7 +144,7 @@ public class ListInstanceIndicesRequest extends Request {
         } 
 
         /**
-         * <p>false</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +157,13 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>false</p>
+         * <p>Specifies whether to retrieve all indexes. Valid values:</p>
+         * <ul>
+         * <li><p>true: Returns the index list including system indexes.</p>
+         * </li>
+         * <li><p>false (default): Returns the index list excluding system indexes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -169,7 +175,13 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>15</p>
+         * <p>Specifies whether to display only managed indexes. Valid values:</p>
+         * <ul>
+         * <li><p>true: Displays only managed indexes.</p>
+         * </li>
+         * <li><p>false (default): Displays all indexes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -181,7 +193,13 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Specifies whether to display only OpenStore cold-phase indexes. Valid values:</p>
+         * <ul>
+         * <li><p>true: Displays only OpenStore cold-phase indexes.</p>
+         * </li>
+         * <li><p>false (default): Displays all indexes.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -193,7 +211,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>1</p>
+         * <p>The index name. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>log-0001</p>
@@ -205,7 +223,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The page number of the instance list. Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -217,7 +235,7 @@ public class ListInstanceIndicesRequest extends Request {
         }
 
         /**
-         * <p>The total size of the index in Cloud Hosting. Unit: bytes.</p>
+         * <p>The number of entries per page for paging. Maximum value: 100. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

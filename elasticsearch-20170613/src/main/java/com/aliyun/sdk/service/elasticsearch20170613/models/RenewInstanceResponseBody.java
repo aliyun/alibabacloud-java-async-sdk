@@ -67,7 +67,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -78,10 +78,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return results:</p>
+         * <p>The returned result. Valid values:</p>
          * <ul>
-         * <li>true: renewal successfully</li>
-         * <li>false: renewal failed</li>
+         * <li>true: The renewal was successful.</li>
+         * <li>false: The renewal failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

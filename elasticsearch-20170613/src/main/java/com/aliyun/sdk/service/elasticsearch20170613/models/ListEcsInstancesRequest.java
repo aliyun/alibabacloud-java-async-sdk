@@ -131,7 +131,7 @@ public class ListEcsInstancesRequest extends Request {
         } 
 
         /**
-         * <p>test</p>
+         * <p>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
@@ -143,7 +143,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
+         * <p>The ECS instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -155,7 +155,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * <p>10</p>
+         * <p>The page number of the returned results. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -167,7 +167,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * <p>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</p>
+         * <p>The number of results per page. Default value: 10. Maximum value: 500.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,11 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * <p>vpc-bp16k1dvzxtmagcva****</p>
+         * <p>The ECS instance tags. The following fields must be included:</p>
+         * <ul>
+         * <li>tagKey: the tag key.</li>
+         * <li>tagValue: the tag value.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</p>
@@ -191,7 +195,7 @@ public class ListEcsInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The VPC ID of the ECS instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp16k1dvzxtmagcva****</p>

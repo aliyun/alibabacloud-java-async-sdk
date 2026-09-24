@@ -88,7 +88,7 @@ public class ListVpcEndpointsRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,8 +101,8 @@ public class ListVpcEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The page number of the list.</p>
+         * <p>Minimum value: 1. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -114,7 +114,7 @@ public class ListVpcEndpointsRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Default value: 20.</p>
+         * <p>The number of entries per page for a paged query. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

@@ -143,7 +143,7 @@ public class ListLogstashRequest extends Request {
         } 
 
         /**
-         * <p>rg-acfm2h5vbzd****</p>
+         * <p>The instance name. Fuzzy match is supported. For example, if you search for an instance named abc, instances named abc, abcde, xyabc, and xabcy may all be returned.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-abc</p>
@@ -155,7 +155,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ls-cn-n6w1o5jq****</p>
@@ -167,7 +167,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>ls-cn-n6w1o5jq****</p>
+         * <p>The page number of the instance list. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,7 +179,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>Details of the request header.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2h5vbzd****</p>
@@ -191,7 +191,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>5.5.3_with_X-Pack</p>
+         * <p>The number of entries per page in Settings for paging. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,7 +203,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The instance tags.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</p>
@@ -215,7 +215,7 @@ public class ListLogstashRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The instance version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.5.3_with_X-Pack</p>

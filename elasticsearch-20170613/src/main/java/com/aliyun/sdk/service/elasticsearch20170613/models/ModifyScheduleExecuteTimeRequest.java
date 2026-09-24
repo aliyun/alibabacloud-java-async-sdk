@@ -87,7 +87,10 @@ public class ModifyScheduleExecuteTimeRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-3h4k3axh33th9****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -96,7 +99,10 @@ public class ModifyScheduleExecuteTimeRequest extends Request {
         }
 
         /**
-         * eventId.
+         * <p>The event ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eb7efbc90864a0***</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("eventId", eventId);
@@ -105,7 +111,10 @@ public class ModifyScheduleExecuteTimeRequest extends Request {
         }
 
         /**
-         * scheduleExecuteTime.
+         * <p>The scheduled execution time in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-30T08:45:00Z</p>
          */
         public Builder scheduleExecuteTime(String scheduleExecuteTime) {
             this.putQueryParameter("scheduleExecuteTime", scheduleExecuteTime);

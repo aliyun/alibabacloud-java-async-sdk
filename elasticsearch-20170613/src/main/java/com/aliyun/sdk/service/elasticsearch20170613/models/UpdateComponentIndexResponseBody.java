@@ -54,7 +54,10 @@ public class UpdateComponentIndexResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

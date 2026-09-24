@@ -89,7 +89,7 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         } 
 
         /**
-         * <p>The shipper type. Valid values:</p>
+         * <p>The collector type. Valid values:</p>
          * <ul>
          * <li>fileBeat</li>
          * <li>metricBeat</li>
@@ -108,7 +108,7 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The shipper version. The shipper version varies based on the type of the machine on which the shipper is deployed. Valid values:</p>
+         * <p>The collector version. The available versions vary depending on the machine type on which the collector is deployed. Valid values:</p>
          * <ul>
          * <li>ECS: 6.8.5_with_community</li>
          * <li>ACK: 6.8.13_with_community</li>
@@ -125,10 +125,10 @@ public class ListDefaultCollectorConfigurationsRequest extends Request {
         }
 
         /**
-         * <p>The type of the machine on which the shipper is deployed. If you do not configure this parameter, the default configuration files of shippers deployed on all types of machines are returned. Valid values:</p>
+         * <p>The type of machine on which the collector is deployed. If you do not specify this parameter, all types are returned. Valid values:</p>
          * <ul>
-         * <li>ECS: ECS instance</li>
-         * <li>ACK: ACK cluster</li>
+         * <li>ECS: Elastic Compute Service instance</li>
+         * <li>ACK: Container Kubernetes cluster</li>
          * </ul>
          * 
          * <strong>example:</strong>

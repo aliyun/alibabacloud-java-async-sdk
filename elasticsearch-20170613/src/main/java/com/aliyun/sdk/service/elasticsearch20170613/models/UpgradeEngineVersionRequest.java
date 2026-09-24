@@ -144,7 +144,7 @@ public class UpgradeEngineVersionRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,14 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * type.
+         * <p>The upgrade type. Valid values:</p>
+         * <ul>
+         * <li>engineVersion (default): major engine version upgrade.</li>
+         * <li>aliVersion: kernel version upgrade.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>engineVersion</p>
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -175,7 +182,10 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version after the upgrade. If type is set to engineVersion, the value is the instance version, such as 6.7. If type is set to aliVersion, the value is the kernel version, such as ali1.2.0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.7</p>
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);
@@ -184,7 +194,7 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * <p>The moderation results.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
@@ -196,13 +206,14 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * <p>The monitoring type. Valid values:</p>
+         * <p>Specifies whether to perform a pre-upgrade check. Valid values:</p>
          * <ul>
-         * <li>checkClusterHealth: Cluster Health Status</li>
-         * <li>checkConfigCompatible: Configuration Compatibility Status</li>
-         * <li>checkClusterResource: resource space status</li>
-         * <li>checkClusterSnapshot: Whether a snapshot exists</li>
+         * <li>true: performs a check.</li>
+         * <li>false (default): does not perform a check.</li>
          * </ul>
+         * <blockquote>
+         * <p>Warning:  The version upgrade check involves checks on cluster YML, plug-in configurations, cluster status, indexes, and resources. Perform a pre-upgrade check before upgrading. Otherwise, upgrade issues may occur.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -214,7 +225,12 @@ public class UpgradeEngineVersionRequest extends Request {
         }
 
         /**
-         * updateStrategy.
+         * <p>The update strategy. Valid values:</p>
+         * <ul>
+         * <li>blue_green: blue-green deployment.</li>
+         * <li>normal: in-place update.</li>
+         * <li>intelligent: intelligent update.</li>
+         * </ul>
          */
         public Builder updateStrategy(String updateStrategy) {
             this.putQueryParameter("updateStrategy", updateStrategy);
@@ -308,7 +324,7 @@ public class UpgradeEngineVersionRequest extends Request {
             } 
 
             /**
-             * enable.
+             * <p>Specifies whether to install or uninstall the plug-in. A value of true indicates install, and a value of false indicates uninstall.</p>
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -316,7 +332,7 @@ public class UpgradeEngineVersionRequest extends Request {
             }
 
             /**
-             * fileVersion.
+             * <p>The fileVersion of the plug-in. Refer to the response of ListUserPlugin.</p>
              */
             public Builder fileVersion(String fileVersion) {
                 this.fileVersion = fileVersion;
@@ -324,7 +340,7 @@ public class UpgradeEngineVersionRequest extends Request {
             }
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -332,7 +348,7 @@ public class UpgradeEngineVersionRequest extends Request {
             }
 
             /**
-             * version.
+             * <p>The Elasticsearch version for the plug-in, such as 7.16.2.</p>
              */
             public Builder version(String version) {
                 this.version = version;

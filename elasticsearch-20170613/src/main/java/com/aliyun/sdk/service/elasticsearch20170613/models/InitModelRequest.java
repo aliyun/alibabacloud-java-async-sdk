@@ -134,6 +134,7 @@ public class InitModelRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,6 +147,7 @@ public class InitModelRequest extends Request {
         }
 
         /**
+         * <p>The API key for the AISearch open platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +160,7 @@ public class InitModelRequest extends Request {
         }
 
         /**
+         * <p>The service registration address of the AISearch open platform.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,6 +173,7 @@ public class InitModelRequest extends Request {
         }
 
         /**
+         * <p>The HTTP protocol type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +186,7 @@ public class InitModelRequest extends Request {
         }
 
         /**
-         * models.
+         * <p>The models to initialize. If this parameter is left empty, all built-in models are initialized.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("models", models);
@@ -191,6 +195,7 @@ public class InitModelRequest extends Request {
         }
 
         /**
+         * <p>The workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,7 +267,19 @@ public class InitModelRequest extends Request {
             } 
 
             /**
-             * modelType.
+             * <p>The model type. Valid values:</p>
+             * <ul>
+             * <li>text_embedding: text embedding</li>
+             * <li>rerank: reranking</li>
+             * <li>doc_split: document splitting</li>
+             * <li>completion: large language model service</li>
+             * <li>query_analyze: query analysis</li>
+             * <li>doc_analyze: document content parsing</li>
+             * <li>img_analyze: image content parsing</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text_embedding</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -270,7 +287,10 @@ public class InitModelRequest extends Request {
             }
 
             /**
-             * serviceId.
+             * <p>The service ID of the AISearch open platform.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ops-text-embedding-**</p>
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;

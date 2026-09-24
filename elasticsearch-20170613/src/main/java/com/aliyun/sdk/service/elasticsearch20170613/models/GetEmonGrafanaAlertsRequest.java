@@ -74,6 +74,7 @@ public class GetEmonGrafanaAlertsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the monitoring alert project, in the format <strong>es-<yourUID></strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -67,7 +67,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -180,7 +183,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * desc.
+             * <p>The description of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -188,7 +194,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The full name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of Replica Shards</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -196,7 +205,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * result.
+             * <p>The diagnostic result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You may need to adjust the numbers of replica shards of some indices as follows: [geoname08 : 0 -&gt; 1][geoname09 : 0 -&gt; 1][geonametest01 : 0 -&gt; 1]</p>
              */
             public Builder result(String result) {
                 this.result = result;
@@ -204,7 +216,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * suggest.
+             * <p>The diagnostic suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You can call the following function in the Elasticsearch API....</p>
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -212,7 +227,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the diagnostic result. Valid values: TEXT (text description), CONSOLE_API (console-triggered), and ES_API (API-triggered).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ES_API</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -292,7 +310,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * detail.
+             * <p>The details of the diagnostic item.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -300,7 +318,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * <p>The health status of the diagnostic item. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YELLOW</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -308,7 +329,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * item.
+             * <p>The name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IndexAliasUseDiagnostic</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -427,7 +451,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * desc.
+             * <p>The description of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Check whether the number of replica shards is optimal and easy to maintain</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -435,7 +462,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * detail.
+             * <p>The details of the diagnostic item.</p>
              */
             public Builder detail(java.util.Map<String, ?> detail) {
                 this.detail = detail;
@@ -443,7 +470,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * item.
+             * <p>The name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IndexAliasUseDiagnostic</p>
              */
             public Builder item(String item) {
                 this.item = item;
@@ -451,7 +481,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The full name of the diagnostic item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Number of Replica Shards</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -467,7 +500,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * suggest.
+             * <p>The diagnostic suggestion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>You can call the following function in the Elasticsearch API....</p>
              */
             public Builder suggest(String suggest) {
                 this.suggest = suggest;
@@ -625,7 +661,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             } 
 
             /**
-             * createTime.
+             * <p>The timestamp when the report was created. Unit: ms.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1535745731000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -633,7 +672,7 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * diagnoseItems.
+             * <p>The list of diagnostic items in the report.</p>
              */
             public Builder diagnoseItems(java.util.List<DiagnoseItems> diagnoseItems) {
                 this.diagnoseItems = diagnoseItems;
@@ -649,7 +688,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * health.
+             * <p>The overall health of the cluster in the report. Valid values: GREEN, YELLOW, RED, and UNKNOWN.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>YELLOW</p>
              */
             public Builder health(String health) {
                 this.health = health;
@@ -657,7 +699,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID of the diagnosed instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -673,7 +718,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * reportId.
+             * <p>The report ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>trigger__2020-08-17T17:09:02</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -681,7 +729,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The diagnostic status. Valid values: SUCCESS, FAILED, and RUNNING.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCESS</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -689,7 +740,10 @@ public class DescribeDiagnoseReportResponseBody extends TeaModel {
             }
 
             /**
-             * trigger.
+             * <p>The method used to trigger the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM</p>
              */
             public Builder trigger(String trigger) {
                 this.trigger = trigger;

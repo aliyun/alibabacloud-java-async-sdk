@@ -124,7 +124,7 @@ public class UpdateDynamicSettingsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The idempotence parameter.</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

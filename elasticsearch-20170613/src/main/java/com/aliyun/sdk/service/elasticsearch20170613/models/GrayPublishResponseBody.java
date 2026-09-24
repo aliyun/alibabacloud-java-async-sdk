@@ -78,7 +78,10 @@ public class GrayPublishResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;

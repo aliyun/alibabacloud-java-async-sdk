@@ -74,6 +74,7 @@ public class ListPipelineIdsRequest extends Request {
         } 
 
         /**
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ListPipelineIdsRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The request body parameters. For more information, see the RequestBody section below.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{     &quot;userName&quot;:&quot;elastic&quot;,     &quot;password&quot;:&quot;xxxxxx&quot; }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

@@ -74,7 +74,7 @@ public class ListDiagnoseIndicesRequest extends Request {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,14 @@ public class ListDiagnoseIndicesRequest extends Request {
         }
 
         /**
-         * <p>The language. Multiple languages are supported.</p>
+         * <p>The language configuration. Default value: browser language. Valid values:</p>
+         * <ul>
+         * <li>en: English</li>
+         * <li>zh: Simplified Chinese</li>
+         * <li>zt: Traditional Chinese</li>
+         * <li>es: Spanish</li>
+         * <li>fr: French</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>en</p>

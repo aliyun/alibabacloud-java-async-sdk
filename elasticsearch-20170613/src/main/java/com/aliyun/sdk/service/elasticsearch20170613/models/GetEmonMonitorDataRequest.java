@@ -74,6 +74,7 @@ public class GetEmonMonitorDataRequest extends Request {
         } 
 
         /**
+         * <p>The project ID. Format: <code>es-&lt;current account ID&gt;</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

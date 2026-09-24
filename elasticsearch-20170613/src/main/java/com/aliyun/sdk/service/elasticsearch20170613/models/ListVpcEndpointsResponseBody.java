@@ -78,7 +78,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the endpoints.</p>
+         * <p>The endpoint details.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -235,15 +235,22 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the endpoint connection. Valid values:</p>
+             * <p>The endpoint connection status. Valid values:</p>
              * <ul>
-             * <li>Pending</li>
-             * <li>Connecting</li>
-             * <li>Connected</li>
-             * <li>Disconnecting</li>
-             * <li>Disconnected</li>
-             * <li>Deleting</li>
-             * <li>ServiceDeleted</li>
+             * <li><p>Pending: Being modified.</p>
+             * </li>
+             * <li><p>Connecting: Connecting.</p>
+             * </li>
+             * <li><p>Connected: Connected.</p>
+             * </li>
+             * <li><p>Disconnecting: Disconnecting.</p>
+             * </li>
+             * <li><p>Disconnected: Not connected.</p>
+             * </li>
+             * <li><p>Deleting: Being deleted.</p>
+             * </li>
+             * <li><p>ServiceDeleted: The service associated with the endpoint has been deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -268,8 +275,10 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             /**
              * <p>The business status of the endpoint. Valid values:</p>
              * <ul>
-             * <li>Normal</li>
-             * <li>FinancialLocked</li>
+             * <li><p>Normal: Normal.</p>
+             * </li>
+             * <li><p>FinancialLocked: Financial lock.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -281,7 +290,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name of the endpoint. The domain name is used for connection configuration.</p>
+             * <p>The endpoint domain name, which is used for connection configuration.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-bp18s6wy9420wdi4****.epsrv-bp1bz3efowa4kc0****.cn-hangzhou.privatelink.aliyuncs.com</p>
@@ -292,7 +301,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint.</p>
+             * <p>The endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ep-bp1tah7zbrwmkjef****</p>
@@ -303,7 +312,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the endpoint.</p>
+             * <p>The endpoint name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -314,12 +323,16 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the endpoint. Valid values:</p>
+             * <p>The endpoint status. Valid values:</p>
              * <ul>
-             * <li>Creating</li>
-             * <li>Active</li>
-             * <li>Pending</li>
-             * <li>Deleting</li>
+             * <li><p>Creating: Being created.</p>
+             * </li>
+             * <li><p>Active: Active.</p>
+             * </li>
+             * <li><p>Pending: Being modified.</p>
+             * </li>
+             * <li><p>Deleting: Being deleted.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -331,7 +344,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+             * <p>The ID of the endpoint service associated with the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>epsrv-bp1w0p3jdirbfmt6****</p>
@@ -342,7 +355,7 @@ public class ListVpcEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the endpoint service with which the endpoint is associated.</p>
+             * <p>The name of the endpoint service associated with the endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>com.aliyuncs.privatelink.cn-hangzhou.epsrv-bp1w0p3jdirbfmt6****</p>

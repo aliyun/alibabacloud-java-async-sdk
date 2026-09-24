@@ -74,7 +74,10 @@ public class ValidateSlrPermissionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>A client-generated token used to ensure the idempotence of the request. The value must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -83,6 +86,8 @@ public class ValidateSlrPermissionRequest extends Request {
         }
 
         /**
+         * <p>The name of the service-linked role. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- AliyunServiceRoleForElasticsearchOps: used to perform elastic scaling tasks for clusters- AliyunServiceRoleForElasticsearchCollector: used to create and manage Beats collectors</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

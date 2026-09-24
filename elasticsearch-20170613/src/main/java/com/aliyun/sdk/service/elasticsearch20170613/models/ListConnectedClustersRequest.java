@@ -60,7 +60,7 @@ public class ListConnectedClustersRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the current instance.</p>
+         * <p>The current instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

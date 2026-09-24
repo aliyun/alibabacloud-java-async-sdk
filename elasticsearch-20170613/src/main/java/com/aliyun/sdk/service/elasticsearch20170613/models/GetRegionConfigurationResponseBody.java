@@ -67,7 +67,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6F******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The region configuration information returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * maxAmount.
+             * <p>The maximum number of client nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -149,7 +155,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minAmount.
+             * <p>The minimum number of client nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -242,7 +251,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -250,7 +262,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -258,7 +273,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minSize.
+             * <p>The minimum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -266,7 +284,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * scaleLimit.
+             * <p>The maximum value that can be set as a continuous value for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18</p>
              */
             public Builder scaleLimit(Integer scaleLimit) {
                 this.scaleLimit = scaleLimit;
@@ -372,7 +393,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -380,7 +404,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -388,7 +415,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minSize.
+             * <p>The minimum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -396,7 +426,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * scaleLimit.
+             * <p>The maximum value that can be set as a continuous value for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder scaleLimit(Integer scaleLimit) {
                 this.scaleLimit = scaleLimit;
@@ -471,7 +504,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * maxAmount.
+             * <p>The maximum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -479,7 +515,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minAmount.
+             * <p>The minimum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -598,7 +637,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * diskEncryption.
+             * <p>Indicates whether disk encryption is supported. Valid values:</p>
+             * <ul>
+             * <li><p>true: Supported.</p>
+             * </li>
+             * <li><p>false: Not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -606,7 +654,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -614,7 +665,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -622,7 +676,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minSize.
+             * <p>The minimum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -630,7 +687,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * scaleLimit.
+             * <p>The maximum value that can be set as a continuous value for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder scaleLimit(Integer scaleLimit) {
                 this.scaleLimit = scaleLimit;
@@ -718,7 +778,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * amountRange.
+             * <p>The range of warm node counts.</p>
              */
             public Builder amountRange(AmountRange amountRange) {
                 this.amountRange = amountRange;
@@ -726,7 +786,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * diskList.
+             * <p>The disk configuration list.</p>
              */
             public Builder diskList(java.util.List<DiskList> diskList) {
                 this.diskList = diskList;
@@ -801,7 +861,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The supported major version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.5_with_X-Pack</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -809,7 +872,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The full name of the supported minor version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.5.3_with_X-Pack</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -889,7 +955,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * memory.
+             * <p>The minimum memory size required to enable JVM garbage collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -972,7 +1041,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * maxAmount.
+             * <p>The maximum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -980,7 +1052,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minAmount.
+             * <p>The minimum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -1047,7 +1122,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * amountRange.
+             * <p>The allowed range of node counts.</p>
              */
             public Builder amountRange(KibanaNodePropertiesAmountRange amountRange) {
                 this.amountRange = amountRange;
@@ -1148,7 +1223,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1156,7 +1234,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -1164,7 +1245,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minSize.
+             * <p>The minimum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -1172,7 +1256,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * scaleLimit.
+             * <p>The maximum value that can be set as a continuous value for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder scaleLimit(Integer scaleLimit) {
                 this.scaleLimit = scaleLimit;
@@ -1239,7 +1326,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * maxAmount.
+             * <p>The maximum number of data nodes allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -1247,7 +1337,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minAmount.
+             * <p>The minimum number of data nodes allowed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -1379,7 +1472,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * cpuCount.
+             * <p>The number of CPU cores for the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder cpuCount(Integer cpuCount) {
                 this.cpuCount = cpuCount;
@@ -1387,7 +1483,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The disk size for the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>44000</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1395,7 +1494,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>local_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1403,7 +1505,14 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * <p>Indicates whether the specification is available for purchase. Valid values:</p>
+             * <ul>
+             * <li>true: Available.</li>
+             * <li>false: Not available.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -1411,7 +1520,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * memorySize.
+             * <p>The memory size of the node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder memorySize(Integer memorySize) {
                 this.memorySize = memorySize;
@@ -1419,7 +1531,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1427,7 +1542,18 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * specGroupType.
+             * <p>The storage type. Valid values:</p>
+             * <ul>
+             * <li><p>common: cloud disk</p>
+             * </li>
+             * <li><p>local_efficiency: local SATA disk</p>
+             * </li>
+             * <li><p>local_ssd: local SSD</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>local_efficiency</p>
              */
             public Builder specGroupType(String specGroupType) {
                 this.specGroupType = specGroupType;
@@ -1494,7 +1620,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * key.
+             * <p>The version available for selection on the purchase page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.5</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1502,7 +1631,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * <p>The detailed version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.5.3</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1569,7 +1701,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * instanceCategory.
+             * <p>The instance category. Valid values:</p>
+             * <ul>
+             * <li><p>advanced: Advanced Edition.</p>
+             * </li>
+             * <li><p>x-pack: Commercial Edition.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>x-pack</p>
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -1577,7 +1718,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * supportVersionList.
+             * <p>The supported Elasticsearch version information.</p>
              */
             public Builder supportVersionList(java.util.List<SupportVersionList> supportVersionList) {
                 this.supportVersionList = supportVersionList;
@@ -1644,7 +1785,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * maxAmount.
+             * <p>The maximum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder maxAmount(Integer maxAmount) {
                 this.maxAmount = maxAmount;
@@ -1652,7 +1796,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minAmount.
+             * <p>The minimum number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder minAmount(Integer minAmount) {
                 this.minAmount = minAmount;
@@ -1771,7 +1918,16 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * diskEncryption.
+             * <p>Indicates whether disk encryption is supported. Valid values:</p>
+             * <ul>
+             * <li><p>true: Supported.</p>
+             * </li>
+             * <li><p>false: Not supported.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -1779,7 +1935,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The disk storage type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1787,7 +1946,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * maxSize.
+             * <p>The maximum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5120</p>
              */
             public Builder maxSize(Integer maxSize) {
                 this.maxSize = maxSize;
@@ -1795,7 +1957,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * minSize.
+             * <p>The minimum allowed disk size.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder minSize(Integer minSize) {
                 this.minSize = minSize;
@@ -1803,7 +1968,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * scaleLimit.
+             * <p>The maximum value that can be set as a continuous value for the disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2048</p>
              */
             public Builder scaleLimit(Integer scaleLimit) {
                 this.scaleLimit = scaleLimit;
@@ -1891,7 +2059,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * amountRange.
+             * <p>The range of node counts.</p>
              */
             public Builder amountRange(WarmNodePropertiesAmountRange amountRange) {
                 this.amountRange = amountRange;
@@ -1899,7 +2067,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * diskList.
+             * <p>The disk configuration list.</p>
              */
             public Builder diskList(java.util.List<WarmNodePropertiesDiskList> diskList) {
                 this.diskList = diskList;
@@ -1907,7 +2075,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The specification name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(java.util.List<String> spec) {
                 this.spec = spec;
@@ -2221,7 +2392,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * clientNodeAmountRange.
+             * <p>The range of client node counts.</p>
              */
             public Builder clientNodeAmountRange(ClientNodeAmountRange clientNodeAmountRange) {
                 this.clientNodeAmountRange = clientNodeAmountRange;
@@ -2229,7 +2400,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * clientNodeDiskList.
+             * <p>The allowed disk values for client nodes.</p>
              */
             public Builder clientNodeDiskList(java.util.List<ClientNodeDiskList> clientNodeDiskList) {
                 this.clientNodeDiskList = clientNodeDiskList;
@@ -2245,7 +2416,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * createUrl.
+             * <p>The URL of the purchase page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://common-buy.aliyun.com/?commodityCode=elasticsearch&orderType=BUY#/buy">https://common-buy.aliyun.com/?commodityCode=elasticsearch&amp;orderType=BUY#/buy</a></p>
              */
             public Builder createUrl(String createUrl) {
                 this.createUrl = createUrl;
@@ -2253,7 +2427,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * dataDiskList.
+             * <p>The allowed disk values for data nodes.</p>
              */
             public Builder dataDiskList(java.util.List<DataDiskList> dataDiskList) {
                 this.dataDiskList = dataDiskList;
@@ -2261,7 +2435,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * elasticNodeProperties.
+             * <p>The elastic node configuration.</p>
              */
             public Builder elasticNodeProperties(ElasticNodeProperties elasticNodeProperties) {
                 this.elasticNodeProperties = elasticNodeProperties;
@@ -2269,7 +2443,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * env.
+             * <p>The environment flag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>production</p>
              */
             public Builder env(String env) {
                 this.env = env;
@@ -2285,7 +2462,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * esVersionsLatestList.
+             * <p>The list of Elasticsearch versions available for purchase.</p>
              */
             public Builder esVersionsLatestList(java.util.List<EsVersionsLatestList> esVersionsLatestList) {
                 this.esVersionsLatestList = esVersionsLatestList;
@@ -2301,7 +2478,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * jvmConfine.
+             * <p>The JVM validation configuration.</p>
              */
             public Builder jvmConfine(JvmConfine jvmConfine) {
                 this.jvmConfine = jvmConfine;
@@ -2309,7 +2486,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaNodeProperties.
+             * <p>The Kibana node configuration.</p>
              */
             public Builder kibanaNodeProperties(KibanaNodeProperties kibanaNodeProperties) {
                 this.kibanaNodeProperties = kibanaNodeProperties;
@@ -2325,7 +2502,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * masterDiskList.
+             * <p>The allowed disk values for dedicated master nodes.</p>
              */
             public Builder masterDiskList(java.util.List<MasterDiskList> masterDiskList) {
                 this.masterDiskList = masterDiskList;
@@ -2341,7 +2518,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * node.
+             * <p>The node configuration.</p>
              */
             public Builder node(Node node) {
                 this.node = node;
@@ -2349,7 +2526,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpecList.
+             * <p>The list of data node specifications.</p>
              */
             public Builder nodeSpecList(java.util.List<NodeSpecList> nodeSpecList) {
                 this.nodeSpecList = nodeSpecList;
@@ -2357,7 +2534,10 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * <p>The current region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2365,7 +2545,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * supportVersions.
+             * <p>The supported version configurations.</p>
              */
             public Builder supportVersions(java.util.List<SupportVersions> supportVersions) {
                 this.supportVersions = supportVersions;
@@ -2373,7 +2553,7 @@ public class GetRegionConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * warmNodeProperties.
+             * <p>The warm node configuration.</p>
              */
             public Builder warmNodeProperties(WarmNodeProperties warmNodeProperties) {
                 this.warmNodeProperties = warmNodeProperties;

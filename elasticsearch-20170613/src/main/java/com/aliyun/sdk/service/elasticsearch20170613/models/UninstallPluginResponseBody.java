@@ -67,7 +67,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
@@ -78,7 +78,7 @@ public class UninstallPluginResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of plug-ins to be unloaded. If the unloading fails, an exception is returned.</p>
+         * Result.
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

@@ -59,7 +59,10 @@ public class GetRegionConfigurationRequest extends Request {
         } 
 
         /**
-         * zoneId.
+         * <p>The current zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-f</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("zoneId", zoneId);

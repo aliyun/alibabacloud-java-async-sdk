@@ -80,7 +80,7 @@ public class ListNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The header of the response.</p>
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E1FD7642-7C40-4FF2-9C0F-21F1A1746F70</p>
@@ -99,7 +99,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned result.</p>
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -152,7 +152,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of entries returned.</p>
+             * <p>The total number of returned records.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -233,10 +233,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the IP address. Valid values:</p>
+             * <p>The IP address type. Valid values:</p>
              * <ul>
-             * <li>public: public IP address</li>
-             * <li>private: private IP address</li>
+             * <li>public: public IP address.</li>
+             * <li>private: private IP address.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -307,7 +307,7 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>abc</p>
@@ -318,7 +318,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>xyz</p>
@@ -466,12 +466,12 @@ public class ListNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the shipper on the ECS instance. Valid values:</p>
+             * <p>The status of each collector on the ECS instance. Valid values:</p>
              * <ul>
-             * <li>heartOk: The heartbeat is normal.</li>
-             * <li>heartLost: The heartbeat is abnormal.</li>
-             * <li>uninstalled: The shipper is not installed.</li>
-             * <li>failed: The shipper fails to be installed.</li>
+             * <li>heartOk: Normal heartbeat.</li>
+             * <li>heartLost: Abnormal heartbeat.</li>
+             * <li>uninstalled: Not installed.</li>
+             * <li>failed: Installation failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -483,10 +483,10 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Cloud Assistant client is installed. Valid values:</p>
+             * <p>Indicates whether Cloud Assistant is enabled. Valid values:</p>
              * <ul>
-             * <li>true: installed</li>
-             * <li>false: not installed</li>
+             * <li>true: Enabled.</li>
+             * <li>false: Not enabled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -498,7 +498,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
+             * <p>The ECS instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i-bp13y63575oypr****</p>
@@ -509,7 +509,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
+             * <p>The ECS instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>ECS_beat</p>
@@ -520,7 +520,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses of the ECS instance.</p>
+             * <p>The list of IP address information for the ECS instance.</p>
              */
             public Builder ipAddress(java.util.List<IpAddress> ipAddress) {
                 this.ipAddress = ipAddress;
@@ -530,8 +530,8 @@ public class ListNodesResponseBody extends TeaModel {
             /**
              * <p>The operating system type of the ECS instance. Valid values:</p>
              * <ul>
-             * <li>windows: Windows Server</li>
-             * <li>linux: Linux</li>
+             * <li>windows: Windows Server.</li>
+             * <li>linux: Linux.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,12 +543,12 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the ECS instance. Valid values:</p>
+             * <p>The ECS instance status. Valid values:</p>
              * <ul>
-             * <li>running: The instance is running.</li>
-             * <li>starting: The instance is being started.</li>
-             * <li>stopping: The instance is being stopped.</li>
-             * <li>stopped: The instance is stopped.</li>
+             * <li>running: Running.</li>
+             * <li>starting: Starting.</li>
+             * <li>stopping: Stopping.</li>
+             * <li>stopped: Stopped.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -560,7 +560,7 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags of the ECS instance.</p>
+             * <p>The tag information of the ECS instance.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

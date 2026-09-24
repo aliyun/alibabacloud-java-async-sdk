@@ -116,10 +116,11 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>es-cn-n6w1o1x0w001c****</p>
+         * <p>es-cn-vo93ngti8000a****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -128,7 +129,10 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * endpointName.
+         * <p>The endpoint name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-text-kibana</p>
          */
         public Builder endpointName(String endpointName) {
             this.putBodyParameter("endpointName", endpointName);
@@ -137,7 +141,7 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * securityGroups.
+         * <p>The list of security groups.</p>
          */
         public Builder securityGroups(java.util.List<String> securityGroups) {
             this.putBodyParameter("securityGroups", securityGroups);
@@ -146,7 +150,10 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>A client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
@@ -155,7 +162,10 @@ public class UpdateKibanaPvlNetworkRequest extends Request {
         }
 
         /**
-         * pvlId.
+         * <p>The Kibana private network connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-vo93ngti8000a****-kibana-internal-internal</p>
          */
         public Builder pvlId(String pvlId) {
             this.putQueryParameter("pvlId", pvlId);

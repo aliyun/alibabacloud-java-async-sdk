@@ -67,7 +67,10 @@ public class UpdateDescriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FDF34727-1664-44C1-A8DA-3EB72D60****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class UpdateDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -128,7 +131,10 @@ public class UpdateDescriptionResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The updated instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyunes_test_name</p>
              */
             public Builder description(String description) {
                 this.description = description;

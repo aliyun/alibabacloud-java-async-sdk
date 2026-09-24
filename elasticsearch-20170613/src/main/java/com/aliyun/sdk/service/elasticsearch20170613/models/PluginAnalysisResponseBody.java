@@ -78,7 +78,7 @@ public class PluginAnalysisResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -183,7 +183,10 @@ public class PluginAnalysisResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plugin description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -191,7 +194,10 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * elasticsearchVersion.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder elasticsearchVersion(String elasticsearchVersion) {
                 this.elasticsearchVersion = elasticsearchVersion;
@@ -199,7 +205,10 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>plugin_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -207,7 +216,10 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * securityPolicy.
+             * <p>The security policy of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>null</p>
              */
             public Builder securityPolicy(String securityPolicy) {
                 this.securityPolicy = securityPolicy;
@@ -215,7 +227,10 @@ public class PluginAnalysisResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

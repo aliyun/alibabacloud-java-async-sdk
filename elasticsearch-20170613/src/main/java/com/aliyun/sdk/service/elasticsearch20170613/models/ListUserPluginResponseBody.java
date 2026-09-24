@@ -80,7 +80,10 @@ public class ListUserPluginResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;totalCount\&quot;: 1, \&quot;X-Total-Count\&quot;: 1}</p>
          */
         public Builder headers(java.util.Map<String, ?> headers) {
             this.headers = headers;
@@ -88,7 +91,10 @@ public class ListUserPluginResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EEF8FAE-EEDD***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,7 @@ public class ListUserPluginResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result array.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -227,7 +233,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * description.
+             * <p>The plug-in description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The plugin***</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -235,7 +244,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * elasticsearchVersion.
+             * <p>The Elasticsearch version of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder elasticsearchVersion(String elasticsearchVersion) {
                 this.elasticsearchVersion = elasticsearchVersion;
@@ -243,7 +255,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * fileVersion.
+             * <p>The unique identifier of the plug-in.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CAEQaRiBgIDI2tie6hkiIGIwM2I3MjZmNjk3YzR***</p>
              */
             public Builder fileVersion(String fileVersion) {
                 this.fileVersion = fileVersion;
@@ -251,7 +266,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dynamic-name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -259,7 +277,14 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The plug-in source. Valid values:</p>
+             * <ul>
+             * <li>USER: custom plug-in.</li>
+             * <li>SYSTEM: system preset plug-in.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -267,7 +292,20 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The plug-in status. Valid values: </p>
+             * <ul>
+             * <li>INSTALLED</li>
+             * <li>UNINSTALLED</li>
+             * <li>INSTALLING</li>
+             * <li>UNINSTALLING</li>
+             * <li>UPGRADING</li>
+             * <li>FAILED</li>
+             * <li>UNKNOWN</li>
+             * <li>UPLOADING</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>UNINSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -275,7 +313,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -381,7 +422,7 @@ public class ListUserPluginResponseBody extends TeaModel {
             } 
 
             /**
-             * bingoPlugins.
+             * <p>The list of plug-ins with the same name.</p>
              */
             public Builder bingoPlugins(java.util.List<BingoPlugins> bingoPlugins) {
                 this.bingoPlugins = bingoPlugins;
@@ -389,7 +430,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The plug-in name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ct-test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -397,7 +441,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * source.
+             * <p>The plug-in source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -405,7 +452,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * <p>The plug-in status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>UNINSTALLED</p>
              */
             public Builder state(String state) {
                 this.state = state;
@@ -413,7 +463,10 @@ public class ListUserPluginResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The plug-in version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder version(String version) {
                 this.version = version;

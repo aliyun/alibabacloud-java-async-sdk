@@ -80,7 +80,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -149,7 +152,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * X-Total-Count.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder xTotalCount(Long xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -203,7 +209,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * name.
+             * <p>The name of the lifecycle policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>synthetics</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +279,14 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * codec.
+             * <p>The index compression method. Valid values:</p>
+             * <ul>
+             * <li>LZ4: The default compression algorithm of Elasticsearch. It provides fast compression and decompression but a relatively lower compression ratio.</li>
+             * <li>best_compression: Uses the best_compression algorithm for compression, which provides a higher compression ratio.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>best_compression</p>
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -278,7 +294,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * lifecycle.
+             * <p>The index lifecycle configuration.</p>
              */
             public Builder lifecycle(Lifecycle lifecycle) {
                 this.lifecycle = lifecycle;
@@ -332,7 +348,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * index.
+             * <p>The index information.</p>
              */
             public Builder index(Index index) {
                 this.index = index;
@@ -386,7 +402,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * settings.
+             * <p>The settings configuration of the template.</p>
              */
             public Builder settings(Settings settings) {
                 this.settings = settings;
@@ -466,7 +482,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * _meta.
+             * <p>The metadata, which is used to store information such as remarks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ &quot;description&quot;: &quot;set number of shards to one&quot; }</p>
              */
             public Builder meta(java.util.Map<String, ?> meta) {
                 this.meta = meta;
@@ -474,7 +493,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The composable template object.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -482,7 +501,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the composable template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder version(Long version) {
                 this.version = version;
@@ -562,7 +584,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             } 
 
             /**
-             * composed.
+             * <p>The information about index templates that reference this composable template.</p>
              */
             public Builder composed(java.util.List<String> composed) {
                 this.composed = composed;
@@ -570,7 +592,7 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * content.
+             * <p>The content of the composable template.</p>
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -578,7 +600,10 @@ public class ListComponentIndicesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the composable template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>synthetics-settings</p>
              */
             public Builder name(String name) {
                 this.name = name;

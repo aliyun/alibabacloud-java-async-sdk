@@ -74,7 +74,7 @@ public class ListTagsRequest extends Request {
         } 
 
         /**
-         * <p>The return results.</p>
+         * <p>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -86,7 +86,7 @@ public class ListTagsRequest extends Request {
         }
 
         /**
-         * <p>The tag value of the ENI.</p>
+         * <p>The resource type. Set to INSTANCE.</p>
          * 
          * <strong>example:</strong>
          * <p>INSTANCE</p>

@@ -67,7 +67,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -128,7 +131,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * gcName.
+             * <p>The name of the garbage collector. Valid values: CMS and G1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CMS</p>
              */
             public Builder gcName(String gcName) {
                 this.gcName = gcName;
@@ -221,7 +227,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * fileSize.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -229,7 +238,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliws_ext_dict.txt</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,7 +249,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -245,7 +260,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the dictionary file. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALI_WS</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -351,7 +369,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -359,7 +380,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -367,7 +391,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The storage type of the node. Only cloud_efficiency (ultra disk) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -375,7 +402,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -383,7 +413,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The description of the node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -476,7 +509,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * fileSize.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -484,7 +520,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -492,7 +531,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -500,7 +542,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the dictionary file. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -619,7 +664,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -627,7 +675,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -635,7 +686,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * <p>Indicates whether cloud disk encryption is enabled for the node. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -643,7 +697,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The storage type of the node. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -651,7 +708,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.sn2ne.large</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -659,7 +719,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The description of the node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -739,7 +802,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * endpoint.
+             * <p>The private endpoint of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-xx-cn-hangzhou-h.elasticsearch.aliyuncs.com</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -747,7 +813,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>vswitchId</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxx</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -755,7 +824,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-i</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -848,7 +920,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * fileSize.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder fileSize(Integer fileSize) {
                 this.fileSize = fileSize;
@@ -856,7 +931,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>deploy_0.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -864,7 +942,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The source type of the dictionary file. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -872,7 +953,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The type of the dictionary to update. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MAIN</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -965,7 +1049,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -973,7 +1060,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage size of a single node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -981,7 +1071,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -989,7 +1082,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The description of the node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -1095,7 +1191,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -1103,7 +1202,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1111,7 +1213,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1119,7 +1224,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1127,7 +1235,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The description of the node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -1207,7 +1318,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * groupName.
+             * <p>The name of the whitelist group. The default group is included by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1215,7 +1329,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ips.
+             * <p>The list of IP addresses in the whitelist group.</p>
              */
             public Builder ips(java.util.List<String> ips) {
                 this.ips = ips;
@@ -1223,7 +1337,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * whiteIpType.
+             * <p>The whitelist type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE_ES</p>
              */
             public Builder whiteIpType(String whiteIpType) {
                 this.whiteIpType = whiteIpType;
@@ -1329,7 +1446,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * type.
+             * <p>The network type. Only Virtual Private Cloud (VPC) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1337,7 +1457,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-abc</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1345,7 +1468,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vsArea.
+             * <p>The zone where the instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder vsArea(String vsArea) {
                 this.vsArea = vsArea;
@@ -1353,7 +1479,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-abc</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -1361,7 +1490,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * whiteIpGroupList.
+             * <p>The whitelist group list.</p>
              */
             public Builder whiteIpGroupList(java.util.List<WhiteIpGroupList> whiteIpGroupList) {
                 this.whiteIpGroupList = whiteIpGroupList;
@@ -1493,7 +1622,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * disk.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1501,7 +1633,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * <p>Indicates whether cloud disk encryption is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -1517,7 +1652,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The disk type of the node. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_ssd</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1525,7 +1663,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * performanceLevel.
+             * <p>The performance level (PL) of the ESSD. This parameter is required when diskType is set to cloud_essd. Valid values: PL1, PL2, and PL3.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1533,7 +1674,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1541,7 +1685,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The node specifications description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -1634,7 +1781,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * fileSize.
+             * <p>The size of the dictionary file. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2782602</p>
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -1642,7 +1792,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>The name of the dictionary file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SYSTEM_MAIN.dic</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1650,7 +1803,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * sourceType.
+             * <p>The source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGIN</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1658,7 +1814,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * <p>The dictionary type. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>STOP</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1725,7 +1884,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * tagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1733,7 +1895,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dev</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1852,7 +2017,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * amount.
+             * <p>The number of nodes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -1860,7 +2028,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * disk.
+             * <p>The storage space of the node. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder disk(Integer disk) {
                 this.disk = disk;
@@ -1868,7 +2039,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskEncryption.
+             * <p>Indicates whether cloud disk encryption is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder diskEncryption(Boolean diskEncryption) {
                 this.diskEncryption = diskEncryption;
@@ -1876,7 +2050,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * diskType.
+             * <p>The storage type of the node. Only cloud_efficiency (ultra disk) is supported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_efficiency</p>
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1884,7 +2061,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * <p>The node specifications. For more information about specifications, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>elasticsearch.n4.small</p>
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -1892,7 +2072,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * specInfo.
+             * <p>The description of the node specifications.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1C 2G</p>
              */
             public Builder specInfo(String specInfo) {
                 this.specInfo = specInfo;
@@ -1959,7 +2142,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * status.
+             * <p>The zone status. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1967,7 +2153,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2762,7 +2951,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * advancedDedicateMaster.
+             * <p>Indicates whether the instance contains dedicated master nodes. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
                 this.advancedDedicateMaster = advancedDedicateMaster;
@@ -2770,7 +2962,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * advancedSetting.
+             * <p>The advanced settings.</p>
              */
             public Builder advancedSetting(AdvancedSetting advancedSetting) {
                 this.advancedSetting = advancedSetting;
@@ -2778,7 +2970,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * aliwsDicts.
+             * <p>The Alibaba Cloud tokenizer dictionary configuration.</p>
              */
             public Builder aliwsDicts(java.util.List<AliwsDicts> aliwsDicts) {
                 this.aliwsDicts = aliwsDicts;
@@ -2786,7 +2978,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * archType.
+             * <p>The deployment mode. Architecture type:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder archType(String archType) {
                 this.archType = archType;
@@ -2794,7 +2989,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * clientNodeConfiguration.
+             * <p>The configuration information of the client node.</p>
              */
             public Builder clientNodeConfiguration(ClientNodeConfiguration clientNodeConfiguration) {
                 this.clientNodeConfiguration = clientNodeConfiguration;
@@ -2802,7 +2997,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * createdAt.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-13T03:58:07.253Z</p>
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
@@ -2810,7 +3008,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * dedicateMaster.
+             * <p><strong>[Deprecated]</strong> The dedicated master node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dedicateMaster(Boolean dedicateMaster) {
                 this.dedicateMaster = dedicateMaster;
@@ -2818,7 +3019,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-abc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2826,7 +3030,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * dictList.
+             * <p>The IK dictionary configuration.</p>
              */
             public Builder dictList(java.util.List<DictList> dictList) {
                 this.dictList = dictList;
@@ -2834,7 +3038,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * <p>The internal endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -2842,7 +3049,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * elasticDataNodeConfiguration.
+             * <p>The configuration of the elastic data node.</p>
              */
             public Builder elasticDataNodeConfiguration(ElasticDataNodeConfiguration elasticDataNodeConfiguration) {
                 this.elasticDataNodeConfiguration = elasticDataNodeConfiguration;
@@ -2850,7 +3057,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enableKibanaPrivateNetwork.
+             * <p>Indicates whether private network access to Kibana is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder enableKibanaPrivateNetwork(Boolean enableKibanaPrivateNetwork) {
                 this.enableKibanaPrivateNetwork = enableKibanaPrivateNetwork;
@@ -2858,7 +3068,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enableKibanaPublicNetwork.
+             * <p>Indicates whether public network access to Kibana is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableKibanaPublicNetwork(Boolean enableKibanaPublicNetwork) {
                 this.enableKibanaPublicNetwork = enableKibanaPublicNetwork;
@@ -2866,7 +3079,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * enablePublic.
+             * <p>Indicates whether the public endpoint of the instance is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enablePublic(Boolean enablePublic) {
                 this.enablePublic = enablePublic;
@@ -2882,7 +3098,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * endpoints.
+             * <p>The private domain names for each zone of an HP_ALILB multi-zone instance.</p>
              */
             public Builder endpoints(java.util.List<Endpoints> endpoints) {
                 this.endpoints = endpoints;
@@ -2890,7 +3106,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esConfig.
+             * <p>The YML file configuration of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;http.cors.allow-credentials&quot;:&quot;false&quot;}</p>
              */
             public Builder esConfig(java.util.Map<String, ?> esConfig) {
                 this.esConfig = esConfig;
@@ -2898,7 +3117,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esIPBlacklist.
+             * <p><strong>[Deprecated]</strong> The private network access blacklist.</p>
              */
             public Builder esIPBlacklist(java.util.List<String> esIPBlacklist) {
                 this.esIPBlacklist = esIPBlacklist;
@@ -2906,7 +3125,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esIPWhitelist.
+             * <p><strong>[Deprecated]</strong> The private network access whitelist.</p>
              */
             public Builder esIPWhitelist(java.util.List<String> esIPWhitelist) {
                 this.esIPWhitelist = esIPWhitelist;
@@ -2914,7 +3133,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * esVersion.
+             * <p>The instance version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.3.2_with_X-Pack</p>
              */
             public Builder esVersion(String esVersion) {
                 this.esVersion = esVersion;
@@ -2922,7 +3144,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * extendConfigs.
+             * <p>The extended configuration array of the instance.</p>
              */
             public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -2930,7 +3152,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * haveClientNode.
+             * <p>Indicates whether the instance contains client nodes. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder haveClientNode(Boolean haveClientNode) {
                 this.haveClientNode = haveClientNode;
@@ -2938,7 +3163,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * haveKibana.
+             * <p>Indicates whether the instance contains Kibana nodes. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder haveKibana(Boolean haveKibana) {
                 this.haveKibana = haveKibana;
@@ -2946,7 +3174,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ikHotDicts.
+             * <p>The IK dictionary hot update configuration.</p>
              */
             public Builder ikHotDicts(java.util.List<IkHotDicts> ikHotDicts) {
                 this.ikHotDicts = ikHotDicts;
@@ -2962,7 +3190,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceCategory.
+             * <p>The edition type of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>advanced</p>
              */
             public Builder instanceCategory(String instanceCategory) {
                 this.instanceCategory = instanceCategory;
@@ -2970,7 +3201,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-3h4k3axh33th9****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2978,7 +3212,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * isNewDeployment.
+             * <p>Indicates whether the instance uses the new deployment architecture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isNewDeployment(Boolean isNewDeployment) {
                 this.isNewDeployment = isNewDeployment;
@@ -2986,7 +3223,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaConfiguration.
+             * <p>The configuration information of the Kibana node.</p>
              */
             public Builder kibanaConfiguration(KibanaConfiguration kibanaConfiguration) {
                 this.kibanaConfiguration = kibanaConfiguration;
@@ -2994,7 +3231,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaDomain.
+             * <p>The Kibana endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-3h4k3axh33th9****.kibana.elasticsearch.aliyuncs.com</p>
              */
             public Builder kibanaDomain(String kibanaDomain) {
                 this.kibanaDomain = kibanaDomain;
@@ -3002,7 +3242,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaIPWhitelist.
+             * <p>The Kibana public endpoint access whitelist.</p>
              */
             public Builder kibanaIPWhitelist(java.util.List<String> kibanaIPWhitelist) {
                 this.kibanaIPWhitelist = kibanaIPWhitelist;
@@ -3010,7 +3250,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPort.
+             * <p>The access port of Kibana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5601</p>
              */
             public Builder kibanaPort(Integer kibanaPort) {
                 this.kibanaPort = kibanaPort;
@@ -3018,7 +3261,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPrivateDomain.
+             * <p>The private endpoint of Kibana for private network access.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-x0r3*********.elasticsearch.aliyuncs.com</p>
              */
             public Builder kibanaPrivateDomain(String kibanaPrivateDomain) {
                 this.kibanaPrivateDomain = kibanaPrivateDomain;
@@ -3026,7 +3272,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPrivateIPWhitelist.
+             * <p>The Kibana private endpoint access whitelist.</p>
              */
             public Builder kibanaPrivateIPWhitelist(java.util.List<String> kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
@@ -3034,7 +3280,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * kibanaPrivatePort.
+             * <p>The private port of Kibana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5601</p>
              */
             public Builder kibanaPrivatePort(String kibanaPrivatePort) {
                 this.kibanaPrivatePort = kibanaPrivatePort;
@@ -3042,7 +3291,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * masterConfiguration.
+             * <p>The configuration of the dedicated master node.</p>
              */
             public Builder masterConfiguration(MasterConfiguration masterConfiguration) {
                 this.masterConfiguration = masterConfiguration;
@@ -3050,7 +3299,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * networkConfig.
+             * <p>The network configuration.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -3058,7 +3307,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeAmount.
+             * <p>The number of data nodes in the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder nodeAmount(Integer nodeAmount) {
                 this.nodeAmount = nodeAmount;
@@ -3066,7 +3318,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * nodeSpec.
+             * <p>The configuration of data nodes.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -3074,7 +3326,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * paymentType.
+             * <p>The billing method of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>postpaid</p>
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -3082,7 +3337,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * port.
+             * <p>The access port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -3090,7 +3348,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * postpaidServiceStatus.
+             * <p>The status of the pay-as-you-go service that is overlaid on the subscription instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder postpaidServiceStatus(String postpaidServiceStatus) {
                 this.postpaidServiceStatus = postpaidServiceStatus;
@@ -3098,7 +3359,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * privateNetworkIpWhiteList.
+             * <p>The private endpoint access whitelist of the instance.</p>
              */
             public Builder privateNetworkIpWhiteList(java.util.List<String> privateNetworkIpWhiteList) {
                 this.privateNetworkIpWhiteList = privateNetworkIpWhiteList;
@@ -3106,7 +3367,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * protocol.
+             * <p>The access protocol. Valid values: HTTP and HTTPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3114,7 +3378,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicDomain.
+             * <p>The public endpoint of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>es-cn-3h4k3axh33th9****.elasticsearch.aliyuncs.com</p>
              */
             public Builder publicDomain(String publicDomain) {
                 this.publicDomain = publicDomain;
@@ -3122,7 +3389,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicIpWhitelist.
+             * <p>The public endpoint access whitelist of the instance.</p>
              */
             public Builder publicIpWhitelist(java.util.List<String> publicIpWhitelist) {
                 this.publicIpWhitelist = publicIpWhitelist;
@@ -3130,7 +3397,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * publicPort.
+             * <p>The public network access port of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9200</p>
              */
             public Builder publicPort(Integer publicPort) {
                 this.publicPort = publicPort;
@@ -3138,7 +3408,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * resourceGroupId.
+             * <p>The ID of the resource group to which the instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzvowej3i****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -3146,7 +3419,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * serviceVpc.
+             * <p>Indicates whether the instance is a service VPC instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder serviceVpc(Boolean serviceVpc) {
                 this.serviceVpc = serviceVpc;
@@ -3154,7 +3430,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * <p>The status of the instance. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3162,7 +3441,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * synonymsDicts.
+             * <p>The synonym dictionary configuration.</p>
              */
             public Builder synonymsDicts(java.util.List<SynonymsDicts> synonymsDicts) {
                 this.synonymsDicts = synonymsDicts;
@@ -3170,7 +3449,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * <p>The instance tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -3178,7 +3457,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * updatedAt.
+             * <p>The time when the instance was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-07-13T03:58:07.253Z</p>
              */
             public Builder updatedAt(String updatedAt) {
                 this.updatedAt = updatedAt;
@@ -3186,7 +3468,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vpcInstanceId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1uag5jj38c****</p>
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;
@@ -3194,7 +3479,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * warmNode.
+             * <p>Indicates whether warm data nodes is enabled. Valid values:</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder warmNode(Boolean warmNode) {
                 this.warmNode = warmNode;
@@ -3202,7 +3490,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * warmNodeConfiguration.
+             * <p>The configuration information of the warm data node.</p>
              */
             public Builder warmNodeConfiguration(WarmNodeConfiguration warmNodeConfiguration) {
                 this.warmNodeConfiguration = warmNodeConfiguration;
@@ -3210,7 +3498,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * zoneCount.
+             * <p>The number of zones for the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder zoneCount(Integer zoneCount) {
                 this.zoneCount = zoneCount;
@@ -3218,7 +3509,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * zoneInfos.
+             * <p>The zone information.</p>
              */
             public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;

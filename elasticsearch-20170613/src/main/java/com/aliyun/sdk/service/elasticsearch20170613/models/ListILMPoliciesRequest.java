@@ -74,6 +74,7 @@ public class ListILMPoliciesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class ListILMPoliciesRequest extends Request {
         }
 
         /**
-         * policyName.
+         * <p>The name of the index lifecycle policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy-1</p>
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policyName", policyName);

@@ -60,7 +60,7 @@ public class DescribeAckOperatorRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ACK cluster.</p>
+         * <p>The ID of the target cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

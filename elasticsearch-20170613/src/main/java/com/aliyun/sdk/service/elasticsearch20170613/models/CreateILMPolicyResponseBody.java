@@ -67,7 +67,10 @@ public class CreateILMPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class CreateILMPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The name of the lifecycle policy created by the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-policy</p>
          */
         public Builder result(String result) {
             this.result = result;

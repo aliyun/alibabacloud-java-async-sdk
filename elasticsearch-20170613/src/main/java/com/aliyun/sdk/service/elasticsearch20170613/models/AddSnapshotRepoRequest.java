@@ -74,7 +74,7 @@ public class AddSnapshotRepoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance for which you want to access OSS repositories across clusters.</p>
+         * <p>The instance ID of the target instance for which you want to configure cross-cluster OSS repository Settings.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,12 @@ public class AddSnapshotRepoRequest extends Request {
         }
 
         /**
-         * body.
+         * <p>The cross-cluster backup information, which specifies the reference instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;repoPath&quot; :&quot;es-cn-4591jumei000u****&quot;
+         * }</p>
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

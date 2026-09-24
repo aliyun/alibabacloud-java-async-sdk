@@ -67,7 +67,10 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class ListPipelineIdsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The list of results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -167,7 +170,16 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             } 
 
             /**
-             * available.
+             * <p>Indicates whether the pipeline is available. Valid values:</p>
+             * <ul>
+             * <li><p>true: Available.</p>
+             * </li>
+             * <li><p>false: Not available.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -175,7 +187,10 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * code.
+             * <p>The error code when the pipeline is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -183,7 +198,10 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * <p>The error message when the pipeline is unavailable.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OK</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -191,7 +209,10 @@ public class ListPipelineIdsResponseBody extends TeaModel {
             }
 
             /**
-             * pipelineId.
+             * <p>The pipeline ID created on Kibana.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKibanaManagement</p>
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;

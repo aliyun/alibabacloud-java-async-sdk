@@ -67,7 +67,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Detailed information about the instance.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C9334241-4837-46C2-B24B-9BDC517318DE</p>
@@ -78,7 +78,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configurations of the instance.</p>
+         * <p>The details of the instance.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -144,7 +144,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The value of the tag.</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>env</p>
@@ -155,7 +155,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the zones.</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>
@@ -225,7 +225,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The zone ID of the new instance.</p>
+             * <p>The zone status. Valid values:</p>
+             * <ul>
+             * <li>ISOLATION: offline.</li>
+             * <li>NORMAL: Normal.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>NORMAL</p>
@@ -236,7 +240,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of cluster extension parameters.</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-b</p>
@@ -319,7 +323,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tags added to the ALB instance.</p>
+             * <p>The IP address of the node.</p>
              * 
              * <strong>example:</strong>
              * <p><code>172.16.**.**</code></p>
@@ -330,7 +334,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the node.</p>
+             * <p>The port number.</p>
              * 
              * <strong>example:</strong>
              * <p>9600</p>
@@ -341,7 +345,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number.</p>
+             * <p>The zone ID of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-b</p>
@@ -437,7 +441,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the vSwitch to which the instance is connected.</p>
+             * <p>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc</p>
@@ -448,7 +452,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone where the cluster resides.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16k1dvzxtmagcva****</p>
@@ -459,7 +463,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance. Valid values: Currently, only Virtual Private Cloud (VPC) are supported.</p>
+             * <p>The zone in which the instance resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-*</p>
@@ -470,7 +474,10 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * vswitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1k4ec6s7sjdbudw****</p>
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -563,11 +570,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Whether to use disk encryption:</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
+             * <p>The disk size of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -578,7 +581,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk type of the node.</p>
+             * <p>Indicates whether cloud disk encryption is enabled. Valid values:</p>
+             * <ul>
+             * <li>true: Enabled.</li>
+             * <li>false: Disabled.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -589,7 +596,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network configurations.</p>
+             * <p>The disk type of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_ssd</p>
@@ -600,7 +607,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk size of the node.</p>
+             * <p>The node specification.</p>
              * 
              * <strong>example:</strong>
              * <p>elasticsearch.sn1ne.large</p>
@@ -878,7 +885,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The configuration information of the node.</p>
+             * ExtendConfigs.
              */
             public Builder extendConfigs(java.util.List<java.util.Map<String, ?>> extendConfigs) {
                 this.extendConfigs = extendConfigs;
@@ -886,7 +893,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of data nodes.</p>
+             * <p>The ID of the resource group to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekzvowej3i****</p>
@@ -897,7 +904,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the tag.</p>
+             * <p>The instance tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -905,11 +912,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the zone. Valid values:</p>
-             * <ul>
-             * <li>ISOLATION: offline</li>
-             * <li>NORMAL</li>
-             * </ul>
+             * <p>The zone information.</p>
              */
             public Builder zoneInfos(java.util.List<ZoneInfos> zoneInfos) {
                 this.zoneInfos = zoneInfos;
@@ -917,11 +920,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <ul>
-             * <li>prepaid: subscription</li>
-             * <li>postpaid: pay-as-you-go</li>
-             * </ul>
+             * <p>The instance configuration information.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;slowlog.threshold.warn&quot;: &quot;2s&quot;,&quot;slowlog.threshold.info&quot;: &quot;1s&quot;,&quot;slowlog.threshold.debug&quot;: &quot;500ms&quot;,&quot;slowlog.threshold.trace&quot;: &quot;100ms&quot; }</p>
@@ -932,13 +931,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. Four states are supported:</p>
-             * <ul>
-             * <li>Normal: active</li>
-             * <li>Active: activating</li>
-             * <li>Freeze: inactive</li>
-             * <li>Invalid: invalid</li>
-             * </ul>
+             * <p>The time when the instance was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-02-06T14:12:03.672Z</p>
@@ -949,7 +942,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was created.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>ls-cn-abc</p>
@@ -968,7 +961,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the node resides.</p>
+             * <p>The access information of the nodes.</p>
              */
             public Builder endpointList(java.util.List<EndpointList> endpointList) {
                 this.endpointList = endpointList;
@@ -976,7 +969,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The access information of the node.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ls-cn-abc</p>
@@ -987,7 +980,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>The network configuration.</p>
              */
             public Builder networkConfig(NetworkConfig networkConfig) {
                 this.networkConfig = networkConfig;
@@ -995,7 +988,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The number of nodes in the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1006,7 +999,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The specifications of the node.</p>
+             * <p>The configuration information of the node.</p>
              */
             public Builder nodeSpec(NodeSpec nodeSpec) {
                 this.nodeSpec = nodeSpec;
@@ -1014,7 +1007,11 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the instance belongs.</p>
+             * <p>The billing method of the instance. Valid values:</p>
+             * <ul>
+             * <li>prepaid: subscription</li>
+             * <li>postpaid: pay-as-you-go</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>prepaid</p>
@@ -1025,7 +1022,13 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) to which the elastic container instances belong.</p>
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li>active: Normal.</li>
+             * <li>activating: Taking effect.</li>
+             * <li>inactive: Frozen.</li>
+             * <li>invalid: Expired.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>active</p>
@@ -1036,7 +1039,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The edition of the dedicated KMS instance.</p>
+             * <p>The time when the instance was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2020-02-06T14:22:36.850Z</p>
@@ -1047,7 +1050,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance version.</p>
              * 
              * <strong>example:</strong>
              * <p>7.4.0_with_X-Pack</p>
@@ -1058,7 +1061,7 @@ public class DescribeLogstashResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance was last updated.</p>
+             * <p>The ID of the VPC to which the instance belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-bp16k1dvzxtmagcva****</p>

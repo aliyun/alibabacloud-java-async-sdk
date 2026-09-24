@@ -241,7 +241,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         } 
 
         /**
-         * body.
+         * <p>The request body parameters.</p>
          */
         public Builder body(java.util.List<ListInstanceHistoryEventsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -250,7 +250,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventCreateEndTime.
+         * <p>The end time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventCreateEndTime(String eventCreateEndTime) {
             this.putQueryParameter("eventCreateEndTime", eventCreateEndTime);
@@ -259,7 +262,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventCreateStartTime.
+         * <p>The start time for querying by event creation time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventCreateStartTime(String eventCreateStartTime) {
             this.putQueryParameter("eventCreateStartTime", eventCreateStartTime);
@@ -268,7 +274,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventCycleStatus.
+         * <p>The lifecycle status object of the event.</p>
          */
         public Builder eventCycleStatus(java.util.List<String> eventCycleStatus) {
             String eventCycleStatusShrink = shrink(eventCycleStatus, "eventCycleStatus", "simple");
@@ -278,7 +284,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventExecuteEndTime.
+         * <p>The end time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventExecuteEndTime(String eventExecuteEndTime) {
             this.putQueryParameter("eventExecuteEndTime", eventExecuteEndTime);
@@ -287,7 +296,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventExecuteStartTime.
+         * <p>The start time for querying by event execution time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventExecuteStartTime(String eventExecuteStartTime) {
             this.putQueryParameter("eventExecuteStartTime", eventExecuteStartTime);
@@ -296,7 +308,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventFinashEndTime.
+         * <p>The end time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventFinashEndTime(String eventFinashEndTime) {
             this.putQueryParameter("eventFinashEndTime", eventFinashEndTime);
@@ -305,7 +320,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventFinashStartTime.
+         * <p>The start time for querying by event completion time. Specify a timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1645596516000</p>
          */
         public Builder eventFinashStartTime(String eventFinashStartTime) {
             this.putQueryParameter("eventFinashStartTime", eventFinashStartTime);
@@ -314,7 +332,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventLevel.
+         * <p>The event level.</p>
          */
         public Builder eventLevel(java.util.List<String> eventLevel) {
             String eventLevelShrink = shrink(eventLevel, "eventLevel", "simple");
@@ -324,7 +342,7 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * eventType.
+         * <p>The event type.</p>
          */
         public Builder eventType(java.util.List<String> eventType) {
             String eventTypeShrink = shrink(eventType, "eventType", "simple");
@@ -334,7 +352,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-2r42l7a740005****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -343,7 +364,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * nodeIP.
+         * <p>The IP address of the node that triggered the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.1.xx.xx</p>
          */
         public Builder nodeIP(String nodeIP) {
             this.putQueryParameter("nodeIP", nodeIP);
@@ -352,7 +376,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * page.
+         * <p>The starting document offset. The value must be a non-negative number. Default value: 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -361,7 +388,10 @@ public class ListInstanceHistoryEventsRequest extends Request {
         }
 
         /**
-         * size.
+         * <p>The number of events to return. The value must be a non-negative number. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -429,7 +459,14 @@ public class ListInstanceHistoryEventsRequest extends Request {
             } 
 
             /**
-             * desc.
+             * <p>Specifies whether to sort in descending order. Valid values:</p>
+             * <ul>
+             * <li>true (default): yes</li>
+             * <li>false: no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder desc(Boolean desc) {
                 this.desc = desc;
@@ -437,7 +474,15 @@ public class ListInstanceHistoryEventsRequest extends Request {
             }
 
             /**
-             * sortField.
+             * <p>The field by which the results are sorted. Valid values:</p>
+             * <ul>
+             * <li>event_time: event creation time</li>
+             * <li>event_execute_start_time: event execution time</li>
+             * <li>event_execute_finish_time: event completion time</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>event_time</p>
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;

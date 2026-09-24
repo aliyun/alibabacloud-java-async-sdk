@@ -87,7 +87,10 @@ public class TurnOnZoneRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-xxxx</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +108,10 @@ public class TurnOnZoneRequest extends Request {
         }
 
         /**
-         * zone.
+         * <p>The zone of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
          */
         public Builder zone(String zone) {
             this.putQueryParameter("zone", zone);

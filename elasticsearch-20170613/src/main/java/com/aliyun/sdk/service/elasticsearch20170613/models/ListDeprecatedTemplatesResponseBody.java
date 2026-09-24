@@ -80,7 +80,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * Headers.
+         * <p>The response headers.</p>
          */
         public Builder headers(Headers headers) {
             this.headers = headers;
@@ -88,7 +88,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F99407AB-2FA9-489E-A259-40CF6DCC47D9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -149,7 +152,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * X-Total-Count.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder xTotalCount(Long xTotalCount) {
                 this.xTotalCount = xTotalCount;
@@ -229,7 +235,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * aliases.
+             * <p>The aliases configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{}&quot;</p>
              */
             public Builder aliases(String aliases) {
                 this.aliases = aliases;
@@ -237,7 +246,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * mappings.
+             * <p>The mappings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}&quot;</p>
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -245,7 +257,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * settings.
+             * <p>The settings configuration of the template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}&quot;</p>
              */
             public Builder settings(String settings) {
                 this.settings = settings;
@@ -364,7 +379,14 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * dataStream.
+             * <p>Indicates whether the template matches a data stream. Valid values:</p>
+             * <ul>
+             * <li>true: matched.</li>
+             * <li>false: not matched.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder dataStream(Boolean dataStream) {
                 this.dataStream = dataStream;
@@ -372,7 +394,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * indexPatterns.
+             * <p>The index template information.</p>
              */
             public Builder indexPatterns(java.util.List<String> indexPatterns) {
                 this.indexPatterns = indexPatterns;
@@ -380,7 +402,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * indexTemplate.
+             * <p>The index template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>openstore-index-template</p>
              */
             public Builder indexTemplate(String indexTemplate) {
                 this.indexTemplate = indexTemplate;
@@ -388,7 +413,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * order.
+             * <p>The priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder order(Long order) {
                 this.order = order;
@@ -396,7 +424,7 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * template.
+             * <p>The index template configuration.</p>
              */
             public Builder template(Template template) {
                 this.template = template;
@@ -404,7 +432,10 @@ public class ListDeprecatedTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * <p>The version of the index template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>70000</p>
              */
             public Builder version(String version) {
                 this.version = version;

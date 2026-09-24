@@ -88,7 +88,7 @@ public class AddConnectableClusterRequest extends Request {
         } 
 
         /**
-         * <p>es-cn-n6w1o1x0w001c****</p>
+         * <p>The current instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class AddConnectableClusterRequest extends Request {
         }
 
         /**
-         * <p>请求体。</p>
+         * <p>The remote instance ID. Specifies the remote instance ID to establish network connectivity with. The remote instance must be in the same VPC as the current instance.</p>
          * 
          * <strong>example:</strong>
          * <p>{     &quot;instanceId&quot;:&quot;es-cn-09k1rgid9000g****&quot; }</p>
@@ -113,7 +113,7 @@ public class AddConnectableClusterRequest extends Request {
         }
 
         /**
-         * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>
+         * <p>A client-generated token used to ensure the idempotence of the request. The value must be unique across different requests and cannot exceed 64 ASCII characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF****</p>

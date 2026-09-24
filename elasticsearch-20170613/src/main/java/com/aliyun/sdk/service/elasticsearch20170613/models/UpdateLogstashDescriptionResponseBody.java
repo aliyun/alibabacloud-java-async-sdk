@@ -67,7 +67,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</p>
@@ -78,7 +78,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result returned.</p>
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -131,7 +131,7 @@ public class UpdateLogstashDescriptionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the cluster.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>logstash_name</p>

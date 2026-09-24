@@ -86,12 +86,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCollectorResponse> createCollector(CreateCollectorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of CreateComponentIndex  CreateComponentIndexRequest
      * @return CreateComponentIndexResponse
      */
     CompletableFuture<CreateComponentIndexResponse> createComponentIndex(CreateComponentIndexRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The data stream name you create must correspond one-to-one with the index pattern in the index template, and the index template must have data stream enabled. For example, if the index pattern in the index template is ds-*, the corresponding data stream name should be ds-.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of CreateDataStream  CreateDataStreamRequest
      * @return CreateDataStreamResponse
      */
@@ -110,6 +118,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIndexTemplateResponse> createIndexTemplate(CreateIndexTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before calling this operation, note the following:</p>
+     * <ul>
+     * <li>Make sure that you are familiar with the billing methods and pricing of Logstash. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/260882.html">Billing overview</a>.</ph></li>
+     * <li>To create an instance, complete real-name verification. &lt;props=&quot;china&quot;&gt;<ph>For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateLogstash  CreateLogstashRequest
      * @return CreateLogstashResponse
      */
@@ -129,7 +144,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D\<em>\</em>\*</p>
+     * <p>For more information about this API, see <a href="https://help.aliyun.com/document_detail/279559.html">Configure private network connectivity for an instance</a>.</p>
      * 
      * @param request the request parameters of CreateVpcEndpoint  CreateVpcEndpointRequest
      * @return CreateVpcEndpointResponse
@@ -149,6 +164,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCollectorResponse> deleteCollector(DeleteCollectorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Implement massive data storage through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of DeleteComponentIndex  DeleteComponentIndexRequest
      * @return DeleteComponentIndexResponse
      */
@@ -161,6 +179,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteConnectedClusterResponse> deleteConnectedCluster(DeleteConnectedClusterRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <ul>
+     * <li>Deleting a data stream also deletes its backing indexes. Proceed with caution.- To delete an index template that has associated data streams, delete the associated data streams first. On the data stream list page, view the data stream details to find the index template that the data stream matches.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteDataStream  DeleteDataStreamRequest
      * @return DeleteDataStreamResponse
      */
@@ -173,24 +198,41 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDataTaskResponse> deleteDataTask(DeleteDataTaskRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of DeleteDeprecatedTemplate  DeleteDeprecatedTemplateRequest
      * @return DeleteDeprecatedTemplateResponse
      */
     CompletableFuture<DeleteDeprecatedTemplateResponse> deleteDeprecatedTemplate(DeleteDeprecatedTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You cannot delete a policy that is currently in use. If the policy is being used to manage any index, the request fails and returns an error.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteILMPolicy  DeleteILMPolicyRequest
      * @return DeleteILMPolicyResponse
      */
     CompletableFuture<DeleteILMPolicyResponse> deleteILMPolicy(DeleteILMPolicyRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before deleting an index template, delete the data streams associated with the index template. Otherwise, the index template cannot be deleted.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DeleteIndexTemplate  DeleteIndexTemplateRequest
      * @return DeleteIndexTemplateResponse
      */
     CompletableFuture<DeleteIndexTemplateResponse> deleteIndexTemplate(DeleteIndexTemplateRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Before you invoke this operation, note the following:
+     * Data cannot be recovered after the instance is released. Back up your data before releasing the instance. For more information, see <a href="https://help.aliyun.com/document_detail/65675.html">Snapshot backup and recovery commands</a>.</p>
+     * 
      * @param request the request parameters of DeleteInstance  DeleteInstanceRequest
      * @return DeleteInstanceResponse
      */
@@ -198,7 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following information: After the cluster is released, the physical resources used by the cluster are reclaimed. The data stored in the cluster is deleted and cannot be recovered. The disks attached to the nodes in the cluster and the snapshots created for the cluster are released.</p>
+     * <p>Before calling this operation, note the following:
+     * After the instance is released, all physical resources used by the instance are reclaimed, all related data is permanently lost and cannot be recovered, cloud disks mounted to the instance nodes are also released, and the corresponding snapshots are deleted.</p>
      * 
      * @param request the request parameters of DeleteLogstash  DeleteLogstashRequest
      * @return DeleteLogstashResponse
@@ -226,7 +269,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you install a shipper on an ACK cluster, you can call this operation to query the installation status of ES-operator for the ACK cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to check the installation status of the Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeAckOperator  DescribeAckOperatorRequest
@@ -241,6 +284,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCollectorResponse> describeCollector(DescribeCollectorRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Use OpenStore to store massive amounts of data</a>.</p>
+     * 
      * @param request the request parameters of DescribeComponentIndex  DescribeComponentIndexRequest
      * @return DescribeComponentIndexResponse
      */
@@ -278,11 +324,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>An Elasticsearch cluster can be in a health state indicated by one of the following colors:</p>
+     * <p>The instance health status. The following three states are supported:</p>
      * <ul>
-     * <li>GREEN: Primary shards and replica shards for the primary shards are normally allocated.</li>
-     * <li>YELLOW: Primary shards are normally allocated, but replica shards for the primary shards are not normally allocated.</li>
-     * <li>RED: Primary shards are not normally allocated.</li>
+     * <li>GREEN: Primary and replica shards are allocated normally.</li>
+     * <li>YELLOW: Primary shards are allocated normally, but replica shards are not allocated normally.</li>
+     * <li>RED: Primary shards are not allocated normally.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeElasticsearchHealth  DescribeElasticsearchHealthRequest
@@ -363,12 +409,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DiagnoseInstanceResponse> diagnoseInstance(DiagnoseInstanceRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</p>
+     * 
      * @param request the request parameters of DisableKibanaPvlNetwork  DisableKibanaPvlNetworkRequest
      * @return DisableKibanaPvlNetworkResponse
      */
     CompletableFuture<DisableKibanaPvlNetworkResponse> disableKibanaPvlNetwork(DisableKibanaPvlNetworkRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is supported only for cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
+     * </ol>
+     * 
      * @param request the request parameters of EnableKibanaPvlNetwork  EnableKibanaPvlNetworkRequest
      * @return EnableKibanaPvlNetworkResponse
      */
@@ -473,7 +528,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you perform auto scaling for a cluster at the China site (aliyun.com) or you use shippers to collect logs, you must create a service-linked role.</p>
+     * <p>Before using a collector to collect logs from different data sources or performing cluster elastic scaling tasks (applicable to the China site), you must create a service-linked role.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InitializeOperationRole  InitializeOperationRoleRequest
@@ -484,7 +539,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you install a shipper for an ACK cluster, you must call this operation to install ES-operator for the cluster.</p>
+     * <p>Before installing a collector on an ACK cluster, call this operation to install Elasticsearch Operator on the target cluster.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InstallAckOperator  InstallAckOperatorRequest
@@ -500,7 +555,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>ls-cn-oew1qbgl\<em>\</em>\<em>\</em></p>
+     * <p>Before calling this operation, note the following:
+     * The plugins to be installed must be included in the Alibaba Cloud Logstash <a href="https://help.aliyun.com/document_detail/139626.html">default system plugin list</a>. External open source plugins are not supported.</p>
      * 
      * @param request the request parameters of InstallLogstashSystemPlugin  InstallLogstashSystemPluginRequest
      * @return InstallLogstashSystemPluginResponse
@@ -514,6 +570,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallSystemPluginResponse> installSystemPlugin(InstallSystemPluginRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>The custom plugin installation feature is undergoing an internal upgrade and is temporarily unavailable. If you urgently need this feature, submit a ticket to contact us.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of InstallUserPlugins  InstallUserPluginsRequest
      * @return InstallUserPluginsResponse
      */
@@ -532,6 +593,41 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InterruptLogstashTaskResponse> interruptLogstashTask(InterruptLogstashTaskRequest request);
 
     /**
+     * @param request the request parameters of InvokeEsAgent  InvokeEsAgentRequest
+     * @return InvokeEsAgentResponse
+     */
+    CompletableFuture<InvokeEsAgentResponse> invokeEsAgent(InvokeEsAgentRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> invokeEsAgentWithAsyncResponseHandler(InvokeEsAgentRequest request, AsyncResponseHandler<InvokeEsAgentResponse, ReturnT> responseHandler);
+
+    ResponseIterable<InvokeEsAgentResponseBody> invokeEsAgentWithResponseIterable(InvokeEsAgentRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Refer to the following example for RAM user authorization. Replace the region, account, and other information as needed.</p>
+     * <pre><code>{
+     *     &quot;Version&quot;: &quot;1&quot;,
+     *     &quot;Statement&quot;: [
+     *         {
+     *             &quot;Effect&quot;: &quot;Allow&quot;,
+     *             &quot;Action&quot;: &quot;elasticsearch:InvokeEsRequest&quot;,
+     *             &quot;Resource&quot;: &quot;*&quot;
+     *         },
+     *         {
+     *             &quot;Effect&quot;: &quot;Allow&quot;,
+     *             &quot;Action&quot;: &quot;elasticsearch:UseCredential&quot;,
+     *             &quot;Resource&quot;: &quot;acs:elasticsearch:{#regionId}:{#accountId}:instances/{#instanceId}/credentials/{#credentialId}&quot;
+     *         }
+     *     ]
+     * }
+     * </code></pre>
+     * 
+     * @param request the request parameters of InvokeEsRequest  InvokeEsRequestRequest
+     * @return InvokeEsRequestResponse
+     */
+    CompletableFuture<InvokeEsRequestResponse> invokeEsRequest(InvokeEsRequestRequest request);
+
+    /**
      * @param request the request parameters of ListAckClusters  ListAckClustersRequest
      * @return ListAckClustersResponse
      */
@@ -539,9 +635,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>When you install a shipper on an ACK cluster, you must specify a namespace. You can call this operation to query all namespaces in the ACK cluster, and select a namespace based on your business requirements.</p>
-     * </blockquote>
+     * <p>This operation is not recommended and will be taken offline soon.</p>
      * 
      * @param request the request parameters of ListAckNamespaces  ListAckNamespacesRequest
      * @return ListAckNamespacesResponse
@@ -579,6 +673,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCollectorsResponse> listCollectors(ListCollectorsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of ListComponentIndices  ListComponentIndicesRequest
      * @return ListComponentIndicesResponse
      */
@@ -609,6 +706,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDefaultCollectorConfigurationsResponse> listDefaultCollectorConfigurations(ListDefaultCollectorConfigurationsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of ListDeprecatedTemplates  ListDeprecatedTemplatesRequest
      * @return ListDeprecatedTemplatesResponse
      */
@@ -652,7 +752,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
+     * <blockquote>
+     * <p>Notice:  Before calling this operation, create the AliyunElasticsearchAccessingOOSRole and AliyunOOSAccessingECS4ESRole service-linked roles. These roles allow the Elasticsearch service account to obtain ECS access permissions of the Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of ListEcsInstances  ListEcsInstancesRequest
      * @return ListEcsInstancesResponse
@@ -696,6 +798,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceHistoryEventsResponse> listInstanceHistoryEvents(ListInstanceHistoryEventsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>The ListInstanceIndices operation is applicable only to Elasticsearch instances that have indexing service enabled. We recommend that you use the Elasticsearch API to query index information. For more information, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/cat-indices.html">cat indices API</a>.</p>
+     * 
      * @param request the request parameters of ListInstanceIndices  ListInstanceIndicesRequest
      * @return ListInstanceIndicesResponse
      */
@@ -708,6 +813,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListKibanaPluginsResponse> listKibanaPlugins(ListKibanaPluginsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>This API operation supports only cloud-native instances.</p>
+     * 
      * @param request the request parameters of ListKibanaPvlNetwork  ListKibanaPvlNetworkRequest
      * @return ListKibanaPvlNetworkResponse
      */
@@ -744,6 +852,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPipelineResponse> listPipeline(ListPipelineRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Pipeline management is divided into configuration file management and Kibana pipeline management. Kibana pipeline management is not available in the console for some regions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListPipelineIds  ListPipelineIdsRequest
      * @return ListPipelineIdsResponse
      */
@@ -764,7 +877,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>The restoration of a shard is a process of synchronizing data from a primary shard to a replica shard. After the restoration is complete, the replica shard is available for data searches.</p>
+     * <p>Shard recovery is the process of synchronizing data from a primary shard to a replica shard. After recovery is complete, the replica shard is available for search.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ListShardRecoveries  ListShardRecoveriesRequest
@@ -810,12 +923,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If the specifications in your zone are insufficient, you can upgrade your instance to nodes in another zone. Before calling this interface, you must ensure that:</p>
+     * <p>When you upgrade an instance and encounter insufficient inventory for the instance type in the current zone, you can resolve this issue by migrating zone nodes. Before calling this operation, ensure the following:</p>
      * <ul>
-     * <li>The error message returned because the current account is in a zone that has sufficient resources.
-     * After migrating nodes with current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade cluster</a> because the cluster will not be upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failure. We recommend that you choose new zones that are in lower alphabetical order. For example, for cn-hangzhou-e and cn-hangzhou-h zones, choose cn-hangzhou-h first.</li>
-     * <li>The cluster is in the healthy state.
-     * Can be passed<code> GET _cat/health?v </code>command to view the health status of the cluster.</li>
+     * <li>Your account has a zone with sufficient resources.
+     *  After migrating nodes of the current specifications to another zone, you need to manually <a href="https://help.aliyun.com/document_detail/96650.html">upgrade the cluster</a>. The cluster is not upgraded during the migration process. Therefore, select a zone with sufficient resources to avoid cluster upgrade failures. Select a zone with a later alphabetical order (for example, between cn-hangzhou-e and cn-hangzhou-h, select cn-hangzhou-h).</li>
+     * <li>The cluster is in a healthy state.
+     *  You can run the <code>GET _cat/health?v</code> command to check the cluster health status.</li>
      * </ul>
      * 
      * @param request the request parameters of MigrateToOtherZone  MigrateToOtherZoneRequest
@@ -837,7 +950,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>es-cn-n6w1o1x0w001c\<em>\</em>\<em>\</em></p>
+     * <p>Before calling this operation, note the following information:</p>
+     * <ul>
+     * <li>Before formal maintenance begins, Alibaba Cloud sends SMS messages and emails to the contacts configured in your Alibaba Cloud account. Check your messages promptly.</li>
+     * <li>On the day of instance maintenance, to ensure stability throughout the maintenance process, the instance enters an active state before the maintenance window. When the instance is in this state, access to the cluster and query operations (such as performance monitoring) are not affected, but cluster change operations (such as cluster upgrades and restarts) are temporarily unavailable.</li>
+     * <li>During the maintenance window, transient disconnections may occur on the instance. Ensure that your application has a reconnection mechanism.</li>
+     * </ul>
      * 
      * @param request the request parameters of ModifyInstanceMaintainTime  ModifyInstanceMaintainTimeRequest
      * @return ModifyInstanceMaintainTimeResponse
@@ -852,7 +970,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the cluster.</p>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>You cannot update information for an instance whose instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
+     * <li>IP whitelist list: whiteIpList, nodeType, networkType</li>
+     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * </ul>
+     * </li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
+     * </ul>
      * 
      * @param request the request parameters of ModifyWhiteIps  ModifyWhiteIpsRequest
      * @return ModifyWhiteIpsResponse
@@ -874,8 +1001,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> To ensure data security, we recommend that you enable HTTPS.</p>
+     * <ul>
+     * <li>To ensure data security, enable the HTTPS protocol.</li>
+     * </ul>
      * </blockquote>
+     * <ul>
+     * <li>Except for versions 8.5, 7.16, &lt;props=&quot;china&quot;&gt;<ph>and version 7.10 in some regions</ph>, ensure that you have purchased client nodes before enabling HTTPS.</li>
+     * </ul>
      * 
      * @param request the request parameters of OpenHttps  OpenHttpsRequest
      * @return OpenHttpsResponse
@@ -889,6 +1021,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PluginAnalysisResponse> pluginAnalysis(PluginAnalysisRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This API operation can be called up to 10 times per hour.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of PostEmonTryAlarmRule  PostEmonTryAlarmRuleRequest
      * @return PostEmonTryAlarmRuleResponse
      */
@@ -933,7 +1070,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> After the instance is restarted, the instance enters the activating state. After the instance is restarted, its status changes to active. Alibaba Cloud Elasticsearch supports restarting a single node. Restarting a node can be divided into normal restart and blue-green restart.</p>
+     * <p>After the restart, the instance enters the activating state. After the restart is complete, the instance status changes to active. Alibaba Cloud Elasticsearch supports single-node restart. Node restart is classified into normal restart and blue-green restart.</p>
      * </blockquote>
      * 
      * @param request the request parameters of RestartInstance  RestartInstanceRequest
@@ -972,6 +1109,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunPipelinesResponse> runPipelines(RunPipelinesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Note the following when you invoke this operation:
+     * Before shrinking data nodes from a cluster, perform data migration from the nodes to be removed to other nodes. After you confirm that the nodes to be removed contain no data, proceed with the node shrinking operation.</p>
+     * 
      * @param request the request parameters of ShrinkNode  ShrinkNodeRequest
      * @return ShrinkNodeResponse
      */
@@ -1014,12 +1155,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TriggerNetworkResponse> triggerNetwork(TriggerNetworkRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Disables an existing zone for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
+     * 
      * @param request the request parameters of TurnOffZone  TurnOffZoneRequest
      * @return TurnOffZoneResponse
      */
     CompletableFuture<TurnOffZoneResponse> turnOffZone(TurnOffZoneRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Reopens a zone that has been taken offline for a multi-zone instance. This operation is intended only for disaster recovery drills. Exercise caution when performing this operation.</p>
+     * 
      * @param request the request parameters of TurnOnZone  TurnOnZoneRequest
      * @return TurnOnZoneResponse
      */
@@ -1045,13 +1192,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>You can only delete user tags.<blockquote>
-     * <p>User labels are manually added to instances by users. A system Tag is a tag that Alibaba Cloud services add to instances. System labels are divided into visible labels and invisible labels.</p>
+     * <li><p>Only user tags can be deleted.</p>
+     * <blockquote>
+     * <p>User tags are tags that users manually add to instances. System tags are tags that Alibaba Cloud services add to user instances. System tags are classified into visible tags and invisible tags.</p>
      * </blockquote>
      * </li>
-     * <li>If you delete a resource tag relationship that is not associated with any resources, you must delete the tags.</li>
+     * <li><p>If a tag is not associated with any resource after the tag relationship is deleted, the tag is also deleted.</p>
+     * </li>
      * </ul>
      * 
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -1061,7 +1210,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateAdminPassword  UpdateAdminPasswordRequest
      * @return UpdateAdminPasswordResponse
@@ -1076,11 +1226,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>Elasticsearch V5.X clusters do not support the analysis-aliws plug-in.</li>
-     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
-     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * <li>Instances of version 5.x do not support the AliNLP tokenizer plugin.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary does not have the ORIGIN configuration, calling this operation will delete the dictionary file.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateAliwsDict  UpdateAliwsDictRequest
@@ -1108,6 +1258,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateCollectorNameResponse> updateCollectorName(UpdateCollectorNameRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/317694.html">Store massive amounts of data through OpenStore</a>.</p>
+     * 
      * @param request the request parameters of UpdateComponentIndex  UpdateComponentIndexRequest
      * @return UpdateComponentIndexResponse
      */
@@ -1127,10 +1280,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
-     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateDict  UpdateDictRequest
@@ -1152,7 +1305,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items: You can call this operation only to delete the driver files that are uploaded to a Logstash cluster in the Alibaba Cloud Management Console. You can add or modify driver files only in the Alibaba Cloud Management Console.</p>
+     * <p>When calling this operation, note the following: Currently, this operation only supports deleting extension files that have been uploaded through the console. To add or modify extension files, perform the operations in the console.</p>
      * 
      * @param request the request parameters of UpdateExtendfiles  UpdateExtendfilesRequest
      * @return UpdateExtendfilesResponse
@@ -1167,10 +1320,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
-     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateHotIkDicts  UpdateHotIkDictsRequest
@@ -1192,7 +1345,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>es-cn-n6w1ptcb30009\<em>\</em>\<em>\</em></p>
+     * <p>When you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You cannot change the configuration when the instance status is activating, invalid, or inactive (freeze).</li>
+     * <li>If the cluster has a high load and indexes have no replicas, and a large number of write or query requests exist during the upgrade or decrease the quota procedure, occasional access timeout may occur. Configure a retry mechanism on the client before you change the cluster configuration to reduce the impact on your business.</li>
+     * <li>You can change the configuration of only one type of node at a time (data node, dedicated master node, warm node, client node, Kibana node, or elastic node).</li>
+     * <li>For the health and stability of your cluster, since May 2021, Alibaba Cloud Elasticsearch no longer supports the purchase of 1-vCPU 2 GiB instances, 2-vCPU 2 GiB dedicated master nodes, or version 7.4 instances. If you have confirmed that the purchased specifications are no longer available for sale, perform the following operations first:<ul>
+     * <li>For 1-vCPU 2 GiB and 2-vCPU 2 GiB specifications, upgrade to a stable specification available on the buy page in advance. For available specifications on the buy page, see &lt;props=&quot;china&quot;&gt;<ph><a href="https://help.aliyun.com/document_detail/97672.html">Buy page parameters (commercial edition)</a> or <a href="https://help.aliyun.com/document_detail/143091.html">Buy page parameters (Advanced Edition)</a></ph>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/163243.html">Buy page parameters</a>.</li>
+     * <li>For version 7.4, purchase a version 7.10 instance and then migrate data. &lt;props=&quot;china&quot;&gt;<ph>For data migration, see <a href="https://help.aliyun.com/document_detail/96650.html">Migration solution selection guide</a>.</ph>
+     * For more precautions, see <a href="https://help.aliyun.com/document_detail/96650.html">Upgrade cluster configuration</a> and <a href="https://help.aliyun.com/document_detail/198887.html">Downgrade cluster configuration</a>.</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateInstance  UpdateInstanceRequest
      * @return UpdateInstanceResponse
@@ -1207,8 +1371,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:
-     * When the instance is in the activating, invalid, or inactive state, you cannot update the configuration.</p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot update the configuration when the instance status is activating, invalid, or inactive (freeze).</p>
      * 
      * @param request the request parameters of UpdateInstanceSettings  UpdateInstanceSettingsRequest
      * @return UpdateInstanceSettingsResponse
@@ -1222,6 +1386,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateKeystoresResponse> updateKeystores(UpdateKeystoresRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation supports only cloud-native instances. For legacy architecture instances, use the TriggerNetwork method.</li>
+     * <li>The Kibana specifications must be greater than 1 vCPU and 2 GB of memory.</li>
+     * </ol>
+     * 
      * @param request the request parameters of UpdateKibanaPvlNetwork  UpdateKibanaPvlNetworkRequest
      * @return UpdateKibanaPvlNetworkResponse
      */
@@ -1241,14 +1411,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  Before you call this operation, you must make sure that the cluster is not in the activating, invalid, or inactive state.</p>
+     * <h2>Before you begin</h2>
      * <ul>
-     * <li>You can update an IP address whitelist by using the following parameters:<ul>
-     * <li>kibanaIPWhitelist</li>
-     * <li>modifyMode and whiteIpGroup</li>
+     * <li>When you invoke this operation, you cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and apart from InstanceId and clientToken, the two methods support different parameters as follows: <ul>
+     * <li>IP whitelist list: kibanaIPWhitelist</li>
+     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
      * </ul>
      * </li>
-     * <li>You cannot specify private IP addresses for public IP address whitelists and cannot specify public IP addresses for private IP address whitelists.</li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateKibanaWhiteIps  UpdateKibanaWhiteIpsRequest
@@ -1257,6 +1428,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateKibanaWhiteIpsResponse> updateKibanaWhiteIps(UpdateKibanaWhiteIpsRequest request);
 
     /**
+     * <b>description</b> :
+     * <h3>Before you begin</h3>
+     * <p>You cannot modify instance information when the instance status is activating, invalid, or freeze (inactive).</p>
+     * 
      * @param request the request parameters of UpdateLogstash  UpdateLogstashRequest
      * @return UpdateLogstashResponse
      */
@@ -1270,7 +1445,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items: You cannot change the name of a cluster that is in the activating, invalid, or inactive state.</p>
+     * <p>When you invoke this operation, note the following: The instance name cannot be modified when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateLogstashDescription  UpdateLogstashDescriptionRequest
      * @return UpdateLogstashDescriptionResponse
@@ -1279,8 +1454,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:
-     * If the instance is in the Active (activating), Invalid (invalid), and Inactive (inactive) state, the information cannot be updated.</p>
+     * <p>When you invoke this operation, note the following: The instance configuration cannot be updated when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdateLogstashSettings  UpdateLogstashSettingsRequest
      * @return UpdateLogstashSettingsResponse
@@ -1288,6 +1462,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLogstashSettingsResponse> updateLogstashSettings(UpdateLogstashSettingsRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Pipeline management methods include configuration file management and Kibana pipeline management. The console no longer supports Kibana pipeline management. You can use this feature only through the API.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpdatePipelineManagementConfig  UpdatePipelineManagementConfigRequest
      * @return UpdatePipelineManagementConfigResponse
      */
@@ -1301,9 +1480,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> In the following returned example, only the parameters in the returned data list are guaranteed to be included, and the parameters not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</p>
-     * </blockquote>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>You cannot update the VPC private network access whitelist of an instance when the instance status is Activating (activating), Invalid (invalid), or Freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken):<ul>
+     * <li>IP whitelist list: privateNetworkIpWhiteList</li>
+     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * </ul>
+     * </li>
+     * <li>The public network access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdatePrivateNetworkWhiteIps  UpdatePrivateNetworkWhiteIpsRequest
      * @return UpdatePrivateNetworkWhiteIpsResponse
@@ -1312,8 +1498,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:
-     * When the instance is in the activating, invalid, or inactive state, its configuration cannot be updated.</p>
+     * <p>When you invoke this operation, note the following:
+     * You cannot update information when the instance status is activating, invalid, or freeze (inactive).</p>
      * 
      * @param request the request parameters of UpdatePublicNetwork  UpdatePublicNetworkRequest
      * @return UpdatePublicNetworkResponse
@@ -1322,9 +1508,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> In the following example, only the parameters in the returned data list are guaranteed to be included. The parameters that are not mentioned are for reference only. For more information about the parameters, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force a dependency in a program to get these parameters.</p>
-     * </blockquote>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>You cannot update the public access whitelist of an instance when the instance status is activating, invalid, or inactive (freeze).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used at the same time, and they support different parameters (except for InstanceId and clientToken). The details are as follows:   <ul>
+     * <li>IP whitelist list: publicIpWhitelist</li>
+     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * </ul>
+     * </li>
+     * <li>The public access whitelist does not support private IP addresses, and the internal-facing access whitelist does not support public IP addresses.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdatePublicWhiteIps  UpdatePublicWhiteIpsRequest
      * @return UpdatePublicWhiteIpsResponse
@@ -1345,10 +1538,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Before you call this operation, take note of the following items:</p>
+     * <p>When calling this operation, note the following:</p>
      * <ul>
-     * <li>If the dictionary file is stored in an Object Storage Service (OSS) bucket, you must make sure that the access control list (ACL) of the bucket is public read.</li>
-     * <li>If you do not set sourceType to ORIGIN for an uploaded dictionary file, the file will be deleted after you call this operation.</li>
+     * <li>If the dictionary file is sourced from OSS, ensure that the OSS bucket has public-read permission.</li>
+     * <li>If a previously uploaded dictionary is not configured with ORIGIN, the dictionary file will be deleted after this operation is called.</li>
      * </ul>
      * 
      * @param request the request parameters of UpdateSynonymsDicts  UpdateSynonymsDictsRequest
@@ -1364,9 +1557,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p>For more information about the parameters displayed in the following sample code but not provided in the preceding tables, see <a href="https://help.aliyun.com/document_detail/142230.html">ListInstance</a>. You cannot force your program to obtain these parameters.</p>
-     * </blockquote>
+     * <h2>Before you begin</h2>
+     * <ul>
+     * <li>You cannot update information when the instance status is activating, invalid, or freeze (inactive).</li>
+     * <li>You can update the whitelist in two ways: IP whitelist list and IP whitelist group. The two methods cannot be used simultaneously, and they support different parameters (except for InstanceId and clientToken). The details are as follows: <ul>
+     * <li>IP whitelist list: esIPWhitelist</li>
+     * <li>IP whitelist group: modifyMode, whiteIpGroup</li>
+     * </ul>
+     * </li>
+     * <li>The public access whitelist does not support private IP addresses, and the private network access whitelist does not support public IP addresses.</li>
+     * </ul>
      * 
      * @param request the request parameters of UpdateWhiteIps  UpdateWhiteIpsRequest
      * @return UpdateWhiteIpsResponse
@@ -1381,7 +1581,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>5A2CFF0E-5718-45B5-9D4D-70B3FF\<em>\</em>\<em>\</em></p>
+     * <blockquote>
+     * <p>The instance version upgrade feature currently supports only upgrading from version 5.5.3 to 5.6.16, from version 5.6.16 to 6.3.2, and from version 6.3.2 to 6.7.0. Upgrades between other versions are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/148786.html">Upgrade version</a>.</p>
+     * </blockquote>
      * 
      * @param request the request parameters of UpgradeEngineVersion  UpgradeEngineVersionRequest
      * @return UpgradeEngineVersionResponse
@@ -1397,7 +1599,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before you enable the X-Pack Monitoring feature for a Logstash cluster, you must associate the Logstash cluster with an Elasticsearch cluster. This way, you can view the monitoring data of the Logstash cluster in the Kibana console of the Elasticsearch cluster.</p>
+     * <p>To enable X-Pack monitoring for Logstash, configure an Elasticsearch instance. After the configuration, you can monitor the Logstash instance in the Kibana console of the corresponding Elasticsearch instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ValidateConnection  ValidateConnectionRequest
@@ -1412,6 +1614,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ValidateShrinkNodesResponse> validateShrinkNodes(ValidateShrinkNodesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Before you use a collector to collect logs from different data sources, you must authorize the creation of a service-linked role. Call this operation to check whether the service-linked role has been created.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ValidateSlrPermission  ValidateSlrPermissionRequest
      * @return ValidateSlrPermissionResponse
      */
@@ -1425,7 +1632,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The configurations of warm nodes.</p>
+     * <h3>Precautions</h3>
+     * <ul>
+     * <li>Before using this operation, make sure that you fully understand the billing methods and pricing of Elasticsearch. For more information, see <a href="https://help.aliyun.com/document_detail/260947.html">Alibaba Cloud Elasticsearch billing rules</a>.</li>
+     * <li>You must complete real-name verification before creating an instance.&lt;props=&quot;china&quot;&gt;<ph> For more information, see <a href="https://help.aliyun.com/document_detail/37175.html">Real-name verification</a>.</ph></li>
+     * <li>You do not need to specify a zone when creating an instance. The instance is created in the same zone as the selected VPC by default.</li>
+     * </ul>
      * 
      * @param request the request parameters of createInstance  CreateInstanceRequest
      * @return CreateInstanceResponse

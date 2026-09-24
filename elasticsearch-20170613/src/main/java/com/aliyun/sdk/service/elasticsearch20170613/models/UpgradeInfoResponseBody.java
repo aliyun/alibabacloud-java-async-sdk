@@ -78,7 +78,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result body.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -209,7 +209,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * CurRepoVersion.
+             * <p>The current repo version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.7.3</p>
              */
             public Builder curRepoVersion(String curRepoVersion) {
                 this.curRepoVersion = curRepoVersion;
@@ -217,7 +220,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateRepoVersion.
+             * <p>The repo version available for upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.7.3</p>
              */
             public Builder updateRepoVersion(String updateRepoVersion) {
                 this.updateRepoVersion = updateRepoVersion;
@@ -225,7 +231,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Upgrade.
+             * <p>Indicates whether an upgradeable version is available.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder upgrade(Boolean upgrade) {
                 this.upgrade = upgrade;
@@ -233,7 +242,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * curApackVersion.
+             * <p>The current kernel version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.4</p>
              */
             public Builder curApackVersion(String curApackVersion) {
                 this.curApackVersion = curApackVersion;
@@ -241,7 +253,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * curEsVersion.
+             * <p>The current Elasticsearch version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder curEsVersion(String curEsVersion) {
                 this.curEsVersion = curEsVersion;
@@ -249,7 +264,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * upgradeApackVersion.
+             * <p>The kernel version available for upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2.2.4</p>
              */
             public Builder upgradeApackVersion(String upgradeApackVersion) {
                 this.upgradeApackVersion = upgradeApackVersion;
@@ -257,7 +275,10 @@ public class UpgradeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * upgradeEsVersion.
+             * <p>The Elasticsearch version available for upgrade.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8.17.0</p>
              */
             public Builder upgradeEsVersion(String upgradeEsVersion) {
                 this.upgradeEsVersion = upgradeEsVersion;
@@ -311,7 +332,7 @@ public class UpgradeInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * UpgradeInfo.
+             * <p>The upgrade information.</p>
              */
             public Builder upgradeInfo(UpgradeInfo upgradeInfo) {
                 this.upgradeInfo = upgradeInfo;

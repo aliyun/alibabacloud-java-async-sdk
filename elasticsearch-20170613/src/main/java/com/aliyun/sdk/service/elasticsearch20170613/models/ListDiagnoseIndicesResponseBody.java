@@ -78,7 +78,7 @@ public class ListDiagnoseIndicesResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;

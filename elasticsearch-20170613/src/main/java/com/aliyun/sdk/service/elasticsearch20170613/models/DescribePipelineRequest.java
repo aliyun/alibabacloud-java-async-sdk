@@ -75,7 +75,7 @@ public class DescribePipelineRequest extends Request {
         } 
 
         /**
-         * <p>The information about the returned pipeline. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</p>
+         * <p>The Logstash instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribePipelineRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         * <p>The pipeline ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -73,7 +73,10 @@ public class GrayPublishRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>The ID of the Elasticsearch instance. This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-cn-0pp1jxvcl000z****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -82,7 +85,10 @@ public class GrayPublishRequest extends Request {
         }
 
         /**
-         * X-Request-ChangeId.
+         * <p>The change ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ea8d33aa4371c3499d0***</p>
          */
         public Builder xRequestChangeId(String xRequestChangeId) {
             this.putQueryParameter("X-Request-ChangeId", xRequestChangeId);
