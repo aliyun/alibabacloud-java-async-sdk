@@ -216,7 +216,7 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * <p>The source language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.</p>
+         * <p>The source language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * <p>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping</a>.</p>
+         * <p>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language Direction Mapping Table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -242,7 +242,7 @@ public class ImageTranslationProRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate brand names on images. This parameter is optional. Default value: false. This helps you protect brand name information from being translated.</p>
+         * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps you protect brand name information from being translated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

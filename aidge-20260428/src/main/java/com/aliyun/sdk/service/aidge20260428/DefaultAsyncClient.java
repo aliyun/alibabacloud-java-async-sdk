@@ -577,6 +577,37 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p><em>Scenarios</em>*</p>
+     * <ul>
+     * <li>Floor display area assessment: Infers the bounding rectangle area of the floor display footprint based on an overall photo of the floor display and the actual dimensions of the products.</li>
+     * <li>Multi-SKU mixed arrangement analysis: Uses the dimensions of each different product to participate in side length inference.</li>
+     * <li>Area result review: Verifies results by combining the original image, product assets, and the returned two side lengths and area.
+     * <strong>Features</strong></li>
+     * <li>SKU asset-driven: Specifies the asset knowledge base through ragId. Each participating product must have a name, positive length, width, and height values, and at least one HTTPS reference image.</li>
+     * <li>Phased area inference: Sequentially forms decision edges, SKU projections, dimension accumulation, and final area.</li>
+     * <li>Unified units: SKU asset dimensions are stored in centimeters. Result side lengths are output in meters and area in square meters.</li>
+     * <li>Completeness and numerical validation: Returns failure when there are missing assets, no valid bounding boxes, or the area does not satisfy product consistency.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of DiduiAreaDeductionPro  DiduiAreaDeductionProRequest
+     * @return DiduiAreaDeductionProResponse
+     */
+    @Override
+    public CompletableFuture<DiduiAreaDeductionProResponse> diduiAreaDeductionPro(DiduiAreaDeductionProRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DiduiAreaDeductionPro").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DiduiAreaDeductionProResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DiduiAreaDeductionProResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <h2>Product Introduction</h2>
      * <p>Designed specifically for document translation. Supports translation between more than 400 language pairs (including bridged pairs) to handle multi-scenario, multi-page, and highly complex document translation. Scanned documents are not currently supported.
      * Excels in the following areas:</p>
@@ -652,6 +683,37 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EcomVideoRecreationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p><em>Scenarios</em>*</p>
+     * <ol>
+     * <li>Inspection photo review: Screens photos submitted by stores for recapture risks.</li>
+     * <li>Screen or printed photo recapture verification: Locates visible screens, printed photos, and other carriers.</li>
+     * <li>Review clue display: Annotates products and visible clues on the original image to assist re-examination.
+     * <strong>Features</strong></li>
+     * <li>General recapture detection: Returns an isFake Boolean result.</li>
+     * <li>Review element localization: Distinguishes physical products, screens, printed photos, and visible recapture clues. Products displayed within a screen are not redundantly output as physical products.</li>
+     * <li>Separate presentation of clues and conclusions: Localization text describes only visible phenomena. Normal reflections or standard packaging prints are not directly treated as recapture evidence.
+     * Supports a single HTTPS image as input. Supplementary localization returns up to 12 targets, each containing a category, a bounding box, and up to 24 characters of visible text. The coverage field indicates whether the localization is complete.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of GeneralRephotographyDetection  GeneralRephotographyDetectionRequest
+     * @return GeneralRephotographyDetectionResponse
+     */
+    @Override
+    public CompletableFuture<GeneralRephotographyDetectionResponse> generalRephotographyDetection(GeneralRephotographyDetectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GeneralRephotographyDetection").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GeneralRephotographyDetectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GeneralRephotographyDetectionResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1086,12 +1148,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation PLUS is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Image Translation Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
+     * <p>Image Translation Plus is designed specifically for e-commerce images. It uses a Mixture of Experts (MOE) architecture and delivers superior translation accuracy for multiple minority languages compared to the Lite and Pro editions. We recommend using it for the following 8 language pairs, with more language pairs to be supported in the future.
      * Supported language pairs:</p>
      * <table>
      * <thead>
      * <tr>
-     * <th><strong>Ordinal number</strong></th>
+     * <th><strong>No.</strong></th>
      * <th><strong>Source language</strong></th>
      * <th></th>
      * <th><strong>Target language</strong></th>
@@ -1198,7 +1260,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * </li>
      * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
+     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying a translation (ABC-DEF), or removing text (ABC-empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</p>
      * </li>
      * </ul>
      * 
@@ -1222,15 +1284,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal large model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</p>
+     * <p>Image Translation Pro is designed for e-commerce images. It integrates multimodal foundation model technology to achieve more accurate image understanding, significantly improve translation quality, and continuously expand and optimize multilingual translation capabilities. It supports more than 400 language directions (including bridged directions).</p>
      * <h2>Scenarios</h2>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h2>Features</h2>
      * <ul>
      * <li><strong>Product subject protection</strong>: Specify whether to translate text on the product subject. This helps you protect subject information from being translated, such as embedded information like product names.</li>
-     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK is not yet available. Follow platform notifications for updates.</li>
+     * <li><strong>Post-translation editing</strong>: Specify whether to return layout information such as text position, font, and color. This can be used for secondary editing when integrated with an image editor. The editor SDK package is not yet available. Follow platform notifications for updates.</li>
      * <li><strong>Brand name protection</strong>: Specify whether to translate brand names on images. This helps you protect brand name information from being translated.</li>
-     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API to meet your translation needs in different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
+     * <li><strong>Translation intervention</strong>: Customize translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and remove text (ABC→empty value). This is commonly used for brand name protection and similar scenarios. Pass the corresponding intervention glossary ID when calling the API. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </li>
      * <li>&lt;props=&quot;china&quot;&gt; <strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation Editor Protocol</a>.</li>
      * </ul>
      * 
@@ -1254,18 +1316,18 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h1>1. Product Introduction</h1>
-     * <p>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, making it easy to integrate with image editors for secondary editing of translation results.</p>
-     * <h1>2. Applicable scenarios</h1>
+     * <p>Image Translation is designed specifically for e-commerce images. It supports more than 100 language directions (including bridging), accurately processes complex text layouts within images, and ensures that translated content matches the image content. This helps e-commerce platforms and developers easily achieve multilingual conversion and rendering of image content. The product also returns layer information such as text position, font, and color within images, which facilitates secondary editing of translation results through an image editor.</p>
+     * <h1>2. Common scenarios</h1>
      * <p>E-commerce product images, marketing images, and images for various other scenarios.</p>
      * <h1>3. Features</h1>
      * <ul>
-     * <li><p><strong>Product area protection</strong>: Allows you to choose whether to translate text on the product area of an image. This helps protect product area information from being translated, avoiding translation of embedded information such as product names.</p>
+     * <li><p><strong>Product area protection</strong>: You can choose whether to translate text on the product area of an image. This helps protect product area information from being translated, such as embedded product names.</p>
      * </li>
-     * <li><p><strong>Brand name protection</strong>: Allows you to choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
+     * <li><p><strong>Brand name protection</strong>: You can choose whether to translate brand names on images. This helps protect brand name information from being translated.</p>
      * </li>
-     * <li><p><strong>Secondary editing after translation (layer information)</strong>: Allows you to choose whether to return layer information such as text position, font, and color. This information can be used to integrate with image editors for secondary editing of translation results. For the availability of the editor SDK package, follow platform notifications.</p>
+     * <li><p><strong>Secondary editing after translation (layer information)</strong>: You can choose whether to return layer information such as text position, font, and color. This information can be used to connect to an image editor for secondary editing of translation results. For the release progress of the editor SDK package, follow platform notifications.</p>
      * </li>
-     * <li><p><strong>Translation intervention</strong>: Allows you to customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </p>
+     * <li><p><strong>Translation intervention</strong>: You can customize translation results, including keeping text untranslated (ABC-ABC), specifying translations (ABC-DEF), or removing text (ABC-empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API operation. This meets your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.  </p>
      * </li>
      * <li><p><strong>Image editor integration</strong>: For more information, see <a href="https://www.alibabacloud.com/help/en/document_detail/3042647.html">Image Translation editor protocol</a>.</p>
      * </li>
@@ -1362,25 +1424,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2><strong>Product Introduction</strong></h2>
-     * <p>Display detection is an intelligent store product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It targets shelf and floor-stack display inspection scenarios in offline retail and channel stores. For store photos of shelves and floor stacks, the service first uses an MLLM to detect the bounding box and preliminary name of each product, then performs similarity recall against a customer-specific SKU vector library to exact match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This is applicable to large-scale, high-concurrent visual recognition pipelines such as remote display auditing by headquarters, SKU distribution verification, and display compliance inspection for offline stores.</p>
+     * <p>Display detection is an intelligent product display recognition capability built on a multimodal large language model (MLLM) combined with visual vector recall. It is designed for shelf and floor stack inspection scenarios in offline retail and channel stores. The service takes real photos of store shelves and floor stacks, first uses the MLLM to detect the bounding box and preliminary name of each product, then performs similarity recall against a customer-specific SKU vector library to exactly match each product to the customer\&quot;s own SKUs, and outputs per-product structured results that can be directly integrated with business systems. This service is suitable for large-scale, high-concurrent visual recognition pipelines such as remote display auditing by headquarters, SKU distribution verification, and display compliance inspection for offline stores.</p>
      * <h2><strong>Scenarios</strong></h2>
      * <ul>
-     * <li><p><strong>Shelf/floor-stack display recognition and inventory</strong>: Identifies each product in a shelf or floor-stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</p>
+     * <li><p><strong>Shelf/floor stack display recognition and inventory</strong>: Identifies each product in a shelf or floor stack image, matches it to the customer\&quot;s SKU library, and outputs a per-product list (product name + position + similarity score), replacing manual counting.</p>
      * </li>
-     * <li><p><strong>Distribution verification/SKU compliance</strong>: Verifies whether a store displays the specified SKUs as required by headquarters and whether any out-of-stock or misplaced items exist, supporting batch automated verification during sales promotions or new product launches.</p>
+     * <li><p><strong>Distribution verification/SKU compliance</strong>: Verifies whether a store displays the specified SKUs as required by headquarters and whether any out-of-stock or misplaced items exist. This supports batch automated verification during sales promotions or new product launches.</p>
      * </li>
-     * <li><p><strong>Customer-specific SKU library</strong>: Customers can upload their own standard SKU images to build a dedicated vector library (isolated by <code>RagId</code>). During recognition, recall is performed only within the corresponding customer library, ensuring name accuracy and data isolation between customers.</p>
+     * <li><p><strong>Customer-specific SKU library</strong>: Customers can upload their own standard SKU images to build a dedicated vector library (isolated by <code>RagId</code>). During recognition, retrieval is performed only within the corresponding customer library, ensuring name accuracy and data isolation between customers.</p>
      * </li>
      * </ul>
-     * <h2><strong>Features</strong></h2>
+     * <h2><strong>Functions and features</strong></h2>
      * <ul>
-     * <li><p><strong>Two-stage detection + recall pipeline</strong>: The MLLM detects each product box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then, visual embedding vectors perform similarity retrieval within the customer\&quot;s SKU library, and the top-1 precise SKU name overrides the preliminary name, balancing recall rate and name accuracy.</p>
+     * <li><p><strong>Two-stage detection + retrieval pipeline</strong>: The MLLM detects each product bounding box and preliminary name across the entire image (semantic-level understanding, adapted for dense displays and partial occlusion). Then, visual embedding vectors are used for similarity retrieval within the customer\&quot;s SKU library, and the top-1 precise SKU name overrides the preliminary name, balancing recall rate and name accuracy.</p>
      * </li>
-     * <li><p><strong>Dedicated vector library with isolated recall</strong>: A dedicated SKU vector library is maintained for each customer by <code>RagId</code>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</p>
+     * <li><p><strong>Isolated retrieval with dedicated vector libraries</strong>: A dedicated SKU vector library is maintained for each customer by <code>RagId</code>. Recognition retrieves only within the corresponding library, ensuring strict isolation between customers. Newly added or updated SKUs take effect in real time.</p>
      * </li>
-     * <li><p><strong>Per-product structured output</strong>: Output is unified as <code>Result.Items[]</code>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory/verification systems and supports case-level manual review and traceability.</p>
+     * <li><p><strong>Per-product structured output</strong>: Output is unified as <code>Result.Items[]</code>, with each product independently providing a bounding box, recalled SKU name, SKU code, and similarity score. This facilitates direct integration with downstream inventory and verification systems and supports case-level manual review and traceability.</p>
      * </li>
-     * <li><p><strong>Supported input formats</strong>: Currently supports image URLs accessible over the Internet or from OSS. A single shelf or floor-stack image is sufficient for recognition, and the output structure is consistent.</p>
+     * <li><p><strong>Supported input formats</strong>: Currently supports image URLs accessible over the Internet or through OSS. A single shelf or floor stack image is sufficient for recognition, and the output structure is consistent.</p>
      * </li>
      * </ul>
      * 
@@ -1396,6 +1458,39 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<MerchandisePlacementDetectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Scenarios</h2>
+     * <ul>
+     * <li>Beverage display recognition: Uses default rules for the Genki Forest business type to recognize visible beverage products.</li>
+     * <li>Custom detection rules: Specifies product recognition tasks that comply with output constraints through the rule parameter.</li>
+     * <li>Product location display: Uses per-product names and bounding boxes for display, statistics, or manual review.</li>
+     * </ul>
+     * <h2>Features</h2>
+     * <ul>
+     * <li>Direct product recognition: Each product outputs a bounding box and a name. The name is returned as unknown if it cannot be determined.</li>
+     * <li>Two rule entry points: A non-empty rule takes priority. If no valid rule is provided, the type must be set to Genki Forest.</li>
+     * <li>Unified result validation: Bounding box coordinates are converted to integers and restricted to the range 0–1000. Reversed coordinates are swapped. Missing names default to unknown. The entire batch fails if any item is not a valid product object, has an invalid bounding box, or has no area.</li>
+     * <li>Result scope: Currently outputs detected names and positions only. Vector library recall, SKU codes, and similarity scores are not included.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of MerchandisePlacementDetectionPro  MerchandisePlacementDetectionProRequest
+     * @return MerchandisePlacementDetectionProResponse
+     */
+    @Override
+    public CompletableFuture<MerchandisePlacementDetectionProResponse> merchandisePlacementDetectionPro(MerchandisePlacementDetectionProRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("MerchandisePlacementDetectionPro").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(MerchandisePlacementDetectionProResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<MerchandisePlacementDetectionProResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1433,6 +1528,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PackageWeightSizeCheckResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ol>
+     * <li>Multi-image input: image_url is a required array of HTTPS image URLs. </li>
+     * <li>Default excrement analysis: If user_prompt is not specified or is an empty string, the system determines whether excrement is present and outputs the location, urine clump/feces category, and subcategory for each region. </li>
+     * <li>Custom analysis: user_prompt and system_prompt are both optional. You can specify analysis requirements and system prompts separately. When submitting custom prompts, use values that comply with JSON string escaping rules.</li>
+     * <li>Text result response: result is always a String. Even if the model text itself is JSON, it is not automatically converted to an object.</li>
+     * </ol>
+     * 
+     * @param request the request parameters of PetHealthAnalysis  PetHealthAnalysisRequest
+     * @return PetHealthAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<PetHealthAnalysisResponse> petHealthAnalysis(PetHealthAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PetHealthAnalysis").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PetHealthAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PetHealthAnalysisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1895,21 +2016,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
      * <b>description</b> :
      * <h2>Product Introduction</h2>
-     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, continuously optimized for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 language directions. If you do not specify a source language, automatic detection is performed.</p>
+     * <p>Marco MT is an e-commerce translation model trained on over 1 billion high-quality bilingual sentence pairs, with continuous optimization for e-commerce-specific terminology such as brands, models, materials, and attributes. It supports mutual translation among more than 100 language directions (including bridged directions), especially Chinese-English, Chinese-multilingual, and English-multilingual translation. It supports language detection for 24 languages. If you do not specify a source language, automatic language detection is performed.</p>
      * <h2>Common scenarios</h2>
      * <ul>
-     * <li><strong>Product titles</strong>: Marco MT can accurately translate phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
-     * <li><strong>Product descriptions</strong>: Product descriptions are typically long with diverse and complex formatting. Marco MT supports long text translation and HTML format, delivering excellent translation quality and format preservation.</li>
-     * <li><strong>Product attributes</strong>: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
-     * <li><strong>Customer service conversations</strong>: In customer service scenarios, Marco MT can handle issues such as missing context and typos, and supports polite expressions for certain language directions.
-     * Marco MT can also be used for general translation scenarios such as office work, meetings, and daily conversations.</li>
+     * <li>Product titles: Marco MT large model translation accurately translates phrases, keywords, and trending terms in product titles into the target language, improving product visibility on e-commerce platforms.</li>
+     * <li>Product descriptions: Product descriptions are typically long with diverse and complex formatting. Marco MT large model translation supports long text translation and HTML formatting, delivering excellent translation quality and format preservation.</li>
+     * <li>Product attributes: Product attribute terms are typically short and may contain e-commerce-specific terms such as model numbers and specifications.</li>
+     * <li>Customer service conversations: In customer service scenarios, Marco MT optimizes issues such as missing context and typos, and supports polite expressions for certain language directions.
+     * Marco MT large model translation can also be used for general-purpose translation scenarios such as office work, meetings, and daily conversations.</li>
      * </ul>
      * <h2>Functions and features</h2>
      * <ul>
-     * <li><strong>Supported language directions</strong><br>Marco MT supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
-     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it delivers faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
-     * <li><strong>Supported text format types</strong><br>Currently supports text and html text types.</li>
-     * <li><strong>Translation intervention</strong><br>Supports custom translation results, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
+     * <li><strong>Supported language directions</strong><br>Marco MT large model translation supports mutual translation among more than 100 languages and language detection for 24 languages. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</li>
+     * <li><strong>Ultra-low hallucination rate and high-speed inference</strong><br>Marco MT large model translation is a large language model with preference alignment for translation scenarios. Compared with general-purpose large language models, it provides faster translation inference and an extremely low hallucination rate, making it especially suitable for large-scale invocation scenarios.</li>
+     * <li><strong>Supported text format types</strong><br>Currently, text and html text types are supported.</li>
+     * <li><strong>Translation intervention support</strong><br>Custom translation results are supported, including do-not-translate (ABC→ABC), specified translation (ABC→DEF), and skip translation (ABC→empty value). This is commonly used for scenarios such as brand name protection. Simply pass the corresponding intervention glossary ID when calling the API to meet your translation needs across different scenarios. You can upload up to 100,000 intervention terms. If you need more, contact the platform for assistance.</li>
      * </ul>
      * <h2>Translation quality comparison</h2>
      * <table>
@@ -1941,7 +2062,7 @@ public final class DefaultAsyncClient implements AsyncClient {
      * <td>Sac à clés pour hommes en cuir de vache véritable, étuis à clés, pochette à fermeture éclair, porte-clés, étui à clé de voiture, porte-clés pour femmes, organisateur de portefeuille</td>
      * <td>Porte-clés sac en cuir de vache véritable, étuis à clés en forme de seau, pochette à fermeture éclair, porte-clés auto pour voiture, étui à clés pour femmes, organisateur de clés de maison, portefeuille.</td>
      * <td>Hommes porte-clés en cuir de vache véritable sac/pochette fermature éclair porte-clés Auto voiture porte-clés femmes maison porte-clés organisateur portefeuille</td>
-     * <td>Clearer and more accurate product subject expression — correctly identifies &quot;key bag&quot; rather than &quot;keychain,&quot; avoiding ambiguity about the product</td>
+     * <td>Clearer and more accurate product subject expression as &quot;key bag&quot; rather than &quot;keychain&quot;, avoiding ambiguity about the product subject in other translations</td>
      * </tr>
      * </tbody></table>
      * 

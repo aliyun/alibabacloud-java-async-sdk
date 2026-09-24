@@ -146,7 +146,7 @@ public class ImageTranslationStandardRequest extends Request {
         } 
 
         /**
-         * <p>The intervention glossary ID. Optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
+         * <p>The intervention glossary ID. This parameter is optional. You must create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</p>
          * 
          * <strong>example:</strong>
          * <p>glossary_1</p>
@@ -159,10 +159,10 @@ public class ImageTranslationStandardRequest extends Request {
 
         /**
          * <ul>
-         * <li>Image URL: Must be publicly accessible.</li>
-         * <li>Format: png, jpeg, jpg, bmp, webp</li>
-         * <li>Pixels: Both width and height must not exceed 4000</li>
-         * <li>File size: Original file ≤ 10 MB</li>
+         * <li>Image URL: The URL must be publicly accessible.</li>
+         * <li>Format: png, jpeg, jpg, bmp, or webp.</li>
+         * <li>Pixels: The width and height must not exceed 4000 pixels each.</li>
+         * <li>File size: The original file must be 10 MB or smaller.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -176,7 +176,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate text on the product area of an image. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</p>
+         * <p>Specifies whether to translate text on the product area of the image. This parameter is optional. Default value: false. This helps protect information by preventing translation of embedded content such as product names.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -188,7 +188,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>The source language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
+         * <p>The source language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +201,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>The target language code. Required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
+         * <p>The target language code. This parameter is required. For supported language directions, see <a href="https://www.alibabacloud.com/help/en/document_detail/3041883.html">Language direction mapping table</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to translate brand names on images. Optional. Default value: false. This helps protect brand name information from being translated.</p>
+         * <p>Specifies whether to translate brand names on the image. This parameter is optional. Default value: false. This helps protect brand name information from being translated.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -226,7 +226,7 @@ public class ImageTranslationStandardRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return layer information such as text position, font, and color. If you set this parameter to true, layer information is returned, which can be used to integrate with image editors for secondary editing. Default value: false.</p>
+         * <p>Specifies whether to return layer information such as text position, font, and color. If you set this parameter to true, layer information is returned for secondary editing through an image editor. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

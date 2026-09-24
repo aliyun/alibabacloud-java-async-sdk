@@ -1,3 +1,6 @@
+2026-09-24 Version: 5.0.11
+- Generated java-async 2026-04-28 for Aidge.
+
 2026-09-24 Version: 5.0.10
 - Generated java-async 2026-04-28 for Aidge.
 

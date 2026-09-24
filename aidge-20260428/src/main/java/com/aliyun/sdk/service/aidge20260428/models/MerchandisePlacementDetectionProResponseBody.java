@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link TextTranslateResponseBody} extends {@link TeaModel}
+ * {@link MerchandisePlacementDetectionProResponseBody} extends {@link TeaModel}
  *
- * <p>TextTranslateResponseBody</p>
+ * <p>MerchandisePlacementDetectionProResponseBody</p>
  */
-public class TextTranslateResponseBody extends TeaModel {
+public class MerchandisePlacementDetectionProResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class TextTranslateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private TextTranslateResponseBody(Builder builder) {
+    private MerchandisePlacementDetectionProResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class TextTranslateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TextTranslateResponseBody create() {
+    public static MerchandisePlacementDetectionProResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class TextTranslateResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(TextTranslateResponseBody model) {
+        private Builder(MerchandisePlacementDetectionProResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,7 +106,7 @@ public class TextTranslateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value &quot;success&quot; is returned for successful calls.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -117,7 +117,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The translation result data, including the translation list and usage information.</p>
+         * <p>The detection result of product display detection Pro.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -125,7 +125,7 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. The value &quot;Success&quot; is returned for successful calls. For failed calls, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</p>
+         * <p>The response message or failure description.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -136,10 +136,10 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID, which uniquely identifies a single request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>922E43BB-EE0E-1A29-B143-BB91BB3EA6AB</p>
+         * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,122 +147,119 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</p>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public TextTranslateResponseBody build() {
-            return new TextTranslateResponseBody(this);
+        public MerchandisePlacementDetectionProResponseBody build() {
+            return new MerchandisePlacementDetectionProResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link TextTranslateResponseBody} extends {@link TeaModel}
+     * {@link MerchandisePlacementDetectionProResponseBody} extends {@link TeaModel}
      *
-     * <p>TextTranslateResponseBody</p>
+     * <p>MerchandisePlacementDetectionProResponseBody</p>
      */
-    public static class Translations extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Characters")
-        private Long characters;
+    public static class DataData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bbox2d")
+        private java.util.List<Integer> bbox2d;
 
-        @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
-        private String detectedLanguage;
+        @com.aliyun.core.annotation.NameInMap("DetectedSkuName")
+        private String detectedSkuName;
 
-        @com.aliyun.core.annotation.NameInMap("TranslatedText")
-        private String translatedText;
+        @com.aliyun.core.annotation.NameInMap("Idx")
+        private Integer idx;
 
-        private Translations(Builder builder) {
-            this.characters = builder.characters;
-            this.detectedLanguage = builder.detectedLanguage;
-            this.translatedText = builder.translatedText;
+        private DataData(Builder builder) {
+            this.bbox2d = builder.bbox2d;
+            this.detectedSkuName = builder.detectedSkuName;
+            this.idx = builder.idx;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Translations create() {
+        public static DataData create() {
             return builder().build();
         }
 
         /**
-         * @return characters
+         * @return bbox2d
          */
-        public Long getCharacters() {
-            return this.characters;
+        public java.util.List<Integer> getBbox2d() {
+            return this.bbox2d;
         }
 
         /**
-         * @return detectedLanguage
+         * @return detectedSkuName
          */
-        public String getDetectedLanguage() {
-            return this.detectedLanguage;
+        public String getDetectedSkuName() {
+            return this.detectedSkuName;
         }
 
         /**
-         * @return translatedText
+         * @return idx
          */
-        public String getTranslatedText() {
-            return this.translatedText;
+        public Integer getIdx() {
+            return this.idx;
         }
 
         public static final class Builder {
-            private Long characters; 
-            private String detectedLanguage; 
-            private String translatedText; 
+            private java.util.List<Integer> bbox2d; 
+            private String detectedSkuName; 
+            private Integer idx; 
 
             private Builder() {
             } 
 
-            private Builder(Translations model) {
-                this.characters = model.characters;
-                this.detectedLanguage = model.detectedLanguage;
-                this.translatedText = model.translatedText;
+            private Builder(DataData model) {
+                this.bbox2d = model.bbox2d;
+                this.detectedSkuName = model.detectedSkuName;
+                this.idx = model.idx;
             } 
 
             /**
-             * <p>The number of characters in the source text.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>11</p>
+             * <p>The normalized bounding box coordinates [x1,y1,x2,y2], with values in the range 0–1000.</p>
              */
-            public Builder characters(Long characters) {
-                this.characters = characters;
+            public Builder bbox2d(java.util.List<Integer> bbox2d) {
+                this.bbox2d = bbox2d;
                 return this;
             }
 
             /**
-             * <p>The automatically detected source language code.</p>
+             * <p>The detected product name. The value is unknown if the name cannot be determined.</p>
              * 
              * <strong>example:</strong>
-             * <p>en</p>
+             * <p>unknown</p>
              */
-            public Builder detectedLanguage(String detectedLanguage) {
-                this.detectedLanguage = detectedLanguage;
+            public Builder detectedSkuName(String detectedSkuName) {
+                this.detectedSkuName = detectedSkuName;
                 return this;
             }
 
             /**
-             * <p>The translated text.</p>
+             * <p>The bounding box index, starting from 1.</p>
              * 
              * <strong>example:</strong>
-             * <p>Hello World</p>
+             * <p>1</p>
              */
-            public Builder translatedText(String translatedText) {
-                this.translatedText = translatedText;
+            public Builder idx(Integer idx) {
+                this.idx = idx;
                 return this;
             }
 
-            public Translations build() {
-                return new Translations(this);
+            public DataData build() {
+                return new DataData(this);
             } 
 
         } 
@@ -270,19 +267,23 @@ public class TextTranslateResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link TextTranslateResponseBody} extends {@link TeaModel}
+     * {@link MerchandisePlacementDetectionProResponseBody} extends {@link TeaModel}
      *
-     * <p>TextTranslateResponseBody</p>
+     * <p>MerchandisePlacementDetectionProResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Translations")
-        private java.util.List<Translations> translations;
+        @com.aliyun.core.annotation.NameInMap("BoxCount")
+        private Integer boxCount;
+
+        @com.aliyun.core.annotation.NameInMap("Data")
+        private java.util.List<DataData> data;
 
         @com.aliyun.core.annotation.NameInMap("UsageMap")
         private java.util.Map<String, Long> usageMap;
 
         private Data(Builder builder) {
-            this.translations = builder.translations;
+            this.boxCount = builder.boxCount;
+            this.data = builder.data;
             this.usageMap = builder.usageMap;
         }
 
@@ -295,10 +296,17 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         /**
-         * @return translations
+         * @return boxCount
          */
-        public java.util.List<Translations> getTranslations() {
-            return this.translations;
+        public Integer getBoxCount() {
+            return this.boxCount;
+        }
+
+        /**
+         * @return data
+         */
+        public java.util.List<DataData> getData() {
+            return this.data;
         }
 
         /**
@@ -309,30 +317,43 @@ public class TextTranslateResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<Translations> translations; 
+            private Integer boxCount; 
+            private java.util.List<DataData> data; 
             private java.util.Map<String, Long> usageMap; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.translations = model.translations;
+                this.boxCount = model.boxCount;
+                this.data = model.data;
                 this.usageMap = model.usageMap;
             } 
 
             /**
-             * <p>The translation result list. Each element corresponds to a translation result for an entry in the input text list.</p>
+             * <p>The number of valid bounding boxes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
-            public Builder translations(java.util.List<Translations> translations) {
-                this.translations = translations;
+            public Builder boxCount(Integer boxCount) {
+                this.boxCount = boxCount;
                 return this;
             }
 
             /**
-             * <p>The usage information, including the number of input characters.</p>
+             * <p>The list of per-box detection details.</p>
+             */
+            public Builder data(java.util.List<DataData> data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * <p>The usage information.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;InputCharacterCount&quot;:5}</p>
+             * <p>{&quot;ProcessingCount&quot;:1}</p>
              */
             public Builder usageMap(java.util.Map<String, Long> usageMap) {
                 this.usageMap = usageMap;

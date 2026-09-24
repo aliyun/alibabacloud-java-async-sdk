@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImageTranslationPlusResponseBody} extends {@link TeaModel}
+ * {@link PetHealthAnalysisResponseBody} extends {@link TeaModel}
  *
- * <p>ImageTranslationPlusResponseBody</p>
+ * <p>PetHealthAnalysisResponseBody</p>
  */
-public class ImageTranslationPlusResponseBody extends TeaModel {
+public class PetHealthAnalysisResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -32,7 +32,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ImageTranslationPlusResponseBody(Builder builder) {
+    private PetHealthAnalysisResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ImageTranslationPlusResponseBody create() {
+    public static PetHealthAnalysisResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ImageTranslationPlusResponseBody model) {
+        private Builder(PetHealthAnalysisResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,10 +106,10 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -125,10 +125,10 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * <p>The response message or failure description.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>Task submitted</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -136,10 +136,10 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
+         * <p>70CBEFDF-BB17-1EB3-8A21-569F3124738F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,11 +147,7 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The call is successful.</li>
-         * <li>false: The call failed.</li>
-         * </ul>
+         * <p>Indicates whether the call is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -161,17 +157,17 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
             return this;
         }
 
-        public ImageTranslationPlusResponseBody build() {
-            return new ImageTranslationPlusResponseBody(this);
+        public PetHealthAnalysisResponseBody build() {
+            return new PetHealthAnalysisResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ImageTranslationPlusResponseBody} extends {@link TeaModel}
+     * {@link PetHealthAnalysisResponseBody} extends {@link TeaModel}
      *
-     * <p>ImageTranslationPlusResponseBody</p>
+     * <p>PetHealthAnalysisResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -207,10 +203,10 @@ public class ImageTranslationPlusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The asynchronous task ID. Use this ID to poll for results through the queryTaskResult operation.</p>
+             * <p>The asynchronous task ID used for QueryAsyncTaskResult queries.</p>
              * 
              * <strong>example:</strong>
-             * <p>task-abc123</p>
+             * <p>task_778fa8bd21804828a5d147050e30edac</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
