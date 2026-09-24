@@ -31,6 +31,10 @@ public class MerchandisePlacementDetectionRequest extends Request {
     private String ragId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rule")
+    private String rule;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -39,6 +43,7 @@ public class MerchandisePlacementDetectionRequest extends Request {
         this.apiId = builder.apiId;
         this.imageUrl = builder.imageUrl;
         this.ragId = builder.ragId;
+        this.rule = builder.rule;
         this.type = builder.type;
     }
 
@@ -77,6 +82,13 @@ public class MerchandisePlacementDetectionRequest extends Request {
     }
 
     /**
+     * @return rule
+     */
+    public String getRule() {
+        return this.rule;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -87,6 +99,7 @@ public class MerchandisePlacementDetectionRequest extends Request {
         private String apiId; 
         private String imageUrl; 
         private String ragId; 
+        private String rule; 
         private String type; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class MerchandisePlacementDetectionRequest extends Request {
             this.apiId = request.apiId;
             this.imageUrl = request.imageUrl;
             this.ragId = request.ragId;
+            this.rule = request.rule;
             this.type = request.type;
         } 
 
@@ -135,6 +149,15 @@ public class MerchandisePlacementDetectionRequest extends Request {
         public Builder ragId(String ragId) {
             this.putQueryParameter("RagId", ragId);
             this.ragId = ragId;
+            return this;
+        }
+
+        /**
+         * Rule.
+         */
+        public Builder rule(String rule) {
+            this.putQueryParameter("Rule", rule);
+            this.rule = rule;
             return this;
         }
 

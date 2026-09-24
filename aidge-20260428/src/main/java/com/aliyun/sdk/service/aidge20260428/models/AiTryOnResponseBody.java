@@ -106,7 +106,10 @@ public class AiTryOnResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,7 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result struct.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +125,10 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message. This parameter is not returned if the call is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +136,10 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used to uniquely identify a request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +147,10 @@ public class AiTryOnResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call is successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -204,7 +216,10 @@ public class AiTryOnResponseBody extends TeaModel {
             } 
 
             /**
-             * ProcessedImageCount.
+             * <p>The number of processed images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder processedImageCount(Long processedImageCount) {
                 this.processedImageCount = processedImageCount;
@@ -212,7 +227,10 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * Resolution.
+             * <p>The resolution of the processed image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1K</p>
              */
             public Builder resolution(String resolution) {
                 this.resolution = resolution;
@@ -305,7 +323,10 @@ public class AiTryOnResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageHeight.
+             * <p>The height of the result image, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1360</p>
              */
             public Builder imageHeight(String imageHeight) {
                 this.imageHeight = imageHeight;
@@ -313,7 +334,10 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the virtual try-on result image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/virtual-try-on-result.png">https://example.com/virtual-try-on-result.png</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -321,7 +345,10 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * ImageWidth.
+             * <p>The width of the result image, in pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>768</p>
              */
             public Builder imageWidth(String imageWidth) {
                 this.imageWidth = imageWidth;
@@ -329,7 +356,10 @@ public class AiTryOnResponseBody extends TeaModel {
             }
 
             /**
-             * UsageMap.
+             * <p>The usage details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;ProcessedImageCount&quot;:1,&quot;Resolution&quot;:&quot;1K&quot;}</p>
              */
             public Builder usageMap(UsageMap usageMap) {
                 this.usageMap = usageMap;
