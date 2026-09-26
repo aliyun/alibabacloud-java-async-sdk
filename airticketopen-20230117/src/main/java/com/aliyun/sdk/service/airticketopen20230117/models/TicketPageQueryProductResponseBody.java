@@ -2101,6 +2101,81 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
      *
      * <p>TicketPageQueryProductResponseBody</p>
      */
+    public static class SellerAgent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentName")
+        private String agentName;
+
+        @com.aliyun.core.annotation.NameInMap("AgentType")
+        private Integer agentType;
+
+        private SellerAgent(Builder builder) {
+            this.agentName = builder.agentName;
+            this.agentType = builder.agentType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SellerAgent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return agentName
+         */
+        public String getAgentName() {
+            return this.agentName;
+        }
+
+        /**
+         * @return agentType
+         */
+        public Integer getAgentType() {
+            return this.agentType;
+        }
+
+        public static final class Builder {
+            private String agentName; 
+            private Integer agentType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SellerAgent model) {
+                this.agentName = model.agentName;
+                this.agentType = model.agentType;
+            } 
+
+            /**
+             * AgentName.
+             */
+            public Builder agentName(String agentName) {
+                this.agentName = agentName;
+                return this;
+            }
+
+            /**
+             * AgentType.
+             */
+            public Builder agentType(Integer agentType) {
+                this.agentType = agentType;
+                return this;
+            }
+
+            public SellerAgent build() {
+                return new SellerAgent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TicketPageQueryProductResponseBody} extends {@link TeaModel}
+     *
+     * <p>TicketPageQueryProductResponseBody</p>
+     */
     public static class Session extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionEndTime")
         private String sessionEndTime;
@@ -3530,6 +3605,9 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScenicId")
         private Long scenicId;
 
+        @com.aliyun.core.annotation.NameInMap("SellerAgent")
+        private SellerAgent sellerAgent;
+
         @com.aliyun.core.annotation.NameInMap("Session")
         private Session session;
 
@@ -3538,9 +3616,6 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Spu")
         private Spu spu;
-
-        @com.aliyun.core.annotation.NameInMap("SupplierName")
-        private String supplierName;
 
         @com.aliyun.core.annotation.NameInMap("TicketKind")
         private TicketKind ticketKind;
@@ -3561,10 +3636,10 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
             this.refundRule = builder.refundRule;
             this.region = builder.region;
             this.scenicId = builder.scenicId;
+            this.sellerAgent = builder.sellerAgent;
             this.session = builder.session;
             this.settlePriceCalculateType = builder.settlePriceCalculateType;
             this.spu = builder.spu;
-            this.supplierName = builder.supplierName;
             this.ticketKind = builder.ticketKind;
             this.useRule = builder.useRule;
         }
@@ -3662,6 +3737,13 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
         }
 
         /**
+         * @return sellerAgent
+         */
+        public SellerAgent getSellerAgent() {
+            return this.sellerAgent;
+        }
+
+        /**
          * @return session
          */
         public Session getSession() {
@@ -3680,13 +3762,6 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
          */
         public Spu getSpu() {
             return this.spu;
-        }
-
-        /**
-         * @return supplierName
-         */
-        public String getSupplierName() {
-            return this.supplierName;
         }
 
         /**
@@ -3716,10 +3791,10 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
             private RefundRule refundRule; 
             private Region region; 
             private Long scenicId; 
+            private SellerAgent sellerAgent; 
             private Session session; 
             private Integer settlePriceCalculateType; 
             private Spu spu; 
-            private String supplierName; 
             private TicketKind ticketKind; 
             private UseRule useRule; 
 
@@ -3739,10 +3814,10 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
                 this.refundRule = model.refundRule;
                 this.region = model.region;
                 this.scenicId = model.scenicId;
+                this.sellerAgent = model.sellerAgent;
                 this.session = model.session;
                 this.settlePriceCalculateType = model.settlePriceCalculateType;
                 this.spu = model.spu;
-                this.supplierName = model.supplierName;
                 this.ticketKind = model.ticketKind;
                 this.useRule = model.useRule;
             } 
@@ -3844,6 +3919,14 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
             }
 
             /**
+             * SellerAgent.
+             */
+            public Builder sellerAgent(SellerAgent sellerAgent) {
+                this.sellerAgent = sellerAgent;
+                return this;
+            }
+
+            /**
              * Session.
              */
             public Builder session(Session session) {
@@ -3864,14 +3947,6 @@ public class TicketPageQueryProductResponseBody extends TeaModel {
              */
             public Builder spu(Spu spu) {
                 this.spu = spu;
-                return this;
-            }
-
-            /**
-             * SupplierName.
-             */
-            public Builder supplierName(String supplierName) {
-                this.supplierName = supplierName;
                 return this;
             }
 
