@@ -12,23 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetEnrolledAccountRequest} extends {@link RequestModel}
+ * {@link DecommissionGovernanceRequest} extends {@link RequestModel}
  *
- * <p>GetEnrolledAccountRequest</p>
+ * <p>DecommissionGovernanceRequest</p>
  */
-public class GetEnrolledAccountRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountUid")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long accountUid;
-
+public class DecommissionGovernanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private GetEnrolledAccountRequest(Builder builder) {
+    private DecommissionGovernanceRequest(Builder builder) {
         super(builder);
-        this.accountUid = builder.accountUid;
         this.regionId = builder.regionId;
     }
 
@@ -36,7 +30,7 @@ public class GetEnrolledAccountRequest extends Request {
         return new Builder();
     }
 
-    public static GetEnrolledAccountRequest create() {
+    public static DecommissionGovernanceRequest create() {
         return builder().build();
     }
 
@@ -46,48 +40,26 @@ public class GetEnrolledAccountRequest extends Request {
     }
 
     /**
-     * @return accountUid
-     */
-    public Long getAccountUid() {
-        return this.accountUid;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetEnrolledAccountRequest, Builder> {
-        private Long accountUid; 
+    public static final class Builder extends Request.Builder<DecommissionGovernanceRequest, Builder> {
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetEnrolledAccountRequest request) {
+        private Builder(DecommissionGovernanceRequest request) {
             super(request);
-            this.accountUid = request.accountUid;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The ID of the account.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>19534534552****</p>
-         */
-        public Builder accountUid(Long accountUid) {
-            this.putQueryParameter("AccountUid", accountUid);
-            this.accountUid = accountUid;
-            return this;
-        }
-
-        /**
-         * <p>The region ID.</p>
+         * <p>RegionId</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -99,8 +71,8 @@ public class GetEnrolledAccountRequest extends Request {
         }
 
         @Override
-        public GetEnrolledAccountRequest build() {
-            return new GetEnrolledAccountRequest(this);
+        public DecommissionGovernanceRequest build() {
+            return new DecommissionGovernanceRequest(this);
         } 
 
     } 

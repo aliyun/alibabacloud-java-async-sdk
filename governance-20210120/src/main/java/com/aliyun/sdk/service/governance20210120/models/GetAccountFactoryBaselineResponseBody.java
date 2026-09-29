@@ -145,7 +145,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp16ae2k8a3yo3d*****</p>
@@ -210,8 +210,10 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline. Valid values:</p>
          * <ul>
-         * <li>System: default baseline.</li>
-         * <li>Custom: custom baseline.</li>
+         * <li><p>System: The baseline is a default baseline.</p>
+         * </li>
+         * <li><p>Custom: The baseline is a custom baseline.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,7 +311,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
              * <p>The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
+             * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -320,7 +322,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
              * <p>The name of the baseline item.</p>
              * 
              * <strong>example:</strong>
-             * <p>1097526274671790</p>
+             * <p>ACS-BP_ACCOUNT_FACTORY_VPC</p>
              */
             public Builder name(String name) {
                 this.name = name;

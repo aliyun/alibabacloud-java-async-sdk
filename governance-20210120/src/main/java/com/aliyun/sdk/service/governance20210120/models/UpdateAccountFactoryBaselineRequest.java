@@ -138,6 +138,9 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
 
         /**
          * <p>The name of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom baseline</p>
          */
         public Builder baselineName(String baselineName) {
             this.putQueryParameter("BaselineName", baselineName);
@@ -147,6 +150,9 @@ public class UpdateAccountFactoryBaselineRequest extends Request {
 
         /**
          * <p>The description of the baseline.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default baseline</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

@@ -110,8 +110,7 @@ public class BatchEnrollAccountsRequest extends Request {
         }
 
         /**
-         * <p>The baseline ID.</p>
-         * <p>If this parameter is left empty, the default baseline is used.</p>
+         * <p>The ID of the baseline. If you leave this parameter empty, the default baseline is used.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp1durvn3lgqe28v****</p>
@@ -124,7 +123,7 @@ public class BatchEnrollAccountsRequest extends Request {
 
         /**
          * <p>The baseline items.</p>
-         * <p>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <code>BaselineId</code> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</p>
+         * <p>If you specify this parameter, the baseline item configurations are merged with the configurations of the baseline specified by <code>BaselineId</code>. For duplicate baseline items, the configurations in this parameter take precedence. We recommend that you leave this parameter empty and use <code>BaselineId</code> to apply baseline configurations.</p>
          */
         public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.putQueryParameter("BaselineItems", baselineItems);
@@ -191,7 +190,7 @@ public class BatchEnrollAccountsRequest extends Request {
             } 
 
             /**
-             * <p>The account ID. This parameter is required.</p>
+             * <p>The ID of the account to enroll. This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>12868156179****</p>
@@ -311,8 +310,10 @@ public class BatchEnrollAccountsRequest extends Request {
             /**
              * <p>Specifies whether to skip the baseline item. Valid values:</p>
              * <ul>
-             * <li>false</li>
-             * <li>true</li>
+             * <li><p>false (default): does not skip the baseline item.</p>
+             * </li>
+             * <li><p>true: skips the baseline item.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

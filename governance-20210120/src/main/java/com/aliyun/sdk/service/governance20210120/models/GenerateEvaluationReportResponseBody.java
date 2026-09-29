@@ -132,7 +132,10 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         } 
 
         /**
-         * AccountId.
+         * <p>The account ID for which the report is generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103144549568****</p>
          */
         public Builder accountId(Long accountId) {
             this.accountId = accountId;
@@ -140,7 +143,10 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         }
 
         /**
-         * EvaluationScore.
+         * <p>The governance maturity evaluation score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7684</p>
          */
         public Builder evaluationScore(Double evaluationScore) {
             this.evaluationScore = evaluationScore;
@@ -148,7 +154,10 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         }
 
         /**
-         * EvaluationTime.
+         * <p>The evaluation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-12T07:25:33Z</p>
          */
         public Builder evaluationTime(String evaluationTime) {
             this.evaluationTime = evaluationTime;
@@ -156,7 +165,16 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         }
 
         /**
-         * Finished.
+         * <p>Indicates whether the report generation is complete.</p>
+         * <blockquote>
+         * <ul>
+         * <li>true: The report generation is complete.</li>
+         * <li>false: The report generation is not complete.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder finished(String finished) {
             this.finished = finished;
@@ -164,7 +182,15 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         }
 
         /**
-         * ReportType.
+         * <p>The report type. Valid values:</p>
+         * <ul>
+         * <li>EvaluationAccountHtmlReport: single-account HTML report.</li>
+         * <li>EvaluationAccountExcelReport: single-account Excel report.</li>
+         * <li>EvaluationMultiAccountExcelReport: multi-account Excel report.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EvaluationAccountExcelReport</p>
          */
         public Builder reportType(String reportType) {
             this.reportType = reportType;
@@ -172,7 +198,10 @@ public class GenerateEvaluationReportResponseBody extends TeaModel {
         }
 
         /**
-         * ReportUrl.
+         * <p>The download URL of the report.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/">https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/</a>*****</p>
          */
         public Builder reportUrl(String reportUrl) {
             this.reportUrl = reportUrl;

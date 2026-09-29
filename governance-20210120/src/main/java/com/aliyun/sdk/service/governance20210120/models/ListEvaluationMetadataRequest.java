@@ -124,10 +124,10 @@ public class ListEvaluationMetadataRequest extends Request {
         }
 
         /**
-         * <p>The language. The information is returned in the specified language. Valid values:</p>
+         * <p>The language type. Governance evaluation definitions are returned in this language. Valid values:</p>
          * <ul>
-         * <li>en: English</li>
-         * <li>zh: Chinese</li>
+         * <li>en: English.</li>
+         * <li>zh: Chinese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,16 @@ public class ListEvaluationMetadataRequest extends Request {
         }
 
         /**
-         * LensCode.
+         * <p>The specialized evaluation code. Valid values:</p>
+         * <ul>
+         * <li>basic (default): foundation model (governance maturity) evaluation.</li>
+         * <li>ack: container building specialized evaluation.</li>
+         * <li>ai: machine learning specialized evaluation.</li>
+         * <li>nis: network service specialized evaluation.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ack</p>
          */
         public Builder lensCode(String lensCode) {
             this.putQueryParameter("LensCode", lensCode);
@@ -161,7 +170,10 @@ public class ListEvaluationMetadataRequest extends Request {
         }
 
         /**
-         * TopicCode.
+         * <p>The governance topic code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceUtilization</p>
          */
         public Builder topicCode(String topicCode) {
             this.putQueryParameter("TopicCode", topicCode);

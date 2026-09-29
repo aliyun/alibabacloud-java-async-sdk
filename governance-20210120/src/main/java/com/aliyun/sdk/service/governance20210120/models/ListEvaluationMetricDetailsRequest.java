@@ -171,7 +171,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * <p>The ID of the member account. This parameter is applicable only to the multi-account check pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>103144549568****</p>
@@ -183,7 +183,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * Date.
+         * <p>The date to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01</p>
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -201,8 +204,8 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the check item.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to query the ID of the check item.</p>
+         * <p>The ID of the check item for which you want to retrieve non-compliant resources.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2841889.html">ListEvaluationMetadata</a> operation to obtain the check item ID.</p>
          * 
          * <strong>example:</strong>
          * <p>xfyve5****</p>
@@ -214,7 +217,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return for a single request. Default value: 5.</p>
+         * <p>The maximum number of entries to return in a single request. Default value: 5.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -226,7 +229,7 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <p>The token for the next query.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
@@ -250,7 +253,14 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * Scope.
+         * <p>The scope of the governance maturity check. Valid values:</p>
+         * <ul>
+         * <li>Account (default): queries the check item details for the current account.</li>
+         * <li>ResourceDirectory: queries the check item details for all member accounts in the resource directory. Before using this value, upgrade to multi-account governance maturity check.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Account</p>
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -259,7 +269,10 @@ public class ListEvaluationMetricDetailsRequest extends Request {
         }
 
         /**
-         * SnapshotId.
+         * <p>The check snapshot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>es-bp1r**************</p>
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);

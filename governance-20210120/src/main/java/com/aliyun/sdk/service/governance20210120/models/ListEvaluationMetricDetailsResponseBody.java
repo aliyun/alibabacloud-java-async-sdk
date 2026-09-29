@@ -93,7 +93,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * Date.
+         * <p>The date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01</p>
          */
         public Builder date(String date) {
             this.date = date;
@@ -101,7 +104,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token used to retrieve the next page of data.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</p>
@@ -123,7 +126,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the non-compliant resources.</p>
+         * <p>The details of non-compliant resources.</p>
          */
         public Builder resources(java.util.List<Resources> resources) {
             this.resources = resources;
@@ -189,7 +192,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the resource attribute.</p>
+             * <p>The name of the resource property.</p>
              * 
              * <strong>example:</strong>
              * <p>DisplayName</p>
@@ -200,10 +203,10 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the resource attribute.</p>
+             * <p>The value of the resource property.</p>
              * 
              * <strong>example:</strong>
-             * <p>example</p>
+             * <p>TestAccount</p>
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -348,12 +351,12 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The compliance status of the resource. Valid values:</p>
+             * <p>The compliance status. Valid values:</p>
              * <ul>
              * <li>NonCompliant: non-compliant.</li>
              * <li>Excluded: ignored.</li>
-             * <li>PendingExclusion: to be ignored.</li>
-             * <li>PendingInclusion: to be unignored.</li>
+             * <li>PendingExclusion: ignored but not yet effective.</li>
+             * <li>PendingInclusion: unignored but not yet effective.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -376,9 +379,9 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check results further analyzed by auxiliary decision-making.</p>
+             * <p>The decision assistance classification.</p>
              * <blockquote>
-             * <p> This parameter is returned only when the check item supports the auxiliary decision-making feature.</p>
+             * <p>This parameter is returned only for check items that support decision assistance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -390,7 +393,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource.</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>26435103783237****</p>
@@ -401,7 +404,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource.</p>
+             * <p>The resource name.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -412,7 +415,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account that owns the resource.</p>
+             * <p>The Alibaba Cloud account ID to which the resource belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>176618589410****</p>
@@ -423,7 +426,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The attributes of the resource.</p>
+             * <p>The list of additional resource properties.</p>
              */
             public Builder resourceProperties(java.util.List<ResourceProperties> resourceProperties) {
                 this.resourceProperties = resourceProperties;
@@ -431,7 +434,7 @@ public class ListEvaluationMetricDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
+             * <p>The resource type.</p>
              * 
              * <strong>example:</strong>
              * <p>ACS::RAM::User</p>

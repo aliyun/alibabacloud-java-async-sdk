@@ -88,7 +88,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</p>
@@ -246,7 +246,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account ID.</p>
+             * <p>The ID of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>19534534552*****</p>
@@ -257,7 +257,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the baseline that is implemented.</p>
+             * <p>The ID of the baseline that is applied.</p>
              * 
              * <strong>example:</strong>
              * <p>afb-bp1durvn3lgqe28v****</p>
@@ -301,7 +301,7 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the settlement account.</p>
+             * <p>The ID of the billing account.</p>
              * 
              * <strong>example:</strong>
              * <p>13161210500*****</p>
@@ -312,14 +312,20 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation status. Valid values:</p>
+             * <p>The enrollment status. Valid values:</p>
              * <ul>
-             * <li>Pending: The account is pending to be created.</li>
-             * <li>Running: The account is being created.</li>
-             * <li>Finished: The account is created.</li>
-             * <li>Failed: The account fails to be created.</li>
-             * <li>Scheduling: The account is being scheduled.</li>
-             * <li>ScheduleFailed: The account fails to be scheduled.</li>
+             * <li><p>Pending: The account is waiting to be enrolled.</p>
+             * </li>
+             * <li><p>Running: The account is being enrolled.</p>
+             * </li>
+             * <li><p>Finished: The account is enrolled.</p>
+             * </li>
+             * <li><p>Failed: The account failed to be enrolled.</p>
+             * </li>
+             * <li><p>Scheduling: The account is being scheduled.</p>
+             * </li>
+             * <li><p>ScheduleFailed: The account failed to be scheduled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

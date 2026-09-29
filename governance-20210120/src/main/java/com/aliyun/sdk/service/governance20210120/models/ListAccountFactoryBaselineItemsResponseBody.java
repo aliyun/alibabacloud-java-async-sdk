@@ -312,7 +312,7 @@ public class ListAccountFactoryBaselineItemsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dependency of the baseline item.</p>
+             * <p>The dependencies of the baseline item.</p>
              */
             public Builder dependsOn(java.util.List<DependsOn> dependsOn) {
                 this.dependsOn = dependsOn;

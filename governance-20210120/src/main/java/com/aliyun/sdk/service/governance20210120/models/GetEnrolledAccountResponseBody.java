@@ -236,7 +236,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The account ID.</p>
+         * <p>The ID of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>12868156179*****</p>
@@ -247,7 +247,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the baseline that is implemented.</p>
+         * <p>The ID of the baseline that is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp1adadfadsf***</p>
@@ -258,7 +258,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The array that contains baseline items.</p>
+         * <p>The baseline items.</p>
          */
         public Builder baselineItems(java.util.List<BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
@@ -290,7 +290,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * <p>The error message.</p>
          * <blockquote>
-         * <p> This parameter is returned if the value of <code>Status</code> is <code>Failed</code> or <code>ScheduleFailed</code>.</p>
+         * <p>This parameter is returned if the value of <code>Status</code> is <code>Failed</code> or <code>ScheduleFailed</code>.</p>
          * </blockquote>
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
@@ -312,8 +312,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the initialization is complete. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li><p>false: The initialization is not complete.</p>
+         * </li>
+         * <li><p>true: The initialization is complete.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -325,7 +327,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Input parameters used to create an account.</p>
+         * <p>The input parameters that were specified when the account was enrolled.</p>
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -344,7 +346,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the settlement account.</p>
+         * <p>The ID of the billing account.</p>
          * 
          * <strong>example:</strong>
          * <p>19534534552*****</p>
@@ -355,7 +357,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The progress of the applying the baseline to the account.</p>
+         * <p>The progress of applying the baseline to the account.</p>
          */
         public Builder progress(java.util.List<Progress> progress) {
             this.progress = progress;
@@ -376,12 +378,18 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         /**
          * <p>The status of the account. Valid values:</p>
          * <ul>
-         * <li>Pending: The account is pending to be created.</li>
-         * <li>Running: The account is being created.</li>
-         * <li>Finished: The account is created.</li>
-         * <li>Failed: The account fails to be created.</li>
-         * <li>Scheduling: The account is being scheduled.</li>
-         * <li>ScheduleFailed: The account fails to be scheduled.</li>
+         * <li><p>Pending: The account is waiting to be enrolled.</p>
+         * </li>
+         * <li><p>Running: The account is being enrolled.</p>
+         * </li>
+         * <li><p>Finished: The account is enrolled.</p>
+         * </li>
+         * <li><p>Failed: The account failed to be enrolled.</p>
+         * </li>
+         * <li><p>Scheduling: The account is being scheduled.</p>
+         * </li>
+         * <li><p>ScheduleFailed: The account failed to be scheduled.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -491,7 +499,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
              * <p>The configuration of the baseline item.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</p>
+             * <p>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -510,10 +518,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <p>Indicates whether the baseline item is skipped. Valid values:</p>
              * <ul>
-             * <li>false</li>
-             * <li>true</li>
+             * <li><p>false: The baseline item is not skipped.</p>
+             * </li>
+             * <li><p>true: The baseline item is skipped.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -624,7 +634,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
              * <p>The error code.</p>
              * 
              * <strong>example:</strong>
-             * <p>CompliancePackExists</p>
+             * <p>EntityAlreadyExists.Role</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -635,7 +645,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
              * <p>The error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>The compliance pack already exists.</p>
+             * <p>The role already exists.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -646,7 +656,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
              * <p>The recommended solution.</p>
              * 
              * <strong>example:</strong>
-             * <p><a href="https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists%5C%5Cu0026product=Config">https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists\\u0026product=Config</a></p>
+             * <p><a href="https://next.api.aliyun.com/troubleshoot?q=EntityAlreadyExists.Role%5C%5Cu0026product=Ram">https://next.api.aliyun.com/troubleshoot?q=EntityAlreadyExists.Role\\u0026product=Ram</a></p>
              */
             public Builder recommend(String recommend) {
                 this.recommend = recommend;
@@ -753,7 +763,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
              * <p>The configurations of the baseline item.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;governance&quot;,&quot;Email&quot;:&quot;wibud****@gmail.com&quot;,&quot;Mobile&quot;:&quot;1234&quot;,&quot;Position&quot;:&quot;Other&quot;}]}</p>
+             * <p>{\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;governance\&quot;,\&quot;Email\&quot;:\&quot;<a href="mailto:wibud5210+10@gmail.com">wibud5210+10@gmail.com</a>\&quot;,\&quot;Mobile\&quot;:\&quot;1234\&quot;,\&quot;Position\&quot;:\&quot;Other\&quot;}]}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -772,10 +782,12 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether baseline item is skipped. Valid values:</p>
+             * <p>Indicates whether the baseline item is skipped. Valid values:</p>
              * <ul>
-             * <li>false</li>
-             * <li>true</li>
+             * <li><p>false: The baseline item is not skipped.</p>
+             * </li>
+             * <li><p>true: The baseline item is skipped.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1014,7 +1026,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account ID.</p>
+             * <p>The ID of the account.</p>
              * 
              * <strong>example:</strong>
              * <p>12868156179*****</p>
@@ -1055,7 +1067,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the settlement account.</p>
+             * <p>The ID of the billing account.</p>
              * 
              * <strong>example:</strong>
              * <p>19534534552*****</p>
@@ -1146,10 +1158,14 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             /**
              * <p>The status of applying the baseline to the account. Valid values:</p>
              * <ul>
-             * <li>Pending: The baseline is pending to be applied to the account.</li>
-             * <li>Running: The baseline is being applied to the account.</li>
-             * <li>Finished: : The baseline is applied to the account.</li>
-             * <li>Failed: : The baseline fails to be applied to the account.</li>
+             * <li><p>Pending: The baseline is waiting to be applied to the account.</p>
+             * </li>
+             * <li><p>Running: The baseline is being applied to the account.</p>
+             * </li>
+             * <li><p>Finished: The baseline is applied to the account.</p>
+             * </li>
+             * <li><p>Failed: The baseline failed to be applied to the account.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>

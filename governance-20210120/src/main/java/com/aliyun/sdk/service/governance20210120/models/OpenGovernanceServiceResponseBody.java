@@ -12,19 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateAccountFactoryBaselineResponseBody} extends {@link TeaModel}
+ * {@link OpenGovernanceServiceResponseBody} extends {@link TeaModel}
  *
- * <p>CreateAccountFactoryBaselineResponseBody</p>
+ * <p>OpenGovernanceServiceResponseBody</p>
  */
-public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("BaselineId")
-    private String baselineId;
-
+public class OpenGovernanceServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateAccountFactoryBaselineResponseBody(Builder builder) {
-        this.baselineId = builder.baselineId;
+    private OpenGovernanceServiceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -32,19 +28,12 @@ public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateAccountFactoryBaselineResponseBody create() {
+    public static OpenGovernanceServiceResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return baselineId
-     */
-    public String getBaselineId() {
-        return this.baselineId;
     }
 
     /**
@@ -55,41 +44,28 @@ public class CreateAccountFactoryBaselineResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String baselineId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(CreateAccountFactoryBaselineResponseBody model) {
-            this.baselineId = model.baselineId;
+        private Builder(OpenGovernanceServiceResponseBody model) {
             this.requestId = model.requestId;
         } 
-
-        /**
-         * <p>The ID of the baseline.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>afb-bp1e6ixtiwupap8m****</p>
-         */
-        public Builder baselineId(String baselineId) {
-            this.baselineId = baselineId;
-            return this;
-        }
 
         /**
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>A5592E2E-0FC4-557C-B989-DF229B5EBE13</p>
+         * <p>019FEF9F-6442-16F6-B041-9013B97987AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateAccountFactoryBaselineResponseBody build() {
-            return new CreateAccountFactoryBaselineResponseBody(this);
+        public OpenGovernanceServiceResponseBody build() {
+            return new OpenGovernanceServiceResponseBody(this);
         } 
 
     } 

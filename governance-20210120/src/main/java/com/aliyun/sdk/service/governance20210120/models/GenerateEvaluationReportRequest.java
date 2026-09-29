@@ -115,7 +115,10 @@ public class GenerateEvaluationReportRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>The account ID. If this parameter is not specified, the report is generated for the current account by default. A management account (MA) can pass in a member account ID to generate a report for the member account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>103144549568****</p>
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -124,7 +127,8 @@ public class GenerateEvaluationReportRequest extends Request {
         }
 
         /**
-         * AccountIds.
+         * <p>The list of member account IDs for which to generate reports.
+         * Note: This parameter is required only when you generate a multi-account report and want to specify the scope of accounts.</p>
          */
         public Builder accountIds(java.util.List<Long> accountIds) {
             String accountIdsShrink = shrink(accountIds, "AccountIds", "json");
@@ -155,7 +159,15 @@ public class GenerateEvaluationReportRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * <p>The report type. Valid values:</p>
+         * <ul>
+         * <li>EvaluationAccountHtmlReport: single-account HTML report.</li>
+         * <li>EvaluationAccountExcelReport: single-account Excel report.</li>
+         * <li>EvaluationMultiAccountExcelReport: multi-account Excel report.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>EvaluationAccountExcelReport</p>
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);

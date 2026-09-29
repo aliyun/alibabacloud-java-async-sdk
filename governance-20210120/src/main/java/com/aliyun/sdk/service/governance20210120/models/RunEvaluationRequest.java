@@ -115,7 +115,7 @@ public class RunEvaluationRequest extends Request {
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</p>
+         * <p>The ID of the member account. This parameter is applicable only to the multi-account check pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>176618589410****</p>
@@ -136,7 +136,7 @@ public class RunEvaluationRequest extends Request {
         }
 
         /**
-         * <p>The IDs of the check items to be checked.</p>
+         * <p>The list of check item IDs to check.</p>
          */
         public Builder metricIds(java.util.List<String> metricIds) {
             String metricIdsShrink = shrink(metricIds, "MetricIds", "json");
@@ -158,10 +158,10 @@ public class RunEvaluationRequest extends Request {
         }
 
         /**
-         * <p>The check range of the governance maturity check. Valid values:</p>
+         * <p>The scope of the governance maturity check. Valid values:</p>
          * <ul>
-         * <li>Account (default): A single-account governance maturity check is performed to check only the Alibaba Cloud account that you use to access Cloud Governance Center.</li>
-         * <li>ResourceDirectory: A multi-account governance maturity check is performed to check all members within a resource directory. Before you perform a multi-account governance maturity check, you must enable the multi-account governance maturity check feature.</li>
+         * <li>Account (default): runs a single-account governance maturity check that checks only the current account.</li>
+         * <li>ResourceDirectory: runs a multi-account governance maturity check that checks all member accounts in the resource directory. Before you perform this operation, upgrade to the multi-account governance maturity check.</li>
          * </ul>
          * 
          * <strong>example:</strong>

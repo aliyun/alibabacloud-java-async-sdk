@@ -30,12 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "governance";
         this.version = "2021-01-20";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("eu-central-1", "governance.eu-central-1.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "governance.cn-shanghai-finance-1.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "governance.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "governance.ap-southeast-1.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -46,8 +41,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to apply an account baseline to existing resource accounts.
-     * Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</p>
+     * <p>Applies an account baseline to multiple existing resource accounts at a time.
+     * Account enrollment is an asynchronous process. After the accounts are enrolled, the account factory baseline is applied to each account. To query the enrollment details and check the baseline application result, call <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a>.</p>
      * 
      * @param request the request parameters of BatchEnrollAccounts  BatchEnrollAccountsRequest
      * @return BatchEnrollAccountsResponse
@@ -85,6 +80,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DecommissionGovernance  DecommissionGovernanceRequest
+     * @return DecommissionGovernanceResponse
+     */
+    @Override
+    public CompletableFuture<DecommissionGovernanceResponse> decommissionGovernance(DecommissionGovernanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DecommissionGovernance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DecommissionGovernanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DecommissionGovernanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteAccountFactoryBaseline  DeleteAccountFactoryBaselineRequest
      * @return DeleteAccountFactoryBaselineResponse
      */
@@ -104,8 +117,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-     * Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</p>
+     * <p>Creates a new resource account or enrolls an existing resource account, and applies the account factory baseline to the account.
+     * Account enrollment is an asynchronous process. After an account is created, the account factory baseline is applied to the account. To query the enrollment details and check the baseline application result, call <a href="~~GetEnrolledAccount~~">GetEnrolledAccount</a>.</p>
      * 
      * @param request the request parameters of EnrollAccount  EnrollAccountRequest
      * @return EnrollAccountResponse
@@ -125,6 +138,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Generates a governance evaluation report.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This is an asynchronous API. You can check the <code>Finished</code> field in the response to determine the report generation status.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * @param request the request parameters of GenerateEvaluationReport  GenerateEvaluationReportRequest
      * @return GenerateEvaluationReportResponse
      */
@@ -299,6 +320,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListEvaluationScoreHistoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of OpenGovernanceService  OpenGovernanceServiceRequest
+     * @return OpenGovernanceServiceResponse
+     */
+    @Override
+    public CompletableFuture<OpenGovernanceServiceResponse> openGovernanceService(OpenGovernanceServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("OpenGovernanceService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(OpenGovernanceServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<OpenGovernanceServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

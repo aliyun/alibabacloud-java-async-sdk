@@ -80,7 +80,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The Alibaba Cloud account ID of the member.</p>
+         * <p>Member account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>176618589410****</p>
@@ -91,7 +91,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BD57329E-131A-59F4-8746-E1CD8D7B****</p>
@@ -102,7 +102,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The check results, including the status of the overall check and the results of check items.</p>
+         * <p>Evaluation results, including overall evaluation status and sub-item evaluation results.</p>
          */
         public Builder results(Results results) {
             this.results = results;
@@ -155,7 +155,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * NonCompliant.
+             * <p>Number of non-compliant accounts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder nonCompliant(Integer nonCompliant) {
                 this.nonCompliant = nonCompliant;
@@ -209,7 +212,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * RemediationTemplateId.
+             * <p>Remediation template ID.</p>
              */
             public Builder remediationTemplateId(String remediationTemplateId) {
                 this.remediationTemplateId = remediationTemplateId;
@@ -276,7 +279,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The error code.</p>
+             * <p>Error code.</p>
              * 
              * <strong>example:</strong>
              * <p>EcsInsightEnableFailed</p>
@@ -287,7 +290,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message.</p>
+             * <p>Error message.</p>
              * 
              * <strong>example:</strong>
              * <p>Unable to enable ECS Insight due to a server error.</p>
@@ -344,7 +347,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of non-compliant resources.</p>
+             * <p>Number of non-compliant resources.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -518,7 +521,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountSummary.
+             * <p>Evaluation item account assessment summary.</p>
              */
             public Builder accountSummary(AccountSummary accountSummary) {
                 this.accountSummary = accountSummary;
@@ -526,7 +529,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableRemediation.
+             * <p>List of available remediations.</p>
              */
             public Builder availableRemediation(java.util.List<AvailableRemediation> availableRemediation) {
                 this.availableRemediation = availableRemediation;
@@ -534,9 +537,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error information.</p>
+             * <p>Error information.</p>
              * <blockquote>
-             * <p> This parameter is returned only if the value of <code>Status</code> is <code>Failed</code>.</p>
+             * <p>This error information is returned when <code>Status</code> is <code>Failed</code>.</p>
              * </blockquote>
              */
             public Builder errorInfo(ErrorInfo errorInfo) {
@@ -545,7 +548,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the check item. The time is displayed in UTC.</p>
+             * <p>Individual evaluation item end time (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-13T03:34:02Z</p>
@@ -556,7 +559,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the check item.</p>
+             * <p>Evaluation item ID.</p>
              * 
              * <strong>example:</strong>
              * <p>r7xdcu****</p>
@@ -567,7 +570,10 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * PotentialScoreIncrease.
+             * <p>Potential score increase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder potentialScoreIncrease(Double potentialScoreIncrease) {
                 this.potentialScoreIncrease = potentialScoreIncrease;
@@ -575,7 +581,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The checked resources.</p>
+             * <p>Evaluation item resource assessment summary.</p>
              */
             public Builder resourcesSummary(ResourcesSummary resourcesSummary) {
                 this.resourcesSummary = resourcesSummary;
@@ -583,7 +589,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rate of the non-compliant resources.</p>
+             * <p>Evaluation item resource compliance rate.</p>
              * 
              * <strong>example:</strong>
              * <p>0.67</p>
@@ -594,11 +600,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The risk level. Valid values:</p>
+             * <p>Evaluation risk level. Valid values:</p>
              * <ul>
-             * <li>Error: high risk</li>
-             * <li>Warning: medium risk</li>
-             * <li>None: no risk</li>
+             * <li>Error: High risk.</li>
+             * <li>Warning: Medium risk.</li>
+             * <li>None: No risk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -610,11 +616,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the check item. Valid values:</p>
+             * <p>Individual evaluation item status. Valid values:</p>
              * <ul>
-             * <li>Running: The check is in progress.</li>
-             * <li>Finished: The check is complete.</li>
-             * <li>failed: The check fails.</li>
+             * <li>Running: Evaluation in progress.</li>
+             * <li>Finished: Evaluation completed.</li>
+             * <li>Failed: Evaluation failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -711,7 +717,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end time of the overall check. The time is displayed in UTC.</p>
+             * <p>Overall evaluation end time (UTC).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-12-13T03:35:00Z</p>
@@ -722,7 +728,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The check result.</p>
+             * <p>Evaluation results.</p>
              */
             public Builder metricResults(java.util.List<MetricResults> metricResults) {
                 this.metricResults = metricResults;
@@ -730,11 +736,11 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the overall check. Valid values:</p>
+             * <p>Overall evaluation status. Valid values:</p>
              * <ul>
-             * <li>Running: The check is in progress.</li>
-             * <li>Finished: The check is complete.</li>
-             * <li>failed: The check fails.</li>
+             * <li>Running: Evaluation in progress.</li>
+             * <li>Finished: Evaluation completed.</li>
+             * <li>Failed: Evaluation failed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -746,7 +752,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The overall score.</p>
+             * <p>Overall score.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6453</p>

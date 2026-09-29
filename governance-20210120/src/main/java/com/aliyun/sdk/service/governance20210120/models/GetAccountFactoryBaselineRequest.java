@@ -73,7 +73,7 @@ public class GetAccountFactoryBaselineRequest extends Request {
         } 
 
         /**
-         * <p>The baseline ID.</p>
+         * <p>The ID of the baseline.</p>
          * 
          * <strong>example:</strong>
          * <p>afb-bp1nf0enuzb89az*****</p>
