@@ -125,7 +125,10 @@ public class SyncDepartmentUserRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -218,7 +221,7 @@ public class SyncDepartmentUserRequest extends Request {
             } 
 
             /**
-             * <p>The list of department IDs to which the user belongs. If this parameter is left empty, the user-department affiliation is deleted.</p>
+             * <p>The list of department IDs to which the user belongs. If this parameter is left empty, the user affiliation is deleted.</p>
              */
             public Builder departmentIdList(java.util.List<String> departmentIdList) {
                 this.departmentIdList = departmentIdList;
@@ -226,7 +229,10 @@ public class SyncDepartmentUserRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * <p>The user source type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -234,7 +240,7 @@ public class SyncDepartmentUserRequest extends Request {
             }
 
             /**
-             * <p>The user ID in the user system. This value is the unique identifier of the user.</p>
+             * <p>The user ID in the user system. This is the unique identifier of the user.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

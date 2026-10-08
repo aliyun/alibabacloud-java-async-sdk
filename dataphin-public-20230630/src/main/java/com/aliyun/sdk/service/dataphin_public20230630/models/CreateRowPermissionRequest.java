@@ -136,7 +136,10 @@ public class CreateRowPermissionRequest extends Request {
         }
 
         /**
-         * OpUserId.
+         * <p>The ID of the operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30001011</p>
          */
         public Builder opUserId(String opUserId) {
             this.putQueryParameter("OpUserId", opUserId);
@@ -219,10 +222,10 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The description of the mapping field.</p>
+             * <p>The description of the mapping column.</p>
              * 
              * <strong>example:</strong>
-             * <p>Controls the business ID field.</p>
+             * <p>Control the business ID field</p>
              */
             public Builder columnDesc(String columnDesc) {
                 this.columnDesc = columnDesc;
@@ -230,7 +233,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>The name of the mapping field.</p>
+             * <p>The name of the mapping column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -242,7 +245,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>The type of the mapping field.</p>
+             * <p>The type of the mapping column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -356,7 +359,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The name of the mapping field.</p>
+             * <p>The name of the mapping column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -676,7 +679,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the rule is deleted.</p>
+             * <p>Specifies whether to delete the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -691,7 +694,7 @@ public class CreateRowPermissionRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>MiddlePlatform.</p>
+             * <p>Mid-end</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -805,7 +808,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The field of the table.</p>
+             * <p>The table column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -817,7 +820,7 @@ public class CreateRowPermissionRequest extends Request {
             }
 
             /**
-             * <p>The name of the mapping field.</p>
+             * <p>The name of the mapping column.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -941,7 +944,7 @@ public class CreateRowPermissionRequest extends Request {
             } 
 
             /**
-             * <p>The mapping fields.</p>
+             * <p>The mapping columns.</p>
              * <p>This parameter is required.</p>
              */
             public Builder mappingColumns(java.util.List<MappingColumns> mappingColumns) {
@@ -953,7 +956,7 @@ public class CreateRowPermissionRequest extends Request {
              * <p>The description of the row-level permission.</p>
              * 
              * <strong>example:</strong>
-             * <p>Control business data.</p>
+             * <p>Manage business data</p>
              */
             public Builder rowPermissionDesc(String rowPermissionDesc) {
                 this.rowPermissionDesc = rowPermissionDesc;
@@ -965,7 +968,7 @@ public class CreateRowPermissionRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>BusinessControl.</p>
+             * <p>Business control</p>
              */
             public Builder rowPermissionName(String rowPermissionName) {
                 this.rowPermissionName = rowPermissionName;

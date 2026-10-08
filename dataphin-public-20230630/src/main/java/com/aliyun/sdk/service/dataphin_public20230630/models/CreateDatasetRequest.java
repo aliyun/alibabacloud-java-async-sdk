@@ -814,7 +814,7 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The datasource config ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -826,10 +826,10 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The datasource config name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test data source</p>
+             * <p>Test datasource</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -998,7 +998,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The index build parameters, which vary by index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+             * <p>The index build parameters. Varies by index type. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</p>
              * 
              * <strong>example:</strong>
              * <p>{M:30, efConstruction:360}</p>
@@ -1009,7 +1009,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</p>
+             * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all types.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1021,7 +1021,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
+             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1183,7 +1183,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The child class of the array element. This parameter is valid only when type is set to ARRAY.</p>
+             * <p>The array element subtype. Valid only when type is ARRAY.</p>
              * 
              * <strong>example:</strong>
              * <p>INT64</p>
@@ -1194,7 +1194,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</p>
+             * <p>The maximum array capacity. Valid only when type is ARRAY. Default value: 4096.</p>
              * 
              * <strong>example:</strong>
              * <p>35</p>
@@ -1217,7 +1217,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a primary key.</p>
+             * <p>Specifies whether the field is a primary key.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1240,7 +1240,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a URL.</p>
+             * <p>Specifies whether the field is a URL.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1305,7 +1305,7 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * <p>The list of fields.</p>
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<Columns> columns) {
                 this.columns = columns;
@@ -1454,7 +1454,7 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * <p>The data source ID.</p>
+             * <p>The datasource config ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1466,10 +1466,10 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The data source name.</p>
+             * <p>The datasource config name.</p>
              * 
              * <strong>example:</strong>
-             * <p>Test data source</p>
+             * <p>Test datasource</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -1488,7 +1488,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The storage destination (new table or existing table).</p>
+             * <p>Specifies whether to store metadata in a new table or an existing table.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1669,7 +1669,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The index build parameters, which vary by index type. For example, HNSW requires {M:30, efConstruction:360}, and IVF_FLAT requires {nlist:128}.</p>
+             * <p>The index build parameters. Varies by index type. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</p>
              * 
              * <strong>example:</strong>
              * <p>{M:30, efConstruction:360}</p>
@@ -1680,7 +1680,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</p>
+             * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all types.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1692,7 +1692,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
+             * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1854,7 +1854,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The child class of the array element. This parameter is valid only when type is set to ARRAY.</p>
+             * <p>The array element subtype. Valid only when type is ARRAY.</p>
              * 
              * <strong>example:</strong>
              * <p>INT64</p>
@@ -1865,7 +1865,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The maximum capacity of the array. This parameter is valid only when type is set to ARRAY. Default value: 4096.</p>
+             * <p>The maximum array capacity. Valid only when type is ARRAY. Default value: 4096.</p>
              * 
              * <strong>example:</strong>
              * <p>35</p>
@@ -1888,7 +1888,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a primary key.</p>
+             * <p>Specifies whether the field is a primary key.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1911,7 +1911,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether the field is a URL.</p>
+             * <p>Specifies whether the field is a URL.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1922,7 +1922,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. This parameter is used to specify the vector dimensions, index type, and similarity metric.</p>
+             * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. Use it to set the dimensions, index type, and similarity metric.</p>
              */
             public Builder vectorIndexConfig(ColumnsVectorIndexConfig vectorIndexConfig) {
                 this.vectorIndexConfig = vectorIndexConfig;
@@ -1976,7 +1976,7 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * <p>The list of fields.</p>
+             * <p>The column list.</p>
              */
             public Builder columns(java.util.List<TableSchemaColumns> columns) {
                 this.columns = columns;
@@ -2072,7 +2072,7 @@ public class CreateDatasetRequest extends Request {
             } 
 
             /**
-             * <p>The data source type of the meta table. Currently, only KAFKA is supported.</p>
+             * <p>The meta table datasource config type. Only KAFKA is supported in this release.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2096,7 +2096,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The project ID to which the meta table belongs. Cross-project references are supported.</p>
+             * <p>The project ID of the meta table. Cross-project access is supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2217,7 +2217,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The real-time meta table configuration. This parameter takes effect when metadataStorageType is set to STREAM_TABLE.</p>
+             * <p>The real-time meta table configuration. Takes effect when metadataStorageType is STREAM_TABLE.</p>
              */
             public Builder realtimeMetaTableConfig(RealtimeMetaTableConfig realtimeMetaTableConfig) {
                 this.realtimeMetaTableConfig = realtimeMetaTableConfig;
@@ -2225,7 +2225,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p><strong>Version description.</strong></p>
+             * <p><strong>The version description.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Test dataset version</p>
@@ -2464,7 +2464,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, and INDEX.</p>
+             * <p>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, INDEX.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2476,7 +2476,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The data domain ID.</p>
+             * <p><strong>The subject domain ID.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>78201</p>
@@ -2487,7 +2487,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The description.</p>
+             * <p><strong>The description.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>Test dataset</p>
@@ -2498,7 +2498,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The directory. Obtained from the file service by using the fileId.</p>
+             * <p><strong>The folder (retrieved from the file service using fileId).</strong></p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2510,7 +2510,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The file ID.</p>
+             * <p><strong>The file ID.</strong></p>
              * 
              * <strong>example:</strong>
              * <p>7255018404650688</p>
@@ -2521,7 +2521,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The metastore type.</p>
+             * <p>The metastore type. Valid values: POSTGRESQL, MYSQL, STREAM_TABLE, MILVUS.</p>
              * 
              * <strong>example:</strong>
              * <p>POSTGRESQL</p>
@@ -2536,7 +2536,7 @@ public class CreateDatasetRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>xxTest</p>
+             * <p>xx_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2544,7 +2544,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The list of owner IDs, separated by commas.</p>
+             * <p>The list of owner IDs. Separate multiple IDs with commas.</p>
              * 
              * <strong>example:</strong>
              * <p>300000913</p>
@@ -2555,11 +2555,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The dataset scenarios. Valid values:</p>
-             * <ul>
-             * <li>OFFLINE: Offline. This is the default value.</li>
-             * <li>REALTIME: Real-time.</li>
-             * </ul>
+             * <p>The dataset scenarios. Valid values: OFFLINE (offline, default), REALTIME (real-time).</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2571,7 +2567,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The storage type.</p>
+             * <p>The storage type. Valid values: OSS, S3.</p>
              * 
              * <strong>example:</strong>
              * <p>OSS</p>
@@ -2582,7 +2578,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The dataset type. Valid values: FILE, TABLE, and HYBRID.</p>
+             * <p>The dataset type. Valid values: FILE, TABLE, HYBRID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -2594,7 +2590,7 @@ public class CreateDatasetRequest extends Request {
             }
 
             /**
-             * <p>The version number. If this parameter is not specified, the default version V1 is used.</p>
+             * <p>The version number. If not specified, the default version V1 is used.</p>
              * 
              * <strong>example:</strong>
              * <p>V1</p>

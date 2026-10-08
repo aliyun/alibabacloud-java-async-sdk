@@ -190,6 +190,322 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
      *
      * <p>GetBatchTaskInfoResponseBody</p>
      */
+    public static class ConditionScheduleParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConditionName")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String conditionName;
+
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String cronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("FollowScheduleParam")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Boolean followScheduleParam;
+
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer nodeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ScheduleConditionJson")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String scheduleConditionJson;
+
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String scheduleTime;
+
+        private ConditionScheduleParamList(Builder builder) {
+            this.conditionName = builder.conditionName;
+            this.cronExpression = builder.cronExpression;
+            this.enable = builder.enable;
+            this.followScheduleParam = builder.followScheduleParam;
+            this.nodeStatus = builder.nodeStatus;
+            this.scheduleConditionJson = builder.scheduleConditionJson;
+            this.scheduleTime = builder.scheduleTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConditionScheduleParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionName
+         */
+        public String getConditionName() {
+            return this.conditionName;
+        }
+
+        /**
+         * @return cronExpression
+         */
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return followScheduleParam
+         */
+        public Boolean getFollowScheduleParam() {
+            return this.followScheduleParam;
+        }
+
+        /**
+         * @return nodeStatus
+         */
+        public Integer getNodeStatus() {
+            return this.nodeStatus;
+        }
+
+        /**
+         * @return scheduleConditionJson
+         */
+        public String getScheduleConditionJson() {
+            return this.scheduleConditionJson;
+        }
+
+        /**
+         * @return scheduleTime
+         */
+        public String getScheduleTime() {
+            return this.scheduleTime;
+        }
+
+        public static final class Builder {
+            private String conditionName; 
+            private String cronExpression; 
+            private Boolean enable; 
+            private Boolean followScheduleParam; 
+            private Integer nodeStatus; 
+            private String scheduleConditionJson; 
+            private String scheduleTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionScheduleParamList model) {
+                this.conditionName = model.conditionName;
+                this.cronExpression = model.cronExpression;
+                this.enable = model.enable;
+                this.followScheduleParam = model.followScheduleParam;
+                this.nodeStatus = model.nodeStatus;
+                this.scheduleConditionJson = model.scheduleConditionJson;
+                this.scheduleTime = model.scheduleTime;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>失败重跑</p>
+             */
+            public Builder conditionName(String conditionName) {
+                this.conditionName = conditionName;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 30 * * * ?</p>
+             */
+            public Builder cronExpression(String cronExpression) {
+                this.cronExpression = cronExpression;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder followScheduleParam(Boolean followScheduleParam) {
+                this.followScheduleParam = followScheduleParam;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
+             */
+            public Builder nodeStatus(Integer nodeStatus) {
+                this.nodeStatus = nodeStatus;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;type&quot;:&quot;EXPRESSION_GROUP&quot;,&quot;operator&quot;:&quot;or&quot;}</p>
+             */
+            public Builder scheduleConditionJson(String scheduleConditionJson) {
+                this.scheduleConditionJson = scheduleConditionJson;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00:30</p>
+             */
+            public Builder scheduleTime(String scheduleTime) {
+                this.scheduleTime = scheduleTime;
+                return this;
+            }
+
+            public ConditionScheduleParamList build() {
+                return new ConditionScheduleParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetBatchTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBatchTaskInfoResponseBody</p>
+     */
+    public static class ContextParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String paramKey;
+
+        private ContextParamList(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.desc = builder.desc;
+            this.paramKey = builder.paramKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContextParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return paramKey
+         */
+        public String getParamKey() {
+            return this.paramKey;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String desc; 
+            private String paramKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContextParamList model) {
+                this.defaultValue = model.defaultValue;
+                this.desc = model.desc;
+                this.paramKey = model.paramKey;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>输出条数</p>
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cnt</p>
+             */
+            public Builder paramKey(String paramKey) {
+                this.paramKey = paramKey;
+                return this;
+            }
+
+            public ContextParamList build() {
+                return new ContextParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetBatchTaskInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetBatchTaskInfoResponseBody</p>
+     */
     public static class CustomScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
@@ -861,8 +1177,29 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
      * <p>GetBatchTaskInfoResponseBody</p>
      */
     public static class TaskInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BaseScheduleTemplateId")
+        private Long baseScheduleTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("BaseScheduleTemplateName")
+        private String baseScheduleTemplateName;
+
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleEnable")
+        private Boolean conditionScheduleEnable;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleParamList")
+        private java.util.List<ConditionScheduleParamList> conditionScheduleParamList;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleTemplateId")
+        private Long conditionScheduleTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleTemplateName")
+        private String conditionScheduleTemplateName;
+
+        @com.aliyun.core.annotation.NameInMap("ContextParamList")
+        private java.util.List<ContextParamList> contextParamList;
 
         @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
@@ -881,6 +1218,15 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DataSourceSchema")
         private String dataSourceSchema;
+
+        @com.aliyun.core.annotation.NameInMap("DevHttpPath")
+        private String devHttpPath;
+
+        @com.aliyun.core.annotation.NameInMap("DevResourceGroupId")
+        private String devResourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("DevResourceGroupName")
+        private String devResourceGroupName;
 
         @com.aliyun.core.annotation.NameInMap("DevelopOwnerId")
         private String developOwnerId;
@@ -954,6 +1300,9 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
+        @com.aliyun.core.annotation.NameInMap("ProdHttpPath")
+        private String prodHttpPath;
+
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         private Long projectId;
 
@@ -965,6 +1314,12 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Rerunable")
         private Boolean rerunable;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+        private String resourceGroupName;
 
         @com.aliyun.core.annotation.NameInMap("SchedulePeriod")
         private String schedulePeriod;
@@ -978,20 +1333,39 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TaskTagList")
+        private java.util.List<String> taskTagList;
+
         @com.aliyun.core.annotation.NameInMap("TaskType")
         private Integer taskType;
 
         @com.aliyun.core.annotation.NameInMap("UpStreamList")
         private java.util.List<UpStreamList> upStreamList;
 
+        @com.aliyun.core.annotation.NameInMap("ValidEndDate")
+        private String validEndDate;
+
+        @com.aliyun.core.annotation.NameInMap("ValidStartDate")
+        private String validStartDate;
+
         private TaskInfo(Builder builder) {
+            this.baseScheduleTemplateId = builder.baseScheduleTemplateId;
+            this.baseScheduleTemplateName = builder.baseScheduleTemplateName;
             this.code = builder.code;
+            this.conditionScheduleEnable = builder.conditionScheduleEnable;
+            this.conditionScheduleParamList = builder.conditionScheduleParamList;
+            this.conditionScheduleTemplateId = builder.conditionScheduleTemplateId;
+            this.conditionScheduleTemplateName = builder.conditionScheduleTemplateName;
+            this.contextParamList = builder.contextParamList;
             this.cronExpression = builder.cronExpression;
             this.customScheduleConfig = builder.customScheduleConfig;
             this.dagId = builder.dagId;
             this.dataSourceCatalog = builder.dataSourceCatalog;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
+            this.devHttpPath = builder.devHttpPath;
+            this.devResourceGroupId = builder.devResourceGroupId;
+            this.devResourceGroupName = builder.devResourceGroupName;
             this.developOwnerId = builder.developOwnerId;
             this.developOwnerIdList = builder.developOwnerIdList;
             this.developOwnerName = builder.developOwnerName;
@@ -1016,16 +1390,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             this.paramList = builder.paramList;
             this.paused = builder.paused;
             this.priority = builder.priority;
+            this.prodHttpPath = builder.prodHttpPath;
             this.projectId = builder.projectId;
             this.published = builder.published;
             this.remark = builder.remark;
             this.rerunable = builder.rerunable;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.resourceGroupName = builder.resourceGroupName;
             this.schedulePeriod = builder.schedulePeriod;
             this.scheduleType = builder.scheduleType;
             this.sparkClientInfo = builder.sparkClientInfo;
             this.status = builder.status;
+            this.taskTagList = builder.taskTagList;
             this.taskType = builder.taskType;
             this.upStreamList = builder.upStreamList;
+            this.validEndDate = builder.validEndDate;
+            this.validStartDate = builder.validStartDate;
         }
 
         public static Builder builder() {
@@ -1037,10 +1417,59 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return baseScheduleTemplateId
+         */
+        public Long getBaseScheduleTemplateId() {
+            return this.baseScheduleTemplateId;
+        }
+
+        /**
+         * @return baseScheduleTemplateName
+         */
+        public String getBaseScheduleTemplateName() {
+            return this.baseScheduleTemplateName;
+        }
+
+        /**
          * @return code
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return conditionScheduleEnable
+         */
+        public Boolean getConditionScheduleEnable() {
+            return this.conditionScheduleEnable;
+        }
+
+        /**
+         * @return conditionScheduleParamList
+         */
+        public java.util.List<ConditionScheduleParamList> getConditionScheduleParamList() {
+            return this.conditionScheduleParamList;
+        }
+
+        /**
+         * @return conditionScheduleTemplateId
+         */
+        public Long getConditionScheduleTemplateId() {
+            return this.conditionScheduleTemplateId;
+        }
+
+        /**
+         * @return conditionScheduleTemplateName
+         */
+        public String getConditionScheduleTemplateName() {
+            return this.conditionScheduleTemplateName;
+        }
+
+        /**
+         * @return contextParamList
+         */
+        public java.util.List<ContextParamList> getContextParamList() {
+            return this.contextParamList;
         }
 
         /**
@@ -1083,6 +1512,27 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        /**
+         * @return devHttpPath
+         */
+        public String getDevHttpPath() {
+            return this.devHttpPath;
+        }
+
+        /**
+         * @return devResourceGroupId
+         */
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
+        }
+
+        /**
+         * @return devResourceGroupName
+         */
+        public String getDevResourceGroupName() {
+            return this.devResourceGroupName;
         }
 
         /**
@@ -1254,6 +1704,13 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return prodHttpPath
+         */
+        public String getProdHttpPath() {
+            return this.prodHttpPath;
+        }
+
+        /**
          * @return projectId
          */
         public Long getProjectId() {
@@ -1279,6 +1736,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         public Boolean getRerunable() {
             return this.rerunable;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return resourceGroupName
+         */
+        public String getResourceGroupName() {
+            return this.resourceGroupName;
         }
 
         /**
@@ -1310,6 +1781,13 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskTagList
+         */
+        public java.util.List<String> getTaskTagList() {
+            return this.taskTagList;
+        }
+
+        /**
          * @return taskType
          */
         public Integer getTaskType() {
@@ -1323,14 +1801,38 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             return this.upStreamList;
         }
 
+        /**
+         * @return validEndDate
+         */
+        public String getValidEndDate() {
+            return this.validEndDate;
+        }
+
+        /**
+         * @return validStartDate
+         */
+        public String getValidStartDate() {
+            return this.validStartDate;
+        }
+
         public static final class Builder {
+            private Long baseScheduleTemplateId; 
+            private String baseScheduleTemplateName; 
             private String code; 
+            private Boolean conditionScheduleEnable; 
+            private java.util.List<ConditionScheduleParamList> conditionScheduleParamList; 
+            private Long conditionScheduleTemplateId; 
+            private String conditionScheduleTemplateName; 
+            private java.util.List<ContextParamList> contextParamList; 
             private String cronExpression; 
             private CustomScheduleConfig customScheduleConfig; 
             private String dagId; 
             private String dataSourceCatalog; 
             private String dataSourceId; 
             private String dataSourceSchema; 
+            private String devHttpPath; 
+            private String devResourceGroupId; 
+            private String devResourceGroupName; 
             private String developOwnerId; 
             private java.util.List<String> developOwnerIdList; 
             private String developOwnerName; 
@@ -1355,28 +1857,44 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             private java.util.List<ParamList> paramList; 
             private Boolean paused; 
             private Integer priority; 
+            private String prodHttpPath; 
             private Long projectId; 
             private Boolean published; 
             private String remark; 
             private Boolean rerunable; 
+            private String resourceGroupId; 
+            private String resourceGroupName; 
             private String schedulePeriod; 
             private Integer scheduleType; 
             private SparkClientInfo sparkClientInfo; 
             private String status; 
+            private java.util.List<String> taskTagList; 
             private Integer taskType; 
             private java.util.List<UpStreamList> upStreamList; 
+            private String validEndDate; 
+            private String validStartDate; 
 
             private Builder() {
             } 
 
             private Builder(TaskInfo model) {
+                this.baseScheduleTemplateId = model.baseScheduleTemplateId;
+                this.baseScheduleTemplateName = model.baseScheduleTemplateName;
                 this.code = model.code;
+                this.conditionScheduleEnable = model.conditionScheduleEnable;
+                this.conditionScheduleParamList = model.conditionScheduleParamList;
+                this.conditionScheduleTemplateId = model.conditionScheduleTemplateId;
+                this.conditionScheduleTemplateName = model.conditionScheduleTemplateName;
+                this.contextParamList = model.contextParamList;
                 this.cronExpression = model.cronExpression;
                 this.customScheduleConfig = model.customScheduleConfig;
                 this.dagId = model.dagId;
                 this.dataSourceCatalog = model.dataSourceCatalog;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
+                this.devHttpPath = model.devHttpPath;
+                this.devResourceGroupId = model.devResourceGroupId;
+                this.devResourceGroupName = model.devResourceGroupName;
                 this.developOwnerId = model.developOwnerId;
                 this.developOwnerIdList = model.developOwnerIdList;
                 this.developOwnerName = model.developOwnerName;
@@ -1401,17 +1919,39 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
                 this.paramList = model.paramList;
                 this.paused = model.paused;
                 this.priority = model.priority;
+                this.prodHttpPath = model.prodHttpPath;
                 this.projectId = model.projectId;
                 this.published = model.published;
                 this.remark = model.remark;
                 this.rerunable = model.rerunable;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceGroupName = model.resourceGroupName;
                 this.schedulePeriod = model.schedulePeriod;
                 this.scheduleType = model.scheduleType;
                 this.sparkClientInfo = model.sparkClientInfo;
                 this.status = model.status;
+                this.taskTagList = model.taskTagList;
                 this.taskType = model.taskType;
                 this.upStreamList = model.upStreamList;
+                this.validEndDate = model.validEndDate;
+                this.validStartDate = model.validStartDate;
             } 
+
+            /**
+             * BaseScheduleTemplateId.
+             */
+            public Builder baseScheduleTemplateId(Long baseScheduleTemplateId) {
+                this.baseScheduleTemplateId = baseScheduleTemplateId;
+                return this;
+            }
+
+            /**
+             * BaseScheduleTemplateName.
+             */
+            public Builder baseScheduleTemplateName(String baseScheduleTemplateName) {
+                this.baseScheduleTemplateName = baseScheduleTemplateName;
+                return this;
+            }
 
             /**
              * <p>The task code.</p>
@@ -1421,6 +1961,46 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleEnable.
+             */
+            public Builder conditionScheduleEnable(Boolean conditionScheduleEnable) {
+                this.conditionScheduleEnable = conditionScheduleEnable;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleParamList.
+             */
+            public Builder conditionScheduleParamList(java.util.List<ConditionScheduleParamList> conditionScheduleParamList) {
+                this.conditionScheduleParamList = conditionScheduleParamList;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleTemplateId.
+             */
+            public Builder conditionScheduleTemplateId(Long conditionScheduleTemplateId) {
+                this.conditionScheduleTemplateId = conditionScheduleTemplateId;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleTemplateName.
+             */
+            public Builder conditionScheduleTemplateName(String conditionScheduleTemplateName) {
+                this.conditionScheduleTemplateName = conditionScheduleTemplateName;
+                return this;
+            }
+
+            /**
+             * ContextParamList.
+             */
+            public Builder contextParamList(java.util.List<ContextParamList> contextParamList) {
+                this.contextParamList = contextParamList;
                 return this;
             }
 
@@ -1484,6 +2064,30 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
+                return this;
+            }
+
+            /**
+             * DevHttpPath.
+             */
+            public Builder devHttpPath(String devHttpPath) {
+                this.devHttpPath = devHttpPath;
+                return this;
+            }
+
+            /**
+             * DevResourceGroupId.
+             */
+            public Builder devResourceGroupId(String devResourceGroupId) {
+                this.devResourceGroupId = devResourceGroupId;
+                return this;
+            }
+
+            /**
+             * DevResourceGroupName.
+             */
+            public Builder devResourceGroupName(String devResourceGroupName) {
+                this.devResourceGroupName = devResourceGroupName;
                 return this;
             }
 
@@ -1730,6 +2334,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * ProdHttpPath.
+             */
+            public Builder prodHttpPath(String prodHttpPath) {
+                this.prodHttpPath = prodHttpPath;
+                return this;
+            }
+
+            /**
              * <p>The project ID.</p>
              * 
              * <strong>example:</strong>
@@ -1764,6 +2376,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder rerunable(Boolean rerunable) {
                 this.rerunable = rerunable;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupName.
+             */
+            public Builder resourceGroupName(String resourceGroupName) {
+                this.resourceGroupName = resourceGroupName;
                 return this;
             }
 
@@ -1826,6 +2454,14 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * TaskTagList.
+             */
+            public Builder taskTagList(java.util.List<String> taskTagList) {
+                this.taskTagList = taskTagList;
+                return this;
+            }
+
+            /**
              * <p>The task type. For more information, refer to the API operation for creating a batch task.</p>
              * 
              * <strong>example:</strong>
@@ -1841,6 +2477,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
              */
             public Builder upStreamList(java.util.List<UpStreamList> upStreamList) {
                 this.upStreamList = upStreamList;
+                return this;
+            }
+
+            /**
+             * ValidEndDate.
+             */
+            public Builder validEndDate(String validEndDate) {
+                this.validEndDate = validEndDate;
+                return this;
+            }
+
+            /**
+             * ValidStartDate.
+             */
+            public Builder validStartDate(String validStartDate) {
+                this.validStartDate = validStartDate;
                 return this;
             }
 

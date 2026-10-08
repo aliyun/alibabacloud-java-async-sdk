@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateRowPermissionResponseBody} extends {@link TeaModel}
+ * {@link CheckDataSourceConnectivityOnResourceGroupResponseBody} extends {@link TeaModel}
  *
- * <p>CreateRowPermissionResponseBody</p>
+ * <p>CheckDataSourceConnectivityOnResourceGroupResponseBody</p>
  */
-public class CreateRowPermissionResponseBody extends TeaModel {
+public class CheckDataSourceConnectivityOnResourceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Long data;
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -35,7 +35,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private CreateRowPermissionResponseBody(Builder builder) {
+    private CheckDataSourceConnectivityOnResourceGroupResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -48,7 +48,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateRowPermissionResponseBody create() {
+    public static CheckDataSourceConnectivityOnResourceGroupResponseBody create() {
         return builder().build();
     }
 
@@ -66,7 +66,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Long getData() {
+    public String getData() {
         return this.data;
     }
 
@@ -100,7 +100,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Long data; 
+        private String data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -109,7 +109,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(CreateRowPermissionResponseBody model) {
+        private Builder(CheckDataSourceConnectivityOnResourceGroupResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.httpStatusCode = model.httpStatusCode;
@@ -119,10 +119,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. OK indicates that the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,21 +127,15 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The creation result.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Data.
          */
-        public Builder data(Long data) {
+        public Builder data(String data) {
             this.data = data;
             return this;
         }
 
         /**
-         * <p>The HTTP status code returned by the backend.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -152,10 +143,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>successful</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -163,10 +151,7 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -174,18 +159,15 @@ public class CreateRowPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateRowPermissionResponseBody build() {
-            return new CreateRowPermissionResponseBody(this);
+        public CheckDataSourceConnectivityOnResourceGroupResponseBody build() {
+            return new CheckDataSourceConnectivityOnResourceGroupResponseBody(this);
         } 
 
     } 

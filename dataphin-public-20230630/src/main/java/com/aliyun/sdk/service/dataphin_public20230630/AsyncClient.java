@@ -92,6 +92,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchCreateKgRelationResponse> batchCreateKgRelation(BatchCreateKgRelationRequest request);
 
     /**
+     * @param request the request parameters of BatchHandoverAsset  BatchHandoverAssetRequest
+     * @return BatchHandoverAssetResponse
+     */
+    CompletableFuture<BatchHandoverAssetResponse> batchHandoverAsset(BatchHandoverAssetRequest request);
+
+    /**
      * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
      * @return CheckComputeSourceConnectivityResponse
      */
@@ -114,6 +120,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CheckDataSourceConnectivityByIdResponse
      */
     CompletableFuture<CheckDataSourceConnectivityByIdResponse> checkDataSourceConnectivityById(CheckDataSourceConnectivityByIdRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>在指定调度资源组上异步发起数据源连通性检查，立即返回检查任务ID（Data）；任务结果通过 GetCheckConnectivityJobByJobId 轮询。与 CheckDataSourceConnectivity 的区别：本接口的检查任务在客户指定的调度资源组上执行，适用于 Dataphin 服务端与目标数据源网络不通的场景。</p>
+     * 
+     * @param request the request parameters of CheckDataSourceConnectivityOnResourceGroup  CheckDataSourceConnectivityOnResourceGroupRequest
+     * @return CheckDataSourceConnectivityOnResourceGroupResponse
+     */
+    CompletableFuture<CheckDataSourceConnectivityOnResourceGroupResponse> checkDataSourceConnectivityOnResourceGroup(CheckDataSourceConnectivityOnResourceGroupRequest request);
 
     /**
      * @param request the request parameters of CheckProjectHasDependency  CheckProjectHasDependencyRequest
@@ -207,15 +222,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>This API creates a new dataset in the specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
      * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -279,7 +294,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * @param request the request parameters of CreateRowPermission  CreateRowPermissionRequest
      * @return CreateRowPermissionResponse
@@ -756,6 +771,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>按任务ID查询数据源连通性检查任务的最新状态与错误信息，用于轮询 CheckDataSourceConnectivityOnResourceGroup 返回的异步任务。任务不存在时 Data 为空。</p>
+     * 
+     * @param request the request parameters of GetCheckConnectivityJobByJobId  GetCheckConnectivityJobByJobIdRequest
+     * @return GetCheckConnectivityJobByJobIdResponse
+     */
+    CompletableFuture<GetCheckConnectivityJobByJobIdResponse> getCheckConnectivityJobByJobId(GetCheckConnectivityJobByJobIdRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
@@ -1220,6 +1244,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServerVersionResponse> getServerVersion(GetServerVersionRequest request);
 
     /**
+     * @param request the request parameters of GetSourceTableMeta  GetSourceTableMetaRequest
+     * @return GetSourceTableMetaResponse
+     */
+    CompletableFuture<GetSourceTableMetaResponse> getSourceTableMeta(GetSourceTableMetaRequest request);
+
+    /**
      * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
      * @return GetSparkLocalClientInfoResponse
      */
@@ -1278,6 +1308,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetSupplementDagrunInstanceResponse
      */
     CompletableFuture<GetSupplementDagrunInstanceResponse> getSupplementDagrunInstance(GetSupplementDagrunInstanceRequest request);
+
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
+    CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     /**
      * @param request the request parameters of GetTableColumnLineageByTaskId  GetTableColumnLineageByTaskIdRequest
@@ -1428,6 +1464,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAuthorizedDataServiceApiDetailsResponse
      */
     CompletableFuture<ListAuthorizedDataServiceApiDetailsResponse> listAuthorizedDataServiceApiDetails(ListAuthorizedDataServiceApiDetailsRequest request);
+
+    /**
+     * @param request the request parameters of ListBatchTasks  ListBatchTasksRequest
+     * @return ListBatchTasksResponse
+     */
+    CompletableFuture<ListBatchTasksResponse> listBatchTasks(ListBatchTasksRequest request);
 
     /**
      * @param request the request parameters of ListBatchTemplates  ListBatchTemplatesRequest
@@ -1603,6 +1645,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色
+     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     */
+    CompletableFuture<ListProjectRolesResponse> listProjectRoles(ListProjectRolesRequest request);
+
+    /**
      * @param request the request parameters of ListProjects  ListProjectsRequest
      * @return ListProjectsResponse
      */
@@ -1675,6 +1731,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRowPermissionByUserIdResponse> listRowPermissionByUserId(ListRowPermissionByUserIdRequest request);
 
     /**
+     * @param request the request parameters of ListScheduleTemplates  ListScheduleTemplatesRequest
+     * @return ListScheduleTemplatesResponse
+     */
+    CompletableFuture<ListScheduleTemplatesResponse> listScheduleTemplates(ListScheduleTemplatesRequest request);
+
+    /**
      * @param request the request parameters of ListSecurityClassify  ListSecurityClassifyRequest
      * @return ListSecurityClassifyResponse
      */
@@ -1715,6 +1777,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTenantMembersResponse
      */
     CompletableFuture<ListTenantMembersResponse> listTenantMembers(ListTenantMembersRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>获取租户角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色（即租户自定义创建的角色）
+     * 本接口无需额外业务入参，tenantId 由 POP 网关上下文自动注入。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTenantRoles  ListTenantRolesRequest
+     * @return ListTenantRolesResponse
+     */
+    CompletableFuture<ListTenantRolesResponse> listTenantRoles(ListTenantRolesRequest request);
 
     /**
      * @param request the request parameters of ListUserGroupMembers  ListUserGroupMembersRequest
@@ -1879,10 +1955,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchKgBySemanticResponse> searchKgBySemantic(SearchKgBySemanticRequest request);
 
     /**
+     * @param request the request parameters of StartPipelineIntegratedTask  StartPipelineIntegratedTaskRequest
+     * @return StartPipelineIntegratedTaskResponse
+     */
+    CompletableFuture<StartPipelineIntegratedTaskResponse> startPipelineIntegratedTask(StartPipelineIntegratedTaskRequest request);
+
+    /**
      * @param request the request parameters of StopAdHocTask  StopAdHocTaskRequest
      * @return StopAdHocTaskResponse
      */
     CompletableFuture<StopAdHocTaskResponse> stopAdHocTask(StopAdHocTaskRequest request);
+
+    /**
+     * @param request the request parameters of StopPipelineIntegratedTask  StopPipelineIntegratedTaskRequest
+     * @return StopPipelineIntegratedTaskResponse
+     */
+    CompletableFuture<StopPipelineIntegratedTaskResponse> stopPipelineIntegratedTask(StopPipelineIntegratedTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitAssetsOffShelve  SubmitAssetsOffShelveRequest
@@ -1930,6 +2018,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SyncDepartmentResponse> syncDepartment(SyncDepartmentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>同步用户的部门映射关系。支持为指定用户设置部门，或通过传入空列表 departmentIdList 清除该用户已设置的全部部门。
+     * 使用说明：</p>
+     * <ul>
+     * <li>departmentIdList 为 null（未传）：直接报错，防止调用方误清空；</li>
+     * <li>departmentIdList 为空列表 []：显式清除该 sourceUserId 对应的全部部门映射；</li>
+     * <li>departmentIdList 为非空列表：全量覆盖，先删除该用户全部旧部门映射，再插入新列表中的部门。</li>
+     * </ul>
+     * 
      * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest
      * @return SyncDepartmentUserResponse
      */

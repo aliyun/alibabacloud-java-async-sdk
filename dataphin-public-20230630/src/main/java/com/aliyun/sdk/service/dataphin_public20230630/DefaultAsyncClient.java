@@ -256,6 +256,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BatchHandoverAsset  BatchHandoverAssetRequest
+     * @return BatchHandoverAssetResponse
+     */
+    @Override
+    public CompletableFuture<BatchHandoverAssetResponse> batchHandoverAsset(BatchHandoverAssetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchHandoverAsset").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchHandoverAssetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchHandoverAssetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckComputeSourceConnectivity  CheckComputeSourceConnectivityRequest
      * @return CheckComputeSourceConnectivityResponse
      */
@@ -322,6 +340,27 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CheckDataSourceConnectivityByIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>在指定调度资源组上异步发起数据源连通性检查，立即返回检查任务ID（Data）；任务结果通过 GetCheckConnectivityJobByJobId 轮询。与 CheckDataSourceConnectivity 的区别：本接口的检查任务在客户指定的调度资源组上执行，适用于 Dataphin 服务端与目标数据源网络不通的场景。</p>
+     * 
+     * @param request the request parameters of CheckDataSourceConnectivityOnResourceGroup  CheckDataSourceConnectivityOnResourceGroupRequest
+     * @return CheckDataSourceConnectivityOnResourceGroupResponse
+     */
+    @Override
+    public CompletableFuture<CheckDataSourceConnectivityOnResourceGroupResponse> checkDataSourceConnectivityOnResourceGroup(CheckDataSourceConnectivityOnResourceGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CheckDataSourceConnectivityOnResourceGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CheckDataSourceConnectivityOnResourceGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CheckDataSourceConnectivityOnResourceGroupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -599,15 +638,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API operation creates a dataset in a specified project.</li>
+     * <li>This API creates a new dataset in the specified project.</li>
      * <li><code>ProjectId</code> is a required parameter that specifies the ID of the project in which to create the dataset.</li>
      * <li><code>CreateCommand</code> is a complex object that contains the configuration information required to create the dataset.</li>
      * <li><code>Name</code>, <code>Type</code>, <code>ContentType</code>, and <code>Scenario</code> are required fields that specify the dataset name, type, content type, and scenarios.</li>
      * <li><code>FileStorageConfig</code> and <code>MetadataStorageConfig</code> in <code>VersionConfig</code> can be configured as needed.</li>
-     * <li>If you need a real-time meta table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
-     * <li>Ensure that all required fields are correctly specified. Otherwise, the request failed.</li>
+     * <li>If you need real-time meta-table configuration, provide the <code>RealtimeMetaTableConfig</code> information.</li>
+     * <li>Make sure all required fields are correctly filled in. Otherwise, the request failed.</li>
      * </ul>
      * 
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
@@ -791,7 +830,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of published APIs by appKey.</p>
+     * <p>Queries the details of published APIs based on the appKey.</p>
      * 
      * @param request the request parameters of CreateRowPermission  CreateRowPermissionRequest
      * @return CreateRowPermissionResponse
@@ -2216,6 +2255,27 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>按任务ID查询数据源连通性检查任务的最新状态与错误信息，用于轮询 CheckDataSourceConnectivityOnResourceGroup 返回的异步任务。任务不存在时 Data 为空。</p>
+     * 
+     * @param request the request parameters of GetCheckConnectivityJobByJobId  GetCheckConnectivityJobByJobIdRequest
+     * @return GetCheckConnectivityJobByJobIdResponse
+     */
+    @Override
+    public CompletableFuture<GetCheckConnectivityJobByJobIdResponse> getCheckConnectivityJobByJobId(GetCheckConnectivityJobByJobIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCheckConnectivityJobByJobId").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCheckConnectivityJobByJobIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCheckConnectivityJobByJobIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries the details of connectivity tasks that have been tested for a specified data source ID.</p>
      * 
      * @param request the request parameters of GetCheckConnectivityJobs  GetCheckConnectivityJobsRequest
@@ -3580,6 +3640,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSourceTableMeta  GetSourceTableMetaRequest
+     * @return GetSourceTableMetaResponse
+     */
+    @Override
+    public CompletableFuture<GetSourceTableMetaResponse> getSourceTableMeta(GetSourceTableMetaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSourceTableMeta").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSourceTableMetaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSourceTableMetaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetSparkLocalClientInfo  GetSparkLocalClientInfoRequest
      * @return GetSparkLocalClientInfoResponse
      */
@@ -3754,6 +3832,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetSupplementDagrunInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
+    @Override
+    public CompletableFuture<GetTableResponse> getTable(GetTableRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetTable").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4192,6 +4288,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAuthorizedDataServiceApiDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListBatchTasks  ListBatchTasksRequest
+     * @return ListBatchTasksResponse
+     */
+    @Override
+    public CompletableFuture<ListBatchTasksResponse> listBatchTasks(ListBatchTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListBatchTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListBatchTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListBatchTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -4695,6 +4809,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>获取租户指定项目类型下的项目角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色
+     * 请求参数 ProjectType 必填，可选值为：BASIC（基础模式项目）、DEV（开发环境项目）、PROD（生产环境项目）、TAG（标签平台项目）。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListProjectRoles  ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     */
+    @Override
+    public CompletableFuture<ListProjectRolesResponse> listProjectRoles(ListProjectRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListProjectRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProjectRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListProjectRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListProjects  ListProjectsRequest
      * @return ListProjectsResponse
      */
@@ -4911,6 +5051,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListScheduleTemplates  ListScheduleTemplatesRequest
+     * @return ListScheduleTemplatesResponse
+     */
+    @Override
+    public CompletableFuture<ListScheduleTemplatesResponse> listScheduleTemplates(ListScheduleTemplatesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListScheduleTemplates").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListScheduleTemplatesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListScheduleTemplatesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListSecurityClassify  ListSecurityClassifyRequest
      * @return ListSecurityClassifyResponse
      */
@@ -5031,6 +5189,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTenantMembersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>获取租户角色列表。返回角色列表中 roleType 字段标识角色类型：</p>
+     * <ul>
+     * <li>BUILD_IN：内置角色</li>
+     * <li>CUSTOM：自定义角色（即租户自定义创建的角色）
+     * 本接口无需额外业务入参，tenantId 由 POP 网关上下文自动注入。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListTenantRoles  ListTenantRolesRequest
+     * @return ListTenantRolesResponse
+     */
+    @Override
+    public CompletableFuture<ListTenantRolesResponse> listTenantRoles(ListTenantRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTenantRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTenantRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTenantRolesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5523,6 +5707,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartPipelineIntegratedTask  StartPipelineIntegratedTaskRequest
+     * @return StartPipelineIntegratedTaskResponse
+     */
+    @Override
+    public CompletableFuture<StartPipelineIntegratedTaskResponse> startPipelineIntegratedTask(StartPipelineIntegratedTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartPipelineIntegratedTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartPipelineIntegratedTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartPipelineIntegratedTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopAdHocTask  StopAdHocTaskRequest
      * @return StopAdHocTaskResponse
      */
@@ -5535,6 +5737,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopAdHocTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StopPipelineIntegratedTask  StopPipelineIntegratedTaskRequest
+     * @return StopPipelineIntegratedTaskResponse
+     */
+    @Override
+    public CompletableFuture<StopPipelineIntegratedTaskResponse> stopPipelineIntegratedTask(StopPipelineIntegratedTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StopPipelineIntegratedTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopPipelineIntegratedTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopPipelineIntegratedTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -5670,6 +5890,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>同步用户的部门映射关系。支持为指定用户设置部门，或通过传入空列表 departmentIdList 清除该用户已设置的全部部门。
+     * 使用说明：</p>
+     * <ul>
+     * <li>departmentIdList 为 null（未传）：直接报错，防止调用方误清空；</li>
+     * <li>departmentIdList 为空列表 []：显式清除该 sourceUserId 对应的全部部门映射；</li>
+     * <li>departmentIdList 为非空列表：全量覆盖，先删除该用户全部旧部门映射，再插入新列表中的部门。</li>
+     * </ul>
+     * 
      * @param request the request parameters of SyncDepartmentUser  SyncDepartmentUserRequest
      * @return SyncDepartmentUserResponse
      */

@@ -119,7 +119,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. A value of OK indicates that the request was successful.</p>
+         * <p>The request error code. OK indicates a successful request.</p>
          * 
          * <strong>example:</strong>
          * <p>OK</p>
@@ -130,7 +130,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response data.</p>
+         * <p>The response result.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,7 +152,7 @@ public class SyncDepartmentUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned for the request.</p>
+         * <p>The request error message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

@@ -160,6 +160,282 @@ public class UpdateBatchTaskRequest extends Request {
      *
      * <p>UpdateBatchTaskRequest</p>
      */
+    public static class ConditionScheduleParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConditionName")
+        private String conditionName;
+
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
+        private String cronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("FollowScheduleParam")
+        private Boolean followScheduleParam;
+
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
+        private Integer nodeStatus;
+
+        @com.aliyun.core.annotation.NameInMap("ScheduleConditionJson")
+        private String scheduleConditionJson;
+
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
+        private String scheduleTime;
+
+        private ConditionScheduleParamList(Builder builder) {
+            this.conditionName = builder.conditionName;
+            this.cronExpression = builder.cronExpression;
+            this.enable = builder.enable;
+            this.followScheduleParam = builder.followScheduleParam;
+            this.nodeStatus = builder.nodeStatus;
+            this.scheduleConditionJson = builder.scheduleConditionJson;
+            this.scheduleTime = builder.scheduleTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConditionScheduleParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionName
+         */
+        public String getConditionName() {
+            return this.conditionName;
+        }
+
+        /**
+         * @return cronExpression
+         */
+        public String getCronExpression() {
+            return this.cronExpression;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return followScheduleParam
+         */
+        public Boolean getFollowScheduleParam() {
+            return this.followScheduleParam;
+        }
+
+        /**
+         * @return nodeStatus
+         */
+        public Integer getNodeStatus() {
+            return this.nodeStatus;
+        }
+
+        /**
+         * @return scheduleConditionJson
+         */
+        public String getScheduleConditionJson() {
+            return this.scheduleConditionJson;
+        }
+
+        /**
+         * @return scheduleTime
+         */
+        public String getScheduleTime() {
+            return this.scheduleTime;
+        }
+
+        public static final class Builder {
+            private String conditionName; 
+            private String cronExpression; 
+            private Boolean enable; 
+            private Boolean followScheduleParam; 
+            private Integer nodeStatus; 
+            private String scheduleConditionJson; 
+            private String scheduleTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionScheduleParamList model) {
+                this.conditionName = model.conditionName;
+                this.cronExpression = model.cronExpression;
+                this.enable = model.enable;
+                this.followScheduleParam = model.followScheduleParam;
+                this.nodeStatus = model.nodeStatus;
+                this.scheduleConditionJson = model.scheduleConditionJson;
+                this.scheduleTime = model.scheduleTime;
+            } 
+
+            /**
+             * ConditionName.
+             */
+            public Builder conditionName(String conditionName) {
+                this.conditionName = conditionName;
+                return this;
+            }
+
+            /**
+             * CronExpression.
+             */
+            public Builder cronExpression(String cronExpression) {
+                this.cronExpression = cronExpression;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * FollowScheduleParam.
+             */
+            public Builder followScheduleParam(Boolean followScheduleParam) {
+                this.followScheduleParam = followScheduleParam;
+                return this;
+            }
+
+            /**
+             * NodeStatus.
+             */
+            public Builder nodeStatus(Integer nodeStatus) {
+                this.nodeStatus = nodeStatus;
+                return this;
+            }
+
+            /**
+             * ScheduleConditionJson.
+             */
+            public Builder scheduleConditionJson(String scheduleConditionJson) {
+                this.scheduleConditionJson = scheduleConditionJson;
+                return this;
+            }
+
+            /**
+             * ScheduleTime.
+             */
+            public Builder scheduleTime(String scheduleTime) {
+                this.scheduleTime = scheduleTime;
+                return this;
+            }
+
+            public ConditionScheduleParamList build() {
+                return new ConditionScheduleParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBatchTaskRequest</p>
+     */
+    public static class ContextParamList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("Desc")
+        private String desc;
+
+        @com.aliyun.core.annotation.NameInMap("ParamKey")
+        private String paramKey;
+
+        private ContextParamList(Builder builder) {
+            this.defaultValue = builder.defaultValue;
+            this.desc = builder.desc;
+            this.paramKey = builder.paramKey;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContextParamList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultValue
+         */
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        /**
+         * @return desc
+         */
+        public String getDesc() {
+            return this.desc;
+        }
+
+        /**
+         * @return paramKey
+         */
+        public String getParamKey() {
+            return this.paramKey;
+        }
+
+        public static final class Builder {
+            private String defaultValue; 
+            private String desc; 
+            private String paramKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContextParamList model) {
+                this.defaultValue = model.defaultValue;
+                this.desc = model.desc;
+                this.paramKey = model.paramKey;
+            } 
+
+            /**
+             * DefaultValue.
+             */
+            public Builder defaultValue(String defaultValue) {
+                this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * Desc.
+             */
+            public Builder desc(String desc) {
+                this.desc = desc;
+                return this;
+            }
+
+            /**
+             * ParamKey.
+             */
+            public Builder paramKey(String paramKey) {
+                this.paramKey = paramKey;
+                return this;
+            }
+
+            public ContextParamList build() {
+                return new ContextParamList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateBatchTaskRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateBatchTaskRequest</p>
+     */
     public static class CustomScheduleConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -823,9 +1099,24 @@ public class UpdateBatchTaskRequest extends Request {
      * <p>UpdateBatchTaskRequest</p>
      */
     public static class UpdateCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BaseScheduleTemplateId")
+        private Long baseScheduleTemplateId;
+
         @com.aliyun.core.annotation.NameInMap("Code")
         @com.aliyun.core.annotation.Validation(required = true)
         private String code;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleEnable")
+        private Boolean conditionScheduleEnable;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleParamList")
+        private java.util.List<ConditionScheduleParamList> conditionScheduleParamList;
+
+        @com.aliyun.core.annotation.NameInMap("ConditionScheduleTemplateId")
+        private Long conditionScheduleTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("ContextParamList")
+        private java.util.List<ContextParamList> contextParamList;
 
         @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
@@ -841,6 +1132,12 @@ public class UpdateBatchTaskRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("DataSourceSchema")
         private String dataSourceSchema;
+
+        @com.aliyun.core.annotation.NameInMap("DevHttpPath")
+        private String devHttpPath;
+
+        @com.aliyun.core.annotation.NameInMap("DevResourceGroupId")
+        private String devResourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("DevelopOwnerIdList")
         private java.util.List<String> developOwnerIdList;
@@ -865,11 +1162,17 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private Integer nodeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("OpsOwnerIdList")
+        private java.util.List<String> opsOwnerIdList;
+
         @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List<ParamList> paramList;
 
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("ProdHttpPath")
+        private String prodHttpPath;
 
         @com.aliyun.core.annotation.NameInMap("ProjectId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -878,11 +1181,17 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PythonModuleList")
         private java.util.List<String> pythonModuleList;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SchedulePeriod")
         private String schedulePeriod;
 
         @com.aliyun.core.annotation.NameInMap("SparkClientInfo")
         private SparkClientInfo sparkClientInfo;
+
+        @com.aliyun.core.annotation.NameInMap("TaskTagList")
+        private java.util.List<String> taskTagList;
 
         @com.aliyun.core.annotation.NameInMap("TaskType")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -891,13 +1200,26 @@ public class UpdateBatchTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UpStreamList")
         private java.util.List<UpStreamList> upStreamList;
 
+        @com.aliyun.core.annotation.NameInMap("ValidEndDate")
+        private String validEndDate;
+
+        @com.aliyun.core.annotation.NameInMap("ValidStartDate")
+        private String validStartDate;
+
         private UpdateCommand(Builder builder) {
+            this.baseScheduleTemplateId = builder.baseScheduleTemplateId;
             this.code = builder.code;
+            this.conditionScheduleEnable = builder.conditionScheduleEnable;
+            this.conditionScheduleParamList = builder.conditionScheduleParamList;
+            this.conditionScheduleTemplateId = builder.conditionScheduleTemplateId;
+            this.contextParamList = builder.contextParamList;
             this.cronExpression = builder.cronExpression;
             this.customScheduleConfig = builder.customScheduleConfig;
             this.dataSourceCatalog = builder.dataSourceCatalog;
             this.dataSourceId = builder.dataSourceId;
             this.dataSourceSchema = builder.dataSourceSchema;
+            this.devHttpPath = builder.devHttpPath;
+            this.devResourceGroupId = builder.devResourceGroupId;
             this.developOwnerIdList = builder.developOwnerIdList;
             this.engine = builder.engine;
             this.fileId = builder.fileId;
@@ -905,14 +1227,20 @@ public class UpdateBatchTaskRequest extends Request {
             this.nodeDescription = builder.nodeDescription;
             this.nodeOutputNameList = builder.nodeOutputNameList;
             this.nodeStatus = builder.nodeStatus;
+            this.opsOwnerIdList = builder.opsOwnerIdList;
             this.paramList = builder.paramList;
             this.priority = builder.priority;
+            this.prodHttpPath = builder.prodHttpPath;
             this.projectId = builder.projectId;
             this.pythonModuleList = builder.pythonModuleList;
+            this.resourceGroupId = builder.resourceGroupId;
             this.schedulePeriod = builder.schedulePeriod;
             this.sparkClientInfo = builder.sparkClientInfo;
+            this.taskTagList = builder.taskTagList;
             this.taskType = builder.taskType;
             this.upStreamList = builder.upStreamList;
+            this.validEndDate = builder.validEndDate;
+            this.validStartDate = builder.validStartDate;
         }
 
         public static Builder builder() {
@@ -924,10 +1252,45 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return baseScheduleTemplateId
+         */
+        public Long getBaseScheduleTemplateId() {
+            return this.baseScheduleTemplateId;
+        }
+
+        /**
          * @return code
          */
         public String getCode() {
             return this.code;
+        }
+
+        /**
+         * @return conditionScheduleEnable
+         */
+        public Boolean getConditionScheduleEnable() {
+            return this.conditionScheduleEnable;
+        }
+
+        /**
+         * @return conditionScheduleParamList
+         */
+        public java.util.List<ConditionScheduleParamList> getConditionScheduleParamList() {
+            return this.conditionScheduleParamList;
+        }
+
+        /**
+         * @return conditionScheduleTemplateId
+         */
+        public Long getConditionScheduleTemplateId() {
+            return this.conditionScheduleTemplateId;
+        }
+
+        /**
+         * @return contextParamList
+         */
+        public java.util.List<ContextParamList> getContextParamList() {
+            return this.contextParamList;
         }
 
         /**
@@ -963,6 +1326,20 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public String getDataSourceSchema() {
             return this.dataSourceSchema;
+        }
+
+        /**
+         * @return devHttpPath
+         */
+        public String getDevHttpPath() {
+            return this.devHttpPath;
+        }
+
+        /**
+         * @return devResourceGroupId
+         */
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
         }
 
         /**
@@ -1015,6 +1392,13 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return opsOwnerIdList
+         */
+        public java.util.List<String> getOpsOwnerIdList() {
+            return this.opsOwnerIdList;
+        }
+
+        /**
          * @return paramList
          */
         public java.util.List<ParamList> getParamList() {
@@ -1026,6 +1410,13 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public Integer getPriority() {
             return this.priority;
+        }
+
+        /**
+         * @return prodHttpPath
+         */
+        public String getProdHttpPath() {
+            return this.prodHttpPath;
         }
 
         /**
@@ -1043,6 +1434,13 @@ public class UpdateBatchTaskRequest extends Request {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return schedulePeriod
          */
         public String getSchedulePeriod() {
@@ -1054,6 +1452,13 @@ public class UpdateBatchTaskRequest extends Request {
          */
         public SparkClientInfo getSparkClientInfo() {
             return this.sparkClientInfo;
+        }
+
+        /**
+         * @return taskTagList
+         */
+        public java.util.List<String> getTaskTagList() {
+            return this.taskTagList;
         }
 
         /**
@@ -1070,13 +1475,34 @@ public class UpdateBatchTaskRequest extends Request {
             return this.upStreamList;
         }
 
+        /**
+         * @return validEndDate
+         */
+        public String getValidEndDate() {
+            return this.validEndDate;
+        }
+
+        /**
+         * @return validStartDate
+         */
+        public String getValidStartDate() {
+            return this.validStartDate;
+        }
+
         public static final class Builder {
+            private Long baseScheduleTemplateId; 
             private String code; 
+            private Boolean conditionScheduleEnable; 
+            private java.util.List<ConditionScheduleParamList> conditionScheduleParamList; 
+            private Long conditionScheduleTemplateId; 
+            private java.util.List<ContextParamList> contextParamList; 
             private String cronExpression; 
             private CustomScheduleConfig customScheduleConfig; 
             private String dataSourceCatalog; 
             private String dataSourceId; 
             private String dataSourceSchema; 
+            private String devHttpPath; 
+            private String devResourceGroupId; 
             private java.util.List<String> developOwnerIdList; 
             private String engine; 
             private Long fileId; 
@@ -1084,25 +1510,38 @@ public class UpdateBatchTaskRequest extends Request {
             private String nodeDescription; 
             private java.util.List<String> nodeOutputNameList; 
             private Integer nodeStatus; 
+            private java.util.List<String> opsOwnerIdList; 
             private java.util.List<ParamList> paramList; 
             private Integer priority; 
+            private String prodHttpPath; 
             private Long projectId; 
             private java.util.List<String> pythonModuleList; 
+            private String resourceGroupId; 
             private String schedulePeriod; 
             private SparkClientInfo sparkClientInfo; 
+            private java.util.List<String> taskTagList; 
             private Integer taskType; 
             private java.util.List<UpStreamList> upStreamList; 
+            private String validEndDate; 
+            private String validStartDate; 
 
             private Builder() {
             } 
 
             private Builder(UpdateCommand model) {
+                this.baseScheduleTemplateId = model.baseScheduleTemplateId;
                 this.code = model.code;
+                this.conditionScheduleEnable = model.conditionScheduleEnable;
+                this.conditionScheduleParamList = model.conditionScheduleParamList;
+                this.conditionScheduleTemplateId = model.conditionScheduleTemplateId;
+                this.contextParamList = model.contextParamList;
                 this.cronExpression = model.cronExpression;
                 this.customScheduleConfig = model.customScheduleConfig;
                 this.dataSourceCatalog = model.dataSourceCatalog;
                 this.dataSourceId = model.dataSourceId;
                 this.dataSourceSchema = model.dataSourceSchema;
+                this.devHttpPath = model.devHttpPath;
+                this.devResourceGroupId = model.devResourceGroupId;
                 this.developOwnerIdList = model.developOwnerIdList;
                 this.engine = model.engine;
                 this.fileId = model.fileId;
@@ -1110,15 +1549,29 @@ public class UpdateBatchTaskRequest extends Request {
                 this.nodeDescription = model.nodeDescription;
                 this.nodeOutputNameList = model.nodeOutputNameList;
                 this.nodeStatus = model.nodeStatus;
+                this.opsOwnerIdList = model.opsOwnerIdList;
                 this.paramList = model.paramList;
                 this.priority = model.priority;
+                this.prodHttpPath = model.prodHttpPath;
                 this.projectId = model.projectId;
                 this.pythonModuleList = model.pythonModuleList;
+                this.resourceGroupId = model.resourceGroupId;
                 this.schedulePeriod = model.schedulePeriod;
                 this.sparkClientInfo = model.sparkClientInfo;
+                this.taskTagList = model.taskTagList;
                 this.taskType = model.taskType;
                 this.upStreamList = model.upStreamList;
+                this.validEndDate = model.validEndDate;
+                this.validStartDate = model.validStartDate;
             } 
+
+            /**
+             * BaseScheduleTemplateId.
+             */
+            public Builder baseScheduleTemplateId(Long baseScheduleTemplateId) {
+                this.baseScheduleTemplateId = baseScheduleTemplateId;
+                return this;
+            }
 
             /**
              * <p>The code of the node.</p>
@@ -1129,6 +1582,38 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder code(String code) {
                 this.code = code;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleEnable.
+             */
+            public Builder conditionScheduleEnable(Boolean conditionScheduleEnable) {
+                this.conditionScheduleEnable = conditionScheduleEnable;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleParamList.
+             */
+            public Builder conditionScheduleParamList(java.util.List<ConditionScheduleParamList> conditionScheduleParamList) {
+                this.conditionScheduleParamList = conditionScheduleParamList;
+                return this;
+            }
+
+            /**
+             * ConditionScheduleTemplateId.
+             */
+            public Builder conditionScheduleTemplateId(Long conditionScheduleTemplateId) {
+                this.conditionScheduleTemplateId = conditionScheduleTemplateId;
+                return this;
+            }
+
+            /**
+             * ContextParamList.
+             */
+            public Builder contextParamList(java.util.List<ContextParamList> contextParamList) {
+                this.contextParamList = contextParamList;
                 return this;
             }
 
@@ -1181,6 +1666,22 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder dataSourceSchema(String dataSourceSchema) {
                 this.dataSourceSchema = dataSourceSchema;
+                return this;
+            }
+
+            /**
+             * DevHttpPath.
+             */
+            public Builder devHttpPath(String devHttpPath) {
+                this.devHttpPath = devHttpPath;
+                return this;
+            }
+
+            /**
+             * DevResourceGroupId.
+             */
+            public Builder devResourceGroupId(String devResourceGroupId) {
+                this.devResourceGroupId = devResourceGroupId;
                 return this;
             }
 
@@ -1268,6 +1769,14 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * OpsOwnerIdList.
+             */
+            public Builder opsOwnerIdList(java.util.List<String> opsOwnerIdList) {
+                this.opsOwnerIdList = opsOwnerIdList;
+                return this;
+            }
+
+            /**
              * <p>The list of custom parameters.</p>
              */
             public Builder paramList(java.util.List<ParamList> paramList) {
@@ -1283,6 +1792,14 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
+                return this;
+            }
+
+            /**
+             * ProdHttpPath.
+             */
+            public Builder prodHttpPath(String prodHttpPath) {
+                this.prodHttpPath = prodHttpPath;
                 return this;
             }
 
@@ -1303,6 +1820,14 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder pythonModuleList(java.util.List<String> pythonModuleList) {
                 this.pythonModuleList = pythonModuleList;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -1334,6 +1859,14 @@ public class UpdateBatchTaskRequest extends Request {
             }
 
             /**
+             * TaskTagList.
+             */
+            public Builder taskTagList(java.util.List<String> taskTagList) {
+                this.taskTagList = taskTagList;
+                return this;
+            }
+
+            /**
              * <p>The node type. Valid values:</p>
              * <ul>
              * <li>1: Hive_SQL.</li>
@@ -1356,6 +1889,22 @@ public class UpdateBatchTaskRequest extends Request {
              */
             public Builder upStreamList(java.util.List<UpStreamList> upStreamList) {
                 this.upStreamList = upStreamList;
+                return this;
+            }
+
+            /**
+             * ValidEndDate.
+             */
+            public Builder validEndDate(String validEndDate) {
+                this.validEndDate = validEndDate;
+                return this;
+            }
+
+            /**
+             * ValidStartDate.
+             */
+            public Builder validStartDate(String validStartDate) {
+                this.validStartDate = validStartDate;
                 return this;
             }
 

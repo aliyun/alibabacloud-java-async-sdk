@@ -12,18 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListTablesRequest} extends {@link RequestModel}
+ * {@link ListScheduleTemplatesRequest} extends {@link RequestModel}
  *
- * <p>ListTablesRequest</p>
+ * <p>ListScheduleTemplatesRequest</p>
  */
-public class ListTablesRequest extends Request {
+public class ListScheduleTemplatesRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("ListQuery")
-    private ListQuery listQuery;
+    @com.aliyun.core.annotation.NameInMap("ListScheduleTemplatesCommand")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private ListScheduleTemplatesCommand listScheduleTemplatesCommand;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpTenantId")
@@ -34,10 +35,10 @@ public class ListTablesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OpUserId")
     private String opUserId;
 
-    private ListTablesRequest(Builder builder) {
+    private ListScheduleTemplatesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.listQuery = builder.listQuery;
+        this.listScheduleTemplatesCommand = builder.listScheduleTemplatesCommand;
         this.opTenantId = builder.opTenantId;
         this.opUserId = builder.opUserId;
     }
@@ -46,7 +47,7 @@ public class ListTablesRequest extends Request {
         return new Builder();
     }
 
-    public static ListTablesRequest create() {
+    public static ListScheduleTemplatesRequest create() {
         return builder().build();
     }
 
@@ -63,10 +64,10 @@ public class ListTablesRequest extends Request {
     }
 
     /**
-     * @return listQuery
+     * @return listScheduleTemplatesCommand
      */
-    public ListQuery getListQuery() {
-        return this.listQuery;
+    public ListScheduleTemplatesCommand getListScheduleTemplatesCommand() {
+        return this.listScheduleTemplatesCommand;
     }
 
     /**
@@ -83,9 +84,9 @@ public class ListTablesRequest extends Request {
         return this.opUserId;
     }
 
-    public static final class Builder extends Request.Builder<ListTablesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListScheduleTemplatesRequest, Builder> {
         private String regionId; 
-        private ListQuery listQuery; 
+        private ListScheduleTemplatesCommand listScheduleTemplatesCommand; 
         private Long opTenantId; 
         private String opUserId; 
 
@@ -93,10 +94,10 @@ public class ListTablesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTablesRequest request) {
+        private Builder(ListScheduleTemplatesRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.listQuery = request.listQuery;
+            this.listScheduleTemplatesCommand = request.listScheduleTemplatesCommand;
             this.opTenantId = request.opTenantId;
             this.opUserId = request.opUserId;
         } 
@@ -111,17 +112,16 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * <p>The paged query conditions.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder listQuery(ListQuery listQuery) {
-            String listQueryShrink = shrink(listQuery, "ListQuery", "json");
-            this.putBodyParameter("ListQuery", listQueryShrink);
-            this.listQuery = listQuery;
+        public Builder listScheduleTemplatesCommand(ListScheduleTemplatesCommand listScheduleTemplatesCommand) {
+            String listScheduleTemplatesCommandShrink = shrink(listScheduleTemplatesCommand, "ListScheduleTemplatesCommand", "json");
+            this.putBodyParameter("ListScheduleTemplatesCommand", listScheduleTemplatesCommandShrink);
+            this.listScheduleTemplatesCommand = listScheduleTemplatesCommand;
             return this;
         }
 
         /**
-         * <p>The tenant ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,59 +143,44 @@ public class ListTablesRequest extends Request {
         }
 
         @Override
-        public ListTablesRequest build() {
-            return new ListTablesRequest(this);
+        public ListScheduleTemplatesRequest build() {
+            return new ListScheduleTemplatesRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ListTablesRequest} extends {@link TeaModel}
+     * {@link ListScheduleTemplatesRequest} extends {@link TeaModel}
      *
-     * <p>ListTablesRequest</p>
+     * <p>ListScheduleTemplatesRequest</p>
      */
-    public static class ListQuery extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Catalog")
-        private String catalog;
-
+    public static class ListScheduleTemplatesCommand extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
 
-        @com.aliyun.core.annotation.NameInMap("OwnerId")
-        private String ownerId;
-
-        @com.aliyun.core.annotation.NameInMap("PageNo")
-        private Integer pageNo;
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Integer pageNumber;
 
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @com.aliyun.core.annotation.NameInMap("SubTypes")
-        private java.util.List<String> subTypes;
+        @com.aliyun.core.annotation.NameInMap("ScheduleTemplateType")
+        private String scheduleTemplateType;
 
-        private ListQuery(Builder builder) {
-            this.catalog = builder.catalog;
+        private ListScheduleTemplatesCommand(Builder builder) {
             this.keyword = builder.keyword;
-            this.ownerId = builder.ownerId;
-            this.pageNo = builder.pageNo;
+            this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
-            this.subTypes = builder.subTypes;
+            this.scheduleTemplateType = builder.scheduleTemplateType;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ListQuery create() {
+        public static ListScheduleTemplatesCommand create() {
             return builder().build();
-        }
-
-        /**
-         * @return catalog
-         */
-        public String getCatalog() {
-            return this.catalog;
         }
 
         /**
@@ -206,17 +191,10 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * @return ownerId
+         * @return pageNumber
          */
-        public String getOwnerId() {
-            return this.ownerId;
-        }
-
-        /**
-         * @return pageNo
-         */
-        public Integer getPageNo() {
-            return this.pageNo;
+        public Integer getPageNumber() {
+            return this.pageNumber;
         }
 
         /**
@@ -227,48 +205,30 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * @return subTypes
+         * @return scheduleTemplateType
          */
-        public java.util.List<String> getSubTypes() {
-            return this.subTypes;
+        public String getScheduleTemplateType() {
+            return this.scheduleTemplateType;
         }
 
         public static final class Builder {
-            private String catalog; 
             private String keyword; 
-            private String ownerId; 
-            private Integer pageNo; 
+            private Integer pageNumber; 
             private Integer pageSize; 
-            private java.util.List<String> subTypes; 
+            private String scheduleTemplateType; 
 
             private Builder() {
             } 
 
-            private Builder(ListQuery model) {
-                this.catalog = model.catalog;
+            private Builder(ListScheduleTemplatesCommand model) {
                 this.keyword = model.keyword;
-                this.ownerId = model.ownerId;
-                this.pageNo = model.pageNo;
+                this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
-                this.subTypes = model.subTypes;
+                this.scheduleTemplateType = model.scheduleTemplateType;
             } 
 
             /**
-             * <p>The asset catalog, such as the project name or business unit name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LD_test01_dev</p>
-             */
-            public Builder catalog(String catalog) {
-                this.catalog = catalog;
-                return this;
-            }
-
-            /**
-             * <p>The keyword for searching. Table names are supported.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Keyword.
              */
             public Builder keyword(String keyword) {
                 this.keyword = keyword;
@@ -276,29 +236,15 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * OwnerId.
+             * PageNumber.
              */
-            public Builder ownerId(String ownerId) {
-                this.ownerId = ownerId;
+            public Builder pageNumber(Integer pageNumber) {
+                this.pageNumber = pageNumber;
                 return this;
             }
 
             /**
-             * <p>The page number. Default value: 1.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder pageNo(Integer pageNo) {
-                this.pageNo = pageNo;
-                return this;
-            }
-
-            /**
-             * <p>The number of records per page. Default value: 20.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -306,15 +252,15 @@ public class ListTablesRequest extends Request {
             }
 
             /**
-             * SubTypes.
+             * ScheduleTemplateType.
              */
-            public Builder subTypes(java.util.List<String> subTypes) {
-                this.subTypes = subTypes;
+            public Builder scheduleTemplateType(String scheduleTemplateType) {
+                this.scheduleTemplateType = scheduleTemplateType;
                 return this;
             }
 
-            public ListQuery build() {
-                return new ListQuery(this);
+            public ListScheduleTemplatesCommand build() {
+                return new ListScheduleTemplatesCommand(this);
             } 
 
         } 
