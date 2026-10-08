@@ -62,6 +62,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FindGuestTicketRecordResponse> findGuestTicketRecord(FindGuestTicketRecordRequest request);
 
     /**
+     * @param request the request parameters of MosCheckIn  MosCheckInRequest
+     * @return MosCheckInResponse
+     */
+    CompletableFuture<MosCheckInResponse> mosCheckIn(MosCheckInRequest request);
+
+    /**
      * @param request the request parameters of QueryAllActivityInfo  QueryAllActivityInfoRequest
      * @return QueryAllActivityInfoResponse
      */
