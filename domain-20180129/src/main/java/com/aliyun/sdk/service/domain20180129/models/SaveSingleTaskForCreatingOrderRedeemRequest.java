@@ -159,7 +159,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         } 
 
         /**
-         * CouponNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -168,6 +171,7 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
+         * <p>Current expiration time of the domain name, represented as the number of milliseconds since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,6 +184,7 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
+         * <p>Domain name to be redeemed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +197,15 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -201,7 +214,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -210,7 +226,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Is a coupon used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -219,7 +238,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Is a coupon used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -228,7 +250,10 @@ public class SaveSingleTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

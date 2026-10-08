@@ -356,7 +356,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         } 
 
         /**
-         * Address.
+         * <p>Specific address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chao yang qu</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -365,7 +368,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * City.
+         * <p>City.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing shi</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -374,6 +380,13 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
+         * <p>Contact type. Valid values:  </p>
+         * <ul>
+         * <li><strong>registrant</strong>: Registrant.  </li>
+         * <li><strong>admin</strong>: Administrator.  </li>
+         * <li><strong>billing</strong>: Billing contact.  </li>
+         * <li><strong>tech</strong>: Technical contact.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -386,7 +399,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * Country.
+         * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -395,6 +411,7 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
+         * <p>Domain name list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -407,7 +424,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * Email.
+         * <p>Mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -416,7 +436,15 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -425,7 +453,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -434,7 +465,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * Province.
+         * <p>Province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -443,7 +477,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * RegistrantName.
+         * <p>Contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -452,7 +489,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -461,6 +501,11 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
+         * <p>Domain registrant type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.  </li>
+         * <li><strong>2</strong>: Enterprise.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -473,7 +518,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * TelArea.
+         * <p>Telephone country code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -482,7 +530,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * TelExt.
+         * <p>Extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1235</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -491,7 +542,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * Telephone.
+         * <p>Telephone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -500,7 +554,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * TransferOutProhibited.
+         * <p>Whether to add a transfer-out prohibition restriction. This parameter only takes effect when <strong>ContactType</strong> is <strong>registrant</strong>, indicating whether the domain name is restricted from transfer-out for 60 days after the registrant is modified. The default value is <strong>false</strong>, which means transfer-out is not restricted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transferOutProhibited(Boolean transferOutProhibited) {
             this.putQueryParameter("TransferOutProhibited", transferOutProhibited);
@@ -509,7 +566,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -518,7 +578,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ZhAddress.
+         * <p>Chinese address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>朝阳区</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -527,7 +590,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ZhCity.
+         * <p>Chinese city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -536,7 +602,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ZhProvince.
+         * <p>Chinese province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -545,7 +614,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Chinese contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -554,7 +626,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactRequest extends Requ
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Chinese registrant organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

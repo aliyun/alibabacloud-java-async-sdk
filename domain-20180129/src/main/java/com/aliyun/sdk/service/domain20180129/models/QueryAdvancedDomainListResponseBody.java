@@ -145,7 +145,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -161,7 +164,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether a next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -169,7 +175,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Paging size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +186,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether a previous page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -185,7 +197,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D200000-C0B9-4CD3-B92A-9B44A000000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>549</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -201,7 +219,10 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>275</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

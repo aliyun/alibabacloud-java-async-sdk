@@ -67,7 +67,10 @@ public class SaveTaskForSubmittingDomainDeleteResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23C9B3C4-9E2C-4405-A88D-BD33E459D140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveTaskForSubmittingDomainDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>The job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

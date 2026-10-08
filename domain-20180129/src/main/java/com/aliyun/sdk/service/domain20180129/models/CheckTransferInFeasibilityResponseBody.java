@@ -106,7 +106,14 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         } 
 
         /**
-         * CanTransfer.
+         * <p>Indicates whether the domain name can be transferred in. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The domain name can be transferred in.</li>
+         * <li><strong>false</strong>: The domain name cannot be transferred in.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder canTransfer(Boolean canTransfer) {
             this.canTransfer = canTransfer;
@@ -114,7 +121,10 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The error code returned when the domain name cannot be transferred in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CheckTransferResult.DomainTransferProhibited</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -122,7 +132,10 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error description returned when the domain name cannot be transferred in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This domain name is in transfer prohibited status, so it cannot be transferred. You can contact your original registrar to change its status.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +143,10 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         }
 
         /**
-         * ProductId.
+         * <p>The product ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2a</p>
          */
         public Builder productId(String productId) {
             this.productId = productId;
@@ -138,7 +154,10 @@ public class CheckTransferInFeasibilityResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC0D6B89-2353-4D64-BD80-6606A7DBD7C1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -101,10 +101,12 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * <p>The language of the error message to return if the request fails. Valid values:</p>
+         * <p>The language of the error message that is returned. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
          * </ul>
          * <p>Default value: <strong>en</strong>.</p>
          * 
@@ -118,7 +120,7 @@ public class QueryDomainByDomainNameRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The IP address of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1</p>

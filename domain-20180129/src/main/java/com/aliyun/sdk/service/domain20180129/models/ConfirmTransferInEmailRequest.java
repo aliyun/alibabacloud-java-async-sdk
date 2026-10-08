@@ -103,6 +103,7 @@ public class ConfirmTransferInEmailRequest extends Request {
         } 
 
         /**
+         * <p>Domain name list</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class ConfirmTransferInEmailRequest extends Request {
         }
 
         /**
+         * <p>Mailbox</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,10 @@ public class ConfirmTransferInEmailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid enumeration values: zh (Chinese); en (English). Default value is en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +141,10 @@ public class ConfirmTransferInEmailRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

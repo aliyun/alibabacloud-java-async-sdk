@@ -67,7 +67,10 @@ public class SaveRegistrantProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * RegistrantProfileId.
+         * <p>Registrant profile ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600000</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.registrantProfileId = registrantProfileId;
@@ -75,7 +78,10 @@ public class SaveRegistrantProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D09B153B-294D-42F1-BB61-F1C72136DFD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

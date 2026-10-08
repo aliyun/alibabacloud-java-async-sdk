@@ -146,7 +146,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         } 
 
         /**
-         * AddTransferLock.
+         * <p>Specifies whether to add a transfer-out restriction. This parameter takes effect only when <strong>ContactType</strong> is <strong>registrant</strong>. It indicates whether to restrict domain transfer-out for 60 days after the registrant is updated. Default value: <strong>false</strong>, which means no transfer-out restriction is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder addTransferLock(Boolean addTransferLock) {
             this.putQueryParameter("AddTransferLock", addTransferLock);
@@ -155,6 +158,13 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
+         * <p>Contact type. Valid values:</p>
+         * <ul>
+         * <li><strong>registrant</strong></li>
+         * <li><strong>admin</strong></li>
+         * <li><strong>billing</strong></li>
+         * <li><strong>tech</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -167,6 +177,7 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
+         * <p>Domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +190,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Domain instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S123456789</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,7 +202,15 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -197,6 +219,7 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
+         * <p>Information template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +232,10 @@ public class SaveSingleTaskForUpdatingContactInfoRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

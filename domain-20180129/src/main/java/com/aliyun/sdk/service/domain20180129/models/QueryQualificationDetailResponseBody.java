@@ -93,7 +93,17 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AuditStatus.
+         * <p>Review Status. Valid values:  </p>
+         * <ul>
+         * <li>0: Information pending completion.  </li>
+         * <li>1, 2, 3, 4: Under review.  </li>
+         * <li>5: Review failed.  </li>
+         * <li>6: Review succeeded.  </li>
+         * <li>7: Review canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.auditStatus = auditStatus;
@@ -109,7 +119,10 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TrackId.
+         * <p>Business trail ID for qualification verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>943a1662898a****0acbdbeca91</p>
          */
         public Builder trackId(String trackId) {
             this.trackId = trackId;

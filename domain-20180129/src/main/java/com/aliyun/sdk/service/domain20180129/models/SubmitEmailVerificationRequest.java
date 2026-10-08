@@ -102,6 +102,7 @@ public class SubmitEmailVerificationRequest extends Request {
         } 
 
         /**
+         * <p>The mailbox that requires verification. Separate multiple mailboxes with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,15 @@ public class SubmitEmailVerificationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default Value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,7 +132,15 @@ public class SubmitEmailVerificationRequest extends Request {
         }
 
         /**
-         * SendIfExist.
+         * <p>Specifies whether to resend the verification email if it already exists. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Resend the verification email.</li>
+         * <li><strong>false</strong>: Do not resend the verification email.</li>
+         * </ul>
+         * <p>Default Value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sendIfExist(Boolean sendIfExist) {
             this.putQueryParameter("SendIfExist", sendIfExist);
@@ -132,7 +149,10 @@ public class SubmitEmailVerificationRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user IP address. You can set it to 127.0.0.1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

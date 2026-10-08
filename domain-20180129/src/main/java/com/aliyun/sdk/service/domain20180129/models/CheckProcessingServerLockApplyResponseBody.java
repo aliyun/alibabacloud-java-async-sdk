@@ -67,7 +67,14 @@ public class CheckProcessingServerLockApplyResponseBody extends TeaModel {
         } 
 
         /**
-         * Exists.
+         * <p>Indicates whether the domain name has a registry lock service request with the <strong>Processing</strong> status at the domain name registry. Valid values:</p>
+         * <ul>
+         * <li>true: exists</li>
+         * <li>false: does not exist</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exists(Boolean exists) {
             this.exists = exists;
@@ -75,7 +82,10 @@ public class CheckProcessingServerLockApplyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

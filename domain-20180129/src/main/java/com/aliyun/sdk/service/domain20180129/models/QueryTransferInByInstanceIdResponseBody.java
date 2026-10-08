@@ -327,7 +327,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         } 
 
         /**
-         * DomainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -335,7 +338,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Email.
+         * <p>Mailbox to which the domain name transfer-in confirmation email was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -343,7 +349,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDate.
+         * <p>The expiration time of the domain name transfer-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-28 00:41:42</p>
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -351,7 +360,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDateLong.
+         * <p>The UNIX timestamp indicating when the transfer-in expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder expirationDateLong(Long expirationDateLong) {
             this.expirationDateLong = expirationDateLong;
@@ -359,7 +371,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>Instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20181T0WLI85212</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -367,7 +382,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ModificationDate.
+         * <p>The update time of the transfer-in information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-28 00:41:42</p>
          */
         public Builder modificationDate(String modificationDate) {
             this.modificationDate = modificationDate;
@@ -375,7 +393,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ModificationDateLong.
+         * <p>The UNIX timestamp indicating when the transfer-in information was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder modificationDateLong(Long modificationDateLong) {
             this.modificationDateLong = modificationDateLong;
@@ -383,7 +404,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * NeedMailCheck.
+         * <p>Indicates whether email verification is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder needMailCheck(Boolean needMailCheck) {
             this.needMailCheck = needMailCheck;
@@ -391,7 +415,16 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ProgressBarType.
+         * <p>Progress bar chart type for the transfer procedure. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Both email verification and naming review are required;  </li>
+         * <li><strong>1</strong>: Email verification is required, but naming review is not;  </li>
+         * <li><strong>2</strong>: Naming review is required, but email verification is not;  </li>
+         * <li><strong>3</strong>: Neither email verification nor naming review is required.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder progressBarType(Integer progressBarType) {
             this.progressBarType = progressBarType;
@@ -399,7 +432,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -407,7 +443,19 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCode.
+         * <p>The error code indicating the reason for transfer failure. Valid values:</p>
+         * <ul>
+         * <li><strong>clientCancelled</strong>: You canceled the domain transfer-in.</li>
+         * <li><strong>clientRejected</strong>: The original registrar rejected the domain transfer-in (or you performed a rejection operation through the original registrar).</li>
+         * <li><strong>serverCancelled</strong>: The domain name registry canceled the transfer.</li>
+         * <li><strong>transferProhibited</strong>: The domain is in a transfer-prohibited status.</li>
+         * <li><strong>transferExpired</strong>: You did not complete the required transfer confirmation within the validity period.</li>
+         * <li><strong>nameVerificationFailed</strong>: The domain naming review did not pass.</li>
+         * <li><strong>transferSubmitted</strong>: Another user has already submitted a transfer request for this domain.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>clientCancelled</p>
          */
         public Builder resultCode(String resultCode) {
             this.resultCode = resultCode;
@@ -415,7 +463,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResultDate.
+         * <p>The time when the transfer succeeded or failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-28 00:41:42</p>
          */
         public Builder resultDate(String resultDate) {
             this.resultDate = resultDate;
@@ -423,7 +474,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResultDateLong.
+         * <p>The UNIX timestamp indicating when the transfer succeeded or failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder resultDateLong(Long resultDateLong) {
             this.resultDateLong = resultDateLong;
@@ -431,7 +485,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResultMsg.
+         * <p>Description of the failure reason when the transfer failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>您取消了此次域名转入</p>
          */
         public Builder resultMsg(String resultMsg) {
             this.resultMsg = resultMsg;
@@ -439,7 +496,19 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * SimpleTransferInStatus.
+         * <p>Transfer status. Valid values:  </p>
+         * <ul>
+         * <li><strong>INIT</strong>: Transfer-in submitted;  </li>
+         * <li><strong>AUTHORIZATION</strong>: Authorization for transfer-in (email verification);  </li>
+         * <li><strong>NAME_VERIFICATION</strong>: Naming review;  </li>
+         * <li><strong>PASSWORD_VERIFICATION</strong>: Transfer password verification;  </li>
+         * <li><strong>PENDING</strong>: Transfer-in in progress;  </li>
+         * <li><strong>SUCCESS</strong>: Transfer-in succeeded;  </li>
+         * <li><strong>FAIL</strong>: Transfer-in failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder simpleTransferInStatus(String simpleTransferInStatus) {
             this.simpleTransferInStatus = simpleTransferInStatus;
@@ -447,7 +516,24 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Detailed domain name transfer-in status. Valid values:  </p>
+         * <ul>
+         * <li><strong>10</strong>: Initial status;  </li>
+         * <li><strong>11</strong>: Email verification token link has been sent;  </li>
+         * <li><strong>19</strong>: Token link has been successfully verified;  </li>
+         * <li><strong>20</strong>: Naming review has been submitted;  </li>
+         * <li><strong>21</strong>: Naming review failed;  </li>
+         * <li><strong>29</strong>: Naming review succeeded;  </li>
+         * <li><strong>31</strong>: Transfer password is incorrect;  </li>
+         * <li><strong>39</strong>: Transfer-in submission succeeded;  </li>
+         * <li><strong>50</strong>: Customer canceled the transfer-in;  </li>
+         * <li><strong>51</strong>: Transfer-in failed;  </li>
+         * <li><strong>52</strong>: Transfer-in expired;  </li>
+         * <li><strong>59</strong>: Transfer-in succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -455,7 +541,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * SubmissionDate.
+         * <p>Transfer request submission time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-28 00:41:42</p>
          */
         public Builder submissionDate(String submissionDate) {
             this.submissionDate = submissionDate;
@@ -463,7 +552,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * SubmissionDateLong.
+         * <p>UNIX timestamp of the transfer request submission time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder submissionDateLong(Long submissionDateLong) {
             this.submissionDateLong = submissionDateLong;
@@ -471,7 +563,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAuthorizationCodeSubmissionDate.
+         * <p>Time when the transfer password was successfully submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-28 00:41:42</p>
          */
         public Builder transferAuthorizationCodeSubmissionDate(String transferAuthorizationCodeSubmissionDate) {
             this.transferAuthorizationCodeSubmissionDate = transferAuthorizationCodeSubmissionDate;
@@ -479,7 +574,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAuthorizationCodeSubmissionDateLong.
+         * <p>UNIX timestamp of the time when the transfer password was successfully submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder transferAuthorizationCodeSubmissionDateLong(Long transferAuthorizationCodeSubmissionDateLong) {
             this.transferAuthorizationCodeSubmissionDateLong = transferAuthorizationCodeSubmissionDateLong;
@@ -487,7 +585,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>User ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -495,7 +596,10 @@ public class QueryTransferInByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * WhoisMailStatus.
+         * <p>Indicates whether the registrant\&quot;s mailbox was scraped from WHOIS. When the domain transfer-in is in the authorization (email verification) phase and this field is <strong>false</strong>, it means the registrant\&quot;s mailbox was not obtained via WHOIS scraping, and manual processing is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder whoisMailStatus(Boolean whoisMailStatus) {
             this.whoisMailStatus = whoisMailStatus;

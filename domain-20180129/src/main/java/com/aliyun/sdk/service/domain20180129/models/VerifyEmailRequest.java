@@ -88,7 +88,15 @@ public class VerifyEmailRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,6 +105,8 @@ public class VerifyEmailRequest extends Request {
         }
 
         /**
+         * <p>Token code included in the email verification link.</p>
+         * <p>After the verification email is sent successfully, you can log on to the mailbox to be verified and view the token code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +119,10 @@ public class VerifyEmailRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to 127.0.0.1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

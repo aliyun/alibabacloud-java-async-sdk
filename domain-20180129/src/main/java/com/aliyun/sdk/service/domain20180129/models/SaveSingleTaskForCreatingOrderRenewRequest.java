@@ -188,7 +188,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         } 
 
         /**
-         * CouponNo.
+         * <p>The coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -197,10 +200,11 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
+         * <p>The current expiration date of the domain name. This value is a Unix timestamp in milliseconds, representing the time elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0000</p>
+         * <p>1522080000000</p>
          */
         public Builder currentExpirationDate(Long currentExpirationDate) {
             this.putQueryParameter("CurrentExpirationDate", currentExpirationDate);
@@ -209,6 +213,7 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
+         * <p>The domain name to renew.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,17 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>The default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -239,7 +254,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>The promotion number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123132</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -248,6 +266,7 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
+         * <p>The renewal period, in years. The value must be an integer from <strong>1</strong> to <strong>10</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +279,16 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: Do not use a coupon.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Use a coupon.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -269,7 +297,16 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Specifies whether to use a promotion. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: Do not use a promotion.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Use a promotion.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -278,7 +315,10 @@ public class SaveSingleTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

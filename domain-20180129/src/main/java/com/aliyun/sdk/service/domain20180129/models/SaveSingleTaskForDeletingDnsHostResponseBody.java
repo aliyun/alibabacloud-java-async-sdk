@@ -67,7 +67,10 @@ public class SaveSingleTaskForDeletingDnsHostResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fc97e44-837a-447d-ac61-ea28d2fe8a38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForDeletingDnsHostResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fc97e44-837a-447d-ac61-ea28d2fexxxx</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

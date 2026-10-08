@@ -54,7 +54,10 @@ public class CancelTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>010E55C9-C64C-4C85-9BB2-7C225ADA6C86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

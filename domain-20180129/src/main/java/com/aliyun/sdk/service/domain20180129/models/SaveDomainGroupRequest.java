@@ -102,7 +102,10 @@ public class SaveDomainGroupRequest extends Request {
         } 
 
         /**
-         * DomainGroupId.
+         * <p>Domain group ID. If this parameter is not provided, a new group is created. If it is provided, the domain group name is updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.putQueryParameter("DomainGroupId", domainGroupId);
@@ -111,7 +114,11 @@ public class SaveDomainGroupRequest extends Request {
         }
 
         /**
+         * <p>Domain Name Group Name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试分组</p>
          */
         public Builder domainGroupName(String domainGroupName) {
             this.putQueryParameter("DomainGroupName", domainGroupName);
@@ -120,7 +127,15 @@ public class SaveDomainGroupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language for error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese;  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +144,10 @@ public class SaveDomainGroupRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

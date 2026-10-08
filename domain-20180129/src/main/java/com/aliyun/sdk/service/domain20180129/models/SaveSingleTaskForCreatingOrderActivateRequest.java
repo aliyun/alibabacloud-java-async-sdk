@@ -59,6 +59,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
     private Boolean enableDomainProxy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpectedPunycode")
+    private String expectedPunycode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -162,6 +166,7 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         this.domainName = builder.domainName;
         this.email = builder.email;
         this.enableDomainProxy = builder.enableDomainProxy;
+        this.expectedPunycode = builder.expectedPunycode;
         this.lang = builder.lang;
         this.permitPremiumActivation = builder.permitPremiumActivation;
         this.postalCode = builder.postalCode;
@@ -268,6 +273,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
      */
     public Boolean getEnableDomainProxy() {
         return this.enableDomainProxy;
+    }
+
+    /**
+     * @return expectedPunycode
+     */
+    public String getExpectedPunycode() {
+        return this.expectedPunycode;
     }
 
     /**
@@ -442,6 +454,7 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         private String domainName; 
         private String email; 
         private Boolean enableDomainProxy; 
+        private String expectedPunycode; 
         private String lang; 
         private Boolean permitPremiumActivation; 
         private String postalCode; 
@@ -482,6 +495,7 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
             this.domainName = request.domainName;
             this.email = request.email;
             this.enableDomainProxy = request.enableDomainProxy;
+            this.expectedPunycode = request.expectedPunycode;
             this.lang = request.lang;
             this.permitPremiumActivation = request.permitPremiumActivation;
             this.postalCode = request.postalCode;
@@ -508,7 +522,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>The detailed address in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>chao yang qu</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -517,7 +537,18 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * AliyunDns.
+         * <p>Specifies whether to use Alibaba Cloud DNS servers. Valid values: <strong>true</strong> and <strong>false</strong>. Default value: <strong>true</strong>.</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you set this parameter to <strong>true</strong>, you do not need to specify the <strong>Dns1</strong> and <strong>Dns2</strong> parameters. Otherwise, the specified <strong>Dns1</strong> and <strong>Dns2</strong> parameters do not take effect.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>If you set this parameter to <strong>false</strong>, you must specify the <strong>Dns1</strong> and <strong>Dns2</strong> parameters.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder aliyunDns(Boolean aliyunDns) {
             this.putQueryParameter("AliyunDns", aliyunDns);
@@ -526,7 +557,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * City.
+         * <p>The city name in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing shi</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -535,7 +572,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>The country code, such as <strong>CN</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -544,7 +587,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * <p>The ID of the voucher. Default value: a string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -553,7 +599,18 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Dns1.
+         * <p>The first custom DNS server.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the <strong>AliyunDns</strong> parameter is set to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that the custom DNS server is correct. Otherwise, the registration may fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ns1.aliyun.com</p>
          */
         public Builder dns1(String dns1) {
             this.putQueryParameter("Dns1", dns1);
@@ -562,7 +619,18 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Dns2.
+         * <p>The second custom DNS server.</p>
+         * <blockquote>
+         * <ul>
+         * <li>This parameter is available and required only when the <strong>AliyunDns</strong> parameter is set to <strong>false</strong>.</li>
+         * </ul>
+         * </blockquote>
+         * <ul>
+         * <li>Make sure that the custom DNS server is correct. Otherwise, the registration may fail.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ns2.aliyun.com</p>
          */
         public Builder dns2(String dns2) {
             this.putQueryParameter("Dns2", dns2);
@@ -571,6 +639,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
+         * <p>The domain name that you want to register.</p>
+         * <blockquote>
+         * <p>When you register a domain name, you must specify the registrant information. If you do not specify the registrant information, the domain name registration fails. You can specify the RegistrantProfileId parameter to use a registrant profile that defines the registrant information.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -583,7 +655,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -592,7 +670,15 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * EnableDomainProxy.
+         * <p>Specifies whether to enable the domain name privacy protection service. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enable.</li>
+         * <li><strong>false</strong>: Do not enable.</li>
+         * </ul>
+         * <p>Default value: <strong>true</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enableDomainProxy(Boolean enableDomainProxy) {
             this.putQueryParameter("EnableDomainProxy", enableDomainProxy);
@@ -601,7 +687,27 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The domain name in Punycode format. This parameter can be left empty.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xn--fiqs8s.com</p>
+         */
+        public Builder expectedPunycode(String expectedPunycode) {
+            this.putQueryParameter("ExpectedPunycode", expectedPunycode);
+            this.expectedPunycode = expectedPunycode;
+            return this;
+        }
+
+        /**
+         * <p>The language of the error message returned by the API operation. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -610,7 +716,15 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * PermitPremiumActivation.
+         * <p>Specifies whether to allow the registration of premium domain names. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Not allowed.</li>
+         * <li><strong>true</strong>: Allowed.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder permitPremiumActivation(Boolean permitPremiumActivation) {
             this.putQueryParameter("PermitPremiumActivation", permitPremiumActivation);
@@ -619,7 +733,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * PostalCode.
+         * <p>The postal code.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -628,7 +748,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>The ID of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -637,7 +760,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>The province name in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -646,7 +775,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * RegistrantName.
+         * <p>The name of the domain name contact in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -655,7 +790,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>The name of the domain name registrant in English.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -664,7 +805,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>The ID of the domain name registrant profile. The profile contains information such as the registrant name, contact name, phone number, and email address. You can use only a real-name verified registrant profile to register a domain name. If you have created a registrant profile, you can call the <a href="~~QueryRegistrantProfiles~~">QueryRegistrantProfiles</a> operation to query the profile ID.</p>
+         * <blockquote>
+         * <p>After you specify this parameter, you do not need to specify the <strong>RegistrantType</strong>, <strong>ZhRegistrantOrganization</strong>, <strong>ZhRegistrantName</strong>, <strong>ZhProvince</strong>, <strong>ZhCity</strong>, <strong>ZhAddress</strong>, <strong>RegistrantOrganization</strong>, <strong>RegistrantName</strong>, <strong>Province</strong>, <strong>City</strong>, <strong>Address</strong>, <strong>PostalCode</strong>, <strong>Country</strong>, <strong>TelArea</strong>, <strong>Telephone</strong>, <strong>TelExt</strong>, or <strong>Email</strong> parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -673,7 +820,17 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * RegistrantType.
+         * <p>The type of the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.</li>
+         * <li><strong>2</strong>: Enterprise or organization.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -682,7 +839,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>None.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-XX</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -691,7 +851,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * SubscriptionDuration.
+         * <p>The subscription duration. Unit: <strong>year</strong>. Default value: <strong>1 year</strong>. Maximum value: <strong>10 years</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder subscriptionDuration(Integer subscriptionDuration) {
             this.putQueryParameter("SubscriptionDuration", subscriptionDuration);
@@ -700,7 +863,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * TelArea.
+         * <p>The country code for the phone number, such as <strong>86</strong> for China.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -709,7 +878,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * TelExt.
+         * <p>The extension number.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -718,7 +893,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * Telephone.
+         * <p>The phone number.</p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -727,7 +908,14 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * TrademarkDomainActivation.
+         * <p>Specifies whether to allow the registration of trademark domain names. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Not allowed.</li>
+         * <li><strong>true</strong>: Allowed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder trademarkDomainActivation(Boolean trademarkDomainActivation) {
             this.putQueryParameter("TrademarkDomainActivation", trademarkDomainActivation);
@@ -736,7 +924,15 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Specifies whether to use a voucher. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Use.</li>
+         * <li><strong>false</strong>: Do not use.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -745,7 +941,15 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Not allowed.</li>
+         * <li><strong>true</strong>: Allowed.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -754,7 +958,10 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -763,7 +970,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ZhAddress.
+         * <p>The detailed address in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>朝阳区</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -772,7 +985,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ZhCity.
+         * <p>The city name in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -781,7 +1000,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ZhProvince.
+         * <p>The province name in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -790,7 +1015,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>The name of the domain name contact in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -799,7 +1030,13 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends Request {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>The name of the domain name registrant in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site. This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not specified. If you do not specify this parameter, the domain name registration fails.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

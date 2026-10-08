@@ -171,7 +171,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         } 
 
         /**
-         * AuditInfo.
+         * <p>Review information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;regType&quot;:1,&quot;registrantName&quot;:&quot;张三&quot;,&quot;telephone&quot;:&quot;1390123****&quot;,&quot;account&quot;:&quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,&quot;reason&quot;:1,&quot;remark&quot;:&quot;账号丢失&quot;}</p>
          */
         public Builder auditInfo(String auditInfo) {
             this.auditInfo = auditInfo;
@@ -179,7 +182,17 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AuditStatus.
+         * <p>Review Status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Pending supplementary information.  </li>
+         * <li><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>: Under review.  </li>
+         * <li><strong>5</strong>: Review failed.  </li>
+         * <li><strong>6</strong>: Review succeeded.  </li>
+         * <li><strong>7</strong>: Review canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.auditStatus = auditStatus;
@@ -187,7 +200,11 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * AuditType.
+         * <p>Review Type. Valid value:  </p>
+         * <p><strong>1</strong>: Offline domain name transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.auditType = auditType;
@@ -195,7 +212,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * BusinessName.
+         * <p>Name of the reviewed business.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com等域名线下转移</p>
          */
         public Builder businessName(String businessName) {
             this.businessName = businessName;
@@ -203,7 +223,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>Record creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581919010100</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -211,7 +234,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -219,7 +245,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>Review record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -227,7 +256,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * <p>Review remark.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>审核通过</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -235,7 +267,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D1L</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +278,10 @@ public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>Record update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1581919010101</p>
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

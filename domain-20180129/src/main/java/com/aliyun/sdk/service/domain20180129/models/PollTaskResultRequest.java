@@ -159,7 +159,10 @@ public class PollTaskResultRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -168,7 +171,11 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>Domain instance ID.</p>
+         * <p>The system automatically generates this after the information template is created successfully. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the information template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20181T0WLI85212</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -177,7 +184,15 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -186,6 +201,7 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
+         * <p>Page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,6 +214,7 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
+         * <p>Page size. Maximum value is <strong>1000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +227,10 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec-test</p>
          */
         public Builder taskNo(String taskNo) {
             this.putQueryParameter("TaskNo", taskNo);
@@ -219,7 +239,14 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
-         * TaskResultStatus.
+         * <p>Task result status. Valid values:</p>
+         * <ul>
+         * <li><strong>2</strong>: Succeeded.</li>
+         * <li><strong>3</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder taskResultStatus(Integer taskResultStatus) {
             this.putQueryParameter("TaskResultStatus", taskResultStatus);
@@ -228,7 +255,10 @@ public class PollTaskResultRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. It can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

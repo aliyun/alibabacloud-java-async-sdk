@@ -67,7 +67,10 @@ public class AcknowledgeTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class AcknowledgeTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Quantity of successfully confirmed items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder result(Integer result) {
             this.result = result;

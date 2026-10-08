@@ -184,7 +184,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         } 
 
         /**
-         * DateOrPeriod.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-01</p>
          */
         public Builder dateOrPeriod(String dateOrPeriod) {
             this.dateOrPeriod = dateOrPeriod;
@@ -192,7 +195,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Dimensions.
+         * <p>Dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20 cm</p>
          */
         public Builder dimensions(String dimensions) {
             this.dimensions = dimensions;
@@ -200,7 +206,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Features.
+         * <p>Art features.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iconicity</p>
          */
         public Builder features(String features) {
             this.features = features;
@@ -208,7 +217,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * InscriptionsAndMarkings.
+         * <p>Inscriptions and markings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>realism</p>
          */
         public Builder inscriptionsAndMarkings(String inscriptionsAndMarkings) {
             this.inscriptionsAndMarkings = inscriptionsAndMarkings;
@@ -216,7 +228,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Maker.
+         * <p>Artist or creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder maker(String maker) {
             this.maker = maker;
@@ -224,7 +239,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * MaterialsAndTechniques.
+         * <p>Materials and techniques.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silk</p>
          */
         public Builder materialsAndTechniques(String materialsAndTechniques) {
             this.materialsAndTechniques = materialsAndTechniques;
@@ -232,7 +250,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>Art categorization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The embroidery</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -240,7 +261,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Reference.
+         * <p>Reference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drawings</p>
          */
         public Builder reference(String reference) {
             this.reference = reference;
@@ -248,7 +272,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>814B2AF0-ED6F-4C13-B41C-8AC0B1023583</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -256,7 +283,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Subject.
+         * <p>Art subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>peace</p>
          */
         public Builder subject(String subject) {
             this.subject = subject;
@@ -264,7 +294,10 @@ public class QueryArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peace and friendship</p>
          */
         public Builder title(String title) {
             this.title = title;

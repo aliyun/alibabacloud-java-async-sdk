@@ -54,7 +54,10 @@ public class SubmitOperationCredentialsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-40EC-8035-4B12FEFX7D98</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

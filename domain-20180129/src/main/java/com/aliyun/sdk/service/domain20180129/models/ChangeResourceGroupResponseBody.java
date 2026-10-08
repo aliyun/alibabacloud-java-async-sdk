@@ -67,7 +67,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID of this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,14 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Operation result. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: The operation succeeded.</li>
+         * <li><strong>false</strong>: The operation failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(String result) {
             this.result = result;

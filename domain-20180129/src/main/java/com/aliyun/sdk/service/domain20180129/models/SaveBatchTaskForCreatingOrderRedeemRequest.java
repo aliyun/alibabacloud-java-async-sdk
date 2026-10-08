@@ -144,7 +144,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         } 
 
         /**
-         * CouponNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -153,7 +156,15 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese;  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -162,6 +173,7 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
+         * <p>List of job details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderRedeemParam(java.util.List<OrderRedeemParam> orderRedeemParam) {
@@ -171,7 +183,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123213123</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -180,7 +195,14 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Is coupon used? Valid values:  </p>
+         * <ul>
+         * <li><strong>false</strong>: No.  </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -189,7 +211,14 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Is coupon used? Valid values:  </p>
+         * <ul>
+         * <li><strong>false</strong>: No.  </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -198,7 +227,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -266,7 +298,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
             } 
 
             /**
-             * CurrentExpirationDate.
+             * <p>Current expiration date of the domain name, represented as the number of milliseconds from 00:00 UTC on January 1, 1970, to the domain’s current expiration date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>000000</p>
              */
             public Builder currentExpirationDate(Long currentExpirationDate) {
                 this.currentExpirationDate = currentExpirationDate;
@@ -274,7 +309,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name. If multiple domain names are involved, pass a domain name list. You can obtain the domain name list by using the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

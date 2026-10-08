@@ -67,7 +67,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactResponseBody extends
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>464AF466-CA8E-43A8-B61D-test</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveBatchTaskForUpdatingContactInfoByNewContactResponseBody extends
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65de2165-ca09-491f-9fe0-test</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

@@ -159,7 +159,10 @@ public class QueryTransferInListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name, which supports prefix matching (fuzzy query).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -168,7 +171,15 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -177,6 +188,7 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
+         * <p>The page number of the domain name list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +201,7 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
+         * <p>The page size for paging the domain name list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -201,7 +214,19 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
-         * SimpleTransferInStatus.
+         * <p>Transfer status. Valid values:  </p>
+         * <ul>
+         * <li><strong>INIT</strong>: Submit transfer-in.  </li>
+         * <li><strong>AUTHORIZATION</strong>: Authorize transfer-in (email verification).  </li>
+         * <li><strong>NAME_VERIFICATION</strong>: Name review.  </li>
+         * <li><strong>PASSWORD_VERIFICATION</strong>: Transfer password verification.  </li>
+         * <li><strong>PENDING</strong>: Transfer-in in progress.  </li>
+         * <li><strong>SUCCESS</strong>: Transfer-in succeeded.  </li>
+         * <li><strong>FAIL</strong>: Transfer-in failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>INIT</p>
          */
         public Builder simpleTransferInStatus(String simpleTransferInStatus) {
             this.putQueryParameter("SimpleTransferInStatus", simpleTransferInStatus);
@@ -210,7 +235,10 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
-         * SubmissionEndDate.
+         * <p>End time for submitting the domain name list for transfer-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder submissionEndDate(Long submissionEndDate) {
             this.putQueryParameter("SubmissionEndDate", submissionEndDate);
@@ -219,7 +247,10 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
-         * SubmissionStartDate.
+         * <p>The start time for submitting the domain name list for transfer-in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1514428524669</p>
          */
         public Builder submissionStartDate(Long submissionStartDate) {
             this.putQueryParameter("SubmissionStartDate", submissionStartDate);
@@ -228,7 +259,10 @@ public class QueryTransferInListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

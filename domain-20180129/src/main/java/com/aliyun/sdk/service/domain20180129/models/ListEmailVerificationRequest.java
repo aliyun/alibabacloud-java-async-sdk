@@ -157,7 +157,10 @@ public class ListEmailVerificationRequest extends Request {
         } 
 
         /**
-         * BeginCreateTime.
+         * <p>The start time for querying email verification creation, represented as the number of milliseconds since 00:00 on January 1, 1970, UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder beginCreateTime(Long beginCreateTime) {
             this.putQueryParameter("BeginCreateTime", beginCreateTime);
@@ -166,7 +169,10 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>The email address to query. You can upload only one email address at a time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -175,7 +181,10 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * <p>The end time for querying the creation of email verification, calculated as the number of milliseconds since 00:00 UTC on January 1, 1970.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putQueryParameter("EndCreateTime", endCreateTime);
@@ -184,7 +193,15 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -193,7 +210,10 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number for paging through the domain list. Default value is <strong>1</strong>. You can set this parameter based on your needs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -202,7 +222,10 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The page size for paging through the domain list. Default value is <strong>500</strong>, and the maximum value is <strong>5000</strong>. You can set this parameter based on your needs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +234,10 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -220,7 +246,14 @@ public class ListEmailVerificationRequest extends Request {
         }
 
         /**
-         * VerificationStatus.
+         * <p>Email verification status. Valid values:  </p>
+         * <ul>
+         * <li><strong>0</strong>: Waiting for verification.  </li>
+         * <li><strong>1</strong>: Verification succeeded.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder verificationStatus(Integer verificationStatus) {
             this.putQueryParameter("VerificationStatus", verificationStatus);

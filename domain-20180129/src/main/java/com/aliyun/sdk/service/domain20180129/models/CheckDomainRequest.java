@@ -116,6 +116,7 @@ public class CheckDomainRequest extends Request {
         } 
 
         /**
+         * <p>Domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +129,16 @@ public class CheckDomainRequest extends Request {
         }
 
         /**
-         * FeeCommand.
+         * <p>Operation command. Valid values:  </p>
+         * <ul>
+         * <li><strong>create</strong>: Purchase.  </li>
+         * <li><strong>renew</strong>: Renewal.  </li>
+         * <li><strong>transfer</strong>: Transfer-in.  </li>
+         * <li><strong>restore</strong>: Redeem.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>create</p>
          */
         public Builder feeCommand(String feeCommand) {
             this.putQueryParameter("FeeCommand", feeCommand);
@@ -137,7 +147,10 @@ public class CheckDomainRequest extends Request {
         }
 
         /**
-         * FeeCurrency.
+         * <p>Currency type. Valid value: <strong>USD</strong> (US Dollar).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USD</p>
          */
         public Builder feeCurrency(String feeCurrency) {
             this.putQueryParameter("FeeCurrency", feeCurrency);
@@ -146,7 +159,10 @@ public class CheckDomainRequest extends Request {
         }
 
         /**
-         * FeePeriod.
+         * <p>Registration period in years. Unit: <strong>year</strong>. Valid range: <strong>1</strong> to <strong>10</strong> years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder feePeriod(Integer feePeriod) {
             this.putQueryParameter("FeePeriod", feePeriod);
@@ -155,7 +171,15 @@ public class CheckDomainRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

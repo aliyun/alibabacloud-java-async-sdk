@@ -74,7 +74,12 @@ public class DeleteContactTemplatesRequest extends Request {
         } 
 
         /**
+         * <p>The IDs of the contact templates to delete. Separate multiple values with commas (,).</p>
+         * <p>The system automatically generates an ID upon successful creation of a contact template. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the template IDs.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123,45,67</p>
          */
         public Builder registrantProfileIds(String registrantProfileIds) {
             this.putQueryParameter("RegistrantProfileIds", registrantProfileIds);
@@ -83,7 +88,10 @@ public class DeleteContactTemplatesRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

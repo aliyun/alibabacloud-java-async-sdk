@@ -67,7 +67,7 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The response object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -219,7 +222,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             } 
 
             /**
-             * BizId.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T2023122019031400****</p>
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -227,7 +233,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715134456000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -235,7 +244,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jslxv.cn</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -243,7 +255,13 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * <p>The order type. Valid values:</p>
+             * <ul>
+             * <li>11: international fixed-price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>11</p>
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -251,7 +269,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15000</p>
              */
             public Builder price(Long price) {
                 this.price = price;
@@ -259,7 +280,16 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The order status. Valid values:</p>
+             * <ul>
+             * <li>5: Transaction closed.</li>
+             * <li>6: Paid.</li>
+             * <li>7: Pending production.</li>
+             * <li>9: Transaction completed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>6</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -267,7 +297,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1715134456000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -275,7 +308,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>545684317770****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -381,7 +417,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             } 
 
             /**
-             * CurrentPageNum.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPageNum(Integer currentPageNum) {
                 this.currentPageNum = currentPageNum;
@@ -389,7 +428,7 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The order list data.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -397,7 +436,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -405,7 +447,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItemNum.
+             * <p>The total number of entries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>294</p>
              */
             public Builder totalItemNum(Integer totalItemNum) {
                 this.totalItemNum = totalItemNum;
@@ -413,7 +458,10 @@ public class QueryIntlFixedPriceOrderListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNum.
+             * <p>The total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder totalPageNum(Integer totalPageNum) {
                 this.totalPageNum = totalPageNum;

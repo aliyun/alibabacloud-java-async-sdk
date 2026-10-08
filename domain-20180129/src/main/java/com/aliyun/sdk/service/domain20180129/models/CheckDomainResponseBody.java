@@ -145,7 +145,19 @@ public class CheckDomainResponseBody extends TeaModel {
         } 
 
         /**
-         * Avail.
+         * <p>Indicates whether the domain name can be registered. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Registrable.  </li>
+         * <li><strong>3</strong>: Pre-registration.  </li>
+         * <li><strong>4</strong>: Deletion reservation available.  </li>
+         * <li><strong>0</strong>: Not registrable.  </li>
+         * <li><strong>-1</strong>: Abnormal.  </li>
+         * <li><strong>-2</strong>: Registration paused.  </li>
+         * <li><strong>-3</strong>: Blacklisted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder avail(String avail) {
             this.avail = avail;
@@ -153,7 +165,10 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The queried domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test**.xin</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -161,7 +176,14 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCheck.
+         * <p>Indicates whether dynamic pricing is enabled. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.  </li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder dynamicCheck(Boolean dynamicCheck) {
             this.dynamicCheck = dynamicCheck;
@@ -169,7 +191,14 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Premium.
+         * <p>Indicates whether the domain name is a premium term. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.  </li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder premium(String premium) {
             this.premium = premium;
@@ -177,7 +206,10 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Price.
+         * <p>Registration price for premium domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1286</p>
          */
         public Builder price(Long price) {
             this.price = price;
@@ -185,7 +217,13 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason for non-registrability returned by the domain name registry.  </p>
+         * <blockquote>
+         * <p>The reason may vary depending on the domain name registry.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>In use</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -193,7 +231,10 @@ public class CheckDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA7A4FD4-EB9A-4A20-BB0C-9AEB15634DC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

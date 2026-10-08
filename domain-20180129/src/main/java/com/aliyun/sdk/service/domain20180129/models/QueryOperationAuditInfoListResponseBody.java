@@ -145,7 +145,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -153,7 +156,7 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Review data.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -161,7 +164,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether there is a next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -169,7 +175,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +186,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether a previous page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -185,7 +197,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-40EC-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>Total number of records.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>199</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -201,7 +219,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -358,7 +379,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             } 
 
             /**
-             * AuditInfo.
+             * <p>Information pending review.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;regType&quot;:1,&quot;registrantName&quot;:&quot;张三&quot;,&quot;telephone&quot;:&quot;1390123****&quot;,&quot;account&quot;:&quot;<a href="mailto:username@example.com">username@example.com</a>&quot;,&quot;reason&quot;:1,&quot;remark&quot;:&quot;账号丢失&quot;}</p>
              */
             public Builder auditInfo(String auditInfo) {
                 this.auditInfo = auditInfo;
@@ -366,7 +390,17 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * AuditStatus.
+             * <p>Review status. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: Information to be completed.</li>
+             * <li><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>: Under review.</li>
+             * <li><strong>5</strong>: Review failed.</li>
+             * <li><strong>6</strong>: Review succeeded.</li>
+             * <li><strong>7</strong>: Review canceled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auditStatus(Integer auditStatus) {
                 this.auditStatus = auditStatus;
@@ -374,7 +408,11 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * AuditType.
+             * <p>Review type. Valid value:</p>
+             * <p><strong>1</strong>: Offline domain name transfer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder auditType(Integer auditType) {
                 this.auditType = auditType;
@@ -382,7 +420,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessName.
+             * <p>Name of the reviewed business.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com等域名线下转移</p>
              */
             public Builder businessName(String businessName) {
                 this.businessName = businessName;
@@ -390,7 +431,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Record creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581919010101</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +442,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com,aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -406,7 +453,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Review record ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -414,7 +464,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>Review remark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>审核中</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -422,7 +475,10 @@ public class QueryOperationAuditInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>Record update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1581919010101</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -93,7 +93,14 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
         /**
-         * Exist.
+         * <p>Indicates whether the domain name contains sensitive words. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: The domain name contains sensitive words.  </li>
+         * <li><strong>false</strong>: The domain name does not contain sensitive words.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exist(Boolean exist) {
             this.exist = exist;
@@ -101,7 +108,10 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * Keyword.
+         * <p>The domain name keyword that was passed in.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx**</p>
          */
         public Builder keyword(String keyword) {
             this.keyword = keyword;
@@ -117,7 +127,10 @@ public class FuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D15F91FD-0B34-4E48-8CBF-EFA5D2A31586</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

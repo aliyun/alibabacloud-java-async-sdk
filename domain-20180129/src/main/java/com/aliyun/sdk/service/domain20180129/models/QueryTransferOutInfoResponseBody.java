@@ -145,7 +145,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Email.
+         * <p>Mailbox to which the transfer password was sent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -153,7 +156,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDate.
+         * <p>Expiration time of the obtained transfer password.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-04-13 19:57:56</p>
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -161,7 +167,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PendingRequestDate.
+         * <p>Time when the transfer-out request was received from the domain name registry.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-04-13 19:57:56</p>
          */
         public Builder pendingRequestDate(String pendingRequestDate) {
             this.pendingRequestDate = pendingRequestDate;
@@ -169,7 +178,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BBEC5A50-DFDF-482E-8343-B4EB0105E055</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +189,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ResultCode.
+         * <p>Encoding of the transfer-out failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>clientRejected</p>
          */
         public Builder resultCode(String resultCode) {
             this.resultCode = resultCode;
@@ -185,7 +200,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ResultMsg.
+         * <p>Description of the transfer-out failure reason.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Transfer out rejected</p>
          */
         public Builder resultMsg(String resultMsg) {
             this.resultMsg = resultMsg;
@@ -193,7 +211,18 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Transfer-out status. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Phone authentication required;  </li>
+         * <li><strong>2</strong>: Mailbox authentication required;  </li>
+         * <li><strong>3</strong>: Transfer password already obtained;  </li>
+         * <li><strong>4</strong>: Transfer-out in progress (transfer request received from the domain name registry);  </li>
+         * <li><strong>5</strong>: Transfer-out succeeded;  </li>
+         * <li><strong>8</strong>: Transfer-out failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -201,7 +230,10 @@ public class QueryTransferOutInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TransferAuthorizationCodeSendDate.
+         * <p>Time when the transfer password was obtained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-04-13 19:57:56</p>
          */
         public Builder transferAuthorizationCodeSendDate(String transferAuthorizationCodeSendDate) {
             this.transferAuthorizationCodeSendDate = transferAuthorizationCodeSendDate;

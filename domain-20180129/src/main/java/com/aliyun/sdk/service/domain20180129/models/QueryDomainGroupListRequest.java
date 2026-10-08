@@ -129,7 +129,10 @@ public class QueryDomainGroupListRequest extends Request {
         } 
 
         /**
-         * DomainGroupName.
+         * <p>The user-defined domain group name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>默认分组</p>
          */
         public Builder domainGroupName(String domainGroupName) {
             this.putQueryParameter("DomainGroupName", domainGroupName);
@@ -138,7 +141,17 @@ public class QueryDomainGroupListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of error messages in the response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * <p>The default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,7 +178,17 @@ public class QueryDomainGroupListRequest extends Request {
         }
 
         /**
-         * ShowDeletingGroup.
+         * <p>Specifies whether to show domain groups that are being deleted. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong></p>
+         * </li>
+         * <li><p><strong>true</strong></p>
+         * </li>
+         * </ul>
+         * <p>The default value is <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder showDeletingGroup(Boolean showDeletingGroup) {
             this.putQueryParameter("ShowDeletingGroup", showDeletingGroup);
@@ -174,7 +197,10 @@ public class QueryDomainGroupListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The client IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

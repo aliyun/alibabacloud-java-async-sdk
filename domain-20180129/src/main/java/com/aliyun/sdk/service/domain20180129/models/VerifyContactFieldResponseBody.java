@@ -54,7 +54,10 @@ public class VerifyContactFieldResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABAC3BAC-FCFA-4DAE-B47C-FA4105CB07C6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

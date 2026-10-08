@@ -67,10 +67,7 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +75,7 @@ public class SaveBatchTaskForGenerateDomainCertificateResponseBody extends TeaMo
         }
 
         /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8b1cd755-4928-4b02-adee-e5d41d7b1939</p>
+         * TaskNo.
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

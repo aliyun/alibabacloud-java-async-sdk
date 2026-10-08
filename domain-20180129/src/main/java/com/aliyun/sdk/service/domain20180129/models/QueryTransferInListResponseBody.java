@@ -145,7 +145,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>The page number of the current domain name list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -161,7 +164,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether a next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -169,7 +175,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The paging size of the domain name list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +186,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether a previous page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -185,7 +197,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -201,7 +219,10 @@ public class QueryTransferInListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

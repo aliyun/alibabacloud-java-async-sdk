@@ -54,7 +54,10 @@ public class SetDefaultRegistrantProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D73432C-7600-4779-ACBB-C3B5CA145D32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

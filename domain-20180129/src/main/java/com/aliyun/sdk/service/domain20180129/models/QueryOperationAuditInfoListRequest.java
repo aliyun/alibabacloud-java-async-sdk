@@ -129,7 +129,17 @@ public class QueryOperationAuditInfoListRequest extends Request {
         } 
 
         /**
-         * AuditStatus.
+         * <p>Review status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Information pending completion.</li>
+         * <li><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong>: Under review.</li>
+         * <li><strong>5</strong>: Review failed.</li>
+         * <li><strong>6</strong>: Review succeeded.</li>
+         * <li><strong>7</strong>: Review canceled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditStatus(Integer auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
@@ -138,7 +148,11 @@ public class QueryOperationAuditInfoListRequest extends Request {
         }
 
         /**
-         * AuditType.
+         * <p>Review type. Valid value:</p>
+         * <p><strong>1</strong>: Offline domain name transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);
@@ -147,7 +161,10 @@ public class QueryOperationAuditInfoListRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -156,7 +173,15 @@ public class QueryOperationAuditInfoListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,7 +190,10 @@ public class QueryOperationAuditInfoListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -174,7 +202,10 @@ public class QueryOperationAuditInfoListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of records per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -188,6 +188,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         } 
 
         /**
+         * <p>Domain name transfer-in password.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +201,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -209,6 +213,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
+         * <p>Domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -221,7 +226,15 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language for error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese;</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -230,7 +243,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * PermitPremiumTransfer.
+         * <p>Is transfer-in of premium domain names allowed. Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder permitPremiumTransfer(Boolean permitPremiumTransfer) {
             this.putQueryParameter("PermitPremiumTransfer", permitPremiumTransfer);
@@ -239,7 +255,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -248,6 +267,7 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
+         * <p>ID of the domain name registrant profile that has passed identity verification.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +280,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Is a coupon used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -269,7 +292,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Is a coupon used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -278,7 +304,10 @@ public class SaveSingleTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

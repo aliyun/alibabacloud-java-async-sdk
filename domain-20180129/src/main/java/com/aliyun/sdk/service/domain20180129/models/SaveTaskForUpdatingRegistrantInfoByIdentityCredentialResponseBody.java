@@ -67,7 +67,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponseBody e
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDC28FEC-6BE0-4583-95BC-test</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialResponseBody e
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>880f1579-be51-4dd3-a69d-test</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

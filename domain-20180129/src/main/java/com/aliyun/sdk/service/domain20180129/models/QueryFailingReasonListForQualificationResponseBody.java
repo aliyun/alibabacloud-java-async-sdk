@@ -67,7 +67,7 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
         } 
 
         /**
-         * Data.
+         * <p>List of domain name qualification verification failures.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
             } 
 
             /**
-             * Date.
+             * <p>Review date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-03-17 11:08:02</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -149,7 +155,10 @@ public class QueryFailingReasonListForQualificationResponseBody extends TeaModel
             }
 
             /**
-             * FailReason.
+             * <p>Reason for domain name qualification verification failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>证件审核不通过</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;

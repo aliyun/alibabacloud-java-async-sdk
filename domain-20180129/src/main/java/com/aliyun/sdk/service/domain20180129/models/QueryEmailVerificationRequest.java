@@ -88,6 +88,7 @@ public class QueryEmailVerificationRequest extends Request {
         } 
 
         /**
+         * <p>The Email to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,15 @@ public class QueryEmailVerificationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default Value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +118,10 @@ public class QueryEmailVerificationRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

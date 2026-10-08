@@ -67,7 +67,10 @@ public class QueryDomainSuffixResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D1C9DE44-1D7F-4F66-9653-00000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

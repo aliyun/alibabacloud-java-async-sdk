@@ -127,7 +127,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The TMCH notification ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>586608000000</p>
          */
         public Builder id(Long id) {
             this.id = id;
@@ -135,7 +138,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * Label.
+         * <p>The trademark label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>noted</p>
          */
         public Builder label(String label) {
             this.label = label;
@@ -143,7 +149,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * NotAfter.
+         * <p>The end time of the trademark notice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-15T00:00:00.0Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -151,7 +160,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * NotBefore.
+         * <p>The start time of the trademark notice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-13T00:00:00.0Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -159,7 +171,10 @@ public class LookupTmchNoticeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>A unique identifier for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01C10C8E-0468-468C-BCD9-E709BDD0AE8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

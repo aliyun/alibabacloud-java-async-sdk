@@ -75,7 +75,10 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4EA05A10-D4BC-47EA-AD9E-370A46BB4FB9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

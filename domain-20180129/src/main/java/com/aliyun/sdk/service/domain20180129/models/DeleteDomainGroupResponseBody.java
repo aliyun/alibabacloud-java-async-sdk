@@ -54,7 +54,10 @@ public class DeleteDomainGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

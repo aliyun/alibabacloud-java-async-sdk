@@ -73,7 +73,15 @@ public class QueryDomainAdminDivisionRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +90,10 @@ public class QueryDomainAdminDivisionRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

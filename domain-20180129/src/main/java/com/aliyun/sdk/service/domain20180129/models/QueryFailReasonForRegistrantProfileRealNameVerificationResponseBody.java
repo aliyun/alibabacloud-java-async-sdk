@@ -67,7 +67,7 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
         } 
 
         /**
-         * Data.
+         * <p>The List of reasons why identity verification failed the Review.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>548C407F-AEA2-4B5D-90DF-EC11EBB1D76F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
             } 
 
             /**
-             * Date.
+             * <p>The Review Date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-03-17 11:08:02</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -149,7 +155,11 @@ public class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBody
             }
 
             /**
-             * FailReason.
+             * <p>The reason why identity verification failed the Review.</p>
+             * <p>For Solutions after identity verification fails the Review, see <a href="https://help.aliyun.com/document_detail/35885.html">Reasons for identity verification failure and Solutions</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>证件电子信息核验不合格</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;

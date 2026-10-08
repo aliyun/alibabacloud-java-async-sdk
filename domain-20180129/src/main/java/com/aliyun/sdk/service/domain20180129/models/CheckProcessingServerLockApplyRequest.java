@@ -102,6 +102,7 @@ public class CheckProcessingServerLockApplyRequest extends Request {
         } 
 
         /**
+         * <p>The domain name to be checked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,10 @@ public class CheckProcessingServerLockApplyRequest extends Request {
         }
 
         /**
-         * FeePeriod.
+         * <p>Registration period in years. Unit: <strong>year(s)</strong>. Valid range: <strong>1 to 10</strong> years.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder feePeriod(Integer feePeriod) {
             this.putQueryParameter("FeePeriod", feePeriod);
@@ -123,7 +127,15 @@ public class CheckProcessingServerLockApplyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -132,7 +144,10 @@ public class CheckProcessingServerLockApplyRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

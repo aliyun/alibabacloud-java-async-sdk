@@ -67,7 +67,10 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponseBod
         } 
 
         /**
-         * RequestId.
+         * <p>A unique ID for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EDC28FEC-6BE0-4583-95BC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveBatchTaskForUpdatingContactInfoByRegistrantProfileIdResponseBod
         }
 
         /**
-         * TaskNo.
+         * <p>The ID of the asynchronous task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>880f1579-be51-4dd3-a69d</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

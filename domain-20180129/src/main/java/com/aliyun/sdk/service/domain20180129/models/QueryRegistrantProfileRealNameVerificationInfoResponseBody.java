@@ -145,7 +145,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         } 
 
         /**
-         * IdentityCredential.
+         * <p>The Base64-encoded image of the identity verification documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVzdA==</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.identityCredential = identityCredential;
@@ -153,7 +156,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>The certificate number used for identity verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4111111111111110**</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.identityCredentialNo = identityCredentialNo;
@@ -161,7 +167,21 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>The type of certificate used for identity verification. Valid values:  </p>
+         * <ul>
+         * <li><strong>SFZ</strong>: Identity card.  </li>
+         * <li><strong>HZ</strong>: Passport.  </li>
+         * <li><strong>YYZZ</strong>: Business license.  </li>
+         * <li><strong>ORG</strong>: Organization code certificate.  </li>
+         * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.  </li>
+         * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more certificate types, see <a href="https://help.aliyun.com/document_detail/72209.html">Certificate Types Supported for Identity Verification</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.identityCredentialType = identityCredentialType;
@@ -169,7 +189,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * IdentityCredentialUrl.
+         * <p>The download URL of the identity verification image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg">http://test.oss-cn-hangzhou.aliyuncs.com/20170522/1219541161213057_070445190.jpg</a></p>
          */
         public Builder identityCredentialUrl(String identityCredentialUrl) {
             this.identityCredentialUrl = identityCredentialUrl;
@@ -177,7 +200,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * ModificationDate.
+         * <p>The update time of the identity verification documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-05-22 19:04:49</p>
          */
         public Builder modificationDate(String modificationDate) {
             this.modificationDate = modificationDate;
@@ -185,7 +211,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>The ID of the queried information template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.registrantProfileId = registrantProfileId;
@@ -193,7 +222,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D73432C-7600-4779-ACBB-C3B5CA145D32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +233,10 @@ public class QueryRegistrantProfileRealNameVerificationInfoResponseBody extends 
         }
 
         /**
-         * SubmissionDate.
+         * <p>The submission time of the identity verification documents.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-05-22 19:04:49</p>
          */
         public Builder submissionDate(String submissionDate) {
             this.submissionDate = submissionDate;

@@ -88,7 +88,6 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         } 
 
         /**
-         * <p>The domain names.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainNames(java.util.List<String> domainNames) {
@@ -99,15 +98,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>The language of the error message to return if the request fails. Valid values:</p>
-         * <ul>
-         * <li><strong>zh</strong>: Chinese.</li>
-         * <li><strong>en</strong>: English.</li>
-         * </ul>
-         * <p>Default value: <strong>en</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>en</p>
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -116,10 +107,7 @@ public class SaveBatchTaskForGenerateDomainCertificateRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the client.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>127.0.0.1</p>
+         * UserClientIp.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

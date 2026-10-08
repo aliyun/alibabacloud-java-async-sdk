@@ -54,7 +54,10 @@ public class DeleteRegistrantProfileResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C50E41A0-09F1-4491-8DB8-AF55BD2D0CC8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

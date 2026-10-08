@@ -67,7 +67,10 @@ public class SaveSingleTaskForCancelingTransferInResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForCancelingTransferInResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>Job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

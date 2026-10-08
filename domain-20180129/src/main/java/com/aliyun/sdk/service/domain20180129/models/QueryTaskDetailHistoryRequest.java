@@ -159,7 +159,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -168,7 +171,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * DomainNameCursor.
+         * <p>Domain name cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainNameCursor(String domainNameCursor) {
             this.putQueryParameter("DomainNameCursor", domainNameCursor);
@@ -177,7 +183,15 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -186,6 +200,7 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
+         * <p>Page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,7 +213,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * TaskDetailNoCursor.
+         * <p>Task detail cursor.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75addb07-28a3-450e-b5ec</p>
          */
         public Builder taskDetailNoCursor(String taskDetailNoCursor) {
             this.putQueryParameter("TaskDetailNoCursor", taskDetailNoCursor);
@@ -207,6 +225,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
+         * <p>Job number.</p>
+         * <blockquote>
+         * <p>You can obtain the job number by calling the <a href="https://help.aliyun.com/document_detail/67709.html">QueryTaskList</a> API.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -219,7 +241,16 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * <p>Job status. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Waiting to execute.</li>
+         * <li><strong>1</strong>: Executing.</li>
+         * <li><strong>2</strong>: Succeeded.</li>
+         * <li><strong>3</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder taskStatus(Integer taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -228,7 +259,10 @@ public class QueryTaskDetailHistoryRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

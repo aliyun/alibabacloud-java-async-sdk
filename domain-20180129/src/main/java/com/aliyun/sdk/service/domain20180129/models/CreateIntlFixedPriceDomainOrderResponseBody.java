@@ -67,7 +67,7 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E879DC07-38EE-4408-9F33-73B30CD965CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -175,7 +181,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
             }
 
             /**
-             * OrderNo.
+             * <p>The order number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>31199295f2074ce895645d386cb2****</p>
              */
             public Builder orderNo(String orderNo) {
                 this.orderNo = orderNo;
@@ -183,7 +192,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PayPrice.
+             * <p>The transaction price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00</p>
              */
             public Builder payPrice(Long payPrice) {
                 this.payPrice = payPrice;
@@ -191,7 +203,10 @@ public class CreateIntlFixedPriceDomainOrderResponseBody extends TeaModel {
             }
 
             /**
-             * PayUrl.
+             * <p>The payment URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>https://</p>
              */
             public Builder payUrl(String payUrl) {
                 this.payUrl = payUrl;

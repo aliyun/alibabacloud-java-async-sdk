@@ -54,7 +54,10 @@ public class VerifyEmailResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FD3AD289-83EE-4E32-803A-CF1B3A8EEE64</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

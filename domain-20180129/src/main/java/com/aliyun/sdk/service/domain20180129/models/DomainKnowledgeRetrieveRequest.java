@@ -88,7 +88,7 @@ public class DomainKnowledgeRetrieveRequest extends Request {
         } 
 
         /**
-         * <p>The number of retrieve results that need to be returned.</p>
+         * <p>Le nombre de résultats à renvoyer.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -100,11 +100,11 @@ public class DomainKnowledgeRetrieveRequest extends Request {
         }
 
         /**
-         * <p>Keywords to be retrieved.</p>
+         * <p>Les mots-clés à récupérer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>how to renew</p>
+         * <p>comment renouveler</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -113,7 +113,7 @@ public class DomainKnowledgeRetrieveRequest extends Request {
         }
 
         /**
-         * <p>Search knowledge base sites, including domestic cn, international intl, and all.</p>
+         * <p>Les sites de la base de connaissances à interroger, y compris cn pour le national, intl pour l\&quot;international et all pour tous.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>

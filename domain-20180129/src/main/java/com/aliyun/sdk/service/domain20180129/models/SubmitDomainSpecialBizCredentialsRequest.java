@@ -125,7 +125,7 @@ public class SubmitDomainSpecialBizCredentialsRequest extends Request {
          * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;addTransferLock&quot;:true}</p>
+         * <p>{\&quot;addTransferLock\&quot;:true}</p>
          */
         public Builder extend(String extend) {
             this.putBodyParameter("Extend", extend);

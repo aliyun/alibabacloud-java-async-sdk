@@ -75,7 +75,10 @@ public class QueryDomainGroupListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80011ABC-F573-4795-B0E8-377BFBBA3422</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

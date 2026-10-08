@@ -118,6 +118,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         } 
 
         /**
+         * <p>DNS name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
+         * <p>Domain instance ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> API.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,6 +144,7 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
+         * <p>List of IP addresses. You can specify up to 13 IP addresses. When specifying multiple IP addresses, pass them as a <strong>list</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +157,15 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese  </li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -163,7 +174,10 @@ public class SaveSingleTaskForCreatingDnsHostRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

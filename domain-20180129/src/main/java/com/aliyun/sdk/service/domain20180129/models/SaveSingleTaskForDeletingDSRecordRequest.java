@@ -103,6 +103,7 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends Request {
         } 
 
         /**
+         * <p>Domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +116,7 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends Request {
         }
 
         /**
+         * <p>Key tag, used to identify DNSSEC records. It is an integer value less than 65536.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +129,15 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +146,10 @@ public class SaveSingleTaskForDeletingDSRecordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

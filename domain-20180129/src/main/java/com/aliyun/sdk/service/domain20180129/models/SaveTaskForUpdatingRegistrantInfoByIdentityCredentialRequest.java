@@ -389,7 +389,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         } 
 
         /**
-         * Address.
+         * <p>Specific address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>chao yang qu</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -398,7 +401,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * City.
+         * <p>City.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing shi</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -407,7 +413,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Country.
+         * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -416,6 +425,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>List of domain names.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -428,7 +438,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Email.
+         * <p>Mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -437,6 +450,11 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Base64-encoded image of the identity verification document. Image requirements:</p>
+         * <ul>
+         * <li>Format must be <strong>jpg</strong> or <strong>bmp</strong>.</li>
+         * <li>Original image size must be between <strong>55 KB and 1 MB</strong>.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -449,6 +467,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Certificate number used for identity verification, such as an ID card number or Unified Social Credit Code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -461,6 +480,19 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Identity verification certificate type. Valid values:</p>
+         * <ul>
+         * <li><strong>SFZ</strong>: Identity card.</li>
+         * <li><strong>HZ</strong>: Passport.</li>
+         * <li><strong>YYZZ</strong>: Business license.</li>
+         * <li><strong>ORG</strong>: Organization code certificate.</li>
+         * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.</li>
+         * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+         * </ul>
+         * <p>If your certificate type is not listed above, see <a href="https://help.aliyun.com/document_detail/72209.html">Supported identity verification certificate types</a> for valid values of other certificate types.</p>
+         * <blockquote>
+         * <p>You must select the certificate type that matches the document you are submitting.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -473,7 +505,15 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -482,7 +522,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -491,7 +534,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * Province.
+         * <p>Province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -500,7 +546,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * RegistrantName.
+         * <p>Contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -509,7 +558,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -518,6 +570,11 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Domain registrant type. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.</li>
+         * <li><strong>2</strong>: Organization.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -530,6 +587,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Telephone country code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -542,7 +600,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * TelExt.
+         * <p>Telephone extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -551,6 +612,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Telephone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -563,6 +625,7 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
+         * <p>Whether to add a transfer-out prohibition restriction. This indicates whether modifying the registrant imposes a 60-day restriction on domain name transfer-out. Default value: <strong>false</strong>, which means transfer-out is not restricted.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -575,7 +638,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -584,7 +650,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * ZhAddress.
+         * <p>Chinese address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>朝阳区</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -593,7 +662,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * ZhCity.
+         * <p>Chinese city name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -602,7 +674,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * ZhProvince.
+         * <p>Chinese province name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -611,7 +686,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Chinese contact name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -620,7 +698,10 @@ public class SaveTaskForUpdatingRegistrantInfoByIdentityCredentialRequest extend
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Chinese registrant organization name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

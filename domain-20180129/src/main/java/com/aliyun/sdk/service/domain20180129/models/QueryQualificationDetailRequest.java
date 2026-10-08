@@ -103,6 +103,7 @@ public class QueryQualificationDetailRequest extends Request {
         } 
 
         /**
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,15 @@ public class QueryQualificationDetailRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,6 +133,7 @@ public class QueryQualificationDetailRequest extends Request {
         }
 
         /**
+         * <p>API type for qualification verification. Fixed value: <strong>knet</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +146,10 @@ public class QueryQualificationDetailRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

@@ -67,7 +67,10 @@ public class CheckMaxYearOfServerLockResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxYear.
+         * <p>Maximum number of years that can be purchased.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxYear(Integer maxYear) {
             this.maxYear = maxYear;
@@ -75,7 +78,10 @@ public class CheckMaxYearOfServerLockResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -67,7 +67,7 @@ public class QueryDSRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * DSRecordList.
+         * <p>List of DS records.</p>
          */
         public Builder DSRecordList(java.util.List<DSRecordList> DSRecordList) {
             this.DSRecordList = DSRecordList;
@@ -75,7 +75,10 @@ public class QueryDSRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>814B2AF0-ED6F-4C13-B41C-8AC0B1023583</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,28 @@ public class QueryDSRecordResponseBody extends TeaModel {
             } 
 
             /**
-             * Algorithm.
+             * <p>Encryption algorithm number. For more information, see <a href="https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml">Domain Name System Security (DNSSEC) Algorithm Numbers</a>. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: RSA/MD5;</li>
+             * <li><strong>2</strong>: Diffie-Hellman;</li>
+             * <li><strong>3</strong>: DSA/SHA-1;</li>
+             * <li><strong>5</strong>: RSA/SHA-1;</li>
+             * <li><strong>6</strong>: DSA-NSEC3-SHA1;</li>
+             * <li><strong>7</strong>: RSASHA1-NSEC3-SHA1;</li>
+             * <li><strong>8</strong>: RSA/SHA-256;</li>
+             * <li><strong>10</strong>: RSA/SHA-512;</li>
+             * <li><strong>12</strong>: GOST R 34.10-2001;</li>
+             * <li><strong>13</strong>: ECDSA Curve P-256 with SHA-256;</li>
+             * <li><strong>14</strong>: ECDSA Curve P-384 with SHA-384;</li>
+             * <li><strong>15</strong>: Ed25519;</li>
+             * <li><strong>16</strong>: Ed448;</li>
+             * <li><strong>252</strong>: Reserved for Indirect Keys;</li>
+             * <li><strong>253</strong>: private algorithm;</li>
+             * <li><strong>254</strong>: private algorithm OID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder algorithm(Integer algorithm) {
                 this.algorithm = algorithm;
@@ -175,7 +199,10 @@ public class QueryDSRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Digest.
+             * <p>Digest value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>f58fa917424383934c7b0cf1a90f61d692745680fa06f5ecdbe0924e86de9598</p>
              */
             public Builder digest(String digest) {
                 this.digest = digest;
@@ -183,7 +210,16 @@ public class QueryDSRecordResponseBody extends TeaModel {
             }
 
             /**
-             * DigestType.
+             * <p>Digest algorithm type. For more information, see <a href="https://www.iana.org/assignments/ds-rr-types/ds-rr-types.xhtml">Delegation Signer (DS) Resource Record (RR) Type Digest Algorithms</a>. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: SHA-1;</li>
+             * <li><strong>2</strong>: SHA-256;</li>
+             * <li><strong>3</strong>: GOST R 34.11-94;</li>
+             * <li><strong>4</strong>: SHA-384.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder digestType(Integer digestType) {
                 this.digestType = digestType;
@@ -191,7 +227,10 @@ public class QueryDSRecordResponseBody extends TeaModel {
             }
 
             /**
-             * KeyTag.
+             * <p>Key tag used to identify DNSSEC records. It is an integer less than 65536.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder keyTag(Integer keyTag) {
                 this.keyTag = keyTag;

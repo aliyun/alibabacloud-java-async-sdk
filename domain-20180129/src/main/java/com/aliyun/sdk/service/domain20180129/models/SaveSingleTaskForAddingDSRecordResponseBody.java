@@ -67,7 +67,10 @@ public class SaveSingleTaskForAddingDSRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForAddingDSRecordResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e893148f-6343-4ae1-9eba-6e2a4116e142</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

@@ -60,7 +60,11 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
         } 
 
         /**
+         * <p>A list of domain names to transfer out, each with its authorization code.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SaveBatchTaskForTransferOutByAuthorizationCode</p>
          */
         public Builder transferOutParamList(java.util.List<TransferOutParamList> transferOutParamList) {
             this.putQueryParameter("TransferOutParamList", transferOutParamList);
@@ -128,7 +132,10 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
             } 
 
             /**
-             * AuthorizationCode.
+             * <p>The authorization code for the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test2o#Lck</p>
              */
             public Builder authorizationCode(String authorizationCode) {
                 this.authorizationCode = authorizationCode;
@@ -136,7 +143,10 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeRequest extends Reque
             }
 
             /**
-             * DomainName.
+             * <p>The domain name to transfer out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

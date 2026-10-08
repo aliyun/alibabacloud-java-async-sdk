@@ -145,7 +145,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -161,7 +164,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether there is a next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -169,7 +175,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Paging size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +186,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether a previous page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -185,7 +197,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E879DC07-38EE-4408-9F33-73B30CD965CD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -201,7 +219,10 @@ public class PollTaskResultResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

@@ -67,7 +67,10 @@ public class SaveBatchTaskForModifyingDomainDnsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6A862A8A-E7AB-4C4E-8946-A74122D9CC4B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveBatchTaskForModifyingDomainDnsResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>35fb2fb7-d4d6-4478-9408-22cb63696b86</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

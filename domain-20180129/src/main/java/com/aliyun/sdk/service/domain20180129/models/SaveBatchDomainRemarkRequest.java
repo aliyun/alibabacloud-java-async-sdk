@@ -102,6 +102,7 @@ public class SaveBatchDomainRemarkRequest extends Request {
         } 
 
         /**
+         * <p>List of instance IDs. We recommend grouping them in sets of <strong>10</strong>, with a maximum of <strong>50</strong> per group, separated by commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,15 @@ public class SaveBatchDomainRemarkRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese;  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>. This parameter is Required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -123,7 +132,10 @@ public class SaveBatchDomainRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>Remark information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyRemarkInfo</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -132,7 +144,10 @@ public class SaveBatchDomainRemarkRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

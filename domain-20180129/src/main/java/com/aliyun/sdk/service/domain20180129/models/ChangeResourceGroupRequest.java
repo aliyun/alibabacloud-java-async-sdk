@@ -117,7 +117,15 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language in which error messages are returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>zh</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -126,6 +134,8 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource group to which you want to shift the domain name.</p>
+         * <p>You can view the resource group ID in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management Console</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,6 +148,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The resource ID of the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -150,7 +161,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type of the domain name. This parameter is fixed to “Domain” and does not need to be specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Domain</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -159,7 +173,10 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the user client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

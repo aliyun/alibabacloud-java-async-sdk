@@ -75,6 +75,7 @@ public class SetupDomainAutoRenewRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID of the domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class SetupDomainAutoRenewRequest extends Request {
         }
 
         /**
+         * <p>The operation type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -353,7 +353,10 @@ public class SaveRegistrantProfileRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>Street address (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhe jiang sheng hang zhou shi shi li qu shi li zhen shi li da sha 1001 hao</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -362,7 +365,13 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * City.
+         * <p>City (English). Enter the name of the city where the registrant is located.  </p>
+         * <blockquote>
+         * <p>Include the word “shi” (meaning “city”) in the city name. For example, if the registrant is in Hangzhou, enter “hang zhou shi”.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>hang zhou shi</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -371,7 +380,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>Country code. For example, <strong>CN</strong> represents China and <strong>US</strong> represents the United States.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -380,7 +392,15 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * DefaultRegistrantProfile.
+         * <p>Whether to set this profile as the default template. Valid values:  </p>
+         * <ul>
+         * <li><strong>true</strong>: Default template.  </li>
+         * <li><strong>false</strong>: Non-default template.</li>
+         * </ul>
+         * <p>Default value: <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder defaultRegistrantProfile(Boolean defaultRegistrantProfile) {
             this.putQueryParameter("DefaultRegistrantProfile", defaultRegistrantProfile);
@@ -389,7 +409,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>Mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -398,7 +421,15 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -407,7 +438,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310024</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -416,7 +450,13 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>Province (in English). Enter the name of the province where the registrant resides.</p>
+         * <blockquote>
+         * <p>Enter only the province name without the word &quot;Province.&quot; For example, if the registrant is in Zhejiang Province, enter &quot;zhe jiang&quot; for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zhe jiang</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -425,7 +465,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantName.
+         * <p>Contact name (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>li si</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -434,7 +477,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant name (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>li si</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -443,7 +489,13 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>The information template ID, which is automatically generated by the system after the information template is successfully created.</p>
+         * <blockquote>
+         * <p>You must specify this parameter when updating an information template. After the information template is successfully created, you can invoke the <a href="~~QueryRegistrantProfiles~~">QueryRegistrantProfiles</a> API to query the information template ID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>3600000</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -452,7 +504,17 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantProfileType.
+         * <p>Information template type. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong>: Common template.</li>
+         * <li><strong>cnnic</strong>: CNNIC template.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The CNNIC template is supported only on the Alibaba Cloud international site (alibabacloud.com). Domain names such as &quot;.cn&quot; and &quot;.中国&quot; registered under the CNNIC domain name registry on the Alibaba Cloud international site require the CNNIC template. All other domain names use the common template.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder registrantProfileType(String registrantProfileType) {
             this.putQueryParameter("RegistrantProfileType", registrantProfileType);
@@ -461,7 +523,15 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * RegistrantType.
+         * <p>Registrant type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.  </li>
+         * <li><strong>2</strong>: Organization.</li>
+         * </ul>
+         * <p>Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -470,7 +540,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * TelArea.
+         * <p>Telephone country code. For example, the telephone country code for China is <strong>86</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -479,7 +552,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * TelExt.
+         * <p>Extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -488,7 +564,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * Telephone.
+         * <p>Telephone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1829756****</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -497,7 +576,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to 127.0.0.1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -506,7 +588,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * ZhAddress.
+         * <p>Detailed address (in Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省杭州市示例区示例镇示例大厦1001号</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -515,7 +600,13 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * ZhCity.
+         * <p>City (in Chinese). Enter the name of the city where the registrant resides.</p>
+         * <blockquote>
+         * <p>Include the word &quot;City&quot; in the city name. For example, if the registrant is in Hangzhou, enter &quot;杭州市&quot; for this parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -524,7 +615,13 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * ZhProvince.
+         * <p>Province (Chinese). Enter the name of the province where the registrant is located.  </p>
+         * <blockquote>
+         * <p>Enter only the province name without the word “省”. For example, if the registrant is in Zhejiang Province, enter “浙江”.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -533,7 +630,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Contact name (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -542,7 +642,10 @@ public class SaveRegistrantProfileRequest extends Request {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Registrant name (in Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

@@ -67,7 +67,10 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeResponseBody extends 
         } 
 
         /**
-         * RequestId.
+         * <p>The unique ID for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveBatchTaskForTransferOutByAuthorizationCodeResponseBody extends 
         }
 
         /**
-         * TaskNo.
+         * <p>The ID of the batch transfer-out task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

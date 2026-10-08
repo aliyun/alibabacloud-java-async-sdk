@@ -88,10 +88,11 @@ public class FuzzyMatchDomainSensitiveWordRequest extends Request {
         } 
 
         /**
+         * <p>The domain name keyword (a term contained in the domain name excluding its suffix). Separate multiple keywords with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx**.cn</p>
+         * <p>xxx**</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -100,7 +101,15 @@ public class FuzzyMatchDomainSensitiveWordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese  </li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +118,10 @@ public class FuzzyMatchDomainSensitiveWordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The User IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

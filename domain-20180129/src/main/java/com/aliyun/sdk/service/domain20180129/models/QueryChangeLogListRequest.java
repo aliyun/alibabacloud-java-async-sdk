@@ -145,7 +145,10 @@ public class QueryChangeLogListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name for which to query change logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -154,7 +157,10 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
-         * EndDate.
+         * <p>The end of the time range to query, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder endDate(Long endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -163,7 +169,17 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language for API error messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>Defaults to <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -172,6 +188,7 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
+         * <p>The page number. The minimum value is <strong>1</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +201,7 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
+         * <p>The number of entries to return per page. The value must be between <strong>1</strong> and <strong>100</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +214,10 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * <p>The start of the time range to query, specified as a Unix timestamp in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder startDate(Long startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -205,7 +226,10 @@ public class QueryChangeLogListRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

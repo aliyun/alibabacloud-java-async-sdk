@@ -80,7 +80,10 @@ public class CheckDomainSunriseClaimResponseBody extends TeaModel {
         } 
 
         /**
-         * ClaimKey.
+         * <p>The trademark keyword key provided by the TMDB database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017092100/8/2/1/kDfu9htHGEx_y-LJ3XSlKMZ70000020001</p>
          */
         public Builder claimKey(String claimKey) {
             this.claimKey = claimKey;
@@ -88,7 +91,10 @@ public class CheckDomainSunriseClaimResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA7A4FD4-EB9A-4A20-BB0C-9AEB15634DC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,15 @@ public class CheckDomainSunriseClaimResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Not a trademark keyword or not in the claim domain lifecycle.</li>
+         * <li><strong>1</strong>: In the sunrise domain lifecycle.</li>
+         * <li><strong>2</strong>: In the claim domain lifecycle.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder result(Integer result) {
             this.result = result;

@@ -59,7 +59,10 @@ public class CheckIntlFixPriceDomainStatusRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appp16.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

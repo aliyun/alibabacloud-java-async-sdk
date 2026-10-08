@@ -67,7 +67,10 @@ public class SaveSingleTaskForQueryingTransferAuthorizationCodeResponseBody exte
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForQueryingTransferAuthorizationCodeResponseBody exte
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

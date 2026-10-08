@@ -254,6 +254,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参数错误</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -693,6 +696,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The city.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>鞍山市</p>
              */
             public Builder cCity(String cCity) {
                 this.cCity = cCity;
@@ -701,6 +707,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The organization name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>河北易迪管道制造有限公司</p>
              */
             public Builder cCompany(String cCompany) {
                 this.cCompany = cCompany;
@@ -720,6 +729,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The contact name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>佟大伟</p>
              */
             public Builder cName(String cName) {
                 this.cName = cName;
@@ -728,6 +740,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The province.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>辽宁</p>
              */
             public Builder cProvince(String cProvince) {
                 this.cProvince = cProvince;
@@ -736,6 +751,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>铁西区新开街59栋1单元4号</p>
              */
             public Builder cVenu(String cVenu) {
                 this.cVenu = cVenu;
@@ -1425,6 +1443,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The review information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>审核通过</p>
              */
             public Builder auditMsg(String auditMsg) {
                 this.auditMsg = auditMsg;
@@ -1433,6 +1454,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The business name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GOV.CN域名注册(test003.cn)</p>
              */
             public Builder bizName(String bizName) {
                 this.bizName = bizName;
@@ -1589,6 +1613,9 @@ public class QueryDomainSpecialBizInfoByDomainResponseBody extends TeaModel {
 
             /**
              * <p>The description of business status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>信息审核成功</p>
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;

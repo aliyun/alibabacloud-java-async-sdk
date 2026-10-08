@@ -214,7 +214,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         } 
 
         /**
-         * DateOrPeriod.
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-01</p>
          */
         public Builder dateOrPeriod(String dateOrPeriod) {
             this.putQueryParameter("DateOrPeriod", dateOrPeriod);
@@ -223,7 +226,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * <p>Dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20 cm</p>
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -232,6 +238,7 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
+         * <p>Domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -244,7 +251,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Features.
+         * <p>Artistic features.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>iconicity</p>
          */
         public Builder features(String features) {
             this.putQueryParameter("Features", features);
@@ -253,7 +263,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * InscriptionsAndMarkings.
+         * <p>Inscriptions and markings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>realism</p>
          */
         public Builder inscriptionsAndMarkings(String inscriptionsAndMarkings) {
             this.putQueryParameter("InscriptionsAndMarkings", inscriptionsAndMarkings);
@@ -262,7 +275,15 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese</li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -271,7 +292,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Maker.
+         * <p>Artist or creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder maker(String maker) {
             this.putQueryParameter("Maker", maker);
@@ -280,7 +304,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * MaterialsAndTechniques.
+         * <p>Materials and techniques.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>silk</p>
          */
         public Builder materialsAndTechniques(String materialsAndTechniques) {
             this.putQueryParameter("MaterialsAndTechniques", materialsAndTechniques);
@@ -289,7 +316,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * <p>Artwork category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The embroidery</p>
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -298,7 +328,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Reference.
+         * <p>Reference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>drawings</p>
          */
         public Builder reference(String reference) {
             this.putQueryParameter("Reference", reference);
@@ -307,7 +340,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Subject.
+         * <p>Art subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>peace</p>
          */
         public Builder subject(String subject) {
             this.putQueryParameter("Subject", subject);
@@ -316,7 +352,10 @@ public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
         }
 
         /**
-         * Title.
+         * <p>Name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Peace and friendship</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

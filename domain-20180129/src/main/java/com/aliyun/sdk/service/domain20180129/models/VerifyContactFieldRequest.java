@@ -325,7 +325,10 @@ public class VerifyContactFieldRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>Street address (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rd. xitucheng</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -334,7 +337,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * City.
+         * <p>City (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bei jing</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -343,7 +349,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>Country code, such as <strong>CN</strong> or <strong>US</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -352,7 +361,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>Domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -361,7 +373,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>Email address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -370,7 +385,15 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -379,7 +402,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -388,7 +414,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>Province (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Bei jing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -397,7 +426,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * RegistrantName.
+         * <p>Contact name (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wang xian sheng</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -406,7 +438,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant name (in English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wang xian sheng</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -415,7 +450,14 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * RegistrantType.
+         * <p>Registrant type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.  </li>
+         * <li><strong>2</strong>: Enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -424,7 +466,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * TelArea.
+         * <p>Telephone country code, for example, <strong>86</strong> for China.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -433,7 +478,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * TelExt.
+         * <p>Extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>01</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -442,7 +490,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * Telephone.
+         * <p>Telephone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1390000****</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -451,7 +502,10 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -460,7 +514,13 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * ZhAddress.
+         * <p>Detailed address (in Chinese).</p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>西土城路</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -469,7 +529,13 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * ZhCity.
+         * <p>City (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -478,7 +544,13 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * ZhProvince.
+         * <p>Province (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -487,7 +559,13 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Contact name (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -496,7 +574,13 @@ public class VerifyContactFieldRequest extends Request {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Registrant name (in Chinese).</p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>王先生</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

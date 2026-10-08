@@ -67,7 +67,10 @@ public class SaveSingleTaskForTransferProhibitionLockResponseBody extends TeaMod
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F51977F9-2B40-462B-BCCD-CF5BB1E9DB56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForTransferProhibitionLockResponseBody extends TeaMod
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3babb0a-c939-4c25-8c65-c47b65f5492a</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

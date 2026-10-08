@@ -67,7 +67,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +75,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * TaskNo.
+         * <p>The task number.</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

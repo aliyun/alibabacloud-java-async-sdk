@@ -88,7 +88,15 @@ public class TransferInCheckMailTokenRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the error message returned by the operation. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,6 +105,7 @@ public class TransferInCheckMailTokenRequest extends Request {
         }
 
         /**
+         * <p>The token received in the email.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +118,10 @@ public class TransferInCheckMailTokenRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

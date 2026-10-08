@@ -67,10 +67,7 @@ public class SaveSingleTaskForGenerateDomainCertificateResponseBody extends TeaM
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3E68AB12-3D1F-5B9A-A358-F6B7852AD0B6</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,10 +75,7 @@ public class SaveSingleTaskForGenerateDomainCertificateResponseBody extends TeaM
         }
 
         /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2741a831-d9ea-4dfb-af94-61948c0478c3</p>
+         * TaskNo.
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

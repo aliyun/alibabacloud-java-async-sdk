@@ -67,7 +67,10 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C560A803-B975-481D-A66B-A4395EA863A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

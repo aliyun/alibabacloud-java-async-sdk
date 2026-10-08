@@ -67,7 +67,10 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyResponseBody extends Tea
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyResponseBody extends Tea
         }
 
         /**
-         * TaskNo.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3babb0a-c939-4c25-8c65-c47b65f5492a</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

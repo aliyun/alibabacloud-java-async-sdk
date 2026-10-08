@@ -87,7 +87,7 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
         } 
 
         /**
-         * DomainNames.
+         * <p>The domain names to transfer out.</p>
          */
         public Builder domainNames(java.util.List<String> domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -96,7 +96,10 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
         }
 
         /**
-         * Lang.
+         * <p>The language of returned error messages. Valid values: zh (Chinese) and en (English). Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +108,10 @@ public class SaveBatchTaskForApplyQuickTransferOutOpenlyRequest extends Request 
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the user\&quot;s client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

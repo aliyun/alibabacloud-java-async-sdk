@@ -67,7 +67,10 @@ public class SetupDomainAutoRenewResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fc97e44-837a-447d-ac61-ea28d2fe8a38</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SetupDomainAutoRenewResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Indicates whether the operation is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -54,7 +54,10 @@ public class RegistrantProfileRealNameVerificationResponseBody extends TeaModel 
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>51D584A2-0CCD-4336-AD7D-1AD4C67B5545</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

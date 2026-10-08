@@ -145,7 +145,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -156,7 +156,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The domain names.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -164,7 +164,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is followed by a page.</p>
+         * <p>Indicates whether a next page is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -175,7 +175,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of domain names per page.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -186,7 +186,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is preceded by a page.</p>
+         * <p>Indicates whether a previous page is available.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -197,7 +197,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B7AB5469-5E38-4AA9-A920-C65B7A9C8E6E</p>
@@ -208,7 +208,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of domain names returned.</p>
+         * <p>The total number of domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -219,7 +219,7 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -342,10 +342,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of the tag added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testKey</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -353,10 +350,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the tag added to the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testValue</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -771,10 +765,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the domain name registrant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Guangzhou Forest Advertising Decoration Co., LTD</p>
+             * Ccompany.
              */
             public Builder ccompany(String ccompany) {
                 this.ccompany = ccompany;
@@ -782,15 +773,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>domain transfer status. value:</p>
-             * <ul>
-             * <li>0: domain status normal.</li>
-             * <li>1: domain is pending change holder.</li>
-             * <li>2: change holder failed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * ChgholderStatus.
              */
             public Builder chgholderStatus(String chgholderStatus) {
                 this.chgholderStatus = chgholderStatus;
@@ -806,16 +789,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of real-name verification for the domain name. Valid values:</p>
-             * <ul>
-             * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
-             * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
-             * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
-             * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FAILED</p>
+             * DomainAuditStatus.
              */
             public Builder domainAuditStatus(String domainAuditStatus) {
                 this.domainAuditStatus = domainAuditStatus;
@@ -823,10 +797,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the domain name group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
+             * DomainGroupId.
              */
             public Builder domainGroupId(String domainGroupId) {
                 this.domainGroupId = domainGroupId;
@@ -834,10 +805,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the domain name group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test group</p>
+             * DomainGroupName.
              */
             public Builder domainGroupName(String domainGroupName) {
                 this.domainGroupName = domainGroupName;
@@ -845,10 +813,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The domain name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test.com</p>
+             * DomainName.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -856,15 +821,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the domain name. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The domain name needs to be renewed.</li>
-             * <li><strong>2</strong>: The domain name needs to be redeemed.</li>
-             * <li><strong>3</strong>: The domain name is normal.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * DomainStatus.
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -872,15 +829,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the domain name. Valid values:</p>
-             * <ul>
-             * <li><strong>New gTLD</strong></li>
-             * <li><strong>gTLD</strong></li>
-             * <li><strong>ccTLD</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>gTLD</p>
+             * DomainType.
              */
             public Builder domainType(String domainType) {
                 this.domainType = domainType;
@@ -888,10 +837,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days from the expiration date of the domain name to the current date.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-30</p>
+             * ExpirationCurrDateDiff.
              */
             public Builder expirationCurrDateDiff(Integer expirationCurrDateDiff) {
                 this.expirationCurrDateDiff = expirationCurrDateDiff;
@@ -899,10 +845,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-11-02 04:00:45</p>
+             * ExpirationDate.
              */
             public Builder expirationDate(String expirationDate) {
                 this.expirationDate = expirationDate;
@@ -910,10 +853,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of the domain name. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1522080000000</p>
+             * ExpirationDateLong.
              */
             public Builder expirationDateLong(Long expirationDateLong) {
                 this.expirationDateLong = expirationDateLong;
@@ -921,14 +861,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name expires. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The domain name does not expire.</li>
-             * <li><strong>2</strong>: The domain name expires.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ExpirationDateStatus.
              */
             public Builder expirationDateStatus(String expirationDateStatus) {
                 this.expirationDateStatus = expirationDateStatus;
@@ -936,10 +869,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ST20151102120031118</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -947,10 +877,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the domain name is a premium domain name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Premium.
              */
             public Builder premium(Boolean premium) {
                 this.premium = premium;
@@ -958,10 +885,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2a</p>
+             * ProductId.
              */
             public Builder productId(String productId) {
                 this.productId = productId;
@@ -969,14 +893,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The registration type of the domain name. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: individual</li>
-             * <li><strong>2</strong>: enterprise</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * RegistrantType.
              */
             public Builder registrantType(String registrantType) {
                 this.registrantType = registrantType;
@@ -992,10 +909,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the domain name was registered.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-11-02 04:00:45</p>
+             * RegistrationDate.
              */
             public Builder registrationDate(String registrationDate) {
                 this.registrationDate = registrationDate;
@@ -1003,10 +917,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates how long the domain name has been registered. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1522080000000</p>
+             * RegistrationDateLong.
              */
             public Builder registrationDateLong(Long registrationDateLong) {
                 this.registrationDateLong = registrationDateLong;
@@ -1014,10 +925,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks of the domain name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test remark</p>
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -1025,10 +933,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group to which the domain name belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-aek2yyciz557g3q</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1036,7 +941,7 @@ public class QueryDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags added to the resource.</p>
+             * Tag.
              */
             public Builder tag(DomainTag tag) {
                 this.tag = tag;

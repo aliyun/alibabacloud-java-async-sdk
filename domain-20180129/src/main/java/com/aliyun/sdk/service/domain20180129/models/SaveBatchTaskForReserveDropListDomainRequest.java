@@ -75,6 +75,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         } 
 
         /**
+         * <p>The contact template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
+         * <p>The domain list.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domains(java.util.List<Domains> domains) {
@@ -169,7 +171,18 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             } 
 
             /**
-             * Dns1.
+             * <p>The first custom DNS server.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is required only if you set <strong>AliyunDns</strong> to <strong>false</strong>.</li>
+             * </ul>
+             * </blockquote>
+             * <ul>
+             * <li>Make sure that your custom DNS servers are valid. Otherwise, the domain reservation may fail.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ns11.big<a href="http://www.com">www.com</a></p>
              */
             public Builder dns1(String dns1) {
                 this.dns1 = dns1;
@@ -177,7 +190,18 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             }
 
             /**
-             * Dns2.
+             * <p>The second custom DNS server.</p>
+             * <blockquote>
+             * <ul>
+             * <li>This parameter is required only if you set <strong>AliyunDns</strong> to <strong>false</strong>.</li>
+             * </ul>
+             * </blockquote>
+             * <ul>
+             * <li>Make sure that your custom DNS servers are valid. Otherwise, the domain reservation may fail.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>nsb.263idc.net</p>
              */
             public Builder dns2(String dns2) {
                 this.dns2 = dns2;
@@ -185,6 +209,7 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
             }
 
             /**
+             * <p>The domain name to reserve.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

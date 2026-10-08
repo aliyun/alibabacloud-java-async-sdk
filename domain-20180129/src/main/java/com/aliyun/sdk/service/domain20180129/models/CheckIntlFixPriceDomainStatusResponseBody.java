@@ -67,7 +67,7 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Module.
+         * <p>The returned object.</p>
          */
         public Builder module(Module module) {
             this.module = module;
@@ -75,7 +75,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40F46D3D-F4F3-4CCB-AC30-2DD20E32E528</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +209,16 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * Currency.
+             * <p>The currency. Valid values:</p>
+             * <ul>
+             * <li><p>RMB: Chinese Yuan.</p>
+             * </li>
+             * <li><p>USD: US Dollar.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>USD</p>
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -214,7 +226,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DeadDate.
+             * <p>The expiration date of the domain name. After this date, the domain name requires renewal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1567353497</p>
              */
             public Builder deadDate(Long deadDate) {
                 this.deadDate = deadDate;
@@ -222,7 +237,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -230,7 +248,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The sale deadline of the domain name. After this time, the domain name is no longer available for sale.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1567353497</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -238,7 +259,16 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Premium.
+             * <p>Indicates whether the domain name is a premium domain name. Valid values:</p>
+             * <ul>
+             * <li><p>true: The domain name is a premium domain name.</p>
+             * </li>
+             * <li><p>false: The domain name is not a premium domain name.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder premium(Boolean premium) {
                 this.premium = premium;
@@ -246,7 +276,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Price.
+             * <p>The price.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20.00</p>
              */
             public Builder price(Long price) {
                 this.price = price;
@@ -254,7 +287,10 @@ public class CheckIntlFixPriceDomainStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RegDate.
+             * <p>The registration date of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1566353497</p>
              */
             public Builder regDate(Long regDate) {
                 this.regDate = regDate;

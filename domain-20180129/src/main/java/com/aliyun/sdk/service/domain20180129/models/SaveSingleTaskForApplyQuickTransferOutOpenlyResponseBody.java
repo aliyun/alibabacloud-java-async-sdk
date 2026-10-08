@@ -67,7 +67,10 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyResponseBody extends Te
         } 
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D200000-C0B9-4CD3-B92A-9B44A000000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyResponseBody extends Te
         }
 
         /**
-         * TaskNo.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

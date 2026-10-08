@@ -158,7 +158,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -174,7 +177,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether a next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -182,7 +188,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -190,7 +199,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether a previous page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -198,7 +210,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2DEDFF32-7827-46B1-BE90-3DB8ABD91A58</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +221,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * ResultLimit.
+         * <p>The API returns a maximum of 1,000 recent records per query, regardless of the specified page size. If your query matches more than 1,000 records, <strong>ResultLimit</strong> is <strong>true</strong>. To retrieve all results, narrow the time range and query again. Otherwise, <strong>ResultLimit</strong> is <strong>false</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder resultLimit(Boolean resultLimit) {
             this.resultLimit = resultLimit;
@@ -214,7 +232,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>The total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -222,7 +243,10 @@ public class QueryChangeLogListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

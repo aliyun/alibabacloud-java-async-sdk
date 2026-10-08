@@ -103,6 +103,7 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
         } 
 
         /**
+         * <p>The domain names for which you want to enable or disable the transfer prohibition lock.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,17 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message that is returned if the request fails. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,6 +135,13 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable or disable the transfer prohibition lock. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: Enable the transfer prohibition lock.</p>
+         * </li>
+         * <li><p><strong>false</strong>: Disable the transfer prohibition lock.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +154,10 @@ public class SaveBatchTaskForTransferProhibitionLockRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The client IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

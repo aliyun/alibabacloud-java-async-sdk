@@ -67,7 +67,10 @@ public class SaveSingleTaskForDomainNameProxyServiceResponseBody extends TeaMode
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F51977F9-2B40-462B-BCCD-CF5BB1E9DB56</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForDomainNameProxyServiceResponseBody extends TeaMode
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3cb1adc3-20e8-44ae-9e76-e812fa6fc9d8</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

@@ -67,7 +67,10 @@ public class QueryEnsAssociationResponseBody extends TeaModel {
         } 
 
         /**
-         * Address.
+         * <p>The wallet address in the ENS system.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x123456789012345678901234567890123456****</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -75,7 +78,10 @@ public class QueryEnsAssociationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ECD5439-39A2-477D-9A19-64FCA1F77EEB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

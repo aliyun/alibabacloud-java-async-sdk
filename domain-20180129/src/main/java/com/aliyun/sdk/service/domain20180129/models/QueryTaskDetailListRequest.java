@@ -172,7 +172,10 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The instance ID of the domain name.</p>
+         * <p>The domain name instance ID.</p>
+         * <blockquote>
+         * <p>You can call &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/442021.html">QueryDomainByDomainName</a>&lt;props=&quot;intl&quot;&gt;<a href="https://help.aliyun.com/document_detail/121704.html">QueryDomainByDomainName</a> to query the domain name instance ID.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>S20179H1BBI9test</p>
@@ -184,10 +187,10 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The language of the error message to return if the request fails. Valid value:</p>
+         * <p>The language of the error message returned by the operation. Valid values:</p>
          * <ul>
-         * <li><strong>zh</strong>: Chinese</li>
-         * <li><strong>en</strong>: English</li>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
          * </ul>
          * <p>Default value: <strong>en</strong>.</p>
          * 
@@ -214,7 +217,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: <strong>1000</strong>.</p>
+         * <p>The number of entries per page. Maximum value: <strong>1000</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,7 +230,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The task number. This is the TaskNo value returned by a successfully executed task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -240,12 +243,12 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The task status. Valid value:</p>
+         * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: waiting for execution</li>
-         * <li><strong>1</strong>: being executed</li>
-         * <li><strong>2</strong>: successful</li>
-         * <li><strong>3</strong>: failed</li>
+         * <li><strong>0</strong>: Waiting to be executed.</li>
+         * <li><strong>1</strong>: Executing.</li>
+         * <li><strong>2</strong>: Successful.</li>
+         * <li><strong>3</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +261,7 @@ public class QueryTaskDetailListRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the client. Set the value to <strong>127.0.0.1</strong>.</p>
+         * <p>The user IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.0</p>

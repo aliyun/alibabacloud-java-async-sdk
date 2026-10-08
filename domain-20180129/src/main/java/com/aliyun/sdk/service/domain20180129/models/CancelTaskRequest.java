@@ -88,7 +88,15 @@ public class CancelTaskRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -97,6 +105,10 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
+         * <p>Job number.</p>
+         * <blockquote>
+         * <p>You can query the job number by using the <a href="https://help.aliyun.com/document_detail/67709.html">QueryTaskList</a> API.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -109,7 +121,10 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

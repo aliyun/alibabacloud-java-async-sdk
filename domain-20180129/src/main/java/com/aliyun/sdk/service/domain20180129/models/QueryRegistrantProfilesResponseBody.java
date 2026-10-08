@@ -145,7 +145,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The page number returned.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,10 +156,10 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is followed by a page. Valid values:</p>
+         * <p>Indicates whether there is a next page. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on each page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
+         * <p>The number of records per page. Default value: <strong>0</strong>. Maximum value: <strong>5000</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -182,10 +182,10 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the current page is preceded by a page. Valid values:</p>
+         * <p>Indicates whether there is a previous page. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +197,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of registrant profiles.</p>
+         * RegistrantProfiles.
          */
         public Builder registrantProfiles(RegistrantProfiles registrantProfiles) {
             this.registrantProfiles = registrantProfiles;
@@ -216,9 +216,9 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of records.</p>
          * <blockquote>
-         * <p> This parameter indicates the total number of queried registrant profiles. If multiple registrant profiles are queried, the information about these profiles is returned in sequence by profile.</p>
+         * <p>The total number of records refers to the number of registrant profiles returned by the query. When there are multiple registrant profiles, the next profile is displayed after the previous one.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -230,7 +230,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned pages.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -637,10 +637,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The address of the domain name registrant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhe jiang sheng hang zhou shi shi li qu shi li zhen shi li da sha 1001 hao</p>
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -648,10 +645,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city where the domain name registrant is located, in English.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>hang zhou shi</p>
+             * City.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -659,10 +653,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the country or region where the domain name registrant is located, such as <strong>CN</strong> or <strong>US</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CN</p>
+             * Country.
              */
             public Builder country(String country) {
                 this.country = country;
@@ -670,10 +661,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the registrant profile was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-18 10:46:47</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -681,10 +669,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4****************1</p>
+             * CredentialNo.
              */
             public Builder credentialNo(String credentialNo) {
                 this.credentialNo = credentialNo;
@@ -692,10 +677,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The certificate type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>YYZZ</p>
+             * CredentialType.
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -703,15 +685,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the template is the default template. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * <p>Default value: <strong>false</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DefaultRegistrantProfile.
              */
             public Builder defaultRegistrantProfile(Boolean defaultRegistrantProfile) {
                 this.defaultRegistrantProfile = defaultRegistrantProfile;
@@ -719,10 +693,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The email address of the domain name registrant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>82106****@qq.com</p>
+             * Email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -730,14 +701,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the verification for the email address. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: not verified</li>
-             * <li><strong>1</strong>: verified</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * EmailVerificationStatus.
              */
             public Builder emailVerificationStatus(Integer emailVerificationStatus) {
                 this.emailVerificationStatus = emailVerificationStatus;
@@ -753,10 +717,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The postal code of the region where the domain name registrant is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>310024</p>
+             * PostalCode.
              */
             public Builder postalCode(String postalCode) {
                 this.postalCode = postalCode;
@@ -764,10 +725,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province where the domain name registrant is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zhe jiang</p>
+             * Province.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -775,16 +733,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of real-name verification for the domain name registrant. Valid values:</p>
-             * <ul>
-             * <li><strong>FAILED</strong>: Real-name verification for the domain name fails.</li>
-             * <li><strong>SUCCEED</strong>: Real-name verification for the domain name is successful.</li>
-             * <li><strong>NONAUDIT</strong>: Real-name verification for the domain name is not performed.</li>
-             * <li><strong>AUDITING</strong>: Real-name verification for the domain name is in progress.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SUCCEED</p>
+             * RealNameStatus.
              */
             public Builder realNameStatus(String realNameStatus) {
                 this.realNameStatus = realNameStatus;
@@ -792,10 +741,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the domain name contact.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>li si</p>
+             * RegistrantName.
              */
             public Builder registrantName(String registrantName) {
                 this.registrantName = registrantName;
@@ -803,10 +749,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the domain name registrant.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>li si</p>
+             * RegistrantOrganization.
              */
             public Builder registrantOrganization(String registrantOrganization) {
                 this.registrantOrganization = registrantOrganization;
@@ -814,10 +757,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the registrant profile.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000001</p>
+             * RegistrantProfileId.
              */
             public Builder registrantProfileId(Long registrantProfileId) {
                 this.registrantProfileId = registrantProfileId;
@@ -825,17 +765,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the registrant profile. Valid values:</p>
-             * <ul>
-             * <li><strong>common</strong>: common profile.</li>
-             * <li><strong>cnnic</strong>: CNNIC profile.</li>
-             * </ul>
-             * <blockquote>
-             * <p> Only the Alibaba Cloud international site (alibabacloud.com) supports CNNIC profiles. To register domain names provided by CNNIC such as the .cn and . domain names on the Alibaba Cloud international site, you must use a CNNIC profile. To register other domain names, use a common profile.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>common</p>
+             * RegistrantProfileType.
              */
             public Builder registrantProfileType(String registrantProfileType) {
                 this.registrantProfileType = registrantProfileType;
@@ -843,15 +773,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the domain name registrant. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: individual.</li>
-             * <li><strong>2</strong>: enterprise.</li>
-             * </ul>
-             * <p>Default value: <strong>1</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * RegistrantType.
              */
             public Builder registrantType(String registrantType) {
                 this.registrantType = registrantType;
@@ -859,10 +781,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The remarks.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test domain name</p>
+             * Remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -870,10 +789,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The international dialing code of the country or region where the domain name contact is located. For example, the international dialing code of China is <strong>86</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>86</p>
+             * TelArea.
              */
             public Builder telArea(String telArea) {
                 this.telArea = telArea;
@@ -881,10 +797,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension of the phone number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1234</p>
+             * TelExt.
              */
             public Builder telExt(String telExt) {
                 this.telExt = telExt;
@@ -892,10 +805,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The phone number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1829756****</p>
+             * Telephone.
              */
             public Builder telephone(String telephone) {
                 this.telephone = telephone;
@@ -903,10 +813,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the registrant profile was updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-15 15:32:45</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -914,7 +821,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The address of the domain name registrant, in Chinese.</p>
+             * ZhAddress.
              */
             public Builder zhAddress(String zhAddress) {
                 this.zhAddress = zhAddress;
@@ -922,7 +829,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The city where the domain name registrant is located, in Chinese.</p>
+             * ZhCity.
              */
             public Builder zhCity(String zhCity) {
                 this.zhCity = zhCity;
@@ -930,7 +837,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The province where the domain name registrant is located, in Chinese.</p>
+             * ZhProvince.
              */
             public Builder zhProvince(String zhProvince) {
                 this.zhProvince = zhProvince;
@@ -938,7 +845,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the domain name contact.</p>
+             * ZhRegistrantName.
              */
             public Builder zhRegistrantName(String zhRegistrantName) {
                 this.zhRegistrantName = zhRegistrantName;
@@ -946,7 +853,7 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Chinese name of the domain name registrant.</p>
+             * ZhRegistrantOrganization.
              */
             public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
                 this.zhRegistrantOrganization = zhRegistrantOrganization;

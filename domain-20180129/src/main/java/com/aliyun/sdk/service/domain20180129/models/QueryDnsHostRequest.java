@@ -88,6 +88,7 @@ public class QueryDnsHostRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the domain name instance. Call the QueryDomainList API to obtain this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,17 @@ public class QueryDnsHostRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language for returned error messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +120,10 @@ public class QueryDnsHostRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

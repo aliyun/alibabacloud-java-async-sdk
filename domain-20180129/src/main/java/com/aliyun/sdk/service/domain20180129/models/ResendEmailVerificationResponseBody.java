@@ -80,7 +80,7 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         } 
 
         /**
-         * FailList.
+         * <p>List of failed verification email sends.</p>
          */
         public Builder failList(java.util.List<FailList> failList) {
             this.failList = failList;
@@ -88,7 +88,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0EA54E99-DB48-4CE3-A099-6ED8E451B8AC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessList.
+         * <p>List of successfully sent verification emails.</p>
          */
         public Builder successList(java.util.List<SuccessList> successList) {
             this.successList = successList;
@@ -175,7 +178,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Return code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendTokenQuotaExceeded</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -183,7 +189,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Verified mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -191,7 +200,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Return message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -271,7 +283,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Return code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -279,7 +294,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Verified mailbox.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -287,7 +305,10 @@ public class ResendEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Return message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;

@@ -144,7 +144,10 @@ public class QueryTaskInfoHistoryRequest extends Request {
         } 
 
         /**
-         * BeginCreateTime.
+         * <p>Start time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder beginCreateTime(Long beginCreateTime) {
             this.putQueryParameter("BeginCreateTime", beginCreateTime);
@@ -153,7 +156,10 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
-         * CreateTimeCursor.
+         * <p>Cursor for creation date (technical parameter).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder createTimeCursor(Long createTimeCursor) {
             this.putQueryParameter("CreateTimeCursor", createTimeCursor);
@@ -162,7 +168,10 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
-         * EndCreateTime.
+         * <p>End time of the creation date range for the query, expressed as the number of milliseconds since 00:00 UTC on January 1, 1970. Currently supports queries by day only.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1522080000000</p>
          */
         public Builder endCreateTime(Long endCreateTime) {
             this.putQueryParameter("EndCreateTime", endCreateTime);
@@ -171,7 +180,15 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language for API error messages. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese  </li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -180,6 +197,7 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
+         * <p>Page size.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +210,10 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
-         * TaskNoCursor.
+         * <p>Job cursor; pass in the job number from the corresponding page cursor during pagination (technical parameter).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aa634d3f-927e-4d17-9d2c-test</p>
          */
         public Builder taskNoCursor(String taskNoCursor) {
             this.putQueryParameter("TaskNoCursor", taskNoCursor);
@@ -201,7 +222,10 @@ public class QueryTaskInfoHistoryRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

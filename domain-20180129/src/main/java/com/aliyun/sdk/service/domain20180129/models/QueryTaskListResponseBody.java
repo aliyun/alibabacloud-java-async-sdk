@@ -145,7 +145,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         } 
 
         /**
-         * CurrentPageNum.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPageNum(Integer currentPageNum) {
             this.currentPageNum = currentPageNum;
@@ -161,7 +164,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * NextPage.
+         * <p>Indicates whether a next page exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder nextPage(Boolean nextPage) {
             this.nextPage = nextPage;
@@ -169,7 +175,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -177,7 +186,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * PrePage.
+         * <p>Indicates whether there is a previous page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder prePage(Boolean prePage) {
             this.prePage = prePage;
@@ -185,7 +197,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8D7D294A-8E99-481F-B64C-017EFC793059</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +208,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItemNum.
+         * <p>Total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>43</p>
          */
         public Builder totalItemNum(Integer totalItemNum) {
             this.totalItemNum = totalItemNum;
@@ -201,7 +219,10 @@ public class QueryTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * <p>Total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22</p>
          */
         public Builder totalPageNum(Integer totalPageNum) {
             this.totalPageNum = totalPageNum;

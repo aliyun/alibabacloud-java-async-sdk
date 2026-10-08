@@ -73,7 +73,17 @@ public class QueryDomainSuffixRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>The language of the error message in the API response. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -82,7 +92,10 @@ public class QueryDomainSuffixRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

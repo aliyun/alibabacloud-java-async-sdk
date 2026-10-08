@@ -381,7 +381,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         } 
 
         /**
-         * Address.
+         * <p>Detailed address (in English).  </p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>chao yang qu</p>
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -390,7 +396,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * City.
+         * <p>City (in English).  </p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing shi</p>
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -399,7 +411,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * Country.
+         * <p>Country code, such as <strong>CN</strong>.</p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -408,7 +426,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * Email.
+         * <p>Email address.  </p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -417,7 +441,14 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredential.
+         * <p>Base64-encoded image of the identity verification document. Image requirements:  </p>
+         * <ul>
+         * <li>Format must be <strong>jpg</strong> or <strong>bmp</strong>.  </li>
+         * <li>Original image size must be between <strong>55 KB and 1 MB</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVzdA==</p>
          */
         public Builder identityCredential(String identityCredential) {
             this.putQueryParameter("IdentityCredential", identityCredential);
@@ -426,7 +457,10 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialNo.
+         * <p>Certificate number for identity verification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4111111111111110**</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
             this.putQueryParameter("IdentityCredentialNo", identityCredentialNo);
@@ -435,7 +469,21 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * IdentityCredentialType.
+         * <p>Type of certificate used for identity verification. Valid values:  </p>
+         * <ul>
+         * <li><strong>SFZ</strong>: Identity card.  </li>
+         * <li><strong>HZ</strong>: Passport.  </li>
+         * <li><strong>YYZZ</strong>: Business license.  </li>
+         * <li><strong>ORG</strong>: Organization code certificate.  </li>
+         * <li><strong>XYDM</strong>: Unified Social Credit Code certificate.  </li>
+         * <li><strong>TXZ</strong>: Mainland Travel Permits for Hong Kong and Macao Residents.</li>
+         * </ul>
+         * <blockquote>
+         * <p>For more certificate types, see <a href="https://help.aliyun.com/document_detail/72209.html">Supported Certificate Types for Identity Verification</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>SFZ</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
             this.putQueryParameter("IdentityCredentialType", identityCredentialType);
@@ -444,7 +492,15 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese  </li>
+         * <li><strong>en</strong>: English</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -453,7 +509,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.  </p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder postalCode(String postalCode) {
             this.putQueryParameter("PostalCode", postalCode);
@@ -462,7 +524,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * Province.
+         * <p>Province (in English).  </p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>bei jing</p>
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -471,7 +539,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantName.
+         * <p>Domain name contact (in English).  </p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantName(String registrantName) {
             this.putQueryParameter("RegistrantName", registrantName);
@@ -480,7 +554,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant name (in English).</p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ce shi</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.putQueryParameter("RegistrantOrganization", registrantOrganization);
@@ -489,7 +569,11 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantProfileId.
+         * <p>ID of the registrant profile template to be saved.  </p>
+         * <p>The system automatically generates this ID after a registrant profile is successfully created. You can invoke the <a href="https://help.aliyun.com/document_detail/67701.html">QueryRegistrantProfiles</a> API to query the registrant profile ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.putQueryParameter("RegistrantProfileId", registrantProfileId);
@@ -498,7 +582,17 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantProfileType.
+         * <p>Templatetype. Valid values:  </p>
+         * <ul>
+         * <li><strong>common</strong>: General template.  </li>
+         * <li><strong>cnnic</strong>: CNNIC template.</li>
+         * </ul>
+         * <blockquote>
+         * <p>The CNNIC template is supported only on the Alibaba Cloud international site (alibabacloud.com). Domains under the CNNIC registry, such as &quot;.cn&quot; and &quot;.中国&quot;, registered on the Alibaba Cloud international site must use the CNNIC template. Other domains must use the general template.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>common</p>
          */
         public Builder registrantProfileType(String registrantProfileType) {
             this.putQueryParameter("RegistrantProfileType", registrantProfileType);
@@ -507,7 +601,17 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * RegistrantType.
+         * <p>Type of the registrant. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.  </li>
+         * <li><strong>2</strong>: Enterprise or organization.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.putQueryParameter("RegistrantType", registrantType);
@@ -516,7 +620,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * TelArea.
+         * <p>Telephone country code.</p>
+         * <blockquote>
+         * <p>For example, the telephone country code for China is <strong>86</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.putQueryParameter("TelArea", telArea);
@@ -525,7 +635,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * TelExt.
+         * <p>Extension number.</p>
+         * <blockquote>
+         * <p>This parameter is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder telExt(String telExt) {
             this.putQueryParameter("TelExt", telExt);
@@ -534,7 +650,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * Telephone.
+         * <p>Telephone number.  </p>
+         * <blockquote>
+         * <p>This parameter is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder telephone(String telephone) {
             this.putQueryParameter("Telephone", telephone);
@@ -543,7 +665,10 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -552,7 +677,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * ZhAddress.
+         * <p>Full address (in Chinese).</p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>朝阳区</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.putQueryParameter("ZhAddress", zhAddress);
@@ -561,7 +692,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * ZhCity.
+         * <p>City (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京市</p>
          */
         public Builder zhCity(String zhCity) {
             this.putQueryParameter("ZhCity", zhCity);
@@ -570,7 +707,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * ZhProvince.
+         * <p>Province (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com). It is available and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>北京</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.putQueryParameter("ZhProvince", zhProvince);
@@ -579,7 +722,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Domain name contact (in Chinese).  </p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. If this parameter is not provided, domain name registration will fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.putQueryParameter("ZhRegistrantName", zhRegistrantName);
@@ -588,7 +737,13 @@ public class SaveRegistrantProfileRealNameVerificationRequest extends Request {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Registrant name (in Chinese).</p>
+         * <blockquote>
+         * <p>This parameter applies only to the China site (aliyun.com). It is active and required only when the <strong>RegistrantProfileId</strong> parameter is not provided. Failure to provide it will cause domain registration to fail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.putQueryParameter("ZhRegistrantOrganization", zhRegistrantOrganization);

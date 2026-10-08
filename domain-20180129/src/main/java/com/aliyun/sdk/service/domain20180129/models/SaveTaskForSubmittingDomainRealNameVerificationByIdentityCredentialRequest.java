@@ -133,6 +133,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         } 
 
         /**
+         * <p>The domain names to be verified in bulk.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainName(java.util.List<String> domainName) {
@@ -142,6 +143,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
+         * <p>The Base64-encoded content of the identity credential file.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identityCredential(String identityCredential) {
@@ -151,6 +153,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
+         * <p>The ID number of the identity credential.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identityCredentialNo(String identityCredentialNo) {
@@ -160,6 +163,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
+         * <p>The type of the identity credential. Valid values: IDC, Passport, and OfficerAcademy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder identityCredentialType(String identityCredentialType) {
@@ -169,7 +173,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * Lang.
+         * <p>The response language. Valid values: zh-CN and en-US. The default is en-US.</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -178,7 +182,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByIdentityCredential
         }
 
         /**
-         * UserClientIp.
+         * <p>The client IP address.</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

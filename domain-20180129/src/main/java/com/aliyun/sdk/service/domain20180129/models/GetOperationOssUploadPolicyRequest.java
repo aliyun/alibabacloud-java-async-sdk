@@ -74,6 +74,8 @@ public class GetOperationOssUploadPolicyRequest extends Request {
         } 
 
         /**
+         * <p>Review type. Valid value:  </p>
+         * <p><strong>1</strong>: Offline domain name transfer.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +88,15 @@ public class GetOperationOssUploadPolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

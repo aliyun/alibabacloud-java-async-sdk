@@ -93,7 +93,7 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         } 
 
         /**
-         * ExistList.
+         * <p>List of emails for which verification messages already exist.</p>
          */
         public Builder existList(java.util.List<ExistList> existList) {
             this.existList = existList;
@@ -101,7 +101,7 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * FailList.
+         * <p>List of emails for which verification messages failed to send.</p>
          */
         public Builder failList(java.util.List<FailList> failList) {
             this.failList = failList;
@@ -109,7 +109,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2A8A5EF-DF8A-4C48-8FD4-9F6BD71AB26D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,7 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessList.
+         * <p>List of emails for which verification messages were sent successfully.</p>
          */
         public Builder successList(java.util.List<SuccessList> successList) {
             this.successList = successList;
@@ -196,7 +199,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendTokenQuotaExceeded</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -204,7 +210,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -212,7 +221,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of attempts allowed to send the email verification link is exceeded.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -292,7 +304,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SendTokenQuotaExceeded</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -300,7 +315,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -308,7 +326,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>The returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The maximum number of attempts allowed to send the email verification link is exceeded</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -388,7 +409,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -396,7 +420,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address for verification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:username@example.com">username@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -404,7 +431,10 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Returned message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;

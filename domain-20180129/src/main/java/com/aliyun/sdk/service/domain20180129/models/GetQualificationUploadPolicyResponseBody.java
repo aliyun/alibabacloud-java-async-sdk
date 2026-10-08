@@ -145,7 +145,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessid.
+         * <p>Access ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hObpgEXoca42****</p>
          */
         public Builder accessid(String accessid) {
             this.accessid = accessid;
@@ -153,7 +156,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Dir.
+         * <p>File path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211220/131953297274****_4de3db85-4f98-488d-845b-d75bf035b13d</p>
          */
         public Builder dir(String dir) {
             this.dir = dir;
@@ -161,7 +167,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Expire.
+         * <p>Expiration time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593688811881</p>
          */
         public Builder expire(String expire) {
             this.expire = expire;
@@ -169,7 +178,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Host.
+         * <p>OSS Endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://<strong><strong><strong><strong>-review.oss-cn-</strong></strong></strong></strong>.aliyuncs.com</p>
          */
         public Builder host(String host) {
             this.host = host;
@@ -177,7 +189,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>Encryption policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJleHBpcmF0aW9uIjoiMjAaMC0wNy0wMlQxKToyMDoxMS44ODRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNTI0Mjg4MDBdLFsic3RhcnRzLXdpdGgiLCIka2V5IiwiMTIxOTU0MTE2MTIxMzA1Ny9PRkZMSU5FX1RSQU5TRkVSLzE1OTM2ODg1MTE4ODMi****</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -185,7 +200,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Prefix.
+         * <p>File prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20211220/131953297274****<em>4de3db85-4f98-488d-845b-d75bf035b13d</em>${filename}</p>
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;
@@ -193,7 +211,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9DFCF6F8-243C-****-8035-4B12FEFD7D48</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +222,10 @@ public class GetQualificationUploadPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * <p>Signature data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pNVECGkyL0tl4bKXekV5ErZ****</p>
          */
         public Builder signature(String signature) {
             this.signature = signature;

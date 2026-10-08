@@ -67,7 +67,10 @@ public class SaveSingleTaskForSaveArtExtensionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2598CAF-DBFE-494E-95EF-B42A33C178AB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForSaveArtExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e893148f-6343-4ae1-9eba-6e2a4116e141</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

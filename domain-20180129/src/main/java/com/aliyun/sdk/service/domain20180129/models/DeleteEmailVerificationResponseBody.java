@@ -80,7 +80,7 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         } 
 
         /**
-         * FailList.
+         * <p>List of email addresses for which deletion failed.</p>
          */
         public Builder failList(java.util.List<FailList> failList) {
             this.failList = failList;
@@ -88,7 +88,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7A3D0E4A-0D4B-4BD0-90D7-A61DF8DD26AE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,7 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessList.
+         * <p>List of successfully deleted email addresses.</p>
          */
         public Builder successList(java.util.List<SuccessList> successList) {
             this.successList = successList;
@@ -175,7 +178,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ParameterIllegall</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -183,7 +189,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address for which deletion failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test1@aliyun.com">test1@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -191,7 +200,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Message returned upon failure to delete the email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Parameter error</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -271,7 +283,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>Returned code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -279,7 +294,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Email address that was successfully deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test2@aliyun.com">test2@aliyun.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -287,7 +305,10 @@ public class DeleteEmailVerificationResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * <p>Message returned upon successful deletion of the email address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder message(String message) {
                 this.message = message;

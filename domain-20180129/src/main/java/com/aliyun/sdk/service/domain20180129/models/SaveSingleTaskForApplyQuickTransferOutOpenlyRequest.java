@@ -88,6 +88,7 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends Request
         } 
 
         /**
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends Request
         }
 
         /**
-         * Lang.
+         * <p>The language of the returned error message. Valid values: zh (Chinese) and en (English). The default is en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +113,10 @@ public class SaveSingleTaskForApplyQuickTransferOutOpenlyRequest extends Request
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s client IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

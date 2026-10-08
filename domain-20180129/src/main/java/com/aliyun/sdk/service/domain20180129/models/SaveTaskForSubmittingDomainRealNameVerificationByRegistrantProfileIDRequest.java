@@ -118,6 +118,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         } 
 
         /**
+         * <p>The domain name to submit for real-name verification.</p>
          * <p>This parameter is required.</p>
          */
         public Builder domainName(String domainName) {
@@ -127,6 +128,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
+         * <p>The ID of the domain name instance.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceId(String instanceId) {
@@ -136,7 +138,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to return. Valid values: <code>zh</code> (Chinese) and <code>en</code> (English). Default value: <code>en</code>.</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -145,6 +147,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
+         * <p>The ID of the registrant profile to use for real-name verification.</p>
          * <p>This parameter is required.</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
@@ -154,7 +157,7 @@ public class SaveTaskForSubmittingDomainRealNameVerificationByRegistrantProfileI
         }
 
         /**
-         * UserClientIp.
+         * <p>The IP address of the client that makes the request.</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

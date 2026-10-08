@@ -67,7 +67,10 @@ public class SaveRegistrantProfileRealNameVerificationResponseBody extends TeaMo
         } 
 
         /**
-         * RegistrantProfileId.
+         * <p>The ID of the retrieved information template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567</p>
          */
         public Builder registrantProfileId(Long registrantProfileId) {
             this.registrantProfileId = registrantProfileId;
@@ -75,7 +78,10 @@ public class SaveRegistrantProfileRealNameVerificationResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4D73432C-7600-****-ACBB-C3B5CA145D32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

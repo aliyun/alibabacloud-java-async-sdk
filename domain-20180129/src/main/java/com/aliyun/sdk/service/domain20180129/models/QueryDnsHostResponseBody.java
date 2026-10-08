@@ -67,7 +67,7 @@ public class QueryDnsHostResponseBody extends TeaModel {
         } 
 
         /**
-         * DnsHostList.
+         * <p>A list of DNS hosts.</p>
          */
         public Builder dnsHostList(java.util.List<DnsHostList> dnsHostList) {
             this.dnsHostList = dnsHostList;
@@ -75,7 +75,10 @@ public class QueryDnsHostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>A unique ID for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18A313DD-3AF3-40AA-84F9-56BA45DC511F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class QueryDnsHostResponseBody extends TeaModel {
             } 
 
             /**
-             * DnsName.
+             * <p>The DNS name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ns3</p>
              */
             public Builder dnsName(String dnsName) {
                 this.dnsName = dnsName;
@@ -149,7 +155,7 @@ public class QueryDnsHostResponseBody extends TeaModel {
             }
 
             /**
-             * IpList.
+             * <p>A list of IP addresses.</p>
              */
             public Builder ipList(java.util.List<String> ipList) {
                 this.ipList = ipList;

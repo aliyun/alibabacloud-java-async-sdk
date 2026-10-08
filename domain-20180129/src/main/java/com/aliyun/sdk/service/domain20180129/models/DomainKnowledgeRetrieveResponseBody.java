@@ -67,7 +67,7 @@ public class DomainKnowledgeRetrieveResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of retrieve result.</p>
+         * <p>La liste des résultats récupérés.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DomainKnowledgeRetrieveResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>L\&quot;identifiant de la requête.</p>
          * 
          * <strong>example:</strong>
          * <p>019FABCB-6C7D-18FE-AA42-922BFC9555D9</p>
@@ -157,7 +157,7 @@ public class DomainKnowledgeRetrieveResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The score of the retrieved text; the higher the score, the more relevant the result.</p>
+             * <p>Le score du texte récupéré ; plus le score est élevé, plus le résultat est pertinent.</p>
              * 
              * <strong>example:</strong>
              * <p>0.6</p>
@@ -168,10 +168,10 @@ public class DomainKnowledgeRetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Source of retrieve results.</p>
+             * <p>La source des résultats récupérés.</p>
              * 
              * <strong>example:</strong>
-             * <p>Domestic Business Knowledge Base</p>
+             * <p>Base de connaissances de l\&quot;activité nationale</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -179,10 +179,10 @@ public class DomainKnowledgeRetrieveResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Retrieved text.</p>
+             * <p>Le texte récupéré.</p>
              * 
              * <strong>example:</strong>
-             * <p>On Alibaba Cloud&quot;s domestic website, domain name renewal can be done through the following methods.</p>
+             * <p>Sur le site national d\&quot;Alibaba Cloud, le renouvellement de nom de domaine peut être effectué via les méthodes suivantes</p>
              */
             public Builder text(String text) {
                 this.text = text;

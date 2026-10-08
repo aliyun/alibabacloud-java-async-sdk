@@ -115,7 +115,16 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
+         * <ul>
+         * <li><p>false (default): manual payment.</p>
+         * </li>
+         * <li><p>true: automatic payment.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -124,7 +133,10 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         }
 
         /**
-         * ContactId.
+         * <p>The contact ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13350500</p>
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -133,7 +145,10 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>appp16.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -142,7 +157,10 @@ public class CreateIntlFixedPriceDomainOrderRequest extends Request {
         }
 
         /**
-         * ExpectedPrice.
+         * <p>The expected price.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58.00</p>
          */
         public Builder expectedPrice(Long expectedPrice) {
             this.putQueryParameter("ExpectedPrice", expectedPrice);

@@ -54,7 +54,10 @@ public class SaveBatchDomainRemarkResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4189E320-961E-4786-8E15-0000</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

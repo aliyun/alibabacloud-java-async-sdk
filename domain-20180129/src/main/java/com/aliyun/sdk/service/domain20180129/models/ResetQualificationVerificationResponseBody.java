@@ -54,7 +54,10 @@ public class ResetQualificationVerificationResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6CB3623-4726-4947-AC2B-2C6E673B447C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

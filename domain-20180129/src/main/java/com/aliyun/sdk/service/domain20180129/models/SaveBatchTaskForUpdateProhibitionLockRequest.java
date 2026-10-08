@@ -103,6 +103,7 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         } 
 
         /**
+         * <p>The domain names.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +116,17 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error message to be returned. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,6 +135,13 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable or disable the update prohibition lock. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: enables the lock.</p>
+         * </li>
+         * <li><p><strong>false</strong>: disables the lock.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -136,7 +154,10 @@ public class SaveBatchTaskForUpdateProhibitionLockRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

@@ -87,7 +87,10 @@ public class QueryServerLockRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * <p>Domain instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20181*****85212</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -96,7 +99,15 @@ public class QueryServerLockRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -105,7 +116,10 @@ public class QueryServerLockRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address. You can set it to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

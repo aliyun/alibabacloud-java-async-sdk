@@ -254,6 +254,9 @@ public class DomainSpecialBizCancelResponseBody extends TeaModel {
 
         /**
          * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>参数错误</p>
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;

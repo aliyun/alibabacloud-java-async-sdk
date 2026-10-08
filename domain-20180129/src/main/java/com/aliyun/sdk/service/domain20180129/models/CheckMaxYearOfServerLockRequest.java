@@ -103,6 +103,11 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         } 
 
         /**
+         * <p>Type of purchase operation. Valid values:</p>
+         * <ul>
+         * <li>activate: new registration</li>
+         * <li>renew: renewal</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,6 +120,7 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         }
 
         /**
+         * <p>The domain name to be checked.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,7 +133,15 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of error messages returned by the API. Valid values:</p>
+         * <ul>
+         * <li>zh: Chinese</li>
+         * <li>en: English</li>
+         * </ul>
+         * <p>Default value: en.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +150,10 @@ public class CheckMaxYearOfServerLockRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

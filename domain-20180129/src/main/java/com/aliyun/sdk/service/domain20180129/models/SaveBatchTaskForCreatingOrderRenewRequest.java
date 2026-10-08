@@ -144,7 +144,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         } 
 
         /**
-         * CouponNo.
+         * <p>The coupon ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12312412</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -153,7 +156,17 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of the error messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -162,6 +175,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
+         * <p>The parameters for each domain name to be renewed.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderRenewParam(java.util.List<OrderRenewParam> orderRenewParam) {
@@ -171,7 +185,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>The promotion ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123123</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -180,7 +197,16 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: Do not use a coupon.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Use a coupon.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -189,7 +215,16 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Specifies whether to use a promotion. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: Do not use a promotion.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Use a promotion.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -198,7 +233,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -292,7 +330,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             } 
 
             /**
-             * CurrentExpirationDate.
+             * <p>The current expiration date of the domain name, expressed in milliseconds since 00:00:00 UTC on January 1, 1970.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522080000000</p>
              */
             public Builder currentExpirationDate(Long currentExpirationDate) {
                 this.currentExpirationDate = currentExpirationDate;
@@ -300,7 +341,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name that you want to renew. You can obtain a list of your domain names by calling the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> operation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -308,7 +352,7 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             }
 
             /**
-             * PermitPremiumRenew.
+             * <p>Specifies whether to allow the renewal of premium domain names. Default value: false.</p>
              */
             public Builder permitPremiumRenew(Boolean permitPremiumRenew) {
                 this.permitPremiumRenew = permitPremiumRenew;
@@ -316,7 +360,10 @@ public class SaveBatchTaskForCreatingOrderRenewRequest extends Request {
             }
 
             /**
-             * SubscriptionDuration.
+             * <p>The renewal duration, in years. Default value: <strong>1</strong>. Valid values: <strong>1</strong> to <strong>10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder subscriptionDuration(Integer subscriptionDuration) {
                 this.subscriptionDuration = subscriptionDuration;

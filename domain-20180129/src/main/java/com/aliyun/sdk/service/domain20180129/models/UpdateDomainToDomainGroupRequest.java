@@ -146,6 +146,13 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         } 
 
         /**
+         * <p>The data source for the domain names. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: custom input.</p>
+         * </li>
+         * <li><p><strong>2</strong>: file upload.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,6 +165,7 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the domain name group. Call the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> API to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +178,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>An array of domain names. This parameter is required when DataSource is set to 1 (custom input).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(java.util.List<String> domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -179,7 +190,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * FileToUpload.
+         * <p>The Base64-encoded content of a file. This parameter is required if you set DataSource to 2. The file must be in <strong>.xls</strong> or <strong>.xlsx</strong> format, contain one domain name per line, and not exceed 2 MB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dGVzdA==</p>
          */
         public Builder fileToUpload(String fileToUpload) {
             this.putBodyParameter("FileToUpload", fileToUpload);
@@ -188,7 +202,17 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of API error messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese</p>
+         * </li>
+         * <li><p><strong>en</strong>: English</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -197,6 +221,13 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to replace the existing domain names in the group. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: Adds the new domain names to the group.</p>
+         * </li>
+         * <li><p><strong>true</strong>: Replaces all existing domain names in the group with the new ones.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -209,7 +240,10 @@ public class UpdateDomainToDomainGroupRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user IP address. You can set this parameter to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

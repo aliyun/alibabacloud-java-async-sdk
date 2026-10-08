@@ -88,6 +88,7 @@ public class QueryDomainByInstanceIdRequest extends Request {
         } 
 
         /**
+         * <p>The domain instance ID. Call the <a href="https://help.aliyun.com/document_detail/67712.html">QueryDomainList</a> API to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,17 @@ public class QueryDomainByInstanceIdRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>The language of API error messages. Valid values:</p>
+         * <ul>
+         * <li><p><strong>zh</strong>: Chinese.</p>
+         * </li>
+         * <li><p><strong>en</strong>: English.</p>
+         * </li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -109,7 +120,10 @@ public class QueryDomainByInstanceIdRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>The user\&quot;s IP address. You can use <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);

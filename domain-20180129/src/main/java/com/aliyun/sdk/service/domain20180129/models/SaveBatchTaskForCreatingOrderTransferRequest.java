@@ -144,7 +144,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         } 
 
         /**
-         * CouponNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -153,7 +156,15 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:</p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.</li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value is <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -162,6 +173,7 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
+         * <p>List of job details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder orderTransferParam(java.util.List<OrderTransferParam> orderTransferParam) {
@@ -171,7 +183,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * PromotionNo.
+         * <p>Coupon number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123123</p>
          */
         public Builder promotionNo(String promotionNo) {
             this.putQueryParameter("PromotionNo", promotionNo);
@@ -180,7 +195,14 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UseCoupon.
+         * <p>Is a coupon used? Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: No.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder useCoupon(Boolean useCoupon) {
             this.putQueryParameter("UseCoupon", useCoupon);
@@ -189,7 +211,14 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UsePromotion.
+         * <p>Whether to use a coupon. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong>: Do not use.</li>
+         * <li><strong>true</strong>: Use.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder usePromotion(Boolean usePromotion) {
             this.putQueryParameter("UsePromotion", usePromotion);
@@ -198,7 +227,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * <p>User IP address, which can be set to <strong>127.0.0.1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>127.0.0.1</p>
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -292,7 +324,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
             } 
 
             /**
-             * AuthorizationCode.
+             * <p>Domain name transfer-in password. If multiple domain names are involved, pass the passwords as a list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testCode</p>
              */
             public Builder authorizationCode(String authorizationCode) {
                 this.authorizationCode = authorizationCode;
@@ -300,7 +335,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name. If multiple domain names are involved, pass them as a list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -308,7 +346,15 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
             }
 
             /**
-             * PermitPremiumTransfer.
+             * <p>Is transfer-in of premium domain names allowed? Valid values:</p>
+             * <ul>
+             * <li><strong>false</strong>: Allowed.</li>
+             * <li><strong>true</strong>: Not allowed.</li>
+             * </ul>
+             * <p>Default value: <strong>false</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder permitPremiumTransfer(Boolean permitPremiumTransfer) {
                 this.permitPremiumTransfer = permitPremiumTransfer;
@@ -316,7 +362,10 @@ public class SaveBatchTaskForCreatingOrderTransferRequest extends Request {
             }
 
             /**
-             * RegistrantProfileId.
+             * <p>ID of an identity-verified domain name registrant profile. You can obtain this ID by invoking the <a href="https://help.aliyun.com/document_detail/69359.htm?spm=a2c4g.11186623.0.0.5096253c12PfdB">QueryRegistrantProfileRealNameVerificationInfo</a> API.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder registrantProfileId(Long registrantProfileId) {
                 this.registrantProfileId = registrantProfileId;

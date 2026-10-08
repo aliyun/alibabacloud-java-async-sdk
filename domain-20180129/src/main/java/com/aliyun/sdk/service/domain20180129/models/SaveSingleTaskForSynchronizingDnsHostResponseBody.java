@@ -67,7 +67,10 @@ public class SaveSingleTaskForSynchronizingDnsHostResponseBody extends TeaModel 
         } 
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0F1B3547-BE50-4206-8F78-9540FFB85BC1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,10 @@ public class SaveSingleTaskForSynchronizingDnsHostResponseBody extends TeaModel 
         }
 
         /**
-         * TaskNo.
+         * <p>Job number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e9b8e8b4-7334-4548-9cec-c30b6891f292</p>
          */
         public Builder taskNo(String taskNo) {
             this.taskNo = taskNo;

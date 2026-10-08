@@ -101,7 +101,10 @@ public class QueryIntlFixedPriceOrderListRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * <p>The business ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T2024061115213700****</p>
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -110,7 +113,10 @@ public class QueryIntlFixedPriceOrderListRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -119,7 +125,10 @@ public class QueryIntlFixedPriceOrderListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -128,7 +137,10 @@ public class QueryIntlFixedPriceOrderListRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The order status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder status(Long status) {
             this.putQueryParameter("Status", status);

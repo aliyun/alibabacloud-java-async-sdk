@@ -67,7 +67,7 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
         } 
 
         /**
-         * Data.
+         * <p>List of reasons for identity verification failure.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1F1BA893-AD33-4248-8CB8-1657E3733052</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
             } 
 
             /**
-             * Date.
+             * <p>Date.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-03-17 11:08:02</p>
              */
             public Builder date(String date) {
                 this.date = date;
@@ -162,7 +168,16 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
             }
 
             /**
-             * DomainNameVerificationStatus.
+             * <p>Review Status. Valid values:  </p>
+             * <ul>
+             * <li><strong>NONAUDIT</strong>: Not authenticated.  </li>
+             * <li><strong>SUCCEED</strong>: Succeeded.  </li>
+             * <li><strong>FAILED</strong>: Review failed.  </li>
+             * <li><strong>AUDITING</strong>: Under review.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SUCCEED</p>
              */
             public Builder domainNameVerificationStatus(String domainNameVerificationStatus) {
                 this.domainNameVerificationStatus = domainNameVerificationStatus;
@@ -170,7 +185,10 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
             }
 
             /**
-             * FailReason.
+             * <p>Reason for real-name verification failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>审核失败，所有者（中文）字段必须包含中文字符。</p>
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;

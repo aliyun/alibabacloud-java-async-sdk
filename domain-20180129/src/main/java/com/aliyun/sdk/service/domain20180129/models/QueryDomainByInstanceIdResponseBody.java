@@ -538,7 +538,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainGroupId.
+         * <p>The ID of the domain name group. You can call the <a href="https://help.aliyun.com/document_detail/69362.html">QueryDomainGroupList</a> operation to obtain the ID of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder domainGroupId(Long domainGroupId) {
             this.domainGroupId = domainGroupId;
@@ -546,7 +549,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainGroupName.
+         * <p>The name of the domain name group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试分组</p>
          */
         public Builder domainGroupName(String domainGroupName) {
             this.domainGroupName = domainGroupName;
@@ -562,7 +568,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -570,7 +579,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNameProxyService.
+         * <p>Indicates whether the domain name privacy protection service is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder domainNameProxyService(Boolean domainNameProxyService) {
             this.domainNameProxyService = domainNameProxyService;
@@ -578,7 +590,20 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNameVerificationStatus.
+         * <p>The status of the domain name review. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONAUDIT</strong>: The domain name is not verified.</p>
+         * </li>
+         * <li><p><strong>SUCCEED</strong>: The domain name is verified.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: The domain name fails to be verified.</p>
+         * </li>
+         * <li><p><strong>AUDITING</strong>: The domain name is being verified.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NONAUDIT</p>
          */
         public Builder domainNameVerificationStatus(String domainNameVerificationStatus) {
             this.domainNameVerificationStatus = domainNameVerificationStatus;
@@ -586,7 +611,18 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainStatus.
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><p>1: The domain name needs to be renewed.</p>
+         * </li>
+         * <li><p>2: The domain name needs to be redeemed.</p>
+         * </li>
+         * <li><p>3: The domain name is normal.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.domainStatus = domainStatus;
@@ -594,7 +630,18 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * DomainType.
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li><p>New gTLD.</p>
+         * </li>
+         * <li><p>gTLD.</p>
+         * </li>
+         * <li><p>ccTLD.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>gTLD</p>
          */
         public Builder domainType(String domainType) {
             this.domainType = domainType;
@@ -602,7 +649,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Email.
+         * <p>The email address of the domain name registrant.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -610,7 +660,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * EmailVerificationClientHold.
+         * <p>Indicates whether the DNS resolution for the domain name is suspended. Valid values:</p>
+         * <ul>
+         * <li><p><strong>false</strong>: The DNS resolution for the domain name is not suspended.</p>
+         * </li>
+         * <li><p><strong>true</strong>: The DNS resolution for the domain name is suspended.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder emailVerificationClientHold(Boolean emailVerificationClientHold) {
             this.emailVerificationClientHold = emailVerificationClientHold;
@@ -618,7 +677,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * EmailVerificationStatus.
+         * <p>Indicates whether the email address of the domain name registrant is verified. Valid values:</p>
+         * <ul>
+         * <li><p><strong>0</strong>: The email address is not verified.</p>
+         * </li>
+         * <li><p><strong>1</strong>: The email address is verified.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder emailVerificationStatus(Integer emailVerificationStatus) {
             this.emailVerificationStatus = emailVerificationStatus;
@@ -626,7 +694,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationCurrDateDiff.
+         * <p>The number of days from the expiration date to the current date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>356</p>
          */
         public Builder expirationCurrDateDiff(Integer expirationCurrDateDiff) {
             this.expirationCurrDateDiff = expirationCurrDateDiff;
@@ -634,7 +705,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDate.
+         * <p>The expiration date of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-12-07 17:02:13</p>
          */
         public Builder expirationDate(String expirationDate) {
             this.expirationDate = expirationDate;
@@ -642,7 +716,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDateLong.
+         * <p>The expiration timestamp of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625111915000</p>
          */
         public Builder expirationDateLong(Long expirationDateLong) {
             this.expirationDateLong = expirationDateLong;
@@ -650,7 +727,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ExpirationDateStatus.
+         * <p>The expiration status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: The domain name has not expired.</p>
+         * </li>
+         * <li><p><strong>2</strong>: The domain name has expired.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder expirationDateStatus(String expirationDateStatus) {
             this.expirationDateStatus = expirationDateStatus;
@@ -658,7 +744,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The instance ID of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>S20179H1BBI9test</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -666,7 +755,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Premium.
+         * <p>Indicates whether the domain name is a premium domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>true</strong>: a premium domain name.</p>
+         * </li>
+         * <li><p><strong>false</strong>: not a premium domain name.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder premium(Boolean premium) {
             this.premium = premium;
@@ -682,7 +780,23 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RealNameStatus.
+         * <p>The real-name verification status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONAUDIT</strong>: The real-name verification is not performed.</p>
+         * </li>
+         * <li><p><strong>SUCCEED</strong>: The real-name verification is successful.</p>
+         * </li>
+         * <li><p><strong>FAILED</strong>: The real-name verification fails.</p>
+         * </li>
+         * <li><p><strong>AUDITING</strong>: The real-name verification is in progress.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The real-name verification status of a domain name is a composite status of domain name review and real-name verification. The real-name verification of a domain name is successful only when both the domain name review and real-name verification are successful.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>NONAUDIT</p>
          */
         public Builder realNameStatus(String realNameStatus) {
             this.realNameStatus = realNameStatus;
@@ -690,7 +804,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantName.
+         * <p>The name of the contact person.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test litm</p>
          */
         public Builder registrantName(String registrantName) {
             this.registrantName = registrantName;
@@ -698,7 +815,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>The registrant of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test litm</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.registrantOrganization = registrantOrganization;
@@ -706,7 +826,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantType.
+         * <p>The type of the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><p><strong>1</strong>: an individual.</p>
+         * </li>
+         * <li><p><strong>2</strong>: an enterprise.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder registrantType(String registrantType) {
             this.registrantType = registrantType;
@@ -714,7 +843,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantUpdatingStatus.
+         * <p>The status of the domain name registrant. Valid values:</p>
+         * <ul>
+         * <li><p><strong>PENDING</strong>: The information about the domain name registrant is being modified.</p>
+         * </li>
+         * <li><p><strong>NORMAL</strong>: The information about the domain name registrant is not being modified.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder registrantUpdatingStatus(String registrantUpdatingStatus) {
             this.registrantUpdatingStatus = registrantUpdatingStatus;
@@ -722,7 +860,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrationDate.
+         * <p>The registration date of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-07 17:02:13</p>
          */
         public Builder registrationDate(String registrationDate) {
             this.registrationDate = registrationDate;
@@ -730,7 +871,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrationDateLong.
+         * <p>The registration timestamp of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625111915000</p>
          */
         public Builder registrationDateLong(Long registrationDateLong) {
             this.registrationDateLong = registrationDateLong;
@@ -738,7 +882,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Remark.
+         * <p>The remarks of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试备注</p>
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -746,7 +893,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23C9B3C4-9E2C-4405-A88D-BD33E459D140</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -754,7 +904,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmw6bpc6n7zai</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -770,7 +923,16 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * TransferOutStatus.
+         * <p>The status of the domain name transfer. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NORMAL</strong>: The domain name is not being transferred out of Alibaba Cloud.</p>
+         * </li>
+         * <li><p><strong>PENDING</strong>: The domain name is being transferred out of Alibaba Cloud.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         public Builder transferOutStatus(String transferOutStatus) {
             this.transferOutStatus = transferOutStatus;
@@ -778,7 +940,18 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * TransferProhibitionLock.
+         * <p>The status of the domain name transfer lock. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONE_SETTING</strong>: The domain name transfer lock is not enabled.</p>
+         * </li>
+         * <li><p><strong>OPEN</strong>: The domain name transfer lock is enabled.</p>
+         * </li>
+         * <li><p><strong>CLOSE</strong>: The domain name transfer lock is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOSE</p>
          */
         public Builder transferProhibitionLock(String transferProhibitionLock) {
             this.transferProhibitionLock = transferProhibitionLock;
@@ -786,7 +959,18 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateProhibitionLock.
+         * <p>The status of the security lock for the domain name. Valid values:</p>
+         * <ul>
+         * <li><p><strong>NONE_SETTING</strong>: The security lock is not enabled.</p>
+         * </li>
+         * <li><p><strong>OPEN</strong>: The security lock is enabled.</p>
+         * </li>
+         * <li><p><strong>CLOSE</strong>: The security lock is disabled.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CLOSE</p>
          */
         public Builder updateProhibitionLock(String updateProhibitionLock) {
             this.updateProhibitionLock = updateProhibitionLock;
@@ -794,7 +978,10 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * <p>The user ID (UID) of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>121000000****</p>
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -802,7 +989,13 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>The contact person in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.zhRegistrantName = zhRegistrantName;
@@ -810,7 +1003,13 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>The registrant of the domain name in Chinese.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to the China site.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>李四</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.zhRegistrantOrganization = zhRegistrantOrganization;

@@ -275,7 +275,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * Address.
+         * <p>Mailing address (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xi hu qu *** jiedao *** xiaoqu *** zhuang 101</p>
          */
         public Builder address(String address) {
             this.address = address;
@@ -283,7 +286,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * City.
+         * <p>City (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hang zhou shi</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -291,7 +297,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Country.
+         * <p>Country code. For example, <strong>CN</strong> represents China and <strong>US</strong> represents the United States.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder country(String country) {
             this.country = country;
@@ -299,7 +308,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * CreateDate.
+         * <p>Domain registration date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-03-20 11:37:29</p>
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -307,7 +319,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Email.
+         * <p>Mailbox.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:username@example.com">username@example.com</a></p>
          */
         public Builder email(String email) {
             this.email = email;
@@ -315,7 +330,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PostalCode.
+         * <p>Postal code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>310024</p>
          */
         public Builder postalCode(String postalCode) {
             this.postalCode = postalCode;
@@ -323,7 +341,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Province.
+         * <p>Province (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhe jiang</p>
          */
         public Builder province(String province) {
             this.province = province;
@@ -331,7 +352,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantName.
+         * <p>Contact name (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder registrantName(String registrantName) {
             this.registrantName = registrantName;
@@ -339,7 +363,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrantOrganization.
+         * <p>Registrant name (English).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhang san</p>
          */
         public Builder registrantOrganization(String registrantOrganization) {
             this.registrantOrganization = registrantOrganization;
@@ -347,7 +374,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Unique request access token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C39ECA8A-BB5E-4F92-B013-6A032FA06B04</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -355,7 +385,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TelArea.
+         * <p>The country code for the telephone number. For example, the country code for China is <strong>86</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86</p>
          */
         public Builder telArea(String telArea) {
             this.telArea = telArea;
@@ -363,7 +396,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TelExt.
+         * <p>Telephone extension number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234</p>
          */
         public Builder telExt(String telExt) {
             this.telExt = telExt;
@@ -371,7 +407,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Telephone.
+         * <p>Telephone number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1820000****</p>
          */
         public Builder telephone(String telephone) {
             this.telephone = telephone;
@@ -379,7 +418,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZhAddress.
+         * <p>Mailing address (in Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>西湖区<em><strong>街道</strong></em>小区***幢101</p>
          */
         public Builder zhAddress(String zhAddress) {
             this.zhAddress = zhAddress;
@@ -387,7 +429,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZhCity.
+         * <p>City (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
          */
         public Builder zhCity(String zhCity) {
             this.zhCity = zhCity;
@@ -395,7 +440,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZhProvince.
+         * <p>Province (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江</p>
          */
         public Builder zhProvince(String zhProvince) {
             this.zhProvince = zhProvince;
@@ -403,7 +451,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantName.
+         * <p>Contact name (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder zhRegistrantName(String zhRegistrantName) {
             this.zhRegistrantName = zhRegistrantName;
@@ -411,7 +462,10 @@ public class QueryContactInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ZhRegistrantOrganization.
+         * <p>Registrant name (Chinese).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>张三</p>
          */
         public Builder zhRegistrantOrganization(String zhRegistrantOrganization) {
             this.zhRegistrantOrganization = zhRegistrantOrganization;

@@ -115,7 +115,10 @@ public class SubmitOperationCredentialsRequest extends Request {
         } 
 
         /**
-         * AuditRecordId.
+         * <p>Review record ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditRecordId(Long auditRecordId) {
             this.putQueryParameter("AuditRecordId", auditRecordId);
@@ -124,7 +127,10 @@ public class SubmitOperationCredentialsRequest extends Request {
         }
 
         /**
-         * AuditType.
+         * <p>Review type. Valid value:<br><strong>1</strong>: Offline domain name transfer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder auditType(Integer auditType) {
             this.putQueryParameter("AuditType", auditType);
@@ -133,7 +139,7 @@ public class SubmitOperationCredentialsRequest extends Request {
         }
 
         /**
-         * Credentials.
+         * <p>Certificate materials pending review.</p>
          */
         public Builder credentials(String credentials) {
             this.putQueryParameter("Credentials", credentials);
@@ -142,7 +148,15 @@ public class SubmitOperationCredentialsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * <p>Language of the error message returned by the API. Valid values:  </p>
+         * <ul>
+         * <li><strong>zh</strong>: Chinese.  </li>
+         * <li><strong>en</strong>: English.</li>
+         * </ul>
+         * <p>Default value: <strong>en</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +165,14 @@ public class SubmitOperationCredentialsRequest extends Request {
         }
 
         /**
-         * RegType.
+         * <p>Registrant type. Valid values:  </p>
+         * <ul>
+         * <li><strong>1</strong>: Individual.  </li>
+         * <li><strong>2</strong>: Enterprise.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder regType(Integer regType) {
             this.putQueryParameter("RegType", regType);
