@@ -119,7 +119,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -130,7 +130,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the change process.</p>
+         * <p>The information about the change order.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error code that is returned.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -149,7 +149,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -171,7 +171,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trace.</p>
+         * <p>The ID of the call chain.</p>
          * 
          * <strong>example:</strong>
          * <p>210f07bf1640239405712621******</p>
@@ -227,7 +227,7 @@ public class AbortAndRollbackChangeOrderResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the change process.</p>
+             * <p>The ID of the change order.</p>
              * 
              * <strong>example:</strong>
              * <p>4f40e616-cdcd-4250-a018-efd459******</p>

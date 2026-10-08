@@ -59,7 +59,7 @@ public class ListUserDefineRegionRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether remote debugging is allowed.</p>
+         * <p>Indicates whether remote debugging is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

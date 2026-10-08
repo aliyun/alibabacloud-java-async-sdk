@@ -93,7 +93,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster data that is returned by page.</p>
+         * <p>The paginated list of clusters.</p>
          */
         public Builder clusterPage(ClusterPage clusterPage) {
             this.clusterPage = clusterPage;
@@ -101,7 +101,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status of the call or a POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C3CE915C-0C83-4AA5-8D66-E8BEED62939E</p>
@@ -387,10 +387,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>81453e4b-4df0-4592-<strong><strong>-b835a2ee</strong></strong></p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -398,17 +395,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The import state of the cluster. Valid values:</p>
-             * <ul>
-             * <li>0: The cluster is not imported.</li>
-             * <li>1: The cluster is imported.</li>
-             * <li>2: The cluster fails to be imported.</li>
-             * <li>3: The cluster is being imported.</li>
-             * <li>4: The cluster is deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ClusterImportStatus.
              */
             public Builder clusterImportStatus(Integer clusterImportStatus) {
                 this.clusterImportStatus = clusterImportStatus;
@@ -416,10 +403,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -427,15 +411,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the cluster. Valid values:</p>
-             * <ul>
-             * <li>1: The cluster runs as expected.</li>
-             * <li>2: The cluster does not run as expected.</li>
-             * <li>3: The cluster is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ClusterStatus.
              */
             public Builder clusterStatus(Integer clusterStatus) {
                 this.clusterStatus = clusterStatus;
@@ -443,14 +419,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values:</p>
-             * <ul>
-             * <li>2: Elastic Compute Service (ECS) cluster</li>
-             * <li>5: ACK cluster or Serverless Kubernetes cluster</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * ClusterType.
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -458,10 +427,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -469,10 +435,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ACK cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2ce62869f4d4466b920312315f05****</p>
+             * CsClusterId.
              */
             public Builder csClusterId(String csClusterId) {
                 this.csClusterId = csClusterId;
@@ -480,22 +443,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the ACK cluster. Valid values:</p>
-             * <ul>
-             * <li>initial: The cluster is being initialized.</li>
-             * <li>failed: The cluster fails to be created.</li>
-             * <li>running: The cluster is running.</li>
-             * <li>updating: The cluster is being updated.</li>
-             * <li>scaling: The cluster is being scaled out.</li>
-             * <li>removing: Nodes are being removed from the cluster.</li>
-             * <li>upgrading: The cluster is being upgraded.</li>
-             * <li>deleting: The cluster is being deleted.</li>
-             * <li>delete_failed: The cluster fails to be deleted.</li>
-             * <li>deleted: The cluster is deleted. The deleted cluster is invisible to users.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * CsClusterStatus.
              */
             public Builder csClusterStatus(String csClusterStatus) {
                 this.csClusterStatus = csClusterStatus;
@@ -503,10 +451,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -514,10 +459,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2048</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -525,14 +467,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. Valid values:</p>
-             * <ul>
-             * <li>1: classic network</li>
-             * <li>2: VPC</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * NetworkMode.
              */
             public Builder networkMode(Integer networkMode) {
                 this.networkMode = networkMode;
@@ -540,10 +475,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of nodes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * NodeNum.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -551,10 +483,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -562,14 +491,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The subtype of the cluster. Valid values:</p>
-             * <ul>
-             * <li>Ask: Serverless Kubernetes cluster</li>
-             * <li>ManagedKubernetes: ACK cluster</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Ask</p>
+             * SubClusterType.
              */
             public Builder subClusterType(String subClusterType) {
                 this.subClusterType = subClusterType;
@@ -577,10 +499,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CIDR block of the subnet.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.20.0.0/16</p>
+             * SubNetCidr.
              */
             public Builder subNetCidr(String subNetCidr) {
                 this.subNetCidr = subNetCidr;
@@ -588,10 +507,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-<strong>z1mlwpbjx3e9m</strong></p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -599,10 +515,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp1uf97<strong><strong>xjxgip</strong></strong></p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -749,7 +662,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of clusters.</p>
+             * ClusterList.
              */
             public Builder clusterList(ClusterList clusterList) {
                 this.clusterList = clusterList;
@@ -757,7 +670,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of the returned page. Default value: 1.</p>
+             * <p>The number of the returned page. The default value is 1.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -768,7 +681,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned per page. Default value: 1000.</p>
+             * <p>The number of entries returned per page. The default value is 1000.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -779,7 +692,7 @@ public class GetK8sClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages that are returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>5</p>

@@ -115,7 +115,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about historical deployment packages.</p>
+         * PackageVersionList.
          */
         public Builder packageVersionList(PackageVersionList packageVersionList) {
             this.packageVersionList = packageVersionList;
@@ -283,10 +283,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -294,10 +291,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment package was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573627440892</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -305,10 +299,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the deployment package.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>deploy</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -316,10 +307,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the deployment package.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -327,10 +315,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0</p>
+             * PackageVersion.
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -338,7 +323,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package.</p>
+             * PublicUrl.
              */
             public Builder publicUrl(String publicUrl) {
                 this.publicUrl = publicUrl;
@@ -346,14 +331,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment mode of the application. Valid values:</p>
-             * <ul>
-             * <li>url: The application is deployed by using a JAR or WAR package.</li>
-             * <li>image: The application is deployed by using an image.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>url</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -361,10 +339,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment package was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573627440892</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -372,7 +347,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package.</p>
+             * WarUrl.
              */
             public Builder warUrl(String warUrl) {
                 this.warUrl = warUrl;
@@ -426,10 +401,7 @@ public class ListHistoryDeployVersionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the application that was released by using the deployment package. This version can be used to call the RollbackApplication operation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0</p>
+             * PackageVersion.
              */
             public Builder packageVersion(java.util.List<PackageVersion> packageVersion) {
                 this.packageVersion = packageVersion;

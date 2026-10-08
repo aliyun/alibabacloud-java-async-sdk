@@ -104,7 +104,7 @@ public class BindK8sSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class BindK8sSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The message that is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

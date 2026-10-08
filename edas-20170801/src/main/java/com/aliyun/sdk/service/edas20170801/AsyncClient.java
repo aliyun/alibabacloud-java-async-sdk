@@ -269,6 +269,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeApplicationScalingRulesResponse> describeApplicationScalingRules(DescribeApplicationScalingRulesRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>Currently, only deployment resources can be modified.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeLocalitySetting  DescribeLocalitySettingRequest
      * @return DescribeLocalitySettingResponse
      */
@@ -418,7 +423,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation provided by Enterprise Distributed Application Service (EDAS).</p>
+     * <p>To create an application in a Kubernetes cluster, call the InsertK8sApplication operation.</p>
      * </blockquote>
      * 
      * @param request the request parameters of InsertApplication  InsertApplicationRequest
@@ -712,14 +717,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>We recommend that you do not call this operation. Instead, we recommend that you call the TransformClusterMember operation. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
-     * When you call this operation to import an Elastic Compute Service (ECS) instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * <blockquote>
+     * <p>For application deployment in a container service Kubernetes cluster imported to Enterprise Distributed Application Service (EDAS), use the DeployK8sApplication operation provided by EDAS. For more information, see <a href="https://help.aliyun.com/document_detail/149420.html">DeployK8sApplication</a>.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of MigrateApplication  MigrateApplicationRequest
+     * @return MigrateApplicationResponse
+     */
+    CompletableFuture<MigrateApplicationResponse> migrateApplication(MigrateApplicationRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>Usage notes</h2>
+     * <p>This API operation is deprecated. Use the TransformClusterMember operation instead. For more information, see <a href="https://help.aliyun.com/document_detail/71514.html">TransformClusterMember</a>.
+     * This operation imports an Elastic Compute Service (ECS) instance and reinstalls its operating system. This process deletes all data on the instance. You must also reset the logon password. Before you import an instance, back up its data or make sure it contains no important data.</p>
      * <h2>Terms</h2>
      * <ul>
-     * <li><strong>Namespace</strong>: the logical concept that is used to isolate resources and microservices in Enterprise Distributed Application Service (EDAS). The resources include clusters, ECS instances, and applications. You can use a default or custom namespace. Each region has a default namespace and supports multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources or microservices.</li>
-     * <li><strong>ECU</strong>: After an ECS instance is imported to a cluster, the instance becomes an ECU.</li>
-     * <li><strong>Elastic compute container (ECC)</strong>: After you deploy an application to an ECU in a cluster, the ECU becomes an ECC.</li>
+     * <li><strong>Namespace</strong>: A logical concept in Enterprise Distributed Application Service (EDAS) used to isolate resources and microservices. Resources include clusters, ECS instances, and applications. Namespaces can be default or custom. Each region has one default namespace and can have multiple custom namespaces. By default, only the default namespace is available. You do not need to create a custom namespace if you do not want to isolate resources and microservices.</li>
+     * <li><strong>ECU</strong>: An ECS instance becomes an Elastic Compute Unit (ECU) after it is imported into a cluster.</li>
+     * <li><strong>ECC</strong>: An ECU in a cluster becomes an Elastic Compute Container (ECC) after it is deployed in an application.</li>
      * </ul>
      * 
      * @param request the request parameters of MigrateEcu  MigrateEcuRequest
@@ -889,8 +905,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Limits</h2>
-     * <p>When you call this operation to import an ECS instance, the operating system of the ECS instance is reinstalled. After the operating system is reinstalled, all data of the ECS instance is deleted. You must set a logon password for the ECS instance. Make sure that no important data exists on or data has been backed up for the ECS instance that you want to import.</p>
+     * <h2>Limitations</h2>
+     * <p>Calling this API to import an ECS instance reinstalls its operating system. This process deletes all data on the instance and requires you to reset the logon password. Before you import the instance, back up any important data.</p>
      * 
      * @param request the request parameters of TransformClusterMember  TransformClusterMemberRequest
      * @return TransformClusterMemberResponse
@@ -1023,6 +1039,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateK8sSlbResponse> updateK8sSlb(UpdateK8sSlbRequest request);
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This operation modifies only Deployment resources.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of UpdateLocalitySetting  UpdateLocalitySettingRequest
      * @return UpdateLocalitySettingResponse
      */

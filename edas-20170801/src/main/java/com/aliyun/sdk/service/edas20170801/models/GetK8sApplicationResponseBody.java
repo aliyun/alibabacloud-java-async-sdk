@@ -93,7 +93,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the application.</p>
+         * <p>The application information.</p>
          */
         public Builder applcation(Applcation applcation) {
             this.applcation = applcation;
@@ -101,7 +101,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1053-08e4-47a5-b2ab-5c0323de7b5a</p>
@@ -246,10 +246,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the environment variable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>CATALINA_OPTS</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -257,10 +254,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the environment variable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>-Xmx 1024m -Dhsf.default.tid=false $(EDAS_CATALINA_OPTS)</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -823,7 +817,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The annotation of an application pod.</p>
+             * <p>The annotations of the application pod.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;test-annokey&quot;:&quot;test-annovalue&quot;}</p>
@@ -834,7 +828,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+             * <p>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong></p>
@@ -856,7 +850,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the application.</p>
+             * <p>The application type.</p>
              * 
              * <strong>example:</strong>
              * <p>War</p>
@@ -867,7 +861,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+             * <p>The ID of the application build type.</p>
              * 
              * <strong>example:</strong>
              * <p>57</p>
@@ -878,7 +872,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
+             * <p>The cluster ID.</p>
              * 
              * <strong>example:</strong>
              * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong></p>
@@ -900,7 +894,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of commands.</p>
+             * CmdArgs.
              */
             public Builder cmdArgs(CmdArgs cmdArgs) {
                 this.cmdArgs = cmdArgs;
@@ -908,7 +902,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster to which the container belongs.</p>
+             * <p>The ID of the container cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>c383bc813c1974e<strong><strong>451b50c0c8</strong></strong></p>
@@ -919,7 +913,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment type of the application. Example: Image.</p>
+             * <p>The deployment type. The value is Image.</p>
              * 
              * <strong>example:</strong>
              * <p>Image</p>
@@ -930,11 +924,14 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The application type. Valid values:</p>
+             * <p>The application type:</p>
              * <ul>
-             * <li>General: native Java application</li>
-             * <li>Pandora: Pandora application</li>
-             * <li>Multilingual: multilingual application</li>
+             * <li><p>General: a native Java application.</p>
+             * </li>
+             * <li><p>Pandora: a Pandora application.</p>
+             * </li>
+             * <li><p>Multilingual: a multilingual application.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -946,7 +943,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of EDAS Container.</p>
+             * <p>The version of the EDAS container.</p>
              * 
              * <strong>example:</strong>
              * <p>3.60.0</p>
@@ -957,7 +954,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Empty List Protection feature is enabled for the application.</p>
+             * <p>Indicates whether empty-push protection is enabled for the application.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -968,7 +965,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Graceful Release feature is enabled for the application.</p>
+             * <p>Indicates whether graceful start is enabled for the application.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -979,7 +976,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of environment variables.</p>
+             * EnvList.
              */
             public Builder envList(EnvList envList) {
                 this.envList = envList;
@@ -987,12 +984,16 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The feature annotations. Possible values:</p>
+             * <p>The tags of advanced configurations for the current application. This parameter indicates the features that are enabled. Valid values:</p>
              * <ul>
-             * <li>base.combination.edas: enables EDAS integrated management solution.</li>
-             * <li>base.combination.arms: enables ARMS monitoring.</li>
-             * <li>base.combination.mse: enables MSE microservices governance.</li>
-             * <li>base.combination.none: enables lifecycle management.</li>
+             * <li><p>base.combination.edas: the EDAS integrated management solution.</p>
+             * </li>
+             * <li><p>base.combination.arms: ARMS monitoring is enabled.</p>
+             * </li>
+             * <li><p>base.combination.mse: MSE is enabled.</p>
+             * </li>
+             * <li><p>base.combination.none: Only lifecycle management is enabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1015,7 +1016,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances before the last auto scaling operation.</p>
+             * <p>The number of application instances before the last scaling event.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1026,7 +1027,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Kubernetes cluster.</p>
+             * <p>The Kubernetes namespace.</p>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -1037,7 +1038,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The label of an application pod.</p>
+             * <p>The labels of the application pod.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;test-labelkey&quot;:&quot;test-labelvalue&quot;}</p>
@@ -1048,7 +1049,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of CPU cores allowed. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+             * <p>The CPU limit. Unit: millicores. 1,000 millicores are equal to one CPU core.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1059,7 +1060,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+             * <p>The limit of ephemeral storage resources. Unit: GB. A value of 0 indicates that no limit is set.</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1070,7 +1071,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of the memory allowed. Unit: MiB.</p>
+             * <p>The memory limit. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1081,7 +1082,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Registration before Readiness Probing feature is enabled for the application.</p>
+             * <p>Indicates whether the application, in graceful rolling deployment mode, is configured to complete service registration before it passes the readiness probe.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1092,7 +1093,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delay of service registration. Unit: seconds.</p>
+             * <p>The duration of delayed service registration that is configured for the application. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -1103,7 +1104,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of prefetching curves.</p>
+             * <p>The service prefetch curve that is set for the application.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1114,7 +1115,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the Graceful Rolling Release and Configure Complete Service Prefetching before Readiness Probing feature is enabled for the application.</p>
+             * <p>Indicates whether the application, in graceful rolling deployment mode, is configured to complete service prefetch before it passes the readiness probe.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1125,7 +1126,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service prefetching duration. Unit: seconds.</p>
+             * <p>The service prefetch duration that is set for the application. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>120</p>
@@ -1136,7 +1137,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1147,7 +1148,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of requested CPU cores. Unit: millicores. 1,000 millicores equal one CPU core.</p>
+             * <p>The number of CPU cores that are requested. Unit: millicores. 1,000 millicores are equal to one CPU core.</p>
              * 
              * <strong>example:</strong>
              * <p>1000</p>
@@ -1158,7 +1159,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of space reserved for ephemeral storage resources. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+             * <p>The amount of ephemeral storage resources to reserve. Unit: GB. A value of 0 indicates that no limit is set.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -1169,7 +1170,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the reserved memory. Unit: MiB.</p>
+             * <p>The amount of memory that is reserved. Unit: MiB.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -1180,7 +1181,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityContext.
+             * <p>The SecurityContext properties of the application pod container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{\&quot;runAsUser\&quot;:0,\&quot;runAsGroup\&quot;:0}</p>
              */
             public Builder securityContext(String securityContext) {
                 this.securityContext = securityContext;
@@ -1188,7 +1192,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration information about the Server Load Balancer (SLB).</p>
+             * <p>The SLB configurations.</p>
              * 
              * <strong>example:</strong>
              * <p>[
@@ -1233,7 +1237,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The workload type. Valid values: Deployment and StatefulSet. If you do not specify this parameter, Deployment is used.</p>
+             * <p>The type of the workload that is used to create the application. Valid values: Deployment and StatefulSet. If you leave this parameter empty, Deployment is used.</p>
              * 
              * <strong>example:</strong>
              * <p>Deployment</p>
@@ -1511,10 +1515,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The affinity configuration of the pod.</p>
+             * <p>The pod affinity configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{&quot;nodeAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:{&quot;nodeSelectorTerms&quot;:[{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;beta.kubernetes.io/arch&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;arm64&quot;,&quot;arm32&quot;]}]}]},&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;weight&quot;:5,&quot;preference&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;kubernetes.io/os&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;linux&quot;]}]}}]},&quot;podAffinity&quot;:{&quot;requiredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;NotIn&quot;,&quot;values&quot;:[&quot;edas-test-app&quot;]}]},&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;kubernetes.io/hostname&quot;}]},&quot;podAntiAffinity&quot;:{&quot;preferredDuringSchedulingIgnoredDuringExecution&quot;:[{&quot;weight&quot;:15,&quot;podAffinityTerm&quot;:{&quot;labelSelector&quot;:{&quot;matchExpressions&quot;:[{&quot;key&quot;:&quot;edas.oam.acname&quot;,&quot;operator&quot;:&quot;In&quot;,&quot;values&quot;:[&quot;edas-test-app-2&quot;]}]},&quot;namespaces&quot;:[&quot;default&quot;],&quot;topologyKey&quot;:&quot;failure-domain.beta.kubernetes.io/zone&quot;}}]}}&quot;</p>
+             * <p>&quot;{\&quot;nodeAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:{\&quot;nodeSelectorTerms\&quot;:[{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;beta.kubernetes.io/arch\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;arm64\&quot;,\&quot;arm32\&quot;]}]}]},\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:5,\&quot;preference\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;kubernetes.io/os\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;linux\&quot;]}]}}]},\&quot;podAffinity\&quot;:{\&quot;requiredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;NotIn\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;kubernetes.io/hostname\&quot;}]},\&quot;podAntiAffinity\&quot;:{\&quot;preferredDuringSchedulingIgnoredDuringExecution\&quot;:[{\&quot;weight\&quot;:15,\&quot;podAffinityTerm\&quot;:{\&quot;labelSelector\&quot;:{\&quot;matchExpressions\&quot;:[{\&quot;key\&quot;:\&quot;edas.oam.acname\&quot;,\&quot;operator\&quot;:\&quot;In\&quot;,\&quot;values\&quot;:[\&quot;edas-test-app-2\&quot;]}]},\&quot;namespaces\&quot;:[\&quot;default\&quot;],\&quot;topologyKey\&quot;:\&quot;failure-domain.beta.kubernetes.io/zone\&quot;}}]}}&quot;</p>
              */
             public Builder affinity(String affinity) {
                 this.affinity = affinity;
@@ -1522,7 +1526,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application is connected to Application High Availability Service (AHAS).</p>
+             * <p>Indicates whether the application is connected to AHAS.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1533,10 +1537,12 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application instances are deployed across nodes.</p>
+             * <p>Indicates whether to distribute application instances across multiple nodes:</p>
              * <ul>
-             * <li>Value <code>true</code> indicates that the application instances are deployed across nodes.</li>
-             * <li>Other values indicate that the application instances are not deployed across nodes.</li>
+             * <li><p><code>true</code>: The application instances are distributed across multiple nodes.</p>
+             * </li>
+             * <li><p>Other values: The application instances are not distributed across multiple nodes.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1548,10 +1554,12 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application instances are deployed across zones.</p>
+             * <p>Indicates whether to distribute application instances across multiple zones:</p>
              * <ul>
-             * <li>Value <code>true</code> indicates that the application instances are deployed across zones.</li>
-             * <li>Other values indicate that the application instances are not deployed across zones.</li>
+             * <li><p><code>true</code>: The application instances are distributed across multiple zones.</p>
+             * </li>
+             * <li><p>Other values: The application instances are not distributed across multiple zones.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1563,7 +1571,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The startup parameters for a JAR application. This parameter is deprecated.</p>
+             * <p>The startup parameters of the JAR package. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>-lh</p>
@@ -1574,7 +1582,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The startup options for a JAR application. This parameter is deprecated.</p>
+             * <p>The startup options of the JAR package. This parameter is deprecated.</p>
              * 
              * <strong>example:</strong>
              * <p>-h</p>
@@ -1607,7 +1615,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the local storage.</p>
+             * <p>The local storage information.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;type&quot;:&quot;&quot;,&quot;nodePath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
@@ -1618,7 +1626,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the File Storage NAS (NAS) storage.</p>
+             * <p>The NAS storage information.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;nasPath&quot;:&quot;/mnt/&quot;,&quot;mountPath&quot;:&quot;/mnt/&quot;}]</p>
@@ -1629,10 +1637,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the storage.</p>
+             * <p>The storage information.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;{&quot;hostPaths&quot;:&quot;[]&quot;,&quot;emptyDirs&quot;:&quot;[]&quot;}&quot;</p>
+             * <p>&quot;{\&quot;hostPaths\&quot;:\&quot;[]\&quot;,\&quot;emptyDirs\&quot;:\&quot;[]\&quot;}&quot;</p>
              */
             public Builder k8sVolumeInfo(String k8sVolumeInfo) {
                 this.k8sVolumeInfo = k8sVolumeInfo;
@@ -1640,7 +1648,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the liveness check on the container.</p>
+             * <p>The information about the liveness probe of the Kubernetes container.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;tcpSocket&quot;:{&quot;host&quot;:&quot;&quot;, &quot;port&quot;:8080}}</p>
@@ -1651,10 +1659,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script executed after the container is started.</p>
+             * <p>The information about the post-start execution of the Kubernetes container.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
+             * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</p>
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -1662,10 +1670,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script executed before the container is stopped.</p>
+             * <p>The information about the pre-stop execution of the Kubernetes container.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
+             * <p>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;ls\&quot;,\&quot;/\&quot;]}}&quot;</p>
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -1673,10 +1681,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the readiness check on the container.</p>
+             * <p>The information about the readiness probe of the Kubernetes container.</p>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}]}}</p>
+             * <p>{&quot;failureThreshold&quot;: 3,&quot;initialDelaySeconds&quot;: 5,&quot;successThreshold&quot;: 1,&quot;timeoutSeconds&quot;: 1,&quot;httpGet&quot;: {&quot;path&quot;: &quot;/consumer&quot;,&quot;port&quot;: 8080,&quot;scheme&quot;: &quot;HTTP&quot;,&quot;httpHeaders&quot;: [{&quot;name&quot;: &quot;test&quot;,&quot;value&quot;: &quot;testvalue&quot;}\]}}</p>
              */
             public Builder readiness(String readiness) {
                 this.readiness = readiness;
@@ -1684,7 +1692,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the container runtime. This parameter is applicable only to clusters that use sandboxed containers.</p>
+             * <p>The pod runtime class. This parameter is applicable only to clusters that use sandboxed containers.</p>
              * 
              * <strong>example:</strong>
              * <p>runc</p>
@@ -1695,10 +1703,10 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scheduling tolerance configuration of the pod.</p>
+             * <p>The pod scheduling toleration configuration.</p>
              * 
              * <strong>example:</strong>
-             * <p>&quot;[{&quot;key&quot;:&quot;edas-taint-key2&quot;,&quot;operator&quot;:&quot;Exists&quot;,&quot;effect&quot;:&quot;NoExecute&quot;,&quot;tolerationSeconds&quot;:50},{&quot;key&quot;:&quot;edas-taint-key&quot;,&quot;operator&quot;:&quot;Equal&quot;,&quot;value&quot;:&quot;edas-taint-value&quot;,&quot;effect&quot;:&quot;PreferNoSchedule&quot;}]&quot;</p>
+             * <p>&quot;[{\&quot;key\&quot;:\&quot;edas-taint-key2\&quot;,\&quot;operator\&quot;:\&quot;Exists\&quot;,\&quot;effect\&quot;:\&quot;NoExecute\&quot;,\&quot;tolerationSeconds\&quot;:50},{\&quot;key\&quot;:\&quot;edas-taint-key\&quot;,\&quot;operator\&quot;:\&quot;Equal\&quot;,\&quot;value\&quot;:\&quot;edas-taint-value\&quot;,\&quot;effect\&quot;:\&quot;PreferNoSchedule\&quot;}]&quot;</p>
              */
             public Builder tolerations(String tolerations) {
                 this.tolerations = tolerations;
@@ -1706,7 +1714,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the base image. If you use a custom Java Development Kit (JDK) runtime, you must specify this parameter.</p>
+             * <p>The URL of the base image. This parameter is configured when a custom OpenJDK runtime is used.</p>
              * 
              * <strong>example:</strong>
              * <p>openjdk:8u302</p>
@@ -1789,10 +1797,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The component ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * ComponentId.
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -1800,10 +1805,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The keyword that is included in the component name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Open JDK 8</p>
+             * ComponentKey.
              */
             public Builder componentKey(String componentKey) {
                 this.componentKey = componentKey;
@@ -1811,10 +1813,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The component type. Valid values:</p>
-             * 
-             * <strong>example:</strong>
-             * <p>JDK</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1948,7 +1947,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the component.</p>
+             * Components.
              */
             public Builder components(DeployGroupComponents components) {
                 this.components = components;
@@ -1956,10 +1955,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The environment variable. This parameter is different from the EnvList parameter. This parameter specifies the referenced configuration of the ConfigMap or Secret.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;[&quot;{&quot;name&quot;:&quot;test1&quot;,&quot;valueFrom&quot;:{&quot;configMapKeyRef&quot;:{&quot;name&quot;:&quot;edas-demo-configmap&quot;,&quot;key&quot;:&quot;key1&quot;}}}&quot;,&quot;{&quot;name&quot;:&quot;k2&quot;,&quot;value&quot;:&quot;v2&quot;}&quot;,&quot;{&quot;name&quot;:&quot;s1&quot;,&quot;valueFrom&quot;:{&quot;secretKeyRef&quot;:{&quot;name&quot;:&quot;edas-demo-secret&quot;,&quot;key&quot;:&quot;k1&quot;}}}&quot;]&quot;</p>
+             * Env.
              */
             public Builder env(String env) {
                 this.env = env;
@@ -1967,10 +1963,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the environment variable.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;configMapRef&quot;:{&quot;name&quot;:&quot;test-cm&quot;}}]</p>
+             * EnvFrom.
              */
             public Builder envFrom(String envFrom) {
                 this.envFrom = envFrom;
@@ -2164,7 +2157,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the image repository.</p>
+             * <p>The ID of the region where the image is located.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -2197,7 +2190,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace to which the image repository belongs.</p>
+             * <p>The namespace of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>edas-server****-user</p>
@@ -2208,7 +2201,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source type of the image repository.</p>
+             * <p>The type of the source of the image repository.</p>
              * 
              * <strong>example:</strong>
              * <p>ALI_HUB</p>
@@ -2302,7 +2295,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The version of the deployment package.</p>
+             * <p>The version number of the deployment package.</p>
              * 
              * <strong>example:</strong>
              * <p>20200720</p>
@@ -2313,7 +2306,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+             * <p>The URL of the deployment package. This parameter is required for applications that are deployed using a FatJar or WAR package.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
@@ -2324,7 +2317,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package. This parameter is required if you use a FatJar or WAR package to deploy the application.</p>
+             * <p>The URL of the deployment package. This parameter is required for applications that are deployed using a FatJar or WAR package.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar">https://e***.oss-cn-beijing.aliyuncs.com/s***-1.0-SNAPSHOT-spring-boot.jar</a></p>
@@ -2454,7 +2447,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+             * <p>The ID of the application. You can call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</p>
              * 
              * <strong>example:</strong>
              * <p>a5281053-<strong><strong>-47a5-b2ab-5c0323de</strong></strong></p>
@@ -2465,7 +2458,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations.</p>
+             * <p>The configuration information.</p>
              */
             public Builder conf(Conf conf) {
                 this.conf = conf;
@@ -2473,7 +2466,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance group in which the application is deployed.</p>
+             * DeployGroups.
              */
             public Builder deployGroups(DeployGroups deployGroups) {
                 this.deployGroups = deployGroups;
@@ -2481,7 +2474,7 @@ public class GetK8sApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the image.</p>
+             * <p>The image information.</p>
              */
             public Builder imageInfo(ImageInfo imageInfo) {
                 this.imageInfo = imageInfo;

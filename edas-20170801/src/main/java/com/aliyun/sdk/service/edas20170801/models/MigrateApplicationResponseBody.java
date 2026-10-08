@@ -12,35 +12,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link StartK8sAppPrecheckResponseBody} extends {@link TeaModel}
+ * {@link MigrateApplicationResponseBody} extends {@link TeaModel}
  *
- * <p>StartK8sAppPrecheckResponseBody</p>
+ * <p>MigrateApplicationResponseBody</p>
  */
-public class StartK8sAppPrecheckResponseBody extends TeaModel {
+public class MigrateApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @com.aliyun.core.annotation.NameInMap("RequestId")
-    private String requestId;
+    @com.aliyun.core.annotation.NameInMap("data")
+    private Data data;
 
-    private StartK8sAppPrecheckResponseBody(Builder builder) {
+    private MigrateApplicationResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
-        this.requestId = builder.requestId;
+        this.data = builder.data;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static StartK8sAppPrecheckResponseBody create() {
+    public static MigrateApplicationResponseBody create() {
         return builder().build();
     }
 
@@ -56,13 +52,6 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
@@ -70,30 +59,28 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return data
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Data getData() {
+        return this.data;
     }
 
     public static final class Builder {
         private Integer code; 
-        private Data data; 
         private String message; 
-        private String requestId; 
+        private Data data; 
 
         private Builder() {
         } 
 
-        private Builder(StartK8sAppPrecheckResponseBody model) {
+        private Builder(MigrateApplicationResponseBody model) {
             this.code = model.code;
-            this.data = model.data;
             this.message = model.message;
-            this.requestId = model.requestId;
+            this.data = model.data;
         } 
 
         /**
-         * <p>The HTTP status code.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,15 +91,7 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * <p>The returned message.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,34 +102,31 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>7638276F-<strong><strong>-</strong></strong>-884F-54CC0BC84A8D</p>
+         * <p>The API information.</p>
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder data(Data data) {
+            this.data = data;
             return this;
         }
 
-        public StartK8sAppPrecheckResponseBody build() {
-            return new StartK8sAppPrecheckResponseBody(this);
+        public MigrateApplicationResponseBody build() {
+            return new MigrateApplicationResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link StartK8sAppPrecheckResponseBody} extends {@link TeaModel}
+     * {@link MigrateApplicationResponseBody} extends {@link TeaModel}
      *
-     * <p>StartK8sAppPrecheckResponseBody</p>
+     * <p>MigrateApplicationResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Jobs")
-        private java.util.List<String> jobs;
+        @com.aliyun.core.annotation.NameInMap("migrationId")
+        private String migrationId;
 
         private Data(Builder builder) {
-            this.jobs = builder.jobs;
+            this.migrationId = builder.migrationId;
         }
 
         public static Builder builder() {
@@ -162,30 +138,30 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
         }
 
         /**
-         * @return jobs
+         * @return migrationId
          */
-        public java.util.List<String> getJobs() {
-            return this.jobs;
+        public String getMigrationId() {
+            return this.migrationId;
         }
 
         public static final class Builder {
-            private java.util.List<String> jobs; 
+            private String migrationId; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.jobs = model.jobs;
+                this.migrationId = model.migrationId;
             } 
 
             /**
-             * <p>The jobs and the details about the jobs.</p>
+             * <p>The migration ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>Cluster health check.</p>
+             * <p>a3de82d7-83a4-4cca-8d1e-63f87651ce78</p>
              */
-            public Builder jobs(java.util.List<String> jobs) {
-                this.jobs = jobs;
+            public Builder migrationId(String migrationId) {
+                this.migrationId = migrationId;
                 return this;
             }
 

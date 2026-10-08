@@ -134,7 +134,7 @@ public class BindSlbRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the EDAS application.</p>
+         * <p>The ID of the Enterprise Distributed Application Service (EDAS) application.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * <p>The listener port for the SLB instance.</p>
+         * <p>The listener port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -185,10 +185,12 @@ public class BindSlbRequest extends Request {
         }
 
         /**
-         * <p>The type of the SLB instance. Valid values:</p>
+         * <p>The network type of the SLB instance. Valid values:</p>
          * <ul>
-         * <li>internet: Internet-facing SLB instance</li>
-         * <li>intranet: internal-facing SLB instance</li>
+         * <li><p>internet: an Internet-facing instance.</p>
+         * </li>
+         * <li><p>intranet: an internal-facing instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

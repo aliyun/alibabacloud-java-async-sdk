@@ -322,7 +322,7 @@ public class InsertClusterResponseBody extends TeaModel {
              * <p>The network type of the cluster. Valid values:</p>
              * <ul>
              * <li>1: classic network</li>
-             * <li>2. VPC</li>
+             * <li>2\. VPC</li>
              * </ul>
              * 
              * <strong>example:</strong>

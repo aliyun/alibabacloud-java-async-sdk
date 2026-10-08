@@ -93,7 +93,7 @@ public class ListSlbResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The interface status or POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>b197-40ab-9155-7ca7</p>
@@ -126,7 +126,7 @@ public class ListSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of SLB instances.</p>
+         * SlbList.
          */
         public Builder slbList(SlbList slbList) {
             this.slbList = slbList;
@@ -348,10 +348,7 @@ public class ListSlbResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>39.176.XX.XX</p>
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -359,14 +356,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the IP addresses. Valid values:</p>
-             * <ul>
-             * <li>internet: Users can connect to the SLB instance over the Internet.</li>
-             * <li>intranet: Users can connect to the SLB instance over the internal network.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>internet</p>
+             * AddressType.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -374,14 +364,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SLB instance has expired. Valid values:</p>
-             * <ul>
-             * <li>true: The SLB instance has expired.</li>
-             * <li>false: The SLB instance has not expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -389,10 +372,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * GroupId.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -400,10 +380,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>classic</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -411,10 +388,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -422,14 +396,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Kubernetes applications can be reused. Valid values:</p>
-             * <ul>
-             * <li>true: Kubernetes applications can be reused.</li>
-             * <li>false: Kubernetes applications cannot be reused.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Reusable.
              */
             public Builder reusable(Boolean reusable) {
                 this.reusable = reusable;
@@ -437,10 +404,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lb-2ze055t3xv7s8****</p>
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -448,10 +412,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adce</p>
+             * SlbName.
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -459,10 +420,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * SlbStatus.
              */
             public Builder slbStatus(String slbStatus) {
                 this.slbStatus = slbStatus;
@@ -470,10 +428,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;tagKey&quot;:&quot;tag&quot;,&quot;tagValue&quot;:&quot;value&quot;}]</p>
+             * Tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -481,10 +436,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas_****_*<em>st@aliyun-</em>***.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -492,10 +444,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp1f90rfybszjogyw****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -503,10 +452,7 @@ public class ListSlbResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch in the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp156w1gpbv0o50hs****</p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;

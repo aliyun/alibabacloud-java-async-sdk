@@ -115,7 +115,7 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The namespaces.</p>
+         * RegionEntityList.
          */
         public Builder regionEntityList(RegionEntityList regionEntityList) {
             this.regionEntityList = regionEntityList;
@@ -192,10 +192,7 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Beta</p>
+             * RegionName.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -203,10 +200,7 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing:beta</p>
+             * RegionNo.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;

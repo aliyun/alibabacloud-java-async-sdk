@@ -119,7 +119,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code. A value of 200 indicates that the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>This parameter is not in use.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The message returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The unique ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1053-08e4-47a5-b2ab-5c0323de****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>The result of the request.</p>
+         * <ul>
+         * <li><p><code>true</code>: The request was successful.</p>
+         * </li>
+         * <li><p><code>false</code>: The request failed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +246,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Indicates whether the feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -233,7 +257,10 @@ public class DescribeLocalitySettingResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

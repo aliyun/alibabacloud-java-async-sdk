@@ -103,7 +103,7 @@ public class UpdateSlsLogStoreRequest extends Request {
          * <p>**</p>
          * <p><strong>Note</strong>If you leave this parameter empty, the system automatically generates a name.</p>
          * </li>
-         * <li><p><strong>LogDir</strong>: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (*) are supported. The collection path must match the following regular expression: <code>^/(.+)/(.*)^/$</code>.</p>
+         * <li><p><strong>LogDir</strong>: If the standard output type is used, the collection path is stdout.log. If the file type is used, the collection path is the path of the collected file. Wildcards (\*) are supported. The collection path must match the following regular expression: <code>^/(.+)/(.*)^/$</code>.</p>
          * </li>
          * </ul>
          * </li>

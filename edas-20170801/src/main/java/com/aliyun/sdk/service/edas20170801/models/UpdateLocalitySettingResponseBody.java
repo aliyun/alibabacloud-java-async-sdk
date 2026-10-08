@@ -119,7 +119,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The status code of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -127,7 +130,7 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The result of the update.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -135,7 +138,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -143,7 +149,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The response message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a5281053-08e4-47a5-b2ab-5c0323de*****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the call was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +240,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
             } 
 
             /**
-             * Enabled.
+             * <p>Whether it is active.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -233,7 +251,10 @@ public class UpdateLocalitySettingResponseBody extends TeaModel {
             }
 
             /**
-             * Threshold.
+             * <p>The threshold of the ECU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

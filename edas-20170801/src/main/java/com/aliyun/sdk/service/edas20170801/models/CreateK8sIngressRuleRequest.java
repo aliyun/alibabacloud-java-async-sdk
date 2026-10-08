@@ -135,7 +135,7 @@ public class CreateK8sIngressRuleRequest extends Request {
          * <p>The annotations.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;alb.ingress.kubernetes.io/rewrite-target&quot;:&quot;/consumer-echo/test&quot;}</p>
+         * <p>{\&quot;alb.ingress.kubernetes.io/rewrite-target\&quot;:\&quot;/consumer-echo/test\&quot;}</p>
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -201,7 +201,7 @@ public class CreateK8sIngressRuleRequest extends Request {
          * <p>The labels.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;test-labels&quot;:&quot;test-value&quot;}</p>
+         * <p>{\&quot;test-labels\&quot;:\&quot;test-value\&quot;}</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);

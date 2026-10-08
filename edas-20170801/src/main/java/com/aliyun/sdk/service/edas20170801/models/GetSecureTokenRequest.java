@@ -60,7 +60,7 @@ public class GetSecureTokenRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the namespace, such as cn-beijing or cn-beijing:prod````.</p>
+         * <p>The ID of the namespace, such as cn-beijing or cn-beijing:prod\<code>\\</code>\<code>\\</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

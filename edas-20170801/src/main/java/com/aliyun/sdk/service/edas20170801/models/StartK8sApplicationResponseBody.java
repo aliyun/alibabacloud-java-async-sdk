@@ -93,7 +93,7 @@ public class StartK8sApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The ID of the change process for the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>*********d237-4827-a4f4-ed2ae98de18d</p>
@@ -104,7 +104,7 @@ public class StartK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The response code. A 200 response indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class StartK8sApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

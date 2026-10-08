@@ -104,7 +104,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ECS instances that can be imported to the cluster.</p>
+         * InstanceList.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -348,10 +348,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -359,10 +356,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the elastic compute units (ECU).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>b197-40ab-9155-7ca7</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -370,10 +364,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic IP address (EIP) associated with the ECS instance. The EIP can be changed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>13.xx.xxx.xx</p>
+             * Eip.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -381,10 +372,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instance has expired.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -392,10 +380,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.13.xx</p>
+             * InnerIp.
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -403,10 +388,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2ze7s2v0b***********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -414,10 +396,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>worker-k8s</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -425,10 +404,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory for the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4096</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -436,10 +412,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECS instance. This parameter is valid only when the ECS instance is deployed in a VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.XX.XX.123</p>
+             * PrivateIp.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -447,10 +420,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the ECS instance. This IP address can be used only by the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>13.xx.xx.xxx</p>
+             * PublicIp.
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -458,10 +428,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the ECS instance is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -469,17 +436,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the instance. Valid values:</p>
-             * <ul>
-             * <li>Pending: The instance is being created.</li>
-             * <li>Running: The instance is running.</li>
-             * <li>Starting: The instance is being started.</li>
-             * <li>Stopping: The instance is being stopped.</li>
-             * <li>Stopped: The instance is stopped.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -487,10 +444,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef6ob8m************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -498,10 +452,7 @@ public class ListConvertableEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>jianwei-test</p>
+             * VpcName.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

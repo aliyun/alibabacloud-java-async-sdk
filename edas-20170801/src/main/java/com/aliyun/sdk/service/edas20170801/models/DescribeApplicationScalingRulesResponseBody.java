@@ -93,7 +93,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The auto scaling policies of the application.</p>
+         * <p>The Auto Scaling rules for the application.</p>
          */
         public Builder appScalingRules(AppScalingRules appScalingRules) {
             this.appScalingRules = appScalingRules;
@@ -101,7 +101,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
@@ -205,7 +205,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * PeriodSeconds.
+             * <p>The execution interval. Unit: seconds. Valid values: 0 to 1800.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -213,7 +216,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the policy. Valid values: \<code>Pods\\</code> and \<code>Percent\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pods</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -221,7 +227,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value for the policy. The value must be an integer greater than 0. If \<code>Type\\</code> is \<code>Pods\\</code>, this parameter specifies the number of pods. If \<code>Type\\</code> is \<code>Percent\\</code>, this parameter specifies a percentage. The value can be greater than 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -301,7 +310,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Policies.
+             * <p>The policy configuration.</p>
              */
             public Builder policies(java.util.List<Policies> policies) {
                 this.policies = policies;
@@ -309,7 +318,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SelectPolicy.
+             * <p>The policy for the scaling step size for scale-in events. Valid values: \<code>Max\\</code>, \<code>Min\\</code>, and \<code>Disable\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Max</p>
              */
             public Builder selectPolicy(String selectPolicy) {
                 this.selectPolicy = selectPolicy;
@@ -317,7 +329,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StabilizationWindowSeconds.
+             * <p>The cooldown period for a scale-in event. Unit: seconds. Valid values: 0 to 3600. Default value: 300.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300</p>
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -397,7 +412,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * PeriodSeconds.
+             * <p>The execution interval. Unit: seconds. Valid values: 0 to 1800.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -405,7 +423,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the policy. Valid values: \<code>Pods\\</code> and \<code>Percent\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pods</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -413,7 +434,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value for the policy. The value must be an integer greater than 0. If \<code>Type\\</code> is \<code>Pods\\</code>, this parameter specifies the number of pods. If \<code>Type\\</code> is \<code>Percent\\</code>, this parameter specifies a percentage. The value can be greater than 100%.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -493,7 +517,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Policies.
+             * <p>The policy configuration.</p>
              */
             public Builder policies(java.util.List<ScaleUpPolicies> policies) {
                 this.policies = policies;
@@ -501,7 +525,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SelectPolicy.
+             * <p>The policy for the scaling step size for scale-out events. Valid values: \<code>Max\\</code>, \<code>Min\\</code>, and \<code>Disable\\</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Max</p>
              */
             public Builder selectPolicy(String selectPolicy) {
                 this.selectPolicy = selectPolicy;
@@ -509,7 +536,10 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StabilizationWindowSeconds.
+             * <p>The cooldown period for a scale-out event. Unit: seconds. Valid values: 0 to 3600. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -576,7 +606,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * ScaleDown.
+             * <p>The configuration of the scale-in behavior.</p>
              */
             public Builder scaleDown(ScaleDown scaleDown) {
                 this.scaleDown = scaleDown;
@@ -584,7 +614,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleUp.
+             * <p>The configuration of the scale-out behavior.</p>
              */
             public Builder scaleUp(ScaleUp scaleUp) {
                 this.scaleUp = scaleUp;
@@ -869,7 +899,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the trigger. Valid values: cron and app_metric.</p>
+             * <p>The type of the trigger. Valid values: \<code>cron\\</code> and \<code>app_metric\\</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>cron</p>
@@ -952,7 +982,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The maximum number of replicas. The upper limit is 1000.</p>
+             * <p>The maximum number of replicas. The value cannot exceed 1000.</p>
              * 
              * <strong>example:</strong>
              * <p>122</p>
@@ -963,7 +993,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum number of replicas. The lower limit is 0.</p>
+             * <p>The minimum number of replicas. The value cannot be less than 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -974,7 +1004,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the trigger.</p>
+             * <p>A list of trigger configurations.</p>
              */
             public Builder triggers(java.util.List<Triggers> triggers) {
                 this.triggers = triggers;
@@ -1171,7 +1201,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application to which the auto scaling policy belongs.</p>
+             * <p>The ID of the application to which the scaling rule belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
@@ -1182,7 +1212,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Behaviour.
+             * <p>The scaling behavior.</p>
              */
             public Builder behaviour(Behaviour behaviour) {
                 this.behaviour = behaviour;
@@ -1190,7 +1220,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auto scaling policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The UNIX timestamp when the scaling rule was created.</p>
              * 
              * <strong>example:</strong>
              * <p>23212323123</p>
@@ -1201,7 +1231,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auto scaling policy was last disabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The UNIX timestamp when the scaling rule was last disabled.</p>
              * 
              * <strong>example:</strong>
              * <p>23212323123</p>
@@ -1242,10 +1272,12 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+             * <p>Indicates whether the scaling rule is enabled.</p>
              * <ul>
-             * <li><strong>true</strong>: The auto scaling policy is enabled.</li>
-             * <li><strong>false</strong>: The auto scaling policy is disabled.</li>
+             * <li><p><strong>true</strong>: The scaling rule is enabled.</p>
+             * </li>
+             * <li><p><strong>false</strong>: The scaling rule is disabled.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1257,7 +1289,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the auto scaling policy.</p>
+             * <p>The name of the scaling rule.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu-trigger</p>
@@ -1268,7 +1300,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the auto scaling policy. The value is fixed to trigger.</p>
+             * <p>The type of the scaling rule. Only \<code>trigger\\</code> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>trigger</p>
@@ -1279,7 +1311,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configurations of the trigger.</p>
+             * <p>The trigger configuration.</p>
              */
             public Builder trigger(Trigger trigger) {
                 this.trigger = trigger;
@@ -1287,7 +1319,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the auto scaling policy was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The UNIX timestamp when the scaling rule was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>23212323123</p>
@@ -1383,7 +1415,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number of the returned page.</p>
+             * <p>The current page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1394,7 +1426,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of auto scaling policies returned per page.</p>
+             * <p>The number of scaling rules returned on each page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1405,7 +1437,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about auto scaling policies.</p>
+             * <p>The details of the Auto Scaling rules.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -1413,7 +1445,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of auto scaling policies.</p>
+             * <p>The total number of scaling rules.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>

@@ -93,7 +93,7 @@ public class ListApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about applications.</p>
+         * ApplicationList.
          */
         public Builder applicationList(ApplicationList applicationList) {
             this.applicationList = applicationList;
@@ -101,7 +101,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code of the response.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -112,7 +112,7 @@ public class ListApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -426,10 +426,7 @@ public class ListApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>00ee517d-dd7d-4d4e-<strong><strong>-</strong></strong>********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -437,16 +434,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment type of the application. Valid values:</p>
-             * <ul>
-             * <li>War: The application is deployed by using a WAR package.</li>
-             * <li>FatJar: The application is deployed by using a JAR package.</li>
-             * <li>Image: The application is deployed by using an image.</li>
-             * <li>If this parameter is empty, the application is not deployed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FatJar</p>
+             * ApplicationType.
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -454,10 +442,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>58</p>
+             * BuildPackageId.
              */
             public Builder buildPackageId(Long buildPackageId) {
                 this.buildPackageId = buildPackageId;
@@ -465,10 +450,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -476,15 +458,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster in which the application is deployed. Valid values:</p>
-             * <ul>
-             * <li><strong>2</strong>: Elastic Compute Service (ECS) cluster</li>
-             * <li><strong>3</strong>: self-managed Kubernetes cluster in EDAS</li>
-             * <li><strong>5</strong>: Container Service for Kubernetes (ACK) cluster</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ClusterType.
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -492,10 +466,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1664208000000</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -503,10 +474,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the Internet-facing SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100.100.70.***</p>
+             * ExtSlbIp.
              */
             public Builder extSlbIp(String extSlbIp) {
                 this.extSlbIp = extSlbIp;
@@ -514,10 +482,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener port of the Internet-facing SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8080</p>
+             * ExtSlbListenerPort.
              */
             public Builder extSlbListenerPort(Integer extSlbListenerPort) {
                 this.extSlbListenerPort = extSlbListenerPort;
@@ -525,10 +490,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of application instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5</p>
+             * Instances.
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -536,10 +498,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace of the Kubernetes cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * K8sNamespace.
              */
             public Builder k8sNamespace(String k8sNamespace) {
                 this.k8sNamespace = k8sNamespace;
@@ -547,10 +506,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doc-test-consumer</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -558,10 +514,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the microservices namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou:test</p>
+             * NamespaceId.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -569,10 +522,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service port of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8080</p>
+             * Port.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -580,10 +530,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing:docTes</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -591,10 +538,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rg-aek24j4s4b*****</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -602,10 +546,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of running application instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * RunningInstanceCount.
              */
             public Builder runningInstanceCount(Integer runningInstanceCount) {
                 this.runningInstanceCount = runningInstanceCount;
@@ -613,10 +554,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the internal-facing Server Load Balancer (SLB) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.***</p>
+             * SlbIp.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -624,10 +562,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The listener port of the internal-facing SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8088</p>
+             * SlbListenerPort.
              */
             public Builder slbListenerPort(Integer slbListenerPort) {
                 this.slbListenerPort = slbListenerPort;
@@ -635,10 +570,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port of the internal-facing SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>80</p>
+             * SlbPort.
              */
             public Builder slbPort(Integer slbPort) {
                 this.slbPort = slbPort;
@@ -646,16 +578,7 @@ public class ListApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the application. Valid values:</p>
-             * <ul>
-             * <li>RUNNING: The application is running.</li>
-             * <li>STOPPED: The application is stopped.</li>
-             * <li>DEPLOYING: The application is being deployed.</li>
-             * <li>DELETING: The application is being deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>RUNNING</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;

@@ -524,7 +524,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
              * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>EDAS-scaled-cluster:default cluster</p>
+             * <p>EDAS-scaled-cluster：默认集群</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -709,10 +709,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the deployment record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>1573626226691</p>
+             * <p>1573626207270</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -720,10 +720,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the deployment record.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bbc6c0d5-d792-4907-<strong><strong>-</strong></strong>********</p>
+             * DeployRecordId.
              */
             public Builder deployRecordId(String deployRecordId) {
                 this.deployRecordId = deployRecordId;
@@ -731,10 +728,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0cf49a6c-95a8-4aa8-<strong><strong>-</strong></strong>********</p>
+             * EccId.
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -742,10 +736,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -753,10 +744,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MD5 hash value of the deployment package.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d0db5bcb442e492104d0f00e10a03dd9</p>
+             * PackageMd5.
              */
             public Builder packageMd5(String packageMd5) {
                 this.packageMd5 = packageMd5;
@@ -764,10 +752,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
+             * PackageVersionId.
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -1005,10 +990,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1016,16 +998,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the application instance. Valid values:</p>
-             * <ul>
-             * <li>0: AGENT_OFF: indicates that the agent is offline.</li>
-             * <li>1: STOPPED: indicates that the application is stopped.</li>
-             * <li>3: RUNNING_BUT_URL_FAILED: indicates that the health check failed.</li>
-             * <li>7: RUNNING: indicates that the application is running.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>7</p>
+             * AppState.
              */
             public Builder appState(Integer appState) {
                 this.appState = appState;
@@ -1033,10 +1006,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>“”</p>
+             * ContainerStatus.
              */
             public Builder containerStatus(String containerStatus) {
                 this.containerStatus = containerStatus;
@@ -1044,10 +1014,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECC was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>1573626226691</p>
+             * <p>1573626207270</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1055,10 +1025,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0cf49a6c-95a8-4aa8-<strong><strong>-</strong></strong>********</p>
+             * EccId.
              */
             public Builder eccId(String eccId) {
                 this.eccId = eccId;
@@ -1066,10 +1033,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -1077,10 +1041,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1088,10 +1049,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.<em>.</em>**</p>
+             * Ip.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1099,16 +1057,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the latest task initiated on the application instance. Valid values:</p>
-             * <ul>
-             * <li>0: UNKNOWN: indicates that the state of the latest task is unknown.</li>
-             * <li>1: PROCESSING: indicates that the latest task is being processed.</li>
-             * <li>2: SUCCESS: indicates that the latest task is executed.</li>
-             * <li>3: FAILED: indicates that the latest task failed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * TaskState.
              */
             public Builder taskState(Integer taskState) {
                 this.taskState = taskState;
@@ -1116,10 +1065,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECC was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573635952012</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1127,10 +1073,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-wz9b246zg************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1433,10 +1376,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * AvailableCpu.
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -1444,10 +1384,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the available memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * AvailableMem.
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -1455,7 +1392,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1573626207270</p>
@@ -1466,10 +1403,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Docker is installed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DockerEnv.
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -1477,10 +1411,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU. You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>07bd417a-b863-477d-<strong><strong>-</strong></strong>********</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -1488,10 +1419,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1499,10 +1427,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573635952012</p>
+             * HeartbeatTime.
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -1510,10 +1435,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-wz9fp1ljg***********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1521,10 +1443,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.<em>.</em>*</p>
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -1532,10 +1451,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECU.</p>
+             * <p>The name of the application.</p>
              * 
              * <strong>example:</strong>
-             * <p>EDAS-scaled-cluster: default cluster</p>
+             * <p>EDAS-scaled-cluster：默认集群</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1543,10 +1462,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECU is online.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -1554,10 +1470,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The ID of the namespace.</p>
              * 
              * <strong>example:</strong>
-             * <p>cn-shen****-*</p>
+             * <p>cn-shenzhen:test</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1565,10 +1481,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573635952012</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1576,7 +1489,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user associated with the ECU.</p>
+             * <p>The ID of the Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
              * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
@@ -1587,10 +1500,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-wz9b246zg************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1598,10 +1508,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shen****-*</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1813,10 +1720,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1824,10 +1728,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change process for application deployment in the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>changeorder_a**_*******_**</p>
+             * AppVersionId.
              */
             public Builder appVersionId(String appVersionId) {
                 this.appVersionId = appVersionId;
@@ -1846,10 +1747,10 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
-             * <p>1573626155185</p>
+             * <p>1573626207270</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1857,10 +1758,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8123db90-880f-486f-<strong><strong>-</strong></strong>********</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1868,10 +1766,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>_DEFAULT_GROUP</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1879,15 +1774,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance group. Valid values:</p>
-             * <ul>
-             * <li>0: default group</li>
-             * <li>1: self-managed group</li>
-             * <li>2: canary release group</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * GroupType.
              */
             public Builder groupType(Integer groupType) {
                 this.groupType = groupType;
@@ -1895,10 +1782,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>441beb18-da42-44dc-<strong><strong>-</strong></strong>********</p>
+             * PackageVersionId.
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -1906,10 +1790,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573627441388</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -2077,7 +1958,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about deployment records.</p>
+             * DeployRecordList.
              */
             public Builder deployRecordList(DeployRecordList deployRecordList) {
                 this.deployRecordList = deployRecordList;
@@ -2085,7 +1966,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about elastic compute containers (ECCs).</p>
+             * EccList.
              */
             public Builder eccList(EccList eccList) {
                 this.eccList = eccList;
@@ -2093,7 +1974,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about elastic compute units (ECUs).</p>
+             * EcuList.
              */
             public Builder ecuList(EcuList ecuList) {
                 this.ecuList = ecuList;
@@ -2101,7 +1982,7 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the instance groups.</p>
+             * GroupList.
              */
             public Builder groupList(GroupList groupList) {
                 this.groupList = groupList;

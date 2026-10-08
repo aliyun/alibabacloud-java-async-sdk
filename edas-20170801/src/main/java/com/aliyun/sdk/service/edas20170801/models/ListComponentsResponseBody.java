@@ -91,7 +91,7 @@ public class ListComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The components.</p>
+         * ComponentList.
          */
         public Builder componentList(ComponentList componentList) {
             this.componentList = componentList;
@@ -220,10 +220,7 @@ public class ListComponentsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ComponentId.
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -231,10 +228,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>JDK 7</p>
+             * ComponentKey.
              */
             public Builder componentKey(String componentKey) {
                 this.componentKey = componentKey;
@@ -242,10 +236,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>JDK 7</p>
+             * Desc.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -253,14 +244,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the component has expired. Valid values:</p>
-             * <ul>
-             * <li>false: The component has not expired.</li>
-             * <li>true: The component has expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -268,15 +252,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the component. Valid values:</p>
-             * <ul>
-             * <li>JDK</li>
-             * <li>TOMCAT</li>
-             * <li>TENGINE</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>JDK</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -284,10 +260,7 @@ public class ListComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>oraclejdk7</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

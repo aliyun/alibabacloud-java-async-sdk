@@ -478,7 +478,7 @@ public class QueryRegionConfigResponseBody extends TeaModel {
              * <p>The configured name of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>China (Beijing)</p>
+             * <p>华北2</p>
              */
             public Builder name(String name) {
                 this.name = name;

@@ -446,7 +446,7 @@ public class InsertSwimmingLaneResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;condition&quot;:&quot;AND&quot;,&quot;enable&quot;:false,&quot;path&quot;:&quot;/traffic&quot;,&quot;priority&quot;:1,&quot;restItems&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;datum&quot;:&quot;testvalue&quot;,&quot;name&quot;:&quot;testheader&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;header&quot;,&quot;value&quot;:&quot;testvalue&quot;}]}]</p>
+             * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:false,\&quot;path\&quot;:\&quot;/traffic\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;testvalue\&quot;,\&quot;name\&quot;:\&quot;testheader\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;testvalue\&quot;}]}]</p>
              */
             public Builder entryRule(String entryRule) {
                 this.entryRule = entryRule;

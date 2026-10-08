@@ -93,7 +93,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>Additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4823-bhjf-23u4-eiufh</p>
@@ -126,7 +126,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of services in the Kubernetes cluster.</p>
+         * <p>The list of Kubernetes Services.</p>
          */
         public Builder services(java.util.List<Services> services) {
             this.services = services;
@@ -218,7 +218,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The port of the node.</p>
+             * <p>The node port.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -240,7 +240,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The protocol of the service.</p>
+             * <p>The service protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -347,7 +347,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the service in the Kubernetes cluster.</p>
+             * <p>The IP address of the Kubernetes Service.</p>
              * 
              * <strong>example:</strong>
              * <p>104.23.xx.xx</p>
@@ -358,7 +358,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
+             * <p>The service name.</p>
              * 
              * <strong>example:</strong>
              * <p>service-http</p>
@@ -369,7 +369,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The mapping of service ports.</p>
+             * <p>The list of port mappings.</p>
              */
             public Builder servicePorts(java.util.List<ServicePorts> servicePorts) {
                 this.servicePorts = servicePorts;
@@ -377,7 +377,7 @@ public class GetK8sServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the service.</p>
+             * <p>The service type.</p>
              * 
              * <strong>example:</strong>
              * <p>ClusterIP</p>

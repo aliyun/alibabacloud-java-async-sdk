@@ -270,10 +270,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>52984524-6d48-4bbd-85f2-a34b0e5b****</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -281,10 +278,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance in the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>adb03eeb-3adf-4d7e-afe1-03d1ad45****</p>
+             * ClusterMemberId.
              */
             public Builder clusterMemberId(String clusterMemberId) {
                 this.clusterMemberId = clusterMemberId;
@@ -292,10 +286,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the ECS instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281038175</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -303,10 +294,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zej4i2jdf3ntwhj****</p>
+             * EcsId.
              */
             public Builder ecsId(String ecsId) {
                 this.ecsId = ecsId;
@@ -314,10 +302,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the elastic compute unit (ECU). You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>70ed3f59-b476-49aa-be09-9e6c375d****</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -325,10 +310,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address for the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>172.16.XX.XX</p>
+             * PrivateIp.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -336,16 +318,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the ECS instance. Valid values:</p>
-             * <ul>
-             * <li>1: The instance is running.</li>
-             * <li>0: The instance is being converted.</li>
-             * <li>-1: The instance fails to be converted.</li>
-             * <li>-2: The instance is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -353,10 +326,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the ECS instance was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281041113</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -503,7 +473,7 @@ public class ListClusterMembersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of ECS instances in the cluster.</p>
+             * ClusterMemberList.
              */
             public Builder clusterMemberList(ClusterMemberList clusterMemberList) {
                 this.clusterMemberList = clusterMemberList;

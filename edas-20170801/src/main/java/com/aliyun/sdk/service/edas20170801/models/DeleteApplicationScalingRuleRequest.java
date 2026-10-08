@@ -73,7 +73,7 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>The ID of the application. Call the <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> operation to obtain the application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>78194c76-3dca-418e-a263-cccd1ab4****</p>
@@ -85,7 +85,7 @@ public class DeleteApplicationScalingRuleRequest extends Request {
         }
 
         /**
-         * <p>The name of the auto scaling policy.</p>
+         * <p>The name of the scaling rule.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu-trigger</p>

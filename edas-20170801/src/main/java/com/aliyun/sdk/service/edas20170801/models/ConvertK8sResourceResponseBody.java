@@ -80,7 +80,7 @@ public class ConvertK8sResourceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -91,7 +91,7 @@ public class ConvertK8sResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>convert success</p>

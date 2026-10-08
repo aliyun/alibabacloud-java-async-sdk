@@ -450,7 +450,7 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
              * <p>The conditions.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;condition&quot;:&quot;AND&quot;,&quot;enable&quot;:true,&quot;path&quot;:&quot;/&quot;,&quot;priority&quot;:1,&quot;restItems&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;datum&quot;:&quot;value&quot;,&quot;name&quot;:&quot;tags&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;header&quot;,&quot;value&quot;:&quot;value&quot;}]}]</p>
+             * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:true,\&quot;path\&quot;:\&quot;/\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;value\&quot;,\&quot;name\&quot;:\&quot;tags\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;value\&quot;}]}]</p>
              */
             public Builder entryRule(String entryRule) {
                 this.entryRule = entryRule;

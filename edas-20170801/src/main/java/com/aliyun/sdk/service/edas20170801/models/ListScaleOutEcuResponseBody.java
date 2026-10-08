@@ -104,7 +104,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ECUs.</p>
+         * EcuInfoList.
          */
         public Builder ecuInfoList(EcuInfoList ecuInfoList) {
             this.ecuInfoList = ecuInfoList;
@@ -361,10 +361,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available CPU cores for the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * AvailableCpu.
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -372,10 +369,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of available memory for the ECU. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>111</p>
+             * AvailableMem.
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -383,10 +377,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040819</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -394,14 +385,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Docker is installed. Valid values:</p>
-             * <ul>
-             * <li>true: Docker is installed.</li>
-             * <li>false: Docker is not installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DockerEnv.
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -409,10 +393,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0de2ebdb-9490-4fc4-be41***************</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -420,10 +401,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040819</p>
+             * HeartbeatTime.
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -431,10 +409,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zej4i2jdf*********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -442,10 +417,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XX.XX</p>
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -453,10 +425,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -464,14 +433,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECU is online. If the ECU is online, its corresponding ECS instance is managed in EDAS. Valid values:</p>
-             * <ul>
-             * <li>true: The ECU is online.</li>
-             * <li>false: The ECU is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -479,10 +441,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the ECU is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -490,10 +449,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040827</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -501,10 +457,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1172<strong><strong>6608</strong></strong></p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -512,10 +465,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC) where the ECU is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef6ob8**********</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -523,10 +473,7 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the ECU resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

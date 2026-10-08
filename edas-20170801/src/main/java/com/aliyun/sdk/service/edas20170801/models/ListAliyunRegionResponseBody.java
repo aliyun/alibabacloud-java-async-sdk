@@ -115,7 +115,7 @@ public class ListAliyunRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the regions.</p>
+         * RegionEntityList.
          */
         public Builder regionEntityList(RegionEntityList regionEntityList) {
             this.regionEntityList = regionEntityList;
@@ -192,10 +192,7 @@ public class ListAliyunRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -203,10 +200,7 @@ public class ListAliyunRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>China East 1 (Hangzhou)</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

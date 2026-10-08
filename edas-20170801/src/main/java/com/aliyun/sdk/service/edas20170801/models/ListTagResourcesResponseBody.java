@@ -126,7 +126,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about resource tags.</p>
+         * TagResources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -218,10 +218,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>000e5836-xxxx-xxxx-xxxx-0d6ab2ac4877</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -229,10 +226,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN::EDAS::APPLICATION</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -240,10 +234,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key1</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -251,10 +242,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the resource.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

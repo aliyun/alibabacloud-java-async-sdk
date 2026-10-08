@@ -117,10 +117,12 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to remove the configured listeners. Valid values:</p>
+         * <p>Specifies whether to delete the listener.</p>
          * <ul>
-         * <li>true: removes the configured listeners.</li>
-         * <li>false: does not remove the configured listeners.</li>
+         * <li><p>true: Delete the listener.</p>
+         * </li>
+         * <li><p>false: Do not delete the listener.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,10 +148,12 @@ public class UnbindSlbRequest extends Request {
         }
 
         /**
-         * <p>The network type of the SLB instance. Valid values:</p>
+         * <p>The network type of the SLB instance.</p>
          * <ul>
-         * <li><strong>internet</strong>: Internet-facing SLB instance</li>
-         * <li><strong>intranet</strong>: internal-facing SLB instance</li>
+         * <li><p><strong>internet</strong>: an internet-facing instance.</p>
+         * </li>
+         * <li><p><strong>intranet</strong>: an internal-facing instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -126,7 +126,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about service groups.</p>
+         * ServiceGroupsList.
          */
         public Builder serviceGroupsList(ServiceGroupsList serviceGroupsList) {
             this.serviceGroupsList = serviceGroupsList;
@@ -205,10 +205,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the service group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1575357165770</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -216,10 +213,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the service group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>789d9cda-74b1-<strong><strong>-</strong></strong>-05e21a0a7661</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -227,10 +221,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas-test-group</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

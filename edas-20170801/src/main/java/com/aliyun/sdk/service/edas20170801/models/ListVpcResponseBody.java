@@ -126,11 +126,7 @@ public class ListVpcResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the VPC is available. Valid values:</p>
-         * <ul>
-         * <li>true: The VPC is available.</li>
-         * <li>false: The VPC is unavailable.</li>
-         * </ul>
+         * VpcList.
          */
         public Builder vpcList(VpcList vpcList) {
             this.vpcList = vpcList;
@@ -248,10 +244,7 @@ public class ListVpcResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>This operation uses only common request headers. For more information, see <a href="https://help.aliyun.com/document_detail/123488.html">Common parameters for API calls</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * EcsNum.
              */
             public Builder ecsNum(Integer ecsNum) {
                 this.ecsNum = ecsNum;
@@ -259,10 +252,7 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -270,10 +260,7 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>No request parameters.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -281,11 +268,7 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GET /pop/v5/vpc_list HTTP/1.1
-             * Common request headers</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas_****_test@aliyun-****.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -293,10 +276,7 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-wz9pcq3jofczwpujq****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -304,10 +284,7 @@ public class ListVpcResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ECS instances associated with the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas-default-vpc4</p>
+             * VpcName.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

@@ -192,10 +192,7 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>bdb251cc-02a6-48dd-891b-2ab21b25****</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -203,10 +200,7 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-app</p>
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -447,7 +441,7 @@ public class InsertSwimmingLaneGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The list of all applications that are related to the lane group.</p>
+             * ApplicationList.
              */
             public Builder applicationList(ApplicationList applicationList) {
                 this.applicationList = applicationList;

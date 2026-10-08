@@ -149,7 +149,7 @@ public class ListTagResourcesRequest extends Request {
          * <ul>
          * <li>You can add up to 20 tags to a resource.</li>
          * <li>The key cannot start with <strong>aliyun</strong> or <strong>acs:</strong> and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
-         * <li>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (*), forward slashes (/), question marks (?), and colons (:).</li>
+         * <li>The tag key or tag value can be up to 128 characters in length, and can contain letters, digits, hyphens (-), commas (,), asterisks (\*), forward slashes (/), question marks (?), and colons (:).</li>
          * <li>Set this parameter to a JSON array.</li>
          * </ul>
          * 

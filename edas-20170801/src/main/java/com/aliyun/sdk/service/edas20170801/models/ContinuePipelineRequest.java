@@ -76,8 +76,10 @@ public class ContinuePipelineRequest extends Request {
         /**
          * <p>Specifies whether to release the next batch. Valid values:</p>
          * <ul>
-         * <li>true: releases the next batch.</li>
-         * <li>false: does not release the next batch.</li>
+         * <li><p>true: releases the next batch.</p>
+         * </li>
+         * <li><p>false: does not release the next batch.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

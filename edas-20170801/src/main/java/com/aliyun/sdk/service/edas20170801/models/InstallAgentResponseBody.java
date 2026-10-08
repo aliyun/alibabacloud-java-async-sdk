@@ -104,7 +104,7 @@ public class InstallAgentResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution result.</p>
+         * ExecutionResultList.
          */
         public Builder executionResultList(ExecutionResultList executionResultList) {
             this.executionResultList = executionResultList;
@@ -231,10 +231,7 @@ public class InstallAgentResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the installation was complete.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20**-11-10T07:02:17Z</p>
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -242,10 +239,7 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2ze7s2v0b789k*******</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -253,10 +247,7 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the installation.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Finished</p>
+             * InvokeRecordStatus.
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
@@ -264,10 +255,7 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the installation command.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,10 +263,7 @@ public class InstallAgentResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the installation was successful.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;

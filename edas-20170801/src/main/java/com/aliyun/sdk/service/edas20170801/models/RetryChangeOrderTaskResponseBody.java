@@ -93,7 +93,7 @@ public class RetryChangeOrderTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status of the API call or a POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class RetryChangeOrderTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The retry information.</p>
+         * <p>Information about the retry.</p>
          * 
          * <strong>example:</strong>
          * <p>success retry task</p>
@@ -115,7 +115,7 @@ public class RetryChangeOrderTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

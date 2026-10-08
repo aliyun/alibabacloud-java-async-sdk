@@ -207,8 +207,10 @@ public class UpdateK8sSecretRequest extends Request {
         /**
          * <p>The data of the Secret. The value must be a JSON array that contains the following information:</p>
          * <ul>
-         * <li>Key: Secret key</li>
-         * <li>Value: Secret value</li>
+         * <li><p>Key: Secret key</p>
+         * </li>
+         * <li><p>Value: Secret value</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -247,8 +249,10 @@ public class UpdateK8sSecretRequest extends Request {
         /**
          * <p>The type of the Secret. Valid values:</p>
          * <ul>
-         * <li>Opaque: user-defined data type</li>
-         * <li>kubernetes.io/tls: Transport Layer Security (TLS) certificate type</li>
+         * <li><p>Opaque: user-defined data type</p>
+         * </li>
+         * <li><p>kubernetes.io/tls: Transport Layer Security (TLS) certificate type</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

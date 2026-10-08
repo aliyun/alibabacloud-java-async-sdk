@@ -93,7 +93,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code of the request or a POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the instance group in which the application is deployed.</p>
+         * DeployGroupList.
          */
         public Builder deployGroupList(DeployGroupList deployGroupList) {
             this.deployGroupList = deployGroupList;
@@ -112,7 +112,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -608,10 +608,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3616cdca-4f92-4413-<strong><strong>-</strong></strong>********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -619,10 +616,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the change process for application deployment in the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>changeorder_a**_*******_**</p>
+             * AppVersionId.
              */
             public Builder appVersionId(String appVersionId) {
                 this.appVersionId = appVersionId;
@@ -630,10 +624,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the basic component.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>k8s-sc-consumer-****</p>
+             * BaseComponentMetaName.
              */
             public Builder baseComponentMetaName(String baseComponentMetaName) {
                 this.baseComponentMetaName = baseComponentMetaName;
@@ -641,10 +632,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0d247b93-8d62-4e34-<strong><strong>-</strong></strong>********</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -652,10 +640,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>doc-test</p>
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -663,10 +648,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of CPU cores allowed for each application instance when the application is running.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * CpuLimit.
              */
             public Builder cpuLimit(String cpuLimit) {
                 this.cpuLimit = cpuLimit;
@@ -674,10 +656,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores requested for each application instance when the application is running. Unit: cores. Value 0 indicates that no limit is set on CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CpuRequest.
              */
             public Builder cpuRequest(String cpuRequest) {
                 this.cpuRequest = cpuRequest;
@@ -685,10 +664,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573627695779</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -696,10 +672,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c66e65950db<strong><strong>cba92f17434df1</strong></strong></p>
+             * CsClusterId.
              */
             public Builder csClusterId(String csClusterId) {
                 this.csClusterId = csClusterId;
@@ -707,10 +680,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the deployment.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DeploymentName.
              */
             public Builder deploymentName(String deploymentName) {
                 this.deploymentName = deploymentName;
@@ -718,10 +688,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ACK cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>497806cb-****-6a7</p>
+             * Env.
              */
             public Builder env(String env) {
                 this.env = env;
@@ -729,10 +696,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8</p>
+             * EphemeralStorageLimit.
              */
             public Builder ephemeralStorageLimit(String ephemeralStorageLimit) {
                 this.ephemeralStorageLimit = ephemeralStorageLimit;
@@ -740,10 +704,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * EphemeralStorageRequest.
              */
             public Builder ephemeralStorageRequest(String ephemeralStorageRequest) {
                 this.ephemeralStorageRequest = ephemeralStorageRequest;
@@ -751,10 +712,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>577f4c50-16ee-43d8-<strong><strong>-</strong></strong>********</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -762,10 +720,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>_DEFAULT_GROUP</p>
+             * GroupName.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -773,15 +728,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance group. Valid values:</p>
-             * <ul>
-             * <li>0: default group.</li>
-             * <li>1: Canary release is disabled for traffic management.</li>
-             * <li>2: Canary release is enabled for traffic management.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * GroupType.
              */
             public Builder groupType(Integer groupType) {
                 this.groupType = groupType;
@@ -789,10 +736,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -800,10 +744,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1587888503825</p>
+             * LastUpdateTime.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -811,10 +752,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. Value 0 indicates that no limit is set on the memory size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * MemoryLimit.
              */
             public Builder memoryLimit(String memoryLimit) {
                 this.memoryLimit = memoryLimit;
@@ -822,10 +760,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory requested for each application instance when the application is running. Unit: MB. Value 0 indicates that no limit is set on the memory size.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>512</p>
+             * MemoryRequest.
              */
             public Builder memoryRequest(String memoryRequest) {
                 this.memoryRequest = memoryRequest;
@@ -833,10 +768,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ping****est</p>
+             * NameSpace.
              */
             public Builder nameSpace(String nameSpace) {
                 this.nameSpace = nameSpace;
@@ -844,7 +776,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external download URL of the deployment package.</p>
+             * PackagePublicUrl.
              */
             public Builder packagePublicUrl(String packagePublicUrl) {
                 this.packagePublicUrl = packagePublicUrl;
@@ -852,7 +784,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL of the deployment package.</p>
+             * PackageUrl.
              */
             public Builder packageUrl(String packageUrl) {
                 this.packageUrl = packageUrl;
@@ -860,10 +792,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>E</p>
+             * PackageVersion.
              */
             public Builder packageVersion(String packageVersion) {
                 this.packageVersion = packageVersion;
@@ -871,10 +800,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a7d48fe8-ad8f-<strong><strong>-89bd-74cc1ee6</strong></strong></p>
+             * PackageVersionId.
              */
             public Builder packageVersionId(String packageVersionId) {
                 this.packageVersionId = packageVersionId;
@@ -882,10 +808,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The post-start script.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
+             * PostStart.
              */
             public Builder postStart(String postStart) {
                 this.postStart = postStart;
@@ -893,10 +816,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The pre-stop script.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;ls&quot;,&quot;/&quot;]}}&quot;</p>
+             * PreStop.
              */
             public Builder preStop(String preStop) {
                 this.preStop = preStop;
@@ -904,10 +824,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the application. The value progressively increases in the range of 0 to 7.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Reversion.
              */
             public Builder reversion(String reversion) {
                 this.reversion = reversion;
@@ -915,10 +832,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the application deployed in the ACK cluster in Enterprise Distributed Application Service (EDAS).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>53dd85cc-25b4-4d0e-<strong><strong>-6bf5465</strong></strong>4</p>
+             * Selector.
              */
             public Builder selector(String selector) {
                 this.selector = selector;
@@ -926,18 +840,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the application instance group. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -945,10 +848,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The throttling policy. This parameter is reserved.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>RollingUpdate</p>
+             * Strategy.
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;
@@ -956,10 +856,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the application was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573627695779</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -967,10 +864,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vServer group of the Internet-facing SLB instance associated with the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rsp-cige6******</p>
+             * VExtServerGroupId.
              */
             public Builder vExtServerGroupId(String vExtServerGroupId) {
                 this.vExtServerGroupId = vExtServerGroupId;
@@ -978,10 +872,7 @@ public class ListDeployGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vServer group of the internal-facing Server Load Balancer (SLB) instance associated with the instance group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rsp-cige6******</p>
+             * VServerGroupId.
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;

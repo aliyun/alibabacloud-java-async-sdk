@@ -74,7 +74,7 @@ public class MigrateEcuRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the ECS instance. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of the instances. To specify multiple instances, separate the IDs with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,10 +87,12 @@ public class MigrateEcuRequest extends Request {
         }
 
         /**
-         * <p>The ID of the custom namespace.</p>
+         * <p>The ID of the namespace.</p>
          * <ul>
-         * <li>The ID of a custom namespace is in the <code>region ID:custom namespace ID</code> format. Example: cn-beijing:tdy218.</li>
-         * <li>The ID of the default namespace is in the <code>region ID</code> format. Example: cn-beijing.</li>
+         * <li><p>A custom namespace ID is in the format <code>Region ID:Namespace identifier</code>. Example: cn-beijing:tdy218.</p>
+         * </li>
+         * <li><p>A default namespace ID is the same as its region ID. Example: cn-beijing.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

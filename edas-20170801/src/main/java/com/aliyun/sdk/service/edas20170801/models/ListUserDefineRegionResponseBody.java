@@ -93,7 +93,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status of the API call or a POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>Additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The namespaces.</p>
+         * UserDefineRegionList.
          */
         public Builder userDefineRegionList(UserDefineRegionList userDefineRegionList) {
             this.userDefineRegionList = userDefineRegionList;
@@ -283,10 +283,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the region to which the namespace belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen</p>
+             * BelongRegion.
              */
             public Builder belongRegion(String belongRegion) {
                 this.belongRegion = belongRegion;
@@ -294,10 +291,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether remote debugging is allowed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DebugEnable.
              */
             public Builder debugEnable(Boolean debugEnable) {
                 this.debugEnable = debugEnable;
@@ -305,10 +299,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>betaappManager</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -316,10 +307,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique identifier of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1330</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -327,14 +315,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the registry. Valid values:</p>
-             * <ul>
-             * <li>default: shared service registry of Enterprise Distributed Application Service (EDAS)</li>
-             * <li>exclusive_mse: Microservices Engine (MSE) Nacos registry</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>default: EDAS</p>
+             * MseInstanceId.
              */
             public Builder mseInstanceId(String mseInstanceId) {
                 this.mseInstanceId = mseInstanceId;
@@ -342,13 +323,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the namespace.</p>
-             * <blockquote>
-             * <p>The ID cannot be changed after the namespace is created. The ID is in the <code>Physical region ID:Logical region identifier</code> format .</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shenzhen:betaappManager</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -356,10 +331,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the namespace.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>betaappManager</p>
+             * RegionName.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -367,10 +339,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the MSE instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mse_prepaid_public_cn-tl32n******</p>
+             * RegistryType.
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -378,10 +347,7 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the namespace belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas_****_test@aliyun-****.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

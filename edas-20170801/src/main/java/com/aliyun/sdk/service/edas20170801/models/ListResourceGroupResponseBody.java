@@ -126,7 +126,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>For more information about how to define a resource group, see ResGroupEntity.</p>
+         * ResourceGroupList.
          */
         public Builder resourceGroupList(ResourceGroupList resourceGroupList) {
             this.resourceGroupList = resourceGroupList;
@@ -322,10 +322,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xxx.xx</p>
+             * Address.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -333,14 +330,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the IP address of the SLB instance. Valid values:</p>
-             * <ul>
-             * <li>Internet: Users can connect to the SLB instance over the Internet.</li>
-             * <li>Intranet: Users can connect to the SLB instance over the internal network.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Intranet</p>
+             * AddressType.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -348,14 +338,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the SLB instance has expired. Valid values:</p>
-             * <ul>
-             * <li>true: The SLB instance has expired.</li>
-             * <li>false: The SLB instance has not expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -363,10 +346,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the group to which the SLB instance belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64189****</p>
+             * GroupId.
              */
             public Builder groupId(Integer groupId) {
                 this.groupId = groupId;
@@ -374,14 +354,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the SLB instance. Valid values:</p>
-             * <ul>
-             * <li>Classic network</li>
-             * <li>VPC</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -389,10 +362,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -400,10 +370,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lb-2zebf1fpbpkc7dnro****</p>
+             * SlbId.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -411,10 +378,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a9315af59b4cd11e9a18c00163e1****</p>
+             * SlbName.
              */
             public Builder slbName(String slbName) {
                 this.slbName = slbName;
@@ -422,10 +386,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the SLB instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>active</p>
+             * SlbStatus.
              */
             public Builder slbStatus(String slbStatus) {
                 this.slbStatus = slbStatus;
@@ -433,10 +394,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>****@aliyun.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -444,10 +402,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-m5e666n89m2bx8jar****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -455,10 +410,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-mktkxkhah14****</p>
+             * VswitchId.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -774,10 +726,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available CPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AvailableCpu.
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -785,10 +734,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the available memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * AvailableMem.
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -796,10 +742,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -807,10 +750,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1557890594376</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -818,14 +758,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Docker is installed. Valid values:</p>
-             * <ul>
-             * <li>true: Docker is installed.</li>
-             * <li>false: Docker is not installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DockerEnv.
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -833,10 +766,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the elastic compute unit (ECU). You can run the <code>dmidecode</code> command on the ECS instance to query the ECU ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0de2ebdb-9490-4fc4-be41***************</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -844,10 +774,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040819</p>
+             * HeartbeatTime.
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -855,10 +782,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zej4i2jdf*********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -866,10 +790,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xxx.xx</p>
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -877,10 +798,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -888,10 +806,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -899,14 +814,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECU is online. Valid values:</p>
-             * <ul>
-             * <li>true: The ECU is online.</li>
-             * <li>false: The ECU is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -914,10 +822,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -925,10 +830,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040827</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -936,10 +838,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user associated with the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas_****_test@aliyun-****.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -947,10 +846,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2ze1ram356umxs598****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -958,10 +854,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1119,10 +1012,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IPv4 CIDR block of the vSwitch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xx.xxx</p>
+             * Cidrblock.
              */
             public Builder cidrblock(String cidrblock) {
                 this.cidrblock = cidrblock;
@@ -1130,10 +1020,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;&quot;</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1141,10 +1028,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of ECS instances that run in the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * EcsNum.
              */
             public Builder ecsNum(Integer ecsNum) {
                 this.ecsNum = ecsNum;
@@ -1152,14 +1036,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the VPC has expired. Valid values:</p>
-             * <ul>
-             * <li>true: The VPC has expired.</li>
-             * <li>false: The VPC has not expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -1167,10 +1044,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1178,10 +1052,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1189,10 +1060,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1200,10 +1068,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp13evu42t1er****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1211,10 +1076,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * VpcName.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -1528,10 +1390,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The total number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1539,10 +1398,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1550,7 +1406,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic compute unit (ECU) that corresponds to the ECS instance.</p>
+             * EcuEntity.
              */
             public Builder ecuEntity(EcuEntity ecuEntity) {
                 this.ecuEntity = ecuEntity;
@@ -1558,10 +1414,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic IP address (EIP).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xxx.xx</p>
+             * Eip.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -1569,14 +1422,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instance has expired. Valid values:</p>
-             * <ul>
-             * <li>true: The ECS instance has expired.</li>
-             * <li>false: The ECS instance has not expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -1584,10 +1430,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>64189****</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -1595,10 +1438,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the host.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>iZm5e853hvvrodnvqus****</p>
+             * HostName.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1606,10 +1446,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xx.xxx</p>
+             * InnerIp.
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -1617,10 +1454,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-m5e853hvvrodnvqu****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1628,10 +1462,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>betabjmixcoud_01</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1639,10 +1470,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -1650,10 +1478,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xx.xxx</p>
+             * PrivateIp.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -1661,10 +1486,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.xx.xxx</p>
+             * PublicIp.
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -1672,10 +1494,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ch-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1683,10 +1502,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>98b480b8-458b-4ff3-84b9-cf7097c5****</p>
+             * SerialNum.
              */
             public Builder serialNum(String serialNum) {
                 this.serialNum = serialNum;
@@ -1694,10 +1510,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-m5eajgzn6b8sg9mv****</p>
+             * SgId.
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -1705,17 +1518,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the ECS instance. Valid values:</p>
-             * <ul>
-             * <li>Pending: The ECS instance is being created.</li>
-             * <li>Running: The ECS instance is running.</li>
-             * <li>Starting: The ECS instance is being started.</li>
-             * <li>Stopping: The ECS instance is being stopped.</li>
-             * <li>Stopped: The ECS instance is stopped.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1723,10 +1526,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the user account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1734,7 +1534,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPCs.</p>
+             * VpcEntity.
              */
             public Builder vpcEntity(VpcEntity vpcEntity) {
                 this.vpcEntity = vpcEntity;
@@ -1742,10 +1542,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp13evu4aayj2t1er****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1753,10 +1550,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1968,10 +1762,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The UID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>****@aliyun.com</p>
+             * AdminUserId.
              */
             public Builder adminUserId(String adminUserId) {
                 this.adminUserId = adminUserId;
@@ -1979,10 +1770,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1557890594376</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1990,10 +1778,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>QqLZDA3pBZ</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -2001,10 +1786,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8592</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -2012,10 +1794,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>TIa2LGixyD</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2023,10 +1802,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the resource group belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-qingdao</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2034,7 +1810,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Server Load Balancer (SLB) instances.</p>
+             * SlbList.
              */
             public Builder slbList(SlbList slbList) {
                 this.slbList = slbList;
@@ -2042,10 +1818,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the resource group was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040827</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -2053,7 +1826,7 @@ public class ListResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Elastic Compute Service (ECS) instances.</p>
+             * ecsList.
              */
             public Builder ecsList(EcsList ecsList) {
                 this.ecsList = ecsList;

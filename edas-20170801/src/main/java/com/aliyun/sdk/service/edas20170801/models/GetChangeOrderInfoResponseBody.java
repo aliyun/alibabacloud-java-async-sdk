@@ -93,7 +93,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status of the API call or a POP error code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>Additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4JFR-FV9F***************</p>
@@ -126,7 +126,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details about the change process.</p>
+         * <p>The details of the change process.</p>
          */
         public Builder changeOrderInfo(ChangeOrderInfo changeOrderInfo) {
             this.changeOrderInfo = changeOrderInfo;
@@ -283,10 +283,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the retry policy. Value 0 indicates no retry, value 1 indicates automatic retry, and value 2 indicates manual retry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * RetryType.
              */
             public Builder retryType(Integer retryType) {
                 this.retryType = retryType;
@@ -294,14 +291,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether errors that occur in the change process are ignored. Valid values:``</p>
-             * <ul>
-             * <li>true: Errors that occur in the change process are ignored. This parameter can be set to true only when URL health checks are performed.</li>
-             * <li>false: Errors that occur in the change process are not ignored.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ShowManualIgnorance.
              */
             public Builder showManualIgnorance(Boolean showManualIgnorance) {
                 this.showManualIgnorance = showManualIgnorance;
@@ -309,10 +299,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Error codes</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * TaskErrorCode.
              */
             public Builder taskErrorCode(String taskErrorCode) {
                 this.taskErrorCode = taskErrorCode;
@@ -320,14 +307,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the task is error-tolerant. If the task can tolerate errors, the errors that occur in the change process are ignored and the next task is executed.</p>
-             * <ul>
-             * <li>0: The task is not error-tolerant.</li>
-             * <li>1: The task is error-tolerant.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * TaskErrorIgnorance.
              */
             public Builder taskErrorIgnorance(Integer taskErrorIgnorance) {
                 this.taskErrorIgnorance = taskErrorIgnorance;
@@ -335,10 +315,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error message for the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>400</p>
+             * TaskErrorMessage.
              */
             public Builder taskErrorMessage(String taskErrorMessage) {
                 this.taskErrorMessage = taskErrorMessage;
@@ -346,10 +323,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d6d3b934-90a1-4ae8-8cbd-2446003d****</p>
+             * TaskId.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -357,10 +331,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task information</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[CALLBACK] 2020-03-11 15:28:44.781  requestId: c952ab99-8c5b-4ff1-9412-ae3bf9b1****, message: success</p>
+             * TaskMessage.
              */
             public Builder taskMessage(String taskMessage) {
                 this.taskMessage = taskMessage;
@@ -368,10 +339,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Build Image</p>
+             * TaskName.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -379,20 +347,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the task. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * TaskStatus.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -539,10 +494,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d7561440-10a6-452f-8a90-62f6e7ec****</p>
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -550,10 +502,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Process Start</p>
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -561,20 +510,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the stage. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * StageStatus.
              */
             public Builder stageStatus(Integer stageStatus) {
                 this.stageStatus = stageStatus;
@@ -582,7 +518,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the task.</p>
+             * TaskList.
              */
             public Builder taskList(TaskList taskList) {
                 this.taskList = taskList;
@@ -755,10 +691,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the execution stopped.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-03-11T07:28:52Z</p>
+             * FinishTime.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -766,10 +699,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5dd4c0f2-d81a-406f-<strong><strong>-</strong></strong>********</p>
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -777,10 +707,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Pulling image &quot;registry-vpc.cn-hangzhou.aliyuncs.com****-user/1172745****_shared_repo:428084d6-265f-<strong><strong>-911a-7eb0d2c3</strong></strong>_15839117****\</p>
+             * StageMessage.
              */
             public Builder stageMessage(String stageMessage) {
                 this.stageMessage = stageMessage;
@@ -788,10 +715,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>scale out</p>
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -799,10 +723,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the execution was started.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2020-03-11T07:28:49Z</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -810,20 +731,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the stage. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -996,10 +904,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IP address of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>47.XX.XX.12 (Public)<br><em><strong>.</strong>.</em>.*** (*******)</p>
+             * InstanceIp.
              */
             public Builder instanceIp(String instanceIp) {
                 this.instanceIp = instanceIp;
@@ -1007,10 +912,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>EDAS-scaled</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1018,7 +920,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the task executed on the ECS instance in each stage.</p>
+             * InstanceStageDTOList.
              */
             public Builder instanceStageDTOList(InstanceStageDTOList instanceStageDTOList) {
                 this.instanceStageDTOList = instanceStageDTOList;
@@ -1026,10 +928,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>canary-test</p>
+             * PodName.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -1037,10 +936,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the pod.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>In progress</p>
+             * PodStatus.
              */
             public Builder podStatus(String podStatus) {
                 this.podStatus = podStatus;
@@ -1048,20 +944,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running state. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1208,10 +1091,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The execution result in the stage.</p>
+             * <p>Additional information.</p>
              * 
              * <strong>example:</strong>
-             * <p>Success</p>
+             * <p>success</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1219,10 +1102,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>358a143f-09a0-45e0-<strong><strong>-</strong></strong>********</p>
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -1230,10 +1110,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Phase Name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Enable Tengine</p>
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1241,20 +1118,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The running state. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1321,7 +1185,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The results of the task executed on each Elastic Compute Service (ECS) instance in each stage.</p>
+             * InstanceDTOList.
              */
             public Builder instanceDTOList(InstanceDTOList instanceDTOList) {
                 this.instanceDTOList = instanceDTOList;
@@ -1329,7 +1193,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of tasks executed in each service-oriented stage.</p>
+             * ServiceStage.
              */
             public Builder serviceStage(ServiceStage serviceStage) {
                 this.serviceStage = serviceStage;
@@ -1422,10 +1286,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>358a143f-09a0-45e0-<strong><strong>-</strong></strong>********@<strong><em>*******</em>***</strong></p>
+             * StageId.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -1433,10 +1294,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the stage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Scale Out</p>
+             * StageName.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -1444,7 +1302,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The results of the task executed in the stage.</p>
+             * StageResultDTO.
              */
             public Builder stageResultDTO(StageResultDTO stageResultDTO) {
                 this.stageResultDTO = stageResultDTO;
@@ -1452,20 +1310,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the stage. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1651,10 +1496,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of each batch for the change during the phased release.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4c4ee320-5e47-4a48-<strong><strong>-</strong></strong>********</p>
+             * PipelineId.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1662,10 +1504,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the batch.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Batch: 1</p>
+             * PipelineName.
              */
             public Builder pipelineName(String pipelineName) {
                 this.pipelineName = pipelineName;
@@ -1673,20 +1512,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the change task. Valid values:</p>
-             * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * PipelineStatus.
              */
             public Builder pipelineStatus(Integer pipelineStatus) {
                 this.pipelineStatus = pipelineStatus;
@@ -1694,7 +1520,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution results in each stage.</p>
+             * StageDetailList.
              */
             public Builder stageDetailList(StageDetailList stageDetailList) {
                 this.stageDetailList = stageDetailList;
@@ -1702,7 +1528,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stages of the change process.</p>
+             * StageList.
              */
             public Builder stageList(StageList stageList) {
                 this.stageList = stageList;
@@ -1710,10 +1536,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1583911702158</p>
+             * StartTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1721,10 +1544,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change task was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1583911743633</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1912,7 +1732,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The route forwarding policy.</p>
+             * <p>The traffic forwarding rule.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;app&quot;:&quot;9c8247da-91b6-42bb-8f99-92a0b9c6f****&quot;,&quot;type&quot;:&quot;GROUP&quot;}]</p>
@@ -1923,7 +1743,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The traffic routing rules.</p>
+             * <p>The routing rule for traffic.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;conditionType&quot;:&quot;content&quot;,&quot;conditions&quot;:[{&quot;key&quot;:&quot;name&quot;,&quot;operator&quot;:&quot;EQ&quot;,&quot;strategy&quot;:&quot;PARAM&quot;,&quot;values&quot;:[&quot;jim&quot;]},{&quot;key&quot;:&quot;name&quot;,&quot;operator&quot;:&quot;EQ&quot;,&quot;strategy&quot;:&quot;COOKIE&quot;,&quot;values&quot;:[&quot;jim&quot;]}],&quot;percent&quot;:100,&quot;protocol&quot;:&quot;SPRINGCLOUD&quot;,&quot;triggerPolicy&quot;:&quot;AND&quot;}]</p>
@@ -1934,10 +1754,10 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of throttling rules.</p>
+             * <p>The description of the traffic rule.</p>
              * 
              * <strong>example:</strong>
-             * <p>This canary release batch is complete, and the user has confirmed to proceed to the next batch.</p>
+             * <p>Canary batch release completed. Confirmed to proceed to the next batch.</p>
              */
             public Builder tips(String tips) {
                 this.tips = tips;
@@ -2158,10 +1978,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the change for the next batch is automatically or manually triggered when phased release is performed. Valid values:</p>
+             * <p>The execution mode for the next batch in a phased release.</p>
              * <ul>
-             * <li>Automatic: The change for the next batch is automatically triggered.</li>
-             * <li>Manual: The change for the next batch is manually triggered.</li>
+             * <li><p>Automatic: The next batch is automatically executed.</p>
+             * </li>
+             * <li><p>Manual: The next batch is manually executed.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2176,7 +1998,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
              * <p>The description of the change process.</p>
              * 
              * <strong>example:</strong>
-             * <p>Application scale-out</p>
+             * <p>Application scale-up</p>
              */
             public Builder changeOrderDescription(String changeOrderDescription) {
                 this.changeOrderDescription = changeOrderDescription;
@@ -2195,7 +2017,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the change process.</p>
+             * <p>The classification of the change process.</p>
              * 
              * <strong>example:</strong>
              * <p>Application Scale Out</p>
@@ -2206,7 +2028,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the change process is created.</p>
+             * <p>The time when the change process was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2019-11-13 14:23:46</p>
@@ -2217,7 +2039,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The person in charge of the change process.</p>
+             * <p>The owner of the change process.</p>
              * 
              * <strong>example:</strong>
              * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
@@ -2239,7 +2061,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the batches of the change task.</p>
+             * PipelineInfoList.
              */
             public Builder pipelineInfoList(PipelineInfoList pipelineInfoList) {
                 this.pipelineInfoList = pipelineInfoList;
@@ -2247,17 +2069,26 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the change process. Valid values:</p>
+             * <p>The status of the change.</p>
              * <ul>
-             * <li>0: ready</li>
-             * <li>1: in progress</li>
-             * <li>2: successful</li>
-             * <li>3: failed</li>
-             * <li>6: terminated</li>
-             * <li>7: partially executed</li>
-             * <li>8: wait for manual confirmation to trigger the next batch during a manual phased release</li>
-             * <li>9: wait to trigger the next batch during an automatic phased release</li>
-             * <li>10: failed due to a system exception</li>
+             * <li><p>0: ready</p>
+             * </li>
+             * <li><p>1: in progress</p>
+             * </li>
+             * <li><p>2: successful</p>
+             * </li>
+             * <li><p>3: failed</p>
+             * </li>
+             * <li><p>6: stopped</p>
+             * </li>
+             * <li><p>7: partially successful</p>
+             * </li>
+             * <li><p>8: waiting for manual confirmation to proceed with the next batch in manual phased release mode</p>
+             * </li>
+             * <li><p>9: waiting for the next batch to be executed in automatic phased release mode</p>
+             * </li>
+             * <li><p>10: failed due to a system exception</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2269,10 +2100,12 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether rollbacks are allowed. Valid values:</p>
+             * <p>Indicates whether rollback is supported.</p>
              * <ul>
-             * <li>true: Rollbacks are allowed.</li>
-             * <li>false: Rollbacks are not allowed.</li>
+             * <li><p>true: Rollback is supported.</p>
+             * </li>
+             * <li><p>false: Rollback is not supported.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2292,7 +2125,7 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The throttling rules.</p>
+             * <p>The throttling rule.</p>
              */
             public Builder trafficControl(TrafficControl trafficControl) {
                 this.trafficControl = trafficControl;

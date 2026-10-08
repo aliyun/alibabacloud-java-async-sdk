@@ -202,7 +202,7 @@ public class UpdateK8sSlbRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a>.</p>
+         * <p>The ID of the application. Call <a href="https://help.aliyun.com/document_detail/149390.html">ListApplication</a> to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The ID of the cluster. You can query the cluster ID by calling the GetK8sCluster operation. For more information, see <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a>.</p>
+         * <p>The ID of the cluster. Call <a href="https://help.aliyun.com/document_detail/181437.html">GetK8sCluster</a> to get this ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -228,10 +228,12 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to disable listener configuration overriding.</p>
+         * <p>Specifies whether to disable overwriting the SLB listener configuration.</p>
          * <ul>
-         * <li>true: disables listener configuration overriding.</li>
-         * <li>false: enables listener configuration overriding.</li>
+         * <li><p>true: Disables overwriting.</p>
+         * </li>
+         * <li><p>false: Allows overwriting.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -244,7 +246,7 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The frontend port. Valid values: 1 to 65535.</p>
+         * <p>The frontend port. The value ranges from 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -256,10 +258,12 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The scheduling algorithm for the SLB instance. If you do not specify this parameter, the default value rr is used. SLB supports the following scheduling algorithms: round-robin and weighted round-robin. Valid values:</p>
+         * <p>The scheduling algorithm of the SLB instance. If you do not set this parameter, rr is used. The supported algorithms are round-robin (rr) and weighted round-robin (wrr).</p>
          * <ul>
-         * <li>wrr: weighted round-robin scheduling. Backend servers that have higher weights receive more requests than those that have lower weights.</li>
-         * <li>rr: round-robin scheduling. Requests are sequentially distributed to backend servers.</li>
+         * <li><p>Weighted round-robin (wrr): Backend servers with higher weights receive more requests.</p>
+         * </li>
+         * <li><p>Round-robin (rr): Requests are distributed to backend servers in sequence.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,13 +276,19 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The information about the ports. This parameter is required if you want to configure multi-port mappings or use a protocol other than TCP. You must set this parameter to a JSON array. Example: [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;lo adBalancerProtocol&quot;:&quot;HTTPS&quot;}]</p>
+         * <p>This parameter is used for scenarios that involve multiple ports or protocols other than TCP. The value must be a JSON array. For example:
+         * [{&quot;targetPort&quot;:8080,&quot;port&quot;:82,&quot;loadBalancerProtocol&quot;:&quot;TCP&quot;},{&quot;port&quot;:81,&quot;certId&quot;:&quot;1362469756373809_16c185d6fa2_1914500329_-xxxxxxx&quot;,&quot;targetPort&quot;:8181,&quot;loadBalancerProtocol&quot;:&quot;HTTPS&quot;}]</p>
          * <ul>
-         * <li>port: required. The frontend port. Valid values: 1 to 65535. Each port must be unique.</li>
-         * <li>targetPort: required. The backend port. Valid values: 1 to 65535.</li>
-         * <li>loadBalancerProtocol: required. Valid values: TCP and HTTPS. If the HTTP protocol is used, set this parameter to TCP.</li>
-         * <li>certId: the ID of the certificate. This parameter is required if the HTTPS protocol is used. You can purchase an SLB instance in the SLB console.</li>
-         * <li>Note: The ServicePortInfos parameter is specified to support multi-port mappings. If you want this parameter to take effect, make sure that you specify the AppId, ClusterId, Type, and SlbId parameters.</li>
+         * <li><p>port: Required. The frontend port. The value ranges from 1 to 65535. Each port number must be unique.</p>
+         * </li>
+         * <li><p>targetPort: Required. The backend port. The value ranges from 1 to 65535.</p>
+         * </li>
+         * <li><p>loadBalancerProtocol: Required. Only TCP and HTTPS are supported. For HTTP listeners, set this parameter to TCP.</p>
+         * </li>
+         * <li><p>certId: This parameter is required for HTTPS listeners. It specifies the ID of a certificate that you can purchase in the SLB console.</p>
+         * </li>
+         * <li><p>Note: This parameter is used to support multiple ports and must be used with the appId, clusterId, type, and slbId parameters.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,7 +313,7 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The protocol used by the SLB instance. Set the value to TCP.</p>
+         * <p>The protocol of the SLB instance. Currently, only TCP is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP</p>
@@ -315,16 +325,22 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The specifications of the SLB instance.</p>
+         * <p>The specification of the SLB instance. The following specifications are supported:</p>
          * <ul>
-         * <li>slb.s1.small</li>
-         * <li>slb.s2.small</li>
-         * <li>slb.s2.medium</li>
-         * <li>slb.s3.small</li>
-         * <li>slb.s3.medium</li>
-         * <li>slb.s3.large</li>
+         * <li><p>slb.s1.small</p>
+         * </li>
+         * <li><p>slb.s2.small</p>
+         * </li>
+         * <li><p>slb.s2.medium</p>
+         * </li>
+         * <li><p>slb.s3.small</p>
+         * </li>
+         * <li><p>slb.s3.medium</p>
+         * </li>
+         * <li><p>slb.s3.large</p>
+         * </li>
          * </ul>
-         * <p>If you do not specify this parameter, the default value slb.s1.small is used.</p>
+         * <p>If you do not set this parameter, the default value is slb.s1.small.</p>
          * 
          * <strong>example:</strong>
          * <p>slb.s1.small</p>
@@ -336,7 +352,7 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The backend port, which is also the service port of the application. Valid values: 1 to 65535.</p>
+         * <p>The backend port, which is the service port of the application. The value ranges from 1 to 65535.</p>
          * 
          * <strong>example:</strong>
          * <p>8082</p>
@@ -348,10 +364,12 @@ public class UpdateK8sSlbRequest extends Request {
         }
 
         /**
-         * <p>The type of the SLB instance. Valid values:</p>
+         * <p>The type of the SLB instance.</p>
          * <ul>
-         * <li>Internet: an Internet-facing SLB instance</li>
-         * <li>Intranet: an internal-facing SLB instance</li>
+         * <li><p>Internet: An Internet-facing instance.</p>
+         * </li>
+         * <li><p>Intranet: An internal-facing instance.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

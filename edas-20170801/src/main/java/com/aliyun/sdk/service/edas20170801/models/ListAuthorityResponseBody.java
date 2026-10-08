@@ -93,7 +93,7 @@ public class ListAuthorityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The permissions.</p>
+         * AuthorityList.
          */
         public Builder authorityList(AuthorityList authorityList) {
             this.authorityList = authorityList;
@@ -218,10 +218,10 @@ public class ListAuthorityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The code of the permission.</p>
+             * <p>The HTTP status code that is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -229,10 +229,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Create an application</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,10 +237,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -251,10 +245,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Create an application</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -401,7 +392,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The set of permissions.</p>
+             * ActionList.
              */
             public Builder actionList(ActionList actionList) {
                 this.actionList = actionList;
@@ -409,10 +400,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Operations on applications</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -420,10 +408,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -431,10 +416,7 @@ public class ListAuthorityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Application management</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;

@@ -158,7 +158,7 @@ public class ListK8sSecretsRequest extends Request {
          * <p>The filter conditions. Set this parameter to a JSON string in the format of {&quot;field&quot;:&quot;Name&quot;, &quot;pattern&quot;:&quot;configmap-&quot;}.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;field&quot;:&quot;Name&quot;,&quot;pattern&quot;:&quot;product&quot;}</p>
+         * <p>{\&quot;field\&quot;:\&quot;Name\&quot;,\&quot;pattern\&quot;:\&quot;product\&quot;}</p>
          */
         public Builder condition(String condition) {
             this.putQueryParameter("Condition", condition);

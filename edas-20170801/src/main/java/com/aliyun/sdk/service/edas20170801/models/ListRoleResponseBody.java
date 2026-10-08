@@ -126,7 +126,7 @@ public class ListRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The roles.</p>
+         * RoleList.
          */
         public Builder roleList(RoleList roleList) {
             this.roleList = roleList;
@@ -218,10 +218,10 @@ public class ListRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The serial number of the permission that is granted to the role.</p>
+             * <p>The HTTP status code that is returned.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>200</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -229,10 +229,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the permission to be granted to the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Operations in operation records</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -240,10 +237,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the permission group to which the permission that is granted to the role belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>31</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -251,10 +245,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the permission to be granted to the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Operation records</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -427,10 +418,7 @@ public class ListRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test**@aliyun.com</p>
+             * AdminUserId.
              */
             public Builder adminUserId(String adminUserId) {
                 this.adminUserId = adminUserId;
@@ -438,10 +426,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the role was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1542717260156</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -449,10 +434,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Id.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -460,10 +442,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the role is a default role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * IsDefault.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -471,10 +450,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the role.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Super Admin(All privileges)</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -482,10 +458,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the role was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1542717260156</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -552,7 +525,7 @@ public class ListRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The set of permissions to be granted to the role.</p>
+             * ActionList.
              */
             public Builder actionList(ActionList actionList) {
                 this.actionList = actionList;
@@ -560,7 +533,7 @@ public class ListRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The roles.</p>
+             * Role.
              */
             public Builder role(Role role) {
                 this.role = role;

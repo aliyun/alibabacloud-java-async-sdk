@@ -93,7 +93,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about consumed services.</p>
+         * ConsumedServicesList.
          */
         public Builder consumedServicesList(ConsumedServicesList consumedServicesList) {
             this.consumedServicesList = consumedServicesList;
@@ -112,7 +112,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The unique request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
@@ -378,10 +378,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>a5281053-08e4-47a5-b2ab-5c0323de7b5a</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -389,14 +386,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the application runs in a Docker container. Valid values:</p>
-             * <ul>
-             * <li>true: The application runs in a Docker container.</li>
-             * <li>false: The application does not run in a Docker container.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DockerApplication.
              */
             public Builder dockerApplication(Boolean dockerApplication) {
                 this.dockerApplication = dockerApplication;
@@ -404,10 +394,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A reserved parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>&quot;&quot;</p>
+             * Group2Ip.
              */
             public Builder group2Ip(String group2Ip) {
                 this.group2Ip = group2Ip;
@@ -431,10 +418,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the consumed service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>service</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -442,10 +426,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the consumed service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HSF</p>
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -453,10 +434,7 @@ public class ListConsumedServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the consumed service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0</p>
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

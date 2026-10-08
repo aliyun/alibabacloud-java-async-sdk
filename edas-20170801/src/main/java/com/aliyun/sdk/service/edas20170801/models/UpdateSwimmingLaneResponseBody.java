@@ -93,7 +93,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data that is returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The additional information that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6CB46AEA-309C-5041-9EC7-FCF4478F****</p>
@@ -240,7 +240,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the lane.</p>
+             * <p>The ID of the swimming lane.</p>
              * 
              * <strong>example:</strong>
              * <p>321</p>
@@ -386,10 +386,10 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The rule of the lane.</p>
+             * <p>The rule of the swimming lane.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;condition&quot;:&quot;AND&quot;,&quot;enable&quot;:true,&quot;path&quot;:&quot;/traffictest&quot;,&quot;priority&quot;:1,&quot;restItems&quot;:[{&quot;cond&quot;:&quot;==&quot;,&quot;datum&quot;:&quot;testheadervalue&quot;,&quot;name&quot;:&quot;testheader&quot;,&quot;operator&quot;:&quot;rawvalue&quot;,&quot;type&quot;:&quot;header&quot;,&quot;value&quot;:&quot;testheadervalue&quot;}]}]&quot;</p>
+             * <p>[{\&quot;condition\&quot;:\&quot;AND\&quot;,\&quot;enable\&quot;:true,\&quot;path\&quot;:\&quot;/traffictest\&quot;,\&quot;priority\&quot;:1,\&quot;restItems\&quot;:[{\&quot;cond\&quot;:\&quot;==\&quot;,\&quot;datum\&quot;:\&quot;testheadervalue\&quot;,\&quot;name\&quot;:\&quot;testheader\&quot;,\&quot;operator\&quot;:\&quot;rawvalue\&quot;,\&quot;type\&quot;:\&quot;header\&quot;,\&quot;value\&quot;:\&quot;testheadervalue\&quot;}]}]&quot;</p>
              */
             public Builder entryRule(String entryRule) {
                 this.entryRule = entryRule;
@@ -397,7 +397,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the lane group.</p>
+             * <p>The ID of the swimming lane group.</p>
              * 
              * <strong>example:</strong>
              * <p>171</p>
@@ -408,7 +408,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the lane.</p>
+             * <p>The ID of the swimming lane.</p>
              * 
              * <strong>example:</strong>
              * <p>321</p>
@@ -419,7 +419,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the lane.</p>
+             * <p>The name of the swimming lane.</p>
              * 
              * <strong>example:</strong>
              * <p>test-swimlane</p>
@@ -441,7 +441,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of associations between the lane and the related application.</p>
+             * <p>A list of relationships between applications and the swimming lane.</p>
              */
             public Builder swimmingLaneAppRelationShipList(java.util.List<SwimmingLaneAppRelationShipList> swimmingLaneAppRelationShipList) {
                 this.swimmingLaneAppRelationShipList = swimmingLaneAppRelationShipList;
@@ -449,7 +449,7 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag of the lane.</p>
+             * <p>The tag of the swimming lane.</p>
              * 
              * <strong>example:</strong>
              * <p>2cb6b8a</p>

@@ -104,7 +104,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about ECUs that can be migrated.</p>
+         * EcuEntityList.
          */
         public Builder ecuEntityList(EcuEntityList ecuEntityList) {
             this.ecuEntityList = ecuEntityList;
@@ -387,10 +387,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of available CPUs. Unit: cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * AvailableCpu.
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -398,10 +395,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of available memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2048</p>
+             * AvailableMem.
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -409,10 +403,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU quota set by the system. Unit: cores. The value 0 indicates that no quota is set by the system.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -420,10 +411,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281041101</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -431,14 +419,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Docker is installed. Valid values:</p>
-             * <ul>
-             * <li>true: Docker is installed.</li>
-             * <li>false: Docker is not installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * DockerEnv.
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -446,10 +427,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>70ed3f59-b476-49aa-<strong><strong>-</strong></strong>********</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -457,10 +435,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281041101</p>
+             * HeartbeatTime.
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -468,10 +443,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zej4i2jd***********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -479,10 +451,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.150</p>
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -490,10 +459,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -501,10 +467,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>product_test003</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -512,14 +475,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECU is online. Valid values:</p>
-             * <ul>
-             * <li>true: The ECU is online.</li>
-             * <li>false: The ECU is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -527,10 +483,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the ECU resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -538,10 +491,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281041109</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -549,10 +499,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas_com***_****@<em><em><strong><strong>-</strong></strong></em>.</em>**</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -560,10 +507,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef6ob8m************</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -571,10 +515,7 @@ public class QueryMigrateEcuListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the ECU resides.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-bei****-*</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

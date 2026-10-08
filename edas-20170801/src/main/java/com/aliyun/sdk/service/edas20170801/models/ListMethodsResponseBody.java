@@ -93,7 +93,7 @@ public class ListMethodsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class ListMethodsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message that indicates whether the request is successful.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class ListMethodsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about service methods.</p>
+         * ServiceMethodList.
          */
         public Builder serviceMethodList(ServiceMethodList serviceMethodList) {
             this.serviceMethodList = serviceMethodList;
@@ -352,10 +352,7 @@ public class ListMethodsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>App</p>
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -371,10 +368,7 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>echo</p>
+             * MethodName.
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -382,10 +376,7 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The return type of the service method.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>java.lang.string</p>
+             * Output.
              */
             public Builder output(String output) {
                 this.output = output;
@@ -401,10 +392,7 @@ public class ListMethodsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the service.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>com.alibaba.edas.demo.EchoService</p>
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

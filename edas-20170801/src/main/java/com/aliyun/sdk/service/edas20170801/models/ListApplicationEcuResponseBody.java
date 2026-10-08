@@ -104,7 +104,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about ECUs.</p>
+         * EcuInfoList.
          */
         public Builder ecuInfoList(EcuInfoList ecuInfoList) {
             this.ecuInfoList = ecuInfoList;
@@ -400,10 +400,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>e809****-43d7-4c6b-8e01-b0d9d1db****</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -411,10 +408,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of available CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * AvailableCpu.
              */
             public Builder availableCpu(Integer availableCpu) {
                 this.availableCpu = availableCpu;
@@ -422,10 +416,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of available memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * AvailableMem.
              */
             public Builder availableMem(Integer availableMem) {
                 this.availableMem = availableMem;
@@ -433,10 +424,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -444,10 +432,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1542692376066</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -455,14 +440,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether Docker is installed. Valid values:</p>
-             * <ul>
-             * <li>true: Docker is installed.</li>
-             * <li>false: Docker is not installed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * DockerEnv.
              */
             public Builder dockerEnv(Boolean dockerEnv) {
                 this.dockerEnv = dockerEnv;
@@ -470,10 +448,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the ECU. To query the ID, you can run the <code>dmidecode</code> command on the ECS instance that corresponds to the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0de2ebdb-9490-4fc4-be41***************</p>
+             * EcuId.
              */
             public Builder ecuId(String ecuId) {
                 this.ecuId = ecuId;
@@ -481,10 +456,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1573281040819</p>
+             * HeartbeatTime.
              */
             public Builder heartbeatTime(Long heartbeatTime) {
                 this.heartbeatTime = heartbeatTime;
@@ -492,10 +464,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2zej4i2jdf*********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -503,10 +472,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal IP address allocated to the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.XXX.XXX</p>
+             * IpAddr.
              */
             public Builder ipAddr(String ipAddr) {
                 this.ipAddr = ipAddr;
@@ -514,10 +480,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>500</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -525,10 +488,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECU.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -536,14 +496,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECU is online. Valid values:</p>
-             * <ul>
-             * <li>true: The ECU is online.</li>
-             * <li>false: The ECU is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Online.
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -551,10 +504,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -562,10 +512,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1599803995894</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -573,10 +520,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><strong><strong><em>common</em></strong></strong>@aliyun.com</p>
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -584,10 +528,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef6ob8**********</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -595,10 +536,7 @@ public class ListApplicationEcuResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing-h</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -104,7 +104,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about ECS instances.</p>
+         * EcsEntityList.
          */
         public Builder ecsEntityList(EcsEntityList ecsEntityList) {
             this.ecsEntityList = ecsEntityList;
@@ -335,10 +335,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -346,10 +343,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The elastic IP address (EIP) associated with the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>139.30.xxx.xx</p>
+             * Eip.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
@@ -357,14 +351,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the ECS instance has expired. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong>: The ECS instance has expired.</li>
-             * <li><strong>false</strong>: The ECS instance has not expired.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Expired.
              */
             public Builder expired(Boolean expired) {
                 this.expired = expired;
@@ -372,10 +359,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.20.113</p>
+             * InnerIp.
              */
             public Builder innerIp(String innerIp) {
                 this.innerIp = innerIp;
@@ -383,10 +367,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i-2ze7s2v0b***********</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -394,10 +375,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>worker-k8s-for-cs-c9dfa009a5e7c4faab2010b87cae4****</p>
+             * InstanceName.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -405,10 +383,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of memory. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4096</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -416,10 +391,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The private IP address of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.<em>.</em>*</p>
+             * PrivateIp.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -427,10 +399,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public IP address of the ECS instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>131.30.xxx.xx</p>
+             * PublicIp.
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -438,10 +407,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the ECS instance is located.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -449,17 +415,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the ECS instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong>: The ECS instance is being created.</li>
-             * <li><strong>Running</strong>: The ECS instance is running.</li>
-             * <li><strong>Starting</strong>: The ECS instance is being started.</li>
-             * <li><strong>Stopping</strong>: The ECS instance is being stopped.</li>
-             * <li><strong>Stopped</strong>: The ECS instance is stopped.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -467,10 +423,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-2zef6ob8mrlzv8x3q****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -478,10 +431,7 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * VpcName.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

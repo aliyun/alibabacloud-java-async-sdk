@@ -157,7 +157,7 @@ public class ListApplicationRequest extends Request {
         } 
 
         /**
-         * <p>The application IDs.</p>
+         * <p>The list of application IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>[
@@ -172,7 +172,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The name of the application. Specify this parameter if you want to filter applications by application name.</p>
+         * <p>Filters the application list by application name.</p>
          * 
          * <strong>example:</strong>
          * <p>testapp</p>
@@ -184,7 +184,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID. Specify this parameter if you want to filter applications by cluster.</p>
+         * <p>Filters the application list by cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>c37aec2a-bcca-4ec1-<strong><strong>-</strong></strong>********</p>
@@ -196,7 +196,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The page number. Default value: 1.</p>
+         * <p>The number of the page to return in a paged query. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -208,7 +208,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The namespace ID. Specify this parameter if you want to filter applications by namespace.</p>
+         * <p>Filters the application list by microservices namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -220,7 +220,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace that you use in the exact search to filter applications.</p>
+         * <p>Filters applications by exact match of the microservices namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing:test</p>
@@ -232,7 +232,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of entries to return on each page in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -244,7 +244,7 @@ public class ListApplicationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. Specify this parameter if you want to filter applications by resource group.</p>
+         * <p>Filters the application list by resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek24j4s4b*****</p>

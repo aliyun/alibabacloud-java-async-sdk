@@ -93,7 +93,7 @@ public class ListClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The clusters.</p>
+         * ClusterList.
          */
         public Builder clusterList(ClusterList clusterList) {
             this.clusterList = clusterList;
@@ -400,10 +400,7 @@ public class ListClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the cluster in EDAS.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>b98b5919-c111-4dad-9f74-7233********</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -411,10 +408,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cluster-test</p>
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -422,18 +416,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the cluster. Valid values:</p>
-             * <ul>
-             * <li>0: regular Docker cluster</li>
-             * <li>1: Swarm cluster</li>
-             * <li>2: Elastic Compute Service (ECS) cluster</li>
-             * <li>3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</li>
-             * <li>4: cluster in which Pandora automatically registers applications</li>
-             * <li>5: ACK cluster</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ClusterType.
              */
             public Builder clusterType(Integer clusterType) {
                 this.clusterType = clusterType;
@@ -441,10 +424,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -452,10 +432,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of used CPU cores.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CpuUsed.
              */
             public Builder cpuUsed(Integer cpuUsed) {
                 this.cpuUsed = cpuUsed;
@@ -463,10 +440,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1502888064561</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -474,10 +448,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster in Container Service for Kubernetes (ACK).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>c2ce************b9203a9</p>
+             * CsClusterId.
              */
             public Builder csClusterId(String csClusterId) {
                 this.csClusterId = csClusterId;
@@ -485,10 +456,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -496,10 +464,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provider of the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ALIYUN</p>
+             * IaasProvider.
              */
             public Builder iaasProvider(String iaasProvider) {
                 this.iaasProvider = iaasProvider;
@@ -507,10 +472,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total size of memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3072</p>
+             * Mem.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -518,10 +480,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of used memory. Unit: MB.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * MemUsed.
              */
             public Builder memUsed(Integer memUsed) {
                 this.memUsed = memUsed;
@@ -529,14 +488,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. Valid values:</p>
-             * <ul>
-             * <li>1: classic network</li>
-             * <li>2: virtual private cloud (VPC)</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * NetworkMode.
              */
             public Builder networkMode(Integer networkMode) {
                 this.networkMode = networkMode;
@@ -544,10 +496,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * NodeNum.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -555,16 +504,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU overcommit ratio that is supported by a Docker cluster. Valid values:</p>
-             * <ul>
-             * <li>1: 1:1, which means that CPU resources are not overcommitted.</li>
-             * <li>2: 1:2, which means that CPU resources are overcommitted by 1:2.</li>
-             * <li>4: 1:4, which means that CPU resources are overcommitted by 1:4.</li>
-             * <li>8: 1:8, which means that CPU resources are overcommitted by 1:8.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * OversoldFactor.
              */
             public Builder oversoldFactor(Integer oversoldFactor) {
                 this.oversoldFactor = oversoldFactor;
@@ -572,10 +512,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-beijing</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -583,10 +520,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>461</p>
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -594,10 +528,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The timestamp when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1533820823203</p>
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -605,10 +536,7 @@ public class ListClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>VPC ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-23727****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

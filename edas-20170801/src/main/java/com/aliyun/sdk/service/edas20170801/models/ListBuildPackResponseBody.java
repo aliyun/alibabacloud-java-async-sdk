@@ -93,7 +93,7 @@ public class ListBuildPackResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned versions of EDAS Container.</p>
+         * BuildPackList.
          */
         public Builder buildPackList(BuildPackList buildPackList) {
             this.buildPackList = buildPackList;
@@ -112,7 +112,7 @@ public class ListBuildPackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -123,7 +123,7 @@ public class ListBuildPackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4FD4-*************</p>
@@ -426,10 +426,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The build package number of EDAS Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>57</p>
+             * ConfigId.
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -437,10 +434,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the EDAS Container version is disabled. A disabled version cannot be configured for use.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * Disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -448,10 +442,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The features of the EDAS Container version, which are released for public preview.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>“”</p>
+             * Feature.
              */
             public Builder feature(String feature) {
                 this.feature = feature;
@@ -459,7 +450,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the base image that corresponds to EDAS Container.</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -467,10 +458,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether EDAS Container supports multitenancy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * MultipleTenant.
              */
             public Builder multipleTenant(Boolean multipleTenant) {
                 this.multipleTenant = multipleTenant;
@@ -478,10 +466,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3.5.6</p>
+             * PackVersion.
              */
             public Builder packVersion(String packVersion) {
                 this.packVersion = packVersion;
@@ -489,10 +474,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the Pandora container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * PandoraDesc.
              */
             public Builder pandoraDesc(String pandoraDesc) {
                 this.pandoraDesc = pandoraDesc;
@@ -500,10 +482,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the Pandora installer.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/edas-plugins/edas.sar.V3.5.6/taobao-hsf.tgz">http://edas.oss-cn-hangzhou.aliyuncs.com/edas-plugins/edas.sar.V3.5.6/taobao-hsf.tgz</a></p>
+             * PandoraDownloadUrl.
              */
             public Builder pandoraDownloadUrl(String pandoraDownloadUrl) {
                 this.pandoraDownloadUrl = pandoraDownloadUrl;
@@ -511,10 +490,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Pandora container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>edas.public.sar.V3.5.6</p>
+             * PandoraVersion.
              */
             public Builder pandoraVersion(String pandoraVersion) {
                 this.pandoraVersion = pandoraVersion;
@@ -522,10 +498,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the plug-in.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PluginInfo.
              */
             public Builder pluginInfo(String pluginInfo) {
                 this.pluginInfo = pluginInfo;
@@ -533,10 +506,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the Shell script that runs EDAS Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * ScriptName.
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -544,10 +514,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Shell script that runs EDAS Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0.3</p>
+             * ScriptVersion.
              */
             public Builder scriptVersion(String scriptVersion) {
                 this.scriptVersion = scriptVersion;
@@ -555,10 +522,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The features supported by EDAS Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>tengine,fatjar,restful,eip_nodeport,dpath</p>
+             * SupportFeatures.
              */
             public Builder supportFeatures(String supportFeatures) {
                 this.supportFeatures = supportFeatures;
@@ -566,10 +530,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the Tengine installer.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/components/tengine/3.4.7/tengine.sh">http://edas.oss-cn-hangzhou.aliyuncs.com/components/tengine/3.4.7/tengine.sh</a></p>
+             * TengineDownloadUrl.
              */
             public Builder tengineDownloadUrl(String tengineDownloadUrl) {
                 this.tengineDownloadUrl = tengineDownloadUrl;
@@ -577,10 +538,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Tengine image that corresponds to EDAS Container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>registry.aliyuncs.com/edas/<strong><strong>-</strong></strong><em><strong><strong>-</strong></strong></em>:<em>.</em>.*</p>
+             * TengineImageId.
              */
             public Builder tengineImageId(String tengineImageId) {
                 this.tengineImageId = tengineImageId;
@@ -588,10 +546,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the Tomcat container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1. The config-client plug-in is updated. The issue of unread cache in multitenancy scenarios is fixed. 2. The High-Speed Service Framework (HSF) plug-in is updated to fix the issue that the qos command of the Pandora container cannot be executed and the issue that the service address cannot be found if the HSF plug-in subscribes to an excessive number of services. 3. The Fastjson package is updated to the sec06 secure version in all plug-ins that use this package.</p>
+             * TomcatDesc.
              */
             public Builder tomcatDesc(String tomcatDesc) {
                 this.tomcatDesc = tomcatDesc;
@@ -599,10 +554,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the Tomcat installer.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://edas.oss-cn-hangzhou.aliyuncs.com/edas-container/7.0.92/taobao-tomcat-production-7.0.92.tar.gz">http://edas.oss-cn-hangzhou.aliyuncs.com/edas-container/7.0.92/taobao-tomcat-production-7.0.92.tar.gz</a></p>
+             * TomcatDownloadUrl.
              */
             public Builder tomcatDownloadUrl(String tomcatDownloadUrl) {
                 this.tomcatDownloadUrl = tomcatDownloadUrl;
@@ -610,10 +562,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The directory of the Tomcat container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>taobao-tomcat-production-7.0.59.3</p>
+             * TomcatPath.
              */
             public Builder tomcatPath(String tomcatPath) {
                 this.tomcatPath = tomcatPath;
@@ -621,10 +570,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the Tomcat container.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8.5.63</p>
+             * TomcatVersion.
              */
             public Builder tomcatVersion(String tomcatVersion) {
                 this.tomcatVersion = tomcatVersion;
@@ -632,10 +578,7 @@ public class ListBuildPackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether EDAS Container supports traffic management.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * WithTengine.
              */
             public Builder withTengine(Boolean withTengine) {
                 this.withTengine = withTengine;

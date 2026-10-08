@@ -93,7 +93,7 @@ public class ChangeDeployGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The ID of the change flow.</p>
          * 
          * <strong>example:</strong>
          * <p>435f-regfr4********************</p>
@@ -104,7 +104,7 @@ public class ChangeDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The HTTP status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -115,7 +115,7 @@ public class ChangeDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -126,7 +126,7 @@ public class ChangeDeployGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F9E4-FDS4-****************</p>

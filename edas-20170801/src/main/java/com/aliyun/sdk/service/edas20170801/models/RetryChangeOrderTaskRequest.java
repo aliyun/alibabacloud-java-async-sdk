@@ -86,7 +86,7 @@ public class RetryChangeOrderTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the process.</p>
+         * <p>The ID of the change order task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

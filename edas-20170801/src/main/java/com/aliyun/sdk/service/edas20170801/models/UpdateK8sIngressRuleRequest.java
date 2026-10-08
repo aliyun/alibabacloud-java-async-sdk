@@ -132,7 +132,7 @@ public class UpdateK8sIngressRuleRequest extends Request {
          * <p>The annotations.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;nginx.ingress.kubernetes.io/ssl-redirect&quot;:&quot;true&quot;,&quot;nginx.ingress.kubernetes.io/configuration-snippet&quot;:&quot;set $test value&quot;}</p>
+         * <p>{\&quot;nginx.ingress.kubernetes.io/ssl-redirect\&quot;:\&quot;true\&quot;,\&quot;nginx.ingress.kubernetes.io/configuration-snippet\&quot;:\&quot;set $test value\&quot;}</p>
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -197,7 +197,7 @@ public class UpdateK8sIngressRuleRequest extends Request {
          * <p>The labels.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;test-label&quot;:&quot;test-label-value&quot;}</p>
+         * <p>{\&quot;test-label\&quot;:\&quot;test-label-value\&quot;}</p>
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);

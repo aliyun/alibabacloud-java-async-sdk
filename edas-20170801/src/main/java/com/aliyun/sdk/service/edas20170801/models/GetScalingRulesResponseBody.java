@@ -463,10 +463,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the application.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>33e39be9-3e5f-*********</p>
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -474,14 +471,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The relationship among the conditions that trigger the scaling rule.</p>
-             * <ul>
-             * <li>OR: one of the conditions</li>
-             * <li>AND: all conditions</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>OR</p>
+             * Cond.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -489,10 +479,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum CPU utilization that triggers the scaling rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Cpu.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -500,10 +487,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the scaling rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1574251601801</p>
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -511,10 +495,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of the scaling rule. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1574251601</p>
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -522,14 +503,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether scale-ins or scale-outs are allowed. Valid values:</p>
-             * <ul>
-             * <li>true: Scale-ins or scale-outs are allowed.</li>
-             * <li>false: Scale-ins or scale-outs are disallowed.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -537,10 +511,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance group to which the application is deployed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>d8bb9d60-91b5-4cdf-<strong><strong>-</strong></strong>********</p>
+             * GroupId.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -548,10 +519,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of instances in the group when a scale-out is performed, or the minimum number of instances in the group when a scale-in is performed.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * InstNum.
              */
             public Builder instNum(Integer instNum) {
                 this.instNum = instNum;
@@ -559,10 +527,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system load that triggers the scaling rule. The system load is evaluated based on the number of processes that are being executed by CPUs and the number of processes that wait to be executed by CPUs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * LoadNum.
              */
             public Builder loadNum(Integer loadNum) {
                 this.loadNum = loadNum;
@@ -570,10 +535,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>HSF</p>
+             * MetricType.
              */
             public Builder metricType(String metricType) {
                 this.metricType = metricType;
@@ -581,14 +543,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the scaling rule. Valid values:</p>
-             * <ul>
-             * <li>SCALE_IN: scale-in rules</li>
-             * <li>SCALE_OUT: scale-out rules</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>SCALE_OUT</p>
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -596,14 +551,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The policy of auto scaling across multiple zones. Valid values:</p>
-             * <ul>
-             * <li>PRIORITY: The vSwitch that is first selected has the highest priority.</li>
-             * <li>BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>PRIORITY</p>
+             * MultiAzPolicy.
              */
             public Builder multiAzPolicy(String multiAzPolicy) {
                 this.multiAzPolicy = multiAzPolicy;
@@ -611,15 +559,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the instance that you want to add during a scale-out. Valid values:</p>
-             * <ul>
-             * <li>NEW: Elastic resources are used.</li>
-             * <li>AVAILABLE: The existing resources are used.</li>
-             * <li>AVAILABLE_FIRST: The existing resources are used first.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>AVAILABLE</p>
+             * ResourceFrom.
              */
             public Builder resourceFrom(String resourceFrom) {
                 this.resourceFrom = resourceFrom;
@@ -627,10 +567,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service latency that triggers the scaling rule. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Rt.
              */
             public Builder rt(Integer rt) {
                 this.rt = rt;
@@ -638,10 +575,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the specification.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>03f493c0-xxxx-xxxx-xxxx-12e85cadeb41</p>
+             * SpecId.
              */
             public Builder specId(String specId) {
                 this.specId = specId;
@@ -649,10 +583,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of instances that are added during each scale-out or removed during each scale-in.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Step.
              */
             public Builder step(Integer step) {
                 this.step = step;
@@ -660,10 +591,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>lt-bp1xxxxn73pxxxxf83l</p>
+             * TemplateId.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -671,10 +599,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the launch template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1143542</p>
+             * TemplateVersion.
              */
             public Builder templateVersion(Integer templateVersion) {
                 this.templateVersion = templateVersion;
@@ -682,7 +607,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the scaling rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+             * <p>The time when the scaling rule was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1574251601785</p>
@@ -693,10 +618,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IDs of the vSwitches. The IDs of multiple vSwitches are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-mxxxxkxxxx4xxxxwbionj</p>
+             * VSwitchIds.
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -704,10 +626,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the VPC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-wz9b246z******</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -869,12 +788,18 @@ public class GetScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The type of the cluster. Valid values:</p>
              * <ul>
-             * <li>0: regular Docker cluster</li>
-             * <li>1: Swarm cluster (deprecated)</li>
-             * <li>2: Elastic Compute Service (ECS) cluster</li>
-             * <li>3: self-managed Kubernetes cluster in EDAS</li>
-             * <li>4: cluster in which Pandora automatically registers applications</li>
-             * <li>5: Container Service for Kubernetes (ACK) clusters</li>
+             * <li><p>0: regular Docker cluster</p>
+             * </li>
+             * <li><p>1: Swarm cluster (deprecated)</p>
+             * </li>
+             * <li><p>2: Elastic Compute Service (ECS) cluster</p>
+             * </li>
+             * <li><p>3: self-managed Kubernetes cluster in EDAS</p>
+             * </li>
+             * <li><p>4: cluster in which Pandora automatically registers applications</p>
+             * </li>
+             * <li><p>5: Container Service for Kubernetes (ACK) clusters</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -888,10 +813,14 @@ public class GetScalingRulesResponseBody extends TeaModel {
             /**
              * <p>The overcommit ratio supported by a Docker cluster. Valid values:</p>
              * <ul>
-             * <li>1: 1:1, which means that resources are not overcommitted.</li>
-             * <li>2: 1:2, which means that resources are overcommitted by 1:2.</li>
-             * <li>4: 1:4, which means that resources are overcommitted by 1:4.</li>
-             * <li>8: 1:8, which means that resources are overcommitted by 1:8.</li>
+             * <li><p>1: 1:1, which means that resources are not overcommitted.</p>
+             * </li>
+             * <li><p>2: 1:2, which means that resources are overcommitted by 1:2.</p>
+             * </li>
+             * <li><p>4: 1:4, which means that resources are overcommitted by 1:4.</p>
+             * </li>
+             * <li><p>8: 1:8, which means that resources are overcommitted by 1:8.</p>
+             * </li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -903,7 +832,7 @@ public class GetScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The array data of the scaling rule.</p>
+             * RuleList.
              */
             public Builder ruleList(RuleList ruleList) {
                 this.ruleList = ruleList;

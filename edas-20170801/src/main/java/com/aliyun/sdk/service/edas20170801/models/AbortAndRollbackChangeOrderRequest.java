@@ -60,7 +60,7 @@ public class AbortAndRollbackChangeOrderRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The ID of the change order.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

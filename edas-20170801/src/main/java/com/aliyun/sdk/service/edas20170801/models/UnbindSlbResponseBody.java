@@ -93,7 +93,7 @@ public class UnbindSlbResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code that is returned.</p>
+         * <p>The status code of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class UnbindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>This parameter is left empty. It has no meaning.</p>
+         * <p>This parameter is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -115,7 +115,7 @@ public class UnbindSlbResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that is returned.</p>
+         * <p>The message returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Unbind slb success</p>
