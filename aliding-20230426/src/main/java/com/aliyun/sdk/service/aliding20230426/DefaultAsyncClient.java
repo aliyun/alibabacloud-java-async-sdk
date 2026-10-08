@@ -3229,6 +3229,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of InvokePage  InvokePageRequest
+     * @return InvokePageResponse
+     */
+    @Override
+    public CompletableFuture<InvokePageResponse> invokePage(InvokePageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokePage").setMethod(HttpMethod.POST).setPathRegex("/spi/ai/v1/page/invoke").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(InvokePageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokePageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of InvokeSkill  InvokeSkillRequest
      * @return InvokeSkillResponse
      */
@@ -3575,6 +3593,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListTicketOperateRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListUserAuthorizedResources  ListUserAuthorizedResourcesRequest
+     * @return ListUserAuthorizedResourcesResponse
+     */
+    @Override
+    public CompletableFuture<ListUserAuthorizedResourcesResponse> listUserAuthorizedResources(ListUserAuthorizedResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListUserAuthorizedResources").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/skill/listUserAuthorizedResources").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListUserAuthorizedResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListUserAuthorizedResourcesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

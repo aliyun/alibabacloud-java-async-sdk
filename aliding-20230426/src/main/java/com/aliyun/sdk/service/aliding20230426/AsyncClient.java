@@ -1080,6 +1080,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InvokeContainerResponse> invokeContainer(InvokeContainerRequest request);
 
     /**
+     * @param request the request parameters of InvokePage  InvokePageRequest
+     * @return InvokePageResponse
+     */
+    CompletableFuture<InvokePageResponse> invokePage(InvokePageRequest request);
+
+    /**
      * @param request the request parameters of InvokeSkill  InvokeSkillRequest
      * @return InvokeSkillResponse
      */
@@ -1194,6 +1200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTicketOperateRecordResponse
      */
     CompletableFuture<ListTicketOperateRecordResponse> listTicketOperateRecord(ListTicketOperateRecordRequest request);
+
+    /**
+     * @param request the request parameters of ListUserAuthorizedResources  ListUserAuthorizedResourcesRequest
+     * @return ListUserAuthorizedResourcesResponse
+     */
+    CompletableFuture<ListUserAuthorizedResourcesResponse> listUserAuthorizedResources(ListUserAuthorizedResourcesRequest request);
 
     /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest

@@ -1219,6 +1219,261 @@ public class InvokeAssistantRequest extends Request {
      *
      * <p>InvokeAssistantRequest</p>
      */
+    public static class File extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bytes")
+        private String bytes;
+
+        @com.aliyun.core.annotation.NameInMap("mimeType")
+        private String mimeType;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("uri")
+        private String uri;
+
+        private File(Builder builder) {
+            this.bytes = builder.bytes;
+            this.mimeType = builder.mimeType;
+            this.name = builder.name;
+            this.uri = builder.uri;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static File create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bytes
+         */
+        public String getBytes() {
+            return this.bytes;
+        }
+
+        /**
+         * @return mimeType
+         */
+        public String getMimeType() {
+            return this.mimeType;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
+        public static final class Builder {
+            private String bytes; 
+            private String mimeType; 
+            private String name; 
+            private String uri; 
+
+            private Builder() {
+            } 
+
+            private Builder(File model) {
+                this.bytes = model.bytes;
+                this.mimeType = model.mimeType;
+                this.name = model.name;
+                this.uri = model.uri;
+            } 
+
+            /**
+             * bytes.
+             */
+            public Builder bytes(String bytes) {
+                this.bytes = bytes;
+                return this;
+            }
+
+            /**
+             * mimeType.
+             */
+            public Builder mimeType(String mimeType) {
+                this.mimeType = mimeType;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
+                return this;
+            }
+
+            public File build() {
+                return new File(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantRequest</p>
+     */
+    public static class Parts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("data")
+        private Object data;
+
+        @com.aliyun.core.annotation.NameInMap("file")
+        private File file;
+
+        @com.aliyun.core.annotation.NameInMap("kind")
+        private String kind;
+
+        @com.aliyun.core.annotation.NameInMap("metadata")
+        private java.util.Map<String, ?> metadata;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private Parts(Builder builder) {
+            this.data = builder.data;
+            this.file = builder.file;
+            this.kind = builder.kind;
+            this.metadata = builder.metadata;
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public Object getData() {
+            return this.data;
+        }
+
+        /**
+         * @return file
+         */
+        public File getFile() {
+            return this.file;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
+         * @return metadata
+         */
+        public java.util.Map<String, ?> getMetadata() {
+            return this.metadata;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private Object data; 
+            private File file; 
+            private String kind; 
+            private java.util.Map<String, ?> metadata; 
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parts model) {
+                this.data = model.data;
+                this.file = model.file;
+                this.kind = model.kind;
+                this.metadata = model.metadata;
+                this.text = model.text;
+            } 
+
+            /**
+             * data.
+             */
+            public Builder data(Object data) {
+                this.data = data;
+                return this;
+            }
+
+            /**
+             * file.
+             */
+            public Builder file(File file) {
+                this.file = file;
+                return this;
+            }
+
+            /**
+             * kind.
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * metadata.
+             */
+            public Builder metadata(java.util.Map<String, ?> metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public Parts build() {
+                return new Parts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link InvokeAssistantRequest} extends {@link TeaModel}
+     *
+     * <p>InvokeAssistantRequest</p>
+     */
     public static class DataPart extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("data")
         private Object data;
@@ -1765,7 +2020,7 @@ public class InvokeAssistantRequest extends Request {
      *
      * <p>InvokeAssistantRequest</p>
      */
-    public static class Parts extends TeaModel {
+    public static class StructViewParts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("append")
         private Boolean append;
 
@@ -1797,7 +2052,7 @@ public class InvokeAssistantRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        private Parts(Builder builder) {
+        private StructViewParts(Builder builder) {
             this.append = builder.append;
             this.dataPart = builder.dataPart;
             this.finish = builder.finish;
@@ -1814,7 +2069,7 @@ public class InvokeAssistantRequest extends Request {
             return new Builder();
         }
 
-        public static Parts create() {
+        public static StructViewParts create() {
             return builder().build();
         }
 
@@ -1903,7 +2158,7 @@ public class InvokeAssistantRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Parts model) {
+            private Builder(StructViewParts model) {
                 this.append = model.append;
                 this.dataPart = model.dataPart;
                 this.finish = model.finish;
@@ -1999,8 +2254,8 @@ public class InvokeAssistantRequest extends Request {
                 return this;
             }
 
-            public Parts build() {
-                return new Parts(this);
+            public StructViewParts build() {
+                return new StructViewParts(this);
             } 
 
         } 
@@ -2014,7 +2269,7 @@ public class InvokeAssistantRequest extends Request {
      */
     public static class StructView extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("parts")
-        private java.util.List<Parts> parts;
+        private java.util.List<StructViewParts> parts;
 
         private StructView(Builder builder) {
             this.parts = builder.parts;
@@ -2031,12 +2286,12 @@ public class InvokeAssistantRequest extends Request {
         /**
          * @return parts
          */
-        public java.util.List<Parts> getParts() {
+        public java.util.List<StructViewParts> getParts() {
             return this.parts;
         }
 
         public static final class Builder {
-            private java.util.List<Parts> parts; 
+            private java.util.List<StructViewParts> parts; 
 
             private Builder() {
             } 
@@ -2048,7 +2303,7 @@ public class InvokeAssistantRequest extends Request {
             /**
              * parts.
              */
-            public Builder parts(java.util.List<Parts> parts) {
+            public Builder parts(java.util.List<StructViewParts> parts) {
                 this.parts = parts;
                 return this;
             }
@@ -2130,8 +2385,17 @@ public class InvokeAssistantRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("dingNormalCard")
         private DingNormalCard dingNormalCard;
 
+        @com.aliyun.core.annotation.NameInMap("extensions")
+        private java.util.List<String> extensions;
+
         @com.aliyun.core.annotation.NameInMap("markdown")
         private Markdown markdown;
+
+        @com.aliyun.core.annotation.NameInMap("metadata")
+        private java.util.Map<String, ?> metadata;
+
+        @com.aliyun.core.annotation.NameInMap("parts")
+        private java.util.List<Parts> parts;
 
         @com.aliyun.core.annotation.NameInMap("structView")
         private StructView structView;
@@ -2147,7 +2411,10 @@ public class InvokeAssistantRequest extends Request {
             this.cardCallback = builder.cardCallback;
             this.dingCard = builder.dingCard;
             this.dingNormalCard = builder.dingNormalCard;
+            this.extensions = builder.extensions;
             this.markdown = builder.markdown;
+            this.metadata = builder.metadata;
+            this.parts = builder.parts;
             this.structView = builder.structView;
             this.text = builder.text;
             this.type = builder.type;
@@ -2183,10 +2450,31 @@ public class InvokeAssistantRequest extends Request {
         }
 
         /**
+         * @return extensions
+         */
+        public java.util.List<String> getExtensions() {
+            return this.extensions;
+        }
+
+        /**
          * @return markdown
          */
         public Markdown getMarkdown() {
             return this.markdown;
+        }
+
+        /**
+         * @return metadata
+         */
+        public java.util.Map<String, ?> getMetadata() {
+            return this.metadata;
+        }
+
+        /**
+         * @return parts
+         */
+        public java.util.List<Parts> getParts() {
+            return this.parts;
         }
 
         /**
@@ -2214,7 +2502,10 @@ public class InvokeAssistantRequest extends Request {
             private CardCallback cardCallback; 
             private DingCard dingCard; 
             private DingNormalCard dingNormalCard; 
+            private java.util.List<String> extensions; 
             private Markdown markdown; 
+            private java.util.Map<String, ?> metadata; 
+            private java.util.List<Parts> parts; 
             private StructView structView; 
             private Text text; 
             private String type; 
@@ -2226,7 +2517,10 @@ public class InvokeAssistantRequest extends Request {
                 this.cardCallback = model.cardCallback;
                 this.dingCard = model.dingCard;
                 this.dingNormalCard = model.dingNormalCard;
+                this.extensions = model.extensions;
                 this.markdown = model.markdown;
+                this.metadata = model.metadata;
+                this.parts = model.parts;
                 this.structView = model.structView;
                 this.text = model.text;
                 this.type = model.type;
@@ -2257,10 +2551,34 @@ public class InvokeAssistantRequest extends Request {
             }
 
             /**
+             * extensions.
+             */
+            public Builder extensions(java.util.List<String> extensions) {
+                this.extensions = extensions;
+                return this;
+            }
+
+            /**
              * markdown.
              */
             public Builder markdown(Markdown markdown) {
                 this.markdown = markdown;
+                return this;
+            }
+
+            /**
+             * metadata.
+             */
+            public Builder metadata(java.util.Map<String, ?> metadata) {
+                this.metadata = metadata;
+                return this;
+            }
+
+            /**
+             * parts.
+             */
+            public Builder parts(java.util.List<Parts> parts) {
+                this.parts = parts;
                 return this;
             }
 
