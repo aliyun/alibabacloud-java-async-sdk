@@ -142,7 +142,7 @@ public class CheckServiceLinkedRoleRequest extends Request {
         /**
          * <p>The region ID.</p>
          * <blockquote>
-         * <p> You can specify any region for this parameter, which does not affect your query results. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter does not affect the query result. You can specify any region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -186,9 +186,9 @@ public class CheckServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * <p>The SLR name.</p>
+         * <p>The service-linked role.</p>
          * <blockquote>
-         * <p> For more information about the SLRs supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
+         * <p>For more information about the service-linked roles supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

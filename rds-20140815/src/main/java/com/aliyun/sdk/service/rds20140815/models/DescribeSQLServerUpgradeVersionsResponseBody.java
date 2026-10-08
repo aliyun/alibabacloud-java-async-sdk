@@ -75,7 +75,7 @@ public class DescribeSQLServerUpgradeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>866F5EB8-4650-4061-87F0-379F6F******</p>

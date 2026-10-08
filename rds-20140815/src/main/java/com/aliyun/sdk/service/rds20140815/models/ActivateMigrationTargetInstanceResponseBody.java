@@ -106,7 +106,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the destination instance.</p>
+         * <p>The name of the target instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-bp102g323jd4****</p>
@@ -117,7 +117,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>
@@ -128,7 +128,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <p>The internal IP address of the self-managed PostgreSQL database.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.XX.XX</p>
@@ -139,7 +139,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The port number that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <p>The port of the self-managed PostgreSQL database.</p>
          * 
          * <strong>example:</strong>
          * <p>5432</p>
@@ -150,7 +150,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the identification task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>440913675</p>

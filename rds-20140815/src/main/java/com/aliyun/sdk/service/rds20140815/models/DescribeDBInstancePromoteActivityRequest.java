@@ -131,7 +131,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The ID of the current Alibaba Cloud account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5******</p>
          */
         public Builder dbInstanceName(String dbInstanceName) {
             this.putQueryParameter("DbInstanceName", dbInstanceName);
@@ -169,7 +169,7 @@ public class DescribeDBInstancePromoteActivityRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>111</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

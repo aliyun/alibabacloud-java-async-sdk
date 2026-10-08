@@ -93,7 +93,10 @@ public class DescribeImportTaskValidationResponseBody extends TeaModel {
         } 
 
         /**
-         * Detail.
+         * <p>The task details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ValidateAction&quot;: &quot;Detail&quot;}</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -112,7 +115,10 @@ public class DescribeImportTaskValidationResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status. This parameter is invalid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETED</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -120,7 +126,14 @@ public class DescribeImportTaskValidationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

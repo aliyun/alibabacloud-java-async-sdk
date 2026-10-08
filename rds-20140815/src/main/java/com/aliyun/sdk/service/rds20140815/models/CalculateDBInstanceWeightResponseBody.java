@@ -67,7 +67,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of information about the system-assigned read weight.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -170,10 +170,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5xxxxxxx</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -181,14 +178,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Master</strong>: primary instance</li>
-             * <li><strong>Readonly</strong>: read-only instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Master</p>
+             * DBInstanceType.
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -196,10 +186,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latency at which the read-only instances replicate data. The read-only instances replicate data from the primary instance at the latency that is specified by the <strong>ReadonlyInstanceSQLDelayedTime</strong> parameter. Unit: seconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * ReadonlyInstanceSQLDelayedTime.
              */
             public Builder readonlyInstanceSQLDelayedTime(String readonlyInstanceSQLDelayedTime) {
                 this.readonlyInstanceSQLDelayedTime = readonlyInstanceSQLDelayedTime;
@@ -207,10 +194,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The read weight that the system calculates in real time for the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * Weight.
              */
             public Builder weight(String weight) {
                 this.weight = weight;

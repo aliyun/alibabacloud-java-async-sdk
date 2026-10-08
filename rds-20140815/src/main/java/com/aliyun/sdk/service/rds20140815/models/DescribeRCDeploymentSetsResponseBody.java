@@ -119,7 +119,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the deployment set.</p>
+         * DeploymentSets.
          */
         public Builder deploymentSets(DeploymentSets deploymentSets) {
             this.deploymentSets = deploymentSets;
@@ -127,10 +127,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -138,10 +135,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10</p>
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -149,10 +143,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -160,10 +151,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,10 +159,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,10 +238,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of RDS Custom instances that reside in the zone and can be added to the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18</p>
+             * AvailableAmount.
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -264,10 +246,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of RDS Custom instances that reside in the zone in the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * UsedAmount.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -275,10 +254,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The zone ID. Only the IDs of the zones to which the existing RDS Custom instances in the deployment set belong are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-j</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -578,6 +554,9 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
      * <p>DescribeRCDeploymentSetsResponseBody</p>
      */
     public static class DeploymentSet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private String accountId;
+
         @com.aliyun.core.annotation.NameInMap("Capacities")
         private Capacities capacities;
 
@@ -618,6 +597,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         private Tags tags;
 
         private DeploymentSet(Builder builder) {
+            this.accountId = builder.accountId;
             this.capacities = builder.capacities;
             this.createTime = builder.createTime;
             this.deploymentSetDescription = builder.deploymentSetDescription;
@@ -639,6 +619,13 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
 
         public static DeploymentSet create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public String getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -733,6 +720,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountId; 
             private Capacities capacities; 
             private String createTime; 
             private String deploymentSetDescription; 
@@ -751,6 +739,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             } 
 
             private Builder(DeploymentSet model) {
+                this.accountId = model.accountId;
                 this.capacities = model.capacities;
                 this.createTime = model.createTime;
                 this.deploymentSetDescription = model.deploymentSetDescription;
@@ -767,7 +756,15 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the capacities of the deployment set. This parameter is valid only when the deployment set contains existing RDS Custom instances. The value contains the details of the capacities of the deployment set in different zones.</p>
+             * AccountId.
+             */
+            public Builder accountId(String accountId) {
+                this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * Capacities.
              */
             public Builder capacities(Capacities capacities) {
                 this.capacities = capacities;
@@ -775,10 +772,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the deployment set was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-06-19T07:15:44Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -786,10 +780,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment set description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * DeploymentSetDescription.
              */
             public Builder deploymentSetDescription(String deploymentSetDescription) {
                 this.deploymentSetDescription = deploymentSetDescription;
@@ -797,10 +788,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment set ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ds-ob5n4rbgy****</p>
+             * DeploymentSetId.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -808,10 +796,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment set name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>deployment_test</p>
+             * DeploymentSetName.
              */
             public Builder deploymentSetName(String deploymentSetName) {
                 this.deploymentSetName = deploymentSetName;
@@ -819,10 +804,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment strategy. The return value of this parameter is the value of the <code>Strategy</code> request parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Availability</p>
+             * DeploymentStrategy.
              */
             public Builder deploymentStrategy(String deploymentStrategy) {
                 this.deploymentStrategy = deploymentStrategy;
@@ -830,10 +812,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment domain.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>default</p>
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -841,10 +820,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment granularity.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>None</p>
+             * Granularity.
              */
             public Builder granularity(String granularity) {
                 this.granularity = granularity;
@@ -852,13 +828,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of groups in the deployment set.</p>
-             * <blockquote>
-             * <p> This parameter is valid only when the Strategy request parameter is set to AvailabilityGroup.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * GroupCount.
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -866,10 +836,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of RDS Custom instances in the deployment set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * InstanceAmount.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -877,7 +844,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the RDS Custom instance in the deployment set.</p>
+             * InstanceIds.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;
@@ -885,10 +852,7 @@ public class DescribeRCDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The deployment strategy.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>LooseDispersion</p>
+             * Strategy.
              */
             public Builder strategy(String strategy) {
                 this.strategy = strategy;

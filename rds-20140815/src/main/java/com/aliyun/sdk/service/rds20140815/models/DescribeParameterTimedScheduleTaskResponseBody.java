@@ -67,7 +67,10 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A807C95D-410C-5BB5-96C0-C6E09F2C3D36</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * <p>The list of scan tasks.</p>
          */
         public Builder taskList(java.util.List<TaskList> taskList) {
             this.taskList = taskList;
@@ -180,7 +183,10 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * DBInstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-2ze2za3is7baay****</p>
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -188,7 +194,10 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The modified parameter settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;auto_increment_increment&quot;:&quot;1000&quot;,&quot;back_log&quot;:&quot;99&quot;}</p>
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -196,7 +205,16 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. Valid values:</p>
+             * <ul>
+             * <li><strong>PENDING</strong>: Pending.</li>
+             * <li><strong>EXECUTING</strong>: Executing.</li>
+             * <li><strong>COMPLETED</strong>: Completed.</li>
+             * <li><strong>EXECUTING</strong>: Failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PENDING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -204,7 +222,10 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * <p>The effective period of the parameter modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-05-06T09:24:00Z</p>
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -212,7 +233,10 @@ public class DescribeParameterTimedScheduleTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The ID of the scheduled task for parameter modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27056921</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

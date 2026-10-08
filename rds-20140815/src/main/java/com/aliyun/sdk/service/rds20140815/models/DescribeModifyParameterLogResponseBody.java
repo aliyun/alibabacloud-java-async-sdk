@@ -148,7 +148,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -156,7 +156,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -167,7 +167,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.6</p>
@@ -178,7 +178,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log entries.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -219,7 +219,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of log records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -327,10 +327,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter was modified. This value is a UNIX timestamp. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1584076066000</p>
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -338,10 +335,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The new value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3</p>
+             * NewParameterValue.
              */
             public Builder newParameterValue(String newParameterValue) {
                 this.newParameterValue = newParameterValue;
@@ -349,10 +343,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8</p>
+             * OldParameterValue.
              */
             public Builder oldParameterValue(String oldParameterValue) {
                 this.oldParameterValue = oldParameterValue;
@@ -360,10 +351,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>innodb_stats_sample_pages</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -371,14 +359,7 @@ public class DescribeModifyParameterLogResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status. Valid values:</p>
-             * <ul>
-             * <li><strong>Applied:</strong> The new value has taken effect.</li>
-             * <li><strong>Syncing:</strong> The new value is being applied and has not taken effect.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Syncing</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

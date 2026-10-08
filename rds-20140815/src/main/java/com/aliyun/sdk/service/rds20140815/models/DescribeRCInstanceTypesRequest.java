@@ -115,10 +115,7 @@ public class DescribeRCInstanceTypesRequest extends Request {
         } 
 
         /**
-         * <p>The commodity code of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rds_customprepaid_public_cn</p>
+         * CommodityCode.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -127,10 +124,7 @@ public class DescribeRCInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The database engine. Set the value to MySQL.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>MySQL</p>
+         * Engine.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -139,7 +133,7 @@ public class DescribeRCInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The instance types.</p>
+         * InstanceType.
          */
         public Builder instanceType(java.util.List<String> instanceType) {
             String instanceTypeShrink = shrink(instanceType, "InstanceType", "simple");
@@ -149,10 +143,7 @@ public class DescribeRCInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The instance family. You can call the <strong>DescribeRCInstanceTypeFamilies</strong> operation to query the instance families of instances.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>gn8.cm</p>
+         * InstanceTypeFamily.
          */
         public Builder instanceTypeFamily(String instanceTypeFamily) {
             this.putQueryParameter("InstanceTypeFamily", instanceTypeFamily);
@@ -161,10 +152,7 @@ public class DescribeRCInstanceTypesRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

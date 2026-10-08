@@ -80,7 +80,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Configuration Information</p>
+         * <p>The configuration information.</p>
          */
         public Builder config(Config config) {
             this.config = config;
@@ -88,10 +88,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether a configuration has been set; for the first access, hasConfig is 0  </p>
+         * <p>Indicates whether the configuration has been set. The value is 0 for the first access. Valid values:</p>
          * <ul>
-         * <li>1: Yes  </li>
-         * <li>0: No</li>
+         * <li>1: Yes. </li>
+         * <li>0: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4438AC3E-ABE3-5943-9436-***********</p>
@@ -237,7 +237,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation Time, formatted as YYYY-MM-DDTHH:mm:ssZ</p>
+             * <p>The creation time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-30T14:30:00Z</p>
@@ -248,10 +248,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cycle time, with multiple values concatenated by English commas  </p>
+             * <p>The cycle time. Multiple values are separated by commas (,).</p>
              * <ul>
-             * <li>When cycleType is Week, values 1–7 represent Monday–Sunday  </li>
-             * <li>When cycleType is Month, values 1–28 are allowed</li>
+             * <li>If cycleType is set to Week, valid values are 1 to 7, which represent Monday to Sunday.</li>
+             * <li>If cycleType is set to Month, valid values are 1 to 28.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -263,7 +263,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cycle type, either Month or Week</p>
+             * <p>The cycle type. Valid values: Month and Week.</p>
              * 
              * <strong>example:</strong>
              * <p>Week</p>
@@ -274,7 +274,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>End time of the O&amp;M time window, in UTC<br>Default: 20:00:00Z</p>
+             * <p>The end time of the O&amp;M time window in UTC.
+             * Default value: 20:00:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>20:00:00Z</p>
@@ -285,7 +286,8 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start time of the O&amp;M time window, in UTC<br>Default: 18:00:00Z</p>
+             * <p>The start time of the O&amp;M time window in UTC.
+             * Default value: 18:00:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>18:00:00Z</p>
@@ -296,7 +298,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Updated At, formatted as YYYY-MM-DDTHH:mm:ssZ, for example, 2018-05-30T14:30:00Z</p>
+             * <p>The modification time in the format of YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</p>
              * 
              * <strong>example:</strong>
              * <p>2018-05-30T14:30:00Z</p>
@@ -307,10 +309,10 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is effective  </p>
+             * <p>Indicates whether the configuration is effective. Valid values: </p>
              * <ul>
-             * <li>1: Valid  </li>
-             * <li>2: Invalid</li>
+             * <li>1: Valid. </li>
+             * <li>2: Invalid.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -160,7 +160,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The target instance ID. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -173,11 +173,11 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The page number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,11 +186,11 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The maximum number of entries per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -208,10 +208,10 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The private IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <p>The internal IP address of the self-managed PostgreSQL database.</p>
          * <ul>
-         * <li>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
-         * <li>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</li>
+         * <li>For a one-click cloud migration of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+         * <li>For a one-click cloud migration of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the netstat -a | grep PGSQL command to obtain the port number.</p>
+         * <p>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to query the port.</p>
          * 
          * <strong>example:</strong>
          * <p>5432</p>
@@ -236,7 +236,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The task ID. You can obtain the task ID from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
+         * <p>The task ID. You can obtain the task ID from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>440437220</p>
@@ -248,7 +248,7 @@ public class DescribeCloudMigrationResultRequest extends Request {
         }
 
         /**
-         * <p>The task name. You can obtain the task name from the response that is returned when you call the CreateCloudMigrationTask operation to create the task.</p>
+         * <p>The task name. You can obtain the task name from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</p>
          * 
          * <strong>example:</strong>
          * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

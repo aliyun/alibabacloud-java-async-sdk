@@ -119,10 +119,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of parameters that are being synchronized.</p>
-         * <blockquote>
-         * <p>After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
-         * </blockquote>
+         * ConfigParameters.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -130,7 +127,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -141,10 +138,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
-         * <p>5.5</p>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -152,7 +149,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the parameter template.</p>
+         * <p>The parameter template information.</p>
          */
         public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
             this.paramGroupInfo = paramGroupInfo;
@@ -160,7 +157,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -171,7 +168,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameters that are in use.</p>
+         * RunningParameters.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -250,10 +247,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -261,10 +255,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fill factor</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -272,10 +263,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -422,7 +410,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the parameter template.</p>
+             * <p>The parameter template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rpg-sys-01040401010200</p>
@@ -433,7 +421,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter template.</p>
+             * <p>The parameter template description.</p>
              * 
              * <strong>example:</strong>
              * <p>sync_binlog=1000, innodb_flush_log_at_trx_commit=2, async</p>
@@ -444,7 +432,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter template.</p>
+             * <p>The parameter template name.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql_innodb_8.0_basic_normal_high</p>
@@ -455,7 +443,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the parameter template.</p>
+             * <p>The parameter templatetype.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -564,10 +552,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * ParameterDefaultValue.
              */
             public Builder parameterDefaultValue(String parameterDefaultValue) {
                 this.parameterDefaultValue = parameterDefaultValue;
@@ -575,10 +560,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>This parameter sets the default fill factor value at the server scope. A fill factor is provided to optimize index data storage and performance.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -586,10 +568,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>fill factor</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -597,10 +576,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -608,10 +584,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1~100</p>
+             * ParameterValueRange.
              */
             public Builder parameterValueRange(String parameterValueRange) {
                 this.parameterValueRange = parameterValueRange;

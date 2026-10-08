@@ -215,7 +215,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         } 
 
         /**
-         * <p>The number of remaining days for which the instances are available. Valid values: <strong>0 to 180</strong>.</p>
+         * <p>The remaining available days of the instance. Valid values: <strong>0</strong> to <strong>180</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -227,10 +227,10 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to query instances that have expired. Valid values:</p>
+         * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong>: queries instances that have expired.</li>
-         * <li><strong>False</strong>: does not query instances that have expired.</li>
+         * <li><strong>True</strong>: The instance has expired.</li>
+         * <li><strong>False</strong>: The instance has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Valid values: any <strong>non-zero</strong> positive integer.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -274,7 +274,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -299,7 +299,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -329,7 +329,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two parts: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</code>.</p>
+         * <p>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to 5 tag pairs at a time. Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -344,7 +344,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
          * <p>A deprecated parameter. You do not need to configure this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>API</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

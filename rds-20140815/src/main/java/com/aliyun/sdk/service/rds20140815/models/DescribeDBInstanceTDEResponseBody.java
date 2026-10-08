@@ -106,10 +106,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The TDE status at the database level.</p>
-         * <blockquote>
-         * <p> If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
-         * </blockquote>
+         * Databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -117,10 +114,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the custom key.</p>
+         * <p>The ID of the key used for TDE encryption.</p>
          * 
          * <strong>example:</strong>
-         * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
+         * <p>key-szz644a355asjcuilll4u</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -128,7 +125,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
@@ -139,7 +136,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The method that is used to generate the key for TDE at the instance level. Valid values:</p>
+         * <p>The key mode of instance-level TDE encryption. Valid values:</p>
          * <ul>
          * <li><strong>Aliyun_Generate_Key</strong></li>
          * <li><strong>Customer_Provided_Key</strong></li>
@@ -155,7 +152,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The TDE status of the instance. Valid values:</p>
+         * <p>The instance-level TDE status. Valid values:</p>
          * <ul>
          * <li><strong>Enabled</strong></li>
          * <li><strong>Disabled</strong></li>
@@ -228,10 +225,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test02</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -239,7 +233,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The TDE status at the database level. Valid values:</p>
+             * <p>The instance-level TDE status. Valid values:</p>
              * <ul>
              * <li><strong>Enabled</strong></li>
              * <li><strong>Disabled</strong></li>

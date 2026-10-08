@@ -54,7 +54,7 @@ public class RestoreTableResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EA2D4F34-01A7-46EB-A339-D80882135206</p>

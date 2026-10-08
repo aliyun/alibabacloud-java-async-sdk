@@ -189,7 +189,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -198,10 +201,11 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
+         * <p>The end time of the query. The end time must be later than the start time. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2018-06-11T15:00Z</p>
+         * <p>2026-04-02T00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -228,7 +232,11 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: values greater than 0 and not exceeding the maximum value of Integer.
+         * Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -237,7 +245,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Maximum value: 100. Default value: 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,7 +257,10 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(byte[] regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -273,10 +287,11 @@ public class DescribeDBInstanceSwitchLogRequest extends Request {
         }
 
         /**
+         * <p>The start time of the query. Format: yyyy-MM-ddTHH:mmZ (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2014-06-11T15:00Z</p>
+         * <p>2026-04-01T00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

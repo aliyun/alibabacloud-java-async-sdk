@@ -67,7 +67,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>777C4593-8053-427B-****105593277CAB</p>
@@ -196,10 +196,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The endpoints of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm****.mysql.rds.aliyuncs.com</p>
+             * ConnectionString.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -207,10 +204,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10.71.XX.XX</p>
+             * IpAddress.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -218,14 +212,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the IP address. Valid values:</p>
-             * <ul>
-             * <li><strong>Public</strong>: Internet</li>
-             * <li><strong>Private</strong>: internal network</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Private</p>
+             * IpType.
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -233,10 +220,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the endpoint.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3306</p>
+             * Port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -244,10 +228,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vsw-bp12u14ecz****</p>
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -255,10 +236,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc-bp17xdic25d****</p>
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -392,10 +370,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-u****</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -403,10 +378,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rn-****13p6tum4289h</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -414,11 +386,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The weight of the node. Read requests are distributed based on the weight.</p>
-             * <p>Valid values: 0 to 100.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>50</p>
+             * Weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -578,7 +546,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the endpoint.</p>
+             * AddressItems.
              */
             public Builder addressItems(AddressItems addressItems) {
                 this.addressItems = addressItems;
@@ -586,10 +554,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user-defined description of the endpoint.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>for readonly business</p>
+             * EndpointDescription.
              */
             public Builder endpointDescription(String endpointDescription) {
                 this.endpointDescription = endpointDescription;
@@ -597,10 +562,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ep-****</p>
+             * EndpointId.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -608,14 +570,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the endpoint. Valid values:</p>
-             * <ul>
-             * <li><strong>Primary</strong>: the read/write endpoint of the instance</li>
-             * <li><strong>Readonly</strong>: the read-only endpoint of the instance</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Readonly</p>
+             * EndpointType.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -623,7 +578,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the node that is configured for the endpoint.</p>
+             * NodeItems.
              */
             public Builder nodeItems(NodeItems nodeItems) {
                 this.nodeItems = nodeItems;
@@ -757,7 +712,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information of the endpoints of the instance.</p>
+             * DBInstanceEndpoints.
              */
             public Builder DBInstanceEndpoints(DBInstanceEndpoints DBInstanceEndpoints) {
                 this.DBInstanceEndpoints = DBInstanceEndpoints;
@@ -765,7 +720,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
+             * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-u****</p>
@@ -776,7 +731,7 @@ public class DescribeDBInstanceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the IP protocol. Valid values:</p>
+             * <p>The IP address protocol version. Valid values:</p>
              * <ul>
              * <li><strong>ipv4</strong></li>
              * <li><strong>ipv6</strong></li>

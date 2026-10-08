@@ -54,7 +54,7 @@ public class ModifyHADiagnoseConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9EFA6DF3-5247-4D9D-80AA-68765BE6D5EA</p>

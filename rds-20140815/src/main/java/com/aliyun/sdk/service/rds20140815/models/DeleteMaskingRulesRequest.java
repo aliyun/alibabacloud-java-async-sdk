@@ -145,6 +145,7 @@ public class DeleteMaskingRulesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,7 +158,10 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -175,7 +179,10 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,6 +209,7 @@ public class DeleteMaskingRulesRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -117,11 +117,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,11 +157,11 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the ECS security group. Each instance can be added to up to 10 security groups. Separate multiple security groups with commas (,). To delete an ECS security group, leave this parameter empty. You can call the DescribeSecurityGroups operation to query the ID of the ECS security group.</p>
+         * <p>The ECS security group ID. You can associate up to 10 security groups with an instance. Separate multiple security group IDs with commas (,). To disassociate all ECS security groups, pass an empty string. You can call DescribeSecurityGroups to query ECS security group IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>sg-xxxxxxx</p>
+         * <p>sg-****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

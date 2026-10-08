@@ -80,7 +80,7 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -105,7 +105,7 @@ public class CreateYouhuiForOrderResponseBody extends TeaModel {
          * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>221201******</p>
+         * <p>22120151****</p>
          */
         public Builder youhuiId(String youhuiId) {
             this.youhuiId = youhuiId;

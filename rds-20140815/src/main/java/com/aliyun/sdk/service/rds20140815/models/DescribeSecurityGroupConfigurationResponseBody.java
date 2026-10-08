@@ -83,7 +83,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -91,7 +91,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the ECS security group.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -99,10 +99,10 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>87BDAE8C-xxxx-4A26-BBCC-7D1DD31D630D</p>
+         * <p>87BDAE8C-ACB0-4A26-BBCC-7D1DD31D630D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,14 +194,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network type of the ECS security group. Valid values:</p>
-             * <ul>
-             * <li><strong>Classic</strong></li>
-             * <li><strong>VPC</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -209,10 +202,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -220,10 +210,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-xxxxxxx</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -231,10 +218,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The security group name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>security-group-emraccess</p>
+             * SecurityGroupName.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;

@@ -145,7 +145,7 @@ public class DescribeCurrentModifyOrderRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -157,7 +157,7 @@ public class DescribeCurrentModifyOrderRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class DescribeCurrentModifyOrderRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

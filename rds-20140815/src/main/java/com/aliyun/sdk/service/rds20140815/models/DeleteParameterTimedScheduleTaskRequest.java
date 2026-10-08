@@ -73,7 +73,10 @@ public class DeleteParameterTimedScheduleTaskRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -82,7 +85,10 @@ public class DeleteParameterTimedScheduleTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the scheduled task for parameter modification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41698</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

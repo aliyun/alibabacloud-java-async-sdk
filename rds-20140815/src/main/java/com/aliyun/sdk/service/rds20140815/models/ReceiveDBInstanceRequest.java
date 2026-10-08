@@ -131,7 +131,7 @@ public class ReceiveDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the primary instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the primary instance.</p>
+         * <p>The ID of the primary instance. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ReceiveDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disaster recovery instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the ID of the disaster recovery instance.</p>
+         * <p>The ID of the disaster recovery instance. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

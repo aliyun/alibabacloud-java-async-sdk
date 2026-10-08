@@ -93,7 +93,7 @@ public class CreateRCNodePoolResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIdSets(java.util.List<String> instanceIdSets) {
             this.instanceIdSets = instanceIdSets;

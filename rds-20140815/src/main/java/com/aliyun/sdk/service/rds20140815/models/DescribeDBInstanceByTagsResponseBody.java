@@ -106,7 +106,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the instance.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -136,7 +136,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -216,10 +216,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key1</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -227,10 +224,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -351,10 +345,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6w**********</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -362,7 +353,7 @@ public class DescribeDBInstanceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the tag.</p>
+             * Tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

@@ -80,7 +80,7 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the event history feature is enabled.</p>
+         * <p>The status of the historical events feature.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -91,7 +91,7 @@ public class ModifyActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the region for which the event history feature is enabled or disabled.</p>
+         * <p>The region ID for which the historical events feature is enabled or disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

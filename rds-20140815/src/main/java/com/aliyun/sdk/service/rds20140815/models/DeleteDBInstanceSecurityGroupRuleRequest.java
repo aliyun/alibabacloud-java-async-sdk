@@ -171,7 +171,7 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query the IDs of instances.</p>
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,7 +202,7 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -232,7 +232,7 @@ public class DeleteDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group rule. You can call the <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the ID of the security group rule.</p>
+         * <p>The security group rule ID. You can call <a href="https://help.aliyun.com/document_detail/2834044.html">DescribeDBInstanceSecurityGroupRule</a> to obtain the security group rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

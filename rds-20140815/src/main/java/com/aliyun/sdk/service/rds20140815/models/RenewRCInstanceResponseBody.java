@@ -93,7 +93,7 @@ public class RenewRCInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the RDS Custom instance.</p>
+         * <p>The instance ID of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-dh2jf9n6j4s14926****</p>
@@ -104,7 +104,10 @@ public class RenewRCInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23202700556****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;

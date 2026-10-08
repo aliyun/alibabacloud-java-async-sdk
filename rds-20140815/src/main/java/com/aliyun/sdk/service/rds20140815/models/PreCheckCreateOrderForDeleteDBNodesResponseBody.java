@@ -80,7 +80,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the failed order.</p>
+         * Failures.
          */
         public Builder failures(Failures failures) {
             this.failures = failures;
@@ -168,17 +168,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The response code. Valid values:</p>
-             * <ul>
-             * <li><strong>200</strong>: success</li>
-             * <li><strong>400</strong>: client error</li>
-             * <li><strong>401</strong>: identity authentication failed</li>
-             * <li><strong>404</strong>: requested page not found</li>
-             * <li><strong>500</strong>: server error</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -186,10 +176,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The returned message.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>success</p>
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -243,7 +230,7 @@ public class PreCheckCreateOrderForDeleteDBNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the failed order.</p>
+             * Failures.
              */
             public Builder failures(java.util.List<FailuresFailures> failures) {
                 this.failures = failures;

@@ -67,7 +67,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The tags that are added to the instance.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -75,7 +75,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -211,7 +211,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The IDs of the instances to which the tag is added.</p>
+             * DBInstanceIds.
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -219,10 +219,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>key1</p>
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -230,10 +227,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>value1</p>
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

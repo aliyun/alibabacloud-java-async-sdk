@@ -117,11 +117,11 @@ public class StopDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp1q915x50h******</p>
+         * <p>rm-bp1q915x50h****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -139,7 +139,7 @@ public class StopDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

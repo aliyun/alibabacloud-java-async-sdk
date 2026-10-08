@@ -182,13 +182,13 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * <p>The log retention period that is allowed by the SQL Explorer feature on the instance. Valid values:</p>
+         * <p>The log retention period of SQL Explorer. Valid values:</p>
          * <ul>
          * <li>30: 30 days</li>
          * <li>180: 180 days</li>
-         * <li>365: one year</li>
-         * <li>1095: three years</li>
-         * <li>1825: five years</li>
+         * <li>365: 1 year</li>
+         * <li>1095: 3 years</li>
+         * <li>1825: 5 years</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -202,11 +202,11 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -233,10 +233,10 @@ public class ModifySQLCollectorRetentionRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the resource group ID.</p>
+         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmyxxxx</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

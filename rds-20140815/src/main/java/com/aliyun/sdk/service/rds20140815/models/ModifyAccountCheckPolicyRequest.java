@@ -174,7 +174,7 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The account username.</p>
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +187,11 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to apply the password policy</p>
+         * <p>Specifies whether to apply the password policy. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Applies the password policy to the account.</li>
+         * <li><strong>false</strong>: Removes the password policy from the account.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +204,10 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The value of RequestId for each API request may be different.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOC****</p>
@@ -212,7 +219,7 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -243,7 +250,7 @@ public class ModifyAccountCheckPolicyRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. For more information about resource groups, see related documentation.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>

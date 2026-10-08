@@ -93,10 +93,11 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the DR instance.</p>
+         * <p>The instance ID of the disaster recovery instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>pgm-bp1trqb4p1xd****</p>
+         * <p>PostgreSQL：pgm-bp1trqb4p1******
+         * SQL Server：135****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -107,7 +108,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>
+         * <p>1EFCFB59-7152-19C4-8C53-F887D107AFD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +119,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>3472****</p>
+         * <p>159****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -129,7 +130,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
          * <p>The task name.</p>
          * 
          * <strong>example:</strong>
-         * <p>test01</p>
+         * <p>zbtest</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

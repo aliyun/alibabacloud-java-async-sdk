@@ -159,7 +159,7 @@ public class DescribeRCDisksRequest extends Request {
         } 
 
         /**
-         * <p>The disk ID. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,). Format: <code>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</code>.</p>
+         * <p>The disk IDs. The value is a JSON array that contains up to 100 IDs separated by commas (,). Format: <code>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;rcd-bp67acfmxazb4p****&quot;, &quot;rcd-bp67acfmxazb4g****&quot;, … &quot;rcd-bp67acfmxazb4d****&quot;]</p>
@@ -171,7 +171,14 @@ public class DescribeRCDisksRequest extends Request {
         }
 
         /**
-         * DiskType.
+         * <p>The type of cloud disk or elastic ephemeral disk to query. Valid values:
+         * ● all: queries both system cloud disks and data cloud disks.
+         * ● system: queries only system cloud disks.
+         * ● data: queries only data cloud disks.
+         * Default value: all.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data</p>
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -229,7 +236,18 @@ public class DescribeRCDisksRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The disk status. Valid values:
+         * ● In_use: in use.
+         * ● Available: to be attached.
+         * ● Attaching: being attached.
+         * ● Detaching: being detached.
+         * ● Creating: being created.
+         * ● ReIniting: being initialized.
+         * ● All: all statuses.
+         * Default value: All.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -238,7 +256,7 @@ public class DescribeRCDisksRequest extends Request {
         }
 
         /**
-         * <p>The list of the tags.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -306,7 +324,7 @@ public class DescribeRCDisksRequest extends Request {
             } 
 
             /**
-             * <p>The key of the tag. The tag key <strong>cannot be</strong> an empty string or a duplicate value.</p>
+             * <p>The tag key. Empty values and duplicate values are <strong>not allowed</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>testkey1</p>
@@ -317,7 +335,7 @@ public class DescribeRCDisksRequest extends Request {
             }
 
             /**
-             * <p>The value of the tag. The tag value <strong>can be</strong> an empty string.</p>
+             * <p>The tag value. Empty values are <strong>allowed</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue1</p>

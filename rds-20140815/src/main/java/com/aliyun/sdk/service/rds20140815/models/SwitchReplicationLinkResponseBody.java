@@ -93,7 +93,7 @@ public class SwitchReplicationLinkResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the DR instance.</p>
+         * <p>The instance ID of the disaster recovery instance.</p>
          * 
          * <strong>example:</strong>
          * <p>135****</p>

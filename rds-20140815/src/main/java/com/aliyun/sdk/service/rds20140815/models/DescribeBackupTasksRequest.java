@@ -186,10 +186,10 @@ public class DescribeBackupTasksRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup task.</p>
+         * <p>The backup task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>4762614</p>
+         * <p>476****</p>
          */
         public Builder backupJobId(Integer backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -198,12 +198,12 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * <p>The status of the backup task. Valid values:</p>
+         * <p>The backup task status. Valid values:</p>
          * <ul>
-         * <li><strong>NoStart</strong></li>
-         * <li><strong>Progressing</strong></li>
+         * <li><strong>NoStart</strong>: not started</li>
+         * <li><strong>Progressing</strong>: in progress</li>
          * </ul>
-         * <p>By default, this operation returns backup tasks in both states.</p>
+         * <p>Default value: all statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>NoStart</p>
@@ -217,8 +217,8 @@ public class DescribeBackupTasksRequest extends Request {
         /**
          * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
+         * <li><strong>Automated</strong>: automatic backup</li>
+         * <li><strong>Manual</strong>: manual backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,10 +231,10 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * <p>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -243,11 +243,11 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

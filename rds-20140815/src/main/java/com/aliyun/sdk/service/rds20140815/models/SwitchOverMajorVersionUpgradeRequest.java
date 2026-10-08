@@ -186,7 +186,10 @@ public class SwitchOverMajorVersionUpgradeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -225,7 +228,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -237,7 +240,10 @@ public class SwitchOverMajorVersionUpgradeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -264,7 +270,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for the switchover operation. The operation is canceled after it has been performed for a time period that exceeds the value. Unit: seconds. Valid value: 10 to 3600.</p>
+         * <p>The maximum tolerable time for the switchover, in seconds. If the switchover exceeds this time, it is canceled. Valid values: 10 to 3600.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -276,11 +282,11 @@ public class SwitchOverMajorVersionUpgradeRequest extends Request {
         }
 
         /**
-         * <p>The type of the switchover operation. Valid values:</p>
+         * <p>The type of switchover operation. Valid values:</p>
          * <ul>
-         * <li>switch</li>
-         * <li>cancel</li>
-         * <li>interrupt</li>
+         * <li>switch: performs the switchover.</li>
+         * <li>cancel: cancels the switchover.</li>
+         * <li>interrupt: interrupts the switchover.</li>
          * </ul>
          * 
          * <strong>example:</strong>

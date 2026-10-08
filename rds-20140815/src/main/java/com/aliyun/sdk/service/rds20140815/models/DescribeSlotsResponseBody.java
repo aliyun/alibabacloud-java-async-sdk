@@ -67,7 +67,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>76AF0609-4195-5DFC-BC78-3AD76FF872BB</p>
@@ -78,7 +78,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the replication slot.</p>
+         * <p>The list of replication slots of the instance.</p>
          */
         public Builder slots(java.util.List<Slots> slots) {
             this.slots = slots;
@@ -233,7 +233,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extension used by the replication slot.</p>
+             * <p>The plugin used by the replication slot.</p>
              * 
              * <strong>example:</strong>
              * <p>test_decoding</p>
@@ -244,7 +244,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replication slot name.</p>
+             * <p>The name of the replication slot.</p>
              * 
              * <strong>example:</strong>
              * <p>slot_test01</p>
@@ -255,10 +255,10 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replication slot status. Valid values:</p>
+             * <p>The status of the replication slot. Valid values:</p>
              * <ul>
-             * <li>ACTIVE</li>
-             * <li>INACTIVE</li>
+             * <li>ACTIVE: Active.</li>
+             * <li>INACTIVE: Inactive.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -270,10 +270,10 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The replication slot type. Valid values:</p>
+             * <p>The type of the replication slot. Valid values:</p>
              * <ul>
-             * <li>physical</li>
-             * <li>logical</li>
+             * <li>physical: Physical.</li>
+             * <li>logical: Logical.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The latency of the logical subscription on the subscriber node that corresponds to the current replication slot. Unit: seconds.</p>
+             * <p>The specific latency of the logical subscription on the subscriber corresponding to the current replication slot. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -296,10 +296,10 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the replication slot is a temporary replication slot. Valid values:</p>
+             * <p>Indicates whether the replication slot is temporary. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The replication slot is temporary.</li>
+             * <li>false: The replication slot is not temporary.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of logs accumulated in the replication slot.</p>
+             * <p>The amount of logs accumulated by the replication slot.</p>
              * 
              * <strong>example:</strong>
              * <p>16 MB</p>

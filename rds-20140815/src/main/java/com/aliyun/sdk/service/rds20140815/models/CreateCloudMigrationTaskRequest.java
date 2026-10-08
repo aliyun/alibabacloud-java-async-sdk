@@ -163,7 +163,7 @@ public class CreateCloudMigrationTaskRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The username of the account that is used to connect to the self-managed PostgreSQL instance. Enter the username of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+         * <p>The username. The database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -198,15 +198,15 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The environment in which the self-managed PostgreSQL instance runs.</p>
+         * <p>The category of the source instance.</p>
          * <ul>
-         * <li><strong>idcOnVpc</strong>: The self-managed PostgreSQL instance resides in a data center. The data center can communicate with the VPC to which the ApsaraDB RDS for PostgreSQL instance belongs.</li>
-         * <li><strong>ecsOnVpc</strong>: The self-managed PostgreSQL instance resides on an ECS instance.</li>
+         * <li><strong>aliyunRDS</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>other</strong>: other.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecsOnVpc</p>
+         * <p>aliyunRDS</p>
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putQueryParameter("SourceCategory", sourceCategory);
@@ -215,10 +215,10 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The private or public IP address that is used to connect to the self-managed PostgreSQL instance.</p>
+         * <p>The internal or public IP address of the self-managed PostgreSQL database.</p>
          * <ul>
-         * <li>If the self-managed PostgreSQL instance resides on an Elastic Compute Service (ECS) instance, enter the private IP address of the ECS instance. For more information about how to obtain the private IP address of an ECS instance, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
-         * <li>If the self-managed PostgreSQL instance resides in a data center, enter the private IP address of the data center.</li>
+         * <li>To migrate a self-managed PostgreSQL database on an ECS instance to the cloud, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</li>
+         * <li>To migrate a self-managed PostgreSQL database in an Internet Data Center (IDC) to the cloud, set this parameter to the internal IP address of the IDC.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -232,7 +232,7 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The password of the account that is used to connect to the self-managed PostgreSQL instance. Enter the password of the account that you created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create an account for cloud migration on a self-managed PostgreSQL instance</a> topic.</p>
+         * <p>The password. The password of the database account created in the <a href="https://help.aliyun.com/document_detail/369500.html">Create a migration account</a> step.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,7 +245,7 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The port number that is used to connect to the self-managed PostgreSQL instance. You can run the <code>netstat -a | grep PGSQL</code> command to obtain the port number.</p>
+         * <p>The port of the self-managed PostgreSQL database. You can run the <code>netstat -a | grep PGSQL</code> command to view the port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -258,7 +258,7 @@ public class CreateCloudMigrationTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the task. If you do not specify this parameter, ApsaraDB RDS automatically generates a name for the cloud migration task.</p>
+         * <p>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</p>
          * 
          * <strong>example:</strong>
          * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

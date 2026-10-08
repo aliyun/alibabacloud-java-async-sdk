@@ -87,10 +87,7 @@ public class SyncRCKeyPairRequest extends Request {
         } 
 
         /**
-         * <p>The name of the key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>customer_keypairs</p>
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -99,10 +96,7 @@ public class SyncRCKeyPairRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

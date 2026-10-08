@@ -101,10 +101,7 @@ public class ModifyRCInstanceKeyPairRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rc-m5sc1271fv344a1r****</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -113,10 +110,7 @@ public class ModifyRCInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * <p>The name of the key pair.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>customer_keypairs</p>
+         * KeyPairName.
          */
         public Builder keyPairName(String keyPairName) {
             this.putQueryParameter("KeyPairName", keyPairName);
@@ -125,14 +119,7 @@ public class ModifyRCInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the instance.</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ture</p>
+         * Reboot.
          */
         public Builder reboot(Boolean reboot) {
             this.putQueryParameter("Reboot", reboot);
@@ -141,10 +128,7 @@ public class ModifyRCInstanceKeyPairRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

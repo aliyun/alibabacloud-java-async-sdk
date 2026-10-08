@@ -83,7 +83,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*******</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -91,7 +91,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20793850608****</p>
@@ -102,7 +102,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3C5CFDEE-F774-4DED-89A2-1D76EC63C575</p>

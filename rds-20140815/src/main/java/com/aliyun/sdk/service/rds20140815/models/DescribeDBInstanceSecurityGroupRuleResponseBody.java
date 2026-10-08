@@ -93,7 +93,7 @@ public class DescribeDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -104,7 +104,7 @@ public class DescribeDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the security group rule.</p>
+         * <p>The details of the security group rules.</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the status code.</p>
+         * <p>The response message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>

@@ -93,7 +93,14 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationState.
+         * <p>The authorization status of the account. Valid values:</p>
+         * <ul>
+         * <li>0: Not authorized.</li>
+         * <li>1: Authorized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authorizationState(Integer authorizationState) {
             this.authorizationState = authorizationState;
@@ -101,7 +108,10 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message returned by the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>create backup encrypt service linked role error.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +119,10 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A1DD2A4-69F7-5848-AD56-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +130,10 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
         }
 
         /**
-         * RoleARN.
+         * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with backup encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::113991************:role/AliyunServiceRoleForRdsBackupEncryption</p>
          */
         public Builder roleARN(String roleARN) {
             this.roleARN = roleARN;

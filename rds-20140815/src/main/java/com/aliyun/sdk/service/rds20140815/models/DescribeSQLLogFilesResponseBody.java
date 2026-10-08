@@ -106,7 +106,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the returned audit log files.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -147,7 +147,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -268,10 +268,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The file name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>custinsxxxxx.csv</p>
+             * FileID.
              */
             public Builder fileID(String fileID) {
                 this.fileID = fileID;
@@ -279,10 +276,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The download URL of the file. If the audit log file cannot be downloaded, this parameter is null.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdslog-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
+             * LogDownloadURL.
              */
             public Builder logDownloadURL(String logDownloadURL) {
                 this.logDownloadURL = logDownloadURL;
@@ -290,10 +284,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the last SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-05-24T07:00:00Z</p>
+             * LogEndTime.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -301,10 +292,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the audit log file. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3000</p>
+             * LogSize.
              */
             public Builder logSize(String logSize) {
                 this.logSize = logSize;
@@ -312,10 +300,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the first SQL statement recorded in the audit log file was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2015-05-23T07:00:00Z</p>
+             * LogStartTime.
              */
             public Builder logStartTime(String logStartTime) {
                 this.logStartTime = logStartTime;
@@ -323,15 +308,7 @@ public class DescribeSQLLogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the audit log file. Valid values:</p>
-             * <ul>
-             * <li><strong>Success</strong></li>
-             * <li><strong>Failed</strong></li>
-             * <li><strong>Generating</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * LogStatus.
              */
             public Builder logStatus(String logStatus) {
                 this.logStatus = logStatus;

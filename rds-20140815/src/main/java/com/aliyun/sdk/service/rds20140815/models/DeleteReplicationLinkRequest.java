@@ -89,11 +89,11 @@ public class DeleteReplicationLinkRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the DR instance.</p>
+         * <p>The instance ID of the disaster recovery instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pgm-bp1trqb4p1xd****</p>
+         * <p>m-2zecuz9tolf******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -102,10 +102,10 @@ public class DeleteReplicationLinkRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to delete the data synchronization link between the DR instance and the primary instance and promote the DR instance to the primary instance. Valid values:</p>
+         * <p>Specifies whether to delete the data synchronization link between the primary instance and the disaster recovery instance and promote the disaster recovery instance to a primary instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

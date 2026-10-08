@@ -67,7 +67,7 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance families.</p>
+         * InstanceTypeFamilies.
          */
         public Builder instanceTypeFamilies(InstanceTypeFamilies instanceTypeFamilies) {
             this.instanceTypeFamilies = instanceTypeFamilies;
@@ -75,10 +75,7 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,7 +141,7 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the instance family.</p>
+             * InstanceTypeFamilyDesc.
              */
             public Builder instanceTypeFamilyDesc(String instanceTypeFamilyDesc) {
                 this.instanceTypeFamilyDesc = instanceTypeFamilyDesc;
@@ -152,10 +149,7 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance family.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>x.6cm</p>
+             * InstanceTypeFamilyId.
              */
             public Builder instanceTypeFamilyId(String instanceTypeFamilyId) {
                 this.instanceTypeFamilyId = instanceTypeFamilyId;
@@ -209,7 +203,7 @@ public class DescribeRCInstanceTypeFamiliesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance family.</p>
+             * InstanceTypeFamily.
              */
             public Builder instanceTypeFamily(java.util.List<InstanceTypeFamily> instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;

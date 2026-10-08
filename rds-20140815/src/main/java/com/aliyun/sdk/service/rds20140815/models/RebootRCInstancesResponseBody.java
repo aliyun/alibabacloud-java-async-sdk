@@ -54,10 +54,7 @@ public class RebootRCInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>32A5B40E-50DA-5166-9B22-35F00C5D1BC6</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

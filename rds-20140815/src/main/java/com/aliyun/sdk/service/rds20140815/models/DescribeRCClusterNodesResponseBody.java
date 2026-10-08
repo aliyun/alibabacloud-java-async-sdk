@@ -80,7 +80,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the nodes.</p>
+         * Nodes.
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -88,7 +88,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pagination information.</p>
+         * Page.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -96,10 +96,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -308,10 +305,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the node was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-21T07:20:09Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -319,10 +313,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The container version.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1.0</p>
+             * DockerVersion.
              */
             public Builder dockerVersion(String dockerVersion) {
                 this.dockerVersion = dockerVersion;
@@ -330,10 +321,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The image ID of the node.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>m-2oqiu973jwcxe****</p>
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -341,10 +329,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rc-u79597n5f54s5bnz****</p>
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -352,14 +337,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node role. Valid values:</p>
-             * <ul>
-             * <li><strong>Master</strong>: master node</li>
-             * <li><strong>Worker</strong>: worker node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Master</p>
+             * InstanceRole.
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -367,7 +345,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address.</p>
+             * IpAddresses.
              */
             public Builder ipAddresses(java.util.List<String> ipAddresses) {
                 this.ipAddresses = ipAddresses;
@@ -375,14 +353,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the node is provided by Alibaba Cloud. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsAliyunNode.
              */
             public Builder isAliyunNode(Boolean isAliyunNode) {
                 this.isAliyunNode = isAliyunNode;
@@ -390,10 +361,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node name, which is the identifier of the RDS Custom node in the cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou.192.168.XXX.XXX</p>
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -401,10 +369,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node pool ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>None</p>
+             * NodePoolId.
              */
             public Builder nodePoolId(String nodePoolId) {
                 this.nodePoolId = nodePoolId;
@@ -412,16 +377,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the node is ready. Valid values:</p>
-             * <ul>
-             * <li><strong>Ready</strong>: The node is ready.</li>
-             * <li><strong>NotReady</strong>: The node is not ready.</li>
-             * <li><strong>Unknown</strong>: The status of the node is unknown.</li>
-             * <li><strong>Offline</strong>: The node is offline.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Ready</p>
+             * NodeStatus.
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -437,10 +393,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime of the ACK cluster.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-21T07:20:09Z</p>
+             * RuntimeVersion.
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -448,17 +401,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node status. Valid values:</p>
-             * <ul>
-             * <li><strong>pending</strong></li>
-             * <li><strong>running</strong></li>
-             * <li><strong>starting</strong></li>
-             * <li><strong>stopping</strong></li>
-             * <li><strong>stopped</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>running</p>
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -538,10 +481,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * PageNumber.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -549,10 +489,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum number of entries returned per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * PageSize.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -560,10 +497,7 @@ public class DescribeRCClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>4</p>
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

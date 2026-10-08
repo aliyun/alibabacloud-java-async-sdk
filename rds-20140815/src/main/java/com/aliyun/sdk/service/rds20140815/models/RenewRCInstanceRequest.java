@@ -275,11 +275,11 @@ public class RenewRCInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature. You must make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * <li><strong>true</strong>: Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
+         * <li><strong>false</strong>: Only an order is generated. No payment is made.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to pay for the order.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -292,10 +292,10 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,10 +308,10 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use a coupon. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use coupons. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: uses a coupon.</li>
-         * <li><strong>false</strong>: does not use a coupon.</li>
+         * <li><strong>true</strong> (default): Coupons are used.</li>
+         * <li><strong>false</strong>: Coupons are not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,7 +327,7 @@ public class RenewRCInstanceRequest extends Request {
          * <p>The additional information about the order.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;promotion_input_param&quot;:&quot;{\&quot;promotionFilter\&quot;:{},\&quot;promotionOptionCode\&quot;:\&quot;youhui_quan\&quot;}&quot;}</p>
+         * <p>{\&quot;promotion_input_param\&quot;:\&quot;{\\\&quot;promotionFilter\\\&quot;:{},\\\&quot;promotionOptionCode\\\&quot;:\\\&quot;youhui_quan\\\&quot;}\&quot;}</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -336,7 +336,7 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOC****</p>
@@ -348,8 +348,9 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The commodity code of the instance.</p>
-         * <p>Default value: <strong>rds_customprepaid_public_intl</strong>.</p>
+         * <p>The commodity code.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Default value: <strong>rds_customprepaid_public_cn</strong>.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Default value: <strong>rds_customprepaid_public_intl</strong>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,7 +384,7 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Set the value to <strong>PrePaid</strong>, which indicates the subscription billing method.</p>
+         * <p>The billing method of the target instance. Only <strong>Prepaid</strong> (upfront, subscription) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Prepaid</p>
@@ -395,10 +396,10 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance is a subscription instance. Valid values:</p>
+         * <p>Specifies whether to use annual subscription. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Annual subscription is used.</li>
+         * <li><strong>false</strong> (default): Annual subscription is not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -436,7 +437,7 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The resources.</p>
+         * <p>The resource.</p>
          * 
          * <strong>example:</strong>
          * <p>buy</p>
@@ -457,7 +458,7 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The unit of the renewal period specified by the <strong>UsedTime</strong> parameter. Valid values:</p>
+         * <p>The unit of the renewal duration specified by the <strong>UsedTime</strong> parameter. Valid values:</p>
          * <ul>
          * <li><strong>1</strong>: year</li>
          * <li><strong>2</strong> (default): month</li>
@@ -474,10 +475,10 @@ public class RenewRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Valid values:</p>
+         * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li>If you set the <strong>TimeType</strong> parameter to <strong>1</strong>, the value of the UsedTime parameter ranges from <strong>1 to 5</strong>. Unit: year.</li>
-         * <li>If you set the <strong>TimeType</strong> parameter to <strong>2</strong>, the value of the UsedTime parameter ranges from <strong>1 to 11</strong>. Unit: month.</li>
+         * <li>If <strong>TimeType</strong> is set to <strong>1</strong> (year), the valid values of UsedTime are <strong>1 to 5</strong>.</li>
+         * <li>If <strong>TimeType</strong> is set to <strong>2</strong> (month), the valid values of UsedTime are <strong>1 to 11</strong>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -116,7 +116,7 @@ public class PrecheckDuckDBDependencyRequest extends Request {
         } 
 
         /**
-         * <p>The primary instance ID.</p>
+         * <p>The instance ID of the primary instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

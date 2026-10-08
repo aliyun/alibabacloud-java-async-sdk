@@ -525,12 +525,12 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The RDS edition of the instance. Valid values:</p>
+         * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: RDS Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-         * <li><strong>cluster</strong>: RDS Cluster Edition</li>
-         * <li><strong>serverless_basic</strong>: RDS Serverless Basic Edition</li>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+         * <li><strong>cluster</strong>: Cluster Edition</li>
+         * <li><strong>serverless_basic</strong>: Serverless</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -546,7 +546,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -555,12 +555,12 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The connection mode of the instance. Valid values:</p>
+         * <p>The access mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong>: standard mode</li>
+         * <li><strong>Standard</strong>: standard access mode</li>
          * <li><strong>Safe</strong>: database proxy mode</li>
          * </ul>
-         * <p>By default, this operation queries the instances that use any of the supported connection modes.</p>
+         * <p>By default, instances in all access modes are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -572,10 +572,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the instance. You must specify this parameter only when you want to query a single instance.</p>
+         * <p>The endpoint of the instance. Use this endpoint to query the corresponding instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx.mysql.rds.aliyuncs.com</p>
+         * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -584,7 +584,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>rds.mys2.small</p>
@@ -599,7 +599,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -608,7 +608,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</p>
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -620,14 +620,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The role of the instance. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
          * <li><strong>Primary</strong>: primary instance</li>
          * <li><strong>Readonly</strong>: read-only instance</li>
          * <li><strong>Guard</strong>: disaster recovery instance</li>
          * <li><strong>Temp</strong>: temporary instance</li>
          * </ul>
-         * <p>By default, this operation returns the instances that assume any of the supported roles.</p>
+         * <p>By default, instances of all types are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Primary</p>
@@ -642,7 +642,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The dedicated cluster ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>dhg-7a9xxxxxxxx</p>
+         * <p>dhg-7a9****</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -651,10 +651,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The host ID of the instance in the dedicated cluster.</p>
+         * <p>The host ID in the dedicated cluster.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bpxxxxxxx</p>
+         * <p>i-bp****</p>
          */
         public Builder dedicatedHostId(String dedicatedHostId) {
             this.putQueryParameter("DedicatedHostId", dedicatedHostId);
@@ -663,14 +663,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
          * <li><strong>MySQL</strong></li>
          * <li><strong>SQLServer</strong></li>
          * <li><strong>PostgreSQL</strong></li>
          * <li><strong>MariaDB</strong></li>
          * </ul>
-         * <p>By default, this operation returns the instances that run any of the supported database engines.</p>
+         * <p>By default, instances of all database engines are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -685,7 +685,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
-         * <p>5.7</p>
+         * <p>8.0</p>
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -694,10 +694,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instances have expired. Valid values:</p>
+         * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong></li>
-         * <li><strong>False</strong></li>
+         * <li><strong>True</strong>: The instance has expired.</li>
+         * <li><strong>False</strong>: The instance has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -710,7 +710,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The JSON string that consists of filter condition parameters and their values.</p>
+         * <p>The JSON string that contains the instance filter conditions and their values.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;babelfishEnabled&quot;:&quot;true&quot;}</p>
@@ -722,10 +722,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return the RDS edition of the instance by using the Category parameter. Valid values:</p>
+         * <p>Specifies whether to return the instance edition (Category) information. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: returns the RDS edition of the instance.</li>
-         * <li><strong>1</strong>: does not return the RDS edition of the instance.</li>
+         * <li><strong>0</strong>: does not return the information</li>
+         * <li><strong>1</strong>: returns the information</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -740,10 +740,10 @@ public class DescribeDBInstancesRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong>: an instance in a virtual private cloud (VPC)</li>
+         * <li><strong>Classic</strong>: an instance in the classic network</li>
          * </ul>
-         * <p>By default, this operation returns the instances that reside in any of the supported network types.</p>
+         * <p>By default, instances of all network types are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Classic</p>
@@ -755,10 +755,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * <blockquote>
-         * <p>If you specify this parameter, <strong>PageSize</strong> and <strong>PageNumber</strong> are unavailable.</p>
+         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are unavailable.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -771,10 +771,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The token that is used to display the next page. You must set this parameter to the value that is returned from the most recent call of the <strong>DescribeDBInstances</strong> operation for <strong>NextToken</strong>. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with this parameter specified.</p>
+         * <p>The pagination token. Set this parameter to the value of <strong>NextToken</strong> that is returned from the last call to the <strong>DescribeDBInstances</strong> operation. If the results span multiple pages, pass in this value to retrieve the next page.</p>
          * 
          * <strong>example:</strong>
-         * <p>o7PORW5o2TJg**********</p>
+         * <p>o7PORW5o2TJg****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -801,7 +801,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from 1.</p>
+         * <p>The page number. Valid values: any value greater than 0 that does not exceed the maximum value of Integer.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -814,7 +814,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -827,7 +827,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The billing method of the instance. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
          * <li><strong>Postpaid</strong>: pay-as-you-go</li>
          * <li><strong>Prepaid</strong>: subscription</li>
@@ -843,7 +843,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * QueryAutoRenewal.
+         * <p>A reserved parameter. You do not need to configure this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder queryAutoRenewal(Boolean queryAutoRenewal) {
             this.putQueryParameter("QueryAutoRenewal", queryAutoRenewal);
@@ -852,7 +855,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -865,10 +868,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmyxxxxx</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -895,7 +898,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used for fuzzy search. The keyword can be part of an instance ID or an instance description.</p>
+         * <p>The keyword for fuzzy search based on the instance ID or instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6w</p>
@@ -907,7 +910,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The tag that is added to the instance. Each tag is a key-value pair that consists of two fields: TagKey and TagValue. You can specify a maximum of five tags in the following format for each request: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}.</p>
+         * <p>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to five pairs of tags at a time. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If the instance matches any of the specified tags, the instance information is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -922,7 +925,7 @@ public class DescribeDBInstancesRequest extends Request {
          * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-uf6adz52c2pxxxxxxxxxx</p>
+         * <p>vsw-uf6adz52c2p****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -931,10 +934,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-uf6f7l4fg90xxxxxxxxxx</p>
+         * <p>vpc-uf6f7l4fg90****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -943,7 +946,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>

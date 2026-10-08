@@ -93,7 +93,7 @@ public class ModifyAccountMaskingPrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.Map<String, String> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class ModifyAccountMaskingPrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful</p>
@@ -112,7 +112,7 @@ public class ModifyAccountMaskingPrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2144F5CC-10C5-3B72-8C74-E52C********</p>
@@ -123,7 +123,7 @@ public class ModifyAccountMaskingPrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the operation succeeded</p>
+         * <p>Indicates whether the operation was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

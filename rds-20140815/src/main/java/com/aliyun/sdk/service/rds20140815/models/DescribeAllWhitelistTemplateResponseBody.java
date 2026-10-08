@@ -119,13 +119,13 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code returned. Valid values:</p>
+         * <p>The response code. Valid values:</p>
          * <ul>
-         * <li><strong>200</strong>: success</li>
-         * <li><strong>400</strong>: client error</li>
-         * <li><strong>401</strong>: identity authentication failed</li>
-         * <li><strong>404</strong>: request page not found</li>
-         * <li><strong>500</strong>: server error</li>
+         * <li><strong>200</strong>: Normal.</li>
+         * <li><strong>400</strong>: Client fault.</li>
+         * <li><strong>401</strong>: Authentication failed.</li>
+         * <li><strong>404</strong>: Request page not found.</li>
+         * <li><strong>500</strong>: Server fault.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -145,11 +145,11 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>200</strong>: success</li>
-         * <li><strong>400</strong>: client error</li>
-         * <li><strong>500</strong>: server error</li>
+         * <li><strong>200</strong>: Success.</li>
+         * <li><strong>400</strong>: Client error.</li>
+         * <li><strong>500</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,7 +161,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -183,10 +183,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP addresses.</p>
+             * <p>The IP address list.</p>
              * 
              * <strong>example:</strong>
              * <p>12.2.X.X,10.0.X.X</p>
@@ -317,7 +317,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the whitelist template.</p>
+             * <p>The whitelist template ID.</p>
              * 
              * <strong>example:</strong>
              * <p>412</p>
@@ -328,7 +328,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the whitelist template.</p>
+             * <p>The whitelist template name.</p>
              * 
              * <strong>example:</strong>
              * <p>template_123</p>
@@ -485,10 +485,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data that meets the conditions is displayed on the next page. Valid values:</p>
+             * <p>Indicates whether there is a next page of data that meets the conditions. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -500,10 +500,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:</p>
+             * <p>Indicates whether there is a previous page of data that meets the conditions. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: Yes.</li>
+             * <li><strong>false</strong>: No.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -515,7 +515,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries to return on each page.</p>
+             * <p>The number of records per page.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -526,7 +526,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about whitelist templates that are returned by page.</p>
+             * <p>The whitelist template information returned by page.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;
@@ -534,7 +534,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of pages returned.</p>
+             * <p>The total number of pages.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -545,7 +545,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>402</p>

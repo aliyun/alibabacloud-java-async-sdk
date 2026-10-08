@@ -116,10 +116,10 @@ public class DescribeBackupDatabaseRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The backup set ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>90262212</p>
+         * <p>9026xxxx</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -128,7 +128,7 @@ public class DescribeBackupDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

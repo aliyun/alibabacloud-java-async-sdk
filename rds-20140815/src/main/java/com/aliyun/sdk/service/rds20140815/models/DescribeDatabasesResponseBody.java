@@ -67,7 +67,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the databases.</p>
+         * Databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -75,7 +75,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2603CA96-B17D-4903-BC04-61A2C829CD94</p>
@@ -157,10 +157,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The account username.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Account.
              */
             public Builder account(String account) {
                 this.account = account;
@@ -168,16 +165,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions that the account has on the database. Valid values:</p>
-             * <ul>
-             * <li><strong>ReadWrite</strong>: read and write permissions</li>
-             * <li><strong>ReadOnly</strong>: read-only permissions</li>
-             * <li><strong>DMLOnly</strong>: DML-only permissions</li>
-             * <li><strong>DDLOnly</strong>: DDL-only permissions</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>DMLOnly</p>
+             * AccountPrivilege.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -185,10 +173,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permission that the account has on the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SELECT</p>
+             * AccountPrivilegeDetail.
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -679,7 +664,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the account. Each account has specific permissions on the database.</p>
+             * Accounts.
              */
             public Builder accounts(Accounts accounts) {
                 this.accounts = accounts;
@@ -687,10 +672,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The advanced information about the database.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
+             * AdvancedInfo.
              */
             public Builder advancedInfo(AdvancedInfo advancedInfo) {
                 this.advancedInfo = advancedInfo;
@@ -698,10 +680,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The basic information about the database.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
+             * BasicInfo.
              */
             public Builder basicInfo(BasicInfo basicInfo) {
                 this.basicInfo = basicInfo;
@@ -709,10 +688,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the character set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>utf8</p>
+             * CharacterSetName.
              */
             public Builder characterSetName(String characterSetName) {
                 this.characterSetName = characterSetName;
@@ -720,13 +696,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The collation of the character set. The example value C indicates localization.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>C</p>
+             * Collate.
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -734,13 +704,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>-1</p>
+             * ConnLimit.
              */
             public Builder connLimit(String connLimit) {
                 this.connLimit = connLimit;
@@ -748,13 +712,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the character set.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>en_US.utf8</p>
+             * Ctype.
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -762,10 +720,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testdb</p>
+             * DBDescription.
              */
             public Builder DBDescription(String DBDescription) {
                 this.DBDescription = DBDescription;
@@ -773,10 +728,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the database belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5****</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -784,10 +736,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDB01</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -795,16 +744,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database status. Valid values:</p>
-             * <ul>
-             * <li><strong>Creating</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Deleting</strong></li>
-             * <li><strong>Cold</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Creating</p>
+             * DBStatus.
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -820,10 +760,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -831,10 +768,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the page to return.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -842,10 +776,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -853,10 +784,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The runtime information about the database.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
+             * RuntimeInfo.
              */
             public Builder runtimeInfo(RuntimeInfo runtimeInfo) {
                 this.runtimeInfo = runtimeInfo;
@@ -864,13 +792,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database tablespace.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>pg_default</p>
+             * Tablespace.
              */
             public Builder tablespace(String tablespace) {
                 this.tablespace = tablespace;
@@ -878,13 +800,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * TotalCount.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

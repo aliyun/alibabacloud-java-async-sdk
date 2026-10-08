@@ -83,7 +83,7 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-xxxxxxx</p>
+         * <p>rm-bp1v****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,7 +94,7 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>54325****</p>
+         * <p>2270972****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -105,7 +105,7 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>EFB6083A-7699-489B-8278-C0CB4793A96E</p>
+         * <p>E4CDD460-2618-51FE-BD0B-A1****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

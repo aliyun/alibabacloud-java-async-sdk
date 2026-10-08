@@ -187,10 +187,10 @@ public class DescribeParameterTemplatesRequest extends Request {
         } 
 
         /**
-         * <p>The RDS edition of the instance. Valid values:</p>
+         * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>Basic</strong>: RDS Basic Edition</li>
-         * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: high-availability series</li>
          * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
          * </ul>
          * 
@@ -207,7 +207,7 @@ public class DescribeParameterTemplatesRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,7 +219,7 @@ public class DescribeParameterTemplatesRequest extends Request {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp1imnm**********</p>
+         * <p>rm-bp1imnm****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -228,7 +228,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
          * <li><strong>mysql</strong>: MySQL</li>
          * <li><strong>mssql</strong>: SQL Server</li>
@@ -247,12 +247,12 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The version of the database engine. Valid values:</p>
+         * <p>The database engine version. Valid values:</p>
          * <ul>
-         * <li>Valid values when you set the Engine parameter to mysql: <strong>5.5, 5.6, 5.7, and 8.0</strong>.</li>
-         * <li>Valid values when you set the Engine parameter to mssql: <strong>2008r2</strong>.</li>
-         * <li>Valid values when you set the Engine parameter to PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, and 15.0</strong>.</li>
-         * <li>Valid values when you set the Engine parameter to MariaDB: <strong>10.3</strong>.</li>
+         * <li>MySQL: <strong>5.5, 5.6, 5.7, 8.0</strong></li>
+         * <li>SQL Server: <strong>2008r2</strong></li>
+         * <li>PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, 15.0</strong></li>
+         * <li>MariaDB: <strong>10.3</strong></li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -284,7 +284,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

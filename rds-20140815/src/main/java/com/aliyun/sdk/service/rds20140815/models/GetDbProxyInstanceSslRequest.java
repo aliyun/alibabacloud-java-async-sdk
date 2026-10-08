@@ -100,11 +100,11 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-t4n3axxxxx</p>
+         * <p>rm-t4n3a****</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -113,7 +113,7 @@ public class GetDbProxyInstanceSslRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

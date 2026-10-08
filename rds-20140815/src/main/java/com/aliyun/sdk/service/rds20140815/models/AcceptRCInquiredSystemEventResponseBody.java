@@ -54,10 +54,7 @@ public class AcceptRCInquiredSystemEventResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

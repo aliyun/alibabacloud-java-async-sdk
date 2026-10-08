@@ -106,7 +106,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The tasks for major engine version upgrades.</p>
+         * <p>The list of major engine version upgrade tasks.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -147,7 +147,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -424,11 +424,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the system collects the statistics.</p>
+             * <p>The statistics information collection pattern.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>After</strong>: The system collects the statistics after a switchover.</li>
-             * <li><strong>Before</strong>: The system collects the statistics before a switchover.</li>
+             * <li><strong>After</strong>: Upgrade after the cutover.</li>
+             * <li><strong>Before</strong>: Upgrade before the cutover.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -440,7 +440,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the task.</p>
+             * <p>The detailed information about the task.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-27 15:03:05 --- do upgrade precheck on slave succcess.\n2021-10-27 15:03:11 --- begin to upgrade major version, source instance will locked in readonly mode.\n2021-10-27 15:03:21 --- upgrade master success.\n2021-10-27 15:06:10 --- exchange source and target instance dns success.\n</p>
@@ -451,8 +451,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the task.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * <p>The end time of the major engine version upgrade.</p>
+             * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1614237779000</p>
@@ -463,11 +463,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task.</p>
+             * <p>The final result of the task. Valid values:</p>
              * <ul>
              * <li><strong>Success</strong>: The task is successful.</li>
              * <li><strong>Failed</strong>: The task failed.</li>
-             * <li><strong>Running</strong>: The task is in the phase in which data is being migrated to a new instance.</li>
+             * <li><strong>Running</strong>: The migration is in progress.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -479,7 +479,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the original instance.</p>
+             * <p>The ID of the original instance before the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-bp1i3kkq7321****</p>
@@ -490,7 +490,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The major engine version of the original instance.</p>
+             * <p>The version of the original instance before the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>11.0</p>
@@ -501,8 +501,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the task.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * <p>The start time of the major engine version upgrade.</p>
+             * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1614236007000</p>
@@ -513,8 +513,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the switching from the original instance to the new instance.</p>
-             * <p>Expressed in Unix timestamp. Unit: milliseconds.</p>
+             * <p>The end time of the instance switchover from the original instance to the new instance.</p>
+             * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1714237539000</p>
@@ -525,8 +525,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which your workloads are switched over from the original instance to the new instance.</p>
-             * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>
+             * <p>The time of the instance switchover from the original instance to the new instance.</p>
+             * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1614237539000</p>
@@ -537,7 +537,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the new instance.</p>
+             * <p>The ID of the new instance after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-bp1c0v6d8092****</p>
@@ -548,7 +548,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The major engine version of the new instance. Valid values:</p>
+             * <p>The major engine version after the upgrade. Valid values:</p>
              * <ul>
              * <li><strong>10.0</strong></li>
              * <li><strong>11.0</strong></li>
@@ -581,8 +581,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
              * <p>The upgrade mode.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><strong>clone</strong>: The system does not migrate data to the new instance and does not switch your workloads over to the new instance.</li>
-             * <li><strong>switch</strong>: The system migrates data to the new instance and switches your workloads over to the new instance.</li>
+             * <li><strong>clone</strong>: no cutover</li>
+             * <li><strong>switch</strong>: cutover</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -594,7 +594,14 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * cutOver.
+             * <p>Indicates whether a cutover is performed.</p>
+             * <ul>
+             * <li><strong>true</strong>: A cutover is performed.</li>
+             * <li><strong>false</strong>: No cutover is performed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder cutOver(Boolean cutOver) {
                 this.cutOver = cutOver;
@@ -602,7 +609,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * totalLogicRepDelayTime.
+             * <p>The estimated synchronization time for the logical replication lag. Unit: seconds.</p>
+             * <blockquote>
+             * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalLogicRepDelayTime(Integer totalLogicRepDelayTime) {
                 this.totalLogicRepDelayTime = totalLogicRepDelayTime;
@@ -610,7 +623,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * totalLogicRepLatencyMB.
+             * <p>The size of the logical replication lag. Unit: MB.</p>
+             * <blockquote>
+             * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalLogicRepLatencyMB(Integer totalLogicRepLatencyMB) {
                 this.totalLogicRepLatencyMB = totalLogicRepLatencyMB;
@@ -618,7 +637,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * zeroDownTimeConnectionString.
+             * <p>The temporary internal endpoint of the higher-version instance for the zero-downtime major engine version upgrade. The format is <code>****.pg.rds.aliyuncs.com</code>.</p>
+             * <blockquote>
+             * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>****.pg.rds.aliyuncs.com</p>
              */
             public Builder zeroDownTimeConnectionString(String zeroDownTimeConnectionString) {
                 this.zeroDownTimeConnectionString = zeroDownTimeConnectionString;
@@ -626,7 +651,13 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * zeroDownTimePort.
+             * <p>The port of the higher-version instance, which is the same as the port of the source instance.</p>
+             * <blockquote>
+             * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5432</p>
              */
             public Builder zeroDownTimePort(Integer zeroDownTimePort) {
                 this.zeroDownTimePort = zeroDownTimePort;

@@ -54,7 +54,7 @@ public class DeleteBackupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>37441409-FFD1-40AA-8EC5-9ECF5E2F7C29</p>

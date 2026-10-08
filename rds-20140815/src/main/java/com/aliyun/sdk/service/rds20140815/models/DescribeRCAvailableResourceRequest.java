@@ -76,6 +76,10 @@ public class DescribeRCAvailableResourceRequest extends Request {
     private String spotStrategy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SupportCase")
+    private String supportCase;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemDiskCategory")
     private String systemDiskCategory;
 
@@ -99,6 +103,7 @@ public class DescribeRCAvailableResourceRequest extends Request {
         this.scope = builder.scope;
         this.spotDuration = builder.spotDuration;
         this.spotStrategy = builder.spotStrategy;
+        this.supportCase = builder.supportCase;
         this.systemDiskCategory = builder.systemDiskCategory;
         this.zoneId = builder.zoneId;
     }
@@ -215,6 +220,13 @@ public class DescribeRCAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return supportCase
+     */
+    public String getSupportCase() {
+        return this.supportCase;
+    }
+
+    /**
      * @return systemDiskCategory
      */
     public String getSystemDiskCategory() {
@@ -243,6 +255,7 @@ public class DescribeRCAvailableResourceRequest extends Request {
         private String scope; 
         private Integer spotDuration; 
         private String spotStrategy; 
+        private String supportCase; 
         private String systemDiskCategory; 
         private String zoneId; 
 
@@ -266,6 +279,7 @@ public class DescribeRCAvailableResourceRequest extends Request {
             this.scope = request.scope;
             this.spotDuration = request.spotDuration;
             this.spotStrategy = request.spotStrategy;
+            this.supportCase = request.supportCase;
             this.systemDiskCategory = request.systemDiskCategory;
             this.zoneId = request.zoneId;
         } 
@@ -299,9 +313,6 @@ public class DescribeRCAvailableResourceRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>InstanceType</p>
          */
         public Builder destinationResource(String destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -396,6 +407,15 @@ public class DescribeRCAvailableResourceRequest extends Request {
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
             this.spotStrategy = spotStrategy;
+            return this;
+        }
+
+        /**
+         * SupportCase.
+         */
+        public Builder supportCase(String supportCase) {
+            this.putQueryParameter("SupportCase", supportCase);
+            this.supportCase = supportCase;
             return this;
         }
 

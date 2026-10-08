@@ -119,7 +119,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the log file.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -160,7 +160,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total size of the log file.</p>
+         * <p>The total size of the log files.</p>
          * 
          * <strong>example:</strong>
          * <p>2269410</p>
@@ -344,10 +344,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18358304393468701857</p>
+             * Checksum.
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -355,10 +352,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsxxxxx.oss.aliyuncs.com/xxxxxx">http://rdsxxxxx.oss.aliyuncs.com/xxxxxx</a></p>
+             * DownloadLink.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -366,11 +360,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the log file.</p>
-             * <p>Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2269410</p>
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -378,13 +368,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.</p>
-             * <blockquote>
-             * <p> You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click <strong>Service Availability</strong> to view the values of <strong>Primary Instance No.</strong> and <strong>Secondary Instance No.</strong>.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>5841973</p>
+             * HostInstanceID.
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -392,10 +376,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download files over an internal network.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx">http://rdslog-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxxx</a></p>
+             * IntranetDownloadLink.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -403,11 +384,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the URL.</p>
-             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2013-06-09T18:00:00Z</p>
+             * LinkExpiredTime.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -415,11 +392,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The beginning of the time range to query.</p>
-             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-09T17:45:21Z</p>
+             * LogBeginTime.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -427,11 +400,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range to query.</p>
-             * <p>The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-15T13:10:28Z</p>
+             * LogEndTime.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -439,10 +408,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The log file name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>000000040000000000000019</p>
+             * LogFileName.
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -450,15 +416,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the log file that is stored in the Object Storage Service (OSS) bucket.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li><strong>Uploading</strong></li>
-             * <li><strong>Completed</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Completed</p>
+             * RemoteStatus.
              */
             public Builder remoteStatus(String remoteStatus) {
                 this.remoteStatus = remoteStatus;

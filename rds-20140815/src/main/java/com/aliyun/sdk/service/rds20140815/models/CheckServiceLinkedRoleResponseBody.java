@@ -80,7 +80,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether an SLR is created.</p>
+         * <p>Indicates whether the service-linked role (SLR) has been created.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -102,7 +102,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the service-linked role is required. Default value: true.</p>
+         * <p>Indicates whether the service-linked role is required in the current scenario. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

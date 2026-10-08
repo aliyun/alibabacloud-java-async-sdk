@@ -78,7 +78,10 @@ public class CreateImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the import task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3384382</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

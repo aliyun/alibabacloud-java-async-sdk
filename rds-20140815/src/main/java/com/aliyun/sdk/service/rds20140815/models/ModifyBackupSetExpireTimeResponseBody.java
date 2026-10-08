@@ -106,7 +106,7 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The status code.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -117,14 +117,10 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the returned parameters.</p>
+         * <p>The returned fields.</p>
          * 
          * <strong>example:</strong>
-         * <p>{
-         *       &quot;SupportOnlineResizeDisk&quot;: true,
-         *       &quot;DBInstanceName&quot;: &quot;rm-bp****&quot;,
-         *       &quot;maxSupportDiskSizeGB&quot;: 6144
-         * }</p>
+         * <p>{expectExpireTime=1752581423000, dbClusterId=rm-7xv8f2zcia0e4****, backupId=262186****}</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -132,7 +128,7 @@ public class ModifyBackupSetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the status code.</p>
+         * <p>The response code message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

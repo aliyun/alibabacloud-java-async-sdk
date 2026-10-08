@@ -89,7 +89,7 @@ public class DescribeDBInstanceReplicationRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class DescribeDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class DescribeDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can leave this parameter empty.</p>
+         * <p>The resource group ID. This parameter can be left empty.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmx****</p>

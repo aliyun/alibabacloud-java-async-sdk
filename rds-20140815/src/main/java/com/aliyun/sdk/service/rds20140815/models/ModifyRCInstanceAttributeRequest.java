@@ -199,14 +199,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: enables the release protection feature.</li>
-         * <li><strong>false</strong> (default): does not enable the release protection feature.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * DeletionProtection.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -224,10 +217,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The hostname of the instance.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testHost1</p>
+         * HostName.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -236,10 +226,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rm-uf62br2491p5l****</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,14 +254,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The new password of the instance.</p>
-         * <ul>
-         * <li>The value must be 8 to 30 characters in length.</li>
-         * <li>The value must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>()</code> ~ ! @ # $ % ^ &amp; * - _ + = `</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>2F9e9@a69c!e18b569c8</p>
+         * Password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -283,14 +263,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to restart the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Reboot.
          */
         public Builder reboot(Boolean reboot) {
             this.putQueryParameter("Reboot", reboot);
@@ -299,10 +272,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -311,10 +281,7 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group to which the instance is added.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-uf6av412xaxixu****</p>
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

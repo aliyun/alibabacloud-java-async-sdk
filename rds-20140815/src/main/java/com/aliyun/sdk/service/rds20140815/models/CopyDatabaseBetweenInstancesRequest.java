@@ -146,13 +146,13 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup set based on which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.</p>
+         * <p>The backup set ID of the source instance. To copy a database from a backup set, call DescribeBackups to query the backup set ID.</p>
          * <blockquote>
-         * <p> You must specify one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * <p>You must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>106523874****</p>
+         * <p>259321****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -161,11 +161,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * <p>The source instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The source instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-bp172446ys9cf****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,11 +174,18 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * <p>The names of the databases that you want to copy. Format: <code>Source database name 1,Source database name 2</code>.</p>
+         * <p>The list of database names to be copied. Format: <code>{&quot;Source database name&quot;:&quot;Destination database name&quot;}</code>. Separate multiple databases with commas (,). Examples:</p>
+         * <ul>
+         * <li>Copy a single database: <code>{&quot;zhttest&quot;:&quot;zhttest&quot;}</code></li>
+         * <li>Copy multiple databases: <code>{&quot;zhttest01&quot;:&quot;zhttest01&quot;,&quot;zhttest02&quot;:&quot;zhttest02&quot;}</code></li>
+         * </ul>
+         * <blockquote>
+         * <p>The database name on the target instance can be different from that on the source instance. However, make sure that the target instance does not contain a database with the same name before copying.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;test1&quot;:&quot;newtest1&quot;,&quot;test2&quot;:&quot;newtest2&quot;}</p>
+         * <p>{&quot;zhttest&quot;:&quot;zhttest&quot;}</p>
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);
@@ -196,13 +203,13 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * <p>The point in time when the system replicates databases. You can select a point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The point in time to which you want to copy the database. You can specify any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <blockquote>
-         * <p>You must specify one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * <p>You must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2011-06-11T16:00:00Z</p>
+         * <p>2025-06-08T17:41:14Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -211,12 +218,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to copy users and permissions.</p>
+         * <p>Specifies whether to copy users and permissions. Valid values:</p>
          * <ul>
-         * <li><strong>YES</strong>: copies users and permissions. If the destination instance has a user whose name is the same as a user in the source instance, the permissions of the user in the source instance will also be granted to the user in the destination instance after you copy user permissions.</li>
-         * <li><strong>NO</strong>: does not copy users and permissions.</li>
+         * <li><strong>YES</strong>: Users and permissions are copied. If the target instance contains a user with the same name, the permissions of the user on the source instance are merged with those of the user on the target instance.</li>
+         * <li><strong>NO</strong> (default): Users and permissions are not copied.</li>
          * </ul>
-         * <p>Default value: <strong>NO</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>NO</p>
@@ -228,11 +234,11 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         }
 
         /**
-         * <p>The destination instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The target instance ID. You can invoke DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-ut5ajk3xxxxxxx</p>
+         * <p>rm-bp1m71wvzfiq7****</p>
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);

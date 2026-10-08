@@ -159,11 +159,11 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         } 
 
         /**
-         * <p>The primary instance ID. You can call the DescribeDBInstances operation to query the primary instance ID.</p>
+         * <p>The primary instance ID. You can invoke DescribeDBInstances to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp*****</p>
+         * <p>rm-bp****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -190,11 +190,11 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * <p>The read-only instance ID. You can call the DescribeDBInstances operation to query the read-only instance ID.</p>
+         * <p>The read-only instance ID. You can invoke DescribeDBInstances to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rr-bp*****</p>
+         * <p>rr-bp****</p>
          */
         public Builder readInstanceId(String readInstanceId) {
             this.putQueryParameter("ReadInstanceId", readInstanceId);
@@ -203,7 +203,7 @@ public class DescribeReadDBInstanceDelayRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to obtain this value.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

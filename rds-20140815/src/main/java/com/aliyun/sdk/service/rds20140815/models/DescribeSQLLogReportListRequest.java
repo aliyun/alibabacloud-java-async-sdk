@@ -176,11 +176,11 @@ public class DescribeSQLLogReportListRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -189,9 +189,9 @@ public class DescribeSQLLogReportListRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.**</p>
+         * <p>The end time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * <blockquote>
-         * <p> The end time must be later than the start time.</p>
+         * <p>The end time must be later than the start time.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -223,8 +223,8 @@ public class DescribeSQLLogReportListRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: any <strong>non-zero</strong> positive integer.</p>
-         * <p>Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type.</p>
+         * <p>Default value: <strong>1</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -242,7 +242,7 @@ public class DescribeSQLLogReportListRequest extends Request {
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
-         * <p>Default value: <strong>30</strong>.</p>
+         * <p>Default value: <strong>30</strong></p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -272,7 +272,7 @@ public class DescribeSQLLogReportListRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

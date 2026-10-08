@@ -67,7 +67,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried tasks.</p>
+         * <p>The list of task information.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -144,15 +144,15 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the task. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>Scheduled</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Succeed</strong></li>
-             * <li><strong>Failed</strong></li>
-             * <li><strong>Cancelling</strong></li>
-             * <li><strong>Canceled</strong></li>
-             * <li><strong>Waiting</strong></li>
+             * <li><strong>Scheduled</strong>: Waiting to be executed.</li>
+             * <li><strong>Running</strong>: Running.</li>
+             * <li><strong>Succeed</strong>: Succeeded.</li>
+             * <li><strong>Failed</strong>: Failed.</li>
+             * <li><strong>Cancelling</strong>: Being stopped.</li>
+             * <li><strong>Canceled</strong>: Stopped.</li>
+             * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
              * </ul>
              * 
              * <strong>example:</strong>

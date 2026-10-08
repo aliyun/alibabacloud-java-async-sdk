@@ -93,7 +93,7 @@ public class ListImportTasksResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>None.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -101,7 +101,14 @@ public class ListImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are not available.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -109,7 +116,10 @@ public class ListImportTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -251,7 +261,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             } 
 
             /**
-             * CreatedTime.
+             * <p>The creation time in UTC. The time follows the format of YYYY-MM-DDTHH:mm:ssZ.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-05-30T14:30:00Z</p>
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -259,7 +272,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * <p>The kernel version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5.7</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -267,7 +283,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Importing</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -275,7 +294,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceName.
+             * <p>The instance ID of the target instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp*****</p>
              */
             public Builder targetInstanceName(String targetInstanceName) {
                 this.targetInstanceName = targetInstanceName;
@@ -283,7 +305,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>342900000</p>
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -291,7 +316,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * <p>The task name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -299,7 +327,10 @@ public class ListImportTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * <p>The task type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>import</p>
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

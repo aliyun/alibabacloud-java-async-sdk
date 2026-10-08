@@ -117,7 +117,13 @@ public class ModifyEventInfoRequest extends Request {
         } 
 
         /**
-         * <p>The action-related parameters. You can add action-related parameters based on your business requirements. The parameter value varies with the value of the TaskAction parameter.</p>
+         * <p>The action-related parameters, which can be an extension based on business requirements. When taskAction is set to modifySwitchTime, set ActionParams to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
+         * <p>recoverMode specifies the task recovery pattern. Valid values:</p>
+         * <ul>
+         * <li><strong>timePoint</strong>: Executes at a specified point in time.</li>
+         * <li><strong>immediate</strong>: Executes immediately.</li>
+         * </ul>
+         * <p>recoverTime specifies the recovery time in UTC+0. Format: yyyy-MM-ddTHH:mm:ssZ. This parameter is required when recoverMode is set to timePoint.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;recoverTime&quot;:&quot;2023-04-17T14:02:35Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</p>
@@ -129,14 +135,14 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The event handling action. Valid values:</p>
+         * <p>The event action. Valid values:</p>
          * <ul>
-         * <li><strong>archive</strong></li>
-         * <li><strong>undo</strong></li>
-         * </ul>
-         * <blockquote>
-         * <p> This parameter is required.</p>
+         * <li><strong>archive</strong>: Archives the event.</li>
+         * <li><strong>undo</strong>: Does not process the event.<blockquote>
+         * <p>This parameter is required.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>archive</p>
@@ -148,7 +154,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The event ID. You can call the DescribeEvents operation to obtain the IDs of the events. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.</p>
+         * <p>The event ID. You can call the DescribeEvents operation to query event IDs. To query multiple events, separate the event IDs with commas (,). A maximum of 20 event IDs are supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -161,7 +167,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

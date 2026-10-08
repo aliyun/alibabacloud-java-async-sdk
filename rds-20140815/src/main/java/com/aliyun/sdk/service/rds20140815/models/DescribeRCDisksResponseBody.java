@@ -106,7 +106,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the disks.</p>
+         * <p>The list of disk information.</p>
          */
         public Builder disks(java.util.List<Disks> disks) {
             this.disks = disks;
@@ -125,7 +125,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -648,7 +648,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             } 
 
             /**
-             * AttachedTime.
+             * <p>The time when the disk was attached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-05T2340:00Z</p>
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -656,7 +659,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * BurstingEnabled.
+             * <p>Indicates whether burst (performance bursting) is enabled. Valid values:</p>
+             * <p>true: Enabled.
+             * false: Disabled.
+             * This parameter is supported only when DiskCategory is set to cloud_auto. For more information, see ESSD AutoPL cloud disks.</p>
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -664,16 +670,16 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the disk. Valid values:</p>
+             * <p>The disk category. Valid values:</p>
              * <ul>
-             * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+             * <li><strong>cloud_efficiency</strong>: ultra cloud disk.</li>
              * <li><strong>cloud_ssd</strong>: standard SSD.</li>
-             * <li><strong>cloud_essd</strong>: ESSD.</li>
-             * <li><strong>cloud_auto</strong>: Premium ESSD</li>
+             * <li><strong>cloud_essd</strong>: ESSD cloud disk.</li>
+             * <li><strong>cloud_auto</strong>: premium performance disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cloud_ssd</p>
+             * <p>cloud_auto</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -692,10 +698,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the automatic snapshots of the cloud disk are deleted after the disk is released. Valid values:</p>
+             * <p>Indicates whether automatic snapshots are deleted when the cloud disk is deleted. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Automatic snapshots are deleted when the cloud disk is deleted.</li>
+             * <li>false: Automatic snapshots are retained when the cloud disk is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -707,10 +713,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the cloud disk is released when its associated instance is released. Valid values:</p>
+             * <p>Indicates whether the disk is released when the instance is released. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: The disk is released when the instance is released.</li>
+             * <li>false: The disk is retained when the instance is released.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -744,8 +750,8 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the disk.</p>
-             * <p>Only <strong>PostPaid</strong> (pay-as-you-go) is supported.</p>
+             * <p>Billable methods of the disk.</p>
+             * <p>Only <strong>PostPaid</strong> is supported, which indicates the pay-as-you-go billing method.</p>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -778,10 +784,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether only encrypted cloud disks are queried. Valid values:</p>
+             * <p>Indicates whether only encrypted cloud disks are filtered. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false (default)</li>
+             * <li>true: Only encrypted cloud disks are returned.</li>
+             * <li>false (default): All cloud disks are returned.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -804,8 +810,8 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × *Capacity, 50,000}</p>
-             * <p>This parameter is available only when the <code>Category</code> parameter is set to <code>cloud_auto</code>.</p>
+             * <p>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50000, 1000 × Capacity - Baseline performance}. Baseline performance = min{1,800 + 50 × Capacity, 50,000}.</p>
+             * <p>This parameter is supported only when <code>Category</code> is set to <code>cloud_auto</code>.</p>
              * 
              * <strong>example:</strong>
              * <p>4000</p>
@@ -816,7 +822,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the image that is used to create the instance. This parameter is returned only if the cloud disk is created from an image. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+             * <p>The image ID used to create the RDS Custom instance. This parameter has a value only for cloud disks created from an image. Otherwise, the value is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>m-2zeb24dw6wripjn2****</p>
@@ -838,12 +844,12 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance level (PL) of the ESSD. Valid values:</p>
+             * <p>The performance level (PL) of the ESSD cloud disk. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: A single standard SSD can deliver up to 10,000 random read/write IOPS.</li>
+             * <li>PL1: A single standard SSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL2: A single standard SSD can deliver up to 100,000 random read/write IOPS.</li>
+             * <li>PL3: A single standard SSD can deliver up to 1,000,000 random read/write IOPS.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -855,7 +861,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Portable.
+             * <p>Indicates whether the disk is detachable.</p>
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -896,7 +902,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the disk. Unit: GiB.</p>
+             * <p>The disk size. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -907,8 +913,8 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the snapshot that was used to create the cloud disk.</p>
-             * <p>This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.</p>
+             * <p>The snapshot ID used to create the cloud disk.</p>
+             * <p>If no snapshot was specified when the cloud disk was created, this parameter is empty. This value remains unchanged throughout the lifecycle of the cloud disk.</p>
              * 
              * <strong>example:</strong>
              * <p>rcds-bp67acfmxazb4p****</p>
@@ -919,14 +925,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the disk. Valid values:</p>
+             * <p>The disk status. Valid values:</p>
              * <ul>
-             * <li>In_use: The disk is in use.</li>
-             * <li>Available: The disk can be attached.</li>
-             * <li>Attaching: The disk is being attached.</li>
-             * <li>Detaching: The cloud disk is being detached.</li>
-             * <li>Creating: The disk is being created.</li>
-             * <li>ReIniting: The disk is being initialized.</li>
+             * <li>In_use: in use.</li>
+             * <li>Available: to be attached.</li>
+             * <li>Attaching: being attached.</li>
+             * <li>Detaching: being detached.</li>
+             * <li>Creating: being created.</li>
+             * <li>ReIniting: being initialized.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -938,7 +944,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If your cloud disk belongs to the public block storage cluster, an empty value is returned.</p>
+             * <p>The ID of the dedicated block storage cluster to which the cloud disk belongs. If the cloud disk is in a public cloud block storage cluster, this parameter is empty.</p>
              * 
              * <strong>example:</strong>
              * <p>dbsc-cn-zvp2rl601****</p>
@@ -960,7 +966,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The list of tags.</p>
+             * <p>The tags.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
@@ -970,8 +976,8 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             /**
              * <p>The disk type. Valid values:</p>
              * <ul>
-             * <li>system: system disk</li>
-             * <li>data: data disk</li>
+             * <li>system: system cloud disk.</li>
+             * <li>data: data cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>

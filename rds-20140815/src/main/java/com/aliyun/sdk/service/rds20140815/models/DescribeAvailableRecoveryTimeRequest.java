@@ -144,11 +144,11 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the cross-region data backup file. You can call the DescribeCrossRegionBackups operation to query the backup file ID.</p>
+         * <p>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>14***</p>
+         * <p>12493****</p>
          */
         public Builder crossBackupId(Integer crossBackupId) {
             this.putQueryParameter("CrossBackupId", crossBackupId);
@@ -160,7 +160,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
          * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -181,7 +181,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
          * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-chengdu</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +193,7 @@ public class DescribeAvailableRecoveryTimeRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -87,10 +87,10 @@ public class DescribeQuickSaleConfigRequest extends Request {
         } 
 
         /**
-         * <p>The product code. Valid values:</p>
+         * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li>rds: The instance is a subscription instance.</li>
-         * <li>bards: The instance is a pay-as-you-go instance.</li>
+         * <li>rds: subscription</li>
+         * <li>bards: pay-as-you-go</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
          * <li><strong>MySQL</strong></li>
          * <li><strong>SQLServer</strong></li>
@@ -121,7 +121,7 @@ public class DescribeQuickSaleConfigRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

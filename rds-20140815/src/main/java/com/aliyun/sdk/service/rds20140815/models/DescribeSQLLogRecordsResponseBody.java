@@ -106,7 +106,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about each SQL audit log entry.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of SQL audit log entries on the current page.</p>
+         * <p>The number of SQL Audit log entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -136,7 +136,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
@@ -147,7 +147,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -294,10 +294,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The username of the account that is recorded in the SQL audit log entry.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>accounttest</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -305,10 +302,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testDB</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -316,10 +310,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the SQL statement was executed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2011-06-11T15:00:23Z</p>
+             * ExecuteTime.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -327,10 +318,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IP address of the client that is connected to the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>192.168.0.121</p>
+             * HostAddress.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -338,10 +326,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of SQL audit log entries that are returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>30</p>
+             * ReturnRowCounts.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -349,10 +334,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The SQL statement.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>update test.zxb set id=0 limit 1</p>
+             * SQLText.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -360,10 +342,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The thread ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1025865428</p>
+             * ThreadID.
              */
             public Builder threadID(String threadID) {
                 this.threadID = threadID;
@@ -371,10 +350,7 @@ public class DescribeSQLLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The execution duration of the SQL statement. Unit: microseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>600</p>
+             * TotalExecutionTimes.
              */
             public Builder totalExecutionTimes(Long totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

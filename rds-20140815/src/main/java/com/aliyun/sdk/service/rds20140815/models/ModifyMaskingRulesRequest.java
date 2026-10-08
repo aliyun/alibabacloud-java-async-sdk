@@ -201,6 +201,7 @@ public class ModifyMaskingRulesRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +214,10 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -222,7 +226,10 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * DefaultAlgo.
+         * <p>The name of the default encryption or masking algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sm4-128-gcm</p>
          */
         public Builder defaultAlgo(String defaultAlgo) {
             this.putQueryParameter("DefaultAlgo", defaultAlgo);
@@ -231,7 +238,10 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * <p>Specifies whether the rule is enabled. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(String enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -240,7 +250,11 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * MaskingAlgo.
+         * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;name&quot;: &quot;sha256&quot;},
+         *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
          */
         public Builder maskingAlgo(String maskingAlgo) {
             this.putQueryParameter("MaskingAlgo", maskingAlgo);
@@ -258,7 +272,10 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -285,7 +302,7 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleConfig.
+         * <p>The rule configuration in JSON string format.</p>
          */
         public Builder ruleConfig(RuleConfig ruleConfig) {
             String ruleConfigShrink = shrink(ruleConfig, "RuleConfig", "json");
@@ -295,6 +312,7 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
+         * <p>The name of the rule to modify.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +397,7 @@ public class ModifyMaskingRulesRequest extends Request {
             } 
 
             /**
-             * Columns.
+             * <p>The list of columns.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -387,7 +405,7 @@ public class ModifyMaskingRulesRequest extends Request {
             }
 
             /**
-             * Databases.
+             * <p>The list of databases.</p>
              */
             public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
@@ -395,7 +413,7 @@ public class ModifyMaskingRulesRequest extends Request {
             }
 
             /**
-             * Tables.
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

@@ -93,7 +93,10 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>069EB9B1-DE12-54B9-8C20-822****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +104,10 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the data import task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IMPORTING</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -109,7 +115,10 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>41698****</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -117,7 +126,10 @@ public class ModifyImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>task_1234</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

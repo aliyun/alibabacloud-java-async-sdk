@@ -106,7 +106,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The renewal information about the instance.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -147,7 +147,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,10 +255,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether to enable auto-renewal for the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>True</p>
+             * AutoRenew.
              */
             public Builder autoRenew(String autoRenew) {
                 this.autoRenew = autoRenew;
@@ -266,10 +263,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bpxxxxxxx</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -277,10 +271,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The renewal period.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -288,10 +279,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -299,10 +287,7 @@ public class DescribeInstanceAutoRenewalAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance status.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

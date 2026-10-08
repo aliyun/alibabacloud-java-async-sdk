@@ -54,7 +54,7 @@ public class ModifyDBDescriptionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>

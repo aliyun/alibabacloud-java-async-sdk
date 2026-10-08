@@ -132,7 +132,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the account.</p>
+         * Accounts.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -154,7 +154,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>A2E94301-D07F-4457-9B49-6AA2BB388C85</p>
+         * <p>17F2EA6C-3CA2-528D-A263-DC29707AD652</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,13 +173,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The first time when the system admin account was enabled. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The time when the super administrator (SA) account was first activated. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * <blockquote>
-         * <p> This parameter is returned only for instances that run SQL Server.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for SQL Server instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2020-02-06T11:00:00Z</p>
+         * <p>2023-10-17T07:51:22Z</p>
          */
         public Builder systemAdminAccountFirstActivationTime(String systemAdminAccountFirstActivationTime) {
             this.systemAdminAccountFirstActivationTime = systemAdminAccountFirstActivationTime;
@@ -187,13 +187,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the system admin account was enabled. Valid values:</p>
+         * <p>Indicates whether the super administrator (SA) account is activated. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The system admin account was enabled.</li>
-         * <li><strong>false</strong>: The system admin account was disabled.</li>
+         * <li><strong>True</strong>: Activated.</li>
+         * <li><strong>False</strong>: Not activated.</li>
          * </ul>
          * <blockquote>
-         * <p> The <a href="https://help.aliyun.com/document_detail/170736.html">system admin account</a> is supported only for the instances that run SQL Server. If the instance runs SQL Server, a value is returned for this parameter. If the instance runs a different database engine, no value is returned for this parameter.</p>
+         * <p>Only ApsaraDB RDS for SQL Server instances support the <a href="https://help.aliyun.com/document_detail/170736.html">super administrator (SA) account</a>, and this parameter has a return value. For instances of other engines, the return value is empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -205,10 +205,10 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>3</p>
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -287,17 +287,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The type of the permissions. Valid values:</p>
-             * <ul>
-             * <li><strong>ReadWrite</strong>: read and write permissions.</li>
-             * <li><strong>ReadOnly</strong>: read-only permissions.</li>
-             * <li><strong>DDLOnly</strong>: DDL-only permissions.</li>
-             * <li><strong>DMLOnly</strong>: DML-only permissions.</li>
-             * <li><strong>Custom</strong>: custom permissions. You can modify the permissions of the account by using SQL commands.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>ReadWrite</p>
+             * AccountPrivilege.
              */
             public Builder accountPrivilege(String accountPrivilege) {
                 this.accountPrivilege = accountPrivilege;
@@ -305,10 +295,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The permissions that are granted to the account. For more information, see <a href="https://help.aliyun.com/document_detail/146395.html">Account permissions</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SELECT,INSERT</p>
+             * AccountPrivilegeDetail.
              */
             public Builder accountPrivilegeDetail(String accountPrivilegeDetail) {
                 this.accountPrivilegeDetail = accountPrivilegeDetail;
@@ -316,10 +303,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test1</p>
+             * DBName.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -596,10 +580,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test account</p>
+             * AccountDescription.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -607,10 +588,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the database account.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test1</p>
+             * AccountName.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -618,14 +596,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the account. Valid values:</p>
-             * <ul>
-             * <li><strong>Unavailable</strong></li>
-             * <li><strong>Available</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Available</p>
+             * AccountStatus.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -633,15 +604,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the account. Valid values:</p>
-             * <ul>
-             * <li><strong>Normal</strong>: standard account</li>
-             * <li><strong>Super</strong>: privileged account</li>
-             * <li><strong>Sysadmin</strong>: system admin account, which is supported only for instances running SQL Server</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Normal</p>
+             * AccountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -649,17 +612,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account has the row-level security (RLS) permissions. Valid values:</p>
-             * <ul>
-             * <li><strong>t</strong>: The account has the RLS permissions.</li>
-             * <li><strong>f</strong>: The account does not have the RLS permissions.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>f</p>
+             * BypassRLS.
              */
             public Builder bypassRLS(String bypassRLS) {
                 this.bypassRLS = bypassRLS;
@@ -667,13 +620,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the password policy is applied.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * CheckPolicy.
              */
             public Builder checkPolicy(Boolean checkPolicy) {
                 this.checkPolicy = checkPolicy;
@@ -681,17 +628,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account has the permissions to create databases. Valid values:</p>
-             * <ul>
-             * <li><strong>t</strong>: The account has the permissions to create databases.</li>
-             * <li><strong>f</strong>: The account does not have the permissions to create databases.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>t</p>
+             * CreateDB.
              */
             public Builder createDB(String createDB) {
                 this.createDB = createDB;
@@ -699,17 +636,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account has the permissions to create roles. Valid values:</p>
-             * <ul>
-             * <li><strong>t</strong>: The account has the permissions to create roles.</li>
-             * <li><strong>f</strong>: The account does not have the permissions to create roles.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>t</p>
+             * CreateRole.
              */
             public Builder createRole(String createRole) {
                 this.createRole = createRole;
@@ -717,10 +644,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance to which the account belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5*****</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -728,7 +652,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details about the permissions that are granted to the account.</p>
+             * DatabasePrivileges.
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
@@ -736,13 +660,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the password.</p>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run SQL Server.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-21</p>
+             * PasswordExpireTime.
              */
             public Builder passwordExpireTime(String passwordExpireTime) {
                 this.passwordExpireTime = passwordExpireTime;
@@ -750,14 +668,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the number of databases that are managed by the account exceeds the upper limit. Valid values:</p>
-             * <ul>
-             * <li><strong>1</strong>: The number of databases that are managed by the account exceeds the upper limit.</li>
-             * <li><strong>0</strong>: The number of databases that are managed by the account does not exceed the upper limit.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * PrivExceeded.
              */
             public Builder privExceeded(String privExceeded) {
                 this.privExceeded = privExceeded;
@@ -765,17 +676,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the account has the replication permissions. Valid values:</p>
-             * <ul>
-             * <li><strong>t</strong>: The account has the replication permissions.</li>
-             * <li><strong>f</strong>: The account does not have the replication permissions.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>t</p>
+             * Replication.
              */
             public Builder replication(String replication) {
                 this.replication = replication;
@@ -783,18 +684,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the password. Valid values:</p>
-             * <ul>
-             * <li><strong>infinity</strong>: The password never expires.</li>
-             * <li><strong>Empty</strong>: The expiration time is not specified.</li>
-             * <li><strong>Actual expiration time</strong>: in the format of <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z in UTC. Example: 2022-10-01T00:00:00Z.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only for instances that run PostgreSQL.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-10-01T00:00:00Z</p>
+             * ValidUntil.
              */
             public Builder validUntil(String validUntil) {
                 this.validUntil = validUntil;

@@ -78,7 +78,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information returned.</p>
+         * <p>The array of returned information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -144,7 +144,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of unit nodes that are created by calling this operation.</p>
+             * <p>The number of nodes created in this call.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -158,7 +158,7 @@ public class CreateGadInstanceMemberResponseBody extends TeaModel {
              * <p>The ID of the global active database cluster.</p>
              * 
              * <strong>example:</strong>
-             * <p>gad-rm-bp1npi2j8********</p>
+             * <p>gad-rm-bp1npi2j8****</p>
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;

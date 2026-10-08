@@ -87,9 +87,9 @@ public class ModifyRCInstanceDescriptionRequest extends Request {
         } 
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the RDS Custom instance.</p>
          * <blockquote>
-         * <p> The name must be 2 to 255 characters in length and can contain letters, digits, <code>underscores (_)</code>, and <code>hyphens (-)</code>. It must start with a letter.</p>
+         * <p>The name must be 2 to 255 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), or hyphens (-).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

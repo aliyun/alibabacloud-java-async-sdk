@@ -128,7 +128,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the instance.</p>
+         * <p>The instance information.</p>
          */
         public Builder RCInstances(java.util.List<RCInstances> RCInstances) {
             this.RCInstances = RCInstances;
@@ -147,7 +147,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -242,7 +242,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-t8q22a87745hf8******</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -250,7 +253,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * <ul>
+             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
+             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::RDS::CUSTOM</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -258,7 +268,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRC</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -266,7 +279,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -359,7 +375,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-t8q22a87745hf8******</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -367,7 +386,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * <ul>
+             * <li><code>ALIYUN::RDS::INSTANCE</code>: ApsaraDB RDS instance.</li>
+             * <li><code>ALIYUN::RDS::CUSTOM</code>: RDS Custom instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALIYUN::RDS::CUSTOM</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -375,7 +401,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRC</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -383,7 +412,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -476,7 +508,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             } 
 
             /**
-             * NatIpAddress.
+             * <p>A reserved parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder natIpAddress(String natIpAddress) {
                 this.natIpAddress = natIpAddress;
@@ -484,7 +519,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIpAddress.
+             * <p>The private IP address.</p>
              */
             public Builder privateIpAddress(java.util.List<String> privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -492,7 +527,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1nb3pv03878tgnj****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -500,7 +538,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6f7l4fg90****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -523,6 +564,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
     public static class RCInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
 
         @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
@@ -625,6 +669,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         private RCInstances(Builder builder) {
             this.autoRenew = builder.autoRenew;
+            this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.cpu = builder.cpu;
             this.createMode = builder.createMode;
@@ -673,6 +718,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
          */
         public Boolean getAutoRenew() {
             return this.autoRenew;
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         /**
@@ -908,6 +960,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoRenew; 
+            private String clusterId; 
             private String clusterName; 
             private Integer cpu; 
             private String createMode; 
@@ -947,6 +1000,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
 
             private Builder(RCInstances model) {
                 this.autoRenew = model.autoRenew;
+                this.clusterId = model.clusterId;
                 this.clusterName = model.clusterName;
                 this.cpu = model.cpu;
                 this.createMode = model.createMode;
@@ -991,6 +1045,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
              * <p>The cluster name.</p>
              * 
              * <strong>example:</strong>
@@ -1002,7 +1064,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * <p>The number of vCPUs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -1010,7 +1075,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateMode.
+             * <p>Indicates whether the instance can be added to an ACK cluster. If the parameter settings for this field is <strong>1</strong>, the created instance can be added to an ACK cluster by calling the <strong>AttachRCInstances</strong> API operation, which enables efficient management of container applications.</p>
+             * <ul>
+             * <li><strong>1</strong>: Yes.</li>
+             * <li><strong>0</strong> (default): No.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder createMode(String createMode) {
                 this.createMode = createMode;
@@ -1029,7 +1101,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeploymentSetId.
+             * <p>The deployment set ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ds-bp14k1xvolvsy4z3****</p>
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -1037,7 +1112,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance description.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1056,7 +1131,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * <p>The time when the instance expires. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC+0.</p>
+             * <blockquote>
+             * <p>The expiration time displayed on the console is UTC+8.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-05-02T16:00:00Z</p>
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1064,7 +1145,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the task was created. The time is displayed in GMT.</p>
+             * <p>The task creation time (GMT).</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-22 07:56:53.0</p>
@@ -1078,7 +1159,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              * <p>The host IP address.</p>
              * 
              * <strong>example:</strong>
-             * <p>172.30.XXX.XXX</p>
+             * <p>172.16.XX.XX</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -1097,7 +1178,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun_3_x64_20G_alibase_20250117.vhd</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1105,7 +1189,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * <p>The billing method. Valid values:</p>
+             * <ul>
+             * <li><strong>PrePaid</strong>: subscription.</li>
+             * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrePaid</p>
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1124,7 +1215,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k8s-node</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1132,7 +1226,11 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql.x2.xlarge.6cm</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1140,7 +1238,11 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * <p>The instance family.</p>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/2844823.html">RDS Custom instance type list</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>x.6cm</p>
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -1148,7 +1250,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>The memory size. Unit: MiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16384</p>
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -1156,7 +1261,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * <p>The node type. If the value <strong>rds_vnode</strong> is returned, the node is a container node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds_vnode</p>
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -1180,7 +1288,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicIp.
+             * <p>The public IP address of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>121.89.XX.XX</p>
              */
             public Builder publicIp(String publicIp) {
                 this.publicIp = publicIp;
@@ -1199,7 +1310,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The security group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vcbcivwfxiozhtp****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1207,7 +1321,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * <p>The bidding strategy for pay-as-you-go instances. Valid values:</p>
+             * <ul>
+             * <li><strong>NoSpot</strong>: A regular pay-as-you-go instance.</li>
+             * <li><strong>SpotAsPriceGo</strong>: The system automatically bids, following the current market price.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NoSpot</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1225,14 +1346,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             /**
              * <p>The instance status. Valid values:</p>
              * <ul>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Starting</strong></li>
-             * <li><strong>Stopping</strong></li>
-             * <li><strong>Stopped</strong></li>
+             * <li><strong>Pending</strong>: Being created.</li>
+             * <li><strong>Running</strong>: Running.</li>
+             * <li><strong>Starting</strong>: Being started.</li>
+             * <li><strong>Stopping</strong>: Being stopped.</li>
+             * <li><strong>Stopped</strong>: Stopped.</li>
              * </ul>
              * <blockquote>
-             * <p> If the value returned for the DescribeRCInstances operation is different from the value that is returned for the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned for the <strong>DescribeRCInstanceAttribute</strong> operation shall prevail.</p>
+             * <p>The instance status returned by this operation may be delayed. If the value differs from the value returned by the <strong>DescribeRCInstanceAttribute</strong> operation, the value returned by <strong>DescribeRCInstanceAttribute</strong> prevails.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -1252,7 +1373,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagResources.
+             * <p>The details of the instances and tags.</p>
              */
             public Builder tagResources(java.util.List<TagResources> tagResources) {
                 this.tagResources = tagResources;
@@ -1260,7 +1381,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag details.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -1268,7 +1389,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAttributes.
+             * <p>The VPC attributes.</p>
              */
             public Builder vpcAttributes(VpcAttributes vpcAttributes) {
                 this.vpcAttributes = vpcAttributes;
@@ -1276,7 +1397,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-uf6f7l4fg90****</p>
@@ -1287,7 +1408,10 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-j</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

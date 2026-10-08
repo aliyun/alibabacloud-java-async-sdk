@@ -93,7 +93,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-bp1trqb4p1xd****</p>
@@ -104,7 +104,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The items.</p>
+         * <p>The records.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -123,7 +123,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -374,7 +374,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the task.</p>
+             * <p>The task details.</p>
              * 
              * <strong>example:</strong>
              * <p>[Check rds empty]\nCheck rds databases: success\n[Check source connectivity]\nCheck ip connectable: success\nCheck port connectable: success\nCheck database connectable: success\nCheck account replication privilege: success\nCheck account createrole privilege: success\nCheck account monitor privilege: success\n[Check source version]\nCheck major version consistent: success\n[Check source glibc version]\nCheck source glibc version compatible: warning(warning:source glibc version is not compatible with rds pg)\n[Check disk size]\nCheck disk size enough: success\n[Check wal keep size]\nCheck wal keep size large enough: success\n[Check spec params]\nCheck if spec params too large: success\n [Check triggers]\nCheck triggers compatible: success\n[Check user functions]\nCheck user functions compatible: success\n<em>Migrate check success</em></p>
@@ -385,7 +385,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time is displayed in UTC.</p>
+             * <p>The creation time in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-02-25T06:57:41Z</p>
@@ -396,7 +396,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The modification time. The time is displayed in UTC.</p>
+             * <p>The modification time in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-03-01T06:39:51Z</p>
@@ -407,7 +407,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization information. This parameter is a reserved parameter.</p>
+             * <p>The synchronization information. This is a reserved field.</p>
              * 
              * <strong>example:</strong>
              * <p>None</p>
@@ -418,11 +418,11 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the synchronization. Valid values:</p>
+             * <p>The synchronization status. Valid values:</p>
              * <ul>
-             * <li><strong>steaming</strong>: The synchronization is in progress.</li>
-             * <li><strong>finish</strong>: The synchronization is complete.</li>
-             * <li><strong>disconnect</strong>: The synchronization is disconnected.</li>
+             * <li><strong>steaming</strong>: Synchronizing.</li>
+             * <li><strong>finish</strong>: Completed.</li>
+             * <li><strong>disconnect</strong>: Disconnected.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -434,7 +434,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The account of the database that is used for data synchronization.</p>
+             * <p>The database account used for data synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>testdbuser</p>
@@ -445,7 +445,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The password of the account.</p>
+             * <p>The password of the synchronization account.</p>
              * 
              * <strong>example:</strong>
              * <p>testpassword</p>
@@ -456,7 +456,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The endpoint of the source instance.</p>
+             * <p>The address of the source instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-****.pg.rds.aliyuncs.com</p>
@@ -467,10 +467,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source instance. Valid values:</p>
+             * <p>The category of the source instance. Valid values:</p>
              * <ul>
-             * <li>other: other instances</li>
-             * <li>aliyunRDS: an ApsaraDB RDS instance</li>
+             * <li>other: Other.</li>
+             * <li>aliyunRDS: ApsaraDB RDS instance.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -482,7 +482,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The port number of the source instance.</p>
+             * <p>The port of the source instance.</p>
              * 
              * <strong>example:</strong>
              * <p>5432</p>
@@ -493,7 +493,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The destination instance ID.</p>
+             * <p>The ID of the target instance.</p>
              * 
              * <strong>example:</strong>
              * <p>pgm-bp1l4dutw453****</p>
@@ -504,7 +504,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the task.</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>8413252</p>
@@ -515,7 +515,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the task.</p>
+             * <p>The task name.</p>
              * 
              * <strong>example:</strong>
              * <p>test01</p>
@@ -526,12 +526,12 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The stage of the task. Valid values:</p>
+             * <p>The task stage. Valid values:</p>
              * <ul>
-             * <li><strong>precheck</strong>: the precheck stage.</li>
-             * <li><strong>basebackup</strong>: the basic backup stage.</li>
-             * <li><strong>startup</strong>: the startup stage.</li>
-             * <li><strong>increment</strong>: the incremental synchronization stage.</li>
+             * <li><strong>precheck</strong>: Dry run.</li>
+             * <li><strong>basebackup</strong>: Basic backup.</li>
+             * <li><strong>startup</strong>: Startup.</li>
+             * <li><strong>increment</strong>: Incremental synchronization.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -543,11 +543,11 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the task. Valid values:</p>
+             * <p>The task status. Valid values:</p>
              * <ul>
-             * <li><strong>success</strong></li>
-             * <li><strong>failure</strong></li>
-             * <li><strong>running</strong></li>
+             * <li><strong>success</strong>: Succeeded.</li>
+             * <li><strong>failure</strong>: Failed.</li>
+             * <li><strong>running</strong>: Running.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -559,10 +559,10 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the task. Valid values:</p>
+             * <p>The task type. Valid values:</p>
              * <ul>
-             * <li><strong>create</strong>: creates a synchronization link.</li>
-             * <li><strong>create-dryrun</strong>: performs a precheck before a synchronization link is created.</li>
+             * <li><strong>create</strong>: Create a replication link.</li>
+             * <li><strong>create-dryrun</strong>: Dry run for creating a replication link.</li>
              * </ul>
              * 
              * <strong>example:</strong>

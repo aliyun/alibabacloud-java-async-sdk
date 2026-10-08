@@ -132,10 +132,10 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance to which the cross-region backup file belongs.</p>
+         * <p>The instance to which the cross-region backup set belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -143,7 +143,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information about the databases and tables whose data is included in the cross-region backup file.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,7 +162,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,7 +173,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>60F9A12A-16B8-4728-B099-4CA38D32C31C</p>
@@ -184,7 +184,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>The total number of pages.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,10 +277,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testdb1</p>
+             * Database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -288,10 +285,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the table. Unit: KB. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
+             * Size.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -299,10 +293,7 @@ public class DescribeCrossBackupMetaListResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the names of the tables that the database contains. If the database contains more than one table, the names of these tables are separated by commas (,).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test1,test2</p>
+             * Tables.
              */
             public Builder tables(String tables) {
                 this.tables = tables;

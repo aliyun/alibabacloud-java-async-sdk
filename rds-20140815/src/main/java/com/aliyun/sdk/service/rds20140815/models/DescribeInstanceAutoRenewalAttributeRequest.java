@@ -191,7 +191,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,10 +200,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bpxxxxxxx</p>
+         * <p>rm-bp****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -244,7 +244,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         /**
          * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><strong>30 (default value)</strong></li>
+         * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
          * <li><strong>100</strong></li>
          * </ul>
@@ -259,7 +259,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,10 +290,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * <p>This parameter is reserved. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter. You do not need to configure this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>API</p>
+         * <p>test</p>
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

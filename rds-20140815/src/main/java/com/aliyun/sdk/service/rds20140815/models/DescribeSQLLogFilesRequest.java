@@ -160,11 +160,11 @@ public class DescribeSQLLogFilesRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -173,10 +173,10 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The name of the audit log file.</p>
+         * <p>The name of the audit file.</p>
          * 
          * <strong>example:</strong>
-         * <p>custinsxxxxx.csv</p>
+         * <p>custins****.csv</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -203,7 +203,8 @@ public class DescribeSQLLogFilesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: <strong>1 to 100000</strong>. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Valid values: <strong>1 to 100000</strong>.
+         * Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

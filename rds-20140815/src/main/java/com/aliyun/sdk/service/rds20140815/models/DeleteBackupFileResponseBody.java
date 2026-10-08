@@ -67,7 +67,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the IDs of deleted backup sets.</p>
+         * DeletedBaksetIds.
          */
         public Builder deletedBaksetIds(DeletedBaksetIds deletedBaksetIds) {
             this.deletedBaksetIds = deletedBaksetIds;
@@ -78,7 +78,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>C7B3A91C-0ACD-4948-ACAE-xxxxxxxD4069</p>
+         * <p>C7B3A91C-0ACD-4948-ACAE-****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,7 +131,7 @@ public class DeleteBackupFileResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that consists of the IDs of deleted backup sets.</p>
+             * DeletedBaksetIds.
              */
             public Builder deletedBaksetIds(java.util.List<Integer> deletedBaksetIds) {
                 this.deletedBaksetIds = deletedBaksetIds;

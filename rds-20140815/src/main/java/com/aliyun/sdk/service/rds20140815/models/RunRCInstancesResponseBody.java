@@ -80,7 +80,7 @@ public class RunRCInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance IDs (InstanceIdSet).</p>
+         * InstanceIdSets.
          */
         public Builder instanceIdSets(InstanceIdSets instanceIdSets) {
             this.instanceIdSets = instanceIdSets;

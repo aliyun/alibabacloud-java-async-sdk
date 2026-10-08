@@ -67,7 +67,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
@@ -78,7 +78,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The array of returned information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The number of unit nodes that are created by calling this operation.</p>
+             * <p>The number of nodes created by this call.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -168,10 +168,10 @@ public class CreateGADInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the global active database cluster.</p>
+             * <p>The GAD cluster ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>gad-rm-bp1npi2j8********</p>
+             * <p>gad-rm-bp1npi2j8****</p>
              */
             public Builder gadInstanceName(String gadInstanceName) {
                 this.gadInstanceName = gadInstanceName;
@@ -182,7 +182,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
              * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>5374xxxx</p>
+             * <p>5374****</p>
              */
             public Builder taskID(String taskID) {
                 this.taskID = taskID;

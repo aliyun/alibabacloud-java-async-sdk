@@ -161,7 +161,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -169,7 +169,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-06-15T12:10:00Z</p>
@@ -180,7 +180,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The cross-region log backup files.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -188,7 +188,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of cross-region backup files on the current page.</p>
+         * <p>The number of backup files on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -233,7 +233,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The beginning of the time range to query. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2019-05-30T12:10:00Z</p>
@@ -244,7 +244,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries that are returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -417,10 +417,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the destination region within which the cross-region backup file is stored.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-shanghai</p>
+             * CrossBackupRegion.
              */
             public Builder crossBackupRegion(String crossBackupRegion) {
                 this.crossBackupRegion = crossBackupRegion;
@@ -428,10 +425,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The external URL from which you can download the cross-region log backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou.aliyuncs.com/xxxxx</a></p>
+             * CrossDownloadLink.
              */
             public Builder crossDownloadLink(String crossDownloadLink) {
                 this.crossDownloadLink = crossDownloadLink;
@@ -439,10 +433,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal URL from which you can download the cross-region log backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx">http://rdsddrlog-zb.oss-cn-zhangjiakou-internal.aliyuncs.com/xxxxx</a></p>
+             * CrossIntranetDownloadLink.
              */
             public Builder crossIntranetDownloadLink(String crossIntranetDownloadLink) {
                 this.crossIntranetDownloadLink = crossIntranetDownloadLink;
@@ -450,10 +441,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cross-region log backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>14567</p>
+             * CrossLogBackupId.
              */
             public Builder crossLogBackupId(Integer crossLogBackupId) {
                 this.crossLogBackupId = crossLogBackupId;
@@ -461,10 +449,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the cross-region log backup file. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5312836</p>
+             * CrossLogBackupSize.
              */
             public Builder crossLogBackupSize(Long crossLogBackupSize) {
                 this.crossLogBackupSize = crossLogBackupSize;
@@ -472,10 +457,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8161055</p>
+             * InstanceId.
              */
             public Builder instanceId(Integer instanceId) {
                 this.instanceId = instanceId;
@@ -483,10 +465,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the URL expires. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-06-30T15:00:00Z</p>
+             * LinkExpiredTime.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -494,10 +473,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-05-30T12:10:00Z</p>
+             * LogBeginTime.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -505,10 +481,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the cross-region log backup file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-05-30T20:10:00Z</p>
+             * LogEndTime.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -516,10 +489,7 @@ public class DescribeCrossRegionLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the cross-region log backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou_rm-bpxxxxx_7198739_mysql-bin.000230</p>
+             * LogFileName.
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;

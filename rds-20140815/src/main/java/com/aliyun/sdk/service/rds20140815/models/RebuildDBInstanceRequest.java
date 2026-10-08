@@ -159,7 +159,7 @@ public class RebuildDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance ID in the dedicated cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +172,7 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+         * <p>The dedicated cluster ID. You can call DescribeDedicatedHostGroups to query the dedicated cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -185,9 +185,9 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host on which the system rebuilds the secondary instance.</p>
+         * <p>The ID of the host on which the secondary instance is to be rebuilt.</p>
          * <blockquote>
-         * <p> If you do not specify this parameter, the system preferentially rebuilds the secondary instance on the original host on which the secondary instance resides. If the remaining storage of the original host is insufficient, the system rebuilds the secondary instance on a host on which the primary instance does not reside. If no suitable hosts are found, the system reports an error that indicates insufficient storage.</p>
+         * <p>If you do not specify this parameter, the secondary instance is preferentially rebuilt on the original host. If the original host does not have sufficient space, the system selects a host that does not contain the primary instance. If no host with sufficient space is found, an insufficient space error is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -209,10 +209,10 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The role of the secondary instance that you want to rebuild. Valid values:</p>
+         * <p>The type of secondary instance to rebuild. Valid values:</p>
          * <ul>
-         * <li><strong>FOLLOWER</strong>: secondary instance</li>
-         * <li><strong>LOG</strong>: logger instance</li>
+         * <li><strong>FOLLOWER</strong>: secondary node.</li>
+         * <li><strong>LOG</strong>: log node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class RebuildDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

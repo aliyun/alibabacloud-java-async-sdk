@@ -67,7 +67,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The event.</p>
+         * <p>The event list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -144,7 +144,13 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * <p>The system event categorization. Valid values:</p>
+             * <ul>
+             * <li><strong>Exception</strong>: abnormal event.</li>
+             * <li><strong>Optimize</strong>: optimization events.</li>
+             * <li><strong>Notification</strong>: notification event.</li>
+             * <li><strong>Maintenance</strong>: scheduled maintenance event.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Exception</p>
@@ -155,7 +161,7 @@ public class DescribeHistoryEventsStatResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>31</p>

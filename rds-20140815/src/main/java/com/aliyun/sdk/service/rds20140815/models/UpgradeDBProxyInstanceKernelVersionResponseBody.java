@@ -80,10 +80,10 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the database proxy of the instance.</p>
+         * <p>The proxy ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>bu9***</p>
+         * <p>bu9****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -91,7 +91,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>44537EC8-DFA2-4745-B579-E733FF2C5B9A</p>
@@ -105,7 +105,7 @@ public class UpgradeDBProxyInstanceKernelVersionResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>33436****</p>
+         * <p>334362871</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

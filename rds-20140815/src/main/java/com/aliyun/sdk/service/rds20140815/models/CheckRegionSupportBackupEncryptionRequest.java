@@ -88,7 +88,10 @@ public class CheckRegionSupportBackupEncryptionRequest extends Request {
         } 
 
         /**
-         * DBInstanceID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz91q53f9*******</p>
          */
         public Builder DBInstanceID(String DBInstanceID) {
             this.putQueryParameter("DBInstanceID", DBInstanceID);
@@ -97,6 +100,7 @@ public class CheckRegionSupportBackupEncryptionRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

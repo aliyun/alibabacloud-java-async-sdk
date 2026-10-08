@@ -103,10 +103,10 @@ public class DetachRCDiskRequest extends Request {
         } 
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>A reserved parameter. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
-         * <p>true</p>
+         * <p>none</p>
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -115,7 +115,7 @@ public class DetachRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the disk that you want to detach.</p>
+         * <p>The ID of the cloud disk to be detached.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DetachRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

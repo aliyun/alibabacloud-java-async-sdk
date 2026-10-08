@@ -83,7 +83,7 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -91,10 +91,10 @@ public class DescribeDBInstanceIpHostnameResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal IP addresses and hostnames of the ECS instance on which a primary ApsaraDB RDS for SQL Server instance and its secondary RDS instance reside. Format: <code>IP address 1, Hostname 1; IP address 2, Hostname 2</code>.</p>
+         * <p>The internal IP addresses and hostnames of the underlying ECS instances for the ApsaraDB RDS for SQL Server instance, including the primary and secondary instances. Format: <code>ip1,hostname1;ip2,hostname2</code>.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx,sdxxxxxxxxB;172.16.xx.xx,sdxxxxxxxxA</p>
+         * <p>172.16.xx.xx,sd<strong><strong>B;172.16.xx.xx,sd</strong></strong>A</p>
          */
         public Builder ipHostnameInfos(String ipHostnameInfos) {
             this.ipHostnameInfos = ipHostnameInfos;

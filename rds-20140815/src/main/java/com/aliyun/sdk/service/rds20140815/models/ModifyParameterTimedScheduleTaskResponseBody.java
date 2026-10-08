@@ -54,7 +54,10 @@ public class ModifyParameterTimedScheduleTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

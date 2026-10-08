@@ -115,7 +115,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DF4961DD-16F5-5B24-BD4C-0C7788F7ADAF</p>
@@ -126,7 +126,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the credential.</p>
+         * <p>The list of credential details.</p>
          */
         public Builder secrets(java.util.List<Secrets> secrets) {
             this.secrets = secrets;
@@ -244,10 +244,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>1266348003******</p>
+             * <p>1266348003****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -277,10 +277,10 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the credential for the created Data API account.</p>
+             * <p>The user credential of the Data API account.</p>
              * 
              * <strong>example:</strong>
-             * <p>acs:rds:cn-hangzhou:1335786***:dbInstance/rm-bp1m7l3j63****</p>
+             * <p>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</p>
              */
             public Builder secretArn(String secretArn) {
                 this.secretArn = secretArn;
@@ -288,7 +288,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the credential.</p>
+             * <p>The credential name.</p>
              * 
              * <strong>example:</strong>
              * <p>Foo</p>
@@ -299,7 +299,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username that is used to access the database.</p>
+             * <p>The database username.</p>
              * 
              * <strong>example:</strong>
              * <p>user_jack</p>

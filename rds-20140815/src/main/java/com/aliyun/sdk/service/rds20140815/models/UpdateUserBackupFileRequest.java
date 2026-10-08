@@ -160,11 +160,11 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * <p>The backup ID. You can call the ListUserBackupFiles operation to query the backup ID.</p>
+         * <p>The user backup ID. You can call ListUserBackupFiles to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>b-kwwvr7v8t7of********</p>
+         * <p>b-g14d0m772f7b****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -173,7 +173,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The new description of the full backup file.</p>
+         * <p>The new description to set for the user backup.</p>
          * 
          * <strong>example:</strong>
          * <p>CommentTest</p>
@@ -194,7 +194,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -207,10 +207,10 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +237,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * <p>The new retention period of the full backup file. Unit: days. Valid values: any non-zero positive integer.</p>
+         * <p>The new retention period of the user backup. Unit: days. The value must be an integer greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

@@ -159,11 +159,11 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -190,7 +190,7 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeDBInstanceAttribute to obtain the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,10 +203,10 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

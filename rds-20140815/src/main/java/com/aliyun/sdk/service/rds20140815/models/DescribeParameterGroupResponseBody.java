@@ -80,7 +80,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the parameter template.</p>
+         * ParamGroup.
          */
         public Builder paramGroup(ParamGroup paramGroup) {
             this.paramGroup = paramGroup;
@@ -88,10 +88,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the instance to which the parameter template is applied.</p>
-         * <blockquote>
-         * <p> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
-         * </blockquote>
+         * RelatedCustinsInfo.
          */
         public Builder relatedCustinsInfo(RelatedCustinsInfo relatedCustinsInfo) {
             this.relatedCustinsInfo = relatedCustinsInfo;
@@ -168,10 +165,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>back_log</p>
+             * ParamName.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -179,10 +173,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2000</p>
+             * ParamValue.
              */
             public Builder paramValue(String paramValue) {
                 this.paramValue = paramValue;
@@ -420,10 +411,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter template was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-10-22T06:02:53Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -431,10 +419,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>mysql</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -442,10 +427,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5.6</p>
+             * EngineVersion.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -453,14 +435,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the restart of an instance is required for the parameter template to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: A restart is not required.</li>
-             * <li><strong>1</strong>: A restart is required.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ForceRestart.
              */
             public Builder forceRestart(Integer forceRestart) {
                 this.forceRestart = forceRestart;
@@ -468,10 +443,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of parameters in the parameter template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * ParamCounts.
              */
             public Builder paramCounts(Integer paramCounts) {
                 this.paramCounts = paramCounts;
@@ -479,7 +451,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the parameters.</p>
+             * ParamDetail.
              */
             public Builder paramDetail(ParamDetail paramDetail) {
                 this.paramDetail = paramDetail;
@@ -487,10 +459,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>testGroup1</p>
+             * ParameterGroupDesc.
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -498,10 +467,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the parameter template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rpg-dp****</p>
+             * ParameterGroupId.
              */
             public Builder parameterGroupId(String parameterGroupId) {
                 this.parameterGroupId = parameterGroupId;
@@ -509,10 +475,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter template.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test123456</p>
+             * ParameterGroupName.
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -520,15 +483,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the parameter template. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: the default parameter template.</li>
-             * <li><strong>1</strong>: a custom parameter template.</li>
-             * <li><strong>2</strong>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * ParameterGroupType.
              */
             public Builder parameterGroupType(Integer parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;
@@ -536,10 +491,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the parameter template was last updated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-10-22T06:07:54Z</p>
+             * UpdateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -660,10 +612,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the parameter template was applied.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2022-10-17T03:19:02Z</p>
+             * AppliedTime.
              */
             public Builder appliedTime(String appliedTime) {
                 this.appliedTime = appliedTime;
@@ -671,10 +620,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bp170****</p>
+             * DBInstanceName.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -728,10 +674,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the instance to which the parameter template is applied.</p>
-             * <blockquote>
-             * <p> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
-             * </blockquote>
+             * RelatedCustinsInfo.
              */
             public Builder relatedCustinsInfo(java.util.List<RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
                 this.relatedCustinsInfo = relatedCustinsInfo;

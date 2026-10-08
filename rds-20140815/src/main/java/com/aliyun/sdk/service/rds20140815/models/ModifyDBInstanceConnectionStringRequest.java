@@ -231,9 +231,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         } 
 
         /**
-         * <p>The Tabular Data Stream (TDS) port of the instance for which Babelfish is enabled.</p>
+         * <p>The TDS port number for Babelfish for RDS PostgreSQL.</p>
          * <blockquote>
-         * <p>This parameter applies only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for ApsaraDB RDS for PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. For more information about Babelfish for RDS PostgreSQL, see <a href="https://help.aliyun.com/document_detail/428613.html">Introduction to Babelfish</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -246,9 +246,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The prefix of the endpoint after the change. Only the prefix of the value of <strong>CurrentConnectionString</strong> can be changed.</p>
+         * <p>The prefix of the endpoint. You can modify only the prefix of the value specified by the <strong>CurrentConnectionString</strong> parameter.</p>
          * <blockquote>
-         * <p>The value must be 8 to 64 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following special characters: ! # % ^ &amp; * = + | {} ; : &quot; &quot; ,&lt;&gt; / ?</p>
+         * <p>The prefix must be 8 to 64 characters in length and cannot contain Chinese characters or special characters (~!#%^&amp;*=+\|{};:\&quot;&quot;,&lt;&gt;/?). The prefix can contain letters, digits, and hyphens (-).</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -262,9 +262,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The endpoint of the instance. It can be an internal endpoint, a public endpoint, or a classic network endpoint in hybrid access mode.</p>
+         * <p>The current endpoint of the instance. The endpoint can be a public endpoint or internal endpoint, or a classic network connectivity endpoint in hybrid access mode.</p>
          * <blockquote>
-         * <p>The read/write splitting endpoint cannot be changed.</p>
+         * <p>Modification of read/write splitting connection endpoints is not supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -278,7 +278,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -291,7 +291,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The name of the dedicated cluster to which the instance belongs. This parameter is returned only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
+         * <p>The name of the group to which the dedicated cluster MySQL general-purpose instance belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rgc-bp1tkv8****</p>
@@ -321,9 +321,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The PgBouncer port.</p>
+         * <p>The PgBouncer port number.</p>
          * <blockquote>
-         * <p>This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.</p>
+         * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances. If PgBouncer is enabled, you can modify the PgBouncer port number.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -336,7 +336,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * <p>The port number after the change.</p>
+         * <p>The target port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -367,7 +367,17 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * RetainVip.
+         * <p>Specifies whether to retain the virtual IP address (VIP) when swapping the endpoint.</p>
+         * <ul>
+         * <li><strong>true</strong>: The VIP is retained.</li>
+         * <li><strong>false</strong> (default): The VIP is not retained.</li>
+         * </ul>
+         * <blockquote>
+         * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder retainVip(Boolean retainVip) {
             this.putQueryParameter("RetainVip", retainVip);
@@ -376,7 +386,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * TargetDBInstanceId.
+         * <p>The instance ID of the target ApsaraDB RDS for PostgreSQL instance with which you want to swap the endpoint.</p>
+         * <blockquote>
+         * <p>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp1206s14p3o****</p>
          */
         public Builder targetDBInstanceId(String targetDBInstanceId) {
             this.putQueryParameter("TargetDBInstanceId", targetDBInstanceId);

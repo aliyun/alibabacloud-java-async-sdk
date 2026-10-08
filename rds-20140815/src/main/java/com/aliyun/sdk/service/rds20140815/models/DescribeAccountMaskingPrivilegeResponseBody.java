@@ -67,7 +67,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D0073A98-52F1-3075-8256-394**********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * ExpireTime.
+             * <p>The permission expiration time in UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2026-01-22T02:01:20Z</p>
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -162,7 +168,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * Privilege.
+             * <p>The permission type. The value restrictedAccess indicates restricted access (data masking required).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>restrictedAccess</p>
              */
             public Builder privilege(String privilege) {
                 this.privilege = privilege;
@@ -170,7 +179,10 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>The account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rds</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -224,7 +236,7 @@ public class DescribeAccountMaskingPrivilegeResponseBody extends TeaModel {
             } 
 
             /**
-             * UserPrivilege.
+             * <p>The list of user encryption or data masking permissions.</p>
              */
             public Builder userPrivilege(java.util.List<UserPrivilege> userPrivilege) {
                 this.userPrivilege = userPrivilege;

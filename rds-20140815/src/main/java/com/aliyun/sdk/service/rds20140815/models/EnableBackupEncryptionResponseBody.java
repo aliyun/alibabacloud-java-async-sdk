@@ -67,7 +67,10 @@ public class EnableBackupEncryptionResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-wz951f7f******</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -75,7 +78,10 @@ public class EnableBackupEncryptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCA65FA6-658A-5C43-96F4-D************</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

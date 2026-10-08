@@ -80,7 +80,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The character sets that are supported.</p>
+         * CharacterSetNameItems.
          */
         public Builder characterSetNameItems(CharacterSetNameItems characterSetNameItems) {
             this.characterSetNameItems = characterSetNameItems;

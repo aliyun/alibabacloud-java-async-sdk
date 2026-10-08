@@ -223,7 +223,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The storage that is occupied by data backup files, excluding archived backup files, on the instance. Unit: bytes.</p>
+         * <p>The storage space occupied by data backups, excluding archived backups. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>8139046912</p>
@@ -234,7 +234,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the backup log. Unit: bytes.</p>
+         * <p>The size of backup logs. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>21183797</p>
@@ -245,7 +245,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the backup data. Unit: MB.</p>
+         * <p>The backup size. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>53002759</p>
@@ -256,7 +256,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The disk capacity of the instance.</p>
+         * <p>The disk capacity.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -267,7 +267,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The name of the proxy instance.</p>
+         * <p>The name of the database proxy instance.</p>
          * 
          * <strong>example:</strong>
          * <p>mr-n1m1wjrylfolvrt67s</p>
@@ -278,7 +278,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total storage used. The value is the sum of the DataSize and LogSize values. Unit: bytes. The value -1 indicates that no data files or log files are stored.</p>
+         * <p>The used storage space, which consists of the space occupied by data files and log files. Unit: bytes. A value of -1 indicates that no data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>4871684096</p>
@@ -289,7 +289,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The storage type of the instance.</p>
+         * <p>The instance storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -300,7 +300,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rule for the IP address whitelist of the instance.</p>
+         * <p>The RDS whitelist group specifications.</p>
          */
         public Builder rdsEcsSecurityGroupRel(java.util.List<RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel) {
             this.rdsEcsSecurityGroupRel = rdsEcsSecurityGroupRel;
@@ -319,7 +319,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>EA815761-F7AC-5CFE-A1AC-709D6A00B58A</p>
@@ -341,12 +341,12 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The IP address whitelist of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/43185.html">Configure IP address whitelists</a>. If the returned IP address whitelist contains more than one entry, these entries are separated with commas (,). Each entry is unique and up to 1,000 entries are returned. The entries in the IP address whitelist must be in one of the following formats:</p>
+         * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the instance. Separate multiple entries with commas (,). Each entry must be unique. A maximum of 1,000 entries are supported. The following two formats are supported:</p>
          * <ul>
-         * <li>IP addresses, such as 10.10.XX.XX.</li>
-         * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</li>
+         * <li>IP address format, such as 10.10.XX.XX.</li>
+         * <li>CIDR format, such as 10.10.XX.XX/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</li>
          * </ul>
-         * <p>If this parameter is not specified, the default IP address whitelist is used.</p>
+         * <p>If this parameter is not specified, the whitelist information of the default group of the original instance is used.</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</p>
@@ -359,7 +359,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         /**
          * <p>The vSwitch ID.</p>
          * <blockquote>
-         * <p> The vSwitch must belong to the same zone as the instance.</p>
+         * <p>The vSwitch must belong to the same zone as the ApsaraDB RDS instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>VPC ID。</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9rbibex7v0lxbeyo6at</p>
@@ -427,7 +427,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the security group.</p>
+             * <p>The security group name.</p>
              * 
              * <strong>example:</strong>
              * <p>test_switch</p>

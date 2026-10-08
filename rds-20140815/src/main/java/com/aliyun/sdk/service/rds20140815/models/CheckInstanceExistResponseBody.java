@@ -67,10 +67,10 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the instance exists. Valid values:</p>
+         * <p>Indicates whether the specified instance exists. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The instance exists.</li>
-         * <li><strong>false</strong>: The instance does not exist.</li>
+         * <li><strong>true</strong>: Target instance exists.</li>
+         * <li><strong>false</strong>: Target instance does not exist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +82,7 @@ public class CheckInstanceExistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11439B36-F703-49EB-8656-D3C87BE28B57</p>

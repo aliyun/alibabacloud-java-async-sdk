@@ -144,6 +144,7 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,7 +157,10 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * DBName.
+         * <p>The database name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myDB</p>
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -174,7 +178,10 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ap-southeast-1</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -201,7 +208,10 @@ public class DescribeAccountMaskingPrivilegeRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The account name. You can specify a specific account to query.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

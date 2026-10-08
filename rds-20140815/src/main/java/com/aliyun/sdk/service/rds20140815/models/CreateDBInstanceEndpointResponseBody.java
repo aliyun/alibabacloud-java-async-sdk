@@ -67,7 +67,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>C8E88DED-533F-4B3C-9207-731FBF394CCA</p>
@@ -179,7 +179,7 @@ public class CreateDBInstanceEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-****</p>

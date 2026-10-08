@@ -80,7 +80,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the event history feature is enabled.</p>
+         * <p>The status of the historical events feature.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>

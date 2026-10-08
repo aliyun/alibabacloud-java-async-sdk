@@ -87,7 +87,10 @@ public class ModifyParameterTimedScheduleTaskRequest extends Request {
         } 
 
         /**
-         * DBInstanceName.
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pgm-bp102g323jd4****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -96,7 +99,10 @@ public class ModifyParameterTimedScheduleTaskRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The scheduled switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-06T09:24:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -105,7 +111,10 @@ public class ModifyParameterTimedScheduleTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>440437220</p>
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);

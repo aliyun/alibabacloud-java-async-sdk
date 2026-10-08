@@ -34,6 +34,10 @@ public class RenewInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompressionMode")
+    private String compressionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -65,6 +69,7 @@ public class RenewInstanceRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.clientToken = builder.clientToken;
+        this.compressionMode = builder.compressionMode;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
@@ -115,6 +120,13 @@ public class RenewInstanceRequest extends Request {
     }
 
     /**
+     * @return compressionMode
+     */
+    public String getCompressionMode() {
+        return this.compressionMode;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -161,6 +173,7 @@ public class RenewInstanceRequest extends Request {
         private String autoRenew; 
         private Boolean autoUseCoupon; 
         private String clientToken; 
+        private String compressionMode; 
         private String DBInstanceId; 
         private Long ownerId; 
         private Integer period; 
@@ -178,6 +191,7 @@ public class RenewInstanceRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.clientToken = request.clientToken;
+            this.compressionMode = request.compressionMode;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerId = request.ownerId;
             this.period = request.period;
@@ -187,24 +201,20 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable automatic payment during the renewal. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment for the renewal. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong>: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</li>
-         * <li><strong>False</strong> (default): disables automatic payment. You have to manually pay the order in the console.</li>
+         * <li><strong>True</strong>: Automatic payment is enabled. Make sure that your account has sufficient balance.</li>
+         * <li><strong>False</strong> (default): Automatic payment is disabled. You must manually pay for the renewal in the console.</li>
          * </ul>
          * <blockquote>
-         * <p> For more information about how to renew the instance in the console, see the following topics:</p>
-         * </blockquote>
+         * <p>To manually renew the instance in the console, refer to:</p>
          * <ul>
-         * <li><p><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/96741.html">Manually renew an ApsaraDB RDS for PostgreSQL instance</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/95637.html">Manually renew an ApsaraDB RDS for SQL Server instance</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/97122.html">Manually renew an ApsaraDB RDS for MariaDB instance</a></p>
-         * </li>
+         * <li><a href="https://help.aliyun.com/document_detail/96050.html">Manually renew an ApsaraDB RDS for MySQL instance</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/96741.html">Manually renew an ApsaraDB RDS for PostgreSQL instance</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/95637.html">Manually renew an ApsaraDB RDS for SQL Server instance</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/97122.html">Manually renew an ApsaraDB RDS for MariaDB instance</a></li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -218,8 +228,8 @@ public class RenewInstanceRequest extends Request {
         /**
          * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>.</li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+         * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,10 +242,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use a coupon. Valid values:</p>
+         * <p>Specifies whether to use coupons. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: uses a coupon.</li>
-         * <li><strong>false</strong> (default): does not use a coupon.</li>
+         * <li><strong>true</strong>: Coupons are used.</li>
+         * <li><strong>false</strong> (default): Coupons are not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,10 +258,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The idempotency token generated by the client. It is an ASCII string that can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -260,11 +270,23 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>Specifies whether to enable compression for the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        public Builder compressionMode(String compressionMode) {
+            this.putQueryParameter("CompressionMode", compressionMode);
+            this.compressionMode = compressionMode;
+            return this;
+        }
+
+        /**
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -282,9 +304,9 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * <p>The duration of the subscription renewal. Unit: month. Valid values:</p>
+         * <p>The renewal duration. Unit: months. Valid values:</p>
          * <ul>
-         * <li><strong>1~9</strong></li>
+         * <li><strong>1 to 9</strong> (consecutive integers)</li>
          * <li><strong>12</strong></li>
          * <li><strong>24</strong></li>
          * <li><strong>36</strong></li>
@@ -304,6 +326,9 @@ public class RenewInstanceRequest extends Request {
 
         /**
          * <p>The coupon code.</p>
+         * <blockquote>
+         * <p>This parameter is required when the <strong>AutoUseCoupon</strong> parameter is set to <strong>true</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>726702810223</p>

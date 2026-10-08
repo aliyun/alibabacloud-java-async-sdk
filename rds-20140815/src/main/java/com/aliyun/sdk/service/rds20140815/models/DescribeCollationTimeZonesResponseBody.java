@@ -67,7 +67,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of the character set collations and time zones that are available.</p>
+         * CollationTimeZones.
          */
         public Builder collationTimeZones(CollationTimeZones collationTimeZones) {
             this.collationTimeZones = collationTimeZones;
@@ -157,10 +157,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Kabul</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -168,10 +165,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The offset of the UTC time. The offset is in the following format: (UTC+<em>HH:mm</em>).</p>
-             * 
-             * <strong>example:</strong>
-             * <p>(UTC+04:30)</p>
+             * StandardTimeOffset.
              */
             public Builder standardTimeOffset(String standardTimeOffset) {
                 this.standardTimeOffset = standardTimeOffset;
@@ -179,10 +173,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Afghanistan Standard Time</p>
+             * TimeZone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

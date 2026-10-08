@@ -67,7 +67,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about notification settings for an instance.</p>
+         * RdsInstanceResourceSettings.
          */
         public Builder rdsInstanceResourceSettings(RdsInstanceResourceSettings rdsInstanceResourceSettings) {
             this.rdsInstanceResourceSettings = rdsInstanceResourceSettings;
@@ -235,10 +235,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The end date.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-04-25</p>
+             * EndDate.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -246,14 +243,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Specifies whether to pin the notification at the top.</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsTop.
              */
             public Builder isTop(String isTop) {
                 this.isTop = isTop;
@@ -261,7 +251,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The notification text.</p>
+             * NoticeBarContent.
              */
             public Builder noticeBarContent(String noticeBarContent) {
                 this.noticeBarContent = noticeBarContent;
@@ -269,7 +259,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text of the popup button.</p>
+             * PoppedUpButtonText.
              */
             public Builder poppedUpButtonText(String poppedUpButtonText) {
                 this.poppedUpButtonText = poppedUpButtonText;
@@ -277,12 +267,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the popup button.</p>
-             * <ul>
-             * <li>BUY</li>
-             * <li>RENEW</li>
-             * <li>UPGRADE</li>
-             * </ul>
+             * PoppedUpButtonType.
              */
             public Builder poppedUpButtonType(String poppedUpButtonType) {
                 this.poppedUpButtonType = poppedUpButtonType;
@@ -290,10 +275,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The link of the popup button.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://www.example.com/subscribe">https://www.example.com/subscribe</a></p>
+             * PoppedUpButtonUrl.
              */
             public Builder poppedUpButtonUrl(String poppedUpButtonUrl) {
                 this.poppedUpButtonUrl = poppedUpButtonUrl;
@@ -301,7 +283,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The text of the popup.</p>
+             * PoppedUpContent.
              */
             public Builder poppedUpContent(String poppedUpContent) {
                 this.poppedUpContent = poppedUpContent;
@@ -309,7 +291,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The location of the notification.</p>
+             * ResourceNiche.
              */
             public Builder resourceNiche(String resourceNiche) {
                 this.resourceNiche = resourceNiche;
@@ -317,10 +299,7 @@ public class DescribeRdsResourceSettingsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The effective date.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-04-21</p>
+             * StartDate.
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;

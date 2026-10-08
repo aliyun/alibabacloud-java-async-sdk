@@ -119,10 +119,10 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The ID of the monitored instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>lsmexxxxxxx</p>
+         * <p>lsme****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -130,7 +130,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An internal parameter. You do not need to specify this parameter.</p>
+         * <p>An internal parameter. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -152,7 +152,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The performance list.</p>
+         * PerformanceKeys.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -240,10 +240,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-10-10T09:00:00Z</p>
+             * Date.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -251,10 +248,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2.83</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -427,10 +421,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The performance parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cpu_ratio</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -454,10 +445,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service dimension.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>reserve_3</p>
+             * Service.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -465,10 +453,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format in which the value of the performance metric is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>docker_container_cpu</p>
+             * ValueFormat.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -476,7 +461,7 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance metrics.</p>
+             * Values.
              */
             public Builder values(Values values) {
                 this.values = values;

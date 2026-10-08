@@ -117,7 +117,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -139,7 +139,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of snapshots.</p>
+         * <p>The snapshot information.</p>
          */
         public Builder snapshots(java.util.List<Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -147,7 +147,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -216,7 +216,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRC</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +227,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -525,10 +531,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the snapshot can be shared and used to create or roll back a cloud disk. Valid values:</p>
+             * <p>Indicates whether the snapshot can be used to create cloud disks, roll back cloud disks, or share snapshots. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Available.</li>
+             * <li>false: Not available.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -542,9 +548,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             /**
              * <p>The snapshot type. Valid values:</p>
              * <ul>
-             * <li>Standard: standard snapshot</li>
-             * <li>Flash: local snapshot This value will be deprecated. The local snapshot feature is replaced with the instant access feature.</li>
-             * <li>archive: archived snapshot</li>
+             * <li>Standard: standard snapshot.</li>
+             * <li>Flash: local snapshot. This value will be deprecated. Local snapshots have been replaced by the instant access feature.</li>
+             * <li>archive: archived snapshot.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -567,7 +573,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshot description.</p>
+             * <p>The description of the snapshot.</p>
              * 
              * <strong>example:</strong>
              * <p>zd_test</p>
@@ -578,10 +584,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the snapshot was encrypted. Valid values:</p>
+             * <p>Indicates whether the snapshot is encrypted. Valid values:</p>
              * <ul>
-             * <li>true</li>
-             * <li>false</li>
+             * <li>true: Encrypted.</li>
+             * <li>false: Not encrypted.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -593,7 +599,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter is deprecated.</p>
+             * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
              * 
              * <strong>example:</strong>
              * <p>none</p>
@@ -612,7 +618,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The progress of the snapshot creation task in percentage.</p>
+             * <p>The progress of snapshot creation, in percentage.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -634,7 +640,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-t8q22a87745hf8****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -656,7 +665,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
              * <p>The snapshot name.</p>
              * 
              * <strong>example:</strong>
-             * <p>s-2ze8klip00xcogcwer76</p>
+             * <p>csw-37-SystemDisk</p>
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -664,11 +673,11 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The snapshot type. Valid values:</p>
+             * <p>The type of automatic creation. Valid values:</p>
              * <ul>
-             * <li>auto or timer: automatically created snapshot</li>
-             * <li>user: manually created snapshot</li>
-             * <li>all: all snapshot types</li>
+             * <li>auto or timer: automatic snapshot.</li>
+             * <li>user: manual snapshot.</li>
+             * <li>all: all automatic creation types.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -680,7 +689,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the original disk. This parameter is retained even after the original disk for which the snapshot was created is released.</p>
+             * <p>The ID of the source cloud disk. This field is retained even if the source cloud disk of the snapshot has been released.</p>
              * 
              * <strong>example:</strong>
              * <p>rcd-bp67acfmxazb4ph****</p>
@@ -691,7 +700,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage capacity of the original disk. Unit: GiB.</p>
+             * <p>The capacity of the source cloud disk. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>60</p>
@@ -702,10 +711,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the original disk. Valid values:</p>
+             * <p>The type of the source cloud disk. Valid values:</p>
              * <ul>
-             * <li>SYSTEM: system disk</li>
-             * <li>DATA: data disk</li>
+             * <li>SYSTEM: system cloud disk.</li>
+             * <li>DATA: data cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -717,9 +726,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the source disk.</p>
+             * <p>The type of the source cloud disk.</p>
              * <blockquote>
-             * <p> This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.</p>
+             * <p>This parameter will be deprecated. To ensure compatibility, use other parameters instead.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -735,7 +744,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
              * <ul>
              * <li>progressing: The snapshot is being created.</li>
              * <li>accomplished: The snapshot is created.</li>
-             * <li>failed: The snapshot fails to be created.</li>
+             * <li>failed: The snapshot failed to be created.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -747,7 +756,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The tag details.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
@@ -755,12 +764,12 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the snapshot is used to create custom images or disks. Valid values:</p>
+             * <p>Indicates whether the snapshot has been used to create images or cloud disks. Valid values:</p>
              * <ul>
-             * <li>image: The snapshot is used to create custom images.</li>
-             * <li>disk: The snapshot is used to create disks.</li>
-             * <li>image_disk: The snapshot is used to create custom images and data disks.</li>
-             * <li>none: The snapshot is not used to create custom images or disks.</li>
+             * <li>image: The snapshot has been used to create custom images.</li>
+             * <li>disk: The snapshot has been used to create cloud disks.</li>
+             * <li>image_disk: The snapshot has been used to create both data cloud disks and custom images.</li>
+             * <li>none: The snapshot has not been used.</li>
              * </ul>
              * 
              * <strong>example:</strong>

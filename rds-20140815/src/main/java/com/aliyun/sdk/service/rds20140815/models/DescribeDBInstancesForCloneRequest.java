@@ -424,12 +424,12 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The connection mode of the instance. Valid values:</p>
+         * <p>The access mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Standard</strong>: standard mode</li>
+         * <li><strong>Standard</strong>: standard access mode</li>
          * <li><strong>Safe</strong>: database proxy mode</li>
          * </ul>
-         * <p>By default, this operation queries the instances that use any of the supported connection modes.</p>
+         * <p>By default, instances in all access modes are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -441,7 +441,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the current instance.</p>
+         * <p>The current instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5xxxxxxxxxx</p>
@@ -453,7 +453,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n1.micro.1</p>
@@ -465,7 +465,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5xxxxxxxxxx</p>
@@ -477,7 +477,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
+         * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -489,14 +489,14 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The role of the instance that you want to query. Valid values:</p>
+         * <p>The instance type. Valid values:</p>
          * <ul>
          * <li><strong>Primary</strong>: primary instance</li>
          * <li><strong>Readonly</strong>: read-only instance</li>
          * <li><strong>Guard</strong>: disaster recovery instance</li>
          * <li><strong>Temp</strong>: temporary instance</li>
          * </ul>
-         * <p>By default, this operation queries the instances of all roles.</p>
+         * <p>By default, instances of all types are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Primary</p>
@@ -508,15 +508,16 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The database engine. Valid values:</p>
          * <ul>
          * <li>MySQL</li>
          * <li>SQLServer</li>
          * <li>PostgreSQL</li>
-         * <li>PPAS</li>
          * <li>MariaDB</li>
          * </ul>
-         * <p>By default, this operation queries the instances that run any of the supported database engine types.</p>
+         * <blockquote>
+         * <p>If you do not specify this parameter, instances of all database engines are returned.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -528,7 +529,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>5.7</p>
@@ -540,10 +541,10 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance expires. Valid values:</p>
+         * <p>Specifies whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong>: queries the instances that have expired.</li>
-         * <li><strong>False</strong>: does not query instances that have expired.</li>
+         * <li><strong>True</strong>: The instance has expired.</li>
+         * <li><strong>False</strong>: The instance has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -558,8 +559,8 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Classic</strong></li>
-         * <li><strong>VPC</strong></li>
+         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong>: virtual private cloud (VPC)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,8 +575,8 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         /**
          * <p>The type of the database node. Valid values:</p>
          * <ul>
-         * <li><strong>Master</strong>: the primary node</li>
-         * <li><strong>Slave</strong>: the secondary node</li>
+         * <li><strong>Master</strong>: primary node</li>
+         * <li><strong>Slave</strong>: secondary node</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -606,7 +607,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -618,7 +619,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values: <strong>1 to 100</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>.</p>
          * <p>Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -636,7 +637,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
          * <li><strong>Postpaid</strong>: pay-as-you-go</li>
          * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
-         * <p>By default, this operation queries the instances that use any of the supported billing methods.</p>
+         * <p>By default, instances of all billing methods are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
@@ -648,7 +649,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -661,7 +662,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy*****</p>
@@ -691,7 +692,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The keyword that is used for the search. The keyword can be part of an instance ID or an instance description.</p>
+         * <p>The search keyword. You can perform a fuzzy search by instance ID or instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6w</p>
@@ -703,7 +704,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-j6csw46bgrgkxxxxxxxxxx</p>
@@ -715,7 +716,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-j6cjvqms29yxxxxxxxxxx</p>
@@ -727,7 +728,7 @@ public class DescribeDBInstancesForCloneRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>

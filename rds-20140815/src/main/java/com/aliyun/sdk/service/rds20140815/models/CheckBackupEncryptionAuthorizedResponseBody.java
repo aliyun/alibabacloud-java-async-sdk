@@ -80,7 +80,14 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
         } 
 
         /**
-         * AuthorizationState.
+         * <p>Indicates whether the account is authorized. Valid values:</p>
+         * <ul>
+         * <li>0: Not authorized.</li>
+         * <li>1: Authorized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder authorizationState(String authorizationState) {
             this.authorizationState = authorizationState;
@@ -88,7 +95,10 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB07C463-7428-50AA-9E39-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +106,10 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * RoleARN.
+         * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with Cloud Hardware Security Module (CloudHSM) for backup encryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1139916************:role/AliyunServiceRoleForRdsBackupEncryption</p>
          */
         public Builder roleARN(String roleARN) {
             this.roleARN = roleARN;

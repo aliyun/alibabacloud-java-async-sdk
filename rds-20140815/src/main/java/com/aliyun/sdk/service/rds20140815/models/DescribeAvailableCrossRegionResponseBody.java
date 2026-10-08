@@ -67,7 +67,7 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of destination regions for cross-region backups.</p>
+         * Regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -75,7 +75,7 @@ public class DescribeAvailableCrossRegionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>39265F46-EC77-4036-8AC4-F035F32F6BE2</p>

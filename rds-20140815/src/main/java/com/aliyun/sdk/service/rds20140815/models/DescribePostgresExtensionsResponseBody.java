@@ -93,7 +93,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of extensions that are installed on the specified database.</p>
+         * <p>The list of installed extensions in the specified database.</p>
          */
         public Builder installedExtensions(java.util.List<InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -101,7 +101,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The overview of the extension.</p>
+         * <p>The overview information about extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -123,7 +123,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of extensions that are not installed on the specified database.</p>
+         * <p>The list of uninstalled extensions in the specified database.</p>
          */
         public Builder uninstalledExtensions(java.util.List<UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
@@ -280,19 +280,19 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the extension.</p>
+             * <p>The extension category. Valid values:</p>
              * <ul>
-             * <li><strong>external_access</strong></li>
-             * <li><strong>index_support</strong></li>
-             * <li><strong>information_stat</strong></li>
-             * <li><strong>geography_space</strong></li>
-             * <li><strong>vector_engine</strong></li>
-             * <li><strong>timing_engine</strong></li>
-             * <li><strong>data_type</strong></li>
-             * <li><strong>encrypt_secure</strong></li>
-             * <li><strong>text_process</strong></li>
-             * <li><strong>operation_maintenance</strong></li>
-             * <li><strong>self_develop</strong></li>
+             * <li><strong>external_access</strong>: external access.</li>
+             * <li><strong>index_support</strong>: index support.</li>
+             * <li><strong>information_stat</strong>: information statistics.</li>
+             * <li><strong>geography_space</strong>: geospatial.</li>
+             * <li><strong>vector_engine</strong>: vector engine.</li>
+             * <li><strong>timing_engine</strong>: time series engine.</li>
+             * <li><strong>data_type</strong>: data type.</li>
+             * <li><strong>encrypt_secure</strong>: encryption and security.</li>
+             * <li><strong>text_process</strong>: text processing.</li>
+             * <li><strong>operation_maintenance</strong>: application O&amp;M.</li>
+             * <li><strong>self_develop</strong>: self-developed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -326,7 +326,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the extension.</p>
+             * <p>The currently installed version of the extension.</p>
              * 
              * <strong>example:</strong>
              * <p>4.1</p>
@@ -337,7 +337,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the extension.</p>
+             * <p>The extension name.</p>
              * 
              * <strong>example:</strong>
              * <p>pg_profile</p>
@@ -348,7 +348,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user of the extension.</p>
+             * <p>The user to which the extension belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user</p>
@@ -359,10 +359,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the extension.</p>
+             * <p>The extension priority. Valid values:</p>
              * <ul>
-             * <li><strong>0</strong>: The extension is displayed by default.</li>
-             * <li><strong>1</strong>: The extension is preferentially displayed.</li>
+             * <li><strong>0</strong>: displayed by default.</li>
+             * <li><strong>1</strong>: displayed with priority.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -374,7 +374,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extensions on which the current extension depends when it is installed.</p>
+             * <p>The extensions on which this extension depends during installation.</p>
              * 
              * <strong>example:</strong>
              * <p>{dblink,plpgsql}</p>
@@ -385,9 +385,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
+             * <p>This parameter is returned only for exclusive extensions (extensions written by the user). Each Alibaba Cloud account can view only its own exclusive extensions.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -549,7 +549,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The category of the extension.</p>
+             * <p>The extension category.</p>
              * 
              * <strong>example:</strong>
              * <p>information_stat</p>
@@ -582,7 +582,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The current version of the extension.</p>
+             * <p>The currently installed version of the extension.</p>
              * 
              * <strong>example:</strong>
              * <p>4.1</p>
@@ -593,7 +593,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the extension.</p>
+             * <p>The extension name.</p>
              * 
              * <strong>example:</strong>
              * <p>pg_cron</p>
@@ -604,7 +604,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The user of the extension.</p>
+             * <p>The user to which the extension belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>test_user</p>
@@ -615,7 +615,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The priority of the extension.</p>
+             * <p>The extension priority.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -626,7 +626,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extensions on which the current extension depends when it is installed.</p>
+             * <p>The extensions on which this extension depends during installation.</p>
              * 
              * <strong>example:</strong>
              * <p>{dblink,plpgsql}</p>
@@ -637,9 +637,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The Alibaba Cloud account ID.</p>
              * <blockquote>
-             * <p> This parameter is returned only for self-developed exclusive extensions. You can view exclusive extensions only within your Alibaba Cloud account.</p>
+             * <p>This parameter is returned only for exclusive extensions (extensions written by the user). Each Alibaba Cloud account can view only its own exclusive extensions.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

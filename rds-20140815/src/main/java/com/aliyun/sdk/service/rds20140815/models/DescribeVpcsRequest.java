@@ -231,7 +231,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -240,7 +243,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -249,7 +255,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * Product.
+         * <p>The cloud product type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds</p>
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);
@@ -258,7 +267,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -267,7 +279,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxxtz*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -303,7 +318,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the VPC. Specify this parameter to query a specific VPC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1bva4qkmvqt******</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -312,7 +330,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * <p>The zone ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

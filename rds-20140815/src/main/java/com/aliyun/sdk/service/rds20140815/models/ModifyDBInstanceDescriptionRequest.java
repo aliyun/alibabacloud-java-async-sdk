@@ -131,14 +131,14 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         } 
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the ApsaraDB RDS instance.</p>
          * <blockquote>
          * <p>The name must be 2 to 64 characters in length.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Instance in Alibaba Cloud test environment</p>
+         * <p>testInstance</p>
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -147,7 +147,7 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

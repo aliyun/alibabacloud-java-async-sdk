@@ -184,10 +184,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the native replication mods is enabled. Valid values:</p>
+         * <p>Indicates whether native replication mode is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>ON</strong></li>
-         * <li><strong>OFF</strong></li>
+         * <li><strong>ON</strong>: Enabled.</li>
+         * <li><strong>OFF</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * GtidExecuted.
+         * <p>The executed global transaction identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</p>
          */
         public Builder gtidExecuted(String gtidExecuted) {
             this.gtidExecuted = gtidExecuted;
@@ -207,7 +210,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>COMPLETED: 导入完成，INIT: 初始化，IMPORTING: 正在导入</p>
+         * <p>The import status, which indicates whether full data is successfully imported.</p>
          * 
          * <strong>example:</strong>
          * <p>COMPLETED</p>
@@ -218,7 +221,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The replication latency. Unit: seconds.</p>
+         * <p>The current replication delay, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -240,7 +243,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicationIp.
+         * <p>The IP address of the replication endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.10.x</p>
          */
         public Builder replicationIp(String replicationIp) {
             this.replicationIp = replicationIp;
@@ -248,7 +254,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * ReplicationPort.
+         * <p>The port of the replication endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder replicationPort(String replicationPort) {
             this.replicationPort = replicationPort;
@@ -256,10 +265,10 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The source of the native replication.</p>
+         * <p>The replication source of native replication.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.x.x</p>
+         * <p>192.168.XX.XX</p>
          */
         public Builder replicationSource(String replicationSource) {
             this.replicationSource = replicationSource;
@@ -269,17 +278,14 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         /**
          * <p>The current replication status. Valid values:</p>
          * <ul>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Connecting</strong></li>
-         * <li><strong>Stopped</strong></li>
-         * <li><strong>Error</strong></li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Connecting</strong>: Connecting.</li>
+         * <li><strong>Stopped</strong>: Stopped.</li>
+         * <li><strong>Error</strong>: Error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Running
-         * Connecting
-         * Stopped
-         * Error</p>
+         * <p>Stopped</p>
          */
         public Builder replicationState(String replicationState) {
             this.replicationState = replicationState;
@@ -627,7 +633,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0表示无错误，其他值表示具体的错误代码</p>
+             * <p>A value of 0 indicates no error. Other values indicate specific error codes.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -638,7 +644,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0表示无错误，其他值表示IO线程的错误代码</p>
+             * <p>A value of 0 indicates no error. Other values indicate error codes of the I/O thread.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -649,7 +655,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IO线程的错误信息描述</p>
+             * <p>The error message description of the I/O thread.</p>
              */
             public Builder lastIoError(String lastIoError) {
                 this.lastIoError = lastIoError;
@@ -657,7 +663,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>0表示无错误，其他值表示SQL线程的错误代码</p>
+             * <p>A value of 0 indicates no error. Other values indicate error codes of the SQL thread.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -668,7 +674,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>SQL线程的错误信息描述</p>
+             * <p>The error message description of the SQL thread.</p>
              */
             public Builder lastSqlError(String lastSqlError) {
                 this.lastSqlError = lastSqlError;
@@ -756,7 +762,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Yes: 运行中，No: 已停止</p>
+             * <p>Valid values: Yes (running) and No (stopped).</p>
              * 
              * <strong>example:</strong>
              * <p>Yes</p>
@@ -775,7 +781,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Yes: 运行中，No: 已停止</p>
+             * <p>Valid values: Yes (running) and No (stopped).</p>
              * 
              * <strong>example:</strong>
              * <p>Yes</p>

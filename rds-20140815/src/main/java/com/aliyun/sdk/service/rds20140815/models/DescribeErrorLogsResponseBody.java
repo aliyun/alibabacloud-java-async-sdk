@@ -106,7 +106,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the log entries returned.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -125,7 +125,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of error logs on the current page.</p>
+         * <p>The number of error log entries on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -255,10 +255,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the error log entry was generated. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2011-05-30T12:11:04Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -274,10 +271,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error log information.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>spid52 DBCC TRACEON 3499, server process ID (SPID) 52. This is an informational message only; no user action is required</p>
+             * ErrorInfo.
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;

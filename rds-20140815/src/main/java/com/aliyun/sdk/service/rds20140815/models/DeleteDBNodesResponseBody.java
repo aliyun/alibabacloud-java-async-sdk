@@ -80,7 +80,7 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>
@@ -91,7 +91,7 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>100780000000000</p>
@@ -102,7 +102,7 @@ public class DeleteDBNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>

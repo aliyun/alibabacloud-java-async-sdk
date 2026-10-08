@@ -80,10 +80,10 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The serial number of the task in the rebuild task queue. When the serial number becomes 0, the system starts to rebuild the secondary instance.</p>
+         * <p>The queue number for the rebuild. When the number is 0, the rebuild migration starts.</p>
          * 
          * <strong>example:</strong>
-         * <p>329****</p>
+         * <p>3298015</p>
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;
@@ -105,7 +105,7 @@ public class RebuildDBInstanceResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>20867****</p>
+         * <p>208676661</p>
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

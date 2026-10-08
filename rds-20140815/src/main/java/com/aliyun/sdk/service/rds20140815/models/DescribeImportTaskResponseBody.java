@@ -197,7 +197,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Account.
+         * <p>The account name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myadmin</p>
          */
         public Builder account(String account) {
             this.account = account;
@@ -205,7 +208,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DbVersion.
+         * <p>The Milvus version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5.7</p>
          */
         public Builder dbVersion(String dbVersion) {
             this.dbVersion = dbVersion;
@@ -213,7 +219,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * <p>The detailed information about the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Error Message</p>
          */
         public Builder detail(String detail) {
             this.detail = detail;
@@ -221,7 +230,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A103039D-B1B2-4C57-B989-7D7C0DA95426</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -229,7 +241,14 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCategory.
+         * <p>The category of the source instance.</p>
+         * <ul>
+         * <li><strong>ECS</strong>: Alibaba Cloud ECS.</li>
+         * <li><strong>other</strong>: Other.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunRDS</p>
          */
         public Builder sourceCategory(String sourceCategory) {
             this.sourceCategory = sourceCategory;
@@ -237,7 +256,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SourceIp.
+         * <p>The source IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>59.172.25.122</p>
          */
         public Builder sourceIp(String sourceIp) {
             this.sourceIp = sourceIp;
@@ -245,7 +267,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SourcePort.
+         * <p>The source MySQL port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3306</p>
          */
         public Builder sourcePort(String sourcePort) {
             this.sourcePort = sourcePort;
@@ -253,7 +278,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Importing</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -261,7 +289,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TargetInstanceName.
+         * <p>The name of the destination disaster recovery instance for the switchover.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-t4neh0q12v1******</p>
          */
         public Builder targetInstanceName(String targetInstanceName) {
             this.targetInstanceName = targetInstanceName;
@@ -269,7 +300,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>416980000</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -277,7 +311,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * <p>The task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test01</p>
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;
@@ -285,7 +322,10 @@ public class DescribeImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The task type. This parameter is used to query tasks of specific types. Separate multiple task types with commas (,). A maximum of 30 task types are supported. If this parameter is left empty, tasks of all types are queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>import</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;

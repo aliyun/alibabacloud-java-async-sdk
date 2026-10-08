@@ -59,10 +59,7 @@ public class DescribeRCInstanceTypeFamiliesRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

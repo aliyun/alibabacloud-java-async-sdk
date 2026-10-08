@@ -220,6 +220,7 @@ public class CreateImportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +233,10 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * EstimatedSize.
+         * <p>The estimated data space. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder estimatedSize(Integer estimatedSize) {
             this.putQueryParameter("EstimatedSize", estimatedSize);
@@ -241,6 +245,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The host IP address of the source MySQL instance. ApsaraDB RDS accesses this IP address to obtain the backup.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +267,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The password of the source MySQL account. The password must be Base64-encoded.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +280,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The port of the source MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,6 +293,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +306,10 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>The instance ID of the source cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1fe296n52ub3chezpg</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -307,7 +318,10 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * SourcePlatform.
+         * <p>The type of the source cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder sourcePlatform(String sourcePlatform) {
             this.putQueryParameter("SourcePlatform", sourcePlatform);
@@ -316,6 +330,7 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The streaming port used to transfer the backup.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,7 +343,22 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * <p>The account of the source MySQL instance. The account must have permissions to create backups and set up replication. Refer to the following SQL statements for granting permissions:</p>
+         * <pre><code>-- MySQL 5.7
+         * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;s3cret\\&quot;;
+         * mysql&gt; GRANT RELOAD, LOCK TABLES, PROCESS, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO
+         *        \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+         * mysql&gt; FLUSH PRIVILEGES;
+         * -- MySQL 8.0
+         * mysql&gt; CREATE USER \\&quot;myadmin\\&quot;@\\&quot;%\\&quot; IDENTIFIED BY \\&quot;Test123!\\&quot;;
+         * mysql&gt; GRANT BACKUP_ADMIN, PROCESS, RELOAD, LOCK TABLES, REPLICATION CLIENT, REPLICATION SLAVE ON *.* TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+         * mysql&gt; GRANT SELECT ON performance_schema.log_status TO \\&quot;myadmin\\&quot;@\\&quot;%\\&quot;;
+         * mysql&gt; GRANT SELECT ON performance_schema.keyring_component_status TO myadmin@\\&quot;%\\&quot;;
+         * mysql&gt; GRANT SELECT ON performance_schema.replication_group_members TO myadmin@\\&quot;%\\&quot;;
+         * mysql&gt; FLUSH PRIVILEGES;
+         * 
+         * This parameter is required.
+         * </code></pre>
          * 
          * <strong>example:</strong>
          * <p>myadmin</p>
@@ -340,7 +370,10 @@ public class CreateImportTaskRequest extends Request {
         }
 
         /**
-         * XtrabackupPath.
+         * <p>The installation path of xtrabackup on the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/bin/xtrabackup</p>
          */
         public Builder xtrabackupPath(String xtrabackupPath) {
             this.putQueryParameter("XtrabackupPath", xtrabackupPath);

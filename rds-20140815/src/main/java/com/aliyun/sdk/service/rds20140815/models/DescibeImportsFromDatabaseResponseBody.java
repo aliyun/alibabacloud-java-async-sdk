@@ -106,7 +106,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The migration tasks.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -147,7 +147,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,22 +255,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The status of the migration task. Valid values:</p>
-             * <ul>
-             * <li><strong>NotStart</strong>: The migration task has not started.</li>
-             * <li><strong>FullExporting</strong>: The migration task is exporting full data.</li>
-             * <li><strong>FullImporting</strong>: The migration task is importing full data.</li>
-             * <li><strong>Success</strong>: The migration task is successful.</li>
-             * <li><strong>Failed</strong>: The migration task failed.</li>
-             * <li><strong>Canceled</strong>: The migration task is canceled.</li>
-             * <li><strong>Canceling</strong>: The migration task is being canceled.</li>
-             * <li><strong>IncrementalWaiting</strong>: The migration task is waiting to synchronize incremental data.</li>
-             * <li><strong>IncrementalImporting</strong>: The migration task is synchronizing incremental data.</li>
-             * <li><strong>StopSyncing</strong>: The migration task stops synchronizing data.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NotStart</p>
+             * ImportDataStatus.
              */
             public Builder importDataStatus(String importDataStatus) {
                 this.importDataStatus = importDataStatus;
@@ -278,10 +263,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the migration task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Description</p>
+             * ImportDataStatusDescription.
              */
             public Builder importDataStatusDescription(String importDataStatusDescription) {
                 this.importDataStatusDescription = importDataStatusDescription;
@@ -289,14 +271,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the migration task. Valid values:</p>
-             * <ul>
-             * <li><strong>Full</strong>: full migration</li>
-             * <li><strong>Incremental:</strong>: incremental migration</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Full</p>
+             * ImportDataType.
              */
             public Builder importDataType(String importDataType) {
                 this.importDataType = importDataType;
@@ -304,10 +279,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the migration task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123</p>
+             * ImportId.
              */
             public Builder importId(Integer importId) {
                 this.importId = importId;
@@ -315,10 +287,7 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the migration task synchronized incremental data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2011-06-11T15:00Z</p>
+             * IncrementalImportingTime.
              */
             public Builder incrementalImportingTime(String incrementalImportingTime) {
                 this.incrementalImportingTime = incrementalImportingTime;

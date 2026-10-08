@@ -146,7 +146,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         } 
 
         /**
-         * <p>The name of the account.</p>
+         * <p>The account name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,11 +159,11 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,7 @@ public class RevokeAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * <p>The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).</p>
+         * <p>The database name. All permissions of the account on this database are revoked. Separate multiple database names with commas (,).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

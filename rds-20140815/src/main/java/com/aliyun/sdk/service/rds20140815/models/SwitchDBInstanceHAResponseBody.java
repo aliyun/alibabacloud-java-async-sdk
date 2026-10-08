@@ -54,7 +54,7 @@ public class SwitchDBInstanceHAResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>

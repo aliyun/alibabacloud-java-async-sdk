@@ -54,10 +54,7 @@ public class ModifyRCInstanceKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>6C36770E-21AE-5689-BAA6-313DA58D5467</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

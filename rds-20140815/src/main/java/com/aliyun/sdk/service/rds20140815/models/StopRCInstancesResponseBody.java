@@ -54,10 +54,7 @@ public class StopRCInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>481BC3B1-7069-5D37-9B6C-21757F8F9FB1</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

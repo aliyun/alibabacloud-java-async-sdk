@@ -220,6 +220,7 @@ public class ValidateImportTaskRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID. You can call the DescribeDBInstances operation to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +233,10 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * EstimatedSize.
+         * <p>The estimated instance size. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder estimatedSize(Integer estimatedSize) {
             this.putQueryParameter("EstimatedSize", estimatedSize);
@@ -241,6 +245,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The address of the source MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -262,6 +267,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The password of the source MySQL user, encoded in Base64.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +280,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The port number of the source MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -286,6 +293,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The region ID. You can call DescribeRegions to obtain this parameter.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +306,10 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * SourceInstanceId.
+         * <p>The ID of the source cloud instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-wz9ff3acy500io5wdf5s</p>
          */
         public Builder sourceInstanceId(String sourceInstanceId) {
             this.putQueryParameter("SourceInstanceId", sourceInstanceId);
@@ -307,7 +318,13 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * SourcePlatform.
+         * <p>The type of the source instance. Valid values:</p>
+         * <ul>
+         * <li>ECS</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS</p>
          */
         public Builder sourcePlatform(String sourcePlatform) {
             this.putQueryParameter("SourcePlatform", sourcePlatform);
@@ -316,6 +333,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The port number for backup transmission.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -328,6 +346,7 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
+         * <p>The username of the source MySQL instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -340,7 +359,10 @@ public class ValidateImportTaskRequest extends Request {
         }
 
         /**
-         * XtrabackupPath.
+         * <p>The path of the Xtrabackup tool on the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/usr/local/bin/xtrabackup</p>
          */
         public Builder xtrabackupPath(String xtrabackupPath) {
             this.putQueryParameter("XtrabackupPath", xtrabackupPath);

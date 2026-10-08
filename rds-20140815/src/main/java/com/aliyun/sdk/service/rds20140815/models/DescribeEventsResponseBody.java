@@ -106,7 +106,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The events.</p>
+         * EventItems.
          */
         public Builder eventItems(EventItems eventItems) {
             this.eventItems = eventItems;
@@ -147,7 +147,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -346,10 +346,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the user who executed the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>22973492**********</p>
+             * CallerUid.
              */
             public Builder callerUid(Long callerUid) {
                 this.callerUid = callerUid;
@@ -357,10 +354,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>11000053</p>
+             * EventId.
              */
             public Builder eventId(Integer eventId) {
                 this.eventId = eventId;
@@ -368,10 +362,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ModifySecurityIPList</p>
+             * EventName.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -379,10 +370,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The request or context parameters of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{&quot;Domain&quot;: &quot;rds-inc-share.aliyuncs.com&quot;, &quot;Api&quot;: &quot;ReleaseInstancePublicConnection&quot;}</p>
+             * EventPayload.
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;
@@ -390,10 +378,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The source of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>FROM_USER</p>
+             * EventReason.
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -401,10 +386,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event was recorded. The time is slightly later than the time the event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-08-20T01:12:49Z</p>
+             * EventRecordTime.
              */
             public Builder eventRecordTime(String eventRecordTime) {
                 this.eventRecordTime = eventRecordTime;
@@ -412,10 +394,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the event occurred.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-08-20T01:08:22Z</p>
+             * EventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -423,10 +402,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event type.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>NetworkManagement</p>
+             * EventType.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -434,10 +410,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the user who executed the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SYSTEM</p>
+             * EventUserType.
              */
             public Builder eventUserType(String eventUserType) {
                 this.eventUserType = eventUserType;
@@ -445,10 +418,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -456,10 +426,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the resource associated with the event. Only instance IDs are supported for this parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-bp1z3065m9976ix8a</p>
+             * ResourceName.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -467,10 +434,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the resource associated with the event. Only instances are supported for this parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>instance</p>
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -524,7 +488,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The events.</p>
+             * EventItems.
              */
             public Builder eventItems(java.util.List<EventItemsEventItems> eventItems) {
                 this.eventItems = eventItems;

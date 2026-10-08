@@ -88,14 +88,14 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <blockquote>
-         * <p>Notice: Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.</p>
+         * <p>Warning: Do not specify multiple instance IDs for batch queries. Otherwise, the query times out and fails.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -104,10 +104,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the instance expires. Valid values:</p>
+         * <p>The expiration status of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong></li>
-         * <li><strong>False</strong></li>
+         * <li><strong>True</strong>: The instance has expired.</li>
+         * <li><strong>False</strong>: The instance has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -54,7 +54,7 @@ public class ModifyParameterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>542BB8D6-4268-45CC-A557-B03EFD7AB30A</p>

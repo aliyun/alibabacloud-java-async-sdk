@@ -187,7 +187,7 @@ public class CreateMaskingRulesRequest extends Request {
         } 
 
         /**
-         * <p>instance ID</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Database name</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>testdb</p>
@@ -212,7 +212,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Name of the default encryption or masking algorithm</p>
+         * <p>The name of the default encryption or masking algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>aes-128-gcm</p>
@@ -224,7 +224,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Rule algorithm. Multiple algorithms can be selected. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted characters}}</p>
+         * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -246,7 +246,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
@@ -276,7 +276,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Rule configuration, in JSON string format, containing matching rules for databases, tables, and columns</p>
+         * <p>The rule configuration in JSON string format, which contains matching rules for databases, tables, and columns.</p>
          */
         public Builder ruleConfig(RuleConfig ruleConfig) {
             String ruleConfigShrink = shrink(ruleConfig, "RuleConfig", "json");
@@ -286,7 +286,7 @@ public class CreateMaskingRulesRequest extends Request {
         }
 
         /**
-         * <p>Rule Name (only one rule name is supported per request)</p>
+         * <p>The rule name. Only one rule name can be specified at a time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -371,7 +371,7 @@ public class CreateMaskingRulesRequest extends Request {
             } 
 
             /**
-             * <p>List of columns</p>
+             * <p>The list of columns.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -379,7 +379,7 @@ public class CreateMaskingRulesRequest extends Request {
             }
 
             /**
-             * <p>List of databases</p>
+             * <p>The list of databases.</p>
              */
             public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
@@ -387,7 +387,7 @@ public class CreateMaskingRulesRequest extends Request {
             }
 
             /**
-             * <p>List of tables</p>
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;

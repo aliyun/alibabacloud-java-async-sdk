@@ -54,7 +54,7 @@ public class ModifyDBInstanceMonitorResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>52B9805C-432C-4ED1-83FD-2F916B6D2733</p>

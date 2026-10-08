@@ -96,7 +96,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp1*****</p>
+         * <p>rm-bp1****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -104,7 +104,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the Enhanced Monitoring metric.</p>
+         * <p>The list of enhanced monitoring metrics.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -112,7 +112,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5CD61041-35F7-10F7-BE94-33A48B221218</p>
@@ -123,7 +123,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of enhanced monitoring metrics that are available for the instance.</p>
+         * <p>The total number of enhanced monitoring metrics supported by the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -283,10 +283,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the Enhanced Monitoring metric.</p>
+             * <p>The description of the enhanced monitoring metric.</p>
              * 
              * <strong>example:</strong>
-             * <p>OS CPU utilization, equal to the number of OS-consumed CPUs divided by the total number of CPUs</p>
+             * <p>sys cpu usage, sys cpu usage / total cpu</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,10 +294,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The category of the Enhanced Monitoring metric. Valid values:</p>
+             * <p>The category of the enhanced monitoring metric. Valid values:</p>
              * <ul>
-             * <li><strong>os</strong>: OS metric</li>
-             * <li><strong>db</strong>: database metric</li>
+             * <li><strong>os</strong>: operating system metric.</li>
+             * <li><strong>db</strong>: database metric.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the group to which the Enhanced Monitoring metric belongs.</p>
+             * <p>The key of the group to which the enhanced monitoring metric belongs.</p>
              * 
              * <strong>example:</strong>
              * <p>os.cpu_usage</p>
@@ -320,10 +320,10 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the group to which the Enhanced Monitoring metric belongs.</p>
+             * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
              * 
              * <strong>example:</strong>
-             * <p>CPU Utilization Rate</p>
+             * <p>CPU Usage</p>
              */
             public Builder groupKeyType(String groupKeyType) {
                 this.groupKeyType = groupKeyType;
@@ -331,11 +331,11 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to aggregate the monitoring data of the Enhanced Monitoring metric. Valid values:</p>
+             * <p>The statistical method of the enhanced monitoring metric. Valid values:</p>
              * <ul>
-             * <li><strong>avg</strong>: The system calculates the average value of the Enhanced Monitoring metric.</li>
-             * <li><strong>min</strong>: The system calculates the minimum value of the Enhanced Monitoring metric.</li>
-             * <li><strong>max</strong>: The system calculates the maximum value of the Enhanced Monitoring metric.</li>
+             * <li><strong>avg</strong>: average value.</li>
+             * <li><strong>min</strong>: minimum value.</li>
+             * <li><strong>max</strong>: maximum value.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The key of the Enhanced Monitoring metric.</p>
+             * <p>The key of the enhanced monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>os.cpu_usage.sys.avg</p>
@@ -358,7 +358,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The alias of the Enhanced Monitoring metric.</p>
+             * <p>The alias of the enhanced monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>cpu_sys_per_core</p>
@@ -369,7 +369,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The serial number of the Enhanced Monitoring metric.</p>
+             * <p>The sequence number of the enhanced monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -380,7 +380,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the Enhanced Monitoring metric.</p>
+             * <p>The unit of the enhanced monitoring metric.</p>
              * 
              * <strong>example:</strong>
              * <p>%</p>

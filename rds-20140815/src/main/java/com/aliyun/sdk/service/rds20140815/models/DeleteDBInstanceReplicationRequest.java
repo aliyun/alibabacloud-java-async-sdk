@@ -104,7 +104,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         } 
 
         /**
-         * <p>复制通道名称，用于标识需要删除的复制链路</p>
+         * <p>The name of the replication channel, which identifies the replication task.</p>
          * 
          * <strong>example:</strong>
          * <p>replication-channel-001</p>
@@ -116,7 +116,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>目标RDS实例ID，复制链路将从此实例上删除</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class DeleteDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>地域ID，表示RDS实例所在的地域</p>
+         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

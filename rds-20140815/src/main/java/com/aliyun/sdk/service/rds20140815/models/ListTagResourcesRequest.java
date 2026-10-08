@@ -159,7 +159,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>The token required to obtain more results. This parameter is not required in the first query. If a query does not return all results, you can specify the token returned from the previous query for the next query to obtain more results.</p>
+         * <p>The token used to return more results. You do not need to specify this parameter for the first query. If a query does not return all results, pass in the token returned from the previous query to continue the query.</p>
          * 
          * <strong>example:</strong>
          * <p>212db86sca4384811e0b5e8707ec21345</p>
@@ -180,7 +180,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,9 +193,9 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can specify a maximum of <strong>50</strong> instance IDs.****</p>
+         * <p>The list of instance IDs. You can query tags for multiple instances at a time. Valid values of the number of instances: <strong>1</strong> to <strong>50</strong>.</p>
          * <blockquote>
-         * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+         * <p>You must specify at least one of the <strong>ResourceId</strong> and <strong>Tag.Key</strong> parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,7 +226,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to <strong>INSTANCE</strong>.</p>
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instance.</li>
+         * <li><strong>CUSTOM</strong>: RDS Custom instance.</li>
+         * <li><strong>CUSTOMDEPLOYMENTSET</strong>: RDS Custom deployment set.</li>
+         * <li><strong>CUSTOMDISK</strong>: RDS Custom cloud disk.</li>
+         * <li><strong>CUSTOMSNAPSHOT</strong>: RDS Custom snapshot.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -239,7 +246,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tag list.</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -307,9 +314,9 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>The tag key. You can query N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value cannot be an empty string.</p>
+             * <p>The tag key. You can query N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
              * <blockquote>
-             * <p> You must specify at least one of the <strong>ResourceId</strong> and <strong>Key</strong> parameters.</p>
+             * <p>You must specify at least one of the <strong>ResourceId</strong> and <strong>Tag.Key</strong> parameters.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -321,7 +328,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>The tag value that is associated with the specified tag key. You can specify N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The value can be an empty string.</p>
+             * <p>The tag value that corresponds to the tag key. You can query N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are allowed.</p>
              * 
              * <strong>example:</strong>
              * <p>testvalue1</p>

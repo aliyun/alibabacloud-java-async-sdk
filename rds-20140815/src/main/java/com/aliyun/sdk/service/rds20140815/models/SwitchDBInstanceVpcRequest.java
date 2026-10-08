@@ -118,11 +118,11 @@ public class SwitchDBInstanceVpcRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -131,9 +131,9 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * <p>The private IP address of the instance. The private IP address must be within the CIDR block of the vSwitch that is specified by the <strong>VSwitchId</strong> parameter.</p>
+         * <p>The private IP address of the instance. The IP address must be within the CIDR block of the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
          * <blockquote>
-         * <p> You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</p>
+         * <p>You can call DescribeVSwitches to query the CIDR block of the target vSwitch.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -157,12 +157,12 @@ public class SwitchDBInstanceVpcRequest extends Request {
         /**
          * <p>The VPC ID.</p>
          * <blockquote>
-         * <p>The VPC must reside in the same region as the instance.</p>
+         * <p>The VPC must be in the same region as the ApsaraDB RDS instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-uf6f7l4fg90*****</p>
+         * <p>vpc-uf6f7l4fg90****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -171,14 +171,14 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID.</p>
          * <blockquote>
-         * <p>The vSwitch must belong to the same zone as the instance.</p>
+         * <p>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-uf6adz52c2p*****</p>
+         * <p>vsw-uf6adz52c2p****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

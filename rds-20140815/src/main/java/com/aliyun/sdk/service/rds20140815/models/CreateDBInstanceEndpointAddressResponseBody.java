@@ -67,7 +67,7 @@ public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned fields.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,7 @@ public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
@@ -160,7 +160,7 @@ public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
              * <p>The public endpoint.</p>
              * 
              * <strong>example:</strong>
-             * <p>rm-******.mysql.rds.aliyuncs.com</p>
+             * <p>rm-****.mysql.rds.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -179,7 +179,7 @@ public class CreateDBInstanceEndpointAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-****</p>

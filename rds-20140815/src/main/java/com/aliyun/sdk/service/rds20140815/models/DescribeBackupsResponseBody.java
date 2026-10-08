@@ -119,7 +119,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The returned backup sets.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -127,7 +127,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -149,7 +149,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
@@ -171,7 +171,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -253,10 +253,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the database.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>dbs</p>
+             * DataBase.
              */
             public Builder dataBase(String dataBase) {
                 this.dataBase = dataBase;
@@ -264,10 +261,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The public URL from which you can download the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://cn-hangzhou.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&dbList=tb1">https://cn-hangzhou.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&amp;dbList=tb1</a></p>
+             * DownloadLink.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -275,10 +269,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The internal URL from which you can download the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="https://cn-hangzhou-internal.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&dbList=tb1">https://cn-hangzhou-internal.bak.rds.aliyuncs.com/custins53664665/hins18676859_2021072909473127987849.zip?Expires=*****&amp;dbList=tb1</a></p>
+             * IntranetDownloadLink.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -698,7 +689,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array consisting of URLs from which you can download backup sets of individual databases.</p>
+             * BackupDownloadLinkByDB.
              */
             public Builder backupDownloadLinkByDB(BackupBackupDownloadLinkByDB backupDownloadLinkByDB) {
                 this.backupDownloadLinkByDB = backupDownloadLinkByDB;
@@ -706,13 +697,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, null is returned.</p>
-             * <blockquote>
-             * <p> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to <strong>Snapshot</strong>, a null string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
+             * BackupDownloadURL.
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -720,10 +705,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the backup task. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-13T12:20:00Z</p>
+             * BackupEndTime.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -731,10 +713,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>321020562</p>
+             * BackupId.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -742,14 +721,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initiator of the backup task. Valid values:</p>
-             * <ul>
-             * <li><strong>System</strong></li>
-             * <li><strong>User</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>System</p>
+             * BackupInitiator.
              */
             public Builder backupInitiator(String backupInitiator) {
                 this.backupInitiator = backupInitiator;
@@ -757,13 +729,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download the backup set over an internal network. If the backup set cannot be downloaded, null is returned.</p>
-             * <blockquote>
-             * <p> For example, if BackupMethod of an ApsaraDB RDS for SQL Server instance is set to <strong>Snapshot</strong>, a null string is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou-internal.aliyuncs.com/xxxxx</a></p>
+             * BackupIntranetDownloadURL.
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -771,15 +737,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The method that is used to generate the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>Logical</strong>: logical backup</li>
-             * <li><strong>Physical</strong>: physical backup</li>
-             * <li><strong>Snapshot</strong>: snapshot backup</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Physical</p>
+             * BackupMethod.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -787,14 +745,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode of the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>Automated</strong></li>
-             * <li><strong>Manual</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Automated</p>
+             * BackupMode.
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -802,10 +753,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the data backup file. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2167808</p>
+             * BackupSize.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -813,10 +761,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the backup. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-02-03T12:20:00Z</p>
+             * BackupStartTime.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -824,10 +769,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * BackupStatus.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -835,14 +777,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup type of the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>FullBackup</strong></li>
-             * <li><strong>IncrementalBackup</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>FullBackup</p>
+             * BackupType.
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -850,10 +785,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The checksum. The value of this parameter is calculated by using the CRC64 algorithm.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1835830439**********</p>
+             * Checksum.
              */
             public Builder checksum(String checksum) {
                 this.checksum = checksum;
@@ -861,13 +793,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
-             * <blockquote>
-             * <p> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>1576506856</p>
+             * ConsistentTime.
              */
             public Builder consistentTime(Long consistentTime) {
                 this.consistentTime = consistentTime;
@@ -875,17 +801,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The backup mode of the backup set. Valid values:</p>
-             * <ul>
-             * <li>0: the standard mode. This mode supports full backups and incremental backups.</li>
-             * <li>1: the copy-only mode. This mode supports only full backups.</li>
-             * </ul>
-             * <blockquote>
-             * <p> This parameter is returned only when the instance runs SQL Server.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * CopyOnlyBackup.
              */
             public Builder copyOnlyBackup(String copyOnlyBackup) {
                 this.copyOnlyBackup = copyOnlyBackup;
@@ -893,10 +809,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5xxxxxxx</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -904,10 +817,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The encryption information about the backup set.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>{}</p>
+             * Encryption.
              */
             public Builder encryption(String encryption) {
                 this.encryption = encryption;
@@ -915,16 +825,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the database engine. Valid values:</p>
-             * <ul>
-             * <li>MySQL</li>
-             * <li>SQLServer</li>
-             * <li>PostgreSQL</li>
-             * <li>MariaDB</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL</p>
+             * Engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -932,10 +833,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8.0</p>
+             * EngineVersion.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -951,10 +849,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>5882781</p>
+             * HostInstanceID.
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -962,14 +857,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup set is available. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: The backup set is unavailable.</li>
-             * <li><strong>1</strong>: The backup set is available.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * IsAvail.
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -977,18 +865,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
-             * <ul>
-             * <li><strong>OK</strong>: The data backup file is normal.</li>
-             * <li><strong>LARGE</strong>: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</li>
-             * <li><strong>EMPTY</strong>: The data backup file is generated from a failed backup task.</li>
-             * </ul>
-             * <blockquote>
-             * <p> If an empty string is returned, the data backup file cannot be used to restore individual databases or tables.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>OK</p>
+             * MetaStatus.
              */
             public Builder metaStatus(String metaStatus) {
                 this.metaStatus = metaStatus;
@@ -996,14 +873,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage class of the backup set. Valid values:</p>
-             * <ul>
-             * <li><strong>0</strong>: regular storage</li>
-             * <li><strong>1</strong>: archive storage</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * StorageClass.
              */
             public Builder storageClass(String storageClass) {
                 this.storageClass = storageClass;
@@ -1011,14 +881,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup set can be deleted. Valid values:</p>
-             * <ul>
-             * <li><strong>Enabled</strong>: The backup set can be deleted.</li>
-             * <li><strong>Disabled</strong>: The backup set cannot be deleted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Disabled</p>
+             * StoreStatus.
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;

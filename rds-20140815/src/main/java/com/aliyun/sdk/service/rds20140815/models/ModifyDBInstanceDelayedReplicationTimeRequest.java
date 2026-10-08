@@ -117,11 +117,11 @@ public class ModifyDBInstanceDelayedReplicationTimeRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query the instance ID.</p>
+         * <p>The ID of the read-only instance. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rr-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -139,7 +139,7 @@ public class ModifyDBInstanceDelayedReplicationTimeRequest extends Request {
         }
 
         /**
-         * <p>The replication latency of the read-only instance. Unit: seconds.</p>
+         * <p>The replication delay time of the read-only instance. Unit: seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

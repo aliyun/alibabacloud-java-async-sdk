@@ -258,7 +258,7 @@ public class DescribeRenewalPriceRequest extends Request {
         } 
 
         /**
-         * <p>The additional business information about the instance.</p>
+         * <p>The business extension parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>121436975448952</p>
@@ -273,7 +273,7 @@ public class DescribeRenewalPriceRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -282,7 +282,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. By default, the current instance type applies.</p>
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. Default value: the current instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql.n2.medium.2c</p>
@@ -294,11 +294,11 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -307,7 +307,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The type of order. Set the value to <strong>BUY</strong>.</p>
+         * <p>The order type. The only valid value is <strong>BUY</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>BUY</p>
@@ -353,7 +353,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The number of the instances. Default value: <strong>1</strong>.</p>
+         * <p>The number of instances. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -365,7 +365,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -377,7 +377,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmx****</p>
@@ -407,10 +407,10 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * <p>The renewal cycle of the instance. Valid values:</p>
+         * <p>The subscription type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong>: yearly subscription</li>
+         * <li><strong>Month</strong>: monthly subscription</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -426,8 +426,8 @@ public class DescribeRenewalPriceRequest extends Request {
         /**
          * <p>The subscription duration of the instance. Valid values:</p>
          * <ul>
-         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Year</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 3</strong>.</li>
-         * <li>If you set the <strong>TimeType</strong> parameter to <strong>Month</strong>, the value of the UsedTime parameter is within the range of <strong>1 to 9</strong>.</li>
+         * <li>If <strong>TimeType</strong> is set to <strong>Year</strong>, the value ranges from <strong>1 to 3</strong>.</li>
+         * <li>If <strong>TimeType</strong> is set to <strong>Month</strong>, the value ranges from <strong>1 to 9</strong>.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -93,7 +93,7 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Returned data</p>
+         * <p>The returned data.</p>
          */
         public Builder data(java.util.Map<String, String> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Return message</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>successful create</p>
@@ -112,7 +112,7 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>792233B1-76B8-5A01-92B4-**********864</p>
@@ -123,10 +123,10 @@ public class CreateMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request succeeded. Return values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Succeeded</li>
-         * <li><strong>false</strong>: Failed</li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -175,11 +175,11 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -206,7 +206,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeDBInstanceAttribute to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,14 +237,14 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the ECS instance and the hostname of the Windows computer. Format: <code>IP address,Hostname</code>. Separate multiple entries with semicolon (;).</p>
+         * <p>The IP addresses of ECS instances and the computer names of the Windows operating systems. Format: <code>ip,hostname</code>. Separate multiple instances with semicolons (;).</p>
          * <blockquote>
-         * <p> For more information about how to query the computer hostname, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</p>
+         * <p>For more information about how to view the computer name, see <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>192.168.1.100,k3ecstest</p>
+         * <p>192.168.XX.XX,k3ecstest</p>
          */
         public Builder securityIpHosts(String securityIpHosts) {
             this.putQueryParameter("SecurityIpHosts", securityIpHosts);
@@ -262,7 +262,7 @@ public class ModifyDTCSecurityIpHostsForSQLServerRequest extends Request {
         }
 
         /**
-         * <p>The name of the IP address whitelist.</p>
+         * <p>The name of the whitelist group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

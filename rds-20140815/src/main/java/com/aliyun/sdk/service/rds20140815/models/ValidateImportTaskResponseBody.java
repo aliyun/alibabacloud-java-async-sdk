@@ -78,7 +78,10 @@ public class ValidateImportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the precheck task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345</p>
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;

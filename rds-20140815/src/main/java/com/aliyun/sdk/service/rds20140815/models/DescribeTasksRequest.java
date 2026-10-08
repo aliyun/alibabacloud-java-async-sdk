@@ -206,7 +206,7 @@ public class DescribeTasksRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -215,7 +215,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-20T02:00Z</p>
@@ -245,7 +245,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>30 to 100</strong>. Default value: <strong>30</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -287,7 +287,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-20T01:00Z</p>
@@ -299,7 +299,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The status of the task. This parameter is invalid.</p>
+         * <p>The task status. This parameter is invalid.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -311,7 +311,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * <p>The operation that is used by the task.</p>
+         * <p>The API operation used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateInstance</p>

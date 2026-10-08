@@ -67,7 +67,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response parameters.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -274,10 +274,10 @@ public class QueryNotifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the Alibaba Cloud account.</p>
+             * <p>The ID of the current Alibaba Cloud account.</p>
              * 
              * <strong>example:</strong>
-             * <p>22973492**********</p>
+             * <p>22973492****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -285,10 +285,10 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the notification has been confirmed. You can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed. Valid values:</p>
+             * <p>Indicates whether the notification has been confirmed, that is, whether the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation has been called to mark the notification as confirmed. Valid values:</p>
              * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
+             * <li><strong>true</strong>: The notification has been confirmed.</li>
+             * <li><strong>false</strong>: The notification has not been confirmed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -300,8 +300,8 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UID of the contact who called the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
-             * <p>The value <strong>0</strong> indicates that the notification is automatically confirmed by the system.</p>
+             * <p>The UID of the notification recipient under the current Alibaba Cloud account who called the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark the notification as confirmed.</p>
+             * <p>A return value of <strong>0</strong> indicates that the notification was automatically confirmed by the system.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -334,7 +334,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the notification.</p>
+             * <p>The notification ID.</p>
              * 
              * <strong>example:</strong>
              * <p>103499</p>
@@ -345,7 +345,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of times that repeatedly sent notifications are blocked.</p>
+             * <p>The number of times that duplicate notifications were blocked.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -356,10 +356,10 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>This parameter ensures the idempotence of the notification and prevents the notification from being repeatedly sent.</p>
+             * <p>The idempotency identifier used to prevent duplicate notifications from being sent.</p>
              * 
              * <strong>example:</strong>
-             * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+             * <p>ETnLKlblzczshOTUbOCz****</p>
              */
             public Builder idempotentId(String idempotentId) {
                 this.idempotentId = idempotentId;
@@ -369,12 +369,12 @@ public class QueryNotifyResponseBody extends TeaModel {
             /**
              * <p>The level of the notification. Valid values:</p>
              * <ul>
-             * <li><strong>help</strong></li>
-             * <li><strong>success</strong></li>
-             * <li><strong>warning</strong></li>
-             * <li><strong>error</strong></li>
-             * <li><strong>loading</strong></li>
-             * <li><strong>notice</strong></li>
+             * <li><strong>help</strong>: help</li>
+             * <li><strong>success</strong>: execution succeeded</li>
+             * <li><strong>warning</strong>: warning</li>
+             * <li><strong>error</strong>: execution failed</li>
+             * <li><strong>loading</strong>: task in progress</li>
+             * <li><strong>notice</strong>: general</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -386,24 +386,22 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The element in the notification template. This parameter is a JSON string. Fields in the JSON string vary based on the value of the <strong>TemplateName</strong> parameter.</p>
+             * <p>The elements in the notification template, which are represented as a JSON string. The parameters in the JSON string vary based on the value of <strong>TemplateName</strong>.</p>
              * <ul>
-             * <li><p>If the <strong>TemplateName</strong> parameter is <strong>RenewalRecommend</strong>, the JSON string contains the following fields:</p>
-             * <ul>
-             * <li><strong>instanceName</strong>: the ID of the instance that is about to expire</li>
-             * <li><strong>reservedTime</strong>: the remaining validity period of the instance in days</li>
+             * <li>If <strong>TemplateName</strong> is set to <strong>RenewalRecommend</strong>:<ul>
+             * <li><strong>instanceName</strong>: the ID of the instance that is about to expire.</li>
+             * <li><strong>reservedTime</strong>: the number of remaining days.</li>
              * </ul>
              * </li>
-             * <li><p>If the <strong>TemplateName</strong> parameter is <strong>InstanceCreateFailed</strong>, the JSON string contains the following fields:</p>
-             * <ul>
-             * <li><strong>orderId</strong>: the ID of the order to purchase the instance</li>
-             * <li><strong>reason</strong>: the cause of the instance creation failure</li>
+             * <li>If <strong>TemplateName</strong> is set to <strong>InstanceCreateFailed</strong>:<ul>
+             * <li><strong>orderId</strong>: the order ID for the instance purchase.</li>
+             * <li><strong>reason</strong>: the reason why the instance failed to be created.</li>
              * </ul>
              * </li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{&quot;orderId&quot;:21466**********}</p>
+             * <p>{\&quot;orderId\&quot;:21466****}</p>
              */
             public Builder notifyElement(String notifyElement) {
                 this.notifyElement = notifyElement;
@@ -411,10 +409,10 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The template of the notification. Valid values:</p>
+             * <p>The notification template. Valid values:</p>
              * <ul>
-             * <li><strong>RenewalRecommend</strong>: The template that is used to notify of renewal suggestions.</li>
-             * <li><strong>InstanceCreateFailed</strong>: The template that is used to notify that an instance fails to be created and is refunded.</li>
+             * <li><strong>RenewalRecommend</strong>: renewal recommendation</li>
+             * <li><strong>InstanceCreateFailed</strong>: instance creation failed with refund</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -426,11 +424,11 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the notification. Valid values:</p>
+             * <p>The notification type. Valid values:</p>
              * <ul>
-             * <li><strong>Sell</strong>: sales notification</li>
+             * <li><strong>Sell</strong>: sale-related notification</li>
              * <li><strong>Operation</strong>: O&amp;M notification</li>
-             * <li><strong>Promotion</strong>: promotion notification</li>
+             * <li><strong>Promotion</strong>: promotional notification</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -527,7 +525,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of notifications.</p>
+             * <p>The list of notifications.</p>
              */
             public Builder notifyItemList(java.util.List<NotifyItemList> notifyItemList) {
                 this.notifyItemList = notifyItemList;
@@ -535,7 +533,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The page number of the page returned.</p>
+             * <p>The page number.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -546,7 +544,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries returned on each page.</p>
+             * <p>The number of entries per page.</p>
              * 
              * <strong>example:</strong>
              * <p>25</p>
@@ -557,7 +555,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
+             * <p>The total number of records.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

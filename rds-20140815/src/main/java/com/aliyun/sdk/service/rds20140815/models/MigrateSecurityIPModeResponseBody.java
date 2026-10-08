@@ -80,7 +80,7 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf6wjk5****</p>
@@ -91,7 +91,7 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>EF1E53AB-5625-49C7-ADF1-FBD0B6640D19</p>
@@ -102,18 +102,7 @@ public class MigrateSecurityIPModeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The whitelist mode after the change, which is the enhanced whitelist mode.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>safety</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>enhanced whitelist mode</p>
-         * <!-- --></li>
-         * </ul>
+         * <p>The whitelist mode after the switch, which is the enhanced whitelist mode.</p>
          * 
          * <strong>example:</strong>
          * <p>safety</p>

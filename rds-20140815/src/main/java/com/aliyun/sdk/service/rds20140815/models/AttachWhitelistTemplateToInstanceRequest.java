@@ -131,7 +131,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -156,7 +156,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group. For more information about resource groups, see Resource groups.</p>
+         * <p>The resource group ID. For more information about resource groups, see What is a resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy*****</p>
@@ -186,7 +186,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+         * <p>The whitelist template ID. You can call DescribeAllWhitelistTemplate to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

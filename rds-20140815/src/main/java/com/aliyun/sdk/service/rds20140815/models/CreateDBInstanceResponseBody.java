@@ -174,7 +174,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
          * <p>The internal endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</p>
+         * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -182,11 +182,12 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance ID. If the value of the <strong>Amount</strong> parameter is greater than <strong>1</strong>, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).</p>
-         * <p>For example, if the value of the <strong>Amount</strong> parameter is <strong>3</strong>, three instance IDs are returned. Examples: <code>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</code></p>
+         * <p>The instance ID. If you set the <strong>Amount</strong> parameter to a value greater than <strong>1</strong>, the number of instance IDs that corresponds to the value is returned, separated by commas.</p>
+         * <p>For example, if <strong>Amount</strong> is set to <strong>3</strong>, three instance IDs are returned. Example:
+         * <code>rm-uf6wjk5*****1，rm-uf6wjk5*****2，rm-uf6wjk5*****3</code></p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -194,10 +195,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates that the system performed a dry run.</p>
+         * <p>Indicates that a dry run is performed before the instance is created.</p>
          * <ul>
-         * <li>The value is fixed as <strong>true</strong>.</li>
-         * <li>If the system does not perform a dry run, this parameter is not returned.</li>
+         * <li>The return value is always <strong>true</strong>.</li>
+         * <li>If no dry run is performed, this parameter is not returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,15 +210,15 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request passed the dry run. Valid values:</p>
+         * <p>Indicates whether the dry run for instance creation passed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The dry run passed.</li>
+         * <li><strong>false</strong>: The dry run failed.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If the system does not perform a dry run, this parameter is not returned.</li>
-         * <li>If the request failed the dry run, an error message is returned.</li>
+         * <li>If no dry run is performed, this parameter is not returned.</li>
+         * <li>If the dry run fails, the corresponding error is returned.</li>
          * </ul>
          * </blockquote>
          * 
@@ -230,9 +231,9 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The message that indicates whether multiple instances are created.</p>
+         * <p>The message for the batch creation task.</p>
          * <blockquote>
-         * <p>The parameter is returned only when the value of the <strong>Amount</strong> parameter is greater than 1.</p>
+         * <p>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -247,7 +248,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>1007893702*****</p>
+         * <p>1007893702****</p>
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -255,7 +256,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal IP address and port number that are used to connect to the instance.</p>
+         * <p>The port number that corresponds to the internal endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -266,7 +267,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
@@ -277,13 +278,13 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the specified tag is added to the instance. Valid values:</p>
+         * <p>Indicates whether tags are successfully bound to the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The specified tag is added to the instance.</li>
-         * <li><strong>false</strong>: The specified tag fails to be added to the instance.</li>
+         * <li><strong>true</strong>: Tags are successfully bound.</li>
+         * <li><strong>false</strong>: Tags failed to be bound.</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not add a tag to the instance, this parameter is not returned.</p>
+         * <p>If no tags are bound to the instance, this parameter is not returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -295,14 +296,14 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task that is run to create multiple instances.</p>
+         * <p>The task ID of the batch creation task.</p>
          * <ul>
-         * <li>This parameter is returned only when the value of <strong>Amount</strong> is greater than 1.</li>
-         * <li>The <strong>TaskID</strong> parameter cannot be used to query a task.</li>
+         * <li>This parameter is returned only when the <strong>Amount</strong> parameter is greater than 1.</li>
+         * <li>Querying tasks by <strong>TaskId</strong> is not supported at this time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>s2365879-a9d0-55af-fgae-f2*****</p>
+         * <p>s2365879-a9d0-55af-fgae-f2****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -87,7 +87,7 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         } 
 
         /**
-         * <p>The region ID of the asset.</p>
+         * <p>The region ID of the assets that are assigned public IP addresses to query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -99,7 +99,7 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset that is assigned a public IP address. Fixed value: <strong>ecs</strong>.</p>
+         * <p>The instance type of the assets that are assigned public IP addresses to query. Set the value to <strong>ecs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -111,7 +111,7 @@ public class DescribeRCInstanceDdosCountRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the RDS Custom instance resides.</p>
+         * <p>The region ID of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>

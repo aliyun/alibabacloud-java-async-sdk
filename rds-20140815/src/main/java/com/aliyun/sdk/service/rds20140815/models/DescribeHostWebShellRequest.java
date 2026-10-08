@@ -162,7 +162,7 @@ public class DescribeHostWebShellRequest extends Request {
         } 
 
         /**
-         * <p>The username of the account that is used to log on to the host of the instance.</p>
+         * <p>The name of the account that is used to log on to the host of the RDS instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class DescribeHostWebShellRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -201,7 +201,7 @@ public class DescribeHostWebShellRequest extends Request {
         }
 
         /**
-         * <p>The instance hostname. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</p>
+         * <p>The hostname of the instance. You can call the DescribeDBInstanceIpHostname operation to query the hostname.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

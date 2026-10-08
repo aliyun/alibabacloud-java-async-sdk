@@ -145,11 +145,11 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,10 +176,10 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call theDescribeDBInstanceAttribute operation to query the most recent region list.</p>
+         * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmx**********</p>
+         * <p>rg-acfmx****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -206,7 +206,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:</p>
+         * <p>Specifies whether to enable or disable SQL Explorer (SQL Audit). Valid values:</p>
          * <ul>
          * <li><strong>Enable</strong></li>
          * <li><strong>Disabled</strong></li>

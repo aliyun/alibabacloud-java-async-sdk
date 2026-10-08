@@ -80,7 +80,10 @@ public class ModifyDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * DBInstanceId.
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -88,7 +91,10 @@ public class ModifyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * <p>The order ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>221172852******</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -96,7 +102,10 @@ public class ModifyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17F57FEE-EA4F-4337-8D2E-9C23CAA63D74</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

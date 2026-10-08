@@ -117,7 +117,7 @@ public class ModifyActionEventPolicyRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the event history feature. Valid values:</p>
+         * <p>Specifies whether to enable the historical events feature. Valid values:</p>
          * <ul>
          * <li><strong>True</strong></li>
          * <li><strong>False</strong></li>
@@ -143,7 +143,7 @@ public class ModifyActionEventPolicyRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

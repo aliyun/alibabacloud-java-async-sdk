@@ -120,7 +120,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp191w771kd3****</p>
+         * <p>rm-bp191w771k******</p>
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
@@ -129,7 +129,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -141,10 +141,10 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can leave this parameter empty.</p>
+         * <p>The resource group ID. This parameter can be left empty.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aek3dbzqbh6****</p>
+         * <p>rg-aek3dbzqb******</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

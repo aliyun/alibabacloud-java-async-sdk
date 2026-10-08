@@ -70,7 +70,7 @@ public class ModifyRCDiskSpecResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>245053924720608</p>
+         * <p>24505392472****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

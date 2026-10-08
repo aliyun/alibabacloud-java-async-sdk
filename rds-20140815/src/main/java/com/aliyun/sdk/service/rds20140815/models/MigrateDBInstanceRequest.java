@@ -215,11 +215,11 @@ public class MigrateDBInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5******</p>
+         * <p>rm-uf6wjk5xxxxxxx</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -232,7 +232,7 @@ public class MigrateDBInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dhg-4n******</p>
+         * <p>dhg-4nxxxxxxx</p>
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -241,11 +241,11 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The time when you want the system to start the migration. Valid values:</p>
+         * <p>The migration time. Valid values:</p>
          * <ul>
-         * <li><strong>Immediately</strong>: The system immediately starts the migration. This is the default value.</li>
-         * <li><strong>MaintainTime</strong>: The system starts the migration during the specified maintenance window.</li>
-         * <li><strong>Specified</strong>: The system starts the migration at the specified point in time.</li>
+         * <li><strong>Immediately</strong>: migrates the instance immediately. This is the default value.</li>
+         * <li><strong>MaintainTime</strong>: migrates the instance during the maintenance window.</li>
+         * <li><strong>Specified</strong>: migrates the instance at a specified time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,7 +267,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -297,9 +297,9 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The point in time when you want the system to start the migration. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The specified switchover time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <blockquote>
-         * <p>This parameter must be specified when you set <strong>EffectiveTime</strong> to <strong>Specified</strong>.</p>
+         * <p>This parameter is required when <strong>EffectiveTime</strong> is set to <strong>Specified</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,10 +312,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host to which you want to migrate the primary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * <p>The ID of the destination host to which the primary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp******</p>
+         * <p>i-bpxxxxxxx1</p>
          */
         public Builder targetDedicatedHostIdForMaster(String targetDedicatedHostIdForMaster) {
             this.putQueryParameter("TargetDedicatedHostIdForMaster", targetDedicatedHostIdForMaster);
@@ -324,10 +324,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the host to which you want to migrate the secondary instance. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
+         * <p>The ID of the destination host to which the secondary instance is migrated. You can call the DescribeDedicatedHosts operation to query the host ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp******</p>
+         * <p>i-bpxxxxxxx2</p>
          */
         public Builder targetDedicatedHostIdForSlave(String targetDedicatedHostIdForSlave) {
             this.putQueryParameter("TargetDedicatedHostIdForSlave", targetDedicatedHostIdForSlave);
@@ -339,7 +339,7 @@ public class MigrateDBInstanceRequest extends Request {
          * <p>The zone ID of the secondary node.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-h</p>
+         * <p>cn-hangzhou-j</p>
          */
         public Builder zoneIdForFollower(String zoneIdForFollower) {
             this.putQueryParameter("ZoneIdForFollower", zoneIdForFollower);
@@ -348,10 +348,10 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The zone ID of the logger instance.</p>
+         * <p>The zone ID of the log node.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou-i</p>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneIdForLog(String zoneIdForLog) {
             this.putQueryParameter("ZoneIdForLog", zoneIdForLog);

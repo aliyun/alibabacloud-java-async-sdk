@@ -88,11 +88,7 @@ public class DescribeRCSecurityGroupListRequest extends Request {
         } 
 
         /**
-         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,10 +97,7 @@ public class DescribeRCSecurityGroupListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the security group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>sg-2ze27hs990o2hn9****</p>
+         * SecurityGroupId.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -113,10 +106,7 @@ public class DescribeRCSecurityGroupListRequest extends Request {
         }
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>vpc-bp1opxu1zkhn****</p>
+         * VpcId.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

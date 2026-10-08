@@ -189,7 +189,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the destination region within which the cross-region backup file is stored. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.</p>
+         * <p>The ID of the destination region for cross-region backup. You can call the DescribeCrossRegionBackupDBInstance operation to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -205,7 +205,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,7 +214,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +236,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The page number. Valid values: any non-zero positive integer.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -249,7 +249,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong></li>
          * <li><strong>50</strong></li>
@@ -267,7 +267,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID of the instance. You can call the DescribeRegions operation to query the region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -298,7 +298,7 @@ public class DescribeCrossRegionLogBackupFilesRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

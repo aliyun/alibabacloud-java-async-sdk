@@ -106,14 +106,14 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The payment type.</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>Valid value if the new billing method is pay-as-you-go: POSTPAY</li>
-         * <li>Valid value if the new billing method is subscription: PREPAY</li>
+         * <li>POSTPAY: pay-as-you-go</li>
+         * <li>PREPAY: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Prepaid</p>
+         * <p>POSTPAY</p>
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -124,7 +124,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -134,7 +134,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         /**
          * <p>The expiration time.</p>
          * <blockquote>
-         * <p>If you call this operation to change the billing method of an instance from subscription to pay-as-you-go, this parameter is not returned.</p>
+         * <p>This parameter is not returned if the billing method is changed to pay-as-you-go.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
          * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>205157600280623</p>
+         * <p>20515760028****</p>
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -157,7 +157,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5E6E09DE-5B12-4BFF-A55E-1C86EDE06D9A</p>

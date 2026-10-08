@@ -106,7 +106,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details about the instance.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned on the current page.</p>
+         * <p>The number of instances on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -136,7 +136,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>23907437-79B9-411A-9EE6-75A8F0F1C619</p>
@@ -147,7 +147,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of instances returned by the query.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -268,10 +268,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The CPU utilization of the instance in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.70</p>
+             * CPUUsage.
              */
             public Builder CPUUsage(String CPUUsage) {
                 this.CPUUsage = CPUUsage;
@@ -279,10 +276,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>DatabaseTest</p>
+             * DBInstanceDescription.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -290,10 +284,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5xxxxxx</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -301,10 +292,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk usage of the instance in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>14.56</p>
+             * DiskUsage.
              */
             public Builder diskUsage(String diskUsage) {
                 this.diskUsage = diskUsage;
@@ -312,10 +300,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The IOPS usage of the instance in percentage.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.15</p>
+             * IOPSUsage.
              */
             public Builder IOPSUsage(String IOPSUsage) {
                 this.IOPSUsage = IOPSUsage;
@@ -323,10 +308,7 @@ public class DescribeDBInstancesByPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of sessions.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.10</p>
+             * SessionUsage.
              */
             public Builder sessionUsage(String sessionUsage) {
                 this.sessionUsage = sessionUsage;

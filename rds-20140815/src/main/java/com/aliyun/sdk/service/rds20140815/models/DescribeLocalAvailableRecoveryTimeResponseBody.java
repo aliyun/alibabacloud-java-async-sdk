@@ -96,7 +96,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-bp1f****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -104,10 +104,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start of the time range to which the instance can be restored.</p>
+         * <p>The start time of the restorable time range for backups.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-03-16T07:59:18Z</p>
+         * <p>2023-09-11T09:48:52Z</p>
          */
         public Builder recoveryBeginTime(String recoveryBeginTime) {
             this.recoveryBeginTime = recoveryBeginTime;
@@ -115,10 +115,10 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end of the time range to which the instance can be restored.</p>
+         * <p>The end time of the restorable time range for backups.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-03-20T08:41:29Z</p>
+         * <p>2023-09-18T08:03:09Z</p>
          */
         public Builder recoveryEndTime(String recoveryEndTime) {
             this.recoveryEndTime = recoveryEndTime;
@@ -129,7 +129,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>14E986AC-0F27-4FFB-8EED-9A8A3A2A0309</p>
+         * <p>291534CC-922B-55D5-8657-B29****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

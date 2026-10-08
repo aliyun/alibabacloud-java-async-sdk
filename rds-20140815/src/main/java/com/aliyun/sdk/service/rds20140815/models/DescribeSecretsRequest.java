@@ -217,13 +217,13 @@ public class DescribeSecretsRequest extends Request {
         } 
 
         /**
-         * <p>The language of the text within the response. Valid values:</p>
+         * <p>The language of the response. Valid values:</p>
          * <ul>
          * <li><strong>zh-CN</strong>: Chinese</li>
          * <li><strong>en-US</strong>: English</li>
          * </ul>
          * <blockquote>
-         * <p>The default value is <strong>en-US</strong>.</p>
+         * <p>Default value: <strong>en-US</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -236,10 +236,10 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz*****</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -251,7 +251,7 @@ public class DescribeSecretsRequest extends Request {
          * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-xjkljjxxxxx</p>
+         * <p>rm-xjkljj****</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -260,9 +260,9 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * <p>The database engine of the database.</p>
+         * <p>The database engine type.</p>
          * <blockquote>
-         * <p>Only MySQL is supported.</p>
+         * <p>This parameter currently supports only the value MySQL.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -294,9 +294,9 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
          * <blockquote>
-         * <p>The default value is 1.</p>
+         * <p>Default value: 1.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -323,7 +323,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID.</p>
+         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +336,7 @@ public class DescribeSecretsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs.</p>
+         * <p>The resource group ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxypivk***</p>

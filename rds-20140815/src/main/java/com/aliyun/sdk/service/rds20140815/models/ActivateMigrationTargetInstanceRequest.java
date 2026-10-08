@@ -116,7 +116,7 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully perform a switchover. Set the value to 1. The value 1 specifies a forceful switchover.</p>
+         * <p>Set this parameter to 1, which specifies a forced switchover.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,8 +162,8 @@ public class ActivateMigrationTargetInstanceRequest extends Request {
         }
 
         /**
-         * <p>The time when you want to perform the switchover.</p>
-         * <p>Set the value to 0. The value 0 specifies an immediate switchover.</p>
+         * <p>The switchover time mode for cloud migration.</p>
+         * <p>Set this parameter to 0, which specifies an immediate switchover.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

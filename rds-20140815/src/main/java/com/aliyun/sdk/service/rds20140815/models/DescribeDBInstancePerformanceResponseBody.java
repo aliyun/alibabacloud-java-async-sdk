@@ -122,7 +122,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -130,7 +130,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2012-06-19T15:00Z</p>
@@ -141,7 +141,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine type.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -152,7 +152,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the performance metrics.</p>
+         * PerformanceKeys.
          */
         public Builder performanceKeys(PerformanceKeys performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -171,7 +171,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2012-06-10T15:00Z</p>
@@ -240,10 +240,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The date and time when the value of the performance metric was recorded. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2011-05-30T03:29:00Z</p>
+             * Date.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -251,10 +248,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0.0&amp;13.6</p>
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -401,10 +395,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the performance metric.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>MySQL_Sessions</p>
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -412,10 +403,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unit of the performance metrics.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>KB</p>
+             * Unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -423,13 +411,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The format in which the value of the performance metric is returned.</p>
-             * <blockquote>
-             * <p> If a performance metric value consists of multiple fields, the values are separated with ampersands (&amp;). Example: com_delete&amp;com_insert&amp;com_insert_select&amp;com_replace.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>recv_k&amp;sent_k</p>
+             * ValueFormat.
              */
             public Builder valueFormat(String valueFormat) {
                 this.valueFormat = valueFormat;
@@ -437,7 +419,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The performance metric values.</p>
+             * Values.
              */
             public Builder values(Values values) {
                 this.values = values;

@@ -106,7 +106,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -117,7 +117,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version.</p>
          * 
          * <strong>example:</strong>
          * <p>8.0</p>
@@ -139,7 +139,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the parameters.</p>
+         * Parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -268,10 +268,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The valid values of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[0-1024]</p>
+             * CheckingCode.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -279,14 +276,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the parameter can be modified. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * ForceModify.
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -294,14 +284,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you must restart the instance for the modifications to take effect. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * ForceRestart.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -309,10 +292,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Page numbers of multi blocks reading once in some ddl query.</p>
+             * ParameterDescription.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -320,10 +300,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>loose_multi_blocks_ddl_count</p>
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -331,10 +308,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default value of the parameter.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
+             * ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

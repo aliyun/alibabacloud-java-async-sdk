@@ -233,10 +233,10 @@ public class CreateSecretRequest extends Request {
         } 
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz*****</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -245,11 +245,11 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-sdfljk123***</p>
+         * <p>rm-sdfljk123****</p>
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.putQueryParameter("DbInstanceId", dbInstanceId);
@@ -258,7 +258,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>users</p>
@@ -282,9 +282,9 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The engine of the database.</p>
+         * <p>The database engine type.</p>
          * <blockquote>
-         * <p>Only MySQL is supported.</p>
+         * <p>This parameter currently supports only the value MySQL.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -307,7 +307,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The password that is used to access the database.</p>
+         * <p>The password of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,7 +320,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
+         * <p>The region ID. You can call the DescribeDBInstanceAttribute operation to query the region ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -333,11 +333,11 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the ID of the resource group.</p>
+         * <p>The ID of the resource group to which the instance belongs. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmxypivk***</p>
+         * <p>rg-acfmxypivk****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -376,7 +376,7 @@ public class CreateSecretRequest extends Request {
         }
 
         /**
-         * <p>The username that is used to access the database.</p>
+         * <p>The username of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

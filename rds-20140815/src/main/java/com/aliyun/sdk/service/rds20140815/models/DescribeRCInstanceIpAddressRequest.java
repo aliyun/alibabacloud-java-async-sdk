@@ -185,7 +185,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Default value: 1. Pages start from page 1.</p>
+         * <p>The page number of the page to return. Default value: 1, which indicates that the first page is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -197,7 +197,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the asset.</p>
+         * <p>The region ID of the assets that are assigned public IP addresses to query.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -209,10 +209,10 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The DDoS mitigation status of the asset. Valid values:</p>
+         * <p>The DDoS mitigation status of the assets that are assigned public IP addresses to query. Valid values:</p>
          * <ul>
-         * <li><strong>defense</strong>: queries assets for which traffic scrubbing is performed.</li>
-         * <li><strong>blackhole</strong>: queries assets for which blackhole filtering is triggered.</li>
+         * <li><strong>defense</strong>: Cleaning. Assets that are assigned public IP addresses for which Anti-DDoS Origin scrubs traffic are queried.</li>
+         * <li><strong>blackhole</strong>: Black Hole Activated. Assets that are assigned public IP addresses that are in the blackhole filtering status are queried.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,7 +225,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the RDS Custom instance to which the asset to query is added.</p>
+         * <p>The instance ID of the Custom instance to which the assets that are assigned public IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-y6dn4pyuub1r89******</p>
@@ -237,7 +237,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The IP address of the asset to query.</p>
+         * <p>The IP address of the assets that are assigned public IP addresses to query.</p>
          * 
          * <strong>example:</strong>
          * <p>39.105.XXX.XXX</p>
@@ -249,7 +249,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The name of the RDS Custom instance to which the asset to query is added.</p>
+         * <p>The name of the Custom instance to which the assets that are assigned public IP addresses belong.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-y6dn4pyuub1r89******</p>
@@ -261,7 +261,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The type of the asset that is assigned a public IP address. Set the value to <strong>ecs</strong>.</p>
+         * <p>The instance type of the assets that are assigned public IP addresses to query. Set the value to <strong>ecs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -273,7 +273,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The number of instances on each page.</p>
+         * <p>Settings for paged query. The number of instances to return on each page for paging.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -285,7 +285,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region in which the RDS Custom instance resides.</p>
+         * <p>The region ID of the Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -297,7 +297,7 @@ public class DescribeRCInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * <p>The type of the resource. Set the value to <strong>ecs</strong>.</p>
+         * <p>The resource type. Set the value to <strong>ecs</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>

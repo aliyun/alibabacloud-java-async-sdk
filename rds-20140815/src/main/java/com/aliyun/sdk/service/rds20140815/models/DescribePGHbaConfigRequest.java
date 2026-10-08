@@ -144,10 +144,7 @@ public class DescribePGHbaConfigRequest extends Request {
         } 
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -156,11 +153,7 @@ public class DescribePGHbaConfigRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>pgm-bp1lymyn1v3i****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -187,10 +180,7 @@ public class DescribePGHbaConfigRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

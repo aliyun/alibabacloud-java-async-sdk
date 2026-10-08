@@ -132,11 +132,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         } 
 
         /**
-         * <p>The activity ID.</p>
+         * <p>The ID of the ticket that was created.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1711510887******</p>
+         * <p>171151088708****</p>
          */
         public Builder activityId(Long activityId) {
             this.putQueryParameter("ActivityId", activityId);
@@ -154,11 +154,11 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * <p>The promotion ID. You can call the GetResourcePrice operation to query the promotion ID.</p>
+         * <p>The promotion ID. You can call the GetResourcePrice operation to obtain this value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2000001******</p>
+         * <p>200000199****</p>
          */
         public Builder promotionId(Long promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
@@ -167,7 +167,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

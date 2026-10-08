@@ -174,7 +174,7 @@ public class DescribeMarketingActivityRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class DescribeMarketingActivityRequest extends Request {
 
         /**
          * <ul>
-         * <li>China site: 26842</li>
+         * <li>Chinese site: 26842</li>
          * <li>International site: 26888</li>
          * </ul>
          * 
@@ -223,7 +223,7 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the available regions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,7 +266,7 @@ public class DescribeMarketingActivityRequest extends Request {
         }
 
         /**
-         * <p>The service name.</p>
+         * <p>The product name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

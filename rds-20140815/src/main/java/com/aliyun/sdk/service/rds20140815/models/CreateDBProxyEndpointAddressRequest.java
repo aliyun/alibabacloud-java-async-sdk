@@ -189,7 +189,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * <p>The prefix of the proxy endpoint Enter a custom prefix.</p>
+         * <p>The prefix of the new database proxy endpoint. Specify a custom value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,11 +202,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-t4n3axxxxx</p>
+         * <p>rm-t4n3****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -215,13 +215,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The network type of the proxy endpoint. Valid values:</p>
+         * <p>The network type of the new database proxy endpoint. Valid values:</p>
          * <ul>
          * <li><strong>Public</strong>: Internet</li>
-         * <li><strong>VPC</strong>: Virtual Private Cloud (VPC)</li>
-         * <li><strong>Classic</strong>: classic network</li>
+         * <li><strong>VPC</strong> (default): virtual private cloud (VPC)</li>
          * </ul>
-         * <p>Default value: <strong>Classic</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -234,11 +232,11 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The proxy endpoint ID. You can call the DescribeDBProxyEndpoint operation to query the proxy endpoint ID.</p>
+         * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ta9um4xxxxx</p>
+         * <p>ta9um4****</p>
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -259,10 +257,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The port number that is associated with the proxy endpoint.</p>
+         * <p>The port of the new database proxy endpoint. Default value:</p>
          * <ul>
-         * <li>If the instance runs MySQL, the default value is <strong>3306</strong>.</li>
-         * <li>If the instance runs PostgreSQL, the default value is <strong>5432</strong>.</li>
+         * <li>MySQL: <strong>3306</strong></li>
+         * <li>PostgreSQL: <strong>5432</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -275,7 +273,7 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -287,10 +285,10 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,13 +297,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the VPC to which the proxy endpoint belongs. You can call the DescribeDBInstanceAttribute operation to query the information.</p>
+         * <p>The VPC ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the VPC ID.</p>
          * <blockquote>
-         * <p> This parameter must be specified when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
+         * <p>This parameter is required when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bpxxxxxx</p>
+         * <p>vpc-bp****</p>
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -314,13 +312,13 @@ public class CreateDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
+         * <p>The vSwitch ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the vSwitch ID.</p>
          * <blockquote>
-         * <p> This parameter must be specified when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
+         * <p>This parameter is required when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>vsw-bpxxxxxx</p>
+         * <p>vsw-bp****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

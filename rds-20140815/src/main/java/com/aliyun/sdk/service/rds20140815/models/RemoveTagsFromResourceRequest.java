@@ -213,7 +213,7 @@ public class RemoveTagsFromResourceRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -226,7 +226,7 @@ public class RemoveTagsFromResourceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -253,7 +253,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -266,10 +266,10 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the ListResourceGroups operation to query the resource group ID.</p>
+         * <p>The resource group ID. You can call the ListResourceGroups operation to obtain the resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -296,9 +296,9 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * <p>A set of a TagKey and a TagValue that you use to unbind the tag. Format: {&quot;key1&quot;:&quot;value1&quot;}.</p>
+         * <p>The tags to unbind, including TagKey and TagValue. Format: {&quot;key1&quot;:&quot;value1&quot;}.</p>
          * <blockquote>
-         * <p> You cannot specify an empty string for TagKey. You can specify an empty string for TagValue.</p>
+         * <p>TagKey cannot be empty. TagValue can be empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -311,7 +311,7 @@ public class RemoveTagsFromResourceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the proxy mode.</p>
+         * <p>The proxy mode ID.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -382,7 +382,7 @@ public class RemoveTagsFromResourceRequest extends Request {
             } 
 
             /**
-             * <p>The TagKey of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * <p>The TagKey of the first tag to unbind. The tags to unbind include TagKey and TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty. TagValue can be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>key1</p>
@@ -393,7 +393,7 @@ public class RemoveTagsFromResourceRequest extends Request {
             }
 
             /**
-             * <p>The TagValue of the first tag that you want to unbind. Each tag consists of a TagKey and a TagValue. You can specify up to five tags in a single request. You cannot specify an empty string as the tag key. You can specify an empty string as the tag value.</p>
+             * <p>The TagValue of the first tag to unbind. The tags to unbind include TagKey and TagValue. You can specify up to 5 pairs at a time. TagKey cannot be empty. TagValue can be empty.</p>
              * 
              * <strong>example:</strong>
              * <p>value1</p>

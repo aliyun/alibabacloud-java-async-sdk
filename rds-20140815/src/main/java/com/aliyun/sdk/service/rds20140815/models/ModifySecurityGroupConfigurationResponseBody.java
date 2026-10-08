@@ -83,7 +83,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -91,7 +91,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of information about the ECS security group.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -181,14 +181,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The network type of the ECS security group. Valid values:</p>
-             * <ul>
-             * <li><strong>Classic</strong></li>
-             * <li><strong>VPC</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>VPC</p>
+             * NetworkType.
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -196,10 +189,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -207,10 +197,7 @@ public class ModifySecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the ECS security group.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sg-xxxxxxx</p>
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

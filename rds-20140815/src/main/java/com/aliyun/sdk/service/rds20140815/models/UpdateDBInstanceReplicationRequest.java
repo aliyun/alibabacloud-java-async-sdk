@@ -179,7 +179,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         } 
 
         /**
-         * <p>复制通道名称，用于标识复制链路</p>
+         * <p>The name of the replication channel, which is used to identify the replication channel.</p>
          * 
          * <strong>example:</strong>
          * <p>replication-channel-001</p>
@@ -191,7 +191,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>目标RDS实例ID，复制链路将在此实例上更新</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +204,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>主数据库主机地址，支持IP或域名，仅在需要更新时提供</p>
+         * <p>The host address of the primary database. IP addresses and domain names are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.100</p>
@@ -216,7 +216,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>主数据库密码，用于验证复制用户，需要提前经过Base64编码，仅在需要更新时提供</p>
+         * <p>The password of the primary database, which is used to authenticate the replication user. The password must be Base64-encoded in advance.</p>
          * 
          * <strong>example:</strong>
          * <p>U2VjdXJlUGFzczEyMyE=</p>
@@ -228,7 +228,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>主数据库端口号，通常为3306（MySQL）或5432（PostgreSQL），仅在需要更新时提供</p>
+         * <p>The port number of the primary database. The default port is 3306 for MySQL.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -240,7 +240,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>主数据库用户名，用于建立复制连接，仅在需要更新时提供</p>
+         * <p>The username of the primary database, which is used to establish a replication connection. Specify this parameter only when an update is required.</p>
          * 
          * <strong>example:</strong>
          * <p>repl_user</p>
@@ -252,7 +252,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>操作类型，指定对复制链路执行的操作</p>
+         * <p>The operation type. Specifies the operation to perform on the replication channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class UpdateDBInstanceReplicationRequest extends Request {
         }
 
         /**
-         * <p>地域ID，表示RDS实例所在的地域</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

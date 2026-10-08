@@ -67,7 +67,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of SSL encryption settings.</p>
+         * DbProxyCertListItems.
          */
         public Builder dbProxyCertListItems(DbProxyCertListItems dbProxyCertListItems) {
             this.dbProxyCertListItems = dbProxyCertListItems;
@@ -183,10 +183,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The dedicated proxy endpoint for which SSL encryption is enabled.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test1234.rwlb.rds.aliyuncs.com</p>
+             * CertCommonName.
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -194,10 +191,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-t4n3axxxxx</p>
+             * DbInstanceName.
              */
             public Builder dbInstanceName(String dbInstanceName) {
                 this.dbInstanceName = dbInstanceName;
@@ -205,10 +199,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the dedicated proxy endpoint.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>buxxxxxxx</p>
+             * EndpointName.
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -216,10 +207,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default identifier of the dedicated proxy endpoint. The value is fixed as <strong>RWSplit</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>RWSplit</p>
+             * EndpointType.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -227,10 +215,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time at which the certificate expires.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-12-16T08:43:20Z</p>
+             * SslExpiredTime.
              */
             public Builder sslExpiredTime(String sslExpiredTime) {
                 this.sslExpiredTime = sslExpiredTime;
@@ -284,7 +269,7 @@ public class GetDbProxyInstanceSslResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An array that consists of SSL encryption settings.</p>
+             * DbProxyCertListItems.
              */
             public Builder dbProxyCertListItems(java.util.List<DbProxyCertListItemsDbProxyCertListItems> dbProxyCertListItems) {
                 this.dbProxyCertListItems = dbProxyCertListItems;

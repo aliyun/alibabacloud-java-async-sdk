@@ -54,7 +54,7 @@ public class CreateOnlineDatabaseTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1B2EBD14-36F6-4645-A3F9-DE19D321C18F</p>

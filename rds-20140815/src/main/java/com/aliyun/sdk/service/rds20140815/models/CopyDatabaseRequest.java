@@ -157,10 +157,10 @@ public class CopyDatabaseRequest extends Request {
         } 
 
         /**
-         * <p>The instance name.</p>
+         * <p>The instance name. <strong>This parameter is required</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5******</p>
+         * <p>rm-wz9s06u4drm******</p>
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -169,7 +169,7 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The destination database name.</p>
+         * <p>The destination database name. <strong>This parameter is required</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>db2***</p>
@@ -202,7 +202,7 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy*****</p>
@@ -232,7 +232,7 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * <p>The source database name.</p>
+         * <p>The source database name. <strong>This parameter is required</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>db1***</p>

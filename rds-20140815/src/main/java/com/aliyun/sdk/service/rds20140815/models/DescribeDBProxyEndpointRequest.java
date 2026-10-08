@@ -158,7 +158,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * <p>The proxy endpoint that you want to query. You can call the DescribeDBProxy interface to query the proxy endpoint.</p>
+         * <p>The proxy endpoint. You can call the <a href="https://help.aliyun.com/document_detail/610507.html">DescribeDBProxy</a> operation to query the proxy endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>testproxy****.rwlb.rds.aliyuncs.com</p>
@@ -183,7 +183,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * <p>The name of the proxy terminal. You can call the DescribeDBProxy interface to query the name of the proxy terminal.</p>
+         * <p>The proxy endpoint name. You can call the <a href="https://help.aliyun.com/document_detail/610507.html">DescribeDBProxy</a> operation to query the proxy endpoint name.</p>
          * 
          * <strong>example:</strong>
          * <p>keaxncrjluwu0gue****</p>
@@ -195,7 +195,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * <p>A reserved parameter. You do not need to specify this parameter.</p>
+         * <p>A reserved parameter. You do not need to configure this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>
@@ -216,7 +216,7 @@ public class DescribeDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

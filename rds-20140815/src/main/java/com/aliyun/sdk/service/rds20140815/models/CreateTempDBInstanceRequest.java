@@ -160,11 +160,11 @@ public class CreateTempDBInstanceRequest extends Request {
         /**
          * <p>The backup set ID. You can call the DescribeBackups operation to query the backup set ID.</p>
          * <blockquote>
-         * <p> You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</p>
+         * <p>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>603******</p>
+         * <p>1883****</p>
          */
         public Builder backupId(Long backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -177,7 +177,7 @@ public class CreateTempDBInstanceRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5******</p>
+         * <p>rm-bp13****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +207,7 @@ public class CreateTempDBInstanceRequest extends Request {
          * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -234,16 +234,16 @@ public class CreateTempDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The specified point in time within the backup retention period. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>A point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
          * <blockquote>
          * <ul>
-         * <li>The time can be set to a point in time within the last seven days and must be more than 30 minutes earlier than the current time. The default time zone is UTC.</li>
-         * <li>You must specify at least one of the <strong>BackupId</strong> and <strong>RestoreTime</strong> parameters.</li>
+         * <li>You can specify any point in time within the last 7 days that is at least 30 minutes earlier than the current time. The default time zone is UTC.</li>
+         * <li>You must specify at least one of <strong>BackupId</strong> and <strong>RestoreTime</strong>.</li>
          * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>2011-06-11T16:00:00Z</p>
+         * <p>2023-06-11T16:00:00Z</p>
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);

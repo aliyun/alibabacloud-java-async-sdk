@@ -106,10 +106,10 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code returned.</p>
+         * <p>The response code.</p>
          * 
          * <strong>example:</strong>
-         * <p>NotExists.InstanceId</p>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -117,10 +117,14 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response result set.</p>
+         * <p>The response data.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;SupportOnlineResizeDisk&quot;:true,&quot;DBInstanceName&quot;:&quot;rm-uf6wjk5xxxxxxx&quot;}</p>
+         * <p>{
+         *       &quot;SupportOnlineResizeDisk&quot;: true,
+         *       &quot;DBInstanceName&quot;: &quot;rm-bp****&quot;,
+         *       &quot;maxSupportDiskSizeGB&quot;: 6144
+         * }</p>
          */
         public Builder data(String data) {
             this.data = data;
@@ -128,10 +132,10 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response code.</p>
+         * <p>The message returned for the response code.</p>
          * 
          * <strong>example:</strong>
-         * <p>successful</p>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,7 +143,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8B993DA9-5272-5414-94E3-4CA8BA0146C2</p>

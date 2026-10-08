@@ -119,7 +119,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of log files.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -127,7 +127,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the page returned.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total size of log files. Unit: bytes.</p>
+         * <p>The total size of all log files. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2300</p>
@@ -292,10 +292,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The HTTP-based download URL of the log file. If the log file cannot be downloaded, an empty string is returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
+             * DownloadLink.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -303,10 +300,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the log file. Unit: bytes.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>788480</p>
+             * FileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -314,10 +308,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned. This URL is valid for one hour.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx">http://rdsbak-hz-v3.oss-cn-hangzhou.aliyuncs.com/xxxxx</a></p>
+             * IntranetDownloadLink.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -325,10 +316,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-01T15:04:13Z</p>
+             * LinkExpiredTime.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -336,10 +324,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-31T08:40Z</p>
+             * LogBeginTime.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -347,10 +332,7 @@ public class DescribeLogBackupFilesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end time of the log file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-10-31T08:40Z</p>
+             * LogEndTime.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;

@@ -80,10 +80,10 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The product code. Valid values:</p>
+         * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li>rds: The instance is a subscription instance.</li>
-         * <li>bards: The instance is a pay-as-you-go instance.</li>
+         * <li>rds: subscription</li>
+         * <li>bards: pay-as-you-go</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The configuration details of the product.</p>
+         * <p>The commodity configuration details.</p>
          */
         public Builder items(java.util.Map<String, ?> items) {
             this.items = items;
@@ -103,7 +103,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>5DFFE9EC-3369-5937-A4E2-507C0C86A4C6</p>

@@ -129,9 +129,6 @@ public class DescribeRCInvocationResultsResponseBody extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AAAAAdDWBF2</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;

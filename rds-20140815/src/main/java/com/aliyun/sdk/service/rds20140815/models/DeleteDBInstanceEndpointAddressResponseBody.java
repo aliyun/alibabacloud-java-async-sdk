@@ -75,7 +75,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>
@@ -155,7 +155,7 @@ public class DeleteDBInstanceEndpointAddressResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rm-****</p>

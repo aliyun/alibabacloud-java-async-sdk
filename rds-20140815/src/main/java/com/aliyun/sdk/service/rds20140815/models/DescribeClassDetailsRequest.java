@@ -190,7 +190,7 @@ public class DescribeClassDetailsRequest extends Request {
         } 
 
         /**
-         * <p>The code of the instance type.</p>
+         * <p>The instance type code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,10 +203,10 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCz*****</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -215,12 +215,16 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The commodity code of the instance. Valid values:</p>
+         * <p>The commodity code. Valid values:</p>
          * <ul>
-         * <li><strong>bards_intl</strong>: The instance is a pay-as-you-go primary instance.</li>
-         * <li><strong>rds_intl</strong>: The instance is a subscription primary instance.</li>
-         * <li><strong>rords_intl</strong>: The instance is a pay-as-you-go read-only instance.</li>
-         * <li><strong>rds_rordspre_public_intl</strong>: The instance is a subscription read-only instance.</li>
+         * <li><strong>bards</strong>: pay-as-you-go primary instance</li>
+         * <li><strong>rds</strong>: subscription primary instance</li>
+         * <li><strong>rords</strong>: pay-as-you-go read-only instance</li>
+         * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance</li>
+         * <li><strong>bards_intl</strong>: pay-as-you-go primary instance</li>
+         * <li><strong>rds_intl</strong>: subscription primary instance</li>
+         * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance</li>
+         * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -234,7 +238,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +251,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +273,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,10 +286,10 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
+         * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain this value.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

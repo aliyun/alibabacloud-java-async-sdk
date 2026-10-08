@@ -83,7 +83,7 @@ public class CreateRCDiskResponseBody extends TeaModel {
          * <p>The cloud disk ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rcd-2zegrjtnkp6dqbe1egca</p>
+         * <p>rcd-2zegrjtnkp6dqbe1****</p>
          */
         public Builder diskId(String diskId) {
             this.diskId = diskId;

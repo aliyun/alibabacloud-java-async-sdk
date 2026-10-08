@@ -88,11 +88,11 @@ public class DeleteGadInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the global active database cluster. You can call the GadInstanceName operation to query the cluster ID.</p>
+         * <p>The ID of the ApsaraDB RDS global active database cluster that you want to delete. You can call DescribeGadInstances to query the cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>gad-rm-bp1npi2j8********</p>
+         * <p>gad-rm-bp1npi2j8****</p>
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -101,7 +101,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the central node of the global active database cluster. The central node refers to the primary node. You can call the DescribeGadInstances operation to query the region ID.</p>
+         * <p>The region ID of the central node (primary node) in the cluster. You can call DescribeGadInstances to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -116,7 +116,7 @@ public class DeleteGadInstanceRequest extends Request {
          * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

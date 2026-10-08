@@ -135,7 +135,7 @@ public class DescribeOssDownloadsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -144,7 +144,7 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+         * <p>The ID of the migration task. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,10 +166,10 @@ public class DescribeOssDownloadsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

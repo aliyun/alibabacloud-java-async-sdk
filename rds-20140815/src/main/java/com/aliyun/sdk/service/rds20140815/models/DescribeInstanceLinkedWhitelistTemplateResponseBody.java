@@ -119,13 +119,13 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         } 
 
         /**
-         * <p>The response code returned. Valid values:</p>
+         * <p>The response code. Valid values:</p>
          * <ul>
-         * <li><strong>200</strong>: success</li>
-         * <li><strong>400</strong>: client error</li>
-         * <li><strong>401</strong>: identity authentication failed</li>
-         * <li><strong>404</strong>: request page not found</li>
-         * <li><strong>500</strong>: server error</li>
+         * <li><strong>200</strong>: Normal.</li>
+         * <li><strong>400</strong>: Client fault.</li>
+         * <li><strong>401</strong>: Authentication failed.</li>
+         * <li><strong>404</strong>: Request page not found.</li>
+         * <li><strong>500</strong>: Server fault.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data list.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -145,11 +145,11 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * <p>The HTTP status code returned. Valid values:</p>
+         * <p>The HTTP status code. Valid values:</p>
          * <ul>
-         * <li><strong>200</strong>: success</li>
-         * <li><strong>400</strong>: client error</li>
-         * <li><strong>500</strong>: server error</li>
+         * <li><strong>200</strong>: Success.</li>
+         * <li><strong>400</strong>: Client error.</li>
+         * <li><strong>500</strong>: Server error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -183,10 +183,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: The request was successful.</li>
+         * <li><strong>false</strong>: The request failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * <p>The IP addresses.</p>
+             * <p>The IP address list.</p>
              * 
              * <strong>example:</strong>
              * <p>12.0.X.X,10.2.X.X</p>
@@ -412,7 +412,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
              * <p>The instance name.</p>
              * 
              * <strong>example:</strong>
-             * <p>rm-bp191w771kd3****</p>
+             * <p>rm-bp191w771k******</p>
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -420,7 +420,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
             }
 
             /**
-             * <p>The information about whitelists that are returned by page.</p>
+             * <p>The whitelist template information returned in a paged manner.</p>
              */
             public Builder templates(java.util.List<Templates> templates) {
                 this.templates = templates;

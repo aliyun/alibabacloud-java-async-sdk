@@ -67,7 +67,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The information about the clusters.</p>
+         * Clusters.
          */
         public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
@@ -75,10 +75,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2875D608-A228-53D7-B8C9-35F13EDCF36D</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,10 +201,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test01</p>
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -215,10 +209,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the cluster was created.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-30T02:16:04Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -234,17 +225,7 @@ public class DescribeRCClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cluster status. Valid values:</p>
-             * <ul>
-             * <li><strong>Pending</strong></li>
-             * <li><strong>Running</strong></li>
-             * <li><strong>Starting</strong></li>
-             * <li><strong>Stopping</strong></li>
-             * <li><strong>Stopped</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

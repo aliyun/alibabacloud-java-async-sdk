@@ -133,8 +133,8 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         /**
          * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Auto:</strong> automatic update.</li>
-         * <li><strong>Manual</strong>: manual update. ApsaraDB RDS automatically updates the current minor engine version of the instance only when the current minor engine version is phased out.</li>
+         * <li><strong>Auto</strong>: Minor engine versions are automatically updated.</li>
+         * <li><strong>Manual</strong>: Minor engine versions are not automatically updated. A minor engine version is forcefully updated only when the current version is discontinued.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -151,7 +151,7 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,11 +160,11 @@ public class ModifyDBInstanceAutoUpgradeMinorVersionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

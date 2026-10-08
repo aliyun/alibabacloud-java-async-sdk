@@ -107,7 +107,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1979008652307170</p>
@@ -119,7 +119,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
 
         /**
          * <ul>
-         * <li>China site: 26842</li>
+         * <li>Chinese site: 26842</li>
          * <li>International site: 26888</li>
          * </ul>
          * 
@@ -132,7 +132,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The activity parameters</p>
+         * <p>The campaign parameters.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -151,7 +151,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -546,12 +546,12 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The RDS edition of the instance. Valid values:</p>
+             * <p>The instance edition. Valid values:</p>
              * <ul>
-             * <li><strong>Basic</strong>: RDS Basic Edition</li>
-             * <li><strong>HighAvailability</strong>: RDS High-availability Edition</li>
-             * <li><strong>AlwaysOn</strong>: RDS Cluster Edition</li>
-             * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+             * <li><strong>Basic</strong>: Basic Edition.</li>
+             * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+             * <li><strong>AlwaysOn</strong>: Cluster Edition.</li>
+             * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -563,10 +563,10 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The payment type. Valid values:</p>
+             * <p>The billing method. Valid values:</p>
              * <ul>
-             * <li>POSTPAY: pay-as-you-go</li>
-             * <li>PREPAY: subscription</li>
+             * <li>POSTPAY: pay-as-you-go.</li>
+             * <li>PREPAY: subscription.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -578,7 +578,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only ApsaraDB RDS instance types</a>.</p>
+             * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a> and <a href="https://help.aliyun.com/document_detail/145759.html">Read-only instance types</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>rds.mysql.s3.large</p>
@@ -589,7 +589,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Overview of instance families</a>.</p>
+             * <p>The instance family. For more information, see <a href="https://help.aliyun.com/document_detail/57184.html">Instance families</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>x</p>
@@ -600,7 +600,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+             * <p>The number of CPU cores for the instance type. Unit: cores.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -611,7 +611,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity per node. Unit: GB.</p>
+             * <p>The disk storage size per node. Unit: GB.</p>
              * 
              * <strong>example:</strong>
              * <p>900</p>
@@ -622,7 +622,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine of the instance. Valid values:</p>
+             * <p>The database engine. Valid values:</p>
              * <ul>
              * <li>MySQL</li>
              * <li>SQLServer</li>
@@ -640,7 +640,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version of the database engine.</p>
+             * <p>The database engine version.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0</p>
@@ -684,7 +684,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum I/O throughput. Unit: Mbit/s.</p>
+             * <p>The maximum I/O bandwidth. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -717,13 +717,13 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the instance. Valid values:</p>
+             * <p>The instance storage type. Valid values:</p>
              * <ul>
-             * <li><strong>local_ssd</strong>: local SSD</li>
-             * <li><strong>cloud_ssd</strong>: standard SSD</li>
-             * <li><strong>cloud_essd</strong>: performance level 1 (PL1) enhanced SSD (ESSD)</li>
-             * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-             * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+             * <li><strong>local_ssd</strong>: local SSD.</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD cloud disk.</li>
+             * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk.</li>
+             * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk.</li>
+             * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -735,7 +735,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The RDS edition after the upgrade.</p>
+             * <p>The upgrade instance edition.</p>
              * 
              * <strong>example:</strong>
              * <p>HighAvailability</p>
@@ -746,7 +746,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance type after the upgrade.</p>
+             * <p>The upgrade instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>rds.mysql.s3.large</p>
@@ -757,7 +757,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance family after the upgrade.</p>
+             * <p>The upgrade instance family.</p>
              * 
              * <strong>example:</strong>
              * <p>d</p>
@@ -779,7 +779,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the upgrade.</p>
+             * <p>The upgrade description.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -790,7 +790,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The disk capacity after the upgrade.</p>
+             * <p>The disk size after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>1024</p>
@@ -812,7 +812,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum I/O throughput after the upgrade. Unit: Mbit/s.</p>
+             * <p>The maximum I/O bandwidth after the upgrade. Unit: Mbit/s.</p>
              * 
              * <strong>example:</strong>
              * <p>200</p>
@@ -845,7 +845,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reference price of the upgrade.</p>
+             * <p>The reference price for the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>23333.1</p>
@@ -856,7 +856,7 @@ public class DescribeMarketingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type after the upgrade.</p>
+             * <p>The instance storage type after the upgrade.</p>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>

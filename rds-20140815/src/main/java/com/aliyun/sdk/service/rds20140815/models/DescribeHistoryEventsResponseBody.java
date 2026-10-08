@@ -106,7 +106,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The events.</p>
+         * <p>The event list.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number. Valid values: any non-zero positive integer. Default value: <strong>1</strong>.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries per page. Default value: 30.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -541,7 +541,11 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The cloud service type of the application group. Valid values: <strong>web</strong> and native. The value web indicates a web application. The value <strong>native</strong> indicates a local application.</p>
+             * <p>The cloud service type of the application group. Valid values:</p>
+             * <ul>
+             * <li><strong>web</strong>: web application.</li>
+             * <li><strong>native</strong>: on-premises application.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>web</p>
@@ -552,7 +556,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine.</p>
+             * <p>The database type.</p>
              * 
              * <strong>example:</strong>
              * <p>mysql</p>
@@ -574,7 +578,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the instance operation.</p>
+             * <p>The instance operation details.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -585,7 +589,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the alert was closed. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * <p>The alert end time.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-06T11:46:01Z</p>
@@ -596,7 +600,13 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The system event category. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * <p>The system event categorization. Valid values:</p>
+             * <ul>
+             * <li><strong>Exception</strong>: abnormal event.</li>
+             * <li><strong>Optimize</strong>: optimization events.</li>
+             * <li><strong>Notification</strong>: notification event.</li>
+             * <li><strong>Maintenance</strong>: scheduled maintenance event.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>Exception</p>
@@ -640,7 +650,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event impact.</p>
+             * <p>The event impact overview.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx</p>
@@ -651,10 +661,15 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event level. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * <p>The event level. Valid values:</p>
+             * <ul>
+             * <li><strong>INFO</strong>: notification.</li>
+             * <li><strong>WARN</strong>: warning.</li>
+             * <li><strong>CRITICAL</strong>: critical.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>high</p>
+             * <p>INFO</p>
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -662,7 +677,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event source.</p>
+             * <p>The source of the event operation.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxxx</p>
@@ -673,15 +688,14 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the alert event. Valid values:</p>
+             * <p>The event status. Valid values:</p>
              * <ul>
-             * <li><strong>1</strong>: pending</li>
-             * <li><strong>2</strong>: ignored</li>
-             * <li><strong>4</strong>: confirmed</li>
-             * <li><strong>8</strong>: marked as false positive</li>
-             * <li><strong>16</strong>: handling</li>
-             * <li><strong>32</strong>: handled</li>
-             * <li><strong>64</strong>: expired</li>
+             * <li><strong>Inquiring</strong>: inquiring.</li>
+             * <li><strong>Scheduled</strong>: scheduled.</li>
+             * <li><strong>Running</strong>: running.</li>
+             * <li><strong>Succeed</strong>: completed.</li>
+             * <li><strong>Failed</strong>: failed.</li>
+             * <li><strong>Canceled</strong>: canceled.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -693,7 +707,19 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event type. Valid values:</p>
+             * <p>The system event type. Valid values: </p>
+             * <ul>
+             * <li><strong>SystemMaintenance.Reboot</strong>: The instance is restarted due to system maintenance.</li>
+             * <li><strong>SystemMaintenance.Redeploy</strong>: The instance is redeployed due to system maintenance.</li>
+             * <li><strong>SystemFailure.Reboot</strong>: The instance is restarted due to a system error.</li>
+             * <li><strong>SystemFailure.Redeploy</strong>: The instance is redeployed due to a system error.</li>
+             * <li><strong>SystemFailure.Delete</strong>: The instance is released due to an instance creation failure.</li>
+             * <li><strong>InstanceFailure.Reboot</strong>: The instance is restarted due to an instance error.</li>
+             * <li><strong>InstanceExpiration.Stop</strong>: The instance is stopped due to subscription expiration.</li>
+             * <li><strong>InstanceExpiration.Delete</strong>: The instance is released due to subscription expiration.</li>
+             * <li><strong>AccountUnbalanced.Stop</strong>: The pay-as-you-go instance is stopped due to an overdue payment.</li>
+             * <li><strong>AccountUnbalanced.Delete</strong>: The pay-as-you-go instance is released due to an overdue payment.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>StatusNotification</p>
@@ -704,7 +730,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The creation time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * <p>The time when the event was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-17T16:05:40Z</p>
@@ -715,7 +741,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The update time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * <p>The time when the event was last updated.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-12-14T09:44:39.000+0000</p>
@@ -770,7 +796,11 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the alert is closed. Valid values: <strong>0</strong>: closed. <strong>1</strong>: not closed.</p>
+             * <p>Indicates whether the event is closed. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: closed.</li>
+             * <li><strong>1</strong>: open.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -781,7 +811,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The service name.</p>
+             * <p>The product name.</p>
              * 
              * <strong>example:</strong>
              * <p>rds</p>
@@ -792,7 +822,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-guangzhou</p>
@@ -803,10 +833,15 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The resource type. The value is fixed as <strong>INSTANCE</strong>.</p>
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><strong>Instance</strong>: instance resource.</li>
+             * <li><strong>Host</strong>: host resource.</li>
+             * <li><strong>User</strong>: user resource.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>INSTANCE</p>
+             * <p>Instance</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -825,7 +860,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The start time. The time follows the ISO 8601 standard in the <em>yyyy-mm-dd</em>t<em>hh:mm</em>z format. The time is displayed in UTC.</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-29T07:23Z</p>
@@ -836,7 +871,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the resource owner.</p>
+             * <p>The ID of the user who owns the resource.</p>
              * 
              * <strong>example:</strong>
              * <p>16986832xxxxx</p>
@@ -984,7 +1019,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of the data.</p>
+             * <p>The data overview.</p>
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -992,7 +1027,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The task ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>4309</p>
@@ -1003,7 +1038,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID.</p>
+             * <p>The region.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-beijing</p>
@@ -1025,7 +1060,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The database engine version.</p>
+             * <p>The database version.</p>
              * 
              * <strong>example:</strong>
              * <p>8.0</p>
@@ -1047,7 +1082,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
+             * <p>The elapsed time of the query task. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1675232573125</p>
@@ -1058,7 +1093,7 @@ public class DescribeHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event type. For more information, see <a href="https://help.aliyun.com/document_detail/129759.html">View the event history of an ApsaraDB RDS instance</a>.</p>
+             * <p>The event type.</p>
              * 
              * <strong>example:</strong>
              * <p>host</p>

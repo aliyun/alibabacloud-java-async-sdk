@@ -175,7 +175,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOC*****</p>
+         * <p>ETnLKlblzczshOTUbOC****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -184,11 +184,11 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5*****</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -199,11 +199,11 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <ul>
-         * <li><strong>Normal</strong>: regular endpoint</li>
-         * <li><strong>ReadWriteSplitting</strong>: read/write splitting endpoint</li>
+         * <li><strong>Normal</strong>: regular endpoint.</li>
+         * <li><strong>ReadWriteSplitting</strong>: read/write splitting endpoint.</li>
          * </ul>
          * <blockquote>
-         * <p>By default, the system returns both types of endpoints.</p>
+         * <p>By default, endpoints of all types are returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -219,7 +219,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
          * <p>A reserved parameter. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>test</p>
          */
         public Builder flag(Integer flag) {
             this.putQueryParameter("Flag", flag);
@@ -228,10 +228,10 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+         * <p>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>rgc-2ze*****</p>
+         * <p>rgc-2ze****</p>
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);

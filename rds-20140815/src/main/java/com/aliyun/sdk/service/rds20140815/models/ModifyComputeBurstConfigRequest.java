@@ -75,6 +75,14 @@ public class ModifyComputeBurstConfigRequest extends Request {
     private String scaleMaxMemory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMaxRcu")
+    private Double scaleMaxRcu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMinRcu")
+    private Double scaleMinRcu;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SwitchTime")
     private String switchTime;
 
@@ -102,6 +110,8 @@ public class ModifyComputeBurstConfigRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scaleMaxCpus = builder.scaleMaxCpus;
         this.scaleMaxMemory = builder.scaleMaxMemory;
+        this.scaleMaxRcu = builder.scaleMaxRcu;
+        this.scaleMinRcu = builder.scaleMinRcu;
         this.switchTime = builder.switchTime;
         this.switchTimeMode = builder.switchTimeMode;
         this.taskId = builder.taskId;
@@ -219,6 +229,20 @@ public class ModifyComputeBurstConfigRequest extends Request {
     }
 
     /**
+     * @return scaleMaxRcu
+     */
+    public Double getScaleMaxRcu() {
+        return this.scaleMaxRcu;
+    }
+
+    /**
+     * @return scaleMinRcu
+     */
+    public Double getScaleMinRcu() {
+        return this.scaleMinRcu;
+    }
+
+    /**
      * @return switchTime
      */
     public String getSwitchTime() {
@@ -254,6 +278,8 @@ public class ModifyComputeBurstConfigRequest extends Request {
         private String resourceOwnerAccount; 
         private String scaleMaxCpus; 
         private String scaleMaxMemory; 
+        private Double scaleMaxRcu; 
+        private Double scaleMinRcu; 
         private String switchTime; 
         private String switchTimeMode; 
         private String taskId; 
@@ -278,13 +304,15 @@ public class ModifyComputeBurstConfigRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scaleMaxCpus = request.scaleMaxCpus;
             this.scaleMaxMemory = request.scaleMaxMemory;
+            this.scaleMaxRcu = request.scaleMaxRcu;
+            this.scaleMinRcu = request.scaleMinRcu;
             this.switchTime = request.switchTime;
             this.switchTimeMode = request.switchTimeMode;
             this.taskId = request.taskId;
         } 
 
         /**
-         * <p>This parameter is set to <strong>disabled</strong> if the assured serverless feature is disabled.</p>
+         * <p>Set this parameter to <strong>disabled</strong> to disable the committed serverless feature.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -296,7 +324,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The client token that is used to ensure the idempotence of requests and prevent repeated requests from being submitted. You can use the client to generate the value, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
@@ -308,7 +336,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The CPU utilization threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+         * <p>The CPU utilization threshold for elastic <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -320,7 +348,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The CPU utilization threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+         * <p>The CPU utilization threshold for elastic <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -332,7 +360,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>A reserved parameter. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -357,7 +385,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The memory usage threshold for <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
+         * <p>The memory utilization threshold for elastic <strong>scale-out</strong>. Valid values: 60 to 90. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -369,7 +397,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The memory usage threshold for <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
+         * <p>The memory utilization threshold for elastic <strong>scale-in</strong>. Valid values: 30 to 55. Unit: %.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -420,7 +448,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of CPU cores for elastic scaling. The maximum value cannot exceed twice the initial CPU configuration.</p>
+         * <p>The maximum number of CPUs for elastic scale-out. The value can be up to twice the initial CPU configuration of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -432,7 +460,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The maximum memory for elastic scaling. The value cannot exceed twice the instance&quot;s initial memory size. Unit: GB. Step size: 2 GB.</p>
+         * <p>The maximum memory for elastic scale-out. The value can be up to twice the initial memory configuration of the instance. Unit: GB. The value is adjusted in increments of 2 GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -444,9 +472,27 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The time when the specified entry takes effect. The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time is displayed in UTC.</p>
+         * ScaleMaxRcu.
+         */
+        public Builder scaleMaxRcu(Double scaleMaxRcu) {
+            this.putQueryParameter("ScaleMaxRcu", scaleMaxRcu);
+            this.scaleMaxRcu = scaleMaxRcu;
+            return this;
+        }
+
+        /**
+         * ScaleMinRcu.
+         */
+        public Builder scaleMinRcu(Double scaleMinRcu) {
+            this.putQueryParameter("ScaleMinRcu", scaleMinRcu);
+            this.scaleMinRcu = scaleMinRcu;
+            return this;
+        }
+
+        /**
+         * <p>The specified time at which the modification takes effect. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC).</p>
          * <blockquote>
-         * <p> This parameter is required only if <strong>SwitchTimeMode</strong> is set to <strong>2</strong>.</p>
+         * <p>This parameter is required when <strong>SwitchTimeMode</strong> is set to <strong>2</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -461,9 +507,9 @@ public class ModifyComputeBurstConfigRequest extends Request {
         /**
          * <p>The effective policy. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Immediately takes effect.</li>
-         * <li><strong>1</strong>: Takes effect within the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to change the maintenance window of an instance.</li>
-         * <li><strong>2</strong>: Takes effect at a specified point in time.</li>
+         * <li><strong>0</strong>: The modification takes effect immediately.</li>
+         * <li><strong>1</strong>: The modification takes effect during the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to modify the maintenance window.</li>
+         * <li><strong>2</strong>: The modification takes effect at a specified point in time.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -476,7 +522,7 @@ public class ModifyComputeBurstConfigRequest extends Request {
         }
 
         /**
-         * <p>The reserved parameter. This parameter is not supported.</p>
+         * <p>A reserved parameter. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

@@ -67,7 +67,7 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the parameter template.</p>
+         * <p>The parameter template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rpg-gfs****</p>
@@ -78,7 +78,7 @@ public class DeleteParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8AF26036-B254-4212-B8E4-EFBE818B7FD6</p>

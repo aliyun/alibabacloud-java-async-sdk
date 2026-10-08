@@ -109,7 +109,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -117,13 +117,13 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The high availability mode of the instance. Valid values:</p>
+         * <p>The High-availability Mode. Valid values:</p>
          * <ul>
-         * <li><strong>RPO</strong>: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.</li>
-         * <li><strong>RTO</strong>: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.</li>
+         * <li><strong>RPO</strong>: Data consistency is preferred. The instance prioritizes data reliability to minimize data loss. Use RPO mode if you have high requirements for data consistency.</li>
+         * <li><strong>RTO</strong>: Instance availability is preferred. The instance recovers services as soon as possible to maximize available time. Use RTO mode if you have high requirements for database uptime.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run MySQL.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for MySQL instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>An array that consists of the information of the primary and secondary instances.</p>
+         * HostInstanceInfos.
          */
         public Builder hostInstanceInfos(HostInstanceInfos hostInstanceInfos) {
             this.hostInstanceInfos = hostInstanceInfos;
@@ -154,14 +154,14 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data replication mode of the instance. Valid values:</p>
+         * <p>The data replication mode. Valid values:</p>
          * <ul>
-         * <li><strong>Sync</strong>: the synchronous mode</li>
-         * <li><strong>Semi-sync</strong>: the semi-synchronous replication mode</li>
-         * <li><strong>Async</strong>: the asynchronous mode</li>
+         * <li><strong>Sync</strong>: synchronous replication</li>
+         * <li><strong>Semi-sync</strong>: semi-synchronous replication</li>
+         * <li><strong>Async</strong>: asynchronous replication</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is returned only for instances that run MySQL.</p>
+         * <p>This parameter is returned only for ApsaraDB RDS for MySQL instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,10 +296,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-05T15:15:00Z</p>
+             * DataSyncTime.
              */
             public Builder dataSyncTime(String dataSyncTime) {
                 this.dataSyncTime = dataSyncTime;
@@ -307,10 +304,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2018-05-05T15:15:00Z</p>
+             * LogSyncTime.
              */
             public Builder logSyncTime(String logSyncTime) {
                 this.logSyncTime = logSyncTime;
@@ -318,10 +312,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>3397027</p>
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -329,14 +320,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the node. Valid values:</p>
-             * <ul>
-             * <li><strong>Master</strong>: the primary node</li>
-             * <li><strong>Slave</strong>: the secondary node</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Master</p>
+             * NodeType.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -344,10 +328,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -355,16 +336,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The synchronization status. Valid values:</p>
-             * <ul>
-             * <li><strong>NotAvailable</strong>: The synchronization fails. This means that faults occur.</li>
-             * <li><strong>Syncing</strong>: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.</li>
-             * <li><strong>Synchronized</strong>: The synchronization is completed.</li>
-             * <li><strong>NotSupport</strong>: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>NotAvailable</p>
+             * SyncStatus.
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;
@@ -372,10 +344,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-hangzhou-b</p>
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -146,7 +146,7 @@ public class ResetAccountPasswordRequest extends Request {
         } 
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The name of the database account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,9 +162,9 @@ public class ResetAccountPasswordRequest extends Request {
          * <p>The new password.</p>
          * <blockquote>
          * <ul>
-         * <li>The value must be 8 to 32 characters in length.</li>
-         * <li>The value must contain at least three types of the following characters: uppercase letters, lowercase letters, digits, and special characters.</li>
-         * <li>The following special characters are supported: ! @ # $ &amp; % ^ * ( ) _ + - =</li>
+         * <li>The password must be 8 to 32 characters in length.</li>
+         * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+         * <li>Special characters include <code>!@#$&amp;%^*()_+-=</code></li>
          * </ul>
          * </blockquote>
          * <p>This parameter is required.</p>
@@ -179,11 +179,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

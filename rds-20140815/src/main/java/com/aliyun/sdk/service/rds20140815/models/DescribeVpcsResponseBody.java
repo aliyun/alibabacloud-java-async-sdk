@@ -106,7 +106,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         } 
 
         /**
-         * PageNumber.
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +117,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +128,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F4596F7-FA71-590E-9E1C-********</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>14</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +150,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs.
+         * <p>The list of VPCs.</p>
          */
         public Builder vpcs(java.util.List<Vpcs> vpcs) {
             this.vpcs = vpcs;
@@ -282,7 +294,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * CidrBlock.
+             * <p>The vSwitch CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/24</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -290,7 +305,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the vSwitch was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T12:00:00Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -298,7 +316,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the vSwitch was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T12:00:00Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -306,7 +327,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the vSwitch is the default vSwitch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -314,7 +338,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-a</p>
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -322,7 +349,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The vSwitch status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +360,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-xxxxxx</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -338,7 +371,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * <p>The vSwitch name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-vswitch</p>
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -522,7 +558,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             } 
 
             /**
-             * AliUid.
+             * <p>The Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18757856124****</p>
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -530,7 +569,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * <p>The business ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>26888</p>
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -538,7 +580,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * <p>The CIDR block of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.16.0.0/12</p>
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -546,7 +591,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The time when the VPC was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T12:00:00Z</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -554,7 +602,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The time when the VPC was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-01T12:00:00Z</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -562,7 +613,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the VPC is the default VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -570,7 +624,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -578,7 +635,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The VPC status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -586,7 +646,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchs.
+             * <p>The vSwitch information.</p>
              */
             public Builder vSwitchs(java.util.List<VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -594,7 +654,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-xxxxxx</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -602,7 +665,10 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * <p>The name of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-vpc</p>
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

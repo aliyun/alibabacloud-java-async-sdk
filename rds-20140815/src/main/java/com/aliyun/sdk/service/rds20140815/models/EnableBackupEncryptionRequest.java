@@ -88,6 +88,7 @@ public class EnableBackupEncryptionRequest extends Request {
         } 
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class EnableBackupEncryptionRequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * <p>The backup encryption key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>564cf6c4-d2ee-495b-b265-5724******</p>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);

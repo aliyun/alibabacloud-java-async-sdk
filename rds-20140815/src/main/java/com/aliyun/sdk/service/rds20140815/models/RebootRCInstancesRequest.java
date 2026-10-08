@@ -115,10 +115,7 @@ public class RebootRCInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The batch operation mode. Set the value to <strong>AllTogether</strong>. In this mode, if all specified instances are restarted, a success message is returned. If an instance fails the verification, none of the specified instances can be restarted and an error message is returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AllTogether</p>
+         * BatchOptimization.
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -127,14 +124,7 @@ public class RebootRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to forcefully restart the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * ForceReboot.
          */
         public Builder forceReboot(Boolean forceReboot) {
             this.putQueryParameter("ForceReboot", forceReboot);
@@ -143,7 +133,7 @@ public class RebootRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The node IDs.</p>
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -162,10 +152,7 @@ public class RebootRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

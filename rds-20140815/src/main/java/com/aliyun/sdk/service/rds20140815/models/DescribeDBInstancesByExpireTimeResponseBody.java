@@ -106,7 +106,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the instances.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page. Valid values: any <strong>non-zero</strong> positive integer.</p>
+         * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type.</p>
          * <p>Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of instances returned on the current page.</p>
+         * <p>The number of instances on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -137,7 +137,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -148,7 +148,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total number of returned entries.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -269,10 +269,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the instance.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test database</p>
+             * DBInstanceDescription.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -280,10 +277,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instance ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>rm-uf6wjk5xxxxxxx</p>
+             * DBInstanceId.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -291,10 +285,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance state table</a>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Running</p>
+             * DBInstanceStatus.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -302,13 +293,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * <blockquote>
-             * <p>: Pay-as-you-go instances never expire.</p>
-             * </blockquote>
-             * 
-             * <strong>example:</strong>
-             * <p>2019-03-27T16:00:00Z</p>
+             * ExpireTime.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -316,18 +301,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The lock mode of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Unlock</strong>: The instance is not locked.</li>
-             * <li><strong>ManualLock</strong>: The instance is manually locked.</li>
-             * <li><strong>LockByExpiration</strong>: The instance is automatically locked after it expires.</li>
-             * <li><strong>LockByRestoration</strong>: The instance is automatically locked before it is rolled back.</li>
-             * <li><strong>LockByDiskQuota</strong>: The instance is automatically locked after its storage capacity is exhausted.</li>
-             * <li><strong>LockReadInstanceByDiskQuota</strong>: The instance is a read-only instance and is automatically locked after its storage capacity is exhausted.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Unlock</p>
+             * LockMode.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -335,14 +309,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance. Valid values:</p>
-             * <ul>
-             * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-             * <li><strong>Prepaid</strong>: subscription.</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Prepaid</p>
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;

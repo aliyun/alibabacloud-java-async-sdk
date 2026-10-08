@@ -54,7 +54,7 @@ public class StopDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A417FB41-A3D9-464E-AD0A-C7FE05C72E98</p>

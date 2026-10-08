@@ -202,10 +202,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the backup set.</p>
+         * <p>The backup set ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>327xxxxx3</p>
+         * <p>327****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -214,10 +214,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The backup method. Valid values:</p>
+         * <p>The backup mode. Valid values:</p>
          * <ul>
-         * <li><strong>Automated</strong></li>
-         * <li><strong>Manual</strong></li>
+         * <li><strong>Automated</strong>: automatic backup.</li>
+         * <li><strong>Manual</strong>: manual backup.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -230,10 +230,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The status of the backup set. Valid values:</p>
+         * <p>The backup set status. Valid values:</p>
          * <ul>
-         * <li><strong>Success</strong></li>
-         * <li><strong>Failed</strong></li>
+         * <li><strong>Success</strong>: The backup is complete.</li>
+         * <li><strong>Failed</strong>: The backup failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -246,10 +246,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -258,8 +258,8 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The end time must be later than the start time.</p>
-         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The end time of the query. The end time must be later than the start time.</p>
+         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-15T16:00Z</p>
@@ -271,9 +271,9 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
          * <blockquote>
-         * <p>The default value is 1.</p>
+         * <p>Default value: 1.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -293,7 +293,7 @@ public class DescribeDetachedBackupsRequest extends Request {
          * <li><strong>100</strong></li>
          * </ul>
          * <blockquote>
-         * <p>The default value is <strong>30</strong>.</p>
+         * <p>Default value: <strong>30</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -306,7 +306,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region in which the instance resides.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -319,10 +319,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -340,8 +340,8 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <p>Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</p>
+         * <p>The start time of the query.</p>
+         * <p>Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-03-01T16:00Z</p>

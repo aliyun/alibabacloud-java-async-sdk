@@ -96,7 +96,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -104,7 +104,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the backup file.</p>
+         * Items.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -270,15 +270,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The backup type. Valid values:</p>
-             * <ul>
-             * <li><strong>Database</strong>: full backup file</li>
-             * <li><strong>Differential_Database</strong>: incremental backup file</li>
-             * <li><strong>Transaction_Log</strong>: log backup file</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Database</p>
+             * BackupMode.
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -286,10 +278,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the backup file was created in the download list. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-08-17T12:45:15Z</p>
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -297,10 +286,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the backup file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>App description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -308,10 +294,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2017-08-27T12:45:15Z</p>
+             * EndTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -319,10 +302,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the backup file stored in the Object Storage Service (OSS) bucket.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -330,10 +310,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The size of the backup file. Unit: MB</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2</p>
+             * FileSize.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -341,10 +318,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the backup file is available. Valid values: <strong>True and False</strong>.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>True</p>
+             * IsAvailable.
              */
             public Builder isAvailable(String isAvailable) {
                 this.isAvailable = isAvailable;
@@ -352,24 +326,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The state of the backup file. Valid values:</p>
-             * <ul>
-             * <li><strong>NoStart</strong></li>
-             * <li><strong>Downloading</strong></li>
-             * <li><strong>Finished</strong></li>
-             * <li><strong>DownloadFailed</strong></li>
-             * <li><strong>VerifyFailed</strong></li>
-             * <li><strong>Deleted</strong></li>
-             * <li><strong>DeleteFailed</strong></li>
-             * <li><strong>CheckSuccess</strong></li>
-             * <li><strong>CheckFailed</strong></li>
-             * <li><strong>Restoring</strong></li>
-             * <li><strong>Restored</strong></li>
-             * <li><strong>RestoreFailed</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>Finished</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

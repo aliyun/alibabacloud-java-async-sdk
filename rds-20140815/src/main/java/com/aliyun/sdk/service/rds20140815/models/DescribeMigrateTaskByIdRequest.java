@@ -131,11 +131,11 @@ public class DescribeMigrateTaskByIdRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-bp11e1tzgxxxx4ox</p>
+         * <p>rm-bp11e1tzg****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -144,7 +144,7 @@ public class DescribeMigrateTaskByIdRequest extends Request {
         }
 
         /**
-         * <p>The migration task ID. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+         * <p>The ID of the backup migration task. You can call DescribeMigrateTasks to query the task ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,10 +166,10 @@ public class DescribeMigrateTaskByIdRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmy*****</p>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -106,7 +106,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The internal endpoint that is used to connect to the read-only instance.</p>
+         * <p>The internal database connection address of the read-only instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rr-****.mysql.rds.aliyuncs.com</p>
@@ -117,7 +117,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the read-only instance.</p>
+         * <p>The read-only instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rr-uf6wjk5****</p>
@@ -128,7 +128,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the order.</p>
+         * <p>The order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10078937****</p>
@@ -139,7 +139,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The internal port number that is used to connect to the read-only instance.</p>
+         * <p>The internal database connection port of the read-only instance.</p>
          * 
          * <strong>example:</strong>
          * <p>3306</p>
@@ -150,7 +150,7 @@ public class CreateReadOnlyDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>

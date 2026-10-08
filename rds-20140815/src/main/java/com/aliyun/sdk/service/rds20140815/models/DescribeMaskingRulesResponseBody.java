@@ -67,7 +67,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>69779000-57A4-38F6-BF85-**********A2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +157,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Columns.
+             * <p>The list of columns.</p>
              */
             public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
@@ -162,7 +165,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Databases.
+             * <p>The list of databases.</p>
              */
             public Builder databases(java.util.List<String> databases) {
                 this.databases = databases;
@@ -170,7 +173,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * <p>The list of tables.</p>
              */
             public Builder tables(java.util.List<String> tables) {
                 this.tables = tables;
@@ -276,7 +279,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * DefaultAlgo.
+             * <p>The default encryption or masking algorithm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aes-128-gcm</p>
              */
             public Builder defaultAlgo(String defaultAlgo) {
                 this.defaultAlgo = defaultAlgo;
@@ -284,7 +290,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * <p>Indicates whether the rule is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -292,7 +301,11 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MaskingAlgo.
+             * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {masking position, masking length}}.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
+             *         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</p>
              */
             public Builder maskingAlgo(String maskingAlgo) {
                 this.maskingAlgo = maskingAlgo;
@@ -300,7 +313,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConfig.
+             * <p>The rule configuration.</p>
              */
             public Builder ruleConfig(RuleConfig ruleConfig) {
                 this.ruleConfig = ruleConfig;
@@ -308,7 +321,10 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * <p>The rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -362,7 +378,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             } 
 
             /**
-             * Rules.
+             * <p>The list of encryption or masking rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

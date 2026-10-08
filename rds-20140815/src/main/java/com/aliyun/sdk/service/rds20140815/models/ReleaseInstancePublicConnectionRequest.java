@@ -131,11 +131,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         } 
 
         /**
-         * <p>The public endpoint. You can call the DescribeDBInstanceNetInfo operation to query the public endpoint.</p>
+         * <p>The public endpoint. You can call DescribeDBInstanceNetInfo to query the public endpoint.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxx.mysql.rds.aliyuncs.com</p>
+         * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -144,11 +144,11 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

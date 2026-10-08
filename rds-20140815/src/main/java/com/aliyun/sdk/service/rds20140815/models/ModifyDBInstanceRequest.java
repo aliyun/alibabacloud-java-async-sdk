@@ -354,7 +354,17 @@ public class ModifyDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoUseCoupon.
+         * <p>Specifies whether to automatically use coupons. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong> (default): Automatically uses coupons.</li>
+         * <li><strong>false</strong>: Does not automatically use coupons.</li>
+         * </ul>
+         * <blockquote>
+         * <p>After a coupon is used, the amount deducted by the coupon is not refunded if you downgrade the instance specifications.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoUseCoupon(Boolean autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -363,7 +373,14 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * BurstingEnabled.
+         * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O burst feature for premium performance disks</a>. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -372,7 +389,15 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The instance edition. Valid values:</p>
+         * <ul>
+         * <li><strong>Basic</strong>: Basic Edition</li>
+         * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+         * <li><strong>cluster</strong>: Cluster Edition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -381,7 +406,17 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * ColdDataEnabled.
+         * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">cold data archiving feature</a> for general-purpose cloud disks. Valid values:</p>
+         * <ul>
+         * <li><p>&lt;props=&quot;china&quot;&gt;<strong>true</strong>: Enabled.</p>
+         * </li>
+         * <li><p>&lt;props=&quot;china&quot;&gt;<strong>false</strong>: Disabled.</p>
+         * </li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;Reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder coldDataEnabled(Boolean coldDataEnabled) {
             this.putQueryParameter("ColdDataEnabled", coldDataEnabled);
@@ -390,7 +425,10 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceClass.
+         * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pg.n4.2c.1m</p>
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -399,6 +437,7 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -411,7 +450,16 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorage.
+         * <p>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>, in GB. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the available storage capacity range for the target instance type.</p>
+         * <blockquote>
+         * <ul>
+         * <li>You must specify at least one of this parameter and the <strong>DBInstanceClass</strong> parameter.</li>
+         * <li>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the current storage capacity of the instance.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
             this.putQueryParameter("DBInstanceStorage", DBInstanceStorage);
@@ -420,7 +468,16 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceStorageType.
+         * <p>The instance storage type. Valid values:</p>
+         * <ul>
+         * <li><strong>general_essd</strong>: premium performance disk (recommended)</li>
+         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -429,7 +486,7 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * DBNodes.
+         * <p>The node information.</p>
          */
         public Builder DBNodes(java.util.List<DBNodes> DBNodes) {
             String DBNodesShrink = shrink(DBNodes, "DBNodes", "json");
@@ -439,7 +496,14 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * Direction.
+         * <p>The type of specification change. Valid values:</p>
+         * <ul>
+         * <li><strong>Up</strong> (default): Upgrades a subscription instance or upgrades/downgrades a pay-as-you-go instance.</li>
+         * <li><strong>Down</strong>: Downgrades a subscription instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Up</p>
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -448,7 +512,18 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * <p>The time when the new configurations take effect. Valid values:</p>
+         * <blockquote>
+         * <p><strong>Changing some configurations may affect the instance</strong>. Read the impact section in the <a href="https://help.aliyun.com/document_detail/96061.html">feature documentation</a> before you configure this parameter. Perform the operation during off-peak hours.</p>
+         * </blockquote>
+         * <ul>
+         * <li><strong>Immediate</strong> (default): The new configurations take effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: The new configurations take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
+         * <li><strong>ScheduleTime</strong>: The new configurations take effect at a specified time. The specified time must be at least 12 hours later than the current time. The actual switchover time follows the formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Immediate</p>
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -457,7 +532,14 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * IoAccelerationEnabled.
+         * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature</a> for premium performance disks. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
             this.putQueryParameter("IoAccelerationEnabled", ioAccelerationEnabled);
@@ -484,7 +566,10 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * ParameterGroupId.
+         * <p>The parameter template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rpg-dp****</p>
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -493,7 +578,10 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * <p>The parameters and their values. All parameter values are of the STRING type. You can call DescribeParameterTemplates to query parameter names and values.</p>
+         * <blockquote>
+         * <p>If you specify the <strong>ParameterGroupId</strong> parameter and both the ParameterGroupId and Parameters parameters modify the same parameter, the modification specified by the Parameters parameter takes precedence.</p>
+         * </blockquote>
          */
         public Builder parameters(java.util.Map<String, String> parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -503,7 +591,10 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * PromotionCode.
+         * <p>The coupon code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliwood-1688-mobile-promotion</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -512,7 +603,10 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The name of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -539,7 +633,13 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * <p>The scheduled time for executing the parameter modification. The EffectiveTime parameter must be set to ScheduleTime. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+         * <blockquote>
+         * <p>The specified time must be later than the current time (the time when the call is made).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-10-17T18:50:00Z</p>
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -548,7 +648,11 @@ public class ModifyDBInstanceRequest extends Request {
         }
 
         /**
-         * TargetMinorVersion.
+         * <p>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. If the specification change fails because the current minor engine version is not supported, specify the minor engine version to <strong>upgrade the minor engine version during the specification change</strong>.</p>
+         * <p>Format: <code>rds_postgres_&lt;major version&gt;00_&lt;minor version&gt;</code>. Example for version 12 with minor version 20200830: <code>rds_postgres_1200_20200830</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rds_postgres_1200_20200830</p>
          */
         public Builder targetMinorVersion(String targetMinorVersion) {
             this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
@@ -642,7 +746,13 @@ public class ModifyDBInstanceRequest extends Request {
             } 
 
             /**
-             * NodeId.
+             * <p>The unique identifier of the node, which is used to specify a node.</p>
+             * <blockquote>
+             * <p>This parameter is valid only for Cluster Edition instances.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>28542293</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -650,7 +760,17 @@ public class ModifyDBInstanceRequest extends Request {
             }
 
             /**
-             * Role.
+             * <p>The node type. Valid values:</p>
+             * <ul>
+             * <li><strong>Master</strong>: primary node.</li>
+             * <li><strong>Slave</strong>: secondary node.</li>
+             * </ul>
+             * <blockquote>
+             * <p>For Cluster Edition instances, you can leave this parameter empty and specify the NodeId parameter to identify the node.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>Master</p>
              */
             public Builder role(String role) {
                 this.role = role;
@@ -658,7 +778,10 @@ public class ModifyDBInstanceRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID of the instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1g7uym6ia6yroes6dkm</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -666,7 +789,10 @@ public class ModifyDBInstanceRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

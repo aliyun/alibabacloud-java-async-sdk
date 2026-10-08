@@ -101,7 +101,7 @@ public class DeleteRCClusterNodesRequest extends Request {
         } 
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "simple");
@@ -135,7 +135,7 @@ public class DeleteRCClusterNodesRequest extends Request {
         /**
          * <p>The virtual private cloud (VPC) ID.</p>
          * <blockquote>
-         * <p> This is a reserved parameter.</p>
+         * <p>Reserved parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

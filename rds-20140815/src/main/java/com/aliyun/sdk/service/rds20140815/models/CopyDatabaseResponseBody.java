@@ -93,7 +93,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>test02</p>
@@ -104,11 +104,11 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The status of the database. Valid values:</p>
+         * <p>The database status. Valid values:</p>
          * <ul>
-         * <li><strong>Creating</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Deleting</strong></li>
+         * <li><strong>Creating</strong>: The database is being created.</li>
+         * <li><strong>Running</strong>: The database is running.</li>
+         * <li><strong>Deleting</strong>: The database is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -131,7 +131,7 @@ public class CopyDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2562****</p>

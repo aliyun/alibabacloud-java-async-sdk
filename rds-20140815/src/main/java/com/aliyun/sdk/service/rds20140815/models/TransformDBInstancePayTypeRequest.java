@@ -229,15 +229,15 @@ public class TransformDBInstancePayTypeRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether to enable the auto-renewal feature for the instance. Valid values:</p>
+         * <p>Specifies whether to enable auto-renewal. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong></li>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</li>
-         * <li>All strings except <strong>true</strong> are considered <strong>false</strong>.</li>
+         * <li>This parameter takes effect only when you change the billing method from pay-as-you-go to subscription.</li>
+         * <li>All non-<strong>true</strong> strings are treated as <strong>false</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -251,10 +251,10 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to use vouchers to offset fees. Valid values:</p>
+         * <p>Specifies whether to use coupons to offset fees. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong></li>
-         * <li><strong>false</strong> (default)</li>
+         * <li><strong>true</strong>: Uses coupons to offset fees.</li>
+         * <li><strong>false</strong>: Does not use coupons to offset fees. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
          * <p>The additional business information about the instance.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>123456789</p>
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -282,7 +282,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
          * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
          * 
          * <strong>example:</strong>
-         * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
+         * <p>ETnLKlblzczshOTUbOCz****</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -291,11 +291,11 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID of the instance.</p>
+         * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxx</p>
+         * <p>rm-uf6wjk5****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -322,7 +322,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The new billing method of the instance. Valid values:</p>
+         * <p>The billing method of the instance after the change. Valid values:</p>
          * <ul>
          * <li><strong>Postpaid</strong>: pay-as-you-go</li>
          * <li><strong>Prepaid</strong>: subscription</li>
@@ -339,13 +339,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The renewal cycle of the instance. Valid values:</p>
+         * <p>The renewal cycle of the subscription instance. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong></li>
-         * <li><strong>Month</strong></li>
+         * <li><strong>Year</strong>: yearly subscription</li>
+         * <li><strong>Month</strong>: monthly subscription</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified if you set <strong>PayType</strong> to <strong>Prepaid</strong>.</p>
+         * <p>This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -361,7 +361,7 @@ public class TransformDBInstancePayTypeRequest extends Request {
          * <p>The coupon code.</p>
          * 
          * <strong>example:</strong>
-         * <p>726702810223</p>
+         * <p>726122650073</p>
          */
         public Builder promotionCode(String promotionCode) {
             this.putQueryParameter("PromotionCode", promotionCode);
@@ -388,13 +388,13 @@ public class TransformDBInstancePayTypeRequest extends Request {
         }
 
         /**
-         * <p>The subscription duration of the instance. Valid values:</p>
+         * <p>The subscription duration. Valid values:</p>
          * <ul>
-         * <li>If you set <strong>Period</strong> to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 5</strong>.</li>
-         * <li>If you set <strong>Period</strong> to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 11</strong>.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 5</strong>.</li>
+         * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 11</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
+         * <p>This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -87,10 +87,7 @@ public class UnassociateEipAddressWithRCInstanceRequest extends Request {
         } 
 
         /**
-         * <p>The EIP ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eip-bp166out2x4bpcf******</p>
+         * AllocationId.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -99,10 +96,7 @@ public class UnassociateEipAddressWithRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The instance ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rc-i322y2t562oh7o******</p>
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -111,10 +105,7 @@ public class UnassociateEipAddressWithRCInstanceRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

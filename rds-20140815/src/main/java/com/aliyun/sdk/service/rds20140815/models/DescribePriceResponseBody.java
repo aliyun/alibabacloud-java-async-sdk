@@ -147,11 +147,11 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>The order parameters.</p>
          * <blockquote>
-         * <p> If the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>, the value of the OrderParams parameter is returned.</p>
+         * <p>This parameter is returned only when the <strong>OrderParamOut</strong> parameter is set to <strong>true</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;autoPay&quot;:false}&quot;</p>
+         * <p>{\&quot;autoPay\&quot;:false}&quot;</p>
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -167,7 +167,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CA0ADDDC-0BEB-4381-A3ED-73B4C79B8CC6</p>
@@ -178,7 +178,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the promotion rule.</p>
+         * Rules.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -186,7 +186,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The pricing information about a serverless RDS instance.</p>
+         * <p>The serverless price information.</p>
          */
         public Builder serverlessPrice(ServerlessPrice serverlessPrice) {
             this.serverlessPrice = serverlessPrice;
@@ -194,10 +194,10 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether discounts can be used.</p>
+         * <p>Indicates whether discounts are allowed.</p>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder showDiscount(Boolean showDiscount) {
             this.showDiscount = showDiscount;
@@ -205,7 +205,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee that is calculated based on the maximum number of RCUs.</p>
+         * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>2**</p>
@@ -216,7 +216,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The estimated hourly fee that is calculated based on the minimum number of RCUs.</p>
+         * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>1**</p>
@@ -298,7 +298,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The returned message.</p>
+             * <p>The error description.</p>
              * 
              * <strong>example:</strong>
              * <p>Error description</p>
@@ -309,7 +309,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The error code that is returned.</p>
+             * <p>The error code.</p>
              * 
              * <strong>example:</strong>
              * <p>123456</p>
@@ -416,10 +416,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The coupon ID.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123456</p>
+             * CouponNo.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -427,10 +424,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the coupon.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,10 +432,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the coupon is selected.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsSelected.
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -449,10 +440,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -731,7 +719,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about the promotion.</p>
+             * <p>The price information.</p>
              */
             public Builder activityInfo(ActivityInfo activityInfo) {
                 this.activityInfo = activityInfo;
@@ -739,7 +727,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the coupon.</p>
+             * Coupons.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -783,7 +771,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The original price.</p>
              * 
              * <strong>example:</strong>
-             * <p>2504</p>
+             * <p>10508</p>
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -791,7 +779,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>An array that consists of the ID of the promotion rule.</p>
+             * RuleIds.
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -799,7 +787,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.</p>
+             * <p>The estimated hourly fee calculated based on the maximum RCU selected by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>1**</p>
@@ -810,7 +798,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.</p>
+             * <p>The estimated hourly fee calculated based on the minimum RCU selected by the user.</p>
              * 
              * <strong>example:</strong>
              * <p>2**</p>
@@ -821,10 +809,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price, which is equal to the original price minus the discount.</p>
+             * <p>The final price, which is the original price minus the discount.</p>
              * 
              * <strong>example:</strong>
-             * <p>2504</p>
+             * <p>10508</p>
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;
@@ -904,10 +892,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The description of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Activity Description</p>
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -915,10 +900,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Rule1</p>
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -926,10 +908,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the promotion rule.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1020021003939076</p>
+             * RuleId.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -1154,7 +1133,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The discount amount of the maximum number of RCUs.</p>
+             * <p>The discount amount for the maximum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>1**.*</p>
@@ -1165,7 +1144,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount amount of the minimum number of RCUs.</p>
+             * <p>The discount amount for the minimum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>1*.*</p>
@@ -1176,7 +1155,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price of the maximum number of RCUs.</p>
+             * <p>The original price for the maximum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>2**.*</p>
@@ -1187,7 +1166,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price of the minimum number of RCUs.</p>
+             * <p>The original price for the minimum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>3*.*</p>
@@ -1198,7 +1177,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the disk capacity.</p>
+             * <p>The original price of the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>1*</p>
@@ -1209,7 +1188,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum total price before the discount.</p>
+             * <p>The maximum total price before discount.</p>
              * 
              * <strong>example:</strong>
              * <p>2**.*</p>
@@ -1220,7 +1199,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum total price before the discount.</p>
+             * <p>The minimum total price before discount.</p>
              * 
              * <strong>example:</strong>
              * <p>2*.*</p>
@@ -1231,7 +1210,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price of the maximum number of RCUs.</p>
+             * <p>The trade price for the maximum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>1**.*</p>
@@ -1242,7 +1221,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price of the minimum number of RCUs.</p>
+             * <p>The trade price for the minimum RCU.</p>
              * 
              * <strong>example:</strong>
              * <p>2*.*</p>
@@ -1253,7 +1232,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price of the disk capacity.</p>
+             * <p>The discount price of the disk.</p>
              * 
              * <strong>example:</strong>
              * <p>2.*</p>

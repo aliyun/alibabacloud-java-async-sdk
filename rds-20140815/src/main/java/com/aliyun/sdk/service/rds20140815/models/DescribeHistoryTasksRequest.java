@@ -287,7 +287,7 @@ public class DescribeHistoryTasksRequest extends Request {
         } 
 
         /**
-         * <p>The minimum execution duration of the task. This parameter is used to filter tasks whose execution duration is longer than the minimum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * <p>The minimum execution duration used to filter tasks. Only tasks whose execution duration is greater than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -299,7 +299,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. Only tasks that have a start time later than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The start time can be up to 30 days earlier than the current time. If you set this parameter to a time more than 30 days earlier than the current time, the specified time is automatically converted to a time that is exactly 30 days earlier than the current time.</p>
+         * <p>The beginning of the time range to query based on task start time. Only tasks that started after this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. The earliest supported time is 30 days before the current time. If a time earlier than 30 days is specified, it is automatically converted to 30 days before the current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,7 +312,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The instance ID. Separate multiple instance IDs with commas (,). You can specify up to 30 instance IDs. This parameter is empty by default, which indicates that you can specify an unlimited number of instance IDs.</p>
+         * <p>The instance ID. Separate multiple instance IDs with commas (,). A maximum of 30 instance IDs are supported. Default value: empty, which indicates no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-uf62br2491p5l****</p>
@@ -324,7 +324,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>Only Instance is supported.</p>
+         * <p>Currently, only Instance is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -345,7 +345,8 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Valid values: positive integers.
+         * Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -381,10 +382,10 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-aekzbvctytru7ua</p>
+         * <p>rg-ae****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -422,15 +423,15 @@ public class DescribeHistoryTasksRequest extends Request {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>Scheduled</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Succeed</strong></li>
-         * <li><strong>Failed</strong></li>
-         * <li><strong>Cancelling</strong></li>
-         * <li><strong>Canceled</strong></li>
-         * <li><strong>Waiting</strong></li>
+         * <li><strong>Scheduled</strong>: Waiting to be executed.</li>
+         * <li><strong>Running</strong>: Running.</li>
+         * <li><strong>Succeed</strong>: Succeeded.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Cancelling</strong>: Being terminated.</li>
+         * <li><strong>Canceled</strong>: Terminated.</li>
+         * <li><strong>Waiting</strong>: Waiting for the scheduled time.</li>
          * </ul>
-         * <p>Separate multiple values with commas (,). By default, this parameter is left empty, which indicates that tasks in all statuses are queried.</p>
+         * <p>To query multiple statuses, separate them with commas (,). Default value: empty, which indicates all statuses.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduled</p>
@@ -442,7 +443,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The task ID. You can call the DescribeTasks operation to query the task ID. If multiple task IDs exist, separate them with commas (,). You can specify up to 30 task IDs. By default, this parameter is left empty, which indicates that all tasks are queried.</p>
+         * <p>The task ID. You can call the DescribeTasks operation to obtain the task ID. Separate multiple task IDs with commas (,). A maximum of 30 task IDs are supported. Default value: empty, which indicates no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>t-83br18hloy3faf****</p>
@@ -454,7 +455,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The task type. Separate multiple task types with commas (,). You can specify up to 30 task types. This parameter is empty by default, which indicates that you can specify an unlimited number of task types.</p>
+         * <p>The task type. Separate multiple task types with commas (,). A maximum of 30 task types are supported. Default value: empty, which indicates no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>autotest_dispatch_cases</p>
@@ -466,7 +467,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The maximum execution duration of a task. This parameter is used to filter tasks whose execution duration is shorter than or equal to the maximum execution duration. Unit: seconds. The default value is 0, which indicates that no limit is imposed.</p>
+         * <p>The maximum execution duration used to filter tasks. Only tasks whose execution duration is not less than this value are returned. Unit: seconds. Default value: 0, which indicates no restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -478,7 +479,7 @@ public class DescribeHistoryTasksRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end of the time range to query based on task start time. Only tasks that started before this time are returned. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

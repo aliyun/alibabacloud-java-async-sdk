@@ -116,7 +116,7 @@ public class AttachRCInstancesRequest extends Request {
         } 
 
         /**
-         * <p>The node IDs.</p>
+         * <p>The list of instance IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
@@ -127,7 +127,7 @@ public class AttachRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The key pair of the node.</p>
+         * <p>The key pair of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom_test</p>
@@ -139,7 +139,7 @@ public class AttachRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The logon password of the node.</p>
+         * <p>The logon password of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testPassword</p>
@@ -163,9 +163,9 @@ public class AttachRCInstancesRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * <blockquote>
-         * <p>This is a reserved parameter.</p>
+         * <p>Reserved parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

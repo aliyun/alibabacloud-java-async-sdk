@@ -106,10 +106,10 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The character set collation of the instance.</p>
+         * <p>The system character set collation.</p>
          * 
          * <strong>example:</strong>
-         * <p>Latin1_General_CI_AS</p>
+         * <p>Chinese_PRC_CS_AS</p>
          */
         public Builder collation(String collation) {
             this.collation = collation;
@@ -120,7 +120,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
          * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>rm-uf6wjk5xxxxxxx</p>
+         * <p>rm-bp15qi0nd1u27****</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -131,7 +131,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
          * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>8EA054AF-DFA7-497D-9F57-790FFC974C0B</p>
+         * <p>58D48758-F035-52D3-A4FB-80C73DA3E95C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ModifyCollationTimeZoneResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>114413215</p>
+         * <p>56365****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

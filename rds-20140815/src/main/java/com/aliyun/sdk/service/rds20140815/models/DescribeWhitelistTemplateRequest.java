@@ -116,7 +116,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -158,7 +158,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * <p>The ID of the whitelist template. You can call the <a href="https://help.aliyun.com/document_detail/2412075.html">DescribeAllWhitelistTemplate</a> operation to obtain the ID of the whitelist template.</p>
+         * <p>The whitelist template ID. You can call <a href="~~2aboralibabacloud~~">DescribeAllWhitelistTemplate</a> to obtain the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -159,10 +159,10 @@ public class DescribeRCImageListRequest extends Request {
         } 
 
         /**
-         * <p>The image architecture. Valid values:</p>
+         * <p>The system architecture of the image. Valid values:</p>
          * <ul>
-         * <li>x86_64</li>
-         * <li>arm64</li>
+         * <li>x86_64.</li>
+         * <li>arm64.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +175,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * <p>The image ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>m-2oqiu973jwcxe****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -184,7 +187,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * ImageName.
+         * <p>The image name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_image_name</p>
          */
         public Builder imageName(String imageName) {
             this.putQueryParameter("ImageName", imageName);
@@ -193,7 +199,10 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * <p>Queries available images for the specified instance type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql.x2.xlarge.6cm</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -239,7 +248,7 @@ public class DescribeRCImageListRequest extends Request {
         }
 
         /**
-         * <p>The image type. Set the value to <strong>self</strong>.</p>
+         * <p>The image type. Currently, only <strong>self</strong> is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>self</p>

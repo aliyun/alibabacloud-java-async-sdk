@@ -144,7 +144,7 @@ public class DescribeRCSnapshotsRequest extends Request {
         } 
 
         /**
-         * <p>The cloud disk ID.</p>
+         * <p>The ID of the cloud disk.</p>
          * 
          * <strong>example:</strong>
          * <p>rcd-wz9c8isqly8637zw****</p>
@@ -189,7 +189,7 @@ public class DescribeRCSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+         * <p>The region ID. You can call DescribeRegions to query available regions.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -201,8 +201,8 @@ public class DescribeRCSnapshotsRequest extends Request {
         }
 
         /**
-         * <p>The snapshot IDs.</p>
-         * <p>You can specify a maximum of 100 IDs. Separate multiple IDs with commas (,).</p>
+         * <p>The IDs of snapshots.</p>
+         * <p>You can specify multiple snapshot IDs separated by commas (,). A maximum of 100 IDs can be specified.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;rcds-bp67acfmxazb4p****&quot;, &quot;rcds-bp67acfmxazb5p****&quot;, … &quot;rcds-bp67acfmxazb6p****&quot;]</p>
@@ -214,7 +214,7 @@ public class DescribeRCSnapshotsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag details.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -282,7 +282,10 @@ public class DescribeRCSnapshotsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testRC</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +293,10 @@ public class DescribeRCSnapshotsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test01</p>
              */
             public Builder value(String value) {
                 this.value = value;

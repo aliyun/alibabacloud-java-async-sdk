@@ -67,7 +67,7 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The details of the result.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,10 +75,7 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>60478CCB-95EA-5D06-8A51-CAC83A316E9A</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,14 +128,7 @@ public class SyncRCKeyPairResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indicates whether the synchronization succeeded. Valid values:</p>
-             * <ul>
-             * <li><strong>true</strong></li>
-             * <li><strong>false</strong></li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsSyncInfo.
              */
             public Builder isSyncInfo(Boolean isSyncInfo) {
                 this.isSyncInfo = isSyncInfo;
