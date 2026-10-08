@@ -1133,7 +1133,10 @@ public class File extends TeaModel {
         } 
 
         /**
-         * AccessControlAllowOrigin.
+         * <p>The allowed origins for cross-origin requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyundoc.com">https://aliyundoc.com</a></p>
          */
         public Builder accessControlAllowOrigin(String accessControlAllowOrigin) {
             this.accessControlAllowOrigin = accessControlAllowOrigin;
@@ -1141,7 +1144,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * AccessControlRequestMethod.
+         * <p>The allowed methods for the cross-origin request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUT</p>
          */
         public Builder accessControlRequestMethod(String accessControlRequestMethod) {
             this.accessControlRequestMethod = accessControlRequestMethod;
@@ -1149,7 +1155,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * Addresses.
+         * <p>The address information.</p>
          */
         public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
@@ -1157,7 +1163,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Album.
+         * <p>The album.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstAlbum</p>
          */
         public Builder album(String album) {
             this.album = album;
@@ -1165,7 +1174,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * AlbumArtist.
+         * <p>The album artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder albumArtist(String albumArtist) {
             this.albumArtist = albumArtist;
@@ -1173,7 +1185,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Artist.
+         * <p>The artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder artist(String artist) {
             this.artist = artist;
@@ -1181,7 +1196,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * AudioCovers.
+         * <p>The cover images for the audio.</p>
          */
         public Builder audioCovers(java.util.List<Image> audioCovers) {
             this.audioCovers = audioCovers;
@@ -1189,7 +1204,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * AudioStreams.
+         * <p>A list of audio streams.</p>
          */
         public Builder audioStreams(java.util.List<AudioStream> audioStreams) {
             this.audioStreams = audioStreams;
@@ -1197,7 +1212,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Bitrate.
+         * <p>The bitrate, in bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13091201</p>
          */
         public Builder bitrate(Long bitrate) {
             this.bitrate = bitrate;
@@ -1205,7 +1223,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * CacheControl.
+         * <p>The web cache behavior that the browser should use when the object is downloaded.</p>
+         * <p>This parameter is returned only if the Cache-Control HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no-cache</p>
          */
         public Builder cacheControl(String cacheControl) {
             this.cacheControl = cacheControl;
@@ -1213,7 +1235,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Composer.
+         * <p>The composer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder composer(String composer) {
             this.composer = composer;
@@ -1221,7 +1246,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ContentDisposition.
+         * <p>The name of the object when it is downloaded.</p>
+         * <p>This parameter is returned only if the Content-Disposition HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>attachment; filename =test.jpg</p>
          */
         public Builder contentDisposition(String contentDisposition) {
             this.contentDisposition = contentDisposition;
@@ -1229,7 +1258,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ContentEncoding.
+         * <p>The content encoding format of the object when it is downloaded.</p>
+         * <p>This parameter is returned only if the Content-Encoding HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UTF-8</p>
          */
         public Builder contentEncoding(String contentEncoding) {
             this.contentEncoding = contentEncoding;
@@ -1237,7 +1270,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ContentLanguage.
+         * <p>The language of the object content.</p>
+         * <p>This parameter is returned only if the Content-Language HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-CN</p>
          */
         public Builder contentLanguage(String contentLanguage) {
             this.contentLanguage = contentLanguage;
@@ -1245,7 +1282,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ContentMd5.
+         * <p>The MD5 hash of the object content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HZwoCnxPZ/fvhz4oRJ2+Fw==</p>
          */
         public Builder contentMd5(String contentMd5) {
             this.contentMd5 = contentMd5;
@@ -1253,7 +1293,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ContentType.
+         * <p>The content type of the file (MIME type).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/jpeg</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -1261,7 +1304,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the metadata was created. The time is in the RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -1269,7 +1315,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * CroppingSuggestions.
+         * <p>The cropping suggestions for the image.</p>
+         * <blockquote>
+         * <p>This feature is not supported.</p>
+         * </blockquote>
          */
         public Builder croppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
             this.croppingSuggestions = croppingSuggestions;
@@ -1277,7 +1326,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID of the file, which you can use to associate the file with an ID in your business system. When the file is indexed into a dataset, this ID is stored as a metadata attribute. We recommend using a globally unique value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member-image-id-0001</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -1285,7 +1337,14 @@ public class File extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>Custom key-value labels for the file. This parameter is optional and can be used to store business-specific data and to filter queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;MemberName&quot;: &quot;Tim&quot;,
+         *       &quot;Enabled&quot;: &quot;True&quot;,
+         *       &quot;ItemCount&quot;: &quot;10&quot;
+         * }</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -1293,7 +1352,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -1301,7 +1363,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The total duration of the video, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15.263000</p>
          */
         public Builder duration(Double duration) {
             this.duration = duration;
@@ -1309,7 +1374,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ETag.
+         * <p>An ETag is generated when an object is created. The ETag identifies the content of an object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;1D9C280A7C4F67F7EF873E28449****&quot;</p>
          */
         public Builder eTag(String eTag) {
             this.eTag = eTag;
@@ -1317,7 +1385,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * EXIF.
+         * <p>The original EXIF information of the image, stored as a serialized JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Obtain image information</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Compression&quot;:{&quot;value&quot;:&quot;6&quot;},&quot;DateTime&quot;:{&quot;value&quot;:&quot;2020:08:19 17:11:11&quot;}}</p>
          */
         public Builder EXIF(String EXIF) {
             this.EXIF = EXIF;
@@ -1325,7 +1396,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * Elements.
+         * <p>A list of document fragments that match the current search content when you use the SemanticQuery API to perform a semantic search.</p>
          */
         public Builder elements(java.util.List<Element> elements) {
             this.elements = elements;
@@ -1333,7 +1404,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FigureCount.
+         * <p>The number of figures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder figureCount(Long figureCount) {
             this.figureCount = figureCount;
@@ -1341,7 +1415,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * Figures.
+         * <p>A list of figures detected by the AI model.</p>
          */
         public Builder figures(java.util.List<Figure> figures) {
             this.figures = figures;
@@ -1349,7 +1423,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FileAccessTime.
+         * <p>The time when the file was last accessed. The time is in the RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder fileAccessTime(String fileAccessTime) {
             this.fileAccessTime = fileAccessTime;
@@ -1357,7 +1434,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FileCreateTime.
+         * <p>The time when the file was created. The time is in the RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder fileCreateTime(String fileCreateTime) {
             this.fileCreateTime = fileCreateTime;
@@ -1365,7 +1445,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FileHash.
+         * <p>The hash of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d9c280a7c4f67f7ef873e28449dbe17</p>
          */
         public Builder fileHash(String fileHash) {
             this.fileHash = fileHash;
@@ -1373,7 +1456,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FileModifiedTime.
+         * <p>The time when the file was last modified. The time is in the RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder fileModifiedTime(String fileModifiedTime) {
             this.fileModifiedTime = fileModifiedTime;
@@ -1381,7 +1467,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Filename.
+         * <p>The name of the file. For an OSS object, this parameter is the ObjectKey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sampleobject.jpg</p>
          */
         public Builder filename(String filename) {
             this.filename = filename;
@@ -1389,7 +1478,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FormatLongName.
+         * <p>The full name of the media format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>QuickTime / MOV</p>
          */
         public Builder formatLongName(String formatLongName) {
             this.formatLongName = formatLongName;
@@ -1397,7 +1489,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * FormatName.
+         * <p>The name of the media format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov</p>
          */
         public Builder formatName(String formatName) {
             this.formatName = formatName;
@@ -1405,7 +1500,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ImageHeight.
+         * <p>The height of the image, in pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder imageHeight(Long imageHeight) {
             this.imageHeight = imageHeight;
@@ -1413,7 +1511,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * ImageScore.
+         * <p>The image score information, detected by an AI model.</p>
          */
         public Builder imageScore(ImageScore imageScore) {
             this.imageScore = imageScore;
@@ -1421,7 +1519,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ImageWidth.
+         * <p>The width of the image, in pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>270</p>
          */
         public Builder imageWidth(Long imageWidth) {
             this.imageWidth = imageWidth;
@@ -1429,7 +1530,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Insights.
+         * <p>Summary and description of the file.</p>
+         * <blockquote>
+         * <p>Currently not supported</p>
+         * </blockquote>
          */
         public Builder insights(Insights insights) {
             this.insights = insights;
@@ -1437,7 +1541,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>A list of AI-detected labels for the file.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -1445,7 +1549,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The language in BCP 47 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eng</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -1453,7 +1560,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * LatLong.
+         * <p>The GPS latitude and longitude.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.134390,120.074997</p>
          */
         public Builder latLong(String latLong) {
             this.latLong = latLong;
@@ -1461,7 +1571,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * MediaType.
+         * <p>The media type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mediaType(String mediaType) {
             this.mediaType = mediaType;
@@ -1469,7 +1582,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OCRContents.
+         * <p>The OCR results.</p>
+         * <blockquote>
+         * <p>This feature is not supported.</p>
+         * </blockquote>
          */
         public Builder OCRContents(java.util.List<OCRContents> OCRContents) {
             this.OCRContents = OCRContents;
@@ -1477,7 +1593,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OCRTexts.
+         * <p>The text detected in the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云IMM</p>
          */
         public Builder OCRTexts(String OCRTexts) {
             this.OCRTexts = OCRTexts;
@@ -1485,7 +1604,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSCRC64.
+         * <p>The CRC-64 value of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>559890638950338001</p>
          */
         public Builder OSSCRC64(String OSSCRC64) {
             this.OSSCRC64 = OSSCRC64;
@@ -1493,7 +1615,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSDeleteMarker.
+         * <p>The OSS delete marker.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAEQMhiBgIDXiaaB0BYiIGQzYmRkZGUxMTM1ZDRjOTZhNjk4YjRjMTAyZjhl****</p>
          */
         public Builder OSSDeleteMarker(String OSSDeleteMarker) {
             this.OSSDeleteMarker = OSSDeleteMarker;
@@ -1501,7 +1626,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSExpiration.
+         * <p>The expiration time of the OSS object.</p>
+         * <p>This parameter is returned only if the Expires HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2120-01-01T12:00:00.000Z</p>
          */
         public Builder OSSExpiration(String OSSExpiration) {
             this.OSSExpiration = OSSExpiration;
@@ -1509,7 +1638,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSObjectType.
+         * <p>The type of the OSS object. A common value is <code>Normal</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         public Builder OSSObjectType(String OSSObjectType) {
             this.OSSObjectType = OSSObjectType;
@@ -1517,7 +1649,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSStorageClass.
+         * <p>The storage class of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard</p>
          */
         public Builder OSSStorageClass(String OSSStorageClass) {
             this.OSSStorageClass = OSSStorageClass;
@@ -1525,7 +1660,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSTagging.
+         * <p>The tags of the OSS object.</p>
+         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;val&quot;}</p>
          */
         public Builder OSSTagging(java.util.Map<String, ?> OSSTagging) {
             this.OSSTagging = OSSTagging;
@@ -1533,7 +1672,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSTaggingCount.
+         * <p>The number of tags on the OSS object.</p>
+         * <p>This parameter is returned only if tags are set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder OSSTaggingCount(Long OSSTaggingCount) {
             this.OSSTaggingCount = OSSTaggingCount;
@@ -1541,7 +1684,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSURI.
+         * <p>The URI of the OSS file. This parameter is returned only if the URI is a PDS address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/sampleobject.jpg</p>
          */
         public Builder OSSURI(String OSSURI) {
             this.OSSURI = OSSURI;
@@ -1549,7 +1695,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSUserMeta.
+         * <p>The user-defined metadata of the OSS object.</p>
+         * <p>This parameter is returned only if user-defined metadata is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;val&quot;}</p>
          */
         public Builder OSSUserMeta(java.util.Map<String, ?> OSSUserMeta) {
             this.OSSUserMeta = OSSUserMeta;
@@ -1557,7 +1707,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * OSSVersionId.
+         * <p>The version ID of the OSS object.</p>
+         * <p>This parameter is returned only if versioning is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/109695.html">Overview of versioning</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CAEQNhiBgMDJgZCA0BYiIDc4MGZjZGI2OTBjOTRmNTE5NmU5NmFhZjhjYmY0****</p>
          */
         public Builder OSSVersionId(String OSSVersionId) {
             this.OSSVersionId = OSSVersionId;
@@ -1565,7 +1719,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ObjectACL.
+         * <p>The access control list (ACL) of the OSS object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder objectACL(String objectACL) {
             this.objectACL = objectACL;
@@ -1573,7 +1730,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The unique ID of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75d5de2c50754e3dadd5c35dbca5f9949369e37eb342a73821f690c94c36c7f7</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -1581,7 +1741,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ObjectStatus.
+         * <p>File index status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Indexed</p>
          */
         public Builder objectStatus(String objectStatus) {
             this.objectStatus = objectStatus;
@@ -1589,7 +1752,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The type of the object. The value is always <strong>file</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>file</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -1597,7 +1763,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * Orientation.
+         * <p>The rotation value of the image, read from its EXIF data.</p>
+         * <p>This parameter is returned only if this value is available in the EXIF data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder orientation(Long orientation) {
             this.orientation = orientation;
@@ -1605,7 +1775,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102321002467****</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -1613,7 +1786,13 @@ public class File extends TeaModel {
         }
 
         /**
-         * PageCount.
+         * <p>The number of pages.</p>
+         * <blockquote>
+         * <p>This feature is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageCount(Long pageCount) {
             this.pageCount = pageCount;
@@ -1621,7 +1800,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Performer.
+         * <p>The performer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder performer(String performer) {
             this.performer = performer;
@@ -1629,7 +1811,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ProduceTime.
+         * <p>The time when the photo was taken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder produceTime(String produceTime) {
             this.produceTime = produceTime;
@@ -1637,7 +1822,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ProgramCount.
+         * <p>The number of programs in the media container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder programCount(Long programCount) {
             this.programCount = programCount;
@@ -1645,7 +1833,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -1653,7 +1844,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason the file failed to be indexed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[InternalError] The request has been failed due to some unknown error. status: 500, requestId: CC5ACFBD-BB7A-496D-A9D6-****</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -1661,7 +1855,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * SceneElements.
+         * <p>A list of scene elements extracted from the video by the AI model during analysis.</p>
          */
         public Builder sceneElements(java.util.List<SceneElement> sceneElements) {
             this.sceneElements = sceneElements;
@@ -1669,7 +1863,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * SemanticTypes.
+         * <p>Indicates why this file was returned when you use the SemanticQuery API to perform a semantic search.</p>
          */
         public Builder semanticTypes(java.util.List<String> semanticTypes) {
             this.semanticTypes = semanticTypes;
@@ -1677,7 +1871,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ServerSideDataEncryption.
+         * <p>The encryption algorithm of the object.</p>
+         * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SM4</p>
          */
         public Builder serverSideDataEncryption(String serverSideDataEncryption) {
             this.serverSideDataEncryption = serverSideDataEncryption;
@@ -1685,7 +1883,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ServerSideEncryption.
+         * <p>The server-side encryption method.</p>
+         * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AES256</p>
          */
         public Builder serverSideEncryption(String serverSideEncryption) {
             this.serverSideEncryption = serverSideEncryption;
@@ -1693,7 +1895,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * ServerSideEncryptionCustomerAlgorithm.
+         * <p>The encryption algorithm used for server-side encryption with customer-provided keys.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SM4</p>
          */
         public Builder serverSideEncryptionCustomerAlgorithm(String serverSideEncryptionCustomerAlgorithm) {
             this.serverSideEncryptionCustomerAlgorithm = serverSideEncryptionCustomerAlgorithm;
@@ -1701,7 +1906,11 @@ public class File extends TeaModel {
         }
 
         /**
-         * ServerSideEncryptionKeyId.
+         * <p>The ID of the customer master key (CMK) that is managed by KMS.</p>
+         * <p>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9468da86-3509-4f8d-a61e-6eab1eac****</p>
          */
         public Builder serverSideEncryptionKeyId(String serverSideEncryptionKeyId) {
             this.serverSideEncryptionKeyId = serverSideEncryptionKeyId;
@@ -1709,7 +1918,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Size.
+         * <p>The size of the file, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder size(Long size) {
             this.size = size;
@@ -1717,7 +1929,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the first frame, in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         public Builder startTime(Double startTime) {
             this.startTime = startTime;
@@ -1725,7 +1940,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * StreamCount.
+         * <p>The number of media streams in the media container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder streamCount(Long streamCount) {
             this.streamCount = streamCount;
@@ -1733,7 +1951,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * Subtitles.
+         * <p>A list of subtitle streams.</p>
          */
         public Builder subtitles(java.util.List<SubtitleStream> subtitles) {
             this.subtitles = subtitles;
@@ -1741,7 +1959,13 @@ public class File extends TeaModel {
         }
 
         /**
-         * Timezone.
+         * <p>The timezone.</p>
+         * <blockquote>
+         * <p>This feature is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
          */
         public Builder timezone(String timezone) {
             this.timezone = timezone;
@@ -1749,7 +1973,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The title of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -1757,7 +1984,15 @@ public class File extends TeaModel {
         }
 
         /**
-         * TravelClusterId.
+         * <p>A reserved parameter.</p>
+         * <blockquote>
+         * <p>This feature is not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder travelClusterId(String travelClusterId) {
             this.travelClusterId = travelClusterId;
@@ -1765,7 +2000,12 @@ public class File extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The address of the file.</p>
+         * <p>An OSS URI must be in the <code>oss://${Bucket}/${Object}</code> format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the full path to the object, including the file extension.</p>
+         * <p>A PDS URI must be in the <code>pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}</code> format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;
@@ -1773,7 +2013,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the metadata was last updated. The time is in the RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -1781,7 +2024,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * VideoHeight.
+         * <p>The height of the video, in pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1920</p>
          */
         public Builder videoHeight(Long videoHeight) {
             this.videoHeight = videoHeight;
@@ -1789,7 +2035,7 @@ public class File extends TeaModel {
         }
 
         /**
-         * VideoStreams.
+         * <p>A list of video streams.</p>
          */
         public Builder videoStreams(java.util.List<VideoStream> videoStreams) {
             this.videoStreams = videoStreams;
@@ -1797,7 +2043,10 @@ public class File extends TeaModel {
         }
 
         /**
-         * VideoWidth.
+         * <p>The width of the video, in pixels (px).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
          */
         public Builder videoWidth(Long videoWidth) {
             this.videoWidth = videoWidth;

@@ -67,7 +67,10 @@ public class FileSmartCluster extends TeaModel {
         } 
 
         /**
-         * Similarity.
+         * <p>Similarity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder similarity(Float similarity) {
             this.similarity = similarity;
@@ -75,7 +78,10 @@ public class FileSmartCluster extends TeaModel {
         }
 
         /**
-         * SmartClusterId.
+         * <p>SmartClusterId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</p>
          */
         public Builder smartClusterId(String smartClusterId) {
             this.smartClusterId = smartClusterId;

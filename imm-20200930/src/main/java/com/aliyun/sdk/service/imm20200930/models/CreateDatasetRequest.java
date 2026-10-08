@@ -211,7 +211,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of bindings per dataset. The range is 1~10, with a default value of 10.</p>
+         * <p>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -223,7 +223,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of metadata entities in each dataset. The default value is 10000000000.</p>
+         * <p>The maximum number of metadata entities per dataset. Default value: 10000000000.</p>
          * 
          * <strong>example:</strong>
          * <p>10000000000</p>
@@ -235,7 +235,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of files in each dataset. The range is 1~100000000, with a default value of 100000000.</p>
+         * <p>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -247,7 +247,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of metadata relationships in each dataset. The default value is 100000000000.</p>
+         * <p>The maximum number of metadata relations per dataset. Default value: 100000000000.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000000</p>
@@ -259,7 +259,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum total size of files in each dataset. Once the limit is exceeded, no more indexes can be added. The default value is 90000000000000000, in bytes.</p>
+         * <p>The maximum total size of files per dataset. If the limit is exceeded, no more indexes can be added. Default value: 90000000000000000. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>90000000000000000</p>
@@ -271,11 +271,11 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset, which must be unique under the same Project. Naming rules are as follows:</p>
+         * <p>The name of the dataset. The name must be unique within a project. The name must meet the following requirements:</p>
          * <ul>
-         * <li>Length should be 1~128 characters.</li>
-         * <li>Can only contain English letters, numbers, hyphens (-), and underscores (_).</li>
-         * <li>Must start with an English letter or underscore (_).</li>
+         * <li>The name must be 1 to 128 characters in length.</li>
+         * <li>The name can contain only letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start with a letter or an underscore (_).</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -289,7 +289,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Description of the dataset. The length should be 1~256 English or Chinese characters, with a default value of empty.</p>
+         * <p>The description of the dataset. The description must be 1 to 256 characters in length. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>immtest</p>
@@ -301,7 +301,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. For more information on how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,7 +314,7 @@ public class CreateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>. The default value is empty.</p>
+         * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>Official:ImageManagement</p>

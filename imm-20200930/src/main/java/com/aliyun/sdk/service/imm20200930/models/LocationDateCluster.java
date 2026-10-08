@@ -171,7 +171,7 @@ public class LocationDateCluster extends TeaModel {
         } 
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
          */
         public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
@@ -179,7 +179,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the spatiotemporal cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-16T13:14:34.882523669+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -187,7 +190,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-01</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -195,7 +201,12 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;User&quot;: &quot;Jane&quot;
+         * }</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -203,7 +214,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * LocationDateClusterEndTime.
+         * <p>The end time of the spatiotemporal cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-02T23:59:59.999999999+08:00</p>
          */
         public Builder locationDateClusterEndTime(String locationDateClusterEndTime) {
             this.locationDateClusterEndTime = locationDateClusterEndTime;
@@ -211,7 +225,18 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * LocationDateClusterLevel.
+         * <p>The administrative level of the spatiotemporal cluster.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>country</li>
+         * <li>province</li>
+         * <li>city</li>
+         * <li>district</li>
+         * <li>township</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>province</p>
          */
         public Builder locationDateClusterLevel(String locationDateClusterLevel) {
             this.locationDateClusterLevel = locationDateClusterLevel;
@@ -219,7 +244,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * LocationDateClusterStartTime.
+         * <p>The start time of the spatiotemporal cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-05-01T00:00:00+08:00</p>
          */
         public Builder locationDateClusterStartTime(String locationDateClusterStartTime) {
             this.locationDateClusterStartTime = locationDateClusterStartTime;
@@ -227,7 +255,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>location-date-cluster-14f48cb3-079d-4595-80c4-5735284b****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -235,7 +266,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The custom title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州一日游</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -243,7 +277,10 @@ public class LocationDateCluster extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the spatiotemporal cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-16T13:15:05.65746784+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

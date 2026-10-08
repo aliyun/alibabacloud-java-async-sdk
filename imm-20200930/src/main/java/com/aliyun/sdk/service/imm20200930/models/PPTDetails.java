@@ -80,7 +80,10 @@ public class PPTDetails extends TeaModel {
         } 
 
         /**
-         * ImagePath.
+         * <p>The image path of the PPT frame capture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;ppts/video_snapshots_0.jpg&quot;</p>
          */
         public Builder imagePath(String imagePath) {
             this.imagePath = imagePath;
@@ -88,7 +91,10 @@ public class PPTDetails extends TeaModel {
         }
 
         /**
-         * PPTShotIndex.
+         * <p>The index of the PPT frame capture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder PPTShotIndex(Long PPTShotIndex) {
             this.PPTShotIndex = PPTShotIndex;
@@ -96,7 +102,10 @@ public class PPTDetails extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The time in the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;

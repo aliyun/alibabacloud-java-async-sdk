@@ -54,7 +54,7 @@ public class SmartClusterConfig extends TeaModel {
         } 
 
         /**
-         * Figure.
+         * <p>The figure clustering configuration.</p>
          */
         public Builder figure(FigureClusterConfig figure) {
             this.figure = figure;

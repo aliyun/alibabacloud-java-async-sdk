@@ -201,7 +201,9 @@ public class CreateCustomizedStoryRequest extends Request {
          * <p>The custom labels. You can specify labels to help you identify and retrieve the story.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
+         * <p>{
+         *       &quot;MyStoryLabel&quot;: &quot;HolidayStory&quot;
+         * }</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             String customLabelsShrink = shrink(customLabels, "CustomLabels", "json");
@@ -338,7 +340,7 @@ public class CreateCustomizedStoryRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://bucket1/cover</p>
+             * <p>oss://test-bucket/test-object.jpg</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -397,7 +399,14 @@ public class CreateCustomizedStoryRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>[{&quot;URI&quot;:&quot;oss://bucket1/file1&quot;}]</p>
+             * <p>[
+             *       {
+             *             &quot;URI&quot;: &quot;oss://test-bucket/test-object_1.jpg&quot;
+             *       },
+             * {
+             *             &quot;URI&quot;: &quot;oss://test-bucket/test-object_2.jpg&quot;
+             *       }
+             * ]</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -93,7 +93,7 @@ public class DocumentReadOption extends TeaModel {
         } 
 
         /**
-         * Keyword.
+         * <p>The document intensive reading keyword extraction options.</p>
          */
         public Builder keyword(DocumentReadKeywordOption keyword) {
             this.keyword = keyword;
@@ -101,7 +101,7 @@ public class DocumentReadOption extends TeaModel {
         }
 
         /**
-         * Narrator.
+         * <p>The document intensive reading guide options.</p>
          */
         public Builder narrator(DocumentReadNarratorOption narrator) {
             this.narrator = narrator;
@@ -109,7 +109,7 @@ public class DocumentReadOption extends TeaModel {
         }
 
         /**
-         * Question.
+         * <p>The document intensive reading question guide options.</p>
          */
         public Builder question(DocumentReadQuestionOption question) {
             this.question = question;
@@ -117,7 +117,7 @@ public class DocumentReadOption extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>The document intensive reading summary options.</p>
          */
         public Builder summary(DocumentReadSummaryOption summary) {
             this.summary = summary;

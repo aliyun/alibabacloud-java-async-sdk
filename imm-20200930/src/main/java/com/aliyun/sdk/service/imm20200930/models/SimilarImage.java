@@ -67,7 +67,10 @@ public class SimilarImage extends TeaModel {
         } 
 
         /**
-         * ImageScore.
+         * <p>The aesthetic score.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.709</p>
          */
         public Builder imageScore(Double imageScore) {
             this.imageScore = imageScore;
@@ -75,7 +78,10 @@ public class SimilarImage extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The URI of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;

@@ -243,8 +243,10 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         /**
          * <p>The compression algorithm. Valid values:</p>
          * <ul>
-         * <li>octree</li>
-         * <li>kdtree</li>
+         * <li><p>octree: octree</p>
+         * </li>
+         * <li><p>kdtree: K-d tree</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -258,8 +260,8 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The configurations of authorization chains. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p><strong>Leave this parameter empty unless you have special requirements.</strong></p>
+         * <p>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -269,7 +271,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The k-d tree compression options.</p>
+         * <p>The K-d tree compression parameters.</p>
          */
         public Builder kdtreeOption(KdtreeOption kdtreeOption) {
             String kdtreeOptionShrink = shrink(kdtreeOption, "KdtreeOption", "json");
@@ -279,9 +281,9 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The message notification configuration. For more information, click Notification. For information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          * <blockquote>
-         * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+         * <p>Intelligent Media Management does not support specifying a callback URL for API call callbacks. Use Message Service (MNS) instead.</p>
          * </blockquote>
          */
         public Builder notification(Notification notification) {
@@ -292,7 +294,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The octree compression options.</p>
+         * <p>The octree compression parameters.</p>
          */
         public Builder octreeOption(OctreeOption octreeOption) {
             String octreeOptionShrink = shrink(octreeOption, "OctreeOption", "json");
@@ -302,10 +304,12 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The PCD property fields and the compression order in which the data is decompressed after the compression is complete.</p>
+         * <p>The PCD attribute fields that participate in compression and the compression order. After compression, data is decompressed in this order.</p>
          * <ul>
-         * <li>If octree of Point Cloud Library (PCL) is used for compression, [&quot;xyz&quot;] is supported.</li>
-         * <li>If Draco k-dimensional (k-d) tree is used for compression, [&quot;xyz&quot;] and [&quot;xyz&quot;, &quot;intensity&quot;] are supported.</li>
+         * <li><p>If you use PCL library octree compression, [&quot;xyz&quot;] is supported.</p>
+         * </li>
+         * <li><p>If you use Draco library K-d tree compression, [&quot;xyz&quot;] or [&quot;xyz&quot;, &quot;intensity&quot;] is supported.</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          */
@@ -317,7 +321,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The file format. Set the value to the default value: pcd.</p>
+         * <p>The point cloud file format. Only PCD format is supported. Default value: pcd.</p>
          * 
          * <strong>example:</strong>
          * <p>pcd</p>
@@ -329,7 +333,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,8 +346,8 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URL of the PCD file.</p>
-         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>The OSS URI of the point cloud file.</p>
+         * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where <code>${Bucket}</code> is the name of an OSS bucket in the same region as the current project, and <code>${Object}</code> is the full path of the file including the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -356,7 +360,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+         * <p>The custom tags that are used to search for and filter asynchronous tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;LabelKey&quot;: &quot;Value&quot;}</p>
@@ -369,8 +373,8 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URL of the output file after compression.</p>
-         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the path of the object with the extension included.</p>
+         * <p>The OSS URI of the compressed output file.</p>
+         * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where <code>${Bucket}</code> is the name of an OSS bucket in the same region as the current project, and <code>${Object}</code> is the full path of the file including the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -383,7 +387,7 @@ public class CreateCompressPointCloudTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+         * <p>The custom information, which is returned in asynchronous message notifications to help you associate message notifications within your system. Maximum length: 2,048 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

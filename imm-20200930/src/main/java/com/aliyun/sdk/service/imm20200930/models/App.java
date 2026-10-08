@@ -158,7 +158,10 @@ public class App extends TeaModel {
         } 
 
         /**
-         * AppDescription.
+         * <p>AppDescription</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国最大的电商购物商城</p>
          */
         public Builder appDescription(String appDescription) {
             this.appDescription = appDescription;
@@ -166,7 +169,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * AppId.
+         * <p>AppId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234567890</p>
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -174,7 +180,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * AppKey.
+         * <p>AppKey</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ryBOBW0Z6NnQ3fV9</p>
          */
         public Builder appKey(String appKey) {
             this.appKey = appKey;
@@ -182,7 +191,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * AppName.
+         * <p>AppName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>淘宝</p>
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -190,7 +202,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * AppRegion.
+         * <p>AppRegion</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appRegion(Long appRegion) {
             this.appRegion = appRegion;
@@ -198,7 +213,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * AppType.
+         * <p>AppType</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder appType(Long appType) {
             this.appType = appType;
@@ -206,7 +224,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * EnglishName.
+         * <p>EnglishName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Taobao</p>
          */
         public Builder englishName(String englishName) {
             this.englishName = englishName;
@@ -214,7 +235,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>OwnerId</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1023210024677934</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -222,7 +246,10 @@ public class App extends TeaModel {
         }
 
         /**
-         * PackageName.
+         * <p>PackageName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ThisIsAPackageName</p>
          */
         public Builder packageName(String packageName) {
             this.packageName = packageName;

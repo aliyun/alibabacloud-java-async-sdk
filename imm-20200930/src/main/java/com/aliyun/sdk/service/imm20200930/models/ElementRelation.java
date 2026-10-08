@@ -67,7 +67,10 @@ public class ElementRelation extends TeaModel {
         } 
 
         /**
-         * ObjectId.
+         * <p>The ID of the element.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -75,7 +78,10 @@ public class ElementRelation extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>child，parent</p>
          */
         public Builder type(String type) {
             this.type = type;

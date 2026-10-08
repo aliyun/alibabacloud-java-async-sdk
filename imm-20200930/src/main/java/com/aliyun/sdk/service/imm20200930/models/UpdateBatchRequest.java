@@ -140,7 +140,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * <p>The processing templates.</p>
+         * <p>A list of data processing templates.</p>
          */
         public Builder actions(java.util.List<Actions> actions) {
             String actionsShrink = shrink(actions, "Actions", "json");
@@ -150,7 +150,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * <p>The ID of the batch processing task. You can obtain the ID of the batch processing task from the response of the <a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a> operation.</p>
+         * <p>The ID of the batch processing task. For more information, see <a href="https://help.aliyun.com/document_detail/606694.html">Create a batch processing task</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * <p>The input data source.</p>
+         * <p>The data source configuration.</p>
          */
         public Builder input(Input input) {
             String inputShrink = shrink(input, "Input", "json");
@@ -173,7 +173,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class UpdateBatchRequest extends Request {
         }
 
         /**
-         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * <p>Custom tags used to search for and filter asynchronous tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;val&quot;}</p>
@@ -258,7 +258,7 @@ public class UpdateBatchRequest extends Request {
             } 
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The template name.</p>
              * 
              * <strong>example:</strong>
              * <p>doc/convert</p>
@@ -269,7 +269,7 @@ public class UpdateBatchRequest extends Request {
             }
 
             /**
-             * <p>The template parameters.</p>
+             * <p>A list of template parameters.</p>
              */
             public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;

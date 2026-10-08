@@ -156,6 +156,9 @@ public class EncodeBlindWatermarkRequest extends Request {
 
         /**
          * <p>The text content of watermarks. It can be up to 256 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Copyright Alibaba Cloud</p>
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);

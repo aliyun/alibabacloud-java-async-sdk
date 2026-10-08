@@ -54,7 +54,7 @@ public class Input extends TeaModel {
         } 
 
         /**
-         * OSS.
+         * <p>The OSS data source.</p>
          */
         public Builder OSS(InputOSS OSS) {
             this.OSS = OSS;

@@ -275,7 +275,7 @@ public class InputFile extends TeaModel {
         } 
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
          */
         public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
@@ -283,7 +283,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Album.
+         * <p>The album.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FirstAlbum</p>
          */
         public Builder album(String album) {
             this.album = album;
@@ -291,7 +294,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * AlbumArtist.
+         * <p>The album artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder albumArtist(String albumArtist) {
             this.albumArtist = albumArtist;
@@ -299,7 +305,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Artist.
+         * <p>The artist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder artist(String artist) {
             this.artist = artist;
@@ -307,7 +316,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Composer.
+         * <p>The composer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder composer(String composer) {
             this.composer = composer;
@@ -315,7 +327,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * ContentType.
+         * <p>In most cases, you can leave this parameter empty. The Multipurpose Internet Mail Extensions (MIME) type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image/jpeg</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -323,7 +338,11 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID of the file. This parameter is optional. When the metadata of the file is indexed into the dataset, the custom ID is stored as the data attribute. You can map the custom ID to other data in your business system. You can configure this parameter based on your business requirements. For example, you can associate a URI with an ID in your business system. We recommend that you set this parameter to a unique value.</p>
+         * <p>This parameter supports prefix searches and sorting during queries. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>member-image-id-0001</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -331,7 +350,14 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels of the file. This parameter is optional. The parameter stores custom key-value labels, which can be used to filter data. For more information, see <a href="https://help.aliyun.com/document_detail/252856.html">Supported fields and operators</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;MemberName&quot;: &quot;Tim&quot;,
+         *       &quot;Enabled&quot;: &quot;True&quot;,
+         *       &quot;ItemCount&quot;: &quot;10&quot;
+         * }</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -339,7 +365,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Figures.
+         * <p>This parameter is optional. The persons. This parameter is used to remove a face from a face group or modify a face group. For more information, see <a href="https://help.aliyun.com/document_detail/477175.html">Face clustering</a>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only for the UpdateFileMeta or BatchUpdateFileMeta operation.</p>
+         * </blockquote>
          */
         public Builder figures(java.util.List<Figures> figures) {
             this.figures = figures;
@@ -347,7 +376,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * FileHash.
+         * <p>The file hash. In most cases, you can leave this parameter empty. This parameter is required only when the URI parameter specifies a file in Photo and Drive Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1d9c280a7c4f67f7ef873e28449dbe17</p>
          */
         public Builder fileHash(String fileHash) {
             this.fileHash = fileHash;
@@ -355,7 +387,7 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The intelligent labels.</p>
          */
         public Builder labels(java.util.List<Label> labels) {
             this.labels = labels;
@@ -363,7 +395,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * LatLong.
+         * <p>The GPS latitude and longitude information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30.134390,120.074997</p>
          */
         public Builder latLong(String latLong) {
             this.latLong = latLong;
@@ -371,7 +406,19 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * MediaType.
+         * <p>In most cases, you can leave this parameter empty. The media type of the file.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>image</li>
+         * <li>other</li>
+         * <li>document</li>
+         * <li>archive</li>
+         * <li>video</li>
+         * <li>audio</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>image</p>
          */
         public Builder mediaType(String mediaType) {
             this.mediaType = mediaType;
@@ -379,7 +426,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * OSSURI.
+         * <p>The path of the OSS object. In most cases, you can leave this parameter empty. You can specify this parameter only if the URI parameter specifies a file in Photo and Drive Service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder OSSURI(String OSSURI) {
             this.OSSURI = OSSURI;
@@ -387,7 +437,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Performer.
+         * <p>The performer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Jane</p>
          */
         public Builder performer(String performer) {
             this.performer = performer;
@@ -395,7 +448,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * ProduceTime.
+         * <p>The time when the image was taken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder produceTime(String produceTime) {
             this.produceTime = produceTime;
@@ -403,7 +459,10 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * Title.
+         * <p>The file title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder title(String title) {
             this.title = title;
@@ -411,7 +470,15 @@ public class InputFile extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The URI of the file for which you want to create or update an index in the request. This parameter is required. The URI can represent an object in Object Storage Service (OSS) or a file in Photo and Drive Service.</p>
+         * <p>The OSS URI must be in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that is in the same region as the current project. <code>${Object}</code> specifies the full file path that contains the object name extension.</p>
+         * <p>The URI of a file in Photo and Drive Service must be in the <code>pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}</code> format.</p>
+         * <blockquote>
+         * <p> URIs that start with HTTP are not supported.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket/sampleobject.jpg</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;
@@ -490,7 +557,14 @@ public class InputFile extends TeaModel {
             } 
 
             /**
-             * FigureClusterId.
+             * <p>The ID of the face cluster. The following IDs of special face clusters are reserved:</p>
+             * <ul>
+             * <li>figure-cluster-id-independent: indicates that the face does not belong to any face cluster. The face may be added to a face cluster in subsequent face clustering tasks after new images are added to the dataset.</li>
+             * <li>figure-cluster-id-unavailable: indicates that the face has not been included in a face clustering task since a new image was added to the dataset.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cluster-dbe72fec-b84c-4ab6-885b-3678e64****</p>
              */
             public Builder figureClusterId(String figureClusterId) {
                 this.figureClusterId = figureClusterId;
@@ -498,7 +572,10 @@ public class InputFile extends TeaModel {
             }
 
             /**
-             * FigureId.
+             * <p>The person ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -506,7 +583,10 @@ public class InputFile extends TeaModel {
             }
 
             /**
-             * FigureType.
+             * <p>The figure type. Set this parameter to <code>face</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>face</p>
              */
             public Builder figureType(String figureType) {
                 this.figureType = figureType;

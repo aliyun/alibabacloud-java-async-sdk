@@ -119,7 +119,7 @@ public class Image extends TeaModel {
         } 
 
         /**
-         * CroppingSuggestions.
+         * <p>The image cropping suggestions. This parameter is reserved and not available.</p>
          */
         public Builder croppingSuggestions(java.util.List<CroppingSuggestion> croppingSuggestions) {
             this.croppingSuggestions = croppingSuggestions;
@@ -127,7 +127,10 @@ public class Image extends TeaModel {
         }
 
         /**
-         * EXIF.
+         * <p>The original EXIF information about the image. The EXIF information is stored in the serialized JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Query image information</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;FileSize&quot;:{&quot;value&quot;:&quot;29304&quot;},&quot;Format&quot;:{&quot;value&quot;:&quot;jpg&quot;}}</p>
          */
         public Builder EXIF(String EXIF) {
             this.EXIF = EXIF;
@@ -135,7 +138,10 @@ public class Image extends TeaModel {
         }
 
         /**
-         * ImageHeight.
+         * <p>The height of the image. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>820</p>
          */
         public Builder imageHeight(Long imageHeight) {
             this.imageHeight = imageHeight;
@@ -143,7 +149,7 @@ public class Image extends TeaModel {
         }
 
         /**
-         * ImageScore.
+         * <p>The image scoring information.</p>
          */
         public Builder imageScore(ImageScore imageScore) {
             this.imageScore = imageScore;
@@ -151,7 +157,10 @@ public class Image extends TeaModel {
         }
 
         /**
-         * ImageWidth.
+         * <p>The width of the image. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder imageWidth(Long imageWidth) {
             this.imageWidth = imageWidth;
@@ -159,7 +168,7 @@ public class Image extends TeaModel {
         }
 
         /**
-         * OCRContents.
+         * <p>The results of optical character recognition (OCR). This parameter is reserved and not available.</p>
          */
         public Builder OCRContents(java.util.List<OCRContents> OCRContents) {
             this.OCRContents = OCRContents;

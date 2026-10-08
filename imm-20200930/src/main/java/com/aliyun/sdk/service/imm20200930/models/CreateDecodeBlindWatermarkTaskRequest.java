@@ -196,8 +196,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The quality of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</p>
-         * <p>Higher image quality indicates a larger image size and higher watermark resolution quality.</p>
+         * <p>A parameter from the earlier DecodeBlindWatermark API. It specifies the quality of the output image. The default value is 90. The value must be in the range of 70 to 100.</p>
+         * <p>A higher quality results in a larger image size and better watermark parsing quality.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -209,8 +209,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The watermark algorithm model. This parameter is also available in the earlier DecodeBlindWatermark operation. Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</p>
-         * <p>If this parameter is left empty, the CreateDecodeBlindWatermarkTask operation is called. Otherwise, the earlier DecodeBlindWatermark operation is called.</p>
+         * <p>A parameter from the earlier DecodeBlindWatermark API. It specifies the watermark algorithm model. Valid values include FFT, FFT_FULL, DWT, and DWT_IBG. The default value is FFT.</p>
+         * <p>If this parameter is left empty, the new version of the blind watermarking feature is used. Otherwise, the earlier version is used.</p>
          * 
          * <strong>example:</strong>
          * <p>FFT</p>
@@ -222,7 +222,7 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -232,9 +232,9 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the image before the blind watermark is added. This parameter is also available in the earlier DecodeBlindWatermark operation.</p>
-         * <p>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</p>
-         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * <p>A parameter from the earlier DecodeBlindWatermark API. It specifies the OSS URI of the image before the blind watermark was added.</p>
+         * <p>This parameter is not required when Model is set to DWT or DWT_IBG.</p>
+         * <p>The OSS URI must be in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format. <code>&lt;bucket&gt;</code> is the name of the OSS bucket that is in the same region as the current project. <code>&lt;object&gt;</code> is the full path of the file, including the file name extension.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://imm-test/testcases/watermarktestbefore.jpg</p>
@@ -246,9 +246,9 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <blockquote>
-         * <p> The project specified in the request must match the one in the EncodeBlindWatermark request to encode the blind watermark.</p>
+         * <p>Notice: The project name must be the same as the one used to add the blind watermark with the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> operation. Otherwise, the watermark cannot be extracted.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -262,8 +262,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the image.</p>
-         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * <p>The Object Storage Service (OSS) URI of the image.</p>
+         * <p>The OSS URI must be in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format. <code>&lt;bucket&gt;</code> is the name of the OSS bucket that is in the same region as the current project. <code>&lt;object&gt;</code> is the full path of the file, including the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,11 +276,14 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The level of watermark extraction. A higher level indicates a longer time and a higher quality. Valid values:</p>
+         * <p>The watermark extraction level, which controls the extraction precision. A higher level indicates a longer processing time and a better extraction effect. Valid values:</p>
          * <ul>
-         * <li>low</li>
-         * <li>medium</li>
-         * <li>high</li>
+         * <li><p>low</p>
+         * </li>
+         * <li><p>medium</p>
+         * </li>
+         * <li><p>high</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -293,8 +296,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The OSS URI of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</p>
-         * <p>Specify the OSS URI in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format, where <code>&lt;bucket&gt;</code> is the name of the bucket in the same region as the current project and <code>&lt;object&gt;</code> is the path of the object with the extension included.</p>
+         * <p>A parameter from the earlier DecodeBlindWatermark API. It specifies the OSS URI where the image is saved after the blind watermark is parsed.</p>
+         * <p>The OSS URI must be in the <code>oss://&lt;bucket&gt;/&lt;object&gt;</code> format. <code>&lt;bucket&gt;</code> is the name of the OSS bucket that is in the same region as the current project. <code>&lt;object&gt;</code> is the full path of the file, including the file name extension.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://target/targetobject.jpg</p>
@@ -306,8 +309,8 @@ public class CreateDecodeBlindWatermarkTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the watermark. Valid value: text.</p>
-         * <p>No image watermarks are supported.</p>
+         * <p>The type of the embedded watermark. Valid value: text</p>
+         * <p>(Image watermarks are not supported. Therefore, this parameter can only be set to text.)</p>
          * 
          * <strong>example:</strong>
          * <p>text</p>

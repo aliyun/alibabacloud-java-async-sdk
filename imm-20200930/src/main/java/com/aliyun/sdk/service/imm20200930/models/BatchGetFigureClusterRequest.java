@@ -126,7 +126,7 @@ public class BatchGetFigureClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster IDs.</p>
+         * <p>The array of group object IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder objectIds(java.util.List<String> objectIds) {

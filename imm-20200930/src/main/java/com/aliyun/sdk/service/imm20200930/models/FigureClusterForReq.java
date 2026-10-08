@@ -119,7 +119,7 @@ public class FigureClusterForReq extends TeaModel {
         } 
 
         /**
-         * Cover.
+         * <p>The cover of the cluster.</p>
          */
         public Builder cover(Cover cover) {
             this.cover = cover;
@@ -127,7 +127,10 @@ public class FigureClusterForReq extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -135,7 +138,10 @@ public class FigureClusterForReq extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>A key-value map of custom labels that can be used to search for the figure cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -143,7 +149,10 @@ public class FigureClusterForReq extends TeaModel {
         }
 
         /**
-         * MetaLockVersion.
+         * <p>The metadata lock version. This parameter enables optimistic locking to prevent conflicting updates during high concurrency. To ensure data consistency, pass the current MetaLockVersion value when updating a figure cluster. You can retrieve this value from a Get or List operation. The service proceeds with the update only if the provided version matches the system\&quot;s current version. The initial value is 0 and is incremented by 1 after each successful update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder metaLockVersion(Long metaLockVersion) {
             this.metaLockVersion = metaLockVersion;
@@ -151,7 +160,10 @@ public class FigureClusterForReq extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +171,10 @@ public class FigureClusterForReq extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The object ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-99b1c333-86dc-45da-8c6****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -212,7 +227,10 @@ public class FigureClusterForReq extends TeaModel {
             } 
 
             /**
-             * FigureId.
+             * <p>The figure ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -266,7 +284,7 @@ public class FigureClusterForReq extends TeaModel {
             } 
 
             /**
-             * Figures.
+             * <p>The figure list.</p>
              */
             public Builder figures(java.util.List<Figures> figures) {
                 this.figures = figures;

@@ -67,7 +67,7 @@ public class UpdateProjectResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The project.</p>
+         * <p>The project information. For more information, see Project.</p>
          */
         public Builder project(Project project) {
             this.project = project;

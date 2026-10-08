@@ -127,7 +127,7 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,12 +140,12 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to return original request parameters specified to create the task.</p>
+         * <p>Specifies whether to return the original request parameters used to create the task. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false (default)</li>
          * </ul>
-         * <p>This parameter applies only to the following tasks:</p>
+         * <p>This parameter takes effect only for the following task types:</p>
          * <ul>
          * <li>MediaConvert</li>
          * <li>VideoLabelClassification</li>
@@ -158,11 +158,11 @@ public class GetTaskRequest extends Request {
          * <li>StoryCreation</li>
          * <li>LocationDateClustering</li>
          * <li>ImageSplicing</li>
-         * <li>FacesSearching</li>
+         * <li>FacesSearching.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>True</p>
+         * <p>true</p>
          */
         public Builder requestDefinition(Boolean requestDefinition) {
             this.putQueryParameter("RequestDefinition", requestDefinition);
@@ -171,11 +171,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the task. You can obtain the ID of a task after you create the task.</p>
+         * <p>The ID of the task that you want to query. This value is returned when you create the task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
+         * <p>FileCompression-2f157087-91df-4fda-8c3e-232407ec*****</p>
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -184,11 +184,11 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * <p>The type of the task. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</p>
+         * <p>The type of the task. For valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task type list</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>VideoLabelClassification</p>
+         * <p>FileCompression</p>
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

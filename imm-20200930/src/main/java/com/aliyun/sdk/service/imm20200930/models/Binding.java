@@ -145,7 +145,10 @@ public class Binding extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The timestamp when the binding between the dataset and the OSS bucket was created. The format is RFC3339Nano.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -153,7 +156,10 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -161,7 +167,16 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * Phase.
+         * <p>The scan type. Valid values:</p>
+         * <ul>
+         * <li><p>FullScanning: A full scan is in progress.</p>
+         * </li>
+         * <li><p>IncrementalScanning: An incremental scan is in progress.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FullScanning</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -169,7 +184,10 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -177,7 +195,10 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>Reason</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pause usage</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -185,7 +206,24 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The state of the binding between the dataset and the OSS bucket. Valid values:</p>
+         * <ul>
+         * <li><p>Ready: The binding is being prepared after it is created.</p>
+         * </li>
+         * <li><p>Stopped: The binding is paused.</p>
+         * </li>
+         * <li><p>Running: The binding is running.</p>
+         * </li>
+         * <li><p>Retrying: The binding is being retried after it is created.</p>
+         * </li>
+         * <li><p>Failed: The binding failed to be created.</p>
+         * </li>
+         * <li><p>Deleted: The binding is deleted.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -193,7 +231,11 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The URI of the Object Storage Service (OSS) bucket attached to the dataset.</p>
+         * <p>The format of an OSS bucket URI is <code>oss://${bucketname}</code>. The <code>bucketname</code> is the name of an OSS bucket that is in the same region as the current project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://examplebucket</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;
@@ -201,7 +243,13 @@ public class Binding extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The timestamp when the binding between the dataset and the OSS bucket was last modified. The format is RFC3339Nano.</p>
+         * <blockquote>
+         * <p>After a binding is created, if the binding has not been paused or restarted, this timestamp is the same as the creation timestamp.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

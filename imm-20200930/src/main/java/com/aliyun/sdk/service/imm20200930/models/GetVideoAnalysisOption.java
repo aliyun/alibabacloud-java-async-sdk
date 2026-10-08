@@ -145,7 +145,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         } 
 
         /**
-         * ChapterSummary.
+         * <p>Specifies whether to retrieve the chapter-based summary of the video.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder chapterSummary(Boolean chapterSummary) {
             this.chapterSummary = chapterSummary;
@@ -153,7 +156,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * Keyword.
+         * <p>Specifies whether to retrieve keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder keyword(Boolean keyword) {
             this.keyword = keyword;
@@ -161,7 +167,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * PPT.
+         * <p>Specifies whether to retrieve the PPT from the video. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder PPT(Boolean PPT) {
             this.PPT = PPT;
@@ -169,7 +178,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * Question.
+         * <p>Specifies whether to retrieve the generated questions and corresponding answers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder question(Boolean question) {
             this.question = question;
@@ -177,7 +189,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>Specifies whether to retrieve the full-text summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder summary(Boolean summary) {
             this.summary = summary;
@@ -185,7 +200,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * Transcript.
+         * <p>Specifies whether to retrieve the dialogue in the video. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transcript(Boolean transcript) {
             this.transcript = transcript;
@@ -193,7 +211,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * TranscriptChapterSummary.
+         * <p>Specifies whether to retrieve the segmented summary generated from the dialogue in the video. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transcriptChapterSummary(Boolean transcriptChapterSummary) {
             this.transcriptChapterSummary = transcriptChapterSummary;
@@ -201,7 +222,10 @@ public class GetVideoAnalysisOption extends TeaModel {
         }
 
         /**
-         * TranscriptSummary.
+         * <p>Specifies whether to retrieve the summary generated from the dialogue in the video. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder transcriptSummary(Boolean transcriptSummary) {
             this.transcriptSummary = transcriptSummary;

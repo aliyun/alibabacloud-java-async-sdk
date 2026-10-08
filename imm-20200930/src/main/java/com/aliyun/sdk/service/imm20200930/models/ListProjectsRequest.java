@@ -124,7 +124,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: 0 to 200. Default value: 100.</p>
+         * <p>The maximum number of projects to return. Valid values: 0 to 200. If this parameter is not set or is set to 0, the default value is 100.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -136,7 +136,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. The operation returns the projects in lexicographical order starting from the location specified by NextToken.</p>
+         * <p>The query token. Set the value to the NextToken value returned from the previous API call. The list of projects is returned in lexicographical order starting from the NextToken value. Leave this parameter empty when you call this API operation for the first time.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
@@ -148,7 +148,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The prefix used by the projects that you want to query. The prefix must be up to 128 characters in length.</p>
+         * <p>The prefix used to filter projects. The length is limited to 0 to 128 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>immtest</p>
@@ -160,7 +160,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");

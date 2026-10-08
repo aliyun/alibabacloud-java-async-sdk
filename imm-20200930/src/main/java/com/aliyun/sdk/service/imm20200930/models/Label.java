@@ -145,7 +145,10 @@ public class Label extends TeaModel {
         } 
 
         /**
-         * CentricScore.
+         * <p>The centric score of the tag. This indicates whether the tag is the main subject in the image. The value ranges from 0 to 1. A higher value indicates higher confidence that the tag is the main subject of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7319999933242798</p>
          */
         public Builder centricScore(Float centricScore) {
             this.centricScore = centricScore;
@@ -153,7 +156,7 @@ public class Label extends TeaModel {
         }
 
         /**
-         * Clips.
+         * <p>Event clips.</p>
          */
         public Builder clips(java.util.List<Clip> clips) {
             this.clips = clips;
@@ -161,7 +164,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * LabelAlias.
+         * <p>The tag alias.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>座椅</p>
          */
         public Builder labelAlias(String labelAlias) {
             this.labelAlias = labelAlias;
@@ -169,7 +175,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * LabelConfidence.
+         * <p>The tag confidence level. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9891784601980591</p>
          */
         public Builder labelConfidence(Float labelConfidence) {
             this.labelConfidence = labelConfidence;
@@ -177,7 +186,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * LabelLevel.
+         * <p>The tag level. Valid values are 1, 2, and 3, representing first-level, second-level, and third-level tags, respectively.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder labelLevel(Long labelLevel) {
             this.labelLevel = labelLevel;
@@ -185,7 +197,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * LabelName.
+         * <p>The tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>椅子</p>
          */
         public Builder labelName(String labelName) {
             this.labelName = labelName;
@@ -193,7 +208,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The tag language, in BCP 47 format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-Hans</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -201,7 +219,10 @@ public class Label extends TeaModel {
         }
 
         /**
-         * ParentLabelName.
+         * <p>The parent tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>家具</p>
          */
         public Builder parentLabelName(String parentLabelName) {
             this.parentLabelName = parentLabelName;

@@ -67,7 +67,7 @@ public class ReverseImageConfig extends TeaModel {
         } 
 
         /**
-         * Image.
+         * <p>The image-to-image search configuration.</p>
          */
         public Builder image(ImageReverseImageConfig image) {
             this.image = image;
@@ -75,7 +75,7 @@ public class ReverseImageConfig extends TeaModel {
         }
 
         /**
-         * Video.
+         * <p>The image-to-video search configuration.</p>
          */
         public Builder video(VideoReverseImageConfig video) {
             this.video = video;

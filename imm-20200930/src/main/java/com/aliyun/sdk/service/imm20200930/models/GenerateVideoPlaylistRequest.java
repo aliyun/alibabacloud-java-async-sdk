@@ -239,8 +239,8 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p><strong>Leave this parameter empty unless you have special requirements.</strong></p>
+         * <p>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -250,14 +250,14 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The OSS path of the master playlist.</p>
-         * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that is suffixed with .m3u8.</p>
+         * <p>The OSS URI of the Master Playlist.</p>
+         * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file with the &quot;.m3u8&quot; extension.</p>
          * <blockquote>
-         * <p> If a playlist contains subtitles or multiple outputs, the MasterURI parameter is required and the URI of subtitle files or outputs must be in the directory specified by the MasterURI parameter or its subdirectory.</p>
+         * <p>If the playlist has subtitle input or multiple Target outputs, MasterURI is required. The subtitle URI or Target URI must be in the same directory as or a subdirectory of MasterURI.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>oss://bucket/object/master.m3u8</p>
+         * <p>oss://test-bucket/test-object/master.m3u8</p>
          */
         public Builder masterURI(String masterURI) {
             this.putQueryParameter("MasterURI", masterURI);
@@ -266,7 +266,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The message notification configuration. Click Notification for details. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -276,10 +276,10 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The overwrite policy when the media playlist exists. Valid values:</p>
+         * <p>The overwrite policy when the Media Playlist already exists. Valid values:</p>
          * <ul>
-         * <li>overwrite (default): overwrites an existing media playlist.</li>
-         * <li>skip-existing: skips generation and retains the existing media playlist.</li>
+         * <li>overwrite (default): Overwrites the existing Media Playlist.</li>
+         * <li>skip-existing: Skips generation and retains the existing Media Playlist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -292,7 +292,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The project name.<a href="~~478153~~"></a></p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,13 +305,15 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The period of time during which the playlist is generated. Unit: seconds.</p>
+         * <p>The duration for generating the playlist. Unit: seconds. Valid values:</p>
          * <ul>
-         * <li>If you set this parameter to 0 (default) or leave this parameter empty, a playlist is generated until the end time of the source video.</li>
-         * <li>If you set this parameter to a value greater than 0, a playlist is generated for the specified period of time from the start time that you specify.</li>
+         * <li><p>0 (default) or empty: continues until the end of the source video.</p>
+         * </li>
+         * <li><p>Greater than 0: continues for the specified duration from the start time of the playlist generation.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you set this parameter to a value that exceeds the end time of a source video, use the default value.</p>
+         * <p>If the time point corresponding to the specified parameter exceeds the end of the source video, the default value is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -324,13 +326,15 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The time when the playlist starts to generate. Unit: seconds.</p>
+         * <p>The start time for generating the playlist. Unit: seconds. Valid values:</p>
          * <ul>
-         * <li>If you set this parameter to 0 (default) or leave this parameter empty, the start time of the source video is used as the time when a playlist starts to generate.</li>
-         * <li>If you set this parameter to a value greater than 0, the time when a playlist starts to generate is the specified point in time.</li>
+         * <li><p>0 (default) or empty: starts from the beginning of the source video.</p>
+         * </li>
+         * <li><p>Greater than 0: starts from the specified time point in the source video.</p>
+         * </li>
          * </ul>
          * <blockquote>
-         * <p> If you use this parameter together with the <strong>SourceDuration</strong> parameter, a playlist can be generated based on the partial content of a source video.</p>
+         * <p>You can use this parameter together with <strong>SourceDuration</strong> to generate a playlist for a specific portion of the source video.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -343,7 +347,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The subtitle files. By default, this parameter is left empty. Up to two subtitle files are supported.</p>
+         * <p>The list of subtitles to add. Default value: empty. Maximum number of subtitles: 2.</p>
          */
         public Builder sourceSubtitles(java.util.List<SourceSubtitles> sourceSubtitles) {
             String sourceSubtitlesShrink = shrink(sourceSubtitles, "SourceSubtitles", "json");
@@ -353,15 +357,16 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The OSS path of the video file.</p>
-         * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</p>
+         * <p>The OSS URI of the video.</p>
+         * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same area (Region) as the current project, and ${Object} is the full path of the file including the file name extension.</p>
          * <blockquote>
-         * <p> Only OSS buckets of the Standard storage class are supported. OSS buckets for which hotlink protection whitelists are configured are not supported.</p>
+         * <p>Only OSS buckets with Standard storage class are supported.
+         * Buckets with hotlink protection whitelist access settings are not supported.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://imm-test/testcases/video.mp4</p>
+         * <p>oss://test-bucket/test-source-object/video.mp4</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -370,7 +375,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
+         * <p>The OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to add to the generated TS files. You can use tags to control the lifecycle of OSS files.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</p>
@@ -383,9 +388,9 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</p>
+         * <p>The array of just-in-time transcoding playlists. Maximum array length: 6. Each Target corresponds to at most one video Media Playlist and one or more subtitle Media Playlists.</p>
          * <blockquote>
-         * <p> If the array contains more than one element, the <strong>MasterURI</strong> parameter cannot be left empty.</p>
+         * <p>If more than one Target is configured, the <strong>MasterURI</strong> parameter must not be empty.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          */
@@ -397,7 +402,7 @@ public class GenerateVideoPlaylistRequest extends Request {
         }
 
         /**
-         * <p>The custom user information, which is returned in asynchronous notifications to help you handle the notifications in the system. The maximum length of a notification is 2048 bytes.</p>
+         * <p>The custom information that is returned in asynchronous message notifications, which helps you associate message notifications within your system. Maximum length: 2,048 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
@@ -469,7 +474,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             } 
 
             /**
-             * <p>The subtitle language. If you configure this parameter, the value must comply with the ISO 639-2 standard. By default, this parameter is left empty.</p>
+             * <p>The subtitle language. The standard is ISO 639-2. Default value: empty.</p>
              * 
              * <strong>example:</strong>
              * <p>eng</p>
@@ -480,10 +485,10 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The OSS path of the subtitle file.</p>
-             * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file.</p>
+             * <p>The OSS URI of the subtitle to embed.</p>
+             * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path of the file.</p>
              * <blockquote>
-             * <p> The <strong>MasterURI</strong> parameter cannot be left empty, and the OSS path <code>oss://${Bucket}/${Object}</code> of a subtitle file must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
+             * <p>The <strong>MasterURI</strong> parameter must not be empty, and the OSS URI <code>oss://${Bucket}/${Object}</code> of the subtitle to embed must be in the same directory as or a subdirectory of the <strong>MasterURI</strong> parameter.</p>
              * </blockquote>
              * <p>This parameter is required.</p>
              * 
@@ -659,9 +664,9 @@ public class GenerateVideoPlaylistRequest extends Request {
             } 
 
             /**
-             * <p>The audio processing configuration. If you set this parameter to null (default), audio processing is disabled. The generated TS files do not contain audio streams.</p>
+             * <p>The audio processing parameter settings. An empty value (default) indicates that audio processing is disabled and the output TS files do not contain an audio stream.</p>
              * <blockquote>
-             * <p> The Audio and Subtitle parameters in the same element are mutually exclusive. If the Audio parameter is configured, the Subtitle parameter is ignored. The Audio and Video parameters can be configured at the same time. You can also configure only the Audio parameter to generate only audio.</p>
+             * <p>The Audio and Subtitle fields within the same Target are mutually exclusive. If the Audio field is set, the Subtitle field is ignored. Audio and Video can be set simultaneously, where Audio represents the audio information in the output video. You can also set only Audio to generate audio-only output.</p>
              * </blockquote>
              */
             public Builder audio(TargetAudio audio) {
@@ -670,7 +675,16 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * Container.
+             * <p>The HLS segment container type. Valid values:</p>
+             * <ul>
+             * <li><p>ts (default)</p>
+             * </li>
+             * <li><p>mp4</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ts</p>
              */
             public Builder container(String container) {
                 this.container = container;
@@ -678,10 +692,10 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The playback duration of a single TS file. Unit: seconds. Default value: 10. Valid values: 5 to 15.</p>
+             * <p>The playback duration of a single TS file. Unit: seconds. Default value: 10. Valid values: [5, 15].</p>
              * 
              * <strong>example:</strong>
-             * <p>5</p>
+             * <p>10</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -689,7 +703,7 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The array of the durations of the pre-transcoded TS files. The maximum length of the array is 6. By default, this parameter is left empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
+             * <p>The array of initial transcoding TS file durations. Maximum array length: 6. Default value: empty. This parameter is independent of the <strong>Duration</strong> parameter.</p>
              */
             public Builder initialSegments(java.util.List<Float> initialSegments) {
                 this.initialSegments = initialSegments;
@@ -697,18 +711,18 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The pre-transcoding duration. Unit: seconds. Default value: 30.</p>
+             * <p>The initial transcoding duration. Unit: seconds. Default value: 30.</p>
              * <ul>
-             * <li>If you set this parameter to 0, pre-transcoding is disabled.</li>
-             * <li>If you set this parameter to a value that is less than 0 or greater than the duration of a source video, the entire video is pre-transcoded.</li>
-             * <li>If you set this parameter to a value that is within the middle of the playback duration of a TS file, the transcoding continues until the end of the playback duration.</li>
+             * <li>If the value is 0, no pre-transcoding is performed.</li>
+             * <li>If the value is less than 0 or exceeds the source video length, the entire video is initially transcoded.</li>
+             * <li>If the specified duration falls in the middle of a TS file, transcoding continues until the end of that TS file.</li>
              * </ul>
              * <blockquote>
-             * <p> This parameter reduces the time required to start the first playback, which enhances the viewing experience. If you want to use live transcoding in traditional video-on-demand scenarios, you can pre-transcode entire videos.</p>
+             * <p>This parameter is mainly used to reduce the wait time for initial video playback and improve the playback experience. If you want to replace traditional VOD business scenarios, try initially transcoding the entire video.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>30.0</p>
+             * <p>30</p>
              */
             public Builder initialTranscode(Float initialTranscode) {
                 this.initialTranscode = initialTranscode;
@@ -716,9 +730,9 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The subtitle processing configuration.</p>
+             * <p>The subtitle processing parameter settings.</p>
              * <blockquote>
-             * <p> The Subtitle and Video or Audio parameters in the same element are mutually exclusive. You must configure the Subtitle parameter independently to generate subtitles.</p>
+             * <p>The Subtitle field is mutually exclusive with the Video or Audio fields within the same Target. Subtitles are generated only when Subtitle is set alone.</p>
              * </blockquote>
              */
             public Builder subtitle(TargetSubtitle subtitle) {
@@ -727,9 +741,9 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</p>
+             * <p>The OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to add to the generated TS files. You can use OSS tags to control the lifecycle of OSS files.</p>
              * <blockquote>
-             * <p> The combination of the value of the Tags parameter and the value of the Tags parameter in the upper level is used as the tag value of the current output. If the value of the Tags parameter in the current level is the same as the value of the Tags parameter in the upper level, the value of the Tags parameter in the current level is used.</p>
+             * <p>The tag values at this level are merged with the Tags defined at the parent level to form the tag values for the current Target. If a tag with the same name exists, the value at this level takes precedence.</p>
              * </blockquote>
              */
             public Builder tags(java.util.Map<String, String> tags) {
@@ -738,13 +752,13 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The number of TS files that are pre-transcoded when the live transcoding is triggered. By default, a 2-minute video is pre-transcoded.</p>
+             * <p>The number of TS files to transcode ahead when just-in-time transcoding is triggered. By default, 2 minutes of video is transcoded ahead.</p>
              * <ul>
-             * <li>Example: If you set the <strong>Duration</strong> parameter to 10, the value of the <strong>TranscodeAhead</strong> parameter is 12 by default. You can configure this parameter to manage the number of pre-transcoded files. Valid values: 10 to 30.</li>
+             * <li>Example: If <strong>Duration</strong> is 10, the default value of <strong>TranscodeAhead</strong> is 12. You can specify this parameter to control the number of asynchronous ahead-of-time transcoding files. Valid values: [10, 30].</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>3</p>
+             * <p>12</p>
              */
             public Builder transcodeAhead(Integer transcodeAhead) {
                 this.transcodeAhead = transcodeAhead;
@@ -752,17 +766,17 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The prefix of the OSS path that is used to store the live transcoding files. The live transcoding files include a M3U8 file and multiple TS files.</p>
-             * <p>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the prefix of the full path that does not contain the file name extension.</p>
+             * <p>The OSS URI prefix of the just-in-time transcoding output files, including M3U8 files and TS files.</p>
+             * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where ${Bucket} is the name of the OSS bucket in the same region as the current project, and ${Object} is the full path prefix of the file without the file name extension.</p>
              * <ul>
-             * <li>Example: If the URI is oss://test-bucket/test-object/output-video, the output-video.m3u8 file and multiple output-video-${token}-${index}.ts files are generated in the oss://test-bucket/test-object/ directory. ${token} is a unique string generated based on the transcoding parameters. The ${token} parameter is included in the response of the operation. ${index} is the serial number of the generated TS files that are numbered starting from 0.</li>
+             * <li>Example: If URI is oss://test-bucket/test-object/output-video, an oss://test-bucket/test-object/output-video.m3u8 file and multiple oss://test-bucket/test-object/output-video-${token}-${index}.ts files are generated. ${token} is a unique character string generated based on the transcoding parameters and is included in the API response. ${index} is the ordinal number of the TS file starting from 0.</li>
              * </ul>
              * <blockquote>
-             * <p> If the <strong>MasterURI</strong> parameter is not left empty, the path specified by this parameter must be in the directory specified by the <strong>MasterURI</strong> parameter or its subdirectory.</p>
+             * <p>If the <strong>MasterURI</strong> parameter is not empty, the URI must be in the same directory as or a subdirectory of the <strong>MasterURI</strong> parameter.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>oss://imm-test/testcases/video</p>
+             * <p>oss://test-bucket/test-object/output-video</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -770,9 +784,9 @@ public class GenerateVideoPlaylistRequest extends Request {
             }
 
             /**
-             * <p>The video processing configuration. If you set this parameter to null (default), video processing is disabled. The generated TS files do not contain video streams.</p>
+             * <p>The video processing parameter settings. An empty value (default) indicates that video processing is disabled and the output TS files do not contain a video stream.</p>
              * <blockquote>
-             * <p> The Video and Subtitle parameters in the same element are mutually exclusive. If the Video parameter is configured, the Subtitle parameter is ignored.</p>
+             * <p>The Video and Subtitle fields within the same Target are mutually exclusive. If the Video field is set, the Subtitle field is ignored.</p>
              * </blockquote>
              */
             public Builder video(TargetVideo video) {

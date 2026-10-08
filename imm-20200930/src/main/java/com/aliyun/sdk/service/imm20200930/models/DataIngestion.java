@@ -210,7 +210,7 @@ public class DataIngestion extends TeaModel {
         } 
 
         /**
-         * Actions.
+         * <p>A list of processing templates.</p>
          */
         public Builder actions(java.util.List<Actions> actions) {
             this.actions = actions;
@@ -218,7 +218,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-11-10T03:50:28Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -226,7 +229,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Error.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>api returns error: SDKError: StatusCode: 404 Code: ResourceNotFound</p>
          */
         public Builder error(String error) {
             this.error = error;
@@ -234,7 +240,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Id.
+         * <p>The unique ID of the data ingestion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trigger-9f72636a-0f0c-4baf-ae78-38b27bfe****</p>
          */
         public Builder id(String id) {
             this.id = id;
@@ -242,7 +251,7 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Input.
+         * <p>The data source information.</p>
          */
         public Builder input(Input input) {
             this.input = input;
@@ -250,7 +259,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>The task execution position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</p>
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -258,7 +270,7 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Notification.
+         * <p>The notification for task completion.</p>
          */
         public Builder notification(Notification notification) {
             this.notification = notification;
@@ -266,7 +278,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Phase.
+         * <p>The scanning phase.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IncrementalScanning</p>
          */
         public Builder phase(String phase) {
             this.phase = phase;
@@ -274,7 +289,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * ServiceRole.
+         * <p>The service authorization role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunIMMBatchTriggerRole</p>
          */
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = serviceRole;
@@ -282,7 +300,22 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * State.
+         * <p>The state of the batch processing task:</p>
+         * <ul>
+         * <li><p>Ready: The task is ready. A newly created task is in the Ready state.</p>
+         * </li>
+         * <li><p>Running: The task is running. This is the state of a task that is executing normally.</p>
+         * </li>
+         * <li><p>Failed: The task failed. An error occurred during task execution, and the task cannot be automatically recovered.</p>
+         * </li>
+         * <li><p>Suspended: The task is paused.</p>
+         * </li>
+         * <li><p>Succeeded: The task is complete.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder state(String state) {
             this.state = state;
@@ -290,7 +323,7 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Statistic.
+         * <p>The statistics information.</p>
          */
         public Builder statistic(Statistic statistic) {
             this.statistic = statistic;
@@ -298,7 +331,7 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The task tags.</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             this.tags = tags;
@@ -306,7 +339,10 @@ public class DataIngestion extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the task was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-18T07:40:29Z</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -385,7 +421,7 @@ public class DataIngestion extends TeaModel {
             } 
 
             /**
-             * FastFailPolicy.
+             * <p>The configuration of the fast-fail policy for data processing.</p>
              */
             public Builder fastFailPolicy(FastFailPolicy fastFailPolicy) {
                 this.fastFailPolicy = fastFailPolicy;
@@ -393,7 +429,10 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>doc/convert</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -401,7 +440,7 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * <p>The template parameters.</p>
              */
             public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;
@@ -494,7 +533,10 @@ public class DataIngestion extends TeaModel {
             } 
 
             /**
-             * Endpoint.
+             * <p>The MNS Endpoint.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -502,7 +544,7 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * MNS.
+             * <p>MNS</p>
              */
             public Builder MNS(MNS MNS) {
                 this.MNS = MNS;
@@ -510,7 +552,7 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * RocketMQ.
+             * <p>RocketMQ</p>
              */
             public Builder rocketMQ(RocketMQ rocketMQ) {
                 this.rocketMQ = rocketMQ;
@@ -518,7 +560,10 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * Topic.
+             * <p>The MNS topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topic1</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -598,7 +643,10 @@ public class DataIngestion extends TeaModel {
             } 
 
             /**
-             * SkipFiles.
+             * <p>The number of skipped files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder skipFiles(Long skipFiles) {
                 this.skipFiles = skipFiles;
@@ -606,7 +654,10 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * SubmitFailure.
+             * <p>The number of failed submissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder submitFailure(Long submitFailure) {
                 this.submitFailure = submitFailure;
@@ -614,7 +665,10 @@ public class DataIngestion extends TeaModel {
             }
 
             /**
-             * SubmitSuccess.
+             * <p>The number of successful submissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder submitSuccess(Long submitSuccess) {
                 this.submitSuccess = submitSuccess;

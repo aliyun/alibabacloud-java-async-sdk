@@ -70,7 +70,7 @@ public class ExtractDocumentTextResponseBody extends TeaModel {
          * <p>The text content of the document.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试内容。</p>
+         * <p>Test content.</p>
          */
         public Builder documentText(String documentText) {
             this.documentText = documentText;

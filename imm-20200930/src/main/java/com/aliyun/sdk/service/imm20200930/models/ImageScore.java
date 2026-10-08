@@ -54,7 +54,11 @@ public class ImageScore extends TeaModel {
         } 
 
         /**
-         * OverallQualityScore.
+         * <p>The score for the overall image quality. The image is automatically evaluated by AI. The evaluation is mainly based on subjective aesthetics and is affected by various factors, such as composition, brightness, contrast, color, and definition.</p>
+         * <p>Valid values: 0 to 1. A higher value indicates better quality.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.736</p>
          */
         public Builder overallQualityScore(Float overallQualityScore) {
             this.overallQualityScore = overallQualityScore;

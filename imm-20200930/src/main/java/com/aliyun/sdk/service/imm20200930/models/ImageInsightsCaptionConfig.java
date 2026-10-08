@@ -67,7 +67,7 @@ public class ImageInsightsCaptionConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable this feature.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -75,7 +75,10 @@ public class ImageInsightsCaptionConfig extends TeaModel {
         }
 
         /**
-         * Prompt.
+         * <p>The prompt.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Provide a concise title for this monitoring section, capturing the core subject and key event. Keep the title within 10 characters.</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;

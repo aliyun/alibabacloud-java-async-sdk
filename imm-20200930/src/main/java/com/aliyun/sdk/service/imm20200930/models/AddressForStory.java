@@ -106,7 +106,10 @@ public class AddressForStory extends TeaModel {
         } 
 
         /**
-         * City.
+         * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -114,7 +117,10 @@ public class AddressForStory extends TeaModel {
         }
 
         /**
-         * Country.
+         * <p>The country.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国</p>
          */
         public Builder country(String country) {
             this.country = country;
@@ -122,7 +128,10 @@ public class AddressForStory extends TeaModel {
         }
 
         /**
-         * District.
+         * <p>The district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>滨江区</p>
          */
         public Builder district(String district) {
             this.district = district;
@@ -130,7 +139,10 @@ public class AddressForStory extends TeaModel {
         }
 
         /**
-         * Province.
+         * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省</p>
          */
         public Builder province(String province) {
             this.province = province;
@@ -138,7 +150,10 @@ public class AddressForStory extends TeaModel {
         }
 
         /**
-         * Township.
+         * <p>The township.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>长河街道</p>
          */
         public Builder township(String township) {
             this.township = township;

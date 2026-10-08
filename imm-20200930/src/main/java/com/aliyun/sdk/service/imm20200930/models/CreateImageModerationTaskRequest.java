@@ -196,7 +196,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The chained authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -206,7 +206,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The time interval between two consecutive frames in a GIF or long image. Default value: 1.</p>
+         * <p>The frame capture frequency. This parameter is used for GIF and long image detection. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -218,7 +218,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of frames that can be captured in a GIF or long image. Default value: 1.</p>
+         * <p>The maximum number of frames to capture. This parameter is used for GIF and long image detection. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -230,7 +230,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The notification configuration. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -240,11 +240,11 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -253,7 +253,7 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The scenarios in which you want to apply the image moderation task.</p>
+         * <p>The image detection scenarios.</p>
          */
         public Builder scenes(java.util.List<String> scenes) {
             String scenesShrink = shrink(scenes, "Scenes", "json");
@@ -263,8 +263,8 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The URI of the Object Storage Service (OSS) bucket in which you store the image.</p>
-         * <p>Specify the value in the <code>oss://&lt;Bucket&gt;/&lt;Object&gt;</code> format. <code>&lt;Bucket&gt;</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>&lt;Object&gt;</code> specifies the complete path to the image file that has an extension.</p>
+         * <p>The OSS URI of the image.</p>
+         * <p>The URI must follow the <code>oss://&lt;Bucket&gt;/&lt;Object&gt;</code> format. <code>&lt;Bucket&gt;</code> is the name of the OSS bucket that is in the same region as the project. <code>&lt;Object&gt;</code> is the full path of the file, including the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,10 +277,12 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * <p>The custom tags. You can use tags to search for and filter asynchronous tasks.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
+         * <p>{
+         *       &quot;User&quot;: &quot;Jane&quot;
+         * }</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -290,10 +292,10 @@ public class CreateImageModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The user data, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the user data is 2,048 bytes.</p>
+         * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your system. The value can be up to 2,048 bytes long.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+         * <p>test-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

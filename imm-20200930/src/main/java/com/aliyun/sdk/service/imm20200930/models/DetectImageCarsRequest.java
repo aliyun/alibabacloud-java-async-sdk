@@ -141,7 +141,7 @@ public class DetectImageCarsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://test-bucket/test-object</p>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

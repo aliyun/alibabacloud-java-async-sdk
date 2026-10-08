@@ -67,7 +67,7 @@ public class AssumeRoleChain extends TeaModel {
         } 
 
         /**
-         * Chain.
+         * <p>The authorization chains.</p>
          */
         public Builder chain(java.util.List<AssumeRoleChainNode> chain) {
             this.chain = chain;
@@ -75,7 +75,10 @@ public class AssumeRoleChain extends TeaModel {
         }
 
         /**
-         * Policy.
+         * <p>The policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder policy(String policy) {
             this.policy = policy;

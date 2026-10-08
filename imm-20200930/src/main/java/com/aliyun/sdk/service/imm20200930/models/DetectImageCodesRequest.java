@@ -127,7 +127,7 @@ public class DetectImageCodesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -141,7 +141,7 @@ public class DetectImageCodesRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://bucketname/objectname</p>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

@@ -80,7 +80,7 @@ public class DatasetConfig extends TeaModel {
         } 
 
         /**
-         * Insights.
+         * <p>The content awareness configuration.</p>
          */
         public Builder insights(InsightsConfig insights) {
             this.insights = insights;
@@ -88,7 +88,7 @@ public class DatasetConfig extends TeaModel {
         }
 
         /**
-         * ReverseImage.
+         * <p>The reverse image search configuration.</p>
          */
         public Builder reverseImage(ReverseImageConfig reverseImage) {
             this.reverseImage = reverseImage;
@@ -96,7 +96,7 @@ public class DatasetConfig extends TeaModel {
         }
 
         /**
-         * SmartCluster.
+         * <p>The intelligent clustering configuration.</p>
          */
         public Builder smartCluster(SmartClusterConfig smartCluster) {
             this.smartCluster = smartCluster;

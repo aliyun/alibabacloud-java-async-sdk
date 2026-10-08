@@ -211,7 +211,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of bindings per dataset. The value range is from 1 to 10.</p>
+         * <p>The maximum number of bindings per dataset. Valid values: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -223,9 +223,9 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of metadata entities (including data files, file relationships, clustering groups, etc.) per dataset, with a maximum value of 2^63-1.</p>
+         * <p>The maximum number of metadata entities (including data files, file relationships, and clustering groups) in each dataset. The maximum value is 2^63-1.</p>
          * <blockquote>
-         * <p>Reserved parameter, no actual restriction in use.</p>
+         * <p>This is a reserved parameter and no actual limits are enforced.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of files per dataset. The value range is from 1 to 100000000.</p>
+         * <p>The maximum number of files in each dataset. Valid values: 1 to 100000000.</p>
          * 
          * <strong>example:</strong>
          * <p>100000000</p>
@@ -250,9 +250,9 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of metadata relationships per dataset, with a maximum value of 2^63-1.</p>
+         * <p>The maximum number of metadata relationships in each dataset. The maximum value is 2^63-1.</p>
          * <blockquote>
-         * <p>Reserved parameter, no actual restriction in use.</p>
+         * <p>This is a reserved parameter and no actual limits are enforced.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The maximum total size of files in each dataset. Once the limit is exceeded, no more indexes can be added. The maximum value is 2^63-1, measured in bytes.</p>
+         * <p>The maximum total size of files in each dataset. If the limit is exceeded, no more indexes can be added. The maximum value is 2^63-1. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>90000000000000000</p>
@@ -277,7 +277,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Dataset name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478160.html">Create Dataset</a>.</p>
+         * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +290,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Description of the dataset.</p>
+         * <p>The description of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>immtest</p>
@@ -302,7 +302,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Project name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,7 +315,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>Workflow template ID. For more information, please refer to <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>.</p>
+         * <p>The ID of the workflow template. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>Official:ImageManagement</p>

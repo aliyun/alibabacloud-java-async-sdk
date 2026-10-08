@@ -93,7 +93,10 @@ public class Property extends TeaModel {
         } 
 
         /**
-         * ItemsType.
+         * <p>If you set the ValueType field to array, you must specify the type of the elements within the array. The enumerated values include float, integer, and string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>float</p>
          */
         public Builder itemsType(String itemsType) {
             this.itemsType = itemsType;
@@ -101,7 +104,10 @@ public class Property extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The property name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>channels</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -109,7 +115,10 @@ public class Property extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[40, 80, 160, 320]</p>
          */
         public Builder value(String value) {
             this.value = value;
@@ -117,7 +126,10 @@ public class Property extends TeaModel {
         }
 
         /**
-         * ValueType.
+         * <p>The type of the property. Supported enumerated values: float, integer, string, and array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>array</p>
          */
         public Builder valueType(String valueType) {
             this.valueType = valueType;

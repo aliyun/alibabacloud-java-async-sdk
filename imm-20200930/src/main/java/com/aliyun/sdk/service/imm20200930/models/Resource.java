@@ -119,7 +119,10 @@ public class Resource extends TeaModel {
         } 
 
         /**
-         * CPU.
+         * <p>The number of CPU cores. Valid values: 4 to 96.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder CPU(Long CPU) {
             this.CPU = CPU;
@@ -127,7 +130,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * ECSInstance.
+         * <p>The Elastic Compute Service (ECS) instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.gn5i-c2g1.large</p>
          */
         public Builder ECSInstance(String ECSInstance) {
             this.ECSInstance = ECSInstance;
@@ -135,7 +141,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * GPUModel.
+         * <p>The GPU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string	NVIDIA_P4</p>
          */
         public Builder GPUModel(String GPUModel) {
             this.GPUModel = GPUModel;
@@ -143,7 +152,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * GPUNum.
+         * <p>The number of GPUs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder GPUNum(Long GPUNum) {
             this.GPUNum = GPUNum;
@@ -151,7 +163,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The displayed name of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>string	ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -159,7 +174,10 @@ public class Resource extends TeaModel {
         }
 
         /**
-         * RAM.
+         * <p>The RAM size. Unit: GB. Valid values: 30 to 736.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder RAM(Long RAM) {
             this.RAM = RAM;

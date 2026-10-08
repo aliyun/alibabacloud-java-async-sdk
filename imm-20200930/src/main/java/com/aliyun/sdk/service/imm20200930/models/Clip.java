@@ -54,7 +54,7 @@ public class Clip extends TeaModel {
         } 
 
         /**
-         * TimeRange.
+         * <p>The time range of the event clip</p>
          */
         public Builder timeRange(java.util.List<Long> timeRange) {
             this.timeRange = timeRange;

@@ -67,7 +67,10 @@ public class Optimization extends TeaModel {
         } 
 
         /**
-         * LearningRate.
+         * <p>The initial learning rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.01</p>
          */
         public Builder learningRate(Float learningRate) {
             this.learningRate = learningRate;
@@ -75,7 +78,10 @@ public class Optimization extends TeaModel {
         }
 
         /**
-         * Optimizer.
+         * <p>The optimization method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SGD</p>
          */
         public Builder optimizer(String optimizer) {
             this.optimizer = optimizer;

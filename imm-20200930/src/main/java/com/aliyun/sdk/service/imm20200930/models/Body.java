@@ -67,7 +67,7 @@ public class Body extends TeaModel {
         } 
 
         /**
-         * Boundary.
+         * <p>The boundary of the human body.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -75,7 +75,10 @@ public class Body extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence level of the result. A higher value indicates greater confidence. Specifically, a value exceeding 0.8 signifies a high degree of confidence in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.75</p>
          */
         public Builder confidence(Float confidence) {
             this.confidence = confidence;

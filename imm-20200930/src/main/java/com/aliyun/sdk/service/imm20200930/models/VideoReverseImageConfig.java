@@ -54,7 +54,7 @@ public class VideoReverseImageConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable the feature.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

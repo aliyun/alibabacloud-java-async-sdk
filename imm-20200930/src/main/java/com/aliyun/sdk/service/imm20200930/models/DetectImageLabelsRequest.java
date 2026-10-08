@@ -141,7 +141,7 @@ public class DetectImageLabelsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immimagetest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -151,11 +151,11 @@ public class DetectImageLabelsRequest extends Request {
 
         /**
          * <p>The URI of the Object Storage Service (OSS) bucket in which you store the image.</p>
-         * <p>Specify the value in the oss://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the image file that has an extension.</p>
+         * <p>Specify the value in the oss\://${Bucket}/${Object} format. <code>${Bucket}</code> specifies the name of the OSS bucket that resides in the same region as the current project. <code>${Object}</code> specifies the complete path to the image file that has an extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://imm-test/testcases/facetest.jpg</p>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -167,7 +167,7 @@ public class DetectImageLabelsRequest extends Request {
          * <p>The threshold of the label confidence. Labels whose confidence is lower than the specified threshold are not returned in the response. Valid values: 0 to 1. If you leave this parameter empty, the algorithm provides a default threshold.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>0.7</p>
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

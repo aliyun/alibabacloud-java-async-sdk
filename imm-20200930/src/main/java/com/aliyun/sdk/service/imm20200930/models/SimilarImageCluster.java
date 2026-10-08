@@ -106,7 +106,10 @@ public class SimilarImageCluster extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-08T09:42:34.354969088+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -114,7 +117,7 @@ public class SimilarImageCluster extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom tag.</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -122,7 +125,7 @@ public class SimilarImageCluster extends TeaModel {
         }
 
         /**
-         * Files.
+         * <p>The similar images.</p>
          */
         public Builder files(java.util.List<SimilarImage> files) {
             this.files = files;
@@ -130,7 +133,10 @@ public class SimilarImageCluster extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SimilarImageCluster-748a041e-4ebc-4487-9e74-9c89b1****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -138,7 +144,10 @@ public class SimilarImageCluster extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-02-08T09:42:34.354969088+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

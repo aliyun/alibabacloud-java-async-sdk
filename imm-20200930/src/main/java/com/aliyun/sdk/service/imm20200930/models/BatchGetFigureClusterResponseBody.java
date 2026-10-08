@@ -67,7 +67,7 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The clusters.</p>
+         * <p>The list of figure clusters.</p>
          */
         public Builder figureClusters(java.util.List<FigureCluster> figureClusters) {
             this.figureClusters = figureClusters;
@@ -75,7 +75,7 @@ public class BatchGetFigureClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>CA995EFD-083D-4F40-BE8A-BDF75FFF****</p>

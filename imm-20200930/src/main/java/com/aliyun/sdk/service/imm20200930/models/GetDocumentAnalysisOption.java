@@ -145,7 +145,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         } 
 
         /**
-         * ChapterSummary.
+         * <p>Specifies whether to retrieve chapter-by-chapter summaries of the document.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder chapterSummary(Boolean chapterSummary) {
             this.chapterSummary = chapterSummary;
@@ -153,7 +156,7 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * ChapterSummaryOption.
+         * <p>The options for retrieving chapter-by-chapter summaries of the document.</p>
          */
         public Builder chapterSummaryOption(DocumentChapterSummarizeOption chapterSummaryOption) {
             this.chapterSummaryOption = chapterSummaryOption;
@@ -161,7 +164,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Images.
+         * <p>Specifies whether to retrieve images extracted from the document, such as pictures, tables, and formulas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder images(Boolean images) {
             this.images = images;
@@ -169,7 +175,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Keyword.
+         * <p>Specifies whether to retrieve keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder keyword(Boolean keyword) {
             this.keyword = keyword;
@@ -177,7 +186,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Layouts.
+         * <p>Specifies whether to retrieve the layout.jsonl file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder layouts(Boolean layouts) {
             this.layouts = layouts;
@@ -185,7 +197,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Narrator.
+         * <p>Specifies whether to retrieve the document reading guide results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder narrator(Boolean narrator) {
             this.narrator = narrator;
@@ -193,7 +208,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Question.
+         * <p>Specifies whether to retrieve the generated questions and corresponding answers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder question(Boolean question) {
             this.question = question;
@@ -201,7 +219,10 @@ public class GetDocumentAnalysisOption extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>Specifies whether to retrieve the full-text summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder summary(Boolean summary) {
             this.summary = summary;

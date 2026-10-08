@@ -93,7 +93,11 @@ public class ElementContent extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The content of the element.</p>
+         * <p>If the value of the Type parameter is image or link, this parameter indicates the placeholder text.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文本片段</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -101,7 +105,7 @@ public class ElementContent extends TeaModel {
         }
 
         /**
-         * TimeRange.
+         * <p>The time range. The array length is fixed to 2. One element indicates the start time and the other one indicates the end time. Unit: milliseconds.</p>
          */
         public Builder timeRange(java.util.List<Long> timeRange) {
             this.timeRange = timeRange;
@@ -109,7 +113,16 @@ public class ElementContent extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the element content.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>text</li>
+         * <li>image</li>
+         * <li>link</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +130,10 @@ public class ElementContent extends TeaModel {
         }
 
         /**
-         * URL.
+         * <p>The link to the element content. This parameter takes effect only if the Type parameter is set to image or link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://aliyun.com">http://aliyun.com</a></p>
          */
         public Builder URL(String URL) {
             this.URL = URL;

@@ -126,7 +126,7 @@ public class DetectImageScoreRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -139,7 +139,7 @@ public class DetectImageScoreRequest extends Request {
          * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://bucketname/objectname</p>
+         * <p>oss://examplebucket/sampleobject.jpg</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);

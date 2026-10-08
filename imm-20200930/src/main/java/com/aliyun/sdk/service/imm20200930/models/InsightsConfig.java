@@ -80,7 +80,7 @@ public class InsightsConfig extends TeaModel {
         } 
 
         /**
-         * Image.
+         * <p>The image content-aware configuration.</p>
          */
         public Builder image(ImageInsightsConfig image) {
             this.image = image;
@@ -88,7 +88,10 @@ public class InsightsConfig extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The language.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-Hans</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -96,7 +99,7 @@ public class InsightsConfig extends TeaModel {
         }
 
         /**
-         * Video.
+         * <p>The video content-aware configuration.</p>
          */
         public Builder video(VideoInsightsConfig video) {
             this.video = video;

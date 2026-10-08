@@ -262,7 +262,10 @@ public class AudioStream extends TeaModel {
         } 
 
         /**
-         * Bitrate.
+         * <p>The bitrate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>320087</p>
          */
         public Builder bitrate(Long bitrate) {
             this.bitrate = bitrate;
@@ -270,7 +273,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * ChannelLayout.
+         * <p>The sound channel layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stereo</p>
          */
         public Builder channelLayout(String channelLayout) {
             this.channelLayout = channelLayout;
@@ -278,7 +284,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * Channels.
+         * <p>The number of sound channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder channels(Long channels) {
             this.channels = channels;
@@ -286,7 +295,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * CodecLongName.
+         * <p>The full name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAC (Advanced Audio Coding)</p>
          */
         public Builder codecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
@@ -294,7 +306,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * CodecName.
+         * <p>The abbreviated name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aac</p>
          */
         public Builder codecName(String codecName) {
             this.codecName = codecName;
@@ -302,7 +317,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * CodecTag.
+         * <p>The tag of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x6134706d</p>
          */
         public Builder codecTag(String codecTag) {
             this.codecTag = codecTag;
@@ -310,7 +328,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * CodecTagString.
+         * <p>The description of the codec tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mp4a</p>
          */
         public Builder codecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
@@ -318,7 +339,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * CodecTimeBase.
+         * <p>The time base of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/44100</p>
          */
         public Builder codecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
@@ -326,7 +350,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The duration of the audio stream in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3.690667</p>
          */
         public Builder duration(Double duration) {
             this.duration = duration;
@@ -334,7 +361,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * FrameCount.
+         * <p>The number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>173</p>
          */
         public Builder frameCount(Long frameCount) {
             this.frameCount = frameCount;
@@ -342,7 +372,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index number of the audio stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder index(Long index) {
             this.index = index;
@@ -350,7 +383,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The audio language in the BCP 47 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -358,7 +394,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * Lyric.
+         * <p>The lyric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder lyric(String lyric) {
             this.lyric = lyric;
@@ -366,7 +405,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * SampleFormat.
+         * <p>The sample format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fltp</p>
          */
         public Builder sampleFormat(String sampleFormat) {
             this.sampleFormat = sampleFormat;
@@ -374,7 +416,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * SampleRate.
+         * <p>The sampling rate. Unit: Hz.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48000</p>
          */
         public Builder sampleRate(Long sampleRate) {
             this.sampleRate = sampleRate;
@@ -382,7 +427,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the audio stream in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0235</p>
          */
         public Builder startTime(Double startTime) {
             this.startTime = startTime;
@@ -390,7 +438,10 @@ public class AudioStream extends TeaModel {
         }
 
         /**
-         * TimeBase.
+         * <p>The time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/48000</p>
          */
         public Builder timeBase(String timeBase) {
             this.timeBase = timeBase;

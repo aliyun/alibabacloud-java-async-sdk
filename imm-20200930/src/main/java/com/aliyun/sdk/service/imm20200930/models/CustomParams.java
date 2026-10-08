@@ -67,7 +67,10 @@ public class CustomParams extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The name of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Normalize</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,7 @@ public class CustomParams extends TeaModel {
         }
 
         /**
-         * Properties.
+         * <p>The properties.</p>
          */
         public Builder properties(java.util.List<Property> properties) {
             this.properties = properties;

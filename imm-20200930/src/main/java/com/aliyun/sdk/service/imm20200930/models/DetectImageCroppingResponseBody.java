@@ -80,7 +80,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The image cropping suggestions.</p>
+         * <p>The array of image cropping information.</p>
          */
         public Builder croppings(java.util.List<CroppingSuggestion> croppings) {
             this.croppings = croppings;
@@ -88,7 +88,7 @@ public class DetectImageCroppingResponseBody extends TeaModel {
         }
 
         /**
-         * MatchedInclusionHints.
+         * <p>The list of objects included in the cropping region, corresponding to the InclusionHints input parameter. This field is empty if no objects are included.</p>
          */
         public Builder matchedInclusionHints(java.util.List<String> matchedInclusionHints) {
             this.matchedInclusionHints = matchedInclusionHints;

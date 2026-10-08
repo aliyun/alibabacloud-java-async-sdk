@@ -132,7 +132,7 @@ public class Car extends TeaModel {
         } 
 
         /**
-         * Boundary.
+         * <p>The boundary information.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -140,7 +140,21 @@ public class Car extends TeaModel {
         }
 
         /**
-         * CarColor.
+         * <p>The vehicle color. Valid values</p>
+         * <ul>
+         * <li>white</li>
+         * <li>grey</li>
+         * <li>yellow</li>
+         * <li>red</li>
+         * <li>green</li>
+         * <li>blue</li>
+         * <li>black</li>
+         * <li>purple</li>
+         * <li>brown</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>white</p>
          */
         public Builder carColor(String carColor) {
             this.carColor = carColor;
@@ -148,7 +162,10 @@ public class Car extends TeaModel {
         }
 
         /**
-         * CarColorConfidence.
+         * <p>The confidence level of the vehicle color. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.604</p>
          */
         public Builder carColorConfidence(Double carColorConfidence) {
             this.carColorConfidence = carColorConfidence;
@@ -156,7 +173,16 @@ public class Car extends TeaModel {
         }
 
         /**
-         * CarType.
+         * <p>The vehicle type. Valid values:</p>
+         * <ul>
+         * <li>car</li>
+         * <li>bus</li>
+         * <li>truck</li>
+         * <li>van</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>van</p>
          */
         public Builder carType(String carType) {
             this.carType = carType;
@@ -164,7 +190,10 @@ public class Car extends TeaModel {
         }
 
         /**
-         * CarTypeConfidence.
+         * <p>The confidence level of the vehicle type. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.516</p>
          */
         public Builder carTypeConfidence(Double carTypeConfidence) {
             this.carTypeConfidence = carTypeConfidence;
@@ -172,7 +201,10 @@ public class Car extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence level of the vehicle detection result. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.999</p>
          */
         public Builder confidence(Double confidence) {
             this.confidence = confidence;
@@ -180,7 +212,7 @@ public class Car extends TeaModel {
         }
 
         /**
-         * LicensePlates.
+         * <p>The license plates.</p>
          */
         public Builder licensePlates(java.util.List<LicensePlate> licensePlates) {
             this.licensePlates = licensePlates;

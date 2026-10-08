@@ -67,7 +67,10 @@ public class VideoInsightsHighlightLabelConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether highlight labels are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -75,7 +78,7 @@ public class VideoInsightsHighlightLabelConfig extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of labels.</p>
          */
         public Builder labels(java.util.List<InsightsLabel> labels) {
             this.labels = labels;

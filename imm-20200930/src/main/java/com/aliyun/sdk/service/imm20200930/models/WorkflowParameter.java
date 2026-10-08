@@ -67,7 +67,10 @@ public class WorkflowParameter extends TeaModel {
         } 
 
         /**
-         * Name.
+         * <p>The invalid parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -75,7 +78,10 @@ public class WorkflowParameter extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The invalid parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         public Builder value(String value) {
             this.value = value;

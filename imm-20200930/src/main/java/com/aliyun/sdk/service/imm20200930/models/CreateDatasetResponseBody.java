@@ -67,7 +67,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Dataset information.</p>
+         * <p>The dataset information.</p>
          */
         public Builder dataset(Dataset dataset) {
             this.dataset = dataset;
@@ -75,7 +75,7 @@ public class CreateDatasetResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6D74B3A9-5AC0-49F9-914D-E01589D3****</p>

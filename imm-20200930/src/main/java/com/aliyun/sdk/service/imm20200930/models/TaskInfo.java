@@ -184,7 +184,10 @@ public class TaskInfo extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ResourceNotFound</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -192,7 +195,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-24T03:01:49.480109219Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -200,7 +206,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The specified resource project is not found.</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -208,7 +217,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * Progress.
+         * <p>The progress of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder progress(Integer progress) {
             this.progress = progress;
@@ -216,7 +228,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-24T03:01:41.662060377Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -224,7 +239,15 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>Running: The task is running.</li>
+         * <li>Succeeded: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -232,7 +255,7 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The tags of the task. You can search for tasks by tag.</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             this.tags = tags;
@@ -240,7 +263,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c2b277b9-0d30-4882-ad6d-ad661382****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -248,7 +274,15 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * TaskRequestDefinition.
+         * <p>The parameter definition in the JSON string format. For more information, see the Request parameters section of the topic about an asynchronous processing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;ProjectName&quot;:&quot;test-project&quot;,
+         *     &quot;CompressedFormat&quot;:&quot;zip&quot;,
+         *     &quot;TargetURI&quot;:&quot;oss://test-bucket/output/test.zip&quot;,
+         *     &quot;Sources&quot;:[{&quot;URI&quot;:&quot;oss://test-bucket/input/test.jpg&quot;}]
+         * }</p>
          */
         public Builder taskRequestDefinition(String taskRequestDefinition) {
             this.taskRequestDefinition = taskRequestDefinition;
@@ -256,7 +290,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * TaskType.
+         * <p>The type of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VideoLabelClassification</p>
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -264,7 +301,10 @@ public class TaskInfo extends TeaModel {
         }
 
         /**
-         * UserData.
+         * <p>The custom user data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.userData = userData;

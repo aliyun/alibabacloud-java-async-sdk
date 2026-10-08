@@ -80,7 +80,10 @@ public class Schedule extends TeaModel {
         } 
 
         /**
-         * Gamma.
+         * <p>The learning rate decay. This parameter takes effect only when LRScheduler is set to StepLR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.97</p>
          */
         public Builder gamma(Float gamma) {
             this.gamma = gamma;
@@ -88,7 +91,10 @@ public class Schedule extends TeaModel {
         }
 
         /**
-         * LRScheduler.
+         * <p>The learning rate scheduler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>StepLR</p>
          */
         public Builder LRScheduler(String LRScheduler) {
             this.LRScheduler = LRScheduler;
@@ -96,7 +102,10 @@ public class Schedule extends TeaModel {
         }
 
         /**
-         * StepSize.
+         * <p>The number of epochs the learning rate is changed after. This parameter takes effect only when LRScheduler is set to StepLR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder stepSize(Long stepSize) {
             this.stepSize = stepSize;

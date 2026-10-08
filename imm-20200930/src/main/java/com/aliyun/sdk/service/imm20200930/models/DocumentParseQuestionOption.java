@@ -67,7 +67,10 @@ public class DocumentParseQuestionOption extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>Number of questions (range: 0 to 10)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -75,7 +78,7 @@ public class DocumentParseQuestionOption extends TeaModel {
         }
 
         /**
-         * Extract.
+         * <p>Whether to extract</p>
          */
         public Builder extract(Boolean extract) {
             this.extract = extract;

@@ -197,7 +197,10 @@ public class SubtitleStream extends TeaModel {
         } 
 
         /**
-         * Bitrate.
+         * <p>The bitrate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74</p>
          */
         public Builder bitrate(Long bitrate) {
             this.bitrate = bitrate;
@@ -205,7 +208,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * CodecLongName.
+         * <p>The full name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MOV text</p>
          */
         public Builder codecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
@@ -213,7 +219,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * CodecName.
+         * <p>The abbreviated name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mov_text</p>
          */
         public Builder codecName(String codecName) {
             this.codecName = codecName;
@@ -221,7 +230,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * CodecTag.
+         * <p>The tag of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x67337874</p>
          */
         public Builder codecTag(String codecTag) {
             this.codecTag = codecTag;
@@ -229,7 +241,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * CodecTagString.
+         * <p>The description of the codec tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tx3g</p>
          */
         public Builder codecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
@@ -237,7 +252,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The subtitle content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -245,7 +263,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The duration of the subtitle stream in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>71.378</p>
          */
         public Builder duration(Double duration) {
             this.duration = duration;
@@ -253,7 +274,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Height.
+         * <p>The height of the subtitles. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder height(Long height) {
             this.height = height;
@@ -261,7 +285,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index number of the subtitle stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder index(Long index) {
             this.index = index;
@@ -269,7 +296,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The subtitle language in the BCP 47 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -277,7 +307,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the subtitle stream in seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         public Builder startTime(Double startTime) {
             this.startTime = startTime;
@@ -285,7 +318,10 @@ public class SubtitleStream extends TeaModel {
         }
 
         /**
-         * Width.
+         * <p>The width of the subtitles. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
          */
         public Builder width(Long width) {
             this.width = width;

@@ -113,7 +113,7 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset.<a href="~~478160~~"></a></p>
+         * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * <p>The ID of the story.</p>
+         * <p>The ID of the story object whose information you want to retrieve.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,7 +139,7 @@ public class GetStoryRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

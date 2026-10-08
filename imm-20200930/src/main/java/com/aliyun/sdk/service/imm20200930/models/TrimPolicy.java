@@ -93,7 +93,14 @@ public class TrimPolicy extends TeaModel {
         } 
 
         /**
-         * DisableDeleteEmptyCell.
+         * <p>Specifies whether to prevent all empty cells from being deleted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableDeleteEmptyCell(Boolean disableDeleteEmptyCell) {
             this.disableDeleteEmptyCell = disableDeleteEmptyCell;
@@ -101,7 +108,14 @@ public class TrimPolicy extends TeaModel {
         }
 
         /**
-         * DisableDeleteRepeatedStyle.
+         * <p>Specifies whether to prevent all duplicate styles from being deleted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableDeleteRepeatedStyle(Boolean disableDeleteRepeatedStyle) {
             this.disableDeleteRepeatedStyle = disableDeleteRepeatedStyle;
@@ -109,7 +123,14 @@ public class TrimPolicy extends TeaModel {
         }
 
         /**
-         * DisableDeleteUnusedPicture.
+         * <p>Specifies whether to prevent unused cell images from being deleted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableDeleteUnusedPicture(Boolean disableDeleteUnusedPicture) {
             this.disableDeleteUnusedPicture = disableDeleteUnusedPicture;
@@ -117,7 +138,14 @@ public class TrimPolicy extends TeaModel {
         }
 
         /**
-         * DisableDeleteUnusedShape.
+         * <p>Specifies whether to prevent unused shapes from being deleted. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder disableDeleteUnusedShape(Boolean disableDeleteUnusedShape) {
             this.disableDeleteUnusedShape = disableDeleteUnusedShape;

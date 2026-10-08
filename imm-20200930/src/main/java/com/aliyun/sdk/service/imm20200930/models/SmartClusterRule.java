@@ -93,7 +93,7 @@ public class SmartClusterRule extends TeaModel {
         } 
 
         /**
-         * BaseURIs.
+         * <p>The array of URIs for the reference files.</p>
          */
         public Builder baseURIs(java.util.List<String> baseURIs) {
             this.baseURIs = baseURIs;
@@ -101,7 +101,7 @@ public class SmartClusterRule extends TeaModel {
         }
 
         /**
-         * Keywords.
+         * <p>The keywords.</p>
          */
         public Builder keywords(java.util.List<String> keywords) {
             this.keywords = keywords;
@@ -109,7 +109,10 @@ public class SmartClusterRule extends TeaModel {
         }
 
         /**
-         * RuleType.
+         * <p>The rule type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>figure</p>
          */
         public Builder ruleType(String ruleType) {
             this.ruleType = ruleType;
@@ -117,7 +120,10 @@ public class SmartClusterRule extends TeaModel {
         }
 
         /**
-         * Sensitivity.
+         * <p>The sensitivity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
          */
         public Builder sensitivity(Float sensitivity) {
             this.sensitivity = sensitivity;

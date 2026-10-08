@@ -67,7 +67,10 @@ public class KeyValuePair extends TeaModel {
         } 
 
         /**
-         * Key.
+         * <p>The key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket</p>
          */
         public Builder key(String key) {
             this.key = key;
@@ -75,7 +78,10 @@ public class KeyValuePair extends TeaModel {
         }
 
         /**
-         * Value.
+         * <p>The value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testbucket</p>
          */
         public Builder value(String value) {
             this.value = value;

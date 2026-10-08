@@ -80,7 +80,10 @@ public class HeadPose extends TeaModel {
         } 
 
         /**
-         * Pitch.
+         * <p>The angel of elevation or depression of the head. Unit: degree. Valid values: -180 to 180. A recommended range for reliable results is from -30 to 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18.385589599609375</p>
          */
         public Builder pitch(Float pitch) {
             this.pitch = pitch;
@@ -88,7 +91,10 @@ public class HeadPose extends TeaModel {
         }
 
         /**
-         * Roll.
+         * <p>The angle of the tilt to the side. Unit: degree. Valid values: -180 to 180. A recommended range for reliable results is from -45 to 45.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.204030513763428</p>
          */
         public Builder roll(Float roll) {
             this.roll = roll;
@@ -96,7 +102,10 @@ public class HeadPose extends TeaModel {
         }
 
         /**
-         * Yaw.
+         * <p>The angle of leftward or rightward rotation of the head. Unit: degree. Valid values: -180 to 180. A recommended range for reliable results is from -80 to 80.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.4945924282073975</p>
          */
         public Builder yaw(Float yaw) {
             this.yaw = yaw;

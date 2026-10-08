@@ -127,7 +127,7 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>Weboffice access token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</p>
+         * <p>The Weboffice access token. You can obtain the token by calling the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -140,8 +140,8 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p><strong>If there are no special requirements, leave it blank.</strong></p>
-         * <p>Chained authorization configuration, optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Access Other Entity Resources Using Chained Authorization</a>.</p>
+         * <p><strong>Leave this parameter empty unless you have special requirements.</strong></p>
+         * <p>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -151,7 +151,7 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>Project name. For more information on how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class RefreshWebofficeTokenRequest extends Request {
         }
 
         /**
-         * <p>Weboffice refresh token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</p>
+         * <p>The Weboffice refresh token. You can obtain the token by calling the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

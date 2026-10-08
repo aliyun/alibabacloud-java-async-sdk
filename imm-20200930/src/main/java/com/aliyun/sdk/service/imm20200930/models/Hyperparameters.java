@@ -147,7 +147,10 @@ public class Hyperparameters extends TeaModel {
         } 
 
         /**
-         * BackupInterval.
+         * <p>The frequency at which the model configuration is saved. If you set this parameter to 1, model configuration is saved every epoch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder backupInterval(Long backupInterval) {
             this.backupInterval = backupInterval;
@@ -155,7 +158,10 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * BatchSize.
+         * <p>The batch size for model training.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder batchSize(Long batchSize) {
             this.batchSize = batchSize;
@@ -163,7 +169,10 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * DataLoaderWorkers.
+         * <p>The number of threads used to read the training data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder dataLoaderWorkers(Long dataLoaderWorkers) {
             this.dataLoaderWorkers = dataLoaderWorkers;
@@ -171,6 +180,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
+         * <p>The custom parameters for model training.</p>
          * <p>This parameter is required.</p>
          */
         public Builder evaluator(CustomParams evaluator) {
@@ -179,6 +189,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
+         * <p>The image size. The array contains the width and height of the image.</p>
          * <p>This parameter is required.</p>
          */
         public Builder inputSize(java.util.List<Long> inputSize) {
@@ -187,7 +198,10 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * MaxEpoch.
+         * <p>The number of epochs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxEpoch(Long maxEpoch) {
             this.maxEpoch = maxEpoch;
@@ -195,7 +209,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * Optimization.
+         * <p>The optimization algorithm.</p>
          */
         public Builder optimization(Optimization optimization) {
             this.optimization = optimization;
@@ -203,7 +217,7 @@ public class Hyperparameters extends TeaModel {
         }
 
         /**
-         * Schedule.
+         * <p>The learning rate scheduler.</p>
          */
         public Builder schedule(Schedule schedule) {
             this.schedule = schedule;

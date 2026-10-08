@@ -67,7 +67,10 @@ public class DocumentReadKeywordOption extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of keywords. Valid values: 0 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -75,7 +78,10 @@ public class DocumentReadKeywordOption extends TeaModel {
         }
 
         /**
-         * Extract.
+         * <p>Specifies whether to extract keywords.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder extract(Boolean extract) {
             this.extract = extract;

@@ -132,7 +132,10 @@ public class Address extends TeaModel {
         } 
 
         /**
-         * AddressLine.
+         * <p>The full address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国浙江省杭州市余杭区文一西路969号</p>
          */
         public Builder addressLine(String addressLine) {
             this.addressLine = addressLine;
@@ -140,7 +143,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * City.
+         * <p>The city.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>杭州市</p>
          */
         public Builder city(String city) {
             this.city = city;
@@ -148,7 +154,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * Country.
+         * <p>The country or region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中国</p>
          */
         public Builder country(String country) {
             this.country = country;
@@ -156,7 +165,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * District.
+         * <p>The district.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>余杭区</p>
          */
         public Builder district(String district) {
             this.district = district;
@@ -164,7 +176,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The BCP 47 language code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-hans</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -172,7 +187,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * Province.
+         * <p>The province.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>浙江省</p>
          */
         public Builder province(String province) {
             this.province = province;
@@ -180,7 +198,10 @@ public class Address extends TeaModel {
         }
 
         /**
-         * Township.
+         * <p>The street.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>文一西路</p>
          */
         public Builder township(String township) {
             this.township = township;

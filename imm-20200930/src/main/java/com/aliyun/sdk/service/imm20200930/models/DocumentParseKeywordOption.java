@@ -67,7 +67,10 @@ public class DocumentParseKeywordOption extends TeaModel {
         } 
 
         /**
-         * Count.
+         * <p>The number of keywords to extract. The value must be an integer from 0 to 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -75,7 +78,7 @@ public class DocumentParseKeywordOption extends TeaModel {
         }
 
         /**
-         * Extract.
+         * <p>Specifies whether to extract keywords.</p>
          */
         public Builder extract(Boolean extract) {
             this.extract = extract;

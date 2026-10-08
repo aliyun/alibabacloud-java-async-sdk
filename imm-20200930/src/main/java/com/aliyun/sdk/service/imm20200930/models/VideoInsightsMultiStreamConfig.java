@@ -54,7 +54,10 @@ public class VideoInsightsMultiStreamConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether video multi-stream is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

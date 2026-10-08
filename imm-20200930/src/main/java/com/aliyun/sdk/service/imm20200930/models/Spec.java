@@ -159,7 +159,7 @@ public class Spec extends TeaModel {
         } 
 
         /**
-         * Backbone.
+         * <p>The custom parameters for model training.</p>
          */
         public Builder backbone(CustomParams backbone) {
             this.backbone = backbone;
@@ -167,7 +167,10 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * ClassNum.
+         * <p>The number of output classes of the last layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder classNum(Long classNum) {
             this.classNum = classNum;
@@ -175,7 +178,7 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * Head.
+         * <p>The custom parameters for model training.</p>
          */
         public Builder head(CustomParams head) {
             this.head = head;
@@ -183,7 +186,10 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * InputChannel.
+         * <p>3</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder inputChannel(Long inputChannel) {
             this.inputChannel = inputChannel;
@@ -191,7 +197,7 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * Loss.
+         * <p>The custom parameters for model training.</p>
          */
         public Builder loss(CustomParams loss) {
             this.loss = loss;
@@ -199,6 +205,7 @@ public class Spec extends TeaModel {
         }
 
         /**
+         * <p>The name of the model. The available model names vary with the model category.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -210,7 +217,7 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * Neck.
+         * <p>The custom parameters for model training.</p>
          */
         public Builder neck(CustomParams neck) {
             this.neck = neck;
@@ -218,7 +225,10 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * NumLandmarks.
+         * <p>The number of face landmarks. This parameter is required for face detection. In most cases, you can set the parameter to 5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder numLandmarks(Long numLandmarks) {
             this.numLandmarks = numLandmarks;
@@ -226,7 +236,10 @@ public class Spec extends TeaModel {
         }
 
         /**
-         * PretrainedPath.
+         * <p>The path to the pretrained model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://bucket/abc/xxx.json</p>
          */
         public Builder pretrainedPath(String pretrainedPath) {
             this.pretrainedPath = pretrainedPath;

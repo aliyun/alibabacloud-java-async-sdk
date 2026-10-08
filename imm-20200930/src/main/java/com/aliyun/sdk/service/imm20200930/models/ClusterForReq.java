@@ -106,7 +106,7 @@ public class ClusterForReq extends TeaModel {
         } 
 
         /**
-         * Cover.
+         * <p>The cover.</p>
          */
         public Builder cover(Cover cover) {
             this.cover = cover;
@@ -114,7 +114,10 @@ public class ClusterForReq extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -122,7 +125,10 @@ public class ClusterForReq extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -130,7 +136,10 @@ public class ClusterForReq extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -138,7 +147,10 @@ public class ClusterForReq extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-99b1c333-86dc-45da-8c6****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -191,7 +203,10 @@ public class ClusterForReq extends TeaModel {
             } 
 
             /**
-             * FigureId.
+             * <p>The person ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2cb3c51e-b406-4b0c-af1b-897d88e1****</p>
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -245,7 +260,7 @@ public class ClusterForReq extends TeaModel {
             } 
 
             /**
-             * Figures.
+             * <p>The persons.</p>
              */
             public Builder figures(java.util.List<Figures> figures) {
                 this.figures = figures;

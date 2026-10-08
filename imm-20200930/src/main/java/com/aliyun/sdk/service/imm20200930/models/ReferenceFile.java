@@ -93,7 +93,10 @@ public class ReferenceFile extends TeaModel {
         } 
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -101,7 +104,10 @@ public class ReferenceFile extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The unique ID of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>75d5de2c50754e3dadd5c35dbca5f9949369e37eb342a73821f690c94c36c7f7</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -109,7 +115,10 @@ public class ReferenceFile extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -117,7 +126,10 @@ public class ReferenceFile extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The URI of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;

@@ -80,7 +80,7 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The event ID.</p>
+         * <p>The ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>2E6-1I0FGn0zFnl5AflRfhzClma*****</p>
@@ -91,7 +91,7 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
@@ -102,7 +102,7 @@ public class CreateVideoModerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>VideoModeration-9442a216-4691-4a48-846d-76daccaf*****</p>

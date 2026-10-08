@@ -223,7 +223,10 @@ public class SmartCluster extends TeaModel {
         } 
 
         /**
-         * ClusterType.
+         * <p>The category of the grouping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>figure</p>
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -231,7 +234,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the grouping was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -239,7 +245,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyDataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -247,7 +256,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the grouping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>这是一个智能分组的描述示例，它用于展示记录的格式。</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -255,7 +267,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The grouping name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySmartCluster1</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -263,7 +278,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The intelligent grouping ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -271,7 +289,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * ObjectStatus.
+         * <p>The status of the grouping.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder objectStatus(String objectStatus) {
             this.objectStatus = objectStatus;
@@ -279,7 +300,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The grouping type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smart-cluster</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -287,7 +311,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1023210024677934</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -295,7 +322,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyProject</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -303,7 +333,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * Reason.
+         * <p>The reason why the grouping failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[InvalidArgument.BaseURIs] Each BaseURI must contain exactly one figure</p>
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -311,7 +344,7 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * Rule.
+         * <p>The grouping rule. This parameter is deprecated. Use the Rules parameter instead.</p>
          */
         public Builder rule(SmartClusterRule rule) {
             this.rule = rule;
@@ -319,7 +352,7 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * Rules.
+         * <p>The list of grouping rules.</p>
          */
         public Builder rules(java.util.List<SmartClusterRule> rules) {
             this.rules = rules;
@@ -327,7 +360,10 @@ public class SmartCluster extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the grouping was last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

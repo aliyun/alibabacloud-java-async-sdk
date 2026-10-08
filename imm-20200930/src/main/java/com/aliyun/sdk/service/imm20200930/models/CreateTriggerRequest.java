@@ -156,7 +156,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The templates.</p>
+         * <p>A list of data processing templates.</p>
          * <p>This parameter is required.</p>
          */
         public Builder actions(java.util.List<Actions> actions) {
@@ -167,7 +167,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The data source configurations.</p>
+         * <p>The data source configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder input(Input input) {
@@ -178,8 +178,8 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</p>
-         * <p>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</p>
+         * <p>The notification recipient. Various message intermediaries are supported. For details about the message format, see Asynchronous notification message. Choose one of the following methods to receive messages:</p>
+         * <p>Activate and connect to EventBridge in the same region as Intelligent Media Management (IMM) to receive task notifications. For more information, see IMM events. Activate Message Service (MNS) in the same region as IMM and configure a subscription.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -189,7 +189,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -202,12 +202,12 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The service role. IMM assumes the service role so that it can access resources in other cloud services, such as OSS. Default value: AliyunIMMBatchTriggerRole.</p>
-         * <p>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</p>
+         * <p>The service role that grants Intelligent Media Management (IMM) permissions to access other cloud resources, such as Object Storage Service (OSS). The default value is AliyunIMMBatchTriggerRole.</p>
+         * <p>To use a custom service role, create a service role and grant permissions to the role in the Resource Access Management (RAM) console. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>AliyunIMMDefaultRole</p>
+         * <p>AliyunIMMBatchTriggerRole</p>
          */
         public Builder serviceRole(String serviceRole) {
             this.putBodyParameter("ServiceRole", serviceRole);
@@ -216,7 +216,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * <p>The custom tags. You can search for or filter asynchronous tasks by custom tag.</p>
+         * <p>Custom tags used to search and filter asynchronous tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;val&quot;}</p>
@@ -302,7 +302,7 @@ public class CreateTriggerRequest extends Request {
             } 
 
             /**
-             * <p>The policy configurations for handling failures.</p>
+             * <p>The fast-fail policy configuration.</p>
              */
             public Builder fastFailPolicy(FastFailPolicy fastFailPolicy) {
                 this.fastFailPolicy = fastFailPolicy;
@@ -322,7 +322,7 @@ public class CreateTriggerRequest extends Request {
             }
 
             /**
-             * <p>The template parameters.</p>
+             * <p>A list of template parameters.</p>
              */
             public Builder parameters(java.util.List<String> parameters) {
                 this.parameters = parameters;
@@ -376,7 +376,7 @@ public class CreateTriggerRequest extends Request {
             } 
 
             /**
-             * <p>The SMQ notification settings.</p>
+             * <p>The parameter object for MNS notifications.</p>
              */
             public Builder MNS(MNS MNS) {
                 this.MNS = MNS;

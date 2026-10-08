@@ -80,7 +80,10 @@ public class VideoInsightsUserDefinedLabelConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -88,7 +91,7 @@ public class VideoInsightsUserDefinedLabelConfig extends TeaModel {
         }
 
         /**
-         * Labels.
+         * <p>The list of custom labels.</p>
          */
         public Builder labels(java.util.List<InsightsLabel> labels) {
             this.labels = labels;
@@ -96,7 +99,10 @@ public class VideoInsightsUserDefinedLabelConfig extends TeaModel {
         }
 
         /**
-         * Mode.
+         * <p>The custom label matching mode. The SDK passes this as an optional string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enhanced</p>
          */
         public Builder mode(String mode) {
             this.mode = mode;

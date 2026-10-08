@@ -80,7 +80,7 @@ public class LicensePlate extends TeaModel {
         } 
 
         /**
-         * Boundary.
+         * <p>The boundary information of the license plate.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -88,7 +88,10 @@ public class LicensePlate extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.789</p>
          */
         public Builder confidence(Double confidence) {
             this.confidence = confidence;
@@ -96,7 +99,10 @@ public class LicensePlate extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The license plate number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>鲁A8***8</p>
          */
         public Builder content(String content) {
             this.content = content;

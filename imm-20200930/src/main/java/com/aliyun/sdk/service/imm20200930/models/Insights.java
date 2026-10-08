@@ -67,7 +67,7 @@ public class Insights extends TeaModel {
         } 
 
         /**
-         * Image.
+         * <p>The summary and description of the image.</p>
          */
         public Builder image(ImageInsight image) {
             this.image = image;
@@ -75,7 +75,7 @@ public class Insights extends TeaModel {
         }
 
         /**
-         * Video.
+         * <p>The summary and description of the video.</p>
          */
         public Builder video(VideoInsight video) {
             this.video = video;

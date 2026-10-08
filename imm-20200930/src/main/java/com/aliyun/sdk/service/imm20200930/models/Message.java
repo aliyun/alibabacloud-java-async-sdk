@@ -197,7 +197,10 @@ public class Message extends TeaModel {
         } 
 
         /**
-         * AssistantType.
+         * <p>Assistant type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doc/translate</p>
          */
         public Builder assistantType(String assistantType) {
             this.assistantType = assistantType;
@@ -205,7 +208,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The content of the question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，哪个公园距离我最近？</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -213,7 +219,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the message was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:10:52.83948013+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -221,7 +230,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset that the answer references to.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -229,7 +241,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The language of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-Hans</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -237,7 +252,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Regenerate.
+         * <p>Indicates whether the message is a regenerated answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder regenerate(Boolean regenerate) {
             this.regenerate = regenerate;
@@ -245,7 +263,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Reply.
+         * <p>The answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好，我是你的助手</p>
          */
         public Builder reply(String reply) {
             this.reply = reply;
@@ -253,7 +274,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Score.
+         * <p>Rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.99</p>
          */
         public Builder score(Double score) {
             this.score = score;
@@ -261,7 +285,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * SourceURI.
+         * <p>The URI of the source file from which the answer was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/sample.docx</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.sourceURI = sourceURI;
@@ -269,7 +296,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Suggestion.
+         * <p>The compliance check results. Valid values: pass block</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder suggestion(String suggestion) {
             this.suggestion = suggestion;
@@ -277,7 +307,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Tone.
+         * <p>The tone of the answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>professional</p>
          */
         public Builder tone(String tone) {
             this.tone = tone;
@@ -285,7 +318,10 @@ public class Message extends TeaModel {
         }
 
         /**
-         * Topic.
+         * <p>The topic in the question.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>根据 AssistantType 不同具体含义不同。</p>
          */
         public Builder topic(String topic) {
             this.topic = topic;

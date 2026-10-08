@@ -93,7 +93,7 @@ public class Codes extends TeaModel {
         } 
 
         /**
-         * Boundary.
+         * <p>The boundary of the code.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -101,7 +101,10 @@ public class Codes extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence level of the code. A greater value indicates a higher confidence level. A value exceeding 0.8 signifies a high degree of confidence in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.9</p>
          */
         public Builder confidence(Float confidence) {
             this.confidence = confidence;
@@ -109,7 +112,10 @@ public class Codes extends TeaModel {
         }
 
         /**
-         * Content.
+         * <p>The content of the code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -117,7 +123,15 @@ public class Codes extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the code.</p>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>qrcode</li>
+         * <li>barcode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>qrcode</p>
          */
         public Builder type(String type) {
             this.type = type;

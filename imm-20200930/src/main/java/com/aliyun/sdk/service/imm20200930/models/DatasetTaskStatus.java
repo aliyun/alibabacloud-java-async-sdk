@@ -80,7 +80,10 @@ public class DatasetTaskStatus extends TeaModel {
         } 
 
         /**
-         * LastSucceededTime.
+         * <p>The time of the last completion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder lastSucceededTime(String lastSucceededTime) {
             this.lastSucceededTime = lastSucceededTime;
@@ -88,7 +91,10 @@ public class DatasetTaskStatus extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -96,7 +102,10 @@ public class DatasetTaskStatus extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The status of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Succeeded</p>
          */
         public Builder status(String status) {
             this.status = status;

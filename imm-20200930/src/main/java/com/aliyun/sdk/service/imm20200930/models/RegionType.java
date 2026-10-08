@@ -67,7 +67,10 @@ public class RegionType extends TeaModel {
         } 
 
         /**
-         * LocalName.
+         * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>华北2（北京）</p>
          */
         public Builder localName(String localName) {
             this.localName = localName;
@@ -75,7 +78,10 @@ public class RegionType extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

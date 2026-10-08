@@ -54,7 +54,10 @@ public class VideoReadPPTOption extends TeaModel {
         } 
 
         /**
-         * Extract.
+         * <p>Specifies whether to fetch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder extract(Boolean extract) {
             this.extract = extract;

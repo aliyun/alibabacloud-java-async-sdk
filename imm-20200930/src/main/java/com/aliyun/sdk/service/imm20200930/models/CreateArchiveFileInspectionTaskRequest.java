@@ -153,8 +153,8 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p><strong>Leave this parameter empty if you do not have special requirements.</strong></p>
+         * <p>The configuration for chained authorization. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -164,9 +164,9 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          * <blockquote>
-         * <p> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</p>
+         * <p>Currently, API callbacks in IMM do not support custom webhook addresses. Use MNS instead.</p>
          * </blockquote>
          */
         public Builder notification(Notification notification) {
@@ -177,7 +177,7 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The password that protects the package. If the package is password-protected, you must provide the password to view the contents of the package.</p>
+         * <p>The password of the compressed file. If the file is encrypted, provide the password to inspect its contents.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -189,11 +189,11 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -202,11 +202,11 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The URI of the package.</p>
-         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>The location of the compressed file.</p>
+         * <p>The Object Storage Service (OSS) URI must be in the oss\://${Bucket}/${Object} format. In this format, <code>${Bucket}</code> is the name of the OSS bucket that is in the same region as the current project, and <code>${Object}</code> is the full path of the file, including the file name extension.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://imm-apitest-fxf2/name.zip</p>
+         * <p>oss://bucket/test-object.zip</p>
          */
         public Builder sourceURI(String sourceURI) {
             this.putQueryParameter("SourceURI", sourceURI);
@@ -215,10 +215,10 @@ public class CreateArchiveFileInspectionTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * <p>Custom information that is returned in the asynchronous notification message. You can use this information to associate the notification message with your services. The maximum length is 2,048 bytes.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>
+         * <p>test-data</p>
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

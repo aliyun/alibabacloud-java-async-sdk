@@ -106,7 +106,7 @@ public class Element extends TeaModel {
         } 
 
         /**
-         * ElementContents.
+         * <p>The element contents.</p>
          */
         public Builder elementContents(java.util.List<ElementContent> elementContents) {
             this.elementContents = elementContents;
@@ -114,7 +114,7 @@ public class Element extends TeaModel {
         }
 
         /**
-         * ElementRelations.
+         * <p>The relationships between the current element and other elements.</p>
          */
         public Builder elementRelations(java.util.List<ElementRelation> elementRelations) {
             this.elementRelations = elementRelations;
@@ -122,7 +122,10 @@ public class Element extends TeaModel {
         }
 
         /**
-         * ElementType.
+         * <p>The element type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>title - 标题； image - 图片 ； table - 表格 ； narrative-text - 正文</p>
          */
         public Builder elementType(String elementType) {
             this.elementType = elementType;
@@ -130,7 +133,10 @@ public class Element extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The unique ID of the element.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -138,7 +144,10 @@ public class Element extends TeaModel {
         }
 
         /**
-         * SemanticSimilarity.
+         * <p>The similarity between the current file and its extracted semantics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder semanticSimilarity(Float semanticSimilarity) {
             this.semanticSimilarity = semanticSimilarity;

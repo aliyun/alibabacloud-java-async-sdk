@@ -83,10 +83,11 @@ public class AssumeRoleChainNode extends TeaModel {
         } 
 
         /**
+         * <p>The UID of the account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1023210024677934</p>
+         * <p>10232100********</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -94,6 +95,7 @@ public class AssumeRoleChainNode extends TeaModel {
         }
 
         /**
+         * <p>The role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,6 +107,11 @@ public class AssumeRoleChainNode extends TeaModel {
         }
 
         /**
+         * <p>The type of the account. Valid values:</p>
+         * <ul>
+         * <li>user: Alibaba Cloud account.</li>
+         * <li>service: Alibaba Cloud service.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

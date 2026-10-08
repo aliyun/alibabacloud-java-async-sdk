@@ -80,7 +80,10 @@ public class ContextualMessage extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -88,7 +91,7 @@ public class ContextualMessage extends TeaModel {
         }
 
         /**
-         * Files.
+         * <p>The files involved in the dialogue.</p>
          */
         public Builder files(java.util.List<ContextualFile> files) {
             this.files = files;
@@ -96,7 +99,10 @@ public class ContextualMessage extends TeaModel {
         }
 
         /**
-         * Role.
+         * <p>The role in the dialogue.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         public Builder role(String role) {
             this.role = role;

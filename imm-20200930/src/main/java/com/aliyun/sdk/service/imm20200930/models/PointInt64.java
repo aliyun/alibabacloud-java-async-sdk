@@ -67,7 +67,10 @@ public class PointInt64 extends TeaModel {
         } 
 
         /**
-         * X.
+         * <p>The distance from the X-coordinate of the vertex to the left edge. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder x(Long x) {
             this.x = x;
@@ -75,7 +78,10 @@ public class PointInt64 extends TeaModel {
         }
 
         /**
-         * Y.
+         * <p>The distance from the Y-coordinate of the vertex to the top. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder y(Long y) {
             this.y = y;

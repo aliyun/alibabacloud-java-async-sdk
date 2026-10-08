@@ -158,7 +158,10 @@ public class ContextualFile extends TeaModel {
         } 
 
         /**
-         * ContentType.
+         * <p>The Multipurpose Internet Mail Extensions (MIME) type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text/x-imm-faq</p>
          */
         public Builder contentType(String contentType) {
             this.contentType = contentType;
@@ -166,7 +169,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -174,7 +180,7 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * Elements.
+         * <p>Elements.</p>
          */
         public Builder elements(java.util.List<Element> elements) {
             this.elements = elements;
@@ -182,7 +188,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * MediaType.
+         * <p>The media type of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         public Builder mediaType(String mediaType) {
             this.mediaType = mediaType;
@@ -190,7 +199,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * OSSURI.
+         * <p>The URI path of the OSS file. This parameter is used only when the URI is a PDS address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket/test-object.jpg</p>
          */
         public Builder OSSURI(String OSSURI) {
             this.OSSURI = OSSURI;
@@ -198,7 +210,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The identifier of the file in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0939d7ed-73fa-4009-bbe6-fbbe07b92b2e</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -206,7 +221,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1482910009923706</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -214,7 +232,10 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -222,7 +243,12 @@ public class ContextualFile extends TeaModel {
         }
 
         /**
-         * URI.
+         * <p>The URI of the file.
+         * The format of an OSS URI is oss\://${bucketname}/${objectname}. ${bucketname} is the name of an OSS bucket in the same region as the current project. ${objectname} is the file path.
+         * The format of a PDS URI is pds\://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://test-bucket</p>
          */
         public Builder URI(String URI) {
             this.URI = URI;

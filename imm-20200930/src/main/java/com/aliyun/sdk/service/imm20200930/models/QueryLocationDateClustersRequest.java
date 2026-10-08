@@ -441,6 +441,9 @@ public class QueryLocationDateClustersRequest extends Request {
 
         /**
          * <p>The characters that are included in the titles of spatiotemporal clusters to be queried. Matches are found by using fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hangzhou</p>
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

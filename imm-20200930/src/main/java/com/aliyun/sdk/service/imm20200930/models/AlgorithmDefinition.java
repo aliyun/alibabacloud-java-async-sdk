@@ -158,7 +158,10 @@ public class AlgorithmDefinition extends TeaModel {
         } 
 
         /**
-         * AlgorithmDefinitionId.
+         * <p>The ID of the algorithm definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8fc6e718-8d19-495f-a510-bcee3c598588</p>
          */
         public Builder algorithmDefinitionId(String algorithmDefinitionId) {
             this.algorithmDefinitionId = algorithmDefinitionId;
@@ -166,7 +169,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-31T10:19:40.572325888+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -174,7 +180,7 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>Custom labels.</p>
          */
         public Builder customLabels(java.util.List<java.util.Map<String, String>> customLabels) {
             this.customLabels = customLabels;
@@ -182,7 +188,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -190,7 +199,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>algoName</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -198,7 +210,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user1</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -206,7 +221,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>traningtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -214,7 +232,7 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * TrainingSpecification.
+         * <p>The model training parameters.</p>
          */
         public Builder trainingSpecification(TrainingSpecification trainingSpecification) {
             this.trainingSpecification = trainingSpecification;
@@ -222,7 +240,10 @@ public class AlgorithmDefinition extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-05-31T10:19:40.572325888+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

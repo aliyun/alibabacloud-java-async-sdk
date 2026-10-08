@@ -132,7 +132,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The audio media playlist files.</p>
+         * <p>The list of audio Media Playlist files.</p>
          */
         public Builder audioPlaylist(java.util.List<AudioPlaylist> audioPlaylist) {
             this.audioPlaylist = audioPlaylist;
@@ -140,7 +140,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total duration of the generated video.</p>
+         * <p>The total duration of the output video.</p>
          * 
          * <strong>example:</strong>
          * <p>1082</p>
@@ -151,7 +151,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The OSS path of the master playlist.</p>
+         * <p>The OSS URI of the Master Playlist.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/test-object/master.m3u8</p>
@@ -173,7 +173,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subtitle media playlist files.</p>
+         * <p>The list of subtitle Media Playlist files.</p>
          */
         public Builder subtitlePlaylist(java.util.List<SubtitlePlaylist> subtitlePlaylist) {
             this.subtitlePlaylist = subtitlePlaylist;
@@ -181,7 +181,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token of the master playlist.</p>
+         * <p>The token of the Master Playlist.</p>
          * 
          * <strong>example:</strong>
          * <p>92376fbb-171f-4259-913f-705f7ee0****</p>
@@ -192,7 +192,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The video media playlist files.</p>
+         * <p>The list of video Media Playlist files.</p>
          */
         public Builder videoPlaylist(java.util.List<VideoPlaylist> videoPlaylist) {
             this.videoPlaylist = videoPlaylist;
@@ -282,7 +282,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token of the audio media playlist. You can use this parameter to generate the path of a TS file.</p>
+             * <p>The token generated for the audio Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</p>
              * 
              * <strong>example:</strong>
              * <p>affe0c6042f09722fec95a21b8b******</p>
@@ -293,10 +293,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS path of the audio media playlist.</p>
+             * <p>The OSS URI of the audio Media Playlist.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://imm-test/testcases/video.m3u8</p>
+             * <p>oss://test-bucket/test-object/output-audio.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -389,7 +389,7 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The serial number of the subtitle stream. The value starts from 0.</p>
+             * <p>The subtitle stream number, starting from 0.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -402,11 +402,11 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             /**
              * <p>The language of the subtitle stream.</p>
              * <blockquote>
-             * <p> The language is derived from the subtitle stream information in the OSS path specified by the SourceURI parameter for a source video. If no language information exists in the source video, null is returned.</p>
+             * <p>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, an empty value is returned.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>en</p>
+             * <p>eng</p>
              */
             public Builder language(String language) {
                 this.language = language;
@@ -414,9 +414,9 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token of the subtitle media playlist. You can use this parameter to generate the path of a subtitle file.</p>
+             * <p>The token generated for the subtitle Media Playlist. You can use this parameter to construct the addresses of the generated subtitle files.</p>
              * <blockquote>
-             * <p> You can generate the path of a transcoded subtitle file based on the returned token value. The path must be in the oss://${Bucket}/${Object}-${Token}_${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token value, and ${Index} specifies the serial number of a subtitle file.</p>
+             * <p>Based on the returned Token value, you can construct the addresses of the transcoded subtitle files. The format is: oss://${Bucket}/${Object}-${Token}_${Index}.ts, where oss://${Bucket}/${Object} is the Subtitle URI from the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the subtitle.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -428,10 +428,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS path of the subtitle media playlist.</p>
+             * <p>The OSS URI of the subtitle Media Playlist.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://imm-test/testcases/vide_0.m3u8</p>
+             * <p>oss://test-bucket/test-object/output-subtitle.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -546,9 +546,9 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The token of the video media playlist. You can use this parameter to generate the path of a TS file.</p>
+             * <p>The token generated for the video Media Playlist. You can use this parameter to construct the addresses of the generated TS files.</p>
              * <blockquote>
-             * <p> You can generate the path of a transcoded TS file based on the value of this parameter. The path must be in the oss://${Bucket}/${Object}-${Token}-${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token, and ${Index} specifies the serial number of a TS file.</p>
+             * <p>Based on the returned Token value, you can construct the addresses of the transcoded TS files. The format is: oss://${Bucket}/${Object}-${Token}-${Index}.ts, where oss://${Bucket}/${Object} is the Target URI from the input parameters, ${Token} is the returned parameter, and ${Index} is the sequence number of the TS file.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -560,10 +560,10 @@ public class GenerateVideoPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS path of the video media playlist.</p>
+             * <p>The OSS URI of the video Media Playlist.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://imm-test/testcases/video.m3u8</p>
+             * <p>oss://test-bucket/test-object/output-video.m3u8</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

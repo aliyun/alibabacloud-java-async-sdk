@@ -80,7 +80,7 @@ public class QueryStoriesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The pagination token. An empty value indicates that all data has been read.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3Qx****</p>
@@ -91,7 +91,7 @@ public class QueryStoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>
@@ -102,7 +102,7 @@ public class QueryStoriesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The stories.</p>
+         * <p>The list of queried stories.</p>
          */
         public Builder stories(java.util.List<Story> stories) {
             this.stories = stories;

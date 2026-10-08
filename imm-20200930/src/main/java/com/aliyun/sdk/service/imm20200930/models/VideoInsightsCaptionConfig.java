@@ -80,7 +80,7 @@ public class VideoInsightsCaptionConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable video captioning.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -88,7 +88,7 @@ public class VideoInsightsCaptionConfig extends TeaModel {
         }
 
         /**
-         * PersonReference.
+         * <p>The person reference configuration.</p>
          */
         public Builder personReference(PersonReferenceConfig personReference) {
             this.personReference = personReference;
@@ -96,7 +96,10 @@ public class VideoInsightsCaptionConfig extends TeaModel {
         }
 
         /**
-         * Prompt.
+         * <p>The custom prompt for video captioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>请用一句话描述这个视频</p>
          */
         public Builder prompt(String prompt) {
             this.prompt = prompt;

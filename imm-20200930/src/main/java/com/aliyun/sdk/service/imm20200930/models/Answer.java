@@ -67,7 +67,10 @@ public class Answer extends TeaModel {
         } 
 
         /**
-         * Content.
+         * <p>The answer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>你好</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -75,7 +78,7 @@ public class Answer extends TeaModel {
         }
 
         /**
-         * References.
+         * <p>The reference sources of the answer.</p>
          */
         public Builder references(java.util.List<ReferenceFile> references) {
             this.references = references;

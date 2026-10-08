@@ -288,7 +288,10 @@ public class FigureCluster extends TeaModel {
         } 
 
         /**
-         * AverageAge.
+         * <p>The average age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder averageAge(Float averageAge) {
             this.averageAge = averageAge;
@@ -296,7 +299,7 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * Cover.
+         * <p>The cover image.</p>
          */
         public Builder cover(File cover) {
             this.cover = cover;
@@ -304,7 +307,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:10:52.83948013+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -312,7 +318,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -320,7 +329,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels. You can search for clusters by label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -328,7 +340,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -336,7 +351,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * FaceCount.
+         * <p>The number of faces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder faceCount(Long faceCount) {
             this.faceCount = faceCount;
@@ -344,7 +362,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * Gender.
+         * <p>The gender.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
          */
         public Builder gender(String gender) {
             this.gender = gender;
@@ -352,7 +373,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * ImageCount.
+         * <p>The number of images.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder imageCount(Long imageCount) {
             this.imageCount = imageCount;
@@ -360,7 +384,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * MaxAge.
+         * <p>The maximum age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>44</p>
          */
         public Builder maxAge(Float maxAge) {
             this.maxAge = maxAge;
@@ -368,7 +395,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * MetaLockVersion.
+         * <p>The version of the metadata lock. A metadata lock version can be obtained by using a get or list operation. If you include the MetaLockVersion parameter in a request to update the cluster, the server checks consistency between the MetaLockVersion parameter value sent in the request and the one on the server side and updates the cluster only when they are consistent. This parameter prevents update conflicts in concurrent scenarios. The initial version is 0. The version is automatically increased by 1 after each successful update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder metaLockVersion(Long metaLockVersion) {
             this.metaLockVersion = metaLockVersion;
@@ -376,7 +406,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * MinAge.
+         * <p>The minimum age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder minAge(Float minAge) {
             this.minAge = minAge;
@@ -384,7 +417,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -392,7 +428,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-ae6e3472-999e-410b-b54e-cd5dba****</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -400,7 +439,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The type of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>figure-cluster</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -408,7 +450,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102321002****</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -416,7 +461,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -424,7 +472,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:10:52.83948013+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -432,7 +483,10 @@ public class FigureCluster extends TeaModel {
         }
 
         /**
-         * VideoCount.
+         * <p>The number of videos.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder videoCount(Long videoCount) {
             this.videoCount = videoCount;

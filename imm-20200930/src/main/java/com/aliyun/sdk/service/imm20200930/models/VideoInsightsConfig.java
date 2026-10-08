@@ -80,7 +80,7 @@ public class VideoInsightsConfig extends TeaModel {
         } 
 
         /**
-         * Caption.
+         * <p>The video synopsis configuration.</p>
          */
         public Builder caption(VideoInsightsCaptionConfig caption) {
             this.caption = caption;
@@ -88,7 +88,7 @@ public class VideoInsightsConfig extends TeaModel {
         }
 
         /**
-         * Label.
+         * <p>The label configuration.</p>
          */
         public Builder label(VideoInsightsLabelConfig label) {
             this.label = label;
@@ -96,7 +96,7 @@ public class VideoInsightsConfig extends TeaModel {
         }
 
         /**
-         * MultiStream.
+         * <p>The video multi-stream configuration.</p>
          */
         public Builder multiStream(VideoInsightsMultiStreamConfig multiStream) {
             this.multiStream = multiStream;

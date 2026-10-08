@@ -405,7 +405,10 @@ public class VideoStream extends TeaModel {
         } 
 
         /**
-         * AverageFrameRate.
+         * <p>The average frame rate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25/1</p>
          */
         public Builder averageFrameRate(String averageFrameRate) {
             this.averageFrameRate = averageFrameRate;
@@ -413,7 +416,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * BitDepth.
+         * <p>The bit depth.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder bitDepth(Long bitDepth) {
             this.bitDepth = bitDepth;
@@ -421,7 +427,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Bitrate.
+         * <p>The bitrate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5407765</p>
          */
         public Builder bitrate(Long bitrate) {
             this.bitrate = bitrate;
@@ -429,7 +438,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * CodecLongName.
+         * <p>The full name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
          */
         public Builder codecLongName(String codecLongName) {
             this.codecLongName = codecLongName;
@@ -437,7 +449,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * CodecName.
+         * <p>The abbreviated name of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>h264</p>
          */
         public Builder codecName(String codecName) {
             this.codecName = codecName;
@@ -445,7 +460,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * CodecTag.
+         * <p>The tag of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0x31637661</p>
          */
         public Builder codecTag(String codecTag) {
             this.codecTag = codecTag;
@@ -453,7 +471,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * CodecTagString.
+         * <p>The description of the codec tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>avc1</p>
          */
         public Builder codecTagString(String codecTagString) {
             this.codecTagString = codecTagString;
@@ -461,7 +482,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * CodecTimeBase.
+         * <p>The time base of the codec.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1373627/83160000</p>
          */
         public Builder codecTimeBase(String codecTimeBase) {
             this.codecTimeBase = codecTimeBase;
@@ -469,7 +493,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * ColorPrimaries.
+         * <p>The primary colors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt709</p>
          */
         public Builder colorPrimaries(String colorPrimaries) {
             this.colorPrimaries = colorPrimaries;
@@ -477,7 +504,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * ColorRange.
+         * <p>The color range.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tv</p>
          */
         public Builder colorRange(String colorRange) {
             this.colorRange = colorRange;
@@ -485,7 +515,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * ColorSpace.
+         * <p>The color space.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt709</p>
          */
         public Builder colorSpace(String colorSpace) {
             this.colorSpace = colorSpace;
@@ -493,7 +526,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * ColorTransfer.
+         * <p>The color transfer function.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bt709</p>
          */
         public Builder colorTransfer(String colorTransfer) {
             this.colorTransfer = colorTransfer;
@@ -501,7 +537,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * DisplayAspectRatio.
+         * <p>The display aspect ratio of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16:9</p>
          */
         public Builder displayAspectRatio(String displayAspectRatio) {
             this.displayAspectRatio = displayAspectRatio;
@@ -509,7 +548,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Duration.
+         * <p>The duration of the video stream. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22.88</p>
          */
         public Builder duration(Double duration) {
             this.duration = duration;
@@ -517,7 +559,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * FrameCount.
+         * <p>The number of frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>572</p>
          */
         public Builder frameCount(Long frameCount) {
             this.frameCount = frameCount;
@@ -525,7 +570,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * FrameRate.
+         * <p>The frame rate of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>25/1</p>
          */
         public Builder frameRate(String frameRate) {
             this.frameRate = frameRate;
@@ -533,7 +581,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * HasBFrames.
+         * <p>Specifies whether the video stream contains B frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder hasBFrames(Long hasBFrames) {
             this.hasBFrames = hasBFrames;
@@ -541,7 +592,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Height.
+         * <p>The image height of the video stream. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
          */
         public Builder height(Long height) {
             this.height = height;
@@ -549,7 +603,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Index.
+         * <p>The index number of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder index(Long index) {
             this.index = index;
@@ -557,7 +614,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The language used in the video stream. The language is indicated by using a BCP 47 language tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>en</p>
          */
         public Builder language(String language) {
             this.language = language;
@@ -565,7 +625,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Level.
+         * <p>The level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40</p>
          */
         public Builder level(Long level) {
             this.level = level;
@@ -573,7 +636,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * PixelFormat.
+         * <p>The pixel format of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yuv420p</p>
          */
         public Builder pixelFormat(String pixelFormat) {
             this.pixelFormat = pixelFormat;
@@ -581,7 +647,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Profile.
+         * <p>The profile.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>High</p>
          */
         public Builder profile(String profile) {
             this.profile = profile;
@@ -589,7 +658,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Rotate.
+         * <p>The image rotation angle of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
          */
         public Builder rotate(String rotate) {
             this.rotate = rotate;
@@ -597,7 +669,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * SampleAspectRatio.
+         * <p>The sampling aspect ratio of the video stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1:1</p>
          */
         public Builder sampleAspectRatio(String sampleAspectRatio) {
             this.sampleAspectRatio = sampleAspectRatio;
@@ -605,7 +680,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the video stream. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.000000</p>
          */
         public Builder startTime(Double startTime) {
             this.startTime = startTime;
@@ -613,7 +691,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * TimeBase.
+         * <p>The time base.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1/12800</p>
          */
         public Builder timeBase(String timeBase) {
             this.timeBase = timeBase;
@@ -621,7 +702,10 @@ public class VideoStream extends TeaModel {
         }
 
         /**
-         * Width.
+         * <p>The image width of the video stream. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1280</p>
          */
         public Builder width(Long width) {
             this.width = width;

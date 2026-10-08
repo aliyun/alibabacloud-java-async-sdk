@@ -275,7 +275,10 @@ public class Project extends TeaModel {
         } 
 
         /**
-         * CreateTime.
+         * <p>The timestamp when the project was created, in RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -283,7 +286,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetCount.
+         * <p>The current number of datasets in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder datasetCount(Long datasetCount) {
             this.datasetCount = datasetCount;
@@ -291,7 +297,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetMaxBindCount.
+         * <p>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder datasetMaxBindCount(Long datasetMaxBindCount) {
             this.datasetMaxBindCount = datasetMaxBindCount;
@@ -299,7 +308,13 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetMaxEntityCount.
+         * <p>The maximum number of metadata entities per dataset. Default value: 10000000000.</p>
+         * <blockquote>
+         * <p>This field is reserved for future use and is not enforced.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000000</p>
          */
         public Builder datasetMaxEntityCount(Long datasetMaxEntityCount) {
             this.datasetMaxEntityCount = datasetMaxEntityCount;
@@ -307,7 +322,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetMaxFileCount.
+         * <p>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 100000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder datasetMaxFileCount(Long datasetMaxFileCount) {
             this.datasetMaxFileCount = datasetMaxFileCount;
@@ -315,7 +333,13 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetMaxRelationCount.
+         * <p>The maximum number of metadata relationships per dataset. Default value: 100000000000.</p>
+         * <blockquote>
+         * <p>This field is reserved for future use and is not enforced.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder datasetMaxRelationCount(Long datasetMaxRelationCount) {
             this.datasetMaxRelationCount = datasetMaxRelationCount;
@@ -323,7 +347,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * DatasetMaxTotalFileSize.
+         * <p>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90000000000000000</p>
          */
         public Builder datasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
             this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
@@ -331,7 +358,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test project</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -339,7 +369,16 @@ public class Project extends TeaModel {
         }
 
         /**
-         * EngineConcurrency.
+         * <p>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators across the project that can run in parallel at the same time. Default value: 100.</p>
+         * <ul>
+         * <li><p>Synchronous tasks: if the number of concurrent tasks exceeds this limit, task execution time increases until a timeout occurs.</p>
+         * </li>
+         * <li><p>Asynchronous tasks: if the number of concurrent tasks exceeds this limit, tasks are queued for a period of time, which delays task completion. If the queuing time also exceeds the limit (typically tens of minutes), the task returns a failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder engineConcurrency(Long engineConcurrency) {
             this.engineConcurrency = engineConcurrency;
@@ -347,7 +386,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * FileCount.
+         * <p>The current number of files in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder fileCount(Long fileCount) {
             this.fileCount = fileCount;
@@ -355,7 +397,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * ProjectMaxDatasetCount.
+         * <p>The maximum number of datasets in the project. Valid values: 1 to 1000000000. Default value: 1000000000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000000000</p>
          */
         public Builder projectMaxDatasetCount(Long projectMaxDatasetCount) {
             this.projectMaxDatasetCount = projectMaxDatasetCount;
@@ -363,7 +408,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -371,7 +419,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * ProjectQueriesPerSecond.
+         * <p>The maximum number of requests that the project can process per second. This specifies the maximum number of API calls allowed per second for all APIs in the project. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder projectQueriesPerSecond(Long projectQueriesPerSecond) {
             this.projectQueriesPerSecond = projectQueriesPerSecond;
@@ -379,7 +430,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * ServiceRole.
+         * <p>The service role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunIMMDefaultRole</p>
          */
         public Builder serviceRole(String serviceRole) {
             this.serviceRole = serviceRole;
@@ -387,7 +441,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * Tags.
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.tags = tags;
@@ -395,7 +449,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The workflow template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DefaultId</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -403,7 +460,10 @@ public class Project extends TeaModel {
         }
 
         /**
-         * TotalFileSize.
+         * <p>The current total file size in the project, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -411,7 +471,13 @@ public class Project extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The timestamp when the project was last modified, in RFC3339Nano format.</p>
+         * <blockquote>
+         * <p>If the project has not been updated since it was created, the modification timestamp is the same as the creation timestamp.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -477,7 +543,10 @@ public class Project extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -485,7 +554,10 @@ public class Project extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

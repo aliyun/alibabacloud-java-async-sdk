@@ -67,7 +67,10 @@ public class InsightsLabel extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The label description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>有人摔倒</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -75,7 +78,10 @@ public class InsightsLabel extends TeaModel {
         }
 
         /**
-         * Name.
+         * <p>The label name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>摔倒</p>
          */
         public Builder name(String name) {
             this.name = name;

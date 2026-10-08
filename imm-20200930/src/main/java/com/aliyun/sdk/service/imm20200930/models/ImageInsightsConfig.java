@@ -54,7 +54,7 @@ public class ImageInsightsConfig extends TeaModel {
         } 
 
         /**
-         * Caption.
+         * <p>The image content recognition Caption configuration.</p>
          */
         public Builder caption(ImageInsightsCaptionConfig caption) {
             this.caption = caption;

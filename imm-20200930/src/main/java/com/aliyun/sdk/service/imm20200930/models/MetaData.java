@@ -80,7 +80,10 @@ public class MetaData extends TeaModel {
         } 
 
         /**
-         * Identifier.
+         * <p>The model type identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>detection</p>
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;
@@ -88,7 +91,10 @@ public class MetaData extends TeaModel {
         }
 
         /**
-         * Provider.
+         * <p>The model provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imm</p>
          */
         public Builder provider(String provider) {
             this.provider = provider;
@@ -96,7 +102,10 @@ public class MetaData extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The model version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder version(String version) {
             this.version = version;

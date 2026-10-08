@@ -237,7 +237,7 @@ public class CreateProjectRequest extends Request {
         /**
          * <p>The maximum number of metadata entities in each dataset. Default value: 10000000000.</p>
          * <blockquote>
-         * <p> This is a precautionary setting that does not impose practical limitations.</p>
+         * <p>This parameter is reserved for future use and does not impose actual limits.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,9 +262,9 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of metadata relationships in each dataset. Default value: 100000000000.</p>
+         * <p>The maximum number of metadata relations in each dataset. Default value: 100000000000.</p>
          * <blockquote>
-         * <p> This is a precautionary setting that does not impose practical limitations.</p>
+         * <p>This parameter is reserved for future use and does not impose actual limits.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The maximum size of files in each dataset. If the maximum size is exceeded, no indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
+         * <p>The maximum total size of files in each dataset. If the limit is exceeded, no more indexes can be added. Unit: bytes. Default value: 90000000000000000.</p>
          * 
          * <strong>example:</strong>
          * <p>90000000000000000</p>
@@ -289,7 +289,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The description of the project. The description must be 1 to 256 characters in length. You can leave this parameter empty.</p>
+         * <p>The description of the project. The description must be 1 to 256 characters in length. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>immtest</p>
@@ -313,11 +313,14 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. The name must meet the following requirements:</p>
+         * <p>The name of the project. The naming rules are as follows:</p>
          * <ul>
-         * <li>The name must be 1 to 128 characters in length</li>
-         * <li>and can contain only letters, digits, hyphens (-), and underscores (_).</li>
-         * <li>The name must start with a letter or an underscores (_).</li>
+         * <li><p>The name must be 1 to 128 characters in length.</p>
+         * </li>
+         * <li><p>The name can contain only letters, digits, hyphens (-), and underscores (_).</p>
+         * </li>
+         * <li><p>The name must start with a letter or an underscore (_).</p>
+         * </li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -331,8 +334,8 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The name of the Resource Access Management (RAM) role. You must attach the RAM role to IMM to allow IMM to access other cloud resources, such as Object Storage Service (OSS). Default value: <code>AliyunIMMDefaultRole</code>.</p>
-         * <p>You can also create a custom role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/477257.html">Grant permissions to a RAM user</a>.</p>
+         * <p>The service role that is authorized to allow IMM to access other cloud resources such as Object Storage Service (OSS). Default value: <code>AliyunIMMDefaultRole</code>.</p>
+         * <p>To use a custom service role, you can create a standard service role in the Resource Access Management (RAM) console and grant permissions to the role. For more information, see <a href="https://help.aliyun.com/document_detail/477258.html">Grant permissions to a RAM role</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunIMMDefaultRole</p>
@@ -344,7 +347,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -354,10 +357,10 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The ID of the workflow template. You can leave this parameter empty. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
+         * <p>The ID of the workflow template. Default value: empty. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Official:AllFunction</p>
+         * <p>Official:ImageManagement</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

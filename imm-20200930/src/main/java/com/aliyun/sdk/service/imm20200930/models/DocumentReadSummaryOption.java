@@ -80,7 +80,10 @@ public class DocumentReadSummaryOption extends TeaModel {
         } 
 
         /**
-         * ChapterSummarize.
+         * <p>Specifies whether to extract the chapter-level summary of the article.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder chapterSummarize(Boolean chapterSummarize) {
             this.chapterSummarize = chapterSummarize;
@@ -88,7 +91,7 @@ public class DocumentReadSummaryOption extends TeaModel {
         }
 
         /**
-         * ChapterSummarizeOption.
+         * <p>The chapter-level summary options for the article.</p>
          */
         public Builder chapterSummarizeOption(DocumentChapterSummarizeOption chapterSummarizeOption) {
             this.chapterSummarizeOption = chapterSummarizeOption;
@@ -96,7 +99,10 @@ public class DocumentReadSummaryOption extends TeaModel {
         }
 
         /**
-         * Summarize.
+         * <p>Specifies whether to extract the article summary.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder summarize(Boolean summarize) {
             this.summarize = summarize;

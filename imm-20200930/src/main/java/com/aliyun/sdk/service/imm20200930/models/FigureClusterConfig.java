@@ -93,7 +93,7 @@ public class FigureClusterConfig extends TeaModel {
         } 
 
         /**
-         * AutoClustering.
+         * <p>Specifies whether to allow IMM to perform classification tasks on files in the dataset. Default value: False.</p>
          */
         public Builder autoClustering(Boolean autoClustering) {
             this.autoClustering = autoClustering;
@@ -101,7 +101,7 @@ public class FigureClusterConfig extends TeaModel {
         }
 
         /**
-         * AutoGenerate.
+         * <p>Indicates whether IMM is allowed to perform automatic creation of new groups. Default value: False.</p>
          */
         public Builder autoGenerate(Boolean autoGenerate) {
             this.autoGenerate = autoGenerate;
@@ -109,7 +109,7 @@ public class FigureClusterConfig extends TeaModel {
         }
 
         /**
-         * EnabledFeatures.
+         * <p>The features supported by figure clustering.</p>
          */
         public Builder enabledFeatures(java.util.List<String> enabledFeatures) {
             this.enabledFeatures = enabledFeatures;
@@ -117,7 +117,10 @@ public class FigureClusterConfig extends TeaModel {
         }
 
         /**
-         * MinEntityCount.
+         * <p>The minimum threshold for the number of entities when automatic generation of new groups is allowed. Default value: 3.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder minEntityCount(Long minEntityCount) {
             this.minEntityCount = minEntityCount;

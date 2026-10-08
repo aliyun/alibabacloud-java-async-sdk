@@ -145,7 +145,7 @@ public class DeleteFileMetaRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss://examplebucket/exampleobject.txt</p>
+         * <p>oss://test-bucket/test-object</p>
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

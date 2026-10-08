@@ -67,7 +67,7 @@ public class ToolCall extends TeaModel {
         } 
 
         /**
-         * Function.
+         * <p>The definition of the function that can be called by the AI assistant.</p>
          */
         public Builder function(FunctionCall function) {
             this.function = function;
@@ -75,7 +75,10 @@ public class ToolCall extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the tool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>function</p>
          */
         public Builder type(String type) {
             this.type = type;

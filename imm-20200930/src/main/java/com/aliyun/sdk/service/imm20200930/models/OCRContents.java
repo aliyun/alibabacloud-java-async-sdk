@@ -93,7 +93,7 @@ public class OCRContents extends TeaModel {
         } 
 
         /**
-         * Boundary.
+         * <p>The boundary information.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -101,7 +101,10 @@ public class OCRContents extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence level of the content. Valid values: 0 to 1. The value 0 indicates the lowest confidence level. The value 1 indicates the highest confidence level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8254936695098877</p>
          */
         public Builder confidence(Float confidence) {
             this.confidence = confidence;
@@ -109,7 +112,10 @@ public class OCRContents extends TeaModel {
         }
 
         /**
-         * Contents.
+         * <p>The content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>欢迎使用智能媒体管理</p>
          */
         public Builder contents(String contents) {
             this.contents = contents;
@@ -117,7 +123,10 @@ public class OCRContents extends TeaModel {
         }
 
         /**
-         * Language.
+         * <p>The BCP 47 language code. This parameter is not supported in the current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zh-hans</p>
          */
         public Builder language(String language) {
             this.language = language;

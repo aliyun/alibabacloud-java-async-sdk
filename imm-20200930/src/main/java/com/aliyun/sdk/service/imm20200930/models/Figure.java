@@ -379,7 +379,10 @@ public class Figure extends TeaModel {
         } 
 
         /**
-         * Age.
+         * <p>The age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29</p>
          */
         public Builder age(Long age) {
             this.age = age;
@@ -387,7 +390,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * AgeSD.
+         * <p>The age standard deviation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder ageSD(Float ageSD) {
             this.ageSD = ageSD;
@@ -395,7 +401,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Attractive.
+         * <p>The face attractiveness score. A higher score indicates greater attractiveness. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.96</p>
          */
         public Builder attractive(Float attractive) {
             this.attractive = attractive;
@@ -403,7 +412,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Beard.
+         * <p>Indicates whether the person has a beard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder beard(String beard) {
             this.beard = beard;
@@ -411,7 +423,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * BeardConfidence.
+         * <p>The confidence score for whether the person has a beard. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder beardConfidence(Float beardConfidence) {
             this.beardConfidence = beardConfidence;
@@ -419,7 +434,7 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Boundary.
+         * <p>The face boundary information.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -427,7 +442,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Emotion.
+         * <p>The emotion.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>happiness</p>
          */
         public Builder emotion(String emotion) {
             this.emotion = emotion;
@@ -435,7 +453,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * EmotionConfidence.
+         * <p>The emotion confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.707845687866210</p>
          */
         public Builder emotionConfidence(Float emotionConfidence) {
             this.emotionConfidence = emotionConfidence;
@@ -443,7 +464,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FaceQuality.
+         * <p>The face quality score, which evaluates whether the image quality is suitable for face recognition. A higher score indicates better quality. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.960875928401947</p>
          */
         public Builder faceQuality(Float faceQuality) {
             this.faceQuality = faceQuality;
@@ -451,7 +475,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FigureClusterConfidence.
+         * <p>The clustering confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder figureClusterConfidence(Float figureClusterConfidence) {
             this.figureClusterConfidence = figureClusterConfidence;
@@ -459,7 +486,16 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FigureClusterId.
+         * <p>The figure cluster ID. The following reserved special cluster ID names are included:</p>
+         * <ul>
+         * <li><p>figure-cluster-id-independent: The face does not currently belong to any suitable group. After new images are added to the dataset and face clustering is performed, the face may be assigned to a group.</p>
+         * </li>
+         * <li><p>figure-cluster-id-unavailable: The face has not been clustered yet. This means that after new images were added to the dataset, face clustering has not been performed.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Cluster-dbe72fec-b84c-4ab6-885b-3678e64****</p>
          */
         public Builder figureClusterId(String figureClusterId) {
             this.figureClusterId = figureClusterId;
@@ -467,7 +503,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FigureConfidence.
+         * <p>The confidence score of the figure object. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder figureConfidence(Float figureConfidence) {
             this.figureConfidence = figureConfidence;
@@ -475,7 +514,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FigureId.
+         * <p>The ID of the figure object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>868a9e74-cde5-4c7a-9013-28bb984****</p>
          */
         public Builder figureId(String figureId) {
             this.figureId = figureId;
@@ -483,7 +525,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * FigureType.
+         * <p>The figure type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>face</p>
          */
         public Builder figureType(String figureType) {
             this.figureType = figureType;
@@ -491,7 +536,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Gender.
+         * <p>The gender.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>female</p>
          */
         public Builder gender(String gender) {
             this.gender = gender;
@@ -499,7 +547,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * GenderConfidence.
+         * <p>The gender confidence score. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder genderConfidence(Float genderConfidence) {
             this.genderConfidence = genderConfidence;
@@ -507,7 +558,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Glasses.
+         * <p>Indicates whether the person is wearing glasses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder glasses(String glasses) {
             this.glasses = glasses;
@@ -515,7 +569,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * GlassesConfidence.
+         * <p>The confidence score for whether the person is wearing glasses. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.8</p>
          */
         public Builder glassesConfidence(Float glassesConfidence) {
             this.glassesConfidence = glassesConfidence;
@@ -523,7 +580,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Hat.
+         * <p>Indicates whether the person is wearing a hat.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder hat(String hat) {
             this.hat = hat;
@@ -531,7 +591,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * HatConfidence.
+         * <p>The confidence score for whether the person is wearing a hat. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder hatConfidence(Float hatConfidence) {
             this.hatConfidence = hatConfidence;
@@ -539,7 +602,7 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * HeadPose.
+         * <p>The head pose information.</p>
          */
         public Builder headPose(HeadPose headPose) {
             this.headPose = headPose;
@@ -547,7 +610,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Mask.
+         * <p>Indicates whether the person is wearing a mask.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
          */
         public Builder mask(String mask) {
             this.mask = mask;
@@ -555,7 +621,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * MaskConfidence.
+         * <p>The confidence score for whether the person is wearing a mask. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder maskConfidence(Float maskConfidence) {
             this.maskConfidence = maskConfidence;
@@ -563,7 +632,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Mouth.
+         * <p>Indicates whether the mouth is open.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>close</p>
          */
         public Builder mouth(String mouth) {
             this.mouth = mouth;
@@ -571,7 +643,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * MouthConfidence.
+         * <p>The confidence score for whether the mouth is open. Valid values: 0 (lowest confidence) to 1 (highest confidence).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder mouthConfidence(Float mouthConfidence) {
             this.mouthConfidence = mouthConfidence;
@@ -579,7 +654,10 @@ public class Figure extends TeaModel {
         }
 
         /**
-         * Sharpness.
+         * <p>The sharpness score. A higher score indicates a clearer face. Valid values: 0 to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7</p>
          */
         public Builder sharpness(Float sharpness) {
             this.sharpness = sharpness;

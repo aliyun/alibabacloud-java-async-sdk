@@ -54,7 +54,10 @@ public class DocumentReadNarratorOption extends TeaModel {
         } 
 
         /**
-         * Narrate.
+         * <p>Specifies whether to fetch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder narrate(Boolean narrate) {
             this.narrate = narrate;

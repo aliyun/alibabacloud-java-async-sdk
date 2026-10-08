@@ -93,7 +93,7 @@ public class DocumentParseOption extends TeaModel {
         } 
 
         /**
-         * Keyword.
+         * <p>Document parsing keyword extraction options</p>
          */
         public Builder keyword(DocumentParseKeywordOption keyword) {
             this.keyword = keyword;
@@ -101,7 +101,7 @@ public class DocumentParseOption extends TeaModel {
         }
 
         /**
-         * Narrator.
+         * <p>Document parsing guidance options</p>
          */
         public Builder narrator(DocumentParseNarratorOption narrator) {
             this.narrator = narrator;
@@ -109,7 +109,7 @@ public class DocumentParseOption extends TeaModel {
         }
 
         /**
-         * Question.
+         * <p>Document parsing question generation options</p>
          */
         public Builder question(DocumentParseQuestionOption question) {
             this.question = question;
@@ -117,7 +117,7 @@ public class DocumentParseOption extends TeaModel {
         }
 
         /**
-         * Summary.
+         * <p>Document parsing summary options</p>
          */
         public Builder summary(DocumentParseSummaryOption summary) {
             this.summary = summary;

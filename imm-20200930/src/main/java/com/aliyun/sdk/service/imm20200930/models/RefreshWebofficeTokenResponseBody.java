@@ -106,7 +106,7 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Weboffice access token.</p>
+         * <p>The Weboffice access token.</p>
          * 
          * <strong>example:</strong>
          * <p>4996466c690a4902846ce00f96********</p>
@@ -117,7 +117,7 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Expiration time of the access token. The expiration period is 30 minutes.</p>
+         * <p>The expiration time of the access token. The access token expires in 30 minutes. Format: ISO 8601 UTC timestamp with millisecond precision.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-31T13:07:28.950065359Z</p>
@@ -128,7 +128,7 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Weboffice refresh token.</p>
+         * <p>The Weboffice refresh token.</p>
          * 
          * <strong>example:</strong>
          * <p>72a52ab3702a4123ab5594671a********</p>
@@ -139,7 +139,7 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Expiration time of the refresh token. The expiration period is 1 day.</p>
+         * <p>The expiration time of the refresh token. The refresh token expires in 1 day. Format: ISO 8601 UTC timestamp with millisecond precision.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-01T12:37:28.950065359Z</p>
@@ -150,7 +150,7 @@ public class RefreshWebofficeTokenResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>501339F9-4B70-0CE2-AB8C-866C********</p>

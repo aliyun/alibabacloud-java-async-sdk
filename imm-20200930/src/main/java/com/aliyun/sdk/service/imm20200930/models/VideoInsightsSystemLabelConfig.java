@@ -54,7 +54,10 @@ public class VideoInsightsSystemLabelConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether system labels are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

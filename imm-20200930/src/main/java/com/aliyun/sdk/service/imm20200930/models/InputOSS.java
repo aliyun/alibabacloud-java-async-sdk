@@ -81,7 +81,11 @@ public class InputOSS extends TeaModel {
         } 
 
         /**
+         * <p>The name of the OSS bucket.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-bucket</p>
          */
         public Builder bucket(String bucket) {
             this.bucket = bucket;
@@ -89,7 +93,7 @@ public class InputOSS extends TeaModel {
         }
 
         /**
-         * MatchExpressions.
+         * <p>The match expressions.</p>
          */
         public Builder matchExpressions(java.util.List<String> matchExpressions) {
             this.matchExpressions = matchExpressions;
@@ -97,7 +101,10 @@ public class InputOSS extends TeaModel {
         }
 
         /**
-         * Prefix.
+         * <p>The object key prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-object</p>
          */
         public Builder prefix(String prefix) {
             this.prefix = prefix;

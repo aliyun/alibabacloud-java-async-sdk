@@ -54,7 +54,7 @@ public class PersonReferenceConfig extends TeaModel {
         } 
 
         /**
-         * Enable.
+         * <p>Specifies whether to enable character reference configuration. Default value: false.</p>
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

@@ -353,8 +353,8 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The addresses.</p>
-         * <p>This parameter is returned only when address information is detected.</p>
+         * <p>The geolocation detection results of the video.</p>
+         * <p>This parameter has a value only when the video contains geolocation information.</p>
          */
         public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
@@ -395,7 +395,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The audio streams.</p>
+         * <p>The array of audio streams.</p>
          */
         public Builder audioStreams(java.util.List<AudioStream> audioStreams) {
             this.audioStreams = audioStreams;
@@ -403,7 +403,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The bitrate. Unit: bit/s.</p>
+         * <p>The bitrate of the media file, in bit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>13164131</p>
@@ -425,7 +425,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The total duration of the video. Unit: seconds.</p>
+         * <p>The total duration of the video, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>15.263000</p>
@@ -436,7 +436,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The full format name.</p>
+         * <p>The full name of the format.</p>
          * 
          * <strong>example:</strong>
          * <p>QuickTime / MOV</p>
@@ -447,7 +447,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The abbreviated format name.</p>
+         * <p>The format name.</p>
          * 
          * <strong>example:</strong>
          * <p>mov,mp4,m4a,3gp,3g2,mj2</p>
@@ -458,7 +458,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The language of the content. For more information, see the ISO 639-2 Alpha-3 codes for the representation of names of languages.</p>
+         * <p>The language used in the video. The value follows the ISO 639-2 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>eng</p>
@@ -469,7 +469,8 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The coordinate pair of the central point. The coordinate pair consists of latitude and longitude values. This parameter value must be in the &quot;latitude,longitude&quot; format. Valid values of the latitude: [-90,+90]. Valid values of the longitude: [-180,+180].</p>
+         * <p>The central geographic coordinate point, which is a latitude and longitude value.
+         * The format is latitude,longitude, with latitude first and longitude second. The latitude range is [-90,+90] and the longitude range is [-180,+180]. Example: 35.8,-45.91.</p>
          * 
          * <strong>example:</strong>
          * <p>+120.029003,+30.283095</p>
@@ -491,7 +492,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The time of recording. For more information about the time formats, see the RFC3339 Nano standard.</p>
+         * <p>The time when the video was recorded. The value follows the RFC 3339 Nano standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-24T02:39:57Z</p>
@@ -524,7 +525,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The size of the media object. Unit: bytes.</p>
+         * <p>The size of the media file, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>25115517</p>
@@ -535,7 +536,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The initial playback time.</p>
+         * <p>The start playback time of the media, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.000000</p>
@@ -557,7 +558,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The subtitle streams.</p>
+         * <p>The array of subtitle streams.</p>
          */
         public Builder subtitles(java.util.List<SubtitleStream> subtitles) {
             this.subtitles = subtitles;
@@ -565,7 +566,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The title of the media object.</p>
+         * <p>The title of the media file.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -576,7 +577,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The video height in pixels.</p>
+         * <p>The height of the video frame in the media file, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -587,7 +588,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The video streams.</p>
+         * <p>The array of video streams.</p>
          */
         public Builder videoStreams(java.util.List<VideoStream> videoStreams) {
             this.videoStreams = videoStreams;
@@ -595,7 +596,7 @@ public class DetectMediaMetaResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The video width in pixels.</p>
+         * <p>The width of the video frame in the media file, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>

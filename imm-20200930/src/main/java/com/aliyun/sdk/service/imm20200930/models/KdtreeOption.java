@@ -82,7 +82,10 @@ public class KdtreeOption extends TeaModel {
         } 
 
         /**
-         * CompressionLevel.
+         * <p>The compression level. Valid values: 0 to 10. A greater value specifies a higher compression ratio and ensures better detail effects.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder compressionLevel(Integer compressionLevel) {
             this.compressionLevel = compressionLevel;
@@ -90,7 +93,10 @@ public class KdtreeOption extends TeaModel {
         }
 
         /**
-         * LibraryName.
+         * <p>The name of the library supported by a k-d tree. Set the value to draco. Default value: draco.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>draco</p>
          */
         public Builder libraryName(String libraryName) {
             this.libraryName = libraryName;
@@ -98,7 +104,10 @@ public class KdtreeOption extends TeaModel {
         }
 
         /**
-         * QuantizationBits.
+         * <p>The number of bits for quantization. Valid values: 0 to 31. A greater value ensures that more details are retained. A value of 0 specifies that vertex compression is not performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder quantizationBits(Integer quantizationBits) {
             this.quantizationBits = quantizationBits;

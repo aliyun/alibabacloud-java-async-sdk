@@ -67,7 +67,10 @@ public class RocketMQ extends TeaModel {
         } 
 
         /**
-         * InstanceId.
+         * <p>The RocketMQ instance ID. Required for RocketMQ message notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_11111111111_BYcNy2Nc</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -75,7 +78,10 @@ public class RocketMQ extends TeaModel {
         }
 
         /**
-         * TopicName.
+         * <p>The name of the RocketMQ topic. Required for RocketMQ message notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic1</p>
          */
         public Builder topicName(String topicName) {
             this.topicName = topicName;

@@ -275,7 +275,7 @@ public class Story extends TeaModel {
         } 
 
         /**
-         * Addresses.
+         * <p>The addresses.</p>
          */
         public Builder addresses(java.util.List<Address> addresses) {
             this.addresses = addresses;
@@ -283,7 +283,7 @@ public class Story extends TeaModel {
         }
 
         /**
-         * Cover.
+         * <p>The story cover.</p>
          */
         public Builder cover(File cover) {
             this.cover = cover;
@@ -291,7 +291,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the story was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -299,7 +302,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * CustomId.
+         * <p>The custom ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder customId(String customId) {
             this.customId = customId;
@@ -307,7 +313,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * CustomLabels.
+         * <p>The custom labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;val&quot;}</p>
          */
         public Builder customLabels(java.util.Map<String, ?> customLabels) {
             this.customLabels = customLabels;
@@ -315,7 +324,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The name of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -323,7 +335,7 @@ public class Story extends TeaModel {
         }
 
         /**
-         * FigureClusterIds.
+         * <p>The fluster IDs.</p>
          */
         public Builder figureClusterIds(java.util.List<String> figureClusterIds) {
             this.figureClusterIds = figureClusterIds;
@@ -331,7 +343,7 @@ public class Story extends TeaModel {
         }
 
         /**
-         * Files.
+         * <p>The story files.</p>
          */
         public Builder files(java.util.List<File> files) {
             this.files = files;
@@ -339,7 +351,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * ObjectId.
+         * <p>The ID of the story object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>id1</p>
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
@@ -347,7 +362,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * ObjectType.
+         * <p>The type of the object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>story</p>
          */
         public Builder objectType(String objectType) {
             this.objectType = objectType;
@@ -355,7 +373,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the owner to which the story belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102321002****</p>
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -363,7 +384,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The name of the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -371,7 +395,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * StoryEndTime.
+         * <p>The time when the story ends.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder storyEndTime(String storyEndTime) {
             this.storyEndTime = storyEndTime;
@@ -379,7 +406,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * StoryName.
+         * <p>The name of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name1</p>
          */
         public Builder storyName(String storyName) {
             this.storyName = storyName;
@@ -387,7 +417,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * StoryStartTime.
+         * <p>The time when the story starts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder storyStartTime(String storyStartTime) {
             this.storyStartTime = storyStartTime;
@@ -395,7 +428,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * StorySubType.
+         * <p>The subtype of the story.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImportantPerson</p>
          */
         public Builder storySubType(String storySubType) {
             this.storySubType = storySubType;
@@ -403,7 +439,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * StoryType.
+         * <p>The story type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PeopleMemory</p>
          */
         public Builder storyType(String storyType) {
             this.storyType = storyType;
@@ -411,7 +450,10 @@ public class Story extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The time when the story was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-01-14T10:17:18.102700407+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;

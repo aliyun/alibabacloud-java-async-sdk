@@ -67,7 +67,10 @@ public class TimeRange extends TeaModel {
         } 
 
         /**
-         * End.
+         * <p>The end time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-12-31T00:00:00+08:00</p>
          */
         public Builder end(String end) {
             this.end = end;
@@ -75,7 +78,10 @@ public class TimeRange extends TeaModel {
         }
 
         /**
-         * Start.
+         * <p>The start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-12-31T00:00:00+08:00</p>
          */
         public Builder start(String start) {
             this.start = start;

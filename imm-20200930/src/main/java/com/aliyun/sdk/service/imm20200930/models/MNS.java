@@ -54,7 +54,10 @@ public class MNS extends TeaModel {
         } 
 
         /**
-         * TopicName.
+         * <p>Specifies the name of the ApsaraMQ for MNS topic, which can be found in the topic list for the current region in the left-side navigation pane of the <a href="https://mns.console.aliyun.com/">ApsaraMQ for MNS console</a>. This parameter is required for ApsaraMQ for MNS message notification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topic1</p>
          */
         public Builder topicName(String topicName) {
             this.topicName = topicName;

@@ -163,7 +163,10 @@ public class TrainingSpecification extends TeaModel {
         } 
 
         /**
-         * DatasetName.
+         * <p>Name of the dataset</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -171,7 +174,11 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
+         * <p>The endpoint of the storage where the dataset is stored.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></p>
          */
         public Builder endpoint(String endpoint) {
             this.endpoint = endpoint;
@@ -179,6 +186,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
+         * <p>The model specification details.</p>
          * <p>This parameter is required.</p>
          */
         public Builder modelSpecification(ModelSpecification modelSpecification) {
@@ -187,6 +195,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
+         * <p>The information about the runtime for model training.</p>
          * <p>This parameter is required.</p>
          */
         public Builder runtime(Runtime runtime) {
@@ -195,6 +204,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
+         * <p>URI of the dataset</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,6 +216,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
+         * <p>The storage path to the model data. Only an Object Storage Service (OSS) path is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -217,7 +228,7 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * Transforms.
+         * <p>Local preprocessing parameters for the dataset.</p>
          */
         public Builder transforms(java.util.List<CustomParams> transforms) {
             this.transforms = transforms;
@@ -225,7 +236,10 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * ValidationSourceURI.
+         * <p>The URI of the evaluation dataset. You must specify this parameter or the ValidationSplit parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://imm-alg-dataset-bj/cifar10/test_index.json</p>
          */
         public Builder validationSourceURI(String validationSourceURI) {
             this.validationSourceURI = validationSourceURI;
@@ -233,7 +247,10 @@ public class TrainingSpecification extends TeaModel {
         }
 
         /**
-         * ValidationSplit.
+         * <p>The ratio for splitting the training dataset into the evaluation dataset. You must specify this parameter or the ValidationSourceURI parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.95</p>
          */
         public Builder validationSplit(Float validationSplit) {
             this.validationSplit = validationSplit;

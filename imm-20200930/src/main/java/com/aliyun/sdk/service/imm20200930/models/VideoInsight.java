@@ -23,9 +23,13 @@ public class VideoInsight extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("MultilingualContent")
+    private java.util.Map<String, MultilingualContentEntry> multilingualContent;
+
     private VideoInsight(Builder builder) {
         this.caption = builder.caption;
         this.description = builder.description;
+        this.multilingualContent = builder.multilingualContent;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class VideoInsight extends TeaModel {
         return this.description;
     }
 
+    /**
+     * @return multilingualContent
+     */
+    public java.util.Map<String, MultilingualContentEntry> getMultilingualContent() {
+        return this.multilingualContent;
+    }
+
     public static final class Builder {
         private String caption; 
         private String description; 
+        private java.util.Map<String, MultilingualContentEntry> multilingualContent; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class VideoInsight extends TeaModel {
         private Builder(VideoInsight model) {
             this.caption = model.caption;
             this.description = model.description;
+            this.multilingualContent = model.multilingualContent;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class VideoInsight extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>The multilingual video information content.</p>
+         */
+        public Builder multilingualContent(java.util.Map<String, MultilingualContentEntry> multilingualContent) {
+            this.multilingualContent = multilingualContent;
             return this;
         }
 

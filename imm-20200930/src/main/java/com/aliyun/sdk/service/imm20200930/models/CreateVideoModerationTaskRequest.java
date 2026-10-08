@@ -196,7 +196,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p>The chained authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -206,7 +206,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The interval of capturing video frames. Unit: seconds. Valid values: 1 to 600. Default value: 1.</p>
+         * <p>The interval for video snapshots, in seconds. The value can be an integer from 1 to 600. The default value is 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of frames that can be captured from the video. Valid values: 5 to 3600. Default value: 200.</p>
+         * <p>The maximum number of frames that can be captured for this detection task. The value can be an integer from 5 to 3,600. The default value is 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -230,7 +230,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The notification configuration. For the format of asynchronous notification messages, see the metadata index section in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -240,7 +240,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The name of the project. For more information about how to get the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The scenarios of video moderation.</p>
+         * <p>The video detection scenarios.</p>
          */
         public Builder scenes(java.util.List<String> scenes) {
             String scenesShrink = shrink(scenes, "Scenes", "json");
@@ -264,7 +264,7 @@ public class CreateVideoModerationTaskRequest extends Request {
 
         /**
          * <p>The OSS URI of the video.</p>
-         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>The OSS URI must follow the format oss\://${Bucket}/${Object}. <code>${Bucket}</code> is the name of the OSS bucket in the same region as the project. <code>${Object}</code> is the full path of the file, including the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -277,7 +277,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom tags. The custom tags help you retrieve the task.</p>
+         * <p>Custom tags used to search for tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test&quot;: &quot;val1&quot;}</p>
@@ -290,7 +290,7 @@ public class CreateVideoModerationTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</p>
+         * <p>Custom information that is returned in the asynchronous notification message. Use this information to associate the notification message with your internal system. The maximum length is 2,048 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

@@ -196,7 +196,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the source group. You must specify either From or Froms, but not both.</p>
+         * <p>The ID of the source clustering group. You must specify a value for either \<code>From\\</code> or \<code>Froms\\</code>. You cannot specify values for both parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>Cluster-2ab85905-23ba-4632-b2d8-1c21cfe****</p>
@@ -208,7 +208,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The IDs of source clustering groups. You must specify either From or Froms, but not both. You can specify up to 100 task IDs.</p>
+         * <p>A list of the IDs of the source clustering groups. You must specify a value for either \<code>From\\</code> or \<code>Froms\\</code>. You cannot specify values for both parameters. The list can contain up to 100 IDs.</p>
          */
         public Builder froms(java.util.List<String> froms) {
             String fromsShrink = shrink(froms, "Froms", "json");
@@ -218,7 +218,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</p>
+         * <p>The configuration of the notification message. For more information, click Notification. For more information about the format of an asynchronous notification message, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification messages</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -228,7 +228,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</p>
+         * <p>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom tags, which can be used to search for and filter asynchronous tasks.</p>
+         * <p>The custom tags. You can use custom tags to search for and filter asynchronous tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;key&quot;:&quot;val&quot;}</p>
@@ -267,7 +267,7 @@ public class CreateFigureClustersMergingTaskRequest extends Request {
         }
 
         /**
-         * <p>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</p>
+         * <p>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your system. The value can be up to 2,048 bytes in length.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></p>

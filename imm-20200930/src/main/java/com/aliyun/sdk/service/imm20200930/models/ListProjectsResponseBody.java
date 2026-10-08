@@ -80,7 +80,7 @@ public class ListProjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+         * <p>The token used to query subsequent pages when the expected total number of returned projects is greater than the specified MaxResults value. This parameter has a value only when not all projects are returned.</p>
          * 
          * <strong>example:</strong>
          * <p>MTIzNDU2Nzg6aW1tdGVzdDAx</p>
@@ -91,7 +91,7 @@ public class ListProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The projects.</p>
+         * <p>The array of projects, which contains the information about each project.</p>
          */
         public Builder projects(java.util.List<Project> projects) {
             this.projects = projects;

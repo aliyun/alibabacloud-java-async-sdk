@@ -237,7 +237,10 @@ public class Dataset extends TeaModel {
         } 
 
         /**
-         * BindCount.
+         * <p>The number of OSS buckets currently bound to the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder bindCount(Long bindCount) {
             this.bindCount = bindCount;
@@ -245,7 +248,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The timestamp when the dataset was created, in RFC3339Nano format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -253,7 +259,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetMaxBindCount.
+         * <p>The maximum number of bindings allowed for each dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder datasetMaxBindCount(Long datasetMaxBindCount) {
             this.datasetMaxBindCount = datasetMaxBindCount;
@@ -261,7 +270,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetMaxEntityCount.
+         * <p>The maximum number of metadata entities allowed in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000000000</p>
          */
         public Builder datasetMaxEntityCount(Long datasetMaxEntityCount) {
             this.datasetMaxEntityCount = datasetMaxEntityCount;
@@ -269,7 +281,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetMaxFileCount.
+         * <p>The maximum number of files allowed in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000</p>
          */
         public Builder datasetMaxFileCount(Long datasetMaxFileCount) {
             this.datasetMaxFileCount = datasetMaxFileCount;
@@ -277,7 +292,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetMaxRelationCount.
+         * <p>The maximum number of metadata relationships allowed in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000000000</p>
          */
         public Builder datasetMaxRelationCount(Long datasetMaxRelationCount) {
             this.datasetMaxRelationCount = datasetMaxRelationCount;
@@ -285,7 +303,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetMaxTotalFileSize.
+         * <p>The maximum total file size allowed in the dataset, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90000000000000000</p>
          */
         public Builder datasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
             this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
@@ -293,7 +314,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * DatasetName.
+         * <p>The dataset name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dataset001</p>
          */
         public Builder datasetName(String datasetName) {
             this.datasetName = datasetName;
@@ -301,7 +325,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The description of the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试数据集</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -309,7 +336,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * FileCount.
+         * <p>The current number of files in the dataset.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder fileCount(Long fileCount) {
             this.fileCount = fileCount;
@@ -317,7 +347,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * <p>The project name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>immtest</p>
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -325,7 +358,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * <p>The workflow template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DefaultId</p>
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
@@ -333,7 +369,10 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * TotalFileSize.
+         * <p>The total file size in the dataset, in bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -341,7 +380,13 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * <p>The timestamp when the dataset was last modified, in RFC3339Nano format.</p>
+         * <blockquote>
+         * <p>If the dataset has not been updated since it was created, this timestamp is the same as the creation timestamp.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-29T14:50:13.011643661+08:00</p>
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -349,7 +394,7 @@ public class Dataset extends TeaModel {
         }
 
         /**
-         * WorkflowParameters.
+         * <p>The custom parameters.</p>
          */
         public Builder workflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
             this.workflowParameters = workflowParameters;

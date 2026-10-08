@@ -80,7 +80,10 @@ public class CroppingSuggestion extends TeaModel {
         } 
 
         /**
-         * AspectRatio.
+         * <p>The aspect ratio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2:3</p>
          */
         public Builder aspectRatio(String aspectRatio) {
             this.aspectRatio = aspectRatio;
@@ -88,7 +91,7 @@ public class CroppingSuggestion extends TeaModel {
         }
 
         /**
-         * Boundary.
+         * <p>The boundary of the cropping.</p>
          */
         public Builder boundary(Boundary boundary) {
             this.boundary = boundary;
@@ -96,7 +99,10 @@ public class CroppingSuggestion extends TeaModel {
         }
 
         /**
-         * Confidence.
+         * <p>The confidence score. Valid values: 0 to 1. A higher score indicates greater confidence in the result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.7079545259475708</p>
          */
         public Builder confidence(Float confidence) {
             this.confidence = confidence;

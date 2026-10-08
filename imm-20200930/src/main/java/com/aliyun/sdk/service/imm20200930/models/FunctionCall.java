@@ -68,7 +68,19 @@ public class FunctionCall extends TeaModel {
         } 
 
         /**
-         * Arguments.
+         * <p>The parameters detected by the large language model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *                     &quot;type&quot;: &quot;object&quot;,
+         *                         &quot;name&quot;: {
+         *                             &quot;type&quot;: &quot;string&quot;, 
+         *                             &quot;description&quot;: &quot;需要检索的文件的文件名。可以为空 null&quot;
+         *                         }, 
+         *                     &quot;required&quot;: [
+         *                         &quot;category&quot;
+         *                     ]
+         * }</p>
          */
         public Builder arguments(String arguments) {
             this.arguments = arguments;
@@ -76,7 +88,11 @@ public class FunctionCall extends TeaModel {
         }
 
         /**
+         * <p>The function name.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>search_file</p>
          */
         public Builder name(String name) {
             this.name = name;

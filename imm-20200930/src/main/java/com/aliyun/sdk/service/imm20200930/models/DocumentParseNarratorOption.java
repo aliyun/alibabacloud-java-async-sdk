@@ -54,7 +54,7 @@ public class DocumentParseNarratorOption extends TeaModel {
         } 
 
         /**
-         * Narrate.
+         * <p>The article reading guide.</p>
          */
         public Builder narrate(Boolean narrate) {
             this.narrate = narrate;

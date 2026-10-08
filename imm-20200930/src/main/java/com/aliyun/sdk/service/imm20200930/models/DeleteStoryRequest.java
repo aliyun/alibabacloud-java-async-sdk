@@ -117,7 +117,7 @@ public class DeleteStoryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>dataset001</p>
+         * <p>test-dataset</p>
          */
         public Builder datasetName(String datasetName) {
             this.putQueryParameter("DatasetName", datasetName);
@@ -143,7 +143,7 @@ public class DeleteStoryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>immtest</p>
+         * <p>test-project</p>
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

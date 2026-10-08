@@ -106,7 +106,10 @@ public class Boundary extends TeaModel {
         } 
 
         /**
-         * Height.
+         * <p>The height. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder height(Long height) {
             this.height = height;
@@ -114,7 +117,10 @@ public class Boundary extends TeaModel {
         }
 
         /**
-         * Left.
+         * <p>The distance from the X-coordinate of the vertex to the left edge.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder left(Long left) {
             this.left = left;
@@ -122,7 +128,10 @@ public class Boundary extends TeaModel {
         }
 
         /**
-         * Polygon.
+         * <p>The polygon formed by a number of points. This parameter takes effect only when the boundary describes a polygon rather than a rectangle.</p>
+         * <blockquote>
+         * <p> This parameter is mutually exclusive to the following parameters that form a rectangle: Width, Height, Left, and Top. A boundary describes only a rectangle or a polygon.</p>
+         * </blockquote>
          */
         public Builder polygon(java.util.List<PointInt64> polygon) {
             this.polygon = polygon;
@@ -130,7 +139,10 @@ public class Boundary extends TeaModel {
         }
 
         /**
-         * Top.
+         * <p>The distance from the Y-coordinate of the vertex to the top.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder top(Long top) {
             this.top = top;
@@ -138,7 +150,10 @@ public class Boundary extends TeaModel {
         }
 
         /**
-         * Width.
+         * <p>The width. Unit: pixel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder width(Long width) {
             this.width = width;

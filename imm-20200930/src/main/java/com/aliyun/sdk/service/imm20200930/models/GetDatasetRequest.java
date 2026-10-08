@@ -112,7 +112,7 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</p>
+         * <p>The name of the dataset. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</p>
+         * <p>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,10 +138,11 @@ public class GetDatasetRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</p>
+         * <p>Specifies whether to collect file statistics. Valid values:</p>
          * <ul>
-         * <li>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</li>
-         * <li>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</li>
+         * <li>true: File statistics are collected. The FileCount and TotalFileSize fields in the Dataset struct are valid.</li>
+         * <li>false: File statistics are not collected. The FileCount and TotalFileSize fields in the Dataset struct may be incorrect or both 0.
+         * Default value: false.</li>
          * </ul>
          * 
          * <strong>example:</strong>

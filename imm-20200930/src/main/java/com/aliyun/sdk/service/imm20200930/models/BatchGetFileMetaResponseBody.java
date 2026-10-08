@@ -67,7 +67,7 @@ public class BatchGetFileMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The metadata returned.</p>
+         * <p>The file metadata.</p>
          */
         public Builder files(java.util.List<File> files) {
             this.files = files;

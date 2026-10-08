@@ -197,7 +197,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code of the task.</p>
+         * <p>The task error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceNotFound</p>
@@ -208,7 +208,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The time when the task ended. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-03T10:20:56.87Z</p>
@@ -230,7 +230,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message of the task.</p>
+         * <p>The task error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource TaskId is not found.</p>
@@ -241,7 +241,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the image compliance detection task.</p>
+         * <p>The content moderation details.</p>
          */
         public Builder moderationResult(ModerationResult moderationResult) {
             this.moderationResult = moderationResult;
@@ -271,7 +271,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The time when the task started. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-03T10:20:41.432Z</p>
@@ -285,7 +285,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
          * <p>The task status. Valid values:</p>
          * <ul>
          * <li>Running: The task is running.</li>
-         * <li>Succeeded: The task is successful.</li>
+         * <li>Succeeded: The task succeeded.</li>
          * <li>Failed: The task failed.</li>
          * </ul>
          * 
@@ -309,7 +309,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of the task.</p>
+         * <p>The task type.</p>
          * 
          * <strong>example:</strong>
          * <p>VideoModeration</p>
@@ -320,7 +320,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -405,7 +405,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The label of the violation.</p>
+             * <p>The violation label.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;teat&quot;:&quot;val&quot;}</p>
@@ -427,7 +427,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The confidence level of the violation.</p>
+             * <p>The confidence score of the violation.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -497,7 +497,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The information about violated frames.</p>
+             * <p>The frames that contain violations.</p>
              */
             public Builder blockFrames(java.util.List<BlockFrames> blockFrames) {
                 this.blockFrames = blockFrames;
@@ -505,7 +505,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of detected frames.</p>
+             * <p>The total number of frames inspected.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>
@@ -609,7 +609,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about video and motion detection frames.</p>
+             * <p>The frame-related information for video and animated image moderation.</p>
              */
             public Builder frames(Frames frames) {
                 this.frames = frames;
@@ -617,11 +617,11 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recommended operation. Valid values:</p>
+             * <p>The moderation result suggestion. Valid values:</p>
              * <ul>
-             * <li>pass: The image has passed the check. No action is required.</li>
-             * <li>review: The image contains suspected violations and requires human review.</li>
-             * <li>block: The image contains violations. Further actions, such as deleting or blocking the image, are recommended.</li>
+             * <li><strong>block</strong>: Violation detected.</li>
+             * <li><strong>review</strong>: Suspected violation.</li>
+             * <li><strong>pass</strong>: Passed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -633,7 +633,7 @@ public class GetVideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The OSS URI of the file. The URI follows the oss://${bucketname}/${objectname} format. bucketname indicates the name of an OSS bucket that is in the same region as the current project, and objectname is the file path.</p>
+             * <p>The file URI. The storage address of the OSS file. The address follows the format <code>oss://${bucketname}/${objectname}</code>, where <code>bucketname</code> is the name of an OSS bucket in the same region as the current project, and <code>objectname</code> is the file path.</p>
              * 
              * <strong>example:</strong>
              * <p>oss://test-bucket/test-object</p>

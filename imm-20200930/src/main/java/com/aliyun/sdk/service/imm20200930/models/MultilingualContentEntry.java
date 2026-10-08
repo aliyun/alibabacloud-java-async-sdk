@@ -12,31 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ImageInsight} extends {@link TeaModel}
+ * {@link MultilingualContentEntry} extends {@link TeaModel}
  *
- * <p>ImageInsight</p>
+ * <p>MultilingualContentEntry</p>
  */
-public class ImageInsight extends TeaModel {
+public class MultilingualContentEntry extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Caption")
     private String caption;
 
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("MultilingualContent")
-    private java.util.Map<String, MultilingualContentEntry> multilingualContent;
-
-    private ImageInsight(Builder builder) {
+    private MultilingualContentEntry(Builder builder) {
         this.caption = builder.caption;
         this.description = builder.description;
-        this.multilingualContent = builder.multilingualContent;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ImageInsight create() {
+    public static MultilingualContentEntry create() {
         return builder().build();
     }
 
@@ -58,29 +54,23 @@ public class ImageInsight extends TeaModel {
         return this.description;
     }
 
-    /**
-     * @return multilingualContent
-     */
-    public java.util.Map<String, MultilingualContentEntry> getMultilingualContent() {
-        return this.multilingualContent;
-    }
-
     public static final class Builder {
         private String caption; 
         private String description; 
-        private java.util.Map<String, MultilingualContentEntry> multilingualContent; 
 
         private Builder() {
         } 
 
-        private Builder(ImageInsight model) {
+        private Builder(MultilingualContentEntry model) {
             this.caption = model.caption;
             this.description = model.description;
-            this.multilingualContent = model.multilingualContent;
         } 
 
         /**
-         * Caption.
+         * <p>The multilingual brief description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>No personnel activity at the office desk</p>
          */
         public Builder caption(String caption) {
             this.caption = caption;
@@ -88,23 +78,18 @@ public class ImageInsight extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The multilingual detailed description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a close-up shot of an office desk setup. In the left foreground stands a tall, cylindrical, off-white insulated tumbler. A rectangular black mousepad occupies the center of the desk, holding a black backlit mechanical keyboard. Directly behind the keyboard sits a computer monitor with its screen illuminated, displaying the operating system\&quot;s application dock at the bottom. To the front right of the monitor stands a red metal beverage can, surrounded by a tangle of white data cables and a charging adapter. A small, silver, rectangular device (possibly a USB drive or an adapter) rests in the gap behind the left side of the keyboard, and a tiny pink decorative object is faintly visible on the desk surface. The scene is devoid of human activity; all objects remain motionless.</p>
          */
         public Builder description(String description) {
             this.description = description;
             return this;
         }
 
-        /**
-         * <p>The multilingual image content.</p>
-         */
-        public Builder multilingualContent(java.util.Map<String, MultilingualContentEntry> multilingualContent) {
-            this.multilingualContent = multilingualContent;
-            return this;
-        }
-
-        public ImageInsight build() {
-            return new ImageInsight(this);
+        public MultilingualContentEntry build() {
+            return new MultilingualContentEntry(this);
         } 
 
     } 

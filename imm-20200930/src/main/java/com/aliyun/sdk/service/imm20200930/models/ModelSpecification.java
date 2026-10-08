@@ -69,6 +69,7 @@ public class ModelSpecification extends TeaModel {
         } 
 
         /**
+         * <p>The basic model information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder metaData(MetaData metaData) {
@@ -77,6 +78,7 @@ public class ModelSpecification extends TeaModel {
         }
 
         /**
+         * <p>The model specification information.</p>
          * <p>This parameter is required.</p>
          */
         public Builder spec(Spec spec) {

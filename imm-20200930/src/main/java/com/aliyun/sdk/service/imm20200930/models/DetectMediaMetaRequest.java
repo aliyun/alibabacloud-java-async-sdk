@@ -110,8 +110,8 @@ public class DetectMediaMetaRequest extends Request {
         }
 
         /**
-         * <p><strong>If you have no special requirements, leave this parameter empty.</strong></p>
-         * <p>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</p>
+         * <p><strong>Leave this parameter empty unless you have special requirements.</strong></p>
+         * <p>The chain authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chain authorization to access resources of other entities</a>.</p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -121,7 +121,7 @@ public class DetectMediaMetaRequest extends Request {
         }
 
         /**
-         * <p>The name of the project.<a href="~~478153~~"></a></p>
+         * <p>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project</p>
@@ -133,8 +133,8 @@ public class DetectMediaMetaRequest extends Request {
         }
 
         /**
-         * <p>The URI of the media object in Object Storage Service (OSS).</p>
-         * <p>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <code>${Bucket}</code> is the name of the bucket in the same region as the current project and <code>${Object}</code> is the path of the object with the extension included.</p>
+         * <p>The Object Storage Service (OSS) URI of the media file.</p>
+         * <p>The OSS URI follows the format oss://${Bucket}/${Object}, where <code>${Bucket}</code> is the name of an OSS bucket in the same region as the current project, and <code>${Object}</code> is the full path of the file including the file name extension.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://examplebucket/sampleobject.mp4</p>

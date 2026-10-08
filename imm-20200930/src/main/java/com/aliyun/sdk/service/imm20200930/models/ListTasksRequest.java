@@ -268,7 +268,7 @@ public class ListTasksRequest extends Request {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>ASC</p>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);

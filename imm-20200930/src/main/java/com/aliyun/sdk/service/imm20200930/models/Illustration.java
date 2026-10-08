@@ -119,7 +119,10 @@ public class Illustration extends TeaModel {
         } 
 
         /**
-         * ImageIndex.
+         * <p>The index of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder imageIndex(Integer imageIndex) {
             this.imageIndex = imageIndex;
@@ -127,7 +130,10 @@ public class Illustration extends TeaModel {
         }
 
         /**
-         * ImagePath.
+         * <p>The relative path of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;imgs/page_0_img_image_box_770_540_1367_860.png&quot;</p>
          */
         public Builder imagePath(String imagePath) {
             this.imagePath = imagePath;
@@ -135,7 +141,7 @@ public class Illustration extends TeaModel {
         }
 
         /**
-         * NormalizedBox.
+         * <p>The normalized coordinate of the image on the page.</p>
          */
         public Builder normalizedBox(java.util.List<Float> normalizedBox) {
             this.normalizedBox = normalizedBox;
@@ -143,7 +149,10 @@ public class Illustration extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number where the image is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -151,7 +160,10 @@ public class Illustration extends TeaModel {
         }
 
         /**
-         * Text.
+         * <p>The text result recognized by optical character recognition (OCR) from the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;图片&quot;</p>
          */
         public Builder text(String text) {
             this.text = text;
@@ -159,7 +171,10 @@ public class Illustration extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image、table、code</p>
          */
         public Builder type(String type) {
             this.type = type;

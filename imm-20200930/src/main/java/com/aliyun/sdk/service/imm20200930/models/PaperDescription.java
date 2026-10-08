@@ -67,7 +67,7 @@ public class PaperDescription extends TeaModel {
         } 
 
         /**
-         * Description.
+         * <p>The guide result.</p>
          */
         public Builder description(java.util.List<Summary> description) {
             this.description = description;
@@ -75,7 +75,7 @@ public class PaperDescription extends TeaModel {
         }
 
         /**
-         * TitleID.
+         * <p>The section heading included in the guide result.</p>
          */
         public Builder titleID(java.util.List<String> titleID) {
             this.titleID = titleID;

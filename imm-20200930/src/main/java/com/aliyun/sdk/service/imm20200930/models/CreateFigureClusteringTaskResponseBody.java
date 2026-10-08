@@ -80,7 +80,7 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The event ID.</p>
+         * <p>The ID of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>0ED-1Bz8z71k5TtsUejT4UJ16****</p>
@@ -91,7 +91,7 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
@@ -102,7 +102,7 @@ public class CreateFigureClusteringTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>formatconvert-00bec802-073a-4b61-ba3b-39bc****</p>

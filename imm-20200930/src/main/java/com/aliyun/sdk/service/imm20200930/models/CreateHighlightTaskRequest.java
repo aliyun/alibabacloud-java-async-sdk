@@ -226,7 +226,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * CredentialConfig.
+         * <p>The chained authorization configuration. <strong>Leave this parameter empty unless otherwise required.</strong></p>
          */
         public Builder credentialConfig(CredentialConfig credentialConfig) {
             String credentialConfigShrink = shrink(credentialConfig, "CredentialConfig", "json");
@@ -236,7 +236,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * Edit.
+         * <p>The editing configuration.</p>
          */
         public Builder edit(Edit edit) {
             String editShrink = shrink(edit, "Edit", "json");
@@ -246,7 +246,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * Highlight.
+         * <p>The highlight configuration.</p>
          */
         public Builder highlight(Highlight highlight) {
             String highlightShrink = shrink(highlight, "Highlight", "json");
@@ -256,7 +256,15 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The highlight recognition mode. Valid values:</p>
+         * <ul>
+         * <li>Scene: scene and frame recognition</li>
+         * <li>Average: average clip recognition
+         * Default value: Average.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Average</p>
          */
         public Builder mode(String mode) {
             this.putBodyParameter("Mode", mode);
@@ -265,7 +273,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * Notification.
+         * <p>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/asynchronous-notification-message-examples">Asynchronous notification message format</a>.</p>
          */
         public Builder notification(Notification notification) {
             String notificationShrink = shrink(notification, "Notification", "json");
@@ -275,6 +283,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
+         * <p>The output configuration.</p>
          * <p>This parameter is required.</p>
          */
         public Builder output(Output output) {
@@ -285,6 +294,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -297,6 +307,7 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
+         * <p>The list of media resources to be processed. You can specify up to 10 videos.</p>
          * <p>This parameter is required.</p>
          */
         public Builder sources(java.util.List<Sources> sources) {
@@ -307,7 +318,10 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The custom tags used to search and filter asynchronous tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;test&quot;:&quot;val1&quot;}</p>
          */
         public Builder tags(java.util.Map<String, ?> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -317,6 +331,12 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
+         * <p>The processing type. Valid values:</p>
+         * <ul>
+         * <li>Retrieval: highlight extraction</li>
+         * <li>Concat: video composition</li>
+         * <li>Compose: one-click video creation</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +349,10 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
-         * UserData.
+         * <p>The custom user data, which is returned in asynchronous message notifications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></p>
          */
         public Builder userData(String userData) {
             this.putBodyParameter("UserData", userData);
@@ -398,10 +421,11 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
+             * <p>The URI of the background music, which is an OSS URI. Only audio files are supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>oss://test-bucket/test-object</p>
+             * <p>oss://test-bucket/test-object/test.mp3</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;
@@ -409,7 +433,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Volume.
+             * <p>The volume of the background music. Valid values: [0, 10]. Default value: 0.2. A value of 1 indicates the original volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder volume(Double volume) {
                 this.volume = volume;
@@ -490,7 +517,10 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
-             * Duration.
+             * <p>The duration of the transition. Unit: seconds. If the transition duration is greater than the clip duration minus 1, the transition effect on the clip does not take effect. Valid values: [0, 5].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -498,10 +528,11 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
+             * <p>The transition effect. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/transition-effect">Transition effects</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>directional</p>
+             * <p>fade</p>
              */
             public Builder transition(String transition) {
                 this.transition = transition;
@@ -509,7 +540,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the transition. Valid values: [1, 100]. Default value: 50. This parameter is valid only when TransitionMode is set to Random.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -577,10 +611,11 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
+             * <p>The visual effect. For more information, see <a href="https://www.alibabacloud.com/help/en/imm/developer-reference/effects">Visual effects</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>open</p>
+             * <p>letterboxed</p>
              */
             public Builder vfxEffect(String vfxEffect) {
                 this.vfxEffect = vfxEffect;
@@ -588,7 +623,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Weight.
+             * <p>The weight of the visual effect. Valid values: [1, 100]. Default value: 50. This parameter is valid only when VfxEffectMode is set to Random.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder weight(Long weight) {
                 this.weight = weight;
@@ -721,7 +759,16 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
-             * BackgroundMusicMode.
+             * <p>The background music mode. Valid values:</p>
+             * <ul>
+             * <li>Random: custom background music, randomly selected based on weights</li>
+             * <li>Sequential: custom background music, applied in sequence</li>
+             * <li>Closed: no background music
+             * Default value: Closed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Closed</p>
              */
             public Builder backgroundMusicMode(String backgroundMusicMode) {
                 this.backgroundMusicMode = backgroundMusicMode;
@@ -729,7 +776,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * BackgroundMusics.
+             * <p>The background music. This parameter is valid only when BackgroundMusicMode is set to Random or Sequential. <strong>The current maximum number of background music tracks is 1.</strong></p>
              */
             public Builder backgroundMusics(java.util.List<BackgroundMusics> backgroundMusics) {
                 this.backgroundMusics = backgroundMusics;
@@ -737,6 +784,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
+             * <p>The editing mode. Valid values:</p>
+             * <ul>
+             * <li>Sequential: sequential mode</li>
+             * </ul>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -748,7 +799,17 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * TransitionMode.
+             * <p>The transition mode. Valid values:</p>
+             * <ul>
+             * <li>Auto: automatic transition</li>
+             * <li>Random: custom transition, randomly selected based on weights</li>
+             * <li>Sequential: custom transition, applied in sequence</li>
+             * <li>Closed: no transition
+             * Default value: Closed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Closed</p>
              */
             public Builder transitionMode(String transitionMode) {
                 this.transitionMode = transitionMode;
@@ -756,7 +817,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Transitions.
+             * <p>The transition effects. This parameter is valid only when TransitionMode is set to Random or Sequential. You can specify up to 10 transition effects.</p>
              */
             public Builder transitions(java.util.List<Transitions> transitions) {
                 this.transitions = transitions;
@@ -764,7 +825,17 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * VfxEffectMode.
+             * <p>The visual effect mode. Valid values:</p>
+             * <ul>
+             * <li>Auto: automatic visual effect</li>
+             * <li>Random: custom visual effect, randomly selected based on weights</li>
+             * <li>Sequential: custom visual effect, applied in sequence</li>
+             * <li>Closed: no visual effect
+             * Default value: Closed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Closed</p>
              */
             public Builder vfxEffectMode(String vfxEffectMode) {
                 this.vfxEffectMode = vfxEffectMode;
@@ -772,7 +843,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * VfxEffects.
+             * <p>The visual effects. This parameter is valid only when VfxEffectMode is set to Random or Sequential. You can specify up to 10 visual effects.</p>
              */
             public Builder vfxEffects(java.util.List<VfxEffects> vfxEffects) {
                 this.vfxEffects = vfxEffects;
@@ -827,6 +898,14 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
+             * <p>The highlight content. Valid values:</p>
+             * <ul>
+             * <li>Pet</li>
+             * <li>Person</li>
+             * <li>Sports</li>
+             * <li>Meeting</li>
+             * </ul>
+             * <p>The value cannot exceed 100 characters in length.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -910,7 +989,10 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
-             * Duration.
+             * <p>The length of each segment. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -918,7 +1000,14 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Format.
+             * <p>The media segmentation format. Valid values:</p>
+             * <ul>
+             * <li>hls</li>
+             * <li>dash</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>hls</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -926,7 +1015,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * StartNumber.
+             * <p>The start number. This parameter is supported only for hls. Default value: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startNumber(Long startNumber) {
                 this.startNumber = startNumber;
@@ -962,6 +1054,9 @@ public class CreateHighlightTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Speed")
         private Double speed;
 
+        @com.aliyun.core.annotation.NameInMap("TargetDuration")
+        private Double targetDuration;
+
         @com.aliyun.core.annotation.NameInMap("URI")
         @com.aliyun.core.annotation.Validation(required = true)
         private String URI;
@@ -975,6 +1070,7 @@ public class CreateHighlightTaskRequest extends Request {
             this.maxDuration = builder.maxDuration;
             this.segment = builder.segment;
             this.speed = builder.speed;
+            this.targetDuration = builder.targetDuration;
             this.URI = builder.URI;
             this.video = builder.video;
         }
@@ -1023,6 +1119,13 @@ public class CreateHighlightTaskRequest extends Request {
         }
 
         /**
+         * @return targetDuration
+         */
+        public Double getTargetDuration() {
+            return this.targetDuration;
+        }
+
+        /**
          * @return URI
          */
         public String getURI() {
@@ -1042,6 +1145,7 @@ public class CreateHighlightTaskRequest extends Request {
             private Double maxDuration; 
             private Segment segment; 
             private Double speed; 
+            private Double targetDuration; 
             private String URI; 
             private TargetVideo video; 
 
@@ -1054,12 +1158,13 @@ public class CreateHighlightTaskRequest extends Request {
                 this.maxDuration = model.maxDuration;
                 this.segment = model.segment;
                 this.speed = model.speed;
+                this.targetDuration = model.targetDuration;
                 this.URI = model.URI;
                 this.video = model.video;
             } 
 
             /**
-             * Audio.
+             * <p>The audio processing parameter settings. &gt;Notice: If Audio is empty, the first audio stream (if any) is directly copied to the output file.</notice></p>
              */
             public Builder audio(TargetAudio audio) {
                 this.audio = audio;
@@ -1067,7 +1172,16 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Container.
+             * <p>The media container type. This parameter is required when Type is set to Concat or Compose. Valid values:</p>
+             * <ul>
+             * <li>Audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, and flv</li>
+             * </ul>
+             * <blockquote>
+             * <p>Notice: You must specify both Container and URI.</notice></p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
              */
             public Builder container(String container) {
                 this.container = container;
@@ -1075,7 +1189,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * MaxDuration.
+             * <p>The maximum duration of the edited video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
              */
             public Builder maxDuration(Double maxDuration) {
                 this.maxDuration = maxDuration;
@@ -1083,7 +1200,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Segment.
+             * <p>The media segmentation settings. By default, segmentation is not performed.</p>
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -1091,7 +1208,13 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Speed.
+             * <p>The playback speed multiplier for the media. Valid values: [0.5, 1.0]. Default value: 1.0.</p>
+             * <blockquote>
+             * <p>The ratio of the default playback speed of the transcoded media file to that of the source media file. This is not speed-adjusted transcoding.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder speed(Double speed) {
                 this.speed = speed;
@@ -1099,6 +1222,18 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
+             * <p>The target duration of the video. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0</p>
+             */
+            public Builder targetDuration(Double targetDuration) {
+                this.targetDuration = targetDuration;
+                return this;
+            }
+
+            /**
+             * <p>The URI of the output file.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -1110,7 +1245,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * Video.
+             * <p>The video processing parameter settings. &gt;Notice: If Video is empty, the first video stream (if any) is directly copied to the output file.</notice></p>
              */
             public Builder video(TargetVideo video) {
                 this.video = video;
@@ -1191,7 +1326,10 @@ public class CreateHighlightTaskRequest extends Request {
             } 
 
             /**
-             * Duration.
+             * <p>The duration of the media clip. Unit: seconds. Default value: 0, which indicates the end time of the video. This parameter is valid only when Type is set to Concat.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
@@ -1199,7 +1337,10 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the media resource. Valid values: [0, video duration]. This parameter is valid only when Type is set to Concat. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder startTime(Double startTime) {
                 this.startTime = startTime;
@@ -1207,6 +1348,7 @@ public class CreateHighlightTaskRequest extends Request {
             }
 
             /**
+             * <p>The URI of the media resource, which is an OSS URI. Only videos are supported.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

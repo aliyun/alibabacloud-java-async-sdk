@@ -80,7 +80,7 @@ public class VideoInsightsLabelConfig extends TeaModel {
         } 
 
         /**
-         * Highlight.
+         * <p>The highlight label configuration.</p>
          */
         public Builder highlight(VideoInsightsHighlightLabelConfig highlight) {
             this.highlight = highlight;
@@ -88,7 +88,7 @@ public class VideoInsightsLabelConfig extends TeaModel {
         }
 
         /**
-         * System.
+         * <p>The system label configuration.</p>
          */
         public Builder system(VideoInsightsSystemLabelConfig system) {
             this.system = system;
@@ -96,7 +96,7 @@ public class VideoInsightsLabelConfig extends TeaModel {
         }
 
         /**
-         * UserDefined.
+         * <p>The custom label configuration.</p>
          */
         public Builder userDefined(VideoInsightsUserDefinedLabelConfig userDefined) {
             this.userDefined = userDefined;

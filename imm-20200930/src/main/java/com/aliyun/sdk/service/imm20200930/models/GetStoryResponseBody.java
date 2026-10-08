@@ -67,7 +67,7 @@ public class GetStoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</p>
@@ -78,7 +78,7 @@ public class GetStoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the story.</p>
+         * <p>The detailed information about the story.</p>
          */
         public Builder story(Story story) {
             this.story = story;

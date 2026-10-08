@@ -80,7 +80,10 @@ public class DocumentChapterSummarizeOption extends TeaModel {
         } 
 
         /**
-         * Limit.
+         * <p>The number of section-by-section summaries. If neither Marker nor Index is specified, the entire article is summarized by default. Marker and Index must either both be specified or both be omitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder limit(Integer limit) {
             this.limit = limit;
@@ -88,7 +91,10 @@ public class DocumentChapterSummarizeOption extends TeaModel {
         }
 
         /**
-         * Marker.
+         * <p>The start position for section-by-section summarization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder marker(Integer marker) {
             this.marker = marker;
@@ -96,7 +102,10 @@ public class DocumentChapterSummarizeOption extends TeaModel {
         }
 
         /**
-         * Version.
+         * <p>The version of section-by-section summarization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder version(String version) {
             this.version = version;

@@ -80,7 +80,17 @@ public class TargetSubtitle extends TeaModel {
         } 
 
         /**
-         * DisableSubtitle.
+         * <p>Specifies whether to disable subtitle generation. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you call the GenerateVideoPlaylist operation and subtitles are required, you must set this parameter to false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder disableSubtitle(Boolean disableSubtitle) {
             this.disableSubtitle = disableSubtitle;
@@ -88,7 +98,10 @@ public class TargetSubtitle extends TeaModel {
         }
 
         /**
-         * ExtractSubtitle.
+         * <p>The subtitle extraction settings.</p>
+         * <blockquote>
+         * <p> The GenerateVideoPlaylist operation does not support this parameter.</p>
+         * </blockquote>
          */
         public Builder extractSubtitle(ExtractSubtitle extractSubtitle) {
             this.extractSubtitle = extractSubtitle;
@@ -96,7 +109,13 @@ public class TargetSubtitle extends TeaModel {
         }
 
         /**
-         * Stream.
+         * <p>The index numbers of subtitle streams that need to be processed. If you set this parameter to null (default) or a value greater than 100, all subtitle streams are processed.</p>
+         * <ul>
+         * <li>For example, you can set the parameter to <code>[0,1]</code> to process subtitle streams with index numbers 0 and 1, <code>[1]</code> to process only the subtitle stream with the index number 1, and <code>[101]</code> to process all subtitle streams.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you specify an index number but no subtitle stream with the index number is found, the index number is ignored.</p>
+         * </blockquote>
          */
         public Builder stream(java.util.List<Integer> stream) {
             this.stream = stream;
@@ -162,7 +181,15 @@ public class TargetSubtitle extends TeaModel {
             } 
 
             /**
-             * Format.
+             * <p>The format of the extracted subtitle file. Valid values:</p>
+             * <ul>
+             * <li>ass</li>
+             * <li>srt</li>
+             * <li>webvtt</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>webvtt</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -170,7 +197,13 @@ public class TargetSubtitle extends TeaModel {
             }
 
             /**
-             * URI.
+             * <p>The prefix of the OSS URI where the extracted subtitles are stored. The OSS URI is in the oss://bucket/object format, where bucket specifies the name of the OSS bucket that is in the same region as the current project and object specifies the full file path that includes the file name extension.</p>
+             * <ul>
+             * <li>Example: If the prefix is oss://examplebucket/outputSubtitle, an output subtitle file has a URI in the format of oss://examplebucket/outputSubitile_${index}.${ext}. In the URI format, ${ext} is the file name extension of the output subtitle file, and ${index} is the same 0-based index number as that of the corresponding source subtitle stream file.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>oss://test-bucket/extractsubtitle</p>
              */
             public Builder URI(String URI) {
                 this.URI = URI;

@@ -67,7 +67,7 @@ public class SemanticQueryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The files.</p>
+         * <p>The list of files.</p>
          */
         public Builder files(java.util.List<File> files) {
             this.files = files;
@@ -75,7 +75,7 @@ public class SemanticQueryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>2C5C1E0F-D8B8-4DA0-8127-EC32C771****</p>

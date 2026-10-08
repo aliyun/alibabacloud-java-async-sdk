@@ -67,7 +67,7 @@ public class DocumentParseSummaryOption extends TeaModel {
         } 
 
         /**
-         * ChapterSummarize.
+         * <p>Document chapter summary</p>
          */
         public Builder chapterSummarize(Boolean chapterSummarize) {
             this.chapterSummarize = chapterSummarize;
@@ -75,7 +75,7 @@ public class DocumentParseSummaryOption extends TeaModel {
         }
 
         /**
-         * Summarize.
+         * <p>Article summary</p>
          */
         public Builder summarize(Boolean summarize) {
             this.summarize = summarize;
